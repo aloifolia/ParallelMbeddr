@@ -17,7 +17,7 @@ TODO
     Erlang
     → http://en.wikipedia.org/wiki/Erlang_(programming_language)
     - uses asynchronous message passing with nothing shared
-    [DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Erlang)
+    - [DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Erlang)
 
     Scala
     → http://en.wikipedia.org/wiki/Scala_(programming_language)
