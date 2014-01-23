@@ -9,9 +9,14 @@ basic research, requesting feedback from users
 ### Timeline
 TODO
 
-### Next step(s)
+### Current Tasks
 - await answer from users
 - create timeline
+- investigate briefly Scala, Rust, Stackless Python and XC
+- find textbook examples that could be coded
+- ponder and write down possible syntax that is suitable for examples: MP and SM
+
+### Next step(s)
 - investigate existing languages and libraries:
 
     Erlang
