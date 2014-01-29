@@ -12,9 +12,11 @@ TODO
 ### Current Tasks
 - await answer from users
 - create timeline
-- investigate briefly Scala, Rust, Stackless Python and XC
-- find textbook examples that could be coded
+- investigate briefly Scala, Rust, Stackless Python and XC: DONE
+- find textbook examples that could be coded: half DONE (check TUD course for more)
 - ponder and write down possible syntax that is suitable for examples: MP and SM
+- write 1-3 textbook examples in C
+- write 1-3 textbook examples in invented syntax
 
 ### Next step(s)
 - investigate existing languages and libraries:
@@ -26,19 +28,23 @@ TODO
 
     Scala
     → http://en.wikipedia.org/wiki/Scala_(programming_language)
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Scala)**
 
     Rust 
     - pointers (owned, managed, borrowed):
       → http://words.steveklabnik.com/pointers-in-rust-a-guide
     - shared mutable memory that is provably free of data races:
       → http://winningraceconditions.blogspot.com/2012/09/rust-4-typesafe-shared-mutable-state.html
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Rust)**
 
     Stackless Python
     → http://en.wikipedia.org/wiki/Stackless_Python
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/StacklessPython)**
 
     XC
     → http://en.wikipedia.org/wiki/XC_(programming_language)
     - based on Communicating Sequential Processes
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/XC)**
 
     FAUST
     → http://en.wikipedia.org/wiki/FAUST_(programming_language)
