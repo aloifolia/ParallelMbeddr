@@ -77,5 +77,9 @@ TODO
     - A concurrent-by-default programming language, implemented as an extension to Plaid:
       → http://www.cs.cmu.edu/~aldrich/plaid/
       - A typestate-oriented, gradually typed programming language
+
+    Concurrent C
+    - TODO: get the paper
+    → http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.850
       
 - summarize approaches/techniques with pros and cons of each
