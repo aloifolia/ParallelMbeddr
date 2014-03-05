@@ -57,6 +57,8 @@ TODO
     Janus
     → http://en.wikipedia.org/wiki/Janus_(programming_language)
     - features distinct "askers" and "tellers" to logical variables, bag channels
+    - **DONE** not of further interest since it is a distributed constraint solving language
+    - for further information see paper *Actors as a Special Case of Concurrent Constraint Programming*
 
     Hume
     → http://en.wikipedia.org/wiki/Hume_(programming_language)
