@@ -82,7 +82,7 @@ TODO
       - A typestate-oriented, gradually typed programming language
 
     Concurrent C
-    - TODO: get the paper
     → http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.47.850
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Concurrent-C)**
       
 - summarize approaches/techniques with pros and cons of each
