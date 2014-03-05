@@ -62,6 +62,7 @@ TODO
     → http://en.wikipedia.org/wiki/Hume_(programming_language)
     - functional concurrent lang. for bounded space and time environments
     - automata processes are described by synchronous channels patterns and message passing
+    - **DONE** not of further interest
 
     ParaSail
     → http://en.wikipedia.org/wiki/ParaSail_(programming_language)
