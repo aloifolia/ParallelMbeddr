@@ -74,6 +74,8 @@ TODO
     Orc
     → http://en.wikipedia.org/wiki/Orc_(programming_language)
     - a heavily concurrent, nondeterministic language based on Kleene algebra
+    - **DONE** not of further interest (just channels and multiple combinators of parallelly computed results)
+    
 
     AEminium
     → http://aeminium.dei.uc.pt/index.php/AEminium
