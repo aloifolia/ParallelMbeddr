@@ -71,6 +71,7 @@ TODO
     → http://en.wikipedia.org/wiki/ParaSail_(programming_language)
     - pointer-free
     - data-race-free
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/ParaSail)**
 
     Orc
     → http://en.wikipedia.org/wiki/Orc_(programming_language)
