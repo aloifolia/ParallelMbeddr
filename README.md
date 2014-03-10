@@ -50,6 +50,7 @@ TODO
     → http://en.wikipedia.org/wiki/FAUST_(programming_language)
     - Realtime functional programming language for signal processing
     - The Faust compiler provides automatic parallelization using either OpenMP or a specific work-stealing scheduler.
+    - **DONE** not of further interest: objective seems to be to merely parallelize SIMD scenarios
 
     Go
     → http://en.wikipedia.org/wiki/Go_(programming_language)
