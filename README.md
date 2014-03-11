@@ -54,6 +54,7 @@ TODO
 
     Go
     → http://en.wikipedia.org/wiki/Go_(programming_language)
+    - **[DONE](https://github.com/aloifolia/ParallelMbeddr/wiki/Go)**
 
     Janus
     → http://en.wikipedia.org/wiki/Janus_(programming_language)
