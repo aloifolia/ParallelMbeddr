@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="-1" />
+    </dependencies>
+    <rename id="6i3o.1304213873204985423" type="CONCEPT" from="RunningTask" to="JoinedTask" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="0" />
+    </dependencies>
+    <rename id="6i3o.1304213873205052257" type="CONCEPT" from="TaskType" to="RunningTaskType" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="1" />
+    </dependencies>
+    <rename id="6i3o.1304213873205049882" type="CHILD" from="parameterTypes" to="argumentTypes" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="2" />
+    </dependencies>
+    <rename id="6i3o.1304213873204740984" type="CHILD" from="function" to="functionCall" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="3" />
+    </dependencies>
+    <rename id="6i3o.1304213873204985424" type="CHILD" from="task" to="runningTask" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="4" />
+    </dependencies>
+    <rename id="6i3o.1304213873212674440" type="CONCEPT" from="RunningTaskType" to="JoinedTaskType" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="5" />
+    </dependencies>
+    <rename id="6i3o.1304213873212674441" type="REFERENCE" from="task" to="runningTask" />
+  </StructureModification>
+</history>
+

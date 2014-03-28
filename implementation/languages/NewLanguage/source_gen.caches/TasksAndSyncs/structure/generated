@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="5r7vd9gkifn0jbzkvojkfqu6ka63w4q">
+  <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.runtime.impl(MPS.Core/jetbrains.mps.smodel.runtime.impl@java_stub)" />
+  <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+  <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
+  <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+  <dep model="r:00000000-0000-4000-0000-011c895902e8(jetbrains.mps.lang.generator.structure)" />
+  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
+  <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
+  <common hash="7nfqrqbmvbandccqlniq7avi59dunr9">
+    <dep root="1304213873204721600" />
+    <dep root="1304213873204973711" />
+    <dep root="1304213873204985423" />
+    <dep root="1304213873205049565" />
+    <dep root="1304213873205054831" />
+    <dep root="1304213873212674440" />
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.runtime.impl(MPS.Core/jetbrains.mps.smodel.runtime.impl@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <dep model="r:00000000-0000-4000-0000-011c895902e8(jetbrains.mps.lang.generator.structure)" />
+    <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
+    <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
+    <file name="StructureAspectDescriptor.java" />
+  </common>
+  <source id="1304213873204721600" name="Task" hash="8xy1e22k5qk4wmhk3oecxksgb4do5qd" />
+  <source id="1304213873204973711" name="RunningTask" hash="-81vbaab0xmzr70o8vvs5qvfm2h565u6" />
+  <source id="1304213873204985423" name="JoinedTask" hash="awtqlf7csi0k8vyp5xkbmxybfakgmkr" />
+  <source id="1304213873205049565" name="TaskType" hash="4xkouvef6025yzwahwtxh8zmr6gjc7e" />
+  <source id="1304213873205054831" name="RunningTaskType" hash="-cgjx84fyhuovfni90or42xgmq5fuwae" />
+  <source id="1304213873212674440" name="JoinedTaskType" hash="1q3v8teaxjo5od8kynzgx0qkoueb1xd" />
+</dependencies>
+
