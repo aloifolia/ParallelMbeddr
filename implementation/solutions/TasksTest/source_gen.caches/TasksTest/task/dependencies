@@ -1,3 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependenciesRoot />
+<dependenciesRoot>
+  <dependency className="TasksTest.task.Makefile" file="Makefile" />
+  <dependency className="TasksTest.task.TypeSizeConfiguration (T.task)" file="TypeSizeConfiguration (T.task)" />
+  <dependency className="TasksTest.task.task" file="task.c" />
+  <dependency className="TasksTest.task.task" file="task.h" />
+</dependenciesRoot>
 
