@@ -765,7 +765,8 @@
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
     <MESSAGE value="goofing around with external modules and ArbitraryTextExpression" />
-    <option name="LAST_COMMIT_MESSAGE" value="goofing around with external modules and ArbitraryTextExpression" />
+    <MESSAGE value="goofing around with external modules and ArbitraryTextExpression&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="goofing around with external modules and ArbitraryTextExpression&#10;" />
   </component>
   <component name="editorHistoryManager">
     <entry file="mps://node://TasksAndSyncs/TasksAndSyncs.structure/TaskType">
