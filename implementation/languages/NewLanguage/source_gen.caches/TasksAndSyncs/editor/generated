@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="9tlnw3xennacoa4ny2ujbt1ycx6p766">
+<dependencies version="2" modelHash="39fdwt3fmcmwazbz7em9wdichlk48g0">
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor.descriptor(MPS.Editor/jetbrains.mps.openapi.editor.descriptor@java_stub)" />
   <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="5r7vd9gkifn0jbzkvojkfqu6ka63w4q" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="913am4cl3ycjt8jn5g8v9qxj2yk7rkq" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
   <common hash="30odfcms6f3nzmvtfcasw9f19o5rxhd" dependsOnNodes="true">
     <dep root="1304213873204897467" />
     <dep root="1304213873205054709" />
-    <dep root="1304213873205114636" />
     <dep root="1304213873206872171" />
-    <dep root="1304213873211831503" />
     <dep root="1304213873212823878" />
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor.descriptor(MPS.Editor/jetbrains.mps.openapi.editor.descriptor@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
@@ -36,13 +34,6 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="TaskType_Editor.java" />
   </source>
-  <source id="1304213873205114636" name="RunningTask_Editor" hash="-7go1rzumi4fcu4h8iiw83ieri8zd6d9">
-    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
-    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
-    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
-    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="RunningTask_Editor.java" />
-  </source>
   <source id="1304213873206872171" name="RunningTaskType_Editor" hash="-dbuyok2p7psknsvm8wli72st2tnfd92">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
@@ -50,13 +41,6 @@
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="RunningTaskType_Editor.java" />
-  </source>
-  <source id="1304213873211831503" name="JoinedTask_Editor" hash="96326hryn8uyvvi9c3iomwu91q71bat">
-    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
-    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
-    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
-    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="JoinedTask_Editor.java" />
   </source>
   <source id="1304213873212823878" name="JoinedTaskType_Editor" hash="-bqtydp3d2568vl7qaf2i07875pxgqtb">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />

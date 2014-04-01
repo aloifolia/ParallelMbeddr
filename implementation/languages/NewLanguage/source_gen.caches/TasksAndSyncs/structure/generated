@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="5r7vd9gkifn0jbzkvojkfqu6ka63w4q">
+<dependencies version="2" modelHash="913am4cl3ycjt8jn5g8v9qxj2yk7rkq">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
@@ -19,9 +19,9 @@
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
     <file name="StructureAspectDescriptor.java" />
   </common>
-  <source id="1304213873204721600" name="Task" hash="8xy1e22k5qk4wmhk3oecxksgb4do5qd" />
-  <source id="1304213873204973711" name="RunningTask" hash="-81vbaab0xmzr70o8vvs5qvfm2h565u6" />
-  <source id="1304213873204985423" name="JoinedTask" hash="awtqlf7csi0k8vyp5xkbmxybfakgmkr" />
+  <source id="1304213873204721600" name="Task" hash="4x6slyvyet8persoqsva9414amz1b1j" />
+  <source id="1304213873204973711" name="RunningTask" hash="-2ff41h594who4tjjg24mdr92ax0tlho" />
+  <source id="1304213873204985423" name="JoinedTask" hash="-wy2xpv08bgttz23df1kic6e6llsw7e" />
   <source id="1304213873205049565" name="TaskType" hash="4xkouvef6025yzwahwtxh8zmr6gjc7e" />
   <source id="1304213873205054831" name="RunningTaskType" hash="-cgjx84fyhuovfni90or42xgmq5fuwae" />
   <source id="1304213873212674440" name="JoinedTaskType" hash="1q3v8teaxjo5od8kynzgx0qkoueb1xd" />

@@ -9,9 +9,6 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
-import jetbrains.mps.errors.messageTargets.MessageTarget;
-import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
-import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.typesystem.inference.EquationInfo;
@@ -22,17 +19,11 @@ public class typeof_JoinedTask_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   public void applyRule(final SNode joinedTask, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    final SNode task = SLinkOperations.getTarget(SNodeOperations.as(SNodeOperations.getParent(joinedTask), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
     {
-      final SNode taskAsExprType = typeCheckingContext.typeOf(SLinkOperations.getTarget(joinedTask, "runningTask", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854739", true);
+      final SNode taskAsExprType = typeCheckingContext.typeOf(task, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854739", true);
       typeCheckingContext.whenConcrete(taskAsExprType, new Runnable() {
         public void run() {
-          if (!(SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(taskAsExprType), "TasksAndSyncs.structure.RunningTaskType"))) {
-            {
-              MessageTarget errorTarget = new NodeMessageTarget();
-              IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(SLinkOperations.getTarget(joinedTask, "runningTask", true), "expression to run is not a running task ", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873214551014", null, errorTarget);
-            }
-          }
-
           SNode runningtaskType = SNodeOperations.as(typeCheckingContext.getExpandedNode(taskAsExprType), "TasksAndSyncs.structure.RunningTaskType");
           SNode joinedTaskType = SConceptOperations.createNewNode("TasksAndSyncs.structure.JoinedTaskType", null);
 

@@ -14,15 +14,15 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
   public ConceptDescriptor getDescriptor(String conceptFqName) {
     switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0b, conceptFqName)) {
       case 0:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.JoinedTask").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"runningTask"}, new boolean[]{false}).create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.JoinedTask").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("join", "").create();
       case 1:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.JoinedTaskType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType", "argumentTypes"}, new boolean[]{false, true}).create();
       case 2:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.RunningTask").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"task"}, new boolean[]{false}).create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.RunningTask").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("run", "").create();
       case 3:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.RunningTaskType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType", "argumentTypes"}, new boolean[]{false, true}).create();
       case 4:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"functionCall"}, new boolean[]{false}).create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"functionCall"}, new boolean[]{false}).alias("|", "").create();
       case 5:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.TaskType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType", "argumentTypes"}, new boolean[]{false, true}).alias("Task", "").create();
       default:
