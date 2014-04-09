@@ -14,15 +14,19 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
       case 0:
         return new Future_Constraints();
-      case 1:
+      case 3:
         return new TaskJoin_Constraints();
-      case 2:
+      case 4:
         return new TaskResult_Constraints();
+      case 1:
+        return new Sync_Constraints();
+      case 2:
+        return new SyncVariable_Constraints();
       default:
         // todo: illegal in some cases? 
         return new BaseConstraintsDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult"};
 }

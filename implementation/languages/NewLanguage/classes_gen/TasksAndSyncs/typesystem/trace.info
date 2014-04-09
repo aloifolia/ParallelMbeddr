@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="TypesystemDescriptor.java" startLine="9" startPosition="0" endLine="37" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
+  <unitInfo fileName="TypesystemDescriptor.java" startLine="9" startPosition="0" endLine="41" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873205167535">
     <nodeInfo nodeId="1304213873205167597" fileName="typeof_Task_InferenceRule.java" startLine="20" startPosition="117" endLine="21" endPosition="96" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="1304213873206150944" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="96" endLine="22" endPosition="303" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
@@ -369,6 +369,56 @@
     </scopeInfo>
     <unitInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="23" startPosition="61" endLine="31" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule$1" />
     <unitInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="15" startPosition="0" endLine="50" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule" />
+  </root>
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3604883996549434329">
+    <nodeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="19" startPosition="5" endLine="20" endPosition="212" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3604883996549434782" fileName="typeof_Sync_InferenceRule.java" startLine="23" startPosition="11" endLine="24" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3604883996549434782" fileName="typeof_Sync_InferenceRule.java" startLine="24" startPosition="52" endLine="25" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3604883996549434782" fileName="typeof_Sync_InferenceRule.java" startLine="25" startPosition="196" endLine="26" endPosition="288" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="33" startPosition="46" endLine="34" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="38" startPosition="5" endLine="39" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="39" startPosition="130" endLine="40" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="44" startPosition="30" endLine="45" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="15" startPosition="0" endLine="17" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_Sync_InferenceRule#()V" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="33" startPosition="0" endLine="36" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="44" startPosition="0" endLine="47" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="37" startPosition="68" endLine="41" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3604883996549434782" fileName="typeof_Sync_InferenceRule.java" startLine="22" startPosition="27" endLine="27" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="37" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="22" startPosition="0" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="20" startPosition="212" endLine="29" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="18" startPosition="117" endLine="30" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="18" startPosition="0" endLine="32" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="15" startPosition="38" endLine="15" endPosition="38" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="33" startPosition="46" endLine="34" endPosition="42" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="44" startPosition="30" endLine="45" endPosition="17" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="15" startPosition="0" endLine="17" endPosition="0" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="38" startPosition="5" endLine="40" endPosition="45">
+      <varInfo nodeId="3604883996549434329" varName="b" />
+    </scopeInfo>
+    <scopeInfo nodeId="3604883996549434782" fileName="typeof_Sync_InferenceRule.java" startLine="23" startPosition="11" endLine="26" endPosition="288">
+      <varInfo nodeId="3604883996549434782" varName="_info_12389875345" />
+      <varInfo nodeId="3604883996549434782" varName="_nodeToCheck_1029348928467" />
+    </scopeInfo>
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="33" startPosition="0" endLine="36" endPosition="0" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="44" startPosition="0" endLine="47" endPosition="0" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="37" startPosition="68" endLine="41" endPosition="5" />
+    <scopeInfo nodeId="3604883996549449344" fileName="typeof_Sync_InferenceRule.java" startLine="22" startPosition="27" endLine="27" endPosition="11" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="37" startPosition="0" endLine="43" endPosition="0">
+      <varInfo nodeId="3604883996549434329" varName="argument" />
+    </scopeInfo>
+    <scopeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="22" startPosition="0" endLine="29" endPosition="0" />
+    <scopeInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="19" startPosition="5" endLine="29" endPosition="114">
+      <varInfo nodeId="3604883996549449342" varName="expressionType" />
+    </scopeInfo>
+    <scopeInfo nodeId="3604883996549434330" fileName="typeof_Sync_InferenceRule.java" startLine="18" startPosition="117" endLine="30" endPosition="5" />
+    <scopeInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="18" startPosition="0" endLine="32" endPosition="0">
+      <varInfo nodeId="3604883996549434329" varName="status" />
+      <varInfo nodeId="3604883996549434329" varName="sync" />
+      <varInfo nodeId="3604883996549434329" varName="typeCheckingContext" />
+    </scopeInfo>
+    <unitInfo nodeId="3604883996549449342" fileName="typeof_Sync_InferenceRule.java" startLine="21" startPosition="59" endLine="29" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_Sync_InferenceRule$1" />
+    <unitInfo nodeId="3604883996549434329" fileName="typeof_Sync_InferenceRule.java" startLine="14" startPosition="0" endLine="48" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_Sync_InferenceRule" />
   </root>
 </debugInfo>
 

@@ -3,6 +3,8 @@
   <dependency className="TasksAndSyncs.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
     <classNode dependClassName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskJoin_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskResult_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
@@ -40,6 +42,18 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" file="SyncVariable_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.modules.behavior.GlobalVarRef_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" file="Sync_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.TaskJoin_Behavior" file="TaskJoin_Behavior.java">

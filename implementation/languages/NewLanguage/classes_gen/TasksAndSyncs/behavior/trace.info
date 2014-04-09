@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="34" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
+  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="38" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
   <unitInfo fileName="FutureType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
   <unitInfo fileName="Future_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
+  <unitInfo fileName="SyncVariable_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
+  <unitInfo fileName="Sync_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" />
   <unitInfo fileName="TaskJoin_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.TaskJoin_BehaviorDescriptor" />
   <unitInfo fileName="TaskResult_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.TaskResult_BehaviorDescriptor" />
   <unitInfo fileName="TaskType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />

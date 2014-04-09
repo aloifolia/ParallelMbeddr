@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-8wrolpk85gaogctazuom6om56c3kx7h">
+<dependencies version="2" modelHash="-4cnq3eqm1epjwf6ly1e3uphqovuvugp">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+  <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="-9etvaxwq042znmoo63xviksc4i1cw5c" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-5jdjv6m9q740otoy73nz4tay9bjicgc" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
-  <common hash="-87y3hqjueqifipjb5dmvjbeqqxx0d1g" dependsOnNodes="true">
+  <common hash="-6wetxek6t8w8yu6ock93nuziw701mio" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
     <dep root="1304213873205049565" />
     <dep root="1304213873205054831" />
     <dep root="2744793885339890637" />
+    <dep root="3604883996548046056" />
+    <dep root="3604883996549755172" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
     <file name="StructureAspectDescriptor.java" />
@@ -25,5 +29,7 @@
   <source id="1304213873205049565" name="TaskType" hash="-5u0mnk1onm25xl2vhyvcs9iu8as4bwb" />
   <source id="1304213873205054831" name="FutureType" hash="5yv16og42nnhxls1lm55gzrczm2wopx" />
   <source id="2744793885339890637" name="TaskResult" hash="-3iouo46o1782fdv7qlkks8sskg6nvwx" />
+  <source id="3604883996548046056" name="Sync" hash="d4mq1x86pg87k0a72b5pdjk97pl29kl" />
+  <source id="3604883996549755172" name="SyncVariable" hash="6p89zda4ffbrpauzixxm9fq8c0l1z47" />
 </dependencies>
 
