@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="TasksAndSyncs.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.JoinedTaskType_BehaviorDescriptor" />
-    <classNode dependClassName="TasksAndSyncs.behavior.JoinedTask_BehaviorDescriptor" />
-    <classNode dependClassName="TasksAndSyncs.behavior.RunningTaskType_BehaviorDescriptor" />
-    <classNode dependClassName="TasksAndSyncs.behavior.RunningTask_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.TaskJoin_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.TaskResult_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.String" />
@@ -13,27 +13,26 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.JoinedTaskType_Behavior" file="JoinedTaskType_Behavior.java">
+  <dependency className="TasksAndSyncs.behavior.FutureType_Behavior" file="FutureType_Behavior.java">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.JoinedTaskType_BehaviorDescriptor" file="JoinedTaskType_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.JoinedTaskType_Behavior" />
+  <dependency className="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" file="FutureType_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.FutureType_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.JoinedTask_Behavior" file="JoinedTask_Behavior.java">
+  <dependency className="TasksAndSyncs.behavior.Future_Behavior" file="Future_Behavior.java">
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.JoinedTask_BehaviorDescriptor" file="JoinedTask_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.JoinedTask_Behavior" />
+  <dependency className="TasksAndSyncs.behavior.Future_BehaviorDescriptor" file="Future_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.Future_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
@@ -43,27 +42,25 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.RunningTaskType_Behavior" file="RunningTaskType_Behavior.java">
-    <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+  <dependency className="TasksAndSyncs.behavior.TaskJoin_Behavior" file="TaskJoin_Behavior.java">
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.RunningTaskType_BehaviorDescriptor" file="RunningTaskType_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.RunningTaskType_Behavior" />
-    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
+  <dependency className="TasksAndSyncs.behavior.TaskJoin_BehaviorDescriptor" file="TaskJoin_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.TaskJoin_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.RunningTask_Behavior" file="RunningTask_Behavior.java">
+  <dependency className="TasksAndSyncs.behavior.TaskResult_Behavior" file="TaskResult_Behavior.java">
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.RunningTask_BehaviorDescriptor" file="RunningTask_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.RunningTask_Behavior" />
+  <dependency className="TasksAndSyncs.behavior.TaskResult_BehaviorDescriptor" file="TaskResult_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.TaskResult_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
@@ -76,7 +73,6 @@
   <dependency className="TasksAndSyncs.behavior.TaskType_Behavior" file="TaskType_Behavior.java">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />

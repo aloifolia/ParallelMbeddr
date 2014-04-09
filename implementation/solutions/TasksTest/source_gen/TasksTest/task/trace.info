@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
   <root nodeRef="r:3c5a60b7-0243-41fd-9260-f7c1c612b110(TasksTest.task)/1304213873205793445">
-    <nodeInfo nodeId="1304213873214974366" fileName="task.c" startLine="9" startPosition="2" endLine="9" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="1304213873214981476" fileName="task.c" startLine="9" startPosition="12" endLine="9" endPosition="15" conceptFqName="com.mbeddr.core.pointers.structure.StringLiteral" />
-    <nodeInfo nodeId="1304213873205795635" fileName="task.c" startLine="10" startPosition="2" endLine="10" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873205795636" fileName="task.c" startLine="10" startPosition="9" endLine="10" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="1304213873205802112" fileName="task.c" startLine="16" startPosition="2" endLine="16" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="1304213873205793445" fileName="task.c" startLine="5" startPosition="0" endLine="6" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="TasksTest.task.bar" />
-    <nodeInfo nodeId="1304213873205802111" fileName="task.c" startLine="15" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="1304213873205795627" fileName="task.c" startLine="8" startPosition="0" endLine="12" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="1304213873205802109" fileName="task.c" startLine="14" startPosition="0" endLine="19" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="task_bar" />
-    <nodeInfo nodeId="1304213873205795625" fileName="task.c" startLine="7" startPosition="0" endLine="13" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="2744793885334405703" fileName="task.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="2744793885337347648" fileName="task.c" startLine="8" startPosition="2" endLine="8" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="2744793885337348234" fileName="task.c" startLine="8" startPosition="14" endLine="8" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="2744793885334427259" fileName="task.c" startLine="9" startPosition="2" endLine="9" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="2744793885334427263" fileName="task.c" startLine="9" startPosition="2" endLine="9" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2744793885337897140" fileName="task.c" startLine="10" startPosition="2" endLine="10" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="2744793885337897729" fileName="task.c" startLine="10" startPosition="14" endLine="10" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="2744793885337898199" fileName="task.c" startLine="11" startPosition="2" endLine="11" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="2744793885337898432" fileName="task.c" startLine="11" startPosition="2" endLine="11" endPosition="7" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="2744793885337898200" fileName="task.c" startLine="11" startPosition="2" endLine="11" endPosition="8" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2744793885337898701" fileName="task.c" startLine="11" startPosition="6" endLine="11" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1304213873205795635" fileName="task.c" startLine="12" startPosition="2" endLine="12" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="2744793885334391484" fileName="task.c" startLine="12" startPosition="9" endLine="12" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1304213873205795627" fileName="task.c" startLine="6" startPosition="0" endLine="14" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1304213873205795625" fileName="task.c" startLine="5" startPosition="0" endLine="15" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="1304213873205793445" fileName="task.h" startLine="15" startPosition="0" endLine="16" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="TasksTest.task.main" />
-    <unitInfo nodeId="1304213873205793445" fileName="task.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="TasksTest.task.task" />
+    <unitInfo nodeId="1304213873205793445" fileName="task.c" startLine="1" startPosition="0" endLine="16" endPosition="0" unitName="TasksTest.task.task" />
   </root>
 </debugInfo>
 

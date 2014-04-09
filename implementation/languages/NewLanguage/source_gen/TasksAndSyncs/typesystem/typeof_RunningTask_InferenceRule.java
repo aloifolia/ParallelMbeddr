@@ -10,7 +10,6 @@ import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.smodel.SModelUtil_new;
 
@@ -24,27 +23,21 @@ public class typeof_RunningTask_InferenceRule extends AbstractInferenceRule_Runt
       final SNode taskAsExprType = typeCheckingContext.typeOf(task, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873210950506", true);
       typeCheckingContext.whenConcrete(taskAsExprType, new Runnable() {
         public void run() {
-          SNode taskType = SNodeOperations.as(typeCheckingContext.getExpandedNode(taskAsExprType), "TasksAndSyncs.structure.TaskType");
-          SNode runningTaskType = SConceptOperations.createNewNode("TasksAndSyncs.structure.RunningTaskType", null);
-
-          for (SNode argumentType : ListSequence.fromList(SLinkOperations.getTargets(taskType, "argumentTypes", true))) {
-            ListSequence.fromList(SLinkOperations.getTargets(runningTaskType, "argumentTypes", true)).addElement(SNodeOperations.copyNode(argumentType));
-          }
-          SLinkOperations.setTarget(runningTaskType, "returnType", SNodeOperations.copyNode(SLinkOperations.getTarget(taskType, "returnType", true)), true);
+          SNode futureType = SConceptOperations.createNewNode("TasksAndSyncs.structure.FutureType", null);
+          SLinkOperations.setTarget(futureType, "returnType", SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(taskAsExprType), "TasksAndSyncs.structure.TaskType"), "returnType", true)), true);
 
           {
             SNode _nodeToCheck_1029348928467 = runningTask;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873206867523", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873206867527", true), (SNode) runningTaskType, _info_12389875345);
+            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873206867527", true), (SNode) futureType, _info_12389875345);
           }
-
         }
       }, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873210942623", false, false);
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.RunningTask";
+    return "TasksAndSyncs.structure.Future";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

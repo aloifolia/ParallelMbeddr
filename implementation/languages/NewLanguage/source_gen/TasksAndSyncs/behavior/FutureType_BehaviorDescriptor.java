@@ -5,20 +5,20 @@ package TasksAndSyncs.behavior;
 import com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class RunningTaskType_BehaviorDescriptor extends Type_BehaviorDescriptor {
-  public RunningTaskType_BehaviorDescriptor() {
+public class FutureType_BehaviorDescriptor extends Type_BehaviorDescriptor {
+  public FutureType_BehaviorDescriptor() {
   }
 
   public String virtual_getPresentation_1213877396640(SNode thisNode) {
-    return RunningTaskType_Behavior.virtual_getPresentation_1213877396640(thisNode);
+    return FutureType_Behavior.virtual_getPresentation_1213877396640(thisNode);
   }
 
   public int virtual_getUsedBytes_6941595764870551407(SNode thisNode) {
-    return RunningTaskType_Behavior.virtual_getUsedBytes_6941595764870551407(thisNode);
+    return FutureType_Behavior.virtual_getUsedBytes_6941595764870551407(thisNode);
   }
 
   @Override
   public String getConceptFqName() {
-    return "TasksAndSyncs.structure.RunningTaskType";
+    return "TasksAndSyncs.structure.FutureType";
   }
 }

@@ -43,12 +43,12 @@ public class Task_Editor extends DefaultNodeEditor {
 
   private EditorCell createRefNode_jn8cz7_b0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("functionCall");
-    provider.setNoTargetText("<no functionCall>");
+    provider.setRole("expression");
+    provider.setNoTargetText("<no expression>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
-      editorCell.setRole("functionCall");
+      editorCell.setRole("expression");
     }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();

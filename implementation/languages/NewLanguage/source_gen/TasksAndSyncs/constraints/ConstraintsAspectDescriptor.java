@@ -12,15 +12,17 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
 
   public ConstraintsDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
-      case 1:
-        return new RunningTask_Constraints();
       case 0:
-        return new JoinedTask_Constraints();
+        return new Future_Constraints();
+      case 1:
+        return new TaskJoin_Constraints();
+      case 2:
+        return new TaskResult_Constraints();
       default:
         // todo: illegal in some cases? 
         return new BaseConstraintsDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.JoinedTask", "TasksAndSyncs.structure.RunningTask"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult"};
 }

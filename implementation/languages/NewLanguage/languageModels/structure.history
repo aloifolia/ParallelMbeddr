@@ -42,5 +42,29 @@
     </dependencies>
     <rename id="6i3o.1304213873212674441" type="REFERENCE" from="task" to="runningTask" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="6" />
+    </dependencies>
+    <rename id="6i3o.1304213873205054831" type="CONCEPT" from="RunningTaskType" to="FutureType" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="7" />
+    </dependencies>
+    <rename id="6i3o.1304213873204985423" type="CONCEPT" from="JoinedTask" to="JoinTask" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="8" />
+    </dependencies>
+    <rename id="6i3o.1304213873204985423" type="CONCEPT" from="JoinTask" to="TaskJoin" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="9" />
+    </dependencies>
+    <rename id="6i3o.2744793885339890637" type="CONCEPT" from="TaskJoin" to="TaskResult" />
+  </StructureModification>
 </history>
 

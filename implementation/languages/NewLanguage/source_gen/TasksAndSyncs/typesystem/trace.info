@@ -2,242 +2,162 @@
 <debugInfo>
   <unitInfo fileName="TypesystemDescriptor.java" startLine="9" startPosition="0" endLine="37" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873205167535">
-    <nodeInfo nodeId="1304213873205167597" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="117" endLine="22" endPosition="96" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873207229114" fileName="typeof_Task_InferenceRule.java" startLine="22" startPosition="96" endLine="23" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873205605152" fileName="typeof_Task_InferenceRule.java" startLine="24" startPosition="198" endLine="25" endPosition="177" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873206150944" fileName="typeof_Task_InferenceRule.java" startLine="26" startPosition="5" endLine="27" endPosition="228" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873206861648" fileName="typeof_Task_InferenceRule.java" startLine="27" startPosition="228" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="29" startPosition="5" endLine="30" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="30" startPosition="46" endLine="31" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="31" startPosition="190" endLine="32" endPosition="239" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="46" endLine="37" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="41" startPosition="5" endLine="42" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="42" startPosition="130" endLine="43" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="47" startPosition="30" endLine="48" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_Task_InferenceRule#()V" />
-    <nodeInfo nodeId="1304213873205558393" fileName="typeof_Task_InferenceRule.java" startLine="23" startPosition="0" endLine="26" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="0" endLine="39" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="47" startPosition="0" endLine="50" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="40" startPosition="68" endLine="44" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="28" startPosition="0" endLine="33" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="40" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="18" startPosition="38" endLine="18" endPosition="38" />
-    <scopeInfo nodeId="1304213873205558399" fileName="typeof_Task_InferenceRule.java" startLine="24" startPosition="198" endLine="25" endPosition="177" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="46" endLine="37" endPosition="42" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="47" startPosition="30" endLine="48" endPosition="17" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="41" startPosition="5" endLine="43" endPosition="45">
+    <nodeInfo nodeId="1304213873205167597" fileName="typeof_Task_InferenceRule.java" startLine="20" startPosition="117" endLine="21" endPosition="96" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206150944" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="96" endLine="22" endPosition="303" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873206861648" fileName="typeof_Task_InferenceRule.java" startLine="22" startPosition="303" endLine="23" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="24" startPosition="5" endLine="25" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="25" startPosition="46" endLine="26" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="26" startPosition="190" endLine="27" endPosition="239" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="31" startPosition="46" endLine="32" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="5" endLine="37" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="37" startPosition="130" endLine="38" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="42" startPosition="30" endLine="43" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_Task_InferenceRule#()V" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="31" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="42" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="35" startPosition="68" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="23" startPosition="0" endLine="28" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="35" startPosition="0" endLine="41" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="20" startPosition="0" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="17" startPosition="38" endLine="17" endPosition="38" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="31" startPosition="46" endLine="32" endPosition="42" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="42" startPosition="30" endLine="43" endPosition="17" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="5" endLine="38" endPosition="45">
       <varInfo nodeId="1304213873205167535" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205558393" fileName="typeof_Task_InferenceRule.java" startLine="23" startPosition="0" endLine="26" endPosition="5">
-      <varInfo nodeId="1304213873205558395" varName="argument" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="29" startPosition="5" endLine="32" endPosition="239">
+    <scopeInfo nodeId="1304213873206865411" fileName="typeof_Task_InferenceRule.java" startLine="24" startPosition="5" endLine="27" endPosition="239">
       <varInfo nodeId="1304213873206865411" varName="_info_12389875345" />
       <varInfo nodeId="1304213873206865411" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="36" startPosition="0" endLine="39" endPosition="0" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="47" startPosition="0" endLine="50" endPosition="0" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="40" startPosition="68" endLine="44" endPosition="5" />
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="40" startPosition="0" endLine="46" endPosition="0">
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="31" startPosition="0" endLine="34" endPosition="0" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="42" startPosition="0" endLine="45" endPosition="0" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="35" startPosition="68" endLine="39" endPosition="5" />
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="35" startPosition="0" endLine="41" endPosition="0">
       <varInfo nodeId="1304213873205167535" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205167536" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="117" endLine="33" endPosition="5">
+    <scopeInfo nodeId="1304213873205167536" fileName="typeof_Task_InferenceRule.java" startLine="20" startPosition="117" endLine="28" endPosition="5">
       <varInfo nodeId="1304213873205167600" varName="taskType" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="21" startPosition="0" endLine="35" endPosition="0">
+    <scopeInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="20" startPosition="0" endLine="30" endPosition="0">
       <varInfo nodeId="1304213873205167535" varName="status" />
       <varInfo nodeId="1304213873205167535" varName="task" />
       <varInfo nodeId="1304213873205167535" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="17" startPosition="0" endLine="51" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_Task_InferenceRule" />
+    <unitInfo nodeId="1304213873205167535" fileName="typeof_Task_InferenceRule.java" startLine="16" startPosition="0" endLine="46" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_Task_InferenceRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873206867468">
-    <nodeInfo nodeId="4960020358030873113" fileName="typeof_RunningTask_InferenceRule.java" startLine="21" startPosition="124" endLine="22" endPosition="191" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="23" startPosition="5" endLine="24" endPosition="165" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873210968550" fileName="typeof_RunningTask_InferenceRule.java" startLine="26" startPosition="27" endLine="27" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873208699004" fileName="typeof_RunningTask_InferenceRule.java" startLine="27" startPosition="135" endLine="28" endPosition="116" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212251686" fileName="typeof_RunningTask_InferenceRule.java" startLine="28" startPosition="116" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873211014270" fileName="typeof_RunningTask_InferenceRule.java" startLine="30" startPosition="121" endLine="31" endPosition="153" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873208852047" fileName="typeof_RunningTask_InferenceRule.java" startLine="32" startPosition="11" endLine="33" endPosition="156" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209085423" fileName="typeof_RunningTask_InferenceRule.java" startLine="33" startPosition="156" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="35" startPosition="11" endLine="36" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="36" startPosition="59" endLine="37" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="37" startPosition="196" endLine="38" endPosition="252" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873210969880" fileName="typeof_RunningTask_InferenceRule.java" startLine="39" startPosition="11" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="46" startPosition="46" endLine="47" endPosition="49" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="51" startPosition="5" endLine="52" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="52" startPosition="130" endLine="53" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="57" startPosition="30" endLine="58" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_RunningTask_InferenceRule#()V" />
-    <nodeInfo nodeId="1304213873210998351" fileName="typeof_RunningTask_InferenceRule.java" startLine="29" startPosition="0" endLine="32" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="57" startPosition="0" endLine="60" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="68" endLine="54" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="34" startPosition="0" endLine="39" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="0" endLine="56" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="26" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
-    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="24" startPosition="165" endLine="42" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="22" startPosition="191" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="21" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="18" startPosition="45" endLine="18" endPosition="45" />
-    <scopeInfo nodeId="1304213873210998357" fileName="typeof_RunningTask_InferenceRule.java" startLine="30" startPosition="121" endLine="31" endPosition="153" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="46" startPosition="46" endLine="47" endPosition="49" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="57" startPosition="30" endLine="58" endPosition="17" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="51" startPosition="5" endLine="53" endPosition="45">
+    <nodeInfo nodeId="4960020358030873113" fileName="typeof_RunningTask_InferenceRule.java" startLine="20" startPosition="124" endLine="21" endPosition="191" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="22" startPosition="5" endLine="23" endPosition="165" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873208699004" fileName="typeof_RunningTask_InferenceRule.java" startLine="25" startPosition="27" endLine="26" endPosition="106" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873208852047" fileName="typeof_RunningTask_InferenceRule.java" startLine="26" startPosition="106" endLine="27" endPosition="250" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873209085423" fileName="typeof_RunningTask_InferenceRule.java" startLine="27" startPosition="250" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="29" startPosition="11" endLine="30" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="30" startPosition="59" endLine="31" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="31" startPosition="196" endLine="32" endPosition="247" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="39" startPosition="46" endLine="40" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="44" startPosition="5" endLine="45" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="45" startPosition="130" endLine="46" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="30" endLine="51" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_RunningTask_InferenceRule#()V" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="0" endLine="53" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="43" startPosition="68" endLine="47" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="28" startPosition="0" endLine="33" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="43" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="25" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="23" startPosition="165" endLine="35" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="21" startPosition="191" endLine="36" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="20" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="17" startPosition="45" endLine="17" endPosition="45" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="39" startPosition="46" endLine="40" endPosition="44" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="30" endLine="51" endPosition="17" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="44" startPosition="5" endLine="46" endPosition="45">
       <varInfo nodeId="1304213873206867468" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873210998351" fileName="typeof_RunningTask_InferenceRule.java" startLine="29" startPosition="0" endLine="32" endPosition="11">
-      <varInfo nodeId="1304213873210998353" varName="argumentType" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="35" startPosition="11" endLine="38" endPosition="252">
+    <scopeInfo nodeId="1304213873206867523" fileName="typeof_RunningTask_InferenceRule.java" startLine="29" startPosition="11" endLine="32" endPosition="247">
       <varInfo nodeId="1304213873206867523" varName="_info_12389875345" />
       <varInfo nodeId="1304213873206867523" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="57" startPosition="0" endLine="60" endPosition="0" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="68" endLine="54" endPosition="5" />
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="0" endLine="56" endPosition="0">
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="50" startPosition="0" endLine="53" endPosition="0" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="43" startPosition="68" endLine="47" endPosition="5" />
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="43" startPosition="0" endLine="49" endPosition="0">
       <varInfo nodeId="1304213873206867468" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873210942625" fileName="typeof_RunningTask_InferenceRule.java" startLine="26" startPosition="27" endLine="40" endPosition="0">
-      <varInfo nodeId="1304213873208699007" varName="runningTaskType" />
-      <varInfo nodeId="1304213873210968553" varName="taskType" />
+    <scopeInfo nodeId="1304213873210942625" fileName="typeof_RunningTask_InferenceRule.java" startLine="25" startPosition="27" endLine="33" endPosition="11">
+      <varInfo nodeId="1304213873208699007" varName="futureType" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="26" startPosition="0" endLine="42" endPosition="0" />
-    <scopeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="23" startPosition="5" endLine="42" endPosition="114">
+    <scopeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="25" startPosition="0" endLine="35" endPosition="0" />
+    <scopeInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="22" startPosition="5" endLine="35" endPosition="114">
       <varInfo nodeId="1304213873210942623" varName="taskAsExprType" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873206867469" fileName="typeof_RunningTask_InferenceRule.java" startLine="21" startPosition="124" endLine="43" endPosition="5">
+    <scopeInfo nodeId="1304213873206867469" fileName="typeof_RunningTask_InferenceRule.java" startLine="20" startPosition="124" endLine="36" endPosition="5">
       <varInfo nodeId="4960020358030873116" varName="task" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="21" startPosition="0" endLine="45" endPosition="0">
+    <scopeInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="20" startPosition="0" endLine="38" endPosition="0">
       <varInfo nodeId="1304213873206867468" varName="runningTask" />
       <varInfo nodeId="1304213873206867468" varName="status" />
       <varInfo nodeId="1304213873206867468" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="25" startPosition="59" endLine="42" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_RunningTask_InferenceRule$1" />
-    <unitInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="17" startPosition="0" endLine="61" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_RunningTask_InferenceRule" />
+    <unitInfo nodeId="1304213873210942623" fileName="typeof_RunningTask_InferenceRule.java" startLine="24" startPosition="59" endLine="35" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_RunningTask_InferenceRule$1" />
+    <unitInfo nodeId="1304213873206867468" fileName="typeof_RunningTask_InferenceRule.java" startLine="16" startPosition="0" endLine="54" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_RunningTask_InferenceRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873209671652">
-    <nodeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="28" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="28" startPosition="60" endLine="29" endPosition="256" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="256" endLine="30" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209762091" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="31" startPosition="7" endLine="32" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="35" endPosition="73" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="35" startPosition="73" endLine="36" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="36" startPosition="190" endLine="37" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="37" startPosition="62" endLine="38" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="41" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="41" startPosition="131" endLine="42" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="42" startPosition="135" endLine="43" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="43" startPosition="27" endLine="44" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="46" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="46" startPosition="46" endLine="47" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="49" endPosition="77" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="49" startPosition="77" endLine="50" endPosition="194" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="50" startPosition="194" endLine="51" endPosition="66" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="51" startPosition="66" endLine="52" endPosition="140" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="59" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="61" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209762091" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="61" startPosition="30" endLine="62" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="66" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="66" startPosition="131" endLine="67" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="67" startPosition="135" endLine="68" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="68" startPosition="27" endLine="69" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="71" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="71" startPosition="46" endLine="72" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="75" startPosition="5" endLine="76" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="85" endPosition="133" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="85" startPosition="133" endLine="86" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="92" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="92" startPosition="135" endLine="93" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="TaskType_subTypeOf_TaskType_InequationReplacementRule#()V" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isWeak#()Z" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSubtypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSupertypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873209672812" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="63" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="31" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="69" startPosition="29" endLine="74" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="33" startPosition="5" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="47" startPosition="50" endLine="53" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSubtypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSupertypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873209672812" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="33" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="44" startPosition="29" endLine="54" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="64" startPosition="235" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="55" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="checkInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)Z" />
-    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="processInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)V" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="22" startPosition="66" endLine="22" endPosition="66" />
-    <scopeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" />
-    <scopeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="46" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="46" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" />
-    <scopeInfo nodeId="1304213873209672815" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="62" endPosition="29" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="86" endPosition="45">
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="20" startPosition="5" endLine="21" endPosition="73" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="21" startPosition="73" endLine="22" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="22" startPosition="190" endLine="23" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="23" startPosition="62" endLine="24" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="28" startPosition="207" endLine="29" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="30" startPosition="235" endLine="31" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="27" endLine="35" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="40" endPosition="133" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="40" startPosition="133" endLine="41" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="46" startPosition="5" endLine="47" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="47" startPosition="135" endLine="48" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="52" startPosition="53" endLine="53" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="56" startPosition="55" endLine="57" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="TaskType_subTypeOf_TaskType_InequationReplacementRule#()V" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="0" endLine="37" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isWeak#()Z" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="52" startPosition="0" endLine="55" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSubtypeConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="56" startPosition="0" endLine="59" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSupertypeConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="38" startPosition="71" endLine="42" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="73" endLine="49" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="28" startPosition="0" endLine="33" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="checkInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)Z" />
+    <nodeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="19" startPosition="253" endLine="25" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="38" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSubtypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSupertypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="19" startPosition="0" endLine="27" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="processInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)V" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="16" startPosition="66" endLine="16" endPosition="66" />
+    <scopeInfo nodeId="1304213873209671654" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" />
+    <scopeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="27" endLine="35" endPosition="16" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="52" startPosition="53" endLine="53" endPosition="46" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="56" startPosition="55" endLine="57" endPosition="46" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="41" endPosition="45">
       <varInfo nodeId="1304213873209671652" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="93" endPosition="45">
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="46" startPosition="5" endLine="48" endPosition="45">
       <varInfo nodeId="1304213873209671652" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209756712" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="30" endPosition="79">
-      <varInfo nodeId="1304213873209756712" varName="_reporter_2309309498" />
-      <varInfo nodeId="1304213873209756712" varName="errorTarget" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="28" startPosition="207" endLine="31" endPosition="27">
+      <varInfo nodeId="1304213873209671652" varName="result_14532009" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" />
-    <scopeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="38" endPosition="213">
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="34" startPosition="0" endLine="37" endPosition="0" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="52" startPosition="0" endLine="55" endPosition="0" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="56" startPosition="0" endLine="59" endPosition="0" />
+    <scopeInfo nodeId="1304213873209771400" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="20" startPosition="5" endLine="24" endPosition="213">
       <varInfo nodeId="1304213873209771400" varName="_info_12389875345" />
       <varInfo nodeId="1304213873209771400" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209891763" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="52" endPosition="140">
-      <varInfo nodeId="1304213873209891763" varName="_info_12389875345" />
-      <varInfo nodeId="1304213873209891763" varName="_nodeToCheck_1029348928467" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" />
-    <scopeInfo nodeId="1304213873209672815" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="32" endPosition="13" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0">
-      <varInfo nodeId="1304213873209671652" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0">
-      <varInfo nodeId="1304213873209671652" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="53" endPosition="9" />
-    <scopeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="74" endPosition="7">
-      <varInfo nodeId="1304213873209814576" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209814576" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="54" endPosition="7">
-      <varInfo nodeId="1304213873209814576" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873209814576" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209671654" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="76" endPosition="27">
-      <varInfo nodeId="1304213873209671652" varName="result_14532009" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0">
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="38" startPosition="71" endLine="42" endPosition="5" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="73" endLine="49" endPosition="5" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="28" startPosition="0" endLine="33" endPosition="0">
       <varInfo nodeId="1304213873209671652" varName="equationInfo" />
       <varInfo nodeId="1304213873209671652" varName="inequalityIsLessThan" />
       <varInfo nodeId="1304213873209671652" varName="inequalityIsWeak" />
@@ -245,8 +165,14 @@
       <varInfo nodeId="1304213873209671652" varName="subtype" />
       <varInfo nodeId="1304213873209671652" varName="supertype" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209671654" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="55" endPosition="5" />
-    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0">
+    <scopeInfo nodeId="1304213873209671654" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="19" startPosition="253" endLine="25" endPosition="5" />
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="38" startPosition="0" endLine="44" endPosition="0">
+      <varInfo nodeId="1304213873209671652" varName="node" />
+    </scopeInfo>
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="45" startPosition="0" endLine="51" endPosition="0">
+      <varInfo nodeId="1304213873209671652" varName="node" />
+    </scopeInfo>
+    <scopeInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="19" startPosition="0" endLine="27" endPosition="0">
       <varInfo nodeId="1304213873209671652" varName="equationInfo" />
       <varInfo nodeId="1304213873209671652" varName="inequalityIsLessThan" />
       <varInfo nodeId="1304213873209671652" varName="inequalityIsWeak" />
@@ -255,125 +181,62 @@
       <varInfo nodeId="1304213873209671652" varName="supertype" />
       <varInfo nodeId="1304213873209671652" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="21" startPosition="0" endLine="105" endPosition="0" unitName="TasksAndSyncs.typesystem.TaskType_subTypeOf_TaskType_InequationReplacementRule" />
+    <unitInfo nodeId="1304213873209671652" fileName="TaskType_subTypeOf_TaskType_InequationReplacementRule.java" startLine="15" startPosition="0" endLine="60" endPosition="0" unitName="TasksAndSyncs.typesystem.TaskType_subTypeOf_TaskType_InequationReplacementRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873212628732">
-    <nodeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="28" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="28" startPosition="60" endLine="29" endPosition="256" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="256" endLine="30" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628742" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="31" startPosition="7" endLine="32" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="35" endPosition="73" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="35" startPosition="73" endLine="36" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="36" startPosition="190" endLine="37" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="37" startPosition="62" endLine="38" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="41" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="41" startPosition="131" endLine="42" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="42" startPosition="135" endLine="43" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="43" startPosition="27" endLine="44" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="46" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="46" startPosition="46" endLine="47" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="49" endPosition="77" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="49" startPosition="77" endLine="50" endPosition="194" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="50" startPosition="194" endLine="51" endPosition="66" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="51" startPosition="66" endLine="52" endPosition="140" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="59" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="61" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628742" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="61" startPosition="30" endLine="62" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="66" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="66" startPosition="131" endLine="67" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="67" startPosition="135" endLine="68" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="68" startPosition="27" endLine="69" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="71" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="71" startPosition="46" endLine="72" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="75" startPosition="5" endLine="76" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="85" endPosition="133" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="85" startPosition="133" endLine="86" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="92" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="92" startPosition="135" endLine="93" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule#()V" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isWeak#()Z" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSubtypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSupertypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873212628735" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="63" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="31" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="69" startPosition="29" endLine="74" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="33" startPosition="5" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="47" startPosition="50" endLine="53" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSubtypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSupertypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873212628735" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="33" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="44" startPosition="29" endLine="54" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="64" startPosition="235" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="55" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="checkInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)Z" />
-    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="processInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)V" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="22" startPosition="80" endLine="22" endPosition="80" />
-    <scopeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" />
-    <scopeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="53" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="53" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" />
-    <scopeInfo nodeId="1304213873212628736" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="62" endPosition="29" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="86" endPosition="45">
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="20" startPosition="5" endLine="21" endPosition="73" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="21" startPosition="73" endLine="22" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="22" startPosition="190" endLine="23" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="23" startPosition="62" endLine="24" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="28" startPosition="207" endLine="29" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="30" startPosition="235" endLine="31" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="27" endLine="35" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="40" endPosition="133" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="40" startPosition="133" endLine="41" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="46" startPosition="5" endLine="47" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="47" startPosition="135" endLine="48" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="52" startPosition="53" endLine="53" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="56" startPosition="55" endLine="57" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule#()V" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="0" endLine="37" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isWeak#()Z" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="52" startPosition="0" endLine="55" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSubtypeConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="56" startPosition="0" endLine="59" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSupertypeConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="38" startPosition="71" endLine="42" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="73" endLine="49" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="28" startPosition="0" endLine="33" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="checkInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)Z" />
+    <nodeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="19" startPosition="253" endLine="25" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="38" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSubtypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSupertypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="19" startPosition="0" endLine="27" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="processInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)V" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="16" startPosition="80" endLine="16" endPosition="80" />
+    <scopeInfo nodeId="1304213873212628734" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" />
+    <scopeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="29" startPosition="35" endLine="30" endPosition="235" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="27" endLine="35" endPosition="16" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="52" startPosition="53" endLine="53" endPosition="48" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="56" startPosition="55" endLine="57" endPosition="48" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="41" endPosition="45">
       <varInfo nodeId="1304213873212628732" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="93" endPosition="45">
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="46" startPosition="5" endLine="48" endPosition="45">
       <varInfo nodeId="1304213873212628732" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212628737" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="30" endPosition="79">
-      <varInfo nodeId="1304213873212628737" varName="_reporter_2309309498" />
-      <varInfo nodeId="1304213873212628737" varName="errorTarget" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="28" startPosition="207" endLine="31" endPosition="27">
+      <varInfo nodeId="1304213873212628732" varName="result_14532009" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" />
-    <scopeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="38" endPosition="213">
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="34" startPosition="0" endLine="37" endPosition="0" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="52" startPosition="0" endLine="55" endPosition="0" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="56" startPosition="0" endLine="59" endPosition="0" />
+    <scopeInfo nodeId="1304213873212628754" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="20" startPosition="5" endLine="24" endPosition="213">
       <varInfo nodeId="1304213873212628754" varName="_info_12389875345" />
       <varInfo nodeId="1304213873212628754" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212628775" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="52" endPosition="140">
-      <varInfo nodeId="1304213873212628775" varName="_info_12389875345" />
-      <varInfo nodeId="1304213873212628775" varName="_nodeToCheck_1029348928467" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" />
-    <scopeInfo nodeId="1304213873212628736" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="32" endPosition="13" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0">
-      <varInfo nodeId="1304213873212628732" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0">
-      <varInfo nodeId="1304213873212628732" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="53" endPosition="9" />
-    <scopeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="74" endPosition="7">
-      <varInfo nodeId="1304213873212628763" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628763" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="54" endPosition="7">
-      <varInfo nodeId="1304213873212628763" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873212628763" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628734" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="76" endPosition="27">
-      <varInfo nodeId="1304213873212628732" varName="result_14532009" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0">
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="38" startPosition="71" endLine="42" endPosition="5" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="73" endLine="49" endPosition="5" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="28" startPosition="0" endLine="33" endPosition="0">
       <varInfo nodeId="1304213873212628732" varName="equationInfo" />
       <varInfo nodeId="1304213873212628732" varName="inequalityIsLessThan" />
       <varInfo nodeId="1304213873212628732" varName="inequalityIsWeak" />
@@ -381,8 +244,14 @@
       <varInfo nodeId="1304213873212628732" varName="subtype" />
       <varInfo nodeId="1304213873212628732" varName="supertype" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212628734" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="55" endPosition="5" />
-    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0">
+    <scopeInfo nodeId="1304213873212628734" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="19" startPosition="253" endLine="25" endPosition="5" />
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="38" startPosition="0" endLine="44" endPosition="0">
+      <varInfo nodeId="1304213873212628732" varName="node" />
+    </scopeInfo>
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="45" startPosition="0" endLine="51" endPosition="0">
+      <varInfo nodeId="1304213873212628732" varName="node" />
+    </scopeInfo>
+    <scopeInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="19" startPosition="0" endLine="27" endPosition="0">
       <varInfo nodeId="1304213873212628732" varName="equationInfo" />
       <varInfo nodeId="1304213873212628732" varName="inequalityIsLessThan" />
       <varInfo nodeId="1304213873212628732" varName="inequalityIsWeak" />
@@ -391,212 +260,115 @@
       <varInfo nodeId="1304213873212628732" varName="supertype" />
       <varInfo nodeId="1304213873212628732" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="21" startPosition="0" endLine="105" endPosition="0" unitName="TasksAndSyncs.typesystem.RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule" />
+    <unitInfo nodeId="1304213873212628732" fileName="RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule.java" startLine="15" startPosition="0" endLine="60" endPosition="0" unitName="TasksAndSyncs.typesystem.RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule" />
   </root>
-  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873212670137">
-    <nodeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="28" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="28" startPosition="60" endLine="29" endPosition="256" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="29" startPosition="256" endLine="30" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670147" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="31" startPosition="7" endLine="32" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="35" endPosition="73" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="35" startPosition="73" endLine="36" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="36" startPosition="190" endLine="37" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="37" startPosition="62" endLine="38" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="41" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="41" startPosition="131" endLine="42" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="42" startPosition="135" endLine="43" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="43" startPosition="27" endLine="44" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="46" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="46" startPosition="46" endLine="47" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="49" endPosition="77" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="49" startPosition="77" endLine="50" endPosition="194" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="50" startPosition="194" endLine="51" endPosition="66" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="51" startPosition="66" endLine="52" endPosition="140" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="59" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="61" endPosition="30" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670147" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="61" startPosition="30" endLine="62" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="66" endPosition="131" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="66" startPosition="131" endLine="67" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="67" startPosition="135" endLine="68" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="68" startPosition="27" endLine="69" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="71" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="71" startPosition="46" endLine="72" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="75" startPosition="5" endLine="76" endPosition="27" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="85" endPosition="133" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="85" startPosition="133" endLine="86" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="92" endPosition="135" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="92" startPosition="135" endLine="93" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="52" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule#()V" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isWeak#()Z" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSubtypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableSupertypeConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873212670140" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="63" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="31" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="69" startPosition="29" endLine="74" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="33" startPosition="5" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="47" startPosition="50" endLine="53" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSubtypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableSupertypeAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873212670140" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="33" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="44" startPosition="29" endLine="54" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.WhileStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="64" startPosition="235" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="39" startPosition="5" endLine="55" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="checkInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)Z" />
-    <nodeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="processInequation#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/EquationInfo;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicable2Status;ZZ)V" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="22" startPosition="78" endLine="22" endPosition="78" />
-    <scopeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="63" startPosition="5" endLine="64" endPosition="235" />
-    <scopeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="72" startPosition="50" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="79" startPosition="27" endLine="80" endPosition="16" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="97" startPosition="53" endLine="98" endPosition="52" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="101" startPosition="55" endLine="102" endPosition="52" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" />
-    <scopeInfo nodeId="1304213873212670141" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="60" startPosition="195" endLine="62" endPosition="29" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="84" startPosition="5" endLine="86" endPosition="45">
-      <varInfo nodeId="1304213873212670137" varName="b" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="91" startPosition="5" endLine="93" endPosition="45">
-      <varInfo nodeId="1304213873212670137" varName="b" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670142" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="27" startPosition="7" endLine="30" endPosition="79">
-      <varInfo nodeId="1304213873212670142" varName="_reporter_2309309498" />
-      <varInfo nodeId="1304213873212670142" varName="errorTarget" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="70" startPosition="68" endLine="73" endPosition="159" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="79" startPosition="0" endLine="82" endPosition="0" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="97" startPosition="0" endLine="100" endPosition="0" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="101" startPosition="0" endLine="104" endPosition="0" />
-    <scopeInfo nodeId="1304213873212670159" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="34" startPosition="5" endLine="38" endPosition="213">
-      <varInfo nodeId="1304213873212670159" varName="_info_12389875345" />
-      <varInfo nodeId="1304213873212670159" varName="_nodeToCheck_1029348928467" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670180" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="48" startPosition="9" endLine="52" endPosition="140">
-      <varInfo nodeId="1304213873212670180" varName="_info_12389875345" />
-      <varInfo nodeId="1304213873212670180" varName="_nodeToCheck_1029348928467" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="83" startPosition="71" endLine="87" endPosition="5" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="90" startPosition="73" endLine="94" endPosition="5" />
-    <scopeInfo nodeId="1304213873212670141" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="26" startPosition="195" endLine="32" endPosition="13" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="83" startPosition="0" endLine="89" endPosition="0">
-      <varInfo nodeId="1304213873212670137" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="90" startPosition="0" endLine="96" endPosition="0">
-      <varInfo nodeId="1304213873212670137" varName="node" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="45" startPosition="68" endLine="53" endPosition="9" />
-    <scopeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="65" startPosition="5" endLine="74" endPosition="7">
-      <varInfo nodeId="1304213873212670168" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670168" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="40" startPosition="5" endLine="54" endPosition="7">
-      <varInfo nodeId="1304213873212670168" varName="argTypeSub_it" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSub_var" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSuper_it" />
-      <varInfo nodeId="1304213873212670168" varName="argTypeSuper_var" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670139" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="59" startPosition="35" endLine="75" endPosition="5" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="58" startPosition="207" endLine="76" endPosition="27">
-      <varInfo nodeId="1304213873212670137" varName="result_14532009" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="58" startPosition="0" endLine="78" endPosition="0">
-      <varInfo nodeId="1304213873212670137" varName="equationInfo" />
-      <varInfo nodeId="1304213873212670137" varName="inequalityIsLessThan" />
-      <varInfo nodeId="1304213873212670137" varName="inequalityIsWeak" />
-      <varInfo nodeId="1304213873212670137" varName="status" />
-      <varInfo nodeId="1304213873212670137" varName="subtype" />
-      <varInfo nodeId="1304213873212670137" varName="supertype" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212670139" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="25" startPosition="253" endLine="55" endPosition="5" />
-    <scopeInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="25" startPosition="0" endLine="57" endPosition="0">
-      <varInfo nodeId="1304213873212670137" varName="equationInfo" />
-      <varInfo nodeId="1304213873212670137" varName="inequalityIsLessThan" />
-      <varInfo nodeId="1304213873212670137" varName="inequalityIsWeak" />
-      <varInfo nodeId="1304213873212670137" varName="status" />
-      <varInfo nodeId="1304213873212670137" varName="subtype" />
-      <varInfo nodeId="1304213873212670137" varName="supertype" />
-      <varInfo nodeId="1304213873212670137" varName="typeCheckingContext" />
-    </scopeInfo>
-    <unitInfo nodeId="1304213873212670137" fileName="JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule.java" startLine="21" startPosition="0" endLine="105" endPosition="0" unitName="TasksAndSyncs.typesystem.JoinedTaskType_subTypeOf_JoinedTaskType_InequationReplacementRule" />
-  </root>
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873212670137" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873212854690">
-    <nodeInfo nodeId="4190647428591818439" fileName="typeof_JoinedTask_InferenceRule.java" startLine="21" startPosition="123" endLine="22" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="23" startPosition="5" endLine="24" endPosition="165" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854694" fileName="typeof_JoinedTask_InferenceRule.java" startLine="26" startPosition="27" endLine="27" endPosition="149" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854699" fileName="typeof_JoinedTask_InferenceRule.java" startLine="27" startPosition="149" endLine="28" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854705" fileName="typeof_JoinedTask_InferenceRule.java" startLine="28" startPosition="114" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873212854712" fileName="typeof_JoinedTask_InferenceRule.java" startLine="30" startPosition="128" endLine="31" endPosition="152" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212854719" fileName="typeof_JoinedTask_InferenceRule.java" startLine="32" startPosition="11" endLine="33" endPosition="162" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212854727" fileName="typeof_JoinedTask_InferenceRule.java" startLine="33" startPosition="162" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873212854728" fileName="typeof_JoinedTask_InferenceRule.java" startLine="35" startPosition="11" endLine="36" endPosition="58" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854728" fileName="typeof_JoinedTask_InferenceRule.java" startLine="36" startPosition="58" endLine="37" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854728" fileName="typeof_JoinedTask_InferenceRule.java" startLine="37" startPosition="196" endLine="38" endPosition="251" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212854736" fileName="typeof_JoinedTask_InferenceRule.java" startLine="39" startPosition="11" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="46" startPosition="46" endLine="47" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="51" startPosition="5" endLine="52" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="52" startPosition="130" endLine="53" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="57" startPosition="30" endLine="58" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_JoinedTask_InferenceRule#()V" />
-    <nodeInfo nodeId="1304213873212854706" fileName="typeof_JoinedTask_InferenceRule.java" startLine="29" startPosition="0" endLine="32" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="57" startPosition="0" endLine="60" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="50" startPosition="68" endLine="54" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212854728" fileName="typeof_JoinedTask_InferenceRule.java" startLine="34" startPosition="0" endLine="39" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="50" startPosition="0" endLine="56" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="26" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
-    <nodeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="24" startPosition="165" endLine="42" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="22" startPosition="190" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="21" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="18" startPosition="44" endLine="18" endPosition="44" />
-    <scopeInfo nodeId="1304213873212854711" fileName="typeof_JoinedTask_InferenceRule.java" startLine="30" startPosition="128" endLine="31" endPosition="152" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="46" startPosition="46" endLine="47" endPosition="48" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="57" startPosition="30" endLine="58" endPosition="17" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="51" startPosition="5" endLine="53" endPosition="45">
+    <nodeInfo nodeId="4190647428591818439" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="19" startPosition="123" endLine="20" endPosition="192" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="21" startPosition="5" endLine="22" endPosition="169" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212854728" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="25" startPosition="11" endLine="26" endPosition="58" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212854728" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="26" startPosition="58" endLine="27" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212854728" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="27" startPosition="196" endLine="28" endPosition="374" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="35" startPosition="46" endLine="36" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="40" startPosition="5" endLine="41" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="41" startPosition="130" endLine="42" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="46" startPosition="30" endLine="47" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_TaskJoinsk_InferenceRule#()V" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="35" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="39" startPosition="68" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212854728" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="24" startPosition="27" endLine="29" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="39" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="24" startPosition="0" endLine="31" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="22" startPosition="169" endLine="31" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="20" startPosition="192" endLine="32" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="19" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="16" startPosition="44" endLine="16" endPosition="44" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="35" startPosition="46" endLine="36" endPosition="46" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="46" startPosition="30" endLine="47" endPosition="17" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="40" startPosition="5" endLine="42" endPosition="45">
       <varInfo nodeId="1304213873212854690" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212854706" fileName="typeof_JoinedTask_InferenceRule.java" startLine="29" startPosition="0" endLine="32" endPosition="11">
-      <varInfo nodeId="1304213873212854707" varName="argumentType" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212854728" fileName="typeof_JoinedTask_InferenceRule.java" startLine="35" startPosition="11" endLine="38" endPosition="251">
+    <scopeInfo nodeId="1304213873212854728" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="25" startPosition="11" endLine="28" endPosition="374">
       <varInfo nodeId="1304213873212854728" varName="_info_12389875345" />
       <varInfo nodeId="1304213873212854728" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="57" startPosition="0" endLine="60" endPosition="0" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="50" startPosition="68" endLine="54" endPosition="5" />
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="50" startPosition="0" endLine="56" endPosition="0">
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="35" startPosition="0" endLine="38" endPosition="0" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="39" startPosition="68" endLine="43" endPosition="5" />
+    <scopeInfo nodeId="1304213873212854693" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="24" startPosition="27" endLine="29" endPosition="11" />
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="39" startPosition="0" endLine="45" endPosition="0">
       <varInfo nodeId="1304213873212854690" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212854693" fileName="typeof_JoinedTask_InferenceRule.java" startLine="26" startPosition="27" endLine="40" endPosition="0">
-      <varInfo nodeId="1304213873212854700" varName="joinedTaskType" />
-      <varInfo nodeId="1304213873212854695" varName="runningtaskType" />
+    <scopeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="24" startPosition="0" endLine="31" endPosition="0" />
+    <scopeInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="21" startPosition="5" endLine="31" endPosition="114">
+      <varInfo nodeId="1304213873212854692" varName="futureAsExprType" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="26" startPosition="0" endLine="42" endPosition="0" />
-    <scopeInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="23" startPosition="5" endLine="42" endPosition="114">
-      <varInfo nodeId="1304213873212854692" varName="taskAsExprType" />
+    <scopeInfo nodeId="1304213873212854691" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="19" startPosition="123" endLine="32" endPosition="5">
+      <varInfo nodeId="4190647428591818440" varName="future" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873212854691" fileName="typeof_JoinedTask_InferenceRule.java" startLine="21" startPosition="123" endLine="43" endPosition="5">
-      <varInfo nodeId="4190647428591818440" varName="task" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="21" startPosition="0" endLine="45" endPosition="0">
+    <scopeInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="19" startPosition="0" endLine="34" endPosition="0">
       <varInfo nodeId="1304213873212854690" varName="joinedTask" />
       <varInfo nodeId="1304213873212854690" varName="status" />
       <varInfo nodeId="1304213873212854690" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873212854692" fileName="typeof_JoinedTask_InferenceRule.java" startLine="25" startPosition="59" endLine="42" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_JoinedTask_InferenceRule$1" />
-    <unitInfo nodeId="1304213873212854690" fileName="typeof_JoinedTask_InferenceRule.java" startLine="17" startPosition="0" endLine="61" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_JoinedTask_InferenceRule" />
+    <unitInfo nodeId="1304213873212854692" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="23" startPosition="61" endLine="31" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_TaskJoinsk_InferenceRule$1" />
+    <unitInfo nodeId="1304213873212854690" fileName="typeof_TaskJoinsk_InferenceRule.java" startLine="15" startPosition="0" endLine="50" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_TaskJoinsk_InferenceRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873213330307" />
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/2744793885339922998">
+    <nodeInfo nodeId="2744793885339923000" fileName="typeof_TaskResult_InferenceRule.java" startLine="19" startPosition="123" endLine="20" endPosition="192" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="21" startPosition="5" endLine="22" endPosition="169" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2744793885339923011" fileName="typeof_TaskResult_InferenceRule.java" startLine="25" startPosition="11" endLine="26" endPosition="58" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2744793885339923011" fileName="typeof_TaskResult_InferenceRule.java" startLine="26" startPosition="58" endLine="27" endPosition="196" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2744793885339923011" fileName="typeof_TaskResult_InferenceRule.java" startLine="27" startPosition="196" endLine="28" endPosition="421" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="35" startPosition="46" endLine="36" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="40" startPosition="5" endLine="41" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="41" startPosition="130" endLine="42" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="46" startPosition="30" endLine="47" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_TaskResult_InferenceRule#()V" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="35" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="39" startPosition="68" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="2744793885339923011" fileName="typeof_TaskResult_InferenceRule.java" startLine="24" startPosition="27" endLine="29" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="39" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="24" startPosition="0" endLine="31" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="22" startPosition="169" endLine="31" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="20" startPosition="192" endLine="32" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="19" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="16" startPosition="44" endLine="16" endPosition="44" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="35" startPosition="46" endLine="36" endPosition="48" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="46" startPosition="30" endLine="47" endPosition="17" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="16" startPosition="0" endLine="18" endPosition="0" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="40" startPosition="5" endLine="42" endPosition="45">
+      <varInfo nodeId="2744793885339922998" varName="b" />
+    </scopeInfo>
+    <scopeInfo nodeId="2744793885339923011" fileName="typeof_TaskResult_InferenceRule.java" startLine="25" startPosition="11" endLine="28" endPosition="421">
+      <varInfo nodeId="2744793885339923011" varName="_info_12389875345" />
+      <varInfo nodeId="2744793885339923011" varName="_nodeToCheck_1029348928467" />
+    </scopeInfo>
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="35" startPosition="0" endLine="38" endPosition="0" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="46" startPosition="0" endLine="49" endPosition="0" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="39" startPosition="68" endLine="43" endPosition="5" />
+    <scopeInfo nodeId="2744793885339923010" fileName="typeof_TaskResult_InferenceRule.java" startLine="24" startPosition="27" endLine="29" endPosition="11" />
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="39" startPosition="0" endLine="45" endPosition="0">
+      <varInfo nodeId="2744793885339922998" varName="argument" />
+    </scopeInfo>
+    <scopeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="24" startPosition="0" endLine="31" endPosition="0" />
+    <scopeInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="21" startPosition="5" endLine="31" endPosition="114">
+      <varInfo nodeId="2744793885339923009" varName="futureAsExprType" />
+    </scopeInfo>
+    <scopeInfo nodeId="2744793885339922999" fileName="typeof_TaskResult_InferenceRule.java" startLine="19" startPosition="123" endLine="32" endPosition="5">
+      <varInfo nodeId="2744793885339923001" varName="future" />
+    </scopeInfo>
+    <scopeInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="19" startPosition="0" endLine="34" endPosition="0">
+      <varInfo nodeId="2744793885339922998" varName="status" />
+      <varInfo nodeId="2744793885339922998" varName="taskResult" />
+      <varInfo nodeId="2744793885339922998" varName="typeCheckingContext" />
+    </scopeInfo>
+    <unitInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="23" startPosition="61" endLine="31" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule$1" />
+    <unitInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="15" startPosition="0" endLine="50" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule" />
+  </root>
 </debugInfo>
 

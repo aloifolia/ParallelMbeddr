@@ -12,22 +12,22 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 4:
-        return new Task_BehaviorDescriptor();
       case 2:
-        return new RunningTask_BehaviorDescriptor();
+        return new Task_BehaviorDescriptor();
       case 0:
-        return new JoinedTask_BehaviorDescriptor();
+        return new Future_BehaviorDescriptor();
+      case 3:
+        return new TaskJoin_BehaviorDescriptor();
       case 5:
         return new TaskType_BehaviorDescriptor();
-      case 3:
-        return new RunningTaskType_BehaviorDescriptor();
       case 1:
-        return new JoinedTaskType_BehaviorDescriptor();
+        return new FutureType_BehaviorDescriptor();
+      case 4:
+        return new TaskResult_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.JoinedTask", "TasksAndSyncs.structure.JoinedTaskType", "TasksAndSyncs.structure.RunningTask", "TasksAndSyncs.structure.RunningTaskType", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
 }

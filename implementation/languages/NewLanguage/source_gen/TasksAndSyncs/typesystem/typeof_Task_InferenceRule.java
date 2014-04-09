@@ -8,7 +8,6 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
@@ -20,11 +19,7 @@ public class typeof_Task_InferenceRule extends AbstractInferenceRule_Runtime imp
 
   public void applyRule(final SNode task, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     SNode taskType = SConceptOperations.createNewNode("TasksAndSyncs.structure.TaskType", null);
-
-    for (SNode argument : ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(SLinkOperations.getTarget(task, "functionCall", true), "function", false), "arguments", true))) {
-      ListSequence.fromList(SLinkOperations.getTargets(taskType, "argumentTypes", true)).addElement(SNodeOperations.copyNode(SLinkOperations.getTarget(argument, "type", true)));
-    }
-    SLinkOperations.setTarget(taskType, "returnType", SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SLinkOperations.getTarget(task, "functionCall", true), "function", false), "type", true)), true);
+    SLinkOperations.setTarget(taskType, "returnType", SNodeOperations.cast(typeCheckingContext.typeOf(SLinkOperations.getTarget(task, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "2744793885329216896", true), "jetbrains.mps.lang.core.structure.IType"), true);
 
     {
       SNode _nodeToCheck_1029348928467 = task;

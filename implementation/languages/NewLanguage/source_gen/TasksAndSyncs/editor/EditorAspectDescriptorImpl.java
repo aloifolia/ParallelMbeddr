@@ -15,12 +15,10 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   public Collection<ConceptEditor> getEditors(ConceptDescriptor descriptor) {
     switch (Arrays.binarySearch(stringSwitchCases_xbvbvu_a0a0a, descriptor.getConceptFqName())) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new JoinedTaskType_Editor());
+        return Collections.<ConceptEditor>singletonList(new FutureType_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new RunningTaskType_Editor());
-      case 2:
         return Collections.<ConceptEditor>singletonList(new Task_Editor());
-      case 3:
+      case 2:
         return Collections.<ConceptEditor>singletonList(new TaskType_Editor());
       default:
     }
@@ -38,5 +36,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.JoinedTaskType", "TasksAndSyncs.structure.RunningTaskType", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

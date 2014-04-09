@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="3vunk4ctk13vsb409rjvqvsxnm5tanw">
-  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-7z93y0zflpihy5tbjby4156mr1vjizs" />
-  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="46yi534w8futfz8r1whv8ao7o6idn5s" />
-  <common hash="4wntcsr9anigmm9om5cdvc4yutzgajm">
+<dependencies version="2" modelHash="-ex9gs7vwikljnir0npj54eczksyit21">
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="3wiu5ypdkcbyfrq4myhd5c9kevpy4zw" />
+  <common hash="-5us9xawi6w82497abe8cppv7m7ugypl" dependsOnNodes="true">
     <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <file name="Makefile" />
@@ -10,7 +10,7 @@
     <file name="task.c" />
     <file name="task.h" />
   </common>
-  <source id="1304213873205793445" name="task" hash="-2ybsbdpygmb216x2347xu16j9znn6oa" />
+  <source id="1304213873205793445" name="task" hash="-4pyohxafid1o5ksv0vndz598utdfbup" />
   <source id="1304213873205811256" name="TypeSizeConfiguration (T.task)" hash="-89jfokg8olorfbi79i0wtyg8wg3ps65" />
   <source id="8002841268888606725" name="BuildConfiguration (T.task)" hash="-9jrp0gfj8o3eplxatih5xau7fslrmft" />
 </dependencies>

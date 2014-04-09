@@ -12,9 +12,9 @@ import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class JoinedTask_Constraints extends BaseConstraintsDescriptor {
-  public JoinedTask_Constraints() {
-    super("TasksAndSyncs.structure.JoinedTask");
+public class Future_Constraints extends BaseConstraintsDescriptor {
+  public Future_Constraints() {
+    super("TasksAndSyncs.structure.Future");
   }
 
   @Override
@@ -37,8 +37,8 @@ public class JoinedTask_Constraints extends BaseConstraintsDescriptor {
     if (!(SNodeOperations.isInstanceOf(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"))) {
       return false;
     }
-    return SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.RunningTaskType");
+    return SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.TaskType");
   }
 
-  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "4190647428591808681");
+  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "4960020358030970837");
 }

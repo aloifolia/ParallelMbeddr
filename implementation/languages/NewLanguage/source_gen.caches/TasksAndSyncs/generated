@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="9kc9gj2j4qv884hfmms22msli6ir38t">
-  <dep model="r:00f32f25-75a6-49a6-af81-37dd76f38844(TasksAndSyncs.editor)" hash="39fdwt3fmcmwazbz7em9wdichlk48g0" />
-  <dep model="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)" hash="ewu5jnxh36n06l2hh3mdkru5ly3d16x" />
+<dependencies version="2" modelHash="e1ut1yvi004xr7moxyxbnl45iaza26h">
+  <dep model="r:00f32f25-75a6-49a6-af81-37dd76f38844(TasksAndSyncs.editor)" hash="-b8w1knarbjbjfzrx9btnj8hh7ijvlw1" />
+  <dep model="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)" hash="-1dgt84o06bxasp27993x9cxqfelis1v" />
   <common dependsOnNodes="true">
     <dep model="r:00f32f25-75a6-49a6-af81-37dd76f38844(TasksAndSyncs.editor)" />
     <dep model="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)" />

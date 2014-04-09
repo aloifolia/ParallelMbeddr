@@ -6,7 +6,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
-public class TaskType_Behavior {
+public class FutureType_Behavior {
   public static void init(SNode thisNode) {
   }
 
@@ -15,7 +15,7 @@ public class TaskType_Behavior {
   }
 
   public static String virtual_getPresentation_1213877396640(SNode thisNode) {
-    String presentation = "Task<" + BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(thisNode, "returnType", true), "virtual_getPresentation_1213877396640", new Object[]{}) + ">";
+    String presentation = "RunningTask<" + BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(thisNode, "returnType", true), "virtual_getPresentation_1213877396640", new Object[]{}) + ">";
     presentation += ">";
     return presentation;
   }
