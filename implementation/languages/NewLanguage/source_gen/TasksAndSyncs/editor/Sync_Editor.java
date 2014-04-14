@@ -135,12 +135,12 @@ public class Sync_Editor extends DefaultNodeEditor {
 
   private EditorCell createRefNode_pz2fgo_d0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("expression");
-    provider.setNoTargetText("<no expression>");
+    provider.setRole("statements");
+    provider.setNoTargetText("<no statements>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
-      editorCell.setRole("expression");
+      editorCell.setRole("statements");
     }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();

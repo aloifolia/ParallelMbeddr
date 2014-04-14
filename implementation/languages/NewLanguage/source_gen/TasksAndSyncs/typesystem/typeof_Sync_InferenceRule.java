@@ -17,7 +17,7 @@ public class typeof_Sync_InferenceRule extends AbstractInferenceRule_Runtime imp
 
   public void applyRule(final SNode sync, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode expressionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(sync, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3604883996549449441", true);
+      final SNode expressionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(sync, "statements", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3604883996549449441", true);
       typeCheckingContext.whenConcrete(expressionType, new Runnable() {
         public void run() {
           {

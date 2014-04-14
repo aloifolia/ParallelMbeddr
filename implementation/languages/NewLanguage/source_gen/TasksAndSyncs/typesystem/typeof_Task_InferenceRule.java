@@ -18,8 +18,10 @@ public class typeof_Task_InferenceRule extends AbstractInferenceRule_Runtime imp
   }
 
   public void applyRule(final SNode task, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    SNode resultType = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+    SLinkOperations.setTarget(resultType, "baseType", SNodeOperations.cast(typeCheckingContext.typeOf(SLinkOperations.getTarget(task, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "8856330834628856042", true), "jetbrains.mps.lang.core.structure.IType"), true);
     SNode taskType = SConceptOperations.createNewNode("TasksAndSyncs.structure.TaskType", null);
-    SLinkOperations.setTarget(taskType, "returnType", SNodeOperations.cast(typeCheckingContext.typeOf(SLinkOperations.getTarget(task, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "2744793885329216896", true), "jetbrains.mps.lang.core.structure.IType"), true);
+    SLinkOperations.setTarget(taskType, "returnType", resultType, true);
 
     {
       SNode _nodeToCheck_1029348928467 = task;

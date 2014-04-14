@@ -35,9 +35,17 @@ public class SyncVariable_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAChild(final SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
+    boolean rightPlace = SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "variables", true)).contains(node);
+    if (!(rightPlace)) {
+      return rightPlace;
+    }
+    boolean rightType = SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", false), "com.mbeddr.core.pointers.structure.DerefExpr") || SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", false), "com.mbeddr.core.statements.structure.IVariableReference");
+    if (!(rightType)) {
+      return rightType;
+    }
     return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "variables", true)).contains(node) && ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).all(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "var", false) != SLinkOperations.getTarget(node, "var", false);
+        return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", false) != SLinkOperations.getTarget(node, "ref", false);
       }
     });
   }

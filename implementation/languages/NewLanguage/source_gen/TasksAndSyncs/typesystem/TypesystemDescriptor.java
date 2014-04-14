@@ -9,7 +9,7 @@ import jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime;
 public class TypesystemDescriptor extends BaseHelginsDescriptor {
   public TypesystemDescriptor() {
     {
-      InferenceRule_Runtime inferenceRule = new typeof_RunningTask_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_Future_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -29,7 +29,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new FutureType_subTypeOf_FutureType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {

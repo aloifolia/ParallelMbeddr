@@ -18,9 +18,9 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 1:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType"}, new boolean[]{false}).alias("Future", "").create();
       case 2:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Sync").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"variables", "expression"}, new boolean[]{true, false}).alias("sync", "").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Sync").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"variables", "statements"}, new boolean[]{true, false}).alias("sync", "").create();
       case 3:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncVariable").super_("com.mbeddr.core.modules.structure.GlobalVarRef").parents("com.mbeddr.core.modules.structure.GlobalVarRef").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncVariable").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").references("ref").create();
       case 4:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).alias("|", "").create();
       case 5:

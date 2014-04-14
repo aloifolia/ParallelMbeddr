@@ -12,8 +12,8 @@ import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule extends AbstractInequationReplacementRule_Runtime {
-  public RunningTaskType_subTypeOf_RunningTaskType_InequationReplacementRule() {
+public class FutureType_subTypeOf_FutureType_InequationReplacementRule extends AbstractInequationReplacementRule_Runtime {
+  public FutureType_subTypeOf_FutureType_InequationReplacementRule() {
   }
 
   public void processInequation(final SNode subtype, final SNode supertype, final EquationInfo equationInfo, final TypeCheckingContext typeCheckingContext, IsApplicable2Status status, final boolean inequalityIsWeak, final boolean inequalityIsLessThan) {
