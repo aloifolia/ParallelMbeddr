@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
+  <dependency className="TasksAndSyncs.behavior.ArgsBindingExpr_BehaviorDescriptor" file="ArgsBindingExpr_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="TasksAndSyncs.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.ArgsBindingExpr_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.FutureContainer_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
@@ -15,10 +23,18 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
   </dependency>
+  <dependency className="TasksAndSyncs.behavior.FutureContainer_BehaviorDescriptor" file="FutureContainer_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="TasksAndSyncs.behavior.FutureType_Behavior" file="FutureType_Behavior.java">
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>

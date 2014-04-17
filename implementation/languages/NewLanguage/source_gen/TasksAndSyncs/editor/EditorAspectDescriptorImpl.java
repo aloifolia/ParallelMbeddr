@@ -15,14 +15,16 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   public Collection<ConceptEditor> getEditors(ConceptDescriptor descriptor) {
     switch (Arrays.binarySearch(stringSwitchCases_xbvbvu_a0a0a, descriptor.getConceptFqName())) {
       case 0:
-        return Collections.<ConceptEditor>singletonList(new FutureType_Editor());
+        return Collections.<ConceptEditor>singletonList(new ArgsBindingExpr_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new Sync_Editor());
+        return Collections.<ConceptEditor>singletonList(new FutureType_Editor());
       case 2:
-        return Collections.<ConceptEditor>singletonList(new SyncVariable_Editor());
+        return Collections.<ConceptEditor>singletonList(new Sync_Editor());
       case 3:
-        return Collections.<ConceptEditor>singletonList(new Task_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncVariable_Editor());
       case 4:
+        return Collections.<ConceptEditor>singletonList(new Task_Editor());
+      case 5:
         return Collections.<ConceptEditor>singletonList(new TaskType_Editor());
       default:
     }
@@ -40,5 +42,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.ArgsBindingExpr", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

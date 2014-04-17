@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="GeneratedExamples.fibonacci.Makefile" file="Makefile" />
+  <dependency className="GeneratedExamples.fibonacci.TypeSizeConfiguration (G.fibonacci)" file="TypeSizeConfiguration (G.fibonacci)" />
+  <dependency className="GeneratedExamples.fibonacci.fibonacci" file="fibonacci.c" />
+  <dependency className="GeneratedExamples.fibonacci.fibonacci" file="fibonacci.h" />
+</dependenciesRoot>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="OriginalExamples.test.GenericDeclarations" file="GenericDeclarations.c" />
+  <dependency className="OriginalExamples.test.GenericDeclarations" file="GenericDeclarations.h" />
+  <dependency className="OriginalExamples.test.Makefile" file="Makefile" />
+  <dependency className="OriginalExamples.test.TypeSizeConfiguration (O.test)" file="TypeSizeConfiguration (O.test)" />
+  <dependency className="OriginalExamples.test.fibonacci" file="fibonacci.c" />
+  <dependency className="OriginalExamples.test.fibonacci" file="fibonacci.h" />
+</dependenciesRoot>
+

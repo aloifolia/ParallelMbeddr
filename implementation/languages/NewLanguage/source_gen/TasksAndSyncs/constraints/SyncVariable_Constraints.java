@@ -39,13 +39,26 @@ public class SyncVariable_Constraints extends BaseConstraintsDescriptor {
     if (!(rightPlace)) {
       return rightPlace;
     }
-    boolean rightType = SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", false), "com.mbeddr.core.pointers.structure.DerefExpr") || SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", false), "com.mbeddr.core.statements.structure.IVariableReference");
+    boolean rightType = SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", true), "com.mbeddr.core.pointers.structure.DerefExpr") || SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", true), "com.mbeddr.core.statements.structure.IVariableReference");
     if (!(rightType)) {
       return rightType;
     }
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "ref", true), "com.mbeddr.core.pointers.structure.DerefExpr")) {
+      ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", true), "com.mbeddr.core.pointers.structure.DerefExpr");
+        }
+      });
+
+      return ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).all(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", true) != SLinkOperations.getTarget(node, "ref", true);
+        }
+      });
+    }
     return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "variables", true)).contains(node) && ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).all(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", false) != SLinkOperations.getTarget(node, "ref", false);
+        return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", true) != SLinkOperations.getTarget(node, "ref", true);
       }
     });
   }

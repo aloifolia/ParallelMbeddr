@@ -12,26 +12,30 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 4:
-        return new Task_BehaviorDescriptor();
-      case 0:
-        return new Future_BehaviorDescriptor();
-      case 5:
-        return new TaskJoin_BehaviorDescriptor();
-      case 7:
-        return new TaskType_BehaviorDescriptor();
-      case 1:
-        return new FutureType_BehaviorDescriptor();
       case 6:
-        return new TaskResult_BehaviorDescriptor();
-      case 2:
-        return new Sync_BehaviorDescriptor();
+        return new Task_BehaviorDescriptor();
+      case 1:
+        return new Future_BehaviorDescriptor();
+      case 7:
+        return new TaskJoin_BehaviorDescriptor();
+      case 9:
+        return new TaskType_BehaviorDescriptor();
       case 3:
+        return new FutureType_BehaviorDescriptor();
+      case 8:
+        return new TaskResult_BehaviorDescriptor();
+      case 4:
+        return new Sync_BehaviorDescriptor();
+      case 5:
         return new SyncVariable_BehaviorDescriptor();
+      case 0:
+        return new ArgsBindingExpr_BehaviorDescriptor();
+      case 2:
+        return new FutureContainer_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ArgsBindingExpr", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
 }
