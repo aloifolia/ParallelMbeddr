@@ -4,7 +4,7 @@
   <dependency className="OriginalExamples.test.GenericDeclarations" file="GenericDeclarations.h" />
   <dependency className="OriginalExamples.test.Makefile" file="Makefile" />
   <dependency className="OriginalExamples.test.TypeSizeConfiguration (O.test)" file="TypeSizeConfiguration (O.test)" />
-  <dependency className="OriginalExamples.test.fibonacci" file="fibonacci.c" />
-  <dependency className="OriginalExamples.test.fibonacci" file="fibonacci.h" />
+  <dependency className="OriginalExamples.test.test" file="test.c" />
+  <dependency className="OriginalExamples.test.test" file="test.h" />
 </dependenciesRoot>
 
