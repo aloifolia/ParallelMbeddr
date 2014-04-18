@@ -14,7 +14,7 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
   public ConceptDescriptor getDescriptor(String conceptFqName) {
     switch (Arrays.binarySearch(stringSwitchCases_1htk8d_a0a0b, conceptFqName)) {
       case 0:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.ArgsBindingExpr").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expr"}, new boolean[]{false}).alias("argsbinding", "").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.ExprBoundToStruct").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expr", "structExpr"}, new boolean[]{false, false}).create();
       case 1:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Future").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").properties("variableName").alias("run", "").create();
       case 2:
@@ -38,5 +38,5 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.ArgsBindingExpr", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="TasksAndSyncs.generator.template.main.QueriesGenerated" file="QueriesGenerated.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.FutureType_Behavior" />
     <classNode dependClassName="TasksAndSyncs.generator.util.NameGenerator" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
     <classNode dependClassName="java.lang.Iterable" />
@@ -22,7 +21,6 @@
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ISelector" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.Sequence" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations" />

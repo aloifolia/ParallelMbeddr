@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="ArgsBindingExpr_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.ArgsBindingExpr_BehaviorDescriptor" />
   <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="42" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
+  <unitInfo fileName="ExprBoundToStruct_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.ExprBoundToStruct_BehaviorDescriptor" />
   <unitInfo fileName="FutureContainer_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.FutureContainer_BehaviorDescriptor" />
   <unitInfo fileName="FutureType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
   <unitInfo fileName="Future_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />

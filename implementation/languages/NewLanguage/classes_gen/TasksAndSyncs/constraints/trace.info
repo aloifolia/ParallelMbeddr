@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="ConstraintsAspectDescriptor.java" startLine="9" startPosition="0" endLine="33" endPosition="0" unitName="TasksAndSyncs.constraints.ConstraintsAspectDescriptor" />
+  <unitInfo fileName="ConstraintsAspectDescriptor.java" startLine="9" startPosition="0" endLine="35" endPosition="0" unitName="TasksAndSyncs.constraints.ConstraintsAspectDescriptor" />
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/2744793885340058712">
     <nodeInfo nodeId="2744793885340058712" fileName="TaskResult_Constraints.java" startLine="16" startPosition="35" endLine="17" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
     <nodeInfo nodeId="2744793885340058712" fileName="TaskResult_Constraints.java" startLine="21" startPosition="43" endLine="22" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -44,6 +44,49 @@
       <varInfo nodeId="2744793885340058712" varName="parentNode" />
     </scopeInfo>
     <unitInfo nodeId="2744793885340058712" fileName="TaskResult_Constraints.java" startLine="15" startPosition="0" endLine="45" endPosition="0" unitName="TasksAndSyncs.constraints.TaskResult_Constraints" />
+  </root>
+  <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/3074299910025635529">
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="16" startPosition="42" endLine="17" endPosition="55" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="21" startPosition="44" endLine="22" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="26" startPosition="188" endLine="27" endPosition="96" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="27" startPosition="96" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="31" startPosition="5" endLine="32" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="32" startPosition="0" endLine="33" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3074299910033152946" fileName="ExprBoundToStruct_Constraints.java" startLine="36" startPosition="148" endLine="37" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="3074299910025670363" fileName="ExprBoundToStruct_Constraints.java" startLine="37" startPosition="26" endLine="38" endPosition="167" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3074299910033150675" fileName="ExprBoundToStruct_Constraints.java" startLine="38" startPosition="167" endLine="39" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="42" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeParentBreakingPoint" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="ExprBoundToStruct_Constraints#()V" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="28" startPosition="0" endLine="31" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="hasOwnCanBeParentMethod#()Z" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="36" startPosition="0" endLine="41" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="static_canBeAParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
+    <nodeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="canBeParent#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="16" startPosition="42" endLine="17" endPosition="55" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="21" startPosition="44" endLine="22" endPosition="16" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="68" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" />
+    <scopeInfo nodeId="3074299910025659410" fileName="ExprBoundToStruct_Constraints.java" startLine="36" startPosition="148" endLine="39" endPosition="16" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" />
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="36" startPosition="0" endLine="41" endPosition="0">
+      <varInfo nodeId="3074299910025635529" varName="childConcept" />
+      <varInfo nodeId="3074299910025635529" varName="childNode" />
+      <varInfo nodeId="3074299910025635529" varName="link" />
+      <varInfo nodeId="3074299910025635529" varName="node" />
+      <varInfo nodeId="3074299910025635529" varName="operationContext" />
+    </scopeInfo>
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="26" startPosition="188" endLine="33" endPosition="18">
+      <varInfo nodeId="3074299910025635529" varName="result" />
+    </scopeInfo>
+    <scopeInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0">
+      <varInfo nodeId="3074299910025635529" varName="checkingNodeContext" />
+      <varInfo nodeId="3074299910025635529" varName="childConcept" />
+      <varInfo nodeId="3074299910025635529" varName="childNode" />
+      <varInfo nodeId="3074299910025635529" varName="link" />
+      <varInfo nodeId="3074299910025635529" varName="node" />
+      <varInfo nodeId="3074299910025635529" varName="operationContext" />
+    </scopeInfo>
+    <unitInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="15" startPosition="0" endLine="44" endPosition="0" unitName="TasksAndSyncs.constraints.ExprBoundToStruct_Constraints" />
   </root>
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/3604883996549655108">
     <nodeInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="8" startPosition="29" endLine="9" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
