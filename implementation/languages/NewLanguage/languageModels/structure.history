@@ -72,5 +72,17 @@
     </dependencies>
     <rename id="6i3o.3604883996548064304" type="CHILD" from="expression" to="statements" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="11" />
+    </dependencies>
+    <rename id="6i3o.1304213873204985423" type="CONCEPT" from="TaskJoin" to="FutureJoin" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="12" />
+    </dependencies>
+    <rename id="6i3o.2744793885339890637" type="CONCEPT" from="TaskResult" to="FutureResult" />
+  </StructureModification>
 </history>
 

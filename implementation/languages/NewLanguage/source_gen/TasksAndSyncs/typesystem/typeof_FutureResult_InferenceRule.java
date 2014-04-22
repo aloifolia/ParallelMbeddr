@@ -12,18 +12,18 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class typeof_TaskResult_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  public typeof_TaskResult_InferenceRule() {
+public class typeof_FutureResult_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
+  public typeof_FutureResult_InferenceRule() {
   }
 
-  public void applyRule(final SNode taskResult, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    final SNode future = SLinkOperations.getTarget(SNodeOperations.as(SNodeOperations.getParent(taskResult), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
+  public void applyRule(final SNode futureResult, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    final SNode future = SLinkOperations.getTarget(SNodeOperations.as(SNodeOperations.getParent(futureResult), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
     {
       final SNode futureAsExprType = typeCheckingContext.typeOf(future, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "2744793885339923022", true);
       typeCheckingContext.whenConcrete(futureAsExprType, new Runnable() {
         public void run() {
           {
-            SNode _nodeToCheck_1029348928467 = taskResult;
+            SNode _nodeToCheck_1029348928467 = futureResult;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "2744793885339923011", 0, null);
             typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "2744793885339923018", true), (SNode) SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(futureAsExprType), "TasksAndSyncs.structure.FutureType"), "returnType", true)), _info_12389875345);
           }
@@ -33,7 +33,7 @@ public class typeof_TaskResult_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.TaskResult";
+    return "TasksAndSyncs.structure.FutureResult";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

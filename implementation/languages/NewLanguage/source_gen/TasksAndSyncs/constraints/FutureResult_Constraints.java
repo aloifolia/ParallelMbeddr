@@ -12,9 +12,9 @@ import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class TaskResult_Constraints extends BaseConstraintsDescriptor {
-  public TaskResult_Constraints() {
-    super("TasksAndSyncs.structure.TaskResult");
+public class FutureResult_Constraints extends BaseConstraintsDescriptor {
+  public FutureResult_Constraints() {
+    super("TasksAndSyncs.structure.FutureResult");
   }
 
   @Override
@@ -34,9 +34,6 @@ public class TaskResult_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAChild(SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
-    if (!(SNodeOperations.isInstanceOf(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"))) {
-      return false;
-    }
     return SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.FutureType");
   }
 

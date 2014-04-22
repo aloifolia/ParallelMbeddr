@@ -8,6 +8,8 @@
 
 #include "GenericDeclarations.h"
 
+#include <pthread.h>
+
 
 
 #ifdef __cplusplus
