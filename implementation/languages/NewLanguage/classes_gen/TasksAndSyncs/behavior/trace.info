@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="42" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
+  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="46" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
   <unitInfo fileName="ExprBoundToStruct_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.ExprBoundToStruct_BehaviorDescriptor" />
   <unitInfo fileName="FutureContainer_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.FutureContainer_BehaviorDescriptor" />
+  <unitInfo fileName="FutureJoinContainer_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.FutureJoinContainer_BehaviorDescriptor" />
   <unitInfo fileName="FutureJoin_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.FutureJoin_BehaviorDescriptor" />
+  <unitInfo fileName="FutureResultContainer_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.FutureResultContainer_BehaviorDescriptor" />
+  <unitInfo fileName="FutureResult_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.FutureResult_BehaviorDescriptor" />
   <unitInfo fileName="FutureType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
   <unitInfo fileName="Future_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
   <unitInfo fileName="SyncVariable_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
   <unitInfo fileName="Sync_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" />
-  <unitInfo fileName="TaskResult_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.TaskResult_BehaviorDescriptor" />
   <unitInfo fileName="TaskType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
   <unitInfo fileName="Task_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1304213873205104705">
@@ -66,18 +68,18 @@
     <unitInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="11" startPosition="0" endLine="29" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/2744793885339942658">
-    <nodeInfo nodeId="2744793885339942662" fileName="TaskResult_Behavior.java" startLine="11" startPosition="77" endLine="12" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="2744793885339942658" fileName="TaskResult_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-    <nodeInfo nodeId="2744793885339942658" fileName="TaskResult_Behavior.java" startLine="11" startPosition="0" endLine="14" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getTarget_7034214596260727602#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-    <scopeInfo nodeId="2744793885339942666" fileName="TaskResult_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
-    <scopeInfo nodeId="2744793885339942661" fileName="TaskResult_Behavior.java" startLine="11" startPosition="77" endLine="12" endPosition="20" />
-    <scopeInfo nodeId="2744793885339942658" fileName="TaskResult_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0">
+    <nodeInfo nodeId="2744793885339942662" fileName="FutureResult_Behavior.java" startLine="11" startPosition="77" endLine="12" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2744793885339942658" fileName="FutureResult_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="2744793885339942658" fileName="FutureResult_Behavior.java" startLine="11" startPosition="0" endLine="14" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getTarget_7034214596260727602#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <scopeInfo nodeId="2744793885339942666" fileName="FutureResult_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
+    <scopeInfo nodeId="2744793885339942661" fileName="FutureResult_Behavior.java" startLine="11" startPosition="77" endLine="12" endPosition="20" />
+    <scopeInfo nodeId="2744793885339942658" fileName="FutureResult_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0">
       <varInfo nodeId="2744793885339942658" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="2744793885339942658" fileName="TaskResult_Behavior.java" startLine="11" startPosition="0" endLine="14" endPosition="0">
+    <scopeInfo nodeId="2744793885339942658" fileName="FutureResult_Behavior.java" startLine="11" startPosition="0" endLine="14" endPosition="0">
       <varInfo nodeId="2744793885339942658" varName="thisNode" />
     </scopeInfo>
-    <unitInfo nodeId="2744793885339942658" fileName="TaskResult_Behavior.java" startLine="7" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.behavior.TaskResult_Behavior" />
+    <unitInfo nodeId="2744793885339942658" fileName="FutureResult_Behavior.java" startLine="7" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.behavior.FutureResult_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/4190647428591813627">
     <nodeInfo nodeId="4190647428591813651" fileName="FutureJoin_Behavior.java" startLine="11" startPosition="77" endLine="12" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
