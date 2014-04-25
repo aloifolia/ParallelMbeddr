@@ -7,12 +7,12 @@ import com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor
 import org.jetbrains.mps.openapi.model.SNode;
 import com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior;
 
-public class FutureResult_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IGenericDotTarget_BehaviorDescriptor {
-  public FutureResult_BehaviorDescriptor() {
+public class TaskResult_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IGenericDotTarget_BehaviorDescriptor {
+  public TaskResult_BehaviorDescriptor() {
   }
 
   public SNode virtual_getTarget_7034214596260727602(SNode thisNode) {
-    return FutureResult_Behavior.virtual_getTarget_7034214596260727602(thisNode);
+    return TaskResult_Behavior.virtual_getTarget_7034214596260727602(thisNode);
   }
 
   public boolean virtual_isLValue_6118219496712710630(SNode thisNode) {
@@ -25,6 +25,6 @@ public class FutureResult_BehaviorDescriptor extends Expression_BehaviorDescript
 
   @Override
   public String getConceptFqName() {
-    return "TasksAndSyncs.structure.FutureResult";
+    return "TasksAndSyncs.structure.TaskResult";
   }
 }

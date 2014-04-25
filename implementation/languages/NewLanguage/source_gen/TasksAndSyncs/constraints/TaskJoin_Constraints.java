@@ -12,9 +12,9 @@ import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class FutureJoin_Constraints extends BaseConstraintsDescriptor {
-  public FutureJoin_Constraints() {
-    super("TasksAndSyncs.structure.FutureJoin");
+public class TaskJoin_Constraints extends BaseConstraintsDescriptor {
+  public TaskJoin_Constraints() {
+    super("TasksAndSyncs.structure.TaskJoin");
   }
 
   @Override

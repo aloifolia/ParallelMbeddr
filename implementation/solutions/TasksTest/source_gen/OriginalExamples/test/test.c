@@ -13,6 +13,8 @@ struct test_Args_a0a0b0a {
 
 static int32_t test_foo(void);
 
+static void* test_parFun_a0b0a(void* voidArgs);
+
 static void* test_parFun_a0a0b0a(void* voidArgs);
 
 static inline struct GenericDeclarations_Future test_futureInit(void);
@@ -31,6 +33,15 @@ int32_t main(int32_t argc, char* argv[])
 static int32_t test_foo(void) 
 {
   return 0;
+}
+
+
+static void* test_parFun_a0b0a(void* voidArgs) 
+{
+  struct test_Args_a0b0a* args = ((struct test_Args_a0b0a*)(voidArgs));
+  int32_t* result = malloc(sizeof(int32_t));
+  *result = test_foo();
+  return result;
 }
 
 

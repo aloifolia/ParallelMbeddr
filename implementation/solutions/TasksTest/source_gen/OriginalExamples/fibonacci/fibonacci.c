@@ -2,40 +2,37 @@
 
 
 #include "GenericDeclarations.h"
+#include <pthread.h>
 #include <stdlib.h>
 
-struct fibonacci_Args_a0a3a0 {
+struct fibonacci_Args_a0a0c0a {
+  int16_t i;
+};
+
+struct fibonacci_Args_a0a0a0c0a {
   int16_t i;
 };
 
 static int32_t fibonacci_fibonacci(int16_t index);
 
-static void* fibonacci_parFun_a0a3a0(void* voidArgs);
+static void* fibonacci_parFun_a0a0c0a(void* voidArgs);
+
+static void* fibonacci_parFun_a0a0a0c0a(void* voidArgs);
+
+static inline struct GenericDeclarations_Future fibonacci_futureInit(int16_t i);
 
 static inline struct GenericDeclarations_Task fibonacci_taskInit(int16_t i);
-
-static inline struct GenericDeclarations_Future fibonacci_futureInit(struct GenericDeclarations_Task temp);
-
-static inline struct GenericDeclarations_Future fibonacci_futureJoin(struct GenericDeclarations_Future tasks[50],int16_t j);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
   
-  struct GenericDeclarations_Future tasks[50];
   
   for ( int16_t i = 0; i < 50; ++i )
   {
-    struct GenericDeclarations_Task temp = fibonacci_taskInit(i);
-    tasks[i] = fibonacci_futureInit(temp);
+    fibonacci_futureInit(i);
   }
 
   
-  int32_t res = 0;
-  for ( int16_t j = 0; j < 50; ++j )
-  {
-    fibonacci_futureJoin(tasks, j);
-  }
-
   
   return 0;
 }
@@ -60,27 +57,27 @@ static int32_t fibonacci_fibonacci(int16_t index)
 }
 
 
-static void* fibonacci_parFun_a0a3a0(void* voidArgs) 
+static void* fibonacci_parFun_a0a0c0a(void* voidArgs) 
 {
-  struct fibonacci_Args_a0a3a0* args = ((struct fibonacci_Args_a0a3a0*)(voidArgs));
+  struct fibonacci_Args_a0a0c0a* args = ((struct fibonacci_Args_a0a0c0a*)(voidArgs));
   int32_t* result = malloc(sizeof(int32_t));
   *result = fibonacci_fibonacci((*args).i);
   return result;
 }
 
 
-static inline struct GenericDeclarations_Task fibonacci_taskInit(int16_t i) 
+static void* fibonacci_parFun_a0a0a0c0a(void* voidArgs) 
 {
-  struct fibonacci_Args_a0a3a0* args_a0a3a0 = malloc(sizeof(int32_t));
-  args_a0a3a0->i = i;
-  struct GenericDeclarations_Task task1 = {args_a0a3a0,&fibonacci_parFun_a0a3a0};
-  return task1;
+  struct fibonacci_Args_a0a0a0c0a* args = ((struct fibonacci_Args_a0a0a0c0a*)(voidArgs));
+  int32_t* result = malloc(sizeof(int32_t));
+  *result = fibonacci_fibonacci((*args).i);
+  return result;
 }
 
 
-static inline struct GenericDeclarations_Future fibonacci_futureInit(struct GenericDeclarations_Task temp) 
+static inline struct GenericDeclarations_Future fibonacci_futureInit(int16_t i) 
 {
-  struct GenericDeclarations_Task taskie = temp;
+  struct GenericDeclarations_Task taskie = fibonacci_taskInit(i);
   pthread_t pth;
   pthread_create(&pth,0,taskie.fun,taskie.args);
   struct GenericDeclarations_Future future = { .pth = pth };
@@ -88,16 +85,12 @@ static inline struct GenericDeclarations_Future fibonacci_futureInit(struct Gene
 }
 
 
-static inline struct GenericDeclarations_Future fibonacci_futureJoin(struct GenericDeclarations_Future tasks[50], int16_t j) 
+static inline struct GenericDeclarations_Task fibonacci_taskInit(int16_t i) 
 {
-  struct GenericDeclarations_Future* future = &tasks[j];
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,&future->result);
-    future->finished = 1;
-  }
-
-  return *future;
+  struct fibonacci_Args_a0a0a0c0a* args_a0a0a0c0a = malloc(sizeof(int32_t));
+  args_a0a0a0c0a->i = i;
+  struct GenericDeclarations_Task task1 = {args_a0a0a0c0a,&fibonacci_parFun_a0a0a0c0a};
+  return task1;
 }
 
 
