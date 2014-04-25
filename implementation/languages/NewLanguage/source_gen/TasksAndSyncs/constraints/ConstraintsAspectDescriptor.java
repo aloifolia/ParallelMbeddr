@@ -16,11 +16,11 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
         return new Future_Constraints();
       case 2:
         return new FutureJoin_Constraints();
-      case 5:
-        return new TaskResult_Constraints();
       case 3:
-        return new Sync_Constraints();
+        return new FutureResult_Constraints();
       case 4:
+        return new Sync_Constraints();
+      case 5:
         return new SyncVariable_Constraints();
       case 0:
         return new ExprBoundToStruct_Constraints();
@@ -30,5 +30,5 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     }
   }
 
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.TaskResult"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable"};
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-8apfb3x04j6gqve0tfeolqj8azjgodh">
+<dependencies version="2" modelHash="drsso10alk3duwy7tl0uhhtf3t0exzg">
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
@@ -8,11 +8,11 @@
   <dep model="r:00000000-0000-4000-0000-011c89590303(jetbrains.mps.lang.smodel.generator.baseLanguage.template.main@generator)" hash="-7rgu9ik8e4lg6l58nkzeswaixleu3oi" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
   <dep model="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" hash="-4j7dh5roamz2nvmbh2v66fbvd45dkl7" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="3ry13z44ttng5h1jwuhpyofexd3cm23" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-epg4y96f4k80dqnwblmw8kyci7qqlmh" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="-32lzc441m6hk2iauvgbe1skfl8dinbo" dependsOnNodes="true">
+  <common hash="aetcp5khgfmgz1dk6f00i18tzpaq86f" dependsOnNodes="true">
     <dep root="1304213873205167535" />
     <dep root="1304213873206867468" />
     <dep root="1304213873209671652" />
@@ -20,6 +20,8 @@
     <dep root="1304213873212854690" />
     <dep root="2744793885339922998" />
     <dep root="3604883996549434329" />
+    <dep root="6376266434143322013" />
+    <dep root="6376266434143355988" />
     <dep root="6843270485077601638" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
@@ -74,14 +76,14 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="typeof_FutureJoin_InferenceRule.java" />
   </source>
-  <source id="2744793885339922998" name="typeof_TaskResult" hash="3v0slk3anvhy6qb6nomtjb41499kgfh">
+  <source id="2744793885339922998" name="typeof_FutureResult" hash="18304kwazqzxiwrzw98stlbnq0eiwbf">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
-    <file name="typeof_TaskResult_InferenceRule.java" />
+    <file name="typeof_FutureResult_InferenceRule.java" />
   </source>
   <source id="3604883996549434329" name="typeof_Sync" hash="31qt43wkdzt0gfiijjpr0ya4f1lc4xr">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -99,6 +101,23 @@
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="typeof_FutureContainer_InferenceRule.java" />
+  </source>
+  <source id="6376266434143322013" name="typeof_FutureJoinContainer" hash="-50py2fhiibe383qm2lvv3o9kzberm8u">
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c89590303(jetbrains.mps.lang.smodel.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="typeof_FutureJoinContainer_InferenceRule.java" />
+  </source>
+  <source id="6376266434143355988" name="typeof_FutureResultContainer" hash="dupof1mtesrcwv56pcl8ouy7usjy395">
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="typeof_FutureResultContainer_InferenceRule.java" />
   </source>
 </dependencies>
 
