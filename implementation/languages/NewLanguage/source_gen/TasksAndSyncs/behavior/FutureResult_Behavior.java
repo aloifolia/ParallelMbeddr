@@ -4,7 +4,7 @@ package TasksAndSyncs.behavior;
 
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class TaskResult_Behavior {
+public class FutureResult_Behavior {
   public static void init(SNode thisNode) {
   }
 
