@@ -1,5 +1,5 @@
-#ifndef TEST_H
-#define TEST_H
+#ifndef FIBONACCI_H
+#define FIBONACCI_H
 
 
 #include <stdint.h>
@@ -14,7 +14,7 @@
 extern "C" {
 #endif
 
-int32_t test_main(int32_t argc,char* argv[]);
+int32_t fibonacci_main(int32_t argc,char* argv[]);
 
 
 #ifdef __cplusplus

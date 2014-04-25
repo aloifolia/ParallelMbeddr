@@ -12,7 +12,6 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-<<<<<<< HEAD
       case 6:
         return new Task_BehaviorDescriptor();
       case 1:
@@ -28,40 +27,15 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
       case 4:
         return new Sync_BehaviorDescriptor();
       case 5:
-=======
-      case 10:
-        return new Task_BehaviorDescriptor();
-      case 1:
-        return new Future_BehaviorDescriptor();
-      case 3:
-        return new FutureJoin_BehaviorDescriptor();
-      case 11:
-        return new TaskType_BehaviorDescriptor();
-      case 7:
-        return new FutureType_BehaviorDescriptor();
-      case 5:
-        return new FutureResult_BehaviorDescriptor();
-      case 8:
-        return new Sync_BehaviorDescriptor();
-      case 9:
->>>>>>> 98b7ea7... rest of futures, restructuring is needed
         return new SyncVariable_BehaviorDescriptor();
+      case 0:
+        return new ArgsBindingExpr_BehaviorDescriptor();
       case 2:
         return new FutureContainer_BehaviorDescriptor();
-      case 0:
-        return new ExprBoundToStruct_BehaviorDescriptor();
-      case 4:
-        return new FutureJoinContainer_BehaviorDescriptor();
-      case 6:
-        return new FutureResultContainer_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-<<<<<<< HEAD
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
-=======
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
->>>>>>> 98b7ea7... rest of futures, restructuring is needed
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ArgsBindingExpr", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
 }

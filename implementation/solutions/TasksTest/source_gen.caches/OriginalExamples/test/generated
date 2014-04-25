@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="9mnawqjvydflerbjqzae2umoj2vyoqm">
+  <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
+  <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-7eypklgrzhtrsuqnoq6skfl2b0f1t90" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
+  <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
+  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="ahajh2o3t1d6o343m2iqgrxgdzyly5l" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="4lv3zwf4icawxmt5lsaxi6dtntxwrti" />
+  <common hash="-4ks2odeqter190iw11yufbxf042h6zw" dependsOnNodes="true">
+    <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" />
+    <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
+    <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+    <file name="GenericDeclarations.c" />
+    <file name="GenericDeclarations.h" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (O.test)" />
+    <file name="fibonacci.c" />
+    <file name="fibonacci.h" />
+    <file name="stdio" />
+    <file name="stdlib" />
+  </common>
+  <source id="1304213873205793445" name="fibonacci" hash="-bz5wzjac9kb1b1147z7u1n9gkp3irc4" />
+  <source id="1304213873205811256" name="TypeSizeConfiguration (O.test)" hash="-89jfokg8olorfbi79i0wtyg8wg3ps65" />
+  <source id="8002841268888606725" name="BuildConfiguration (O.test)" hash="6bue56jgvlf54yt8woz7gux34iy62v4" />
+</dependencies>
+

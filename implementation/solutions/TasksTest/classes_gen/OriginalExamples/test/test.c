@@ -2,7 +2,6 @@
 
 
 #include "GenericDeclarations.h"
-#include <pthread.h>
 #include <stdlib.h>
 
 struct test_Args_a0a2a0 {
@@ -28,11 +27,6 @@ struct test_Args_a0a0a0a0a0b0a {
 
 static int32_t test_foo(void);
 
-<<<<<<< HEAD
-static void* test_parFun_a0b0a(void* voidArgs);
-
-static void* test_parFun_a0a0b0a(void* voidArgs);
-=======
 static void test_bar(void);
 
 static void* test_parFun_a0a0a0a2a0(void* voidArgs);
@@ -48,7 +42,6 @@ static inline struct GenericDeclarations_Future test_futureInit(void);
 static inline struct GenericDeclarations_Task test_taskInit_1243t_a0a0a0a0a0b0a(void);
 
 static inline struct GenericDeclarations_Future test_futureJoin(void);
->>>>>>> 98b7ea7... rest of futures, restructuring is needed
 
 static inline struct GenericDeclarations_Future test_futureInit(void);
 
@@ -70,20 +63,7 @@ static int32_t test_foo(void)
 }
 
 
-<<<<<<< HEAD
-static void* test_parFun_a0b0a(void* voidArgs) 
-{
-  struct test_Args_a0b0a* args = ((struct test_Args_a0b0a*)(voidArgs));
-  int32_t* result = malloc(sizeof(int32_t));
-  *result = test_foo();
-  return result;
-}
-
-
-static void* test_parFun_a0a0b0a(void* voidArgs) 
-=======
 static void test_bar(void) 
->>>>>>> 98b7ea7... rest of futures, restructuring is needed
 {
   
 }

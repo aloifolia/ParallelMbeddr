@@ -2,7 +2,6 @@
 
 
 #include "GenericDeclarations.h"
-#include <pthread.h>
 #include <stdlib.h>
 
 struct fibonacci_Args_a0a0c0a {
@@ -19,9 +18,9 @@ static void* fibonacci_parFun_a0a0c0a(void* voidArgs);
 
 static void* fibonacci_parFun_a0a0a0c0a(void* voidArgs);
 
-static inline struct GenericDeclarations_Future fibonacci_futureInit(int16_t i);
+static inline struct GenericDeclarations_Future fibonacci_blockexpr_main_9(int16_t i);
 
-static inline struct GenericDeclarations_Task fibonacci_taskInit(int16_t i);
+static inline struct GenericDeclarations_Task fibonacci_blockexpr_main_15(int16_t i);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -29,7 +28,7 @@ int32_t main(int32_t argc, char* argv[])
   
   for ( int16_t i = 0; i < 50; ++i )
   {
-    fibonacci_futureInit(i);
+    fibonacci_blockexpr_main_9(i);
   }
 
   
@@ -61,7 +60,7 @@ static void* fibonacci_parFun_a0a0c0a(void* voidArgs)
 {
   struct fibonacci_Args_a0a0c0a* args = ((struct fibonacci_Args_a0a0c0a*)(voidArgs));
   int32_t* result = malloc(sizeof(int32_t));
-  *result = fibonacci_fibonacci((*args).i);
+  *result = fibonacci_fibonacci(args->i);
   return result;
 }
 
@@ -70,26 +69,26 @@ static void* fibonacci_parFun_a0a0a0c0a(void* voidArgs)
 {
   struct fibonacci_Args_a0a0a0c0a* args = ((struct fibonacci_Args_a0a0a0c0a*)(voidArgs));
   int32_t* result = malloc(sizeof(int32_t));
-  *result = fibonacci_fibonacci((*args).i);
+  *result = fibonacci_fibonacci(args->i);
   return result;
 }
 
 
-static inline struct GenericDeclarations_Future fibonacci_futureInit(int16_t i) 
+static inline struct GenericDeclarations_Future fibonacci_blockexpr_main_9(int16_t i) 
 {
-  struct GenericDeclarations_Task taskie = fibonacci_taskInit(i);
+  Task taskie = fibonacci_blockexpr_main_15(i);
   pthread_t pth;
   pthread_create(&pth,0,taskie.fun,taskie.args);
-  struct GenericDeclarations_Future future = { .pth = pth };
+  struct GenericDeclarations_Future future = { pth = pth; };
   return future;
 }
 
 
-static inline struct GenericDeclarations_Task fibonacci_taskInit(int16_t i) 
+static inline struct GenericDeclarations_Task fibonacci_blockexpr_main_15(int16_t i) 
 {
   struct fibonacci_Args_a0a0a0c0a* args_a0a0a0c0a = malloc(sizeof(int32_t));
   args_a0a0a0c0a->i = i;
-  struct GenericDeclarations_Task task1 = {args_a0a0a0c0a,&fibonacci_parFun_a0a0a0c0a};
+  Task task1 = {args,&fibonacci_parFun_a0a0a0c0a;
   return task1;
 }
 
