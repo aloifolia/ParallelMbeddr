@@ -21,15 +21,31 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+<<<<<<< HEAD
       InferenceRule_Runtime inferenceRule = new typeof_Task_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
       InferenceRule_Runtime inferenceRule = new typeof_TaskJoinsk_InferenceRule();
+=======
+      InferenceRule_Runtime inferenceRule = new typeof_FutureJoinContainer_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_TaskResult_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_FutureResult_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_FutureResultContainer_InferenceRule();
+>>>>>>> 98b7ea7... rest of futures, restructuring is needed
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_Sync_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
+      InferenceRule_Runtime inferenceRule = new typeof_Task_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {

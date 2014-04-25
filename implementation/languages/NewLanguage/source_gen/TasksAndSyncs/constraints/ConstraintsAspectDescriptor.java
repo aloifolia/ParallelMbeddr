@@ -14,6 +14,7 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     switch (Arrays.binarySearch(stringSwitchCases_2qnle6_a0a0b, fqName)) {
       case 1:
         return new Future_Constraints();
+<<<<<<< HEAD
       case 4:
         return new TaskJoin_Constraints();
       case 5:
@@ -21,6 +22,15 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
       case 2:
         return new Sync_Constraints();
       case 3:
+=======
+      case 2:
+        return new FutureJoin_Constraints();
+      case 3:
+        return new FutureResult_Constraints();
+      case 4:
+        return new Sync_Constraints();
+      case 5:
+>>>>>>> 98b7ea7... rest of futures, restructuring is needed
         return new SyncVariable_Constraints();
       case 0:
         return new ExprBoundToStruct_Constraints();
@@ -30,5 +40,9 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
     }
   }
 
+<<<<<<< HEAD
   private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult"};
+=======
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable"};
+>>>>>>> 98b7ea7... rest of futures, restructuring is needed
 }
