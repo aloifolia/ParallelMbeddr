@@ -30,7 +30,7 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 7:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType"}, new boolean[]{false}).alias("Future", "").create();
       case 8:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Sync").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"variables", "statements"}, new boolean[]{true, false}).alias("sync", "").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Sync").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"variables", "x", "statements"}, new boolean[]{true, false, false}).alias("sync", "").create();
       case 9:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncVariable").super_("jetbrains.mps.lang.core.structure.BaseConcept").parents("jetbrains.mps.lang.core.structure.BaseConcept").children(new String[]{"ref"}, new boolean[]{false}).create();
       case 10:

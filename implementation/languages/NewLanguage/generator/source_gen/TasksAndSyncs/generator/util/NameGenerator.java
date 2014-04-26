@@ -19,4 +19,10 @@ public class NameGenerator {
   public static String getFutureStructName() {
     return "Future";
   }
+
+
+
+  public static String getFutureFunctionName() {
+    return "runTaskAndGetFuture";
+  }
 }

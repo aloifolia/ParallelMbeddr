@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="ConstraintsAspectDescriptor.java" startLine="9" startPosition="0" endLine="35" endPosition="0" unitName="TasksAndSyncs.constraints.ConstraintsAspectDescriptor" />
+  <unitInfo fileName="ConstraintsAspectDescriptor.java" startLine="9" startPosition="0" endLine="33" endPosition="0" unitName="TasksAndSyncs.constraints.ConstraintsAspectDescriptor" />
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/2744793885340058712">
     <nodeInfo nodeId="2744793885340058712" fileName="FutureResult_Constraints.java" startLine="16" startPosition="37" endLine="17" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
     <nodeInfo nodeId="2744793885340058712" fileName="FutureResult_Constraints.java" startLine="21" startPosition="43" endLine="22" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -93,13 +93,6 @@
       <varInfo nodeId="3074299910025635529" varName="operationContext" />
     </scopeInfo>
     <unitInfo nodeId="3074299910025635529" fileName="ExprBoundToStruct_Constraints.java" startLine="15" startPosition="0" endLine="44" endPosition="0" unitName="TasksAndSyncs.constraints.ExprBoundToStruct_Constraints" />
-  </root>
-  <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/3604883996549655108">
-    <nodeInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="8" startPosition="29" endLine="9" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
-    <nodeInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="8" startPosition="0" endLine="11" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Sync_Constraints#()V" />
-    <scopeInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="8" startPosition="29" endLine="9" endPosition="42" />
-    <scopeInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="8" startPosition="0" endLine="11" endPosition="0" />
-    <unitInfo nodeId="3604883996549655108" fileName="Sync_Constraints.java" startLine="7" startPosition="0" endLine="12" endPosition="0" unitName="TasksAndSyncs.constraints.Sync_Constraints" />
   </root>
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/3604883996549885895">
     <nodeInfo nodeId="3604883996549885895" fileName="SyncVariable_Constraints.java" startLine="17" startPosition="37" endLine="18" endPosition="50" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />

@@ -4,16 +4,20 @@
     <nodeInfo nodeId="6079605392878612673" fileName="NameGenerator.java" startLine="7" startPosition="47" endLine="8" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="6079605392878665777" fileName="NameGenerator.java" startLine="13" startPosition="44" endLine="14" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1504369025024429324" fileName="NameGenerator.java" startLine="19" startPosition="46" endLine="20" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="8073526852157137813" fileName="NameGenerator.java" startLine="25" startPosition="48" endLine="26" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="6079605392878621889" fileName="NameGenerator.java" startLine="7" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getGenericModuleName#()Ljava/lang/String;" />
     <nodeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getTaskStructName#()Ljava/lang/String;" />
     <nodeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureStructName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureFunctionName#()Ljava/lang/String;" />
     <scopeInfo nodeId="6079605392878612478" fileName="NameGenerator.java" startLine="7" startPosition="47" endLine="8" endPosition="33" />
     <scopeInfo nodeId="6079605392878665776" fileName="NameGenerator.java" startLine="13" startPosition="44" endLine="14" endPosition="18" />
     <scopeInfo nodeId="1504369025024429323" fileName="NameGenerator.java" startLine="19" startPosition="46" endLine="20" endPosition="20" />
+    <scopeInfo nodeId="8073526852157137812" fileName="NameGenerator.java" startLine="25" startPosition="48" endLine="26" endPosition="33" />
     <scopeInfo nodeId="6079605392878621889" fileName="NameGenerator.java" startLine="7" startPosition="0" endLine="10" endPosition="0" />
     <scopeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" />
     <scopeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" />
-    <unitInfo nodeId="2431880409855437720" fileName="NameGenerator.java" startLine="6" startPosition="0" endLine="23" endPosition="0" unitName="TasksAndSyncs.generator.util.NameGenerator" />
+    <scopeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" />
+    <unitInfo nodeId="2431880409855437720" fileName="NameGenerator.java" startLine="6" startPosition="0" endLine="29" endPosition="0" unitName="TasksAndSyncs.generator.util.NameGenerator" />
   </root>
 </debugInfo>
 

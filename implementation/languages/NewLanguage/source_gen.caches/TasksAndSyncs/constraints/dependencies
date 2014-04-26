@@ -6,7 +6,6 @@
     <classNode dependClassName="TasksAndSyncs.constraints.FutureResult_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.Future_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.SyncVariable_Constraints" />
-    <classNode dependClassName="TasksAndSyncs.constraints.Sync_Constraints" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.ConstraintsDescriptor" />
@@ -72,9 +71,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
-  </dependency>
-  <dependency className="TasksAndSyncs.constraints.Sync_Constraints" file="Sync_Constraints.java">
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
   </dependency>
 </dependenciesRoot>

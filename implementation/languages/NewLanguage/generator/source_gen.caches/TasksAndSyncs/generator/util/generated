@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="bt9d586tawbbgtpsq7x50t3zybjvx4v">
+<dependencies version="2" modelHash="didh7x33yha40jt631p01wee91h2ew9">
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
   <common hash="854iev2unswrkqz6nf8hqrtfhcftctd" dependsOnNodes="true">
     <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" />
   </common>
-  <source id="2431880409855437720" name="NameGenerator" hash="ca6xr8nqfu2td1vbrecj1gkq505vfkt">
+  <source id="2431880409855437720" name="NameGenerator" hash="-861tblyjy0z623wymtd7bpexgfk0qap">
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
     <file name="NameGenerator.java" />
   </source>

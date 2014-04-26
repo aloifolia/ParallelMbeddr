@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-ed7qqka1pcv5na9qkn2b9mjm3kzbg8u">
+<dependencies version="2" modelHash="-7cq3d08ef4lqyisfexrt1ku7p9g3kv9">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
@@ -7,8 +7,8 @@
   <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="7778sg3ilzz2aru5dxn9sowx4ft2beb" />
-  <common hash="9egoxuvo0mct0bt022wy6rd2qpx6655">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-b0s4d4i3reqfa18w8aegl0013todhg7" />
+  <common hash="cuzffgkluymbk7jj0qo53lmx40uz9pe">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
@@ -24,7 +24,7 @@
     <file name="test.c" />
     <file name="test.h" />
   </common>
-  <source id="1304213873205793445" name="test" hash="ak27ebyozealmzr3z96oa07l7qo9w3b" />
+  <source id="1304213873205793445" name="test" hash="-3lvpfcabg9cddvjqahrbqdlkpnvap7a" />
   <source id="1304213873205811256" name="TypeSizeConfiguration (O.test)" hash="-89jfokg8olorfbi79i0wtyg8wg3ps65" />
   <source id="8002841268888606725" name="BuildConfiguration (O.test)" hash="-3fi751m9gy7g37g7u1etp2i1ps0yxe8" />
 </dependencies>
