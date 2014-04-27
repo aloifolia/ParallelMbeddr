@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="TasksAndSyncs.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.CompoundLiteral_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.ExprBoundToStruct_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.FutureContainer_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.FutureJoinContainer_BehaviorDescriptor" />
@@ -18,6 +19,12 @@
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.CompoundLiteral_BehaviorDescriptor" file="CompoundLiteral_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.ExprBoundToStruct_BehaviorDescriptor" file="ExprBoundToStruct_BehaviorDescriptor.java">
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-aodrsj6yb8lq5oqbg5icq18bowbfbek">
+<dependencies version="2" modelHash="d7w0a78shmmvyubjomsh9j9w1i6nx9">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="-erhs8245rrxarsir75oeypz6lamscet" />
@@ -7,7 +7,7 @@
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="8q67curelcd82g3w0jl9geuolfuty3c" dependsOnNodes="true">
+  <common hash="-1dmm8l6rwiu4xk4r7v0sgvevfg21qai" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
@@ -20,6 +20,7 @@
     <dep root="6843270485077468311" />
     <dep root="7288607883536646834" />
     <dep root="7288607883536878936" />
+    <dep root="961131662869355681" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
@@ -41,5 +42,6 @@
   <source id="3074299910025607357" name="ExprBoundToStruct" hash="-bda8q8shzkufh6w6aaf6gly3v0c2nhl" />
   <source id="7288607883536646834" name="FutureJoinContainer" hash="-aedrpqa0n9ttsgln3jkh55ucaxw2jvw" />
   <source id="7288607883536878936" name="FutureResultContainer" hash="-cchs1uh8nyg1kucwxbiw3ekwn7a8iy9" />
+  <source id="961131662869355681" name="CompoundLiteral" hash="3bpxl856mf7ode6fr6k1ko81i86snau" />
 </dependencies>
 
