@@ -14,28 +14,19 @@
 extern "C" {
 #endif
 
+struct GenericDeclarations_Task {
+  void* args;
+  void* (*fun)(void*);
+};
+
 struct GenericDeclarations_Future {
   pthread_t pth;
   void* result;
   int8_t finished;
 };
 
-struct GenericDeclarations_Task {
-  void* args;
-  void* (*fun)(void*);
-};
-
-static  struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(void) 
+static  struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(struct GenericDeclarations_Task task) 
 {
-  pthread pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (Future){ .pth = pth };
-}
-
-
-static inline struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture2(struct GenericDeclarations_Task task) 
-{
-  
   pthread pth;
   pthread_create(&pth,0,task.fun,task.args);
   return (Future){ .pth = pth };
