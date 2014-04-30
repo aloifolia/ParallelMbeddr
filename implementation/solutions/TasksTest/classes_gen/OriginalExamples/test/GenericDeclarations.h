@@ -29,9 +29,7 @@ static  struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFutur
 {
   pthread_t pth;
   pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericDeclarations_Future){
-    .pth = pth
-  };
+  return (Future){ .pth = pth };
 }
 
 
