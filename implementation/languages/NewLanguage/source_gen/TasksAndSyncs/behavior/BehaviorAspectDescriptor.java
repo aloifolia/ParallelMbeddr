@@ -12,30 +12,42 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
 
   public BehaviorDescriptor getDescriptor(String fqName) {
     switch (Arrays.binarySearch(stringSwitchCases_846f5o_a0a0b, fqName)) {
-      case 6:
+      case 13:
         return new Task_BehaviorDescriptor();
-      case 1:
-        return new Future_BehaviorDescriptor();
-      case 7:
-        return new TaskJoin_BehaviorDescriptor();
-      case 9:
-        return new TaskType_BehaviorDescriptor();
-      case 3:
-        return new FutureType_BehaviorDescriptor();
-      case 8:
-        return new TaskResult_BehaviorDescriptor();
-      case 4:
-        return new Sync_BehaviorDescriptor();
-      case 5:
-        return new SyncVariable_BehaviorDescriptor();
       case 2:
+        return new Future_BehaviorDescriptor();
+      case 4:
+        return new FutureJoin_BehaviorDescriptor();
+      case 14:
+        return new TaskType_BehaviorDescriptor();
+      case 8:
+        return new FutureType_BehaviorDescriptor();
+      case 6:
+        return new FutureResult_BehaviorDescriptor();
+      case 11:
+        return new Sync_BehaviorDescriptor();
+      case 12:
+        return new SyncVariable_BehaviorDescriptor();
+      case 3:
         return new FutureContainer_BehaviorDescriptor();
-      case 0:
+      case 1:
         return new ExprBoundToStruct_BehaviorDescriptor();
+      case 5:
+        return new FutureJoinContainer_BehaviorDescriptor();
+      case 7:
+        return new FutureResultContainer_BehaviorDescriptor();
+      case 0:
+        return new CompoundLiteral_BehaviorDescriptor();
+      case 10:
+        return new SharedRessourceType_BehaviorDescriptor();
+      case 15:
+        return new Unshare_BehaviorDescriptor();
+      case 9:
+        return new Share_BehaviorDescriptor();
       default:
         return BehaviorAspectInterpreted.getInstance().getDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskJoin", "TasksAndSyncs.structure.TaskResult", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.CompoundLiteral", "TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedRessourceType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType", "TasksAndSyncs.structure.Unshare"};
 }

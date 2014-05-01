@@ -35,7 +35,7 @@ public class SyncVariable_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAChild(final SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
-    boolean rightPlace = SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "variables", true)).contains(node);
+    boolean rightPlace = SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "ressources", true)).contains(node);
     if (!(rightPlace)) {
       return rightPlace;
     }
@@ -56,7 +56,7 @@ public class SyncVariable_Constraints extends BaseConstraintsDescriptor {
         }
       });
     }
-    return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "variables", true)).contains(node) && ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).all(new IWhereFilter<SNode>() {
+    return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync") && ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(parentNode, "TasksAndSyncs.structure.Sync"), "ressources", true)).contains(node) && ListSequence.fromList(SNodeOperations.getPrevSiblings(node, false)).all(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncVariable"), "ref", true) != SLinkOperations.getTarget(node, "ref", true);
       }

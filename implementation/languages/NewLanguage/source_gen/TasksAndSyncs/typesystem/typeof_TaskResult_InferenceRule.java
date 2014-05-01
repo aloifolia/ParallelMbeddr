@@ -33,7 +33,7 @@ public class typeof_TaskResult_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.TaskResult";
+    return "TasksAndSyncs.structure.FutureResult";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

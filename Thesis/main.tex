@@ -1,0 +1,40 @@
+\documentclass[type=msc,10pt,accentcolor=tud1b,bibtotoc,colorback,linedtoc,liststotoc,bigchapter,noresetcounter]{tudthesis}
+
+
+% PACKAGES
+\input{config/package-import}
+% MACROS
+\input{config/macros}
+
+
+\begin{document}
+ 
+\pagenumbering{Roman}
+
+\input{content/header}
+%
+%% ----------------------------------
+%% Content, Figures, Tables, Listings
+%% ----------------------------------
+%\tableofcontents
+%\listoffigures
+%\listoftables
+%
+%% ----------------------------------------------------
+%% Showing the section names in the header of each page
+%% ----------------------------------------------------
+%%\lhead{\nouppercase{\rightmark}}
+%%\chead{}
+%%\rhead{\nouppercase{\leftmark}
+%
+\input{content/introduction_motivation}
+\input{content/basics}
+\input{content/analysis_existing_work}
+\input{content/implementation}
+\input{content/evaluation}
+\input{content/summary_prospect}
+%
+\bibliography{content/literature}
+\bibliographystyle{plain}
+
+\end{document}

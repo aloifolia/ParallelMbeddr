@@ -1,0 +1,8 @@
+\contentsline {chapter}{Abbildungsverzeichnis}{II}{section*.6}
+\contentsline {chapter}{Tabellenverzeichnis}{III}{section*.9}
+\contentsline {chapter}{\numberline {1}Die Sesamstra\IeC {\ss }e}{IV}{chapter.1}
+\contentsline {section}{\numberline {1.1}Ernie}{IV}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Ernies gr\"o\IeC {\ss }te Reise}{IV}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Lorem ipsum etc.}{IV}{subsection.1.1.2}
+\contentsline {chapter}{Literaturverzeichnis}{V}{section*.12}
+\contentsfinish 

@@ -1,0 +1,12 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Basics}{}% 2
+\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Existing work}{chapter.3}% 4
+\BOOKMARK [1][-]{section.3.2}{Language Design}{chapter.3}% 5
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 6
+\BOOKMARK [1][-]{section.4.1}{Mbeddr}{chapter.4}% 7
+\BOOKMARK [1][-]{section.4.2}{Tasks and Futures}{chapter.4}% 8
+\BOOKMARK [1][-]{section.4.3}{Synchronization}{chapter.4}% 9
+\BOOKMARK [1][-]{section.4.4}{Optimization}{chapter.4}% 10
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 11
+\BOOKMARK [0][-]{section*.3}{Literaturverzeichnis}{}% 12

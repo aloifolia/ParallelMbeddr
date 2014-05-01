@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <root nodeRef="r:2ca2ebc9-2f21-49e7-873d-18685b41b4cb(TasksAndSyncs.textGen)/961131662869414397">
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="17" startPosition="44" endLine="18" endPosition="61" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869424382" fileName="CompoundLiteral_TextGen.java" startLine="19" startPosition="5" endLine="20" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869424382" fileName="CompoundLiteral_TextGen.java" startLine="19" startPosition="5" endLine="20" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869419112" fileName="CompoundLiteral_TextGen.java" startLine="20" startPosition="21" endLine="21" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869419112" fileName="CompoundLiteral_TextGen.java" startLine="20" startPosition="21" endLine="21" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869419112" fileName="CompoundLiteral_TextGen.java" startLine="20" startPosition="21" endLine="21" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869425692" fileName="CompoundLiteral_TextGen.java" startLine="21" startPosition="68" endLine="22" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869425692" fileName="CompoundLiteral_TextGen.java" startLine="21" startPosition="68" endLine="22" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869426255" fileName="CompoundLiteral_TextGen.java" startLine="22" startPosition="21" endLine="23" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869426255" fileName="CompoundLiteral_TextGen.java" startLine="22" startPosition="21" endLine="23" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869426255" fileName="CompoundLiteral_TextGen.java" startLine="22" startPosition="21" endLine="23" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="25" startPosition="7" endLine="26" endPosition="38" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="27" startPosition="13" endLine="28" endPosition="232" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="30" startPosition="49" endLine="31" endPosition="88" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="33" startPosition="9" endLine="34" endPosition="80" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="39" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="LOG" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="16" startPosition="42" endLine="19" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="29" startPosition="31" endLine="32" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="29" startPosition="31" endLine="32" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="26" startPosition="38" endLine="33" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.TryCatchStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="24" startPosition="44" endLine="35" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="23" startPosition="62" endLine="36" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="16" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="doGenerateText#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="17" startPosition="44" endLine="18" endPosition="61" />
+    <scopeInfo nodeId="961131662869424382" fileName="CompoundLiteral_TextGen.java" startLine="19" startPosition="5" endLine="20" endPosition="21" />
+    <scopeInfo nodeId="961131662869419112" fileName="CompoundLiteral_TextGen.java" startLine="20" startPosition="21" endLine="21" endPosition="68" />
+    <scopeInfo nodeId="961131662869425692" fileName="CompoundLiteral_TextGen.java" startLine="21" startPosition="68" endLine="22" endPosition="21" />
+    <scopeInfo nodeId="961131662869426255" fileName="CompoundLiteral_TextGen.java" startLine="22" startPosition="21" endLine="23" endPosition="62" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="27" startPosition="13" endLine="28" endPosition="232" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="30" startPosition="49" endLine="31" endPosition="88" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="29" startPosition="0" endLine="32" endPosition="11">
+      <varInfo nodeId="961131662869414397" varName="t" />
+    </scopeInfo>
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="29" startPosition="31" endLine="32" endPosition="11" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="25" startPosition="7" endLine="34" endPosition="80">
+      <varInfo nodeId="961131662869414397" varName="traceableProperty" />
+    </scopeInfo>
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="24" startPosition="44" endLine="35" endPosition="7" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="16" startPosition="42" endLine="36" endPosition="5" />
+    <scopeInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="16" startPosition="0" endLine="38" endPosition="0">
+      <varInfo nodeId="961131662869414397" varName="node" />
+    </scopeInfo>
+    <unitInfo nodeId="961131662869414397" fileName="CompoundLiteral_TextGen.java" startLine="15" startPosition="0" endLine="41" endPosition="0" unitName="TasksAndSyncs.textGen.CompoundLiteral_TextGen" />
+  </root>
+</debugInfo>
+

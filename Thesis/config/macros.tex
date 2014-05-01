@@ -1,0 +1,92 @@
+
+% ----------------------------------------
+% This file contains shortcuts for custom
+% commands with one or more arguments.
+% Convention: UPPER CASE
+% ----------------------------------------
+
+
+% some colors for listings
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{silver}{rgb}{0.85,0.85,0.85}
+\definecolor{silverlight}{rgb}{0.9,0.9,0.9}
+\definecolor{noteyellow}{HTML}{FEE411}
+\definecolor{lightnoteyellow}{HTML}{FEF18A}
+\definecolor{orange}{HTML}{FF7F00}
+\definecolor{todoblue}{HTML}{99CCFF}
+\definecolor{respred}{HTML}{FF9966}
+
+
+% - indicate when there are still things to do
+%\newcommand{\TODO}[1]{}
+\newcommand{\TODO}[1]{ {\colorbox{todoblue}{\begin{varwidth}[t]{0.7\textwidth}
+				\textbf{TODO:}\ #1
+			\end{varwidth}}\\}}
+% - indicate missing code or images
+\newcommand{\INSERT}[1]{\texttt{\large{\color{red}{INSERT: #1}}}}
+% - use for code in prose text
+\newcommand{\CODE}[1]{\texttt{\textbf{\colorbox{silver}{#1}}}}
+% - use for code in prose text with red textcolor
+\newcommand{\REDCODE}[1]{\textcolor{red}{\CODE{#1}}}
+% - use to emphasize the following statement
+%\newcommand{\NOTE}[2]{ }
+\newcommand{\NOTE}[2]{ {\colorbox{lightnoteyellow}{\begin{varwidth}[t]{0.7\textwidth}
+				\textbf{Kommentar von #1}\\
+				#2
+			\end{varwidth}}\\}}
+			
+\newcommand{\Bastian}[1]{\NOTE{Bastian}{#1}}
+\newcommand{\Thomas}[1]{\NOTE{Thomas}{#1}}
+
+% - use for signatures
+% - Ja das ist nicht die schönste Art 3 Unterschriftenfelder nebeneinander zu bekommen mit Leeraum darüber.
+\newcommand{\SIGNATURES}[3]{\begin{tabularx}{\textwidth}[b]{p{3cm} X p{3cm} X p{3cm}} \\\\\\\cline{1-1} \cline{3-3} \cline{5-5}
+
+		#1 & & #2 & & #3\\\\\\
+	\end{tabularx}}
+
+% - use to mark responsibilities
+\newcommand{\RESPONSIBLE}[1]{ {\colorbox{noteyellow}{\begin{varwidth}[t]{0.7\textwidth}
+				\textbf{Verantwortlich f�r diesen Bereich}\\
+#1
+\end{varwidth}}\\}}
+
+% - example header
+\newcommand{\EX}[1][\empty]{\textbf{Example:} #1\par}
+% - solution header
+\newcommand{\SOL}[1][\empty]{\textbf{Solution:} #1\par}
+
+% - example code
+\newcommand{\EXC}[2][\empty]{
+\EX[#1]
+%$\blacktriangleright$ \texttt{\textbf{\colorbox{silverlight}{#2}}}}
+$\blacktriangleright$ \texttt{\textbf{\fbox{\lstinline[language=Java, basicstyle=\bfseries, keepspaces]{#2}}}}}
+
+% - inline code
+\newcommand{\ICODE}[1]{
+\fbox{\lstinline[language=Java, basicstyle=\bfseries, keepspaces]{#1}}}
+
+% - introduce a new "Syntax" paragraph which contains syntax in bnf form
+\newcommand{\SYNPAR}[1]{\paragraph{Syntax}\CODE{#1}\par}
+
+% - use for programming languages (pl)
+\newcommand{\PL}[1]{\textsc{#1}}
+ 
+ % - a block of code, initiated with a header
+ \lstnewenvironment{CBLOCK}[1][\empty]
+  {\ifthenelse{\equal{#1}{\empty}}{}{\textbf{#1:}}
+  \lstset{language=Java}}
+  {}
+
+
+% - a block of code, initiated with "Example:" + <optional description>
+\lstnewenvironment{EXCBLOCK}[1][\empty]
+ {\textbf{Example:} #1 \lstset{language=Java}}
+ {}
+
+% - a paragraph of code, initiated with "Definition:" + <optional description>
+\lstnewenvironment{DEFCBLOCK}[1][\empty]
+ {\paragraph{Definition} #1 \lstset{language=Java}}
+ {}
+
