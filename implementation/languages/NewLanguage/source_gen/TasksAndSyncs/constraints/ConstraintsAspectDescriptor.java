@@ -18,15 +18,23 @@ public class ConstraintsAspectDescriptor implements jetbrains.mps.smodel.runtime
         return new FutureJoin_Constraints();
       case 3:
         return new FutureResult_Constraints();
-      case 4:
+      case 7:
         return new SyncVariable_Constraints();
       case 0:
         return new ExprBoundToStruct_Constraints();
+      case 8:
+        return new Unshare_Constraints();
+      case 6:
+        return new Sync_Constraints();
+      case 5:
+        return new SharedRessourceType_Constraints();
+      case 4:
+        return new Share_Constraints();
       default:
         // todo: illegal in some cases? 
         return new BaseConstraintsDescriptor(fqName);
     }
   }
 
-  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.SyncVariable"};
+  private static String[] stringSwitchCases_2qnle6_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedRessourceType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Unshare"};
 }

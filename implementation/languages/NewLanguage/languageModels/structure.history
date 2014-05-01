@@ -96,5 +96,23 @@
     </dependencies>
     <rename id="6i3o.2744793885339890637" type="CONCEPT" from="TaskResult" to="FutureResult" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="15" />
+    </dependencies>
+    <rename id="6i3o.1924594752095321661" type="CONCEPT" from="SharedRessource" to="SharedRessourceType" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="16" />
+    </dependencies>
+    <rename id="6i3o.3604883996548064272" type="CHILD" from="variables" to="ressources" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="17" />
+    </dependencies>
+    <rename id="6i3o.1924594752095502558" type="CONCEPT" from="SharedRessourceVal" to="Unshare" />
+  </StructureModification>
 </history>
 

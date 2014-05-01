@@ -52,15 +52,15 @@ public class Sync_Editor extends DefaultNodeEditor {
   }
 
   private EditorCell createRefNodeList_pz2fgo_b0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new Sync_Editor.variablesListHandler_pz2fgo_b0(node, "variables", editorContext);
+    AbstractCellListHandler handler = new Sync_Editor.ressourcesListHandler_pz2fgo_b0(node, "ressources", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_variables");
+    editorCell.setCellId("refNodeList_ressources");
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
 
-  private static class variablesListHandler_pz2fgo_b0 extends RefNodeListHandler {
-    public variablesListHandler_pz2fgo_b0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class ressourcesListHandler_pz2fgo_b0 extends RefNodeListHandler {
+    public ressourcesListHandler_pz2fgo_b0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
 
