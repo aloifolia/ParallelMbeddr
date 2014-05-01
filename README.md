@@ -3,19 +3,23 @@ ParallelMbeddr
 
 Master's thesis: *An extension of embedded C for parallel programming*
 
+### Current state
+basic research, requesting feedback from users
+
+### Timeline
+TODO
+
 ### Current Tasks
-- implement tasks
-- define sync design and translation
-- implement syncs
-- discuss master thesis text with Sebastian
+- await answer from users
+- create timeline
+- investigate briefly Scala, Rust, Stackless Python and XC: DONE
+- find textbook examples that could be coded: half DONE (check TUD course for more)
+- ponder and write down possible syntax that is suitable for examples: MP and SM
+- write 1-3 textbook examples in C
+- write 1-3 textbook examples in invented syntax
 
-### Open Tasks
-- find out how optimization generally works
-- conceive optimization ideas
-- implement optimization ideas
-- write thesis
-
-### Investigated languages
+### Next step(s)
+- investigate existing languages and libraries:
 
     Erlang
     → http://en.wikipedia.org/wiki/Erlang_(programming_language)
