@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="OriginalExamples.fibonacci_sync.GenericDeclarations" file="GenericDeclarations.c" />
+  <dependency className="OriginalExamples.fibonacci_sync.GenericDeclarations" file="GenericDeclarations.h" />
+  <dependency className="OriginalExamples.fibonacci_sync.Makefile" file="Makefile" />
+  <dependency className="OriginalExamples.fibonacci_sync.TypeSizeConfiguration (O.fibonacci_sync)" file="TypeSizeConfiguration (O.fibonacci_sync)" />
+  <dependency className="OriginalExamples.fibonacci_sync.fibonacci" file="fibonacci.c" />
+  <dependency className="OriginalExamples.fibonacci_sync.fibonacci" file="fibonacci.h" />
+</dependenciesRoot>
+
