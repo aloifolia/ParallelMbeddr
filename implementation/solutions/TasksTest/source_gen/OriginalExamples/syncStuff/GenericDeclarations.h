@@ -25,13 +25,11 @@ struct GenericDeclarations_Task {
   void* (*fun)(void*);
 };
 
-static  struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(struct GenericDeclarations_Task task) 
-{
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (Future){ .pth = pth };
-}
+void* GenericDeclarations_getFutureResult(struct GenericDeclarations_Future* future);
 
+struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(struct GenericDeclarations_Task task);
+
+void GenericDeclarations_joinFuture(struct GenericDeclarations_Future* future);
 
 
 #ifdef __cplusplus

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="OriginalExamples.testSync.GenericDeclarations" file="GenericDeclarations.c" />
+  <dependency className="OriginalExamples.testSync.GenericDeclarations" file="GenericDeclarations.h" />
+  <dependency className="OriginalExamples.testSync.Makefile" file="Makefile" />
+  <dependency className="OriginalExamples.testSync.TypeSizeConfiguration (O.testSync)" file="TypeSizeConfiguration (O.testSync)" />
+  <dependency className="OriginalExamples.testSync.testSync" file="testSync.c" />
+  <dependency className="OriginalExamples.testSync.testSync" file="testSync.h" />
+</dependenciesRoot>
+

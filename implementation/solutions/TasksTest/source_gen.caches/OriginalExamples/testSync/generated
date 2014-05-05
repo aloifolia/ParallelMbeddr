@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="31kq2eevxxir1l1yexb68gtftxnccow">
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
+  <common hash="2xeeuxdvi7si2sq3uh4jztfym7ovgpy" dependsOnNodes="true">
+    <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="GenericDeclarations.c" />
+    <file name="GenericDeclarations.h" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (O.testSync)" />
+    <file name="testSync.c" />
+    <file name="testSync.h" />
+  </common>
+  <source id="1924594752097177062" name="testSync" hash="7e75lq8wi456het7khutq4yp8qcq370" />
+  <source id="1924594752097177159" name="TypeSizeConfiguration (O.testSync)" hash="bfmcakj42m4nmtd63w0kf22f2zm4vno" />
+  <source id="4390787788474557360" name="BuildConfiguration (O.testSync)" hash="a2gjvncpp2k36t3t9nzc17hi7qlov2g" />
+</dependencies>
+

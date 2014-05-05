@@ -3,7 +3,6 @@
 
 #include "GenericDeclarations.h"
 #include <stdlib.h>
-#include <pthread.h>
 
 struct fibonacci_Args_a0a0a4a0 {
   int8_t i;
@@ -25,8 +24,6 @@ static void* fibonacci_parFun_a0a0a4a0(void* voidArgs);
 
 static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a4a0(int8_t i,<!TextGen not found for 'TasksAndSyncs.structure.SharedRessourceType'!> results[50]);
 
-static inline struct GenericDeclarations_Future fibonacci_futureJoin(struct GenericDeclarations_Future fiboFutures[50],int8_t i);
-
 int32_t main(int32_t argc, char* argv[]) 
 {
   
@@ -35,13 +32,13 @@ int32_t main(int32_t argc, char* argv[])
   
   for ( int8_t i = 0; i < 50; ++i )
   {
-    fiboFutures[i] = runTaskAndGetFuture(fibonacci_taskInit_a0a0a4a0(i, results));
+    fiboFutures[i] = GenericDeclarations_runTaskAndGetFuture(fibonacci_taskInit_a0a0a4a0(i, results));
   }
 
   
   for ( int8_t i = 0; i < 50; ++i )
   {
-    fibonacci_futureJoin(fiboFutures, i);
+    GenericDeclarations_joinFuture(&fiboFutures[i]);
     <!TextGen not found for 'TasksAndSyncs.structure.Sync'!>;
   }
 
@@ -84,19 +81,6 @@ static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a4a0(int8_t
   args_a0a0a4a0->i = i;
   struct GenericDeclarations_Task task1 = {args_a0a0a4a0,&fibonacci_parFun_a0a0a4a0};
   return task1;
-}
-
-
-static inline struct GenericDeclarations_Future fibonacci_futureJoin(struct GenericDeclarations_Future fiboFutures[50], int8_t i) 
-{
-  struct GenericDeclarations_Future future = fiboFutures[i];
-  if ( !((future.finished)) ) 
-  {
-    pthread_join(&(future.pth),0);
-    future.finished = 1;
-  }
-
-  return future;
 }
 
 

@@ -7,9 +7,8 @@ import jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.smodel.SModelUtil_new;
 
 public class typeof_FutureJoin_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -17,18 +16,10 @@ public class typeof_FutureJoin_InferenceRule extends AbstractInferenceRule_Runti
   }
 
   public void applyRule(final SNode futureJoin, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    final SNode future = SLinkOperations.getTarget(SNodeOperations.as(SNodeOperations.getParent(futureJoin), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
     {
-      final SNode futureAsExprType = typeCheckingContext.typeOf(future, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854739", true);
-      typeCheckingContext.whenConcrete(futureAsExprType, new Runnable() {
-        public void run() {
-          {
-            SNode _nodeToCheck_1029348928467 = futureJoin;
-            EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854728", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854734", true), (SNode) SNodeOperations.copyNode(SNodeOperations.as(typeCheckingContext.getExpandedNode(futureAsExprType), "TasksAndSyncs.structure.FutureType")), _info_12389875345);
-          }
-        }
-      }, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1304213873212854692", false, false);
+      SNode _nodeToCheck_1029348928467 = futureJoin;
+      EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4390787788471308638", 0, null);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4390787788471308645", true), (SNode) SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.VoidType", null), _info_12389875345);
     }
   }
 

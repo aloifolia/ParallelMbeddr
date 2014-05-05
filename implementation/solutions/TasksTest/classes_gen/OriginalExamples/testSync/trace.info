@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericDeclarations.c" startLine="1" startPosition="0" endLine="36" endPosition="0" unitName="OriginalExamples.testSync.GenericDeclarations" />
+  <root nodeRef="r:b1040ffd-fa34-425f-b70d-15efbd8215c8(OriginalExamples.testSync)/1924594752097177062">
+    <nodeInfo nodeId="1924594752097178499" fileName="testSync.c" startLine="10" startPosition="2" endLine="10" endPosition="82" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752098505756" fileName="testSync.c" startLine="10" startPosition="78" endLine="10" endPosition="81" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="1924594752098504470" fileName="testSync.c" startLine="10" startPosition="79" endLine="10" endPosition="80" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1924594752098396762" fileName="testSync.c" startLine="11" startPosition="2" endLine="11" endPosition="81" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752098404435" fileName="testSync.c" startLine="11" startPosition="79" endLine="11" endPosition="80" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1924594752098413364" fileName="testSync.c" startLine="12" startPosition="2" endLine="12" endPosition="78" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752098423227" fileName="testSync.c" startLine="12" startPosition="15" endLine="12" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1924594752098426745" fileName="testSync.c" startLine="12" startPosition="15" endLine="12" endPosition="77" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="1924594752098848640" fileName="testSync.c" startLine="13" startPosition="2" endLine="13" endPosition="82" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752098856610" fileName="testSync.c" startLine="13" startPosition="79" endLine="13" endPosition="81" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1924594752098858392" fileName="testSync.c" startLine="13" startPosition="80" endLine="13" endPosition="81" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1924594752098862019" fileName="testSync.c" startLine="14" startPosition="2" endLine="14" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1924594752098863726" fileName="testSync.c" startLine="14" startPosition="2" endLine="14" endPosition="62" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="1924594752098862020" fileName="testSync.c" startLine="14" startPosition="2" endLine="14" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1924594752097569732" fileName="testSync.c" startLine="15" startPosition="2" endLine="15" endPosition="140" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752097574875" fileName="testSync.c" startLine="15" startPosition="78" endLine="15" endPosition="81" conceptFqName="com.mbeddr.core.pointers.structure.StringLiteral" />
+    <nodeInfo nodeId="1924594752098061624" fileName="testSync.c" startLine="15" startPosition="78" endLine="15" endPosition="139" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="1924594752098381560" fileName="testSync.c" startLine="16" startPosition="2" endLine="16" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752098386455" fileName="testSync.c" startLine="16" startPosition="12" endLine="16" endPosition="15" conceptFqName="com.mbeddr.core.pointers.structure.StringLiteral" />
+    <nodeInfo nodeId="1924594752097189307" fileName="testSync.c" startLine="17" startPosition="2" endLine="17" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="1924594752097178259" fileName="testSync.c" startLine="18" startPosition="2" endLine="18" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1924594752097178260" fileName="testSync.c" startLine="18" startPosition="9" endLine="18" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1924594752097178066" fileName="testSync.c" startLine="6" startPosition="0" endLine="7" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="1924594752097178251" fileName="testSync.c" startLine="9" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1924594752097178249" fileName="testSync.c" startLine="8" startPosition="0" endLine="21" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="1924594752097177062" fileName="testSync.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.testSync.main" />
+    <unitInfo nodeId="1924594752097177062" fileName="testSync.c" startLine="1" startPosition="0" endLine="22" endPosition="0" unitName="OriginalExamples.testSync.testSync" />
+  </root>
+</debugInfo>
+

@@ -1,10 +1,12 @@
-#ifndef TEST_H
-#define TEST_H
+#ifndef SYNCSTUFF_H
+#define SYNCSTUFF_H
 
 
 #include <stdint.h>
 
 #include <stddef.h>
+
+#include <stdlib.h>
 
 #include "GenericDeclarations.h"
 
@@ -14,7 +16,7 @@
 extern "C" {
 #endif
 
-int32_t test_main(int32_t argc,char* argv[]);
+int32_t syncStuff_main(int32_t argc,char* argv[]);
 
 
 #ifdef __cplusplus
