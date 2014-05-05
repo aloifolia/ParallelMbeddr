@@ -4,7 +4,7 @@ package TasksAndSyncs.generator.util;
 
 
 public class NameGenerator {
-  public static String getGenericModuleName() {
+  public static String getGenericTaskModuleName() {
     return "GenericDeclarations";
   }
 
@@ -24,5 +24,17 @@ public class NameGenerator {
 
   public static String getFutureFunctionName() {
     return "runTaskAndGetFuture";
+  }
+
+
+
+  public static String getFutureJoinFunctionName() {
+    return "joinFuture";
+  }
+
+
+
+  public static String getFutureResultFunctionName() {
+    return "getFutureResult";
   }
 }
