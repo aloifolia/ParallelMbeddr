@@ -554,14 +554,14 @@ public class TaskDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_4390787788466028283 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_1186028049354472248 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.ArgumentRef", null);
             SLinkOperations.setTarget(res, "arg", futureArgument, false);
             return res;
           }
         }.invoke();
-        final SNode node_4390787788466043106 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_1186028049354472252 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.GenericMemberRef", null);
             SLinkOperations.setTarget(res, "member", ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(futureStruct)).findFirst(new IWhereFilter<SNode>() {
@@ -572,18 +572,11 @@ public class TaskDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_4390787788466018391 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_1186028049354469688 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.GenericDotExpression", null);
-            SLinkOperations.setTarget(res, "expression", node_4390787788466028283, true);
-            SLinkOperations.setTarget(res, "target", node_4390787788466043106, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_4390787788465992800 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.ReferenceExpr", null);
-            SLinkOperations.setTarget(res, "expression", node_4390787788466018391, true);
+            SLinkOperations.setTarget(res, "expression", node_1186028049354472248, true);
+            SLinkOperations.setTarget(res, "target", node_1186028049354472252, true);
             return res;
           }
         }.invoke();
@@ -598,7 +591,7 @@ public class TaskDefinitionBuilder {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryFunctionCall", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
             SPropertyOperations.set(res, "calledFunctionName", ("pthread_join"));
-            ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_4390787788465992800);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_1186028049354469688);
             ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_4390787788466005500);
             return res;
           }
@@ -795,14 +788,14 @@ public class TaskDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_4390787788468271691 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_4390787788466028283 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.ArgumentRef", null);
             SLinkOperations.setTarget(res, "arg", futureArgument, false);
             return res;
           }
         }.invoke();
-        final SNode node_4390787788468271695 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_4390787788466043106 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.GenericMemberRef", null);
             SLinkOperations.setTarget(res, "member", ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(futureStruct)).findFirst(new IWhereFilter<SNode>() {
@@ -813,18 +806,11 @@ public class TaskDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_4390787788468271690 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_1186028049354789571 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.GenericDotExpression", null);
-            SLinkOperations.setTarget(res, "expression", node_4390787788468271691, true);
-            SLinkOperations.setTarget(res, "target", node_4390787788468271695, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_4390787788468271689 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.ReferenceExpr", null);
-            SLinkOperations.setTarget(res, "expression", node_4390787788468271690, true);
+            SLinkOperations.setTarget(res, "expression", node_4390787788466028283, true);
+            SLinkOperations.setTarget(res, "target", node_4390787788466043106, true);
             return res;
           }
         }.invoke();
@@ -839,7 +825,7 @@ public class TaskDefinitionBuilder {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryFunctionCall", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
             SPropertyOperations.set(res, "calledFunctionName", ("pthread_join"));
-            ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_4390787788468271689);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_1186028049354789571);
             ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_4390787788468271716);
             return res;
           }

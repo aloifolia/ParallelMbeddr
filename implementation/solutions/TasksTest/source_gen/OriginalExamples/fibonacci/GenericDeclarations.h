@@ -25,9 +25,9 @@ struct GenericDeclarations_Task {
   void* (*fun)(void*);
 };
 
-void* GenericDeclarations_getFutureResult(struct GenericDeclarations_Future* future);
-
 void GenericDeclarations_joinFuture(struct GenericDeclarations_Future* future);
+
+void* GenericDeclarations_getFutureResult(struct GenericDeclarations_Future* future);
 
 struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(struct GenericDeclarations_Task task);
 
