@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="5g1agws6clffpgsoc7pnen1329bw71p">
+<dependencies version="2" modelHash="-eujwfm6pd3kflvalu9itdiuhs7revbb">
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.util(JDK/java.util@java_stub)" />
@@ -31,14 +31,14 @@
   <common hash="-am1vzcdpmggfe1tsb05wzl0yiqb15pn" dependsOnNodes="true">
     <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" />
   </common>
-  <source id="2431880409855437720" name="NameGenerator" hash="-b3c02sgk7sdwha1bi6t073kb1iqzrr8">
+  <source id="2431880409855437720" name="NameGenerator" hash="exhofnbfurpxqikfkuvjmdstbn951h3">
     <dep model="r:00000000-0000-4000-0000-011c89590580(jetbrains.mps.baseLanguage.logging.generator.baseLanguage.template.main@generator)" />
     <dep model="r:0d8c18c2-3a01-472e-96fe-573575c47352(com.mbeddr.mpsutil.blutil.generator.template.main@generator)" />
     <dep model="r:c71b740e-a20d-4190-9688-0f8df932da4d(jetbrains.mps.baseLanguage.tuples.generator.template.main@generator)" />
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
     <file name="NameGenerator.java" />
   </source>
-  <source id="4390787788466980438" name="TaskDefinitionBuilder" hash="-8kzi7j89u230bo0s6a7loxnyyolz64o">
+  <source id="4390787788466980438" name="TaskDefinitionBuilder" hash="4fjelf4ify8n2vnuqej2ftz9m7s8j1h">
     <dep root="2431880409855437720" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />

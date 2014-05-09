@@ -32,9 +32,9 @@ static void fibonacci_foo(void);
 
 static void* fibonacci_parFun_a0a0a2a0(void* voidArgs);
 
-static void fibonacci_parFun_a0a0a0a0a(void* voidArgs);
+static void* fibonacci_parFun_a0a0a0a0a(void* voidArgs);
 
-static inline void fibonacci_blockexpr_main_2(void);
+static inline void fibonacci_saveFutureAndJoin(void);
 
 static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a0a0a(void);
 
@@ -42,7 +42,7 @@ static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a2a0(int8_t
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  fibonacci_blockexpr_main_2();
+  fibonacci_saveFutureAndJoin();
   struct GenericDeclarations_Future fiboFutures[50];
   for ( int8_t i = 0; i < 50; ++i )
   {
@@ -88,17 +88,18 @@ static void* fibonacci_parFun_a0a0a2a0(void* voidArgs)
 }
 
 
-static void fibonacci_parFun_a0a0a0a0a(void* voidArgs) 
+static void* fibonacci_parFun_a0a0a0a0a(void* voidArgs) 
 {
   struct fibonacci_Args_a0a0a0a0a* args = ((struct fibonacci_Args_a0a0a0a0a*)(voidArgs));
   fibonacci_foo();
+  return 0;
 }
 
 
-static inline void fibonacci_blockexpr_main_2(void) 
+static inline void fibonacci_saveFutureAndJoin(void) 
 {
-  struct GenericDeclarations_Future future = (GenericDeclarations_runTaskAndGetFuture(fibonacci_taskInit_a0a0a0a0a()));
-  return GenericDeclarations_joinFuture(&future);
+  struct GenericDeclarations_VoidFuture future = (GenericDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0a0a0a()));
+  return GenericDeclarations_joinVoidFuture(&future);
 }
 
 

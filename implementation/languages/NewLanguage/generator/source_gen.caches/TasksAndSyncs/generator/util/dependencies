@@ -11,6 +11,8 @@
   <dependency className="TasksAndSyncs.generator.util.TaskDefinitionBuilder" file="TaskDefinitionBuilder.java">
     <classNode dependClassName="TasksAndSyncs.generator.util.NameGenerator" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />

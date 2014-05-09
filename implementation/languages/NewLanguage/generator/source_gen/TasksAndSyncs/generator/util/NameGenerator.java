@@ -34,8 +34,20 @@ public class NameGenerator {
 
 
 
+  public static String getVoidFutureFunctionName() {
+    return "runTaskAndGetVoidFuture";
+  }
+
+
+
   public static String getFutureJoinFunctionName() {
     return "joinFuture";
+  }
+
+
+
+  public static String getVoidFutureJoinFunctionName() {
+    return "joinVoidFuture";
   }
 
 

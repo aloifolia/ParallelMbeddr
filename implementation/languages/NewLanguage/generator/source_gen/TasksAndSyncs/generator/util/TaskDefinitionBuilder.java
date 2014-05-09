@@ -6,6 +6,7 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
@@ -15,7 +16,7 @@ import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 public class TaskDefinitionBuilder {
 
 
-  public static SNode buildTaskStruct() {
+  public static SNode buildTaskStruct(boolean isVoid, final String name) {
     final SNode voidPointerType = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_6079605392878743740 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -34,6 +35,14 @@ public class TaskDefinitionBuilder {
         return node_6079605392878743626;
       }
     }.invoke();
+
+    final Wrappers._T<SNode> returnType = new Wrappers._T<SNode>();
+
+    if (isVoid) {
+      returnType.value = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.VoidType", null);
+    } else {
+      returnType.value = SNodeOperations.copyNode(voidPointerType);
+    }
 
     // task struct with arguments and function pointer 
     final SNode taskStructArgs = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -65,7 +74,7 @@ public class TaskDefinitionBuilder {
         }.invoke();
         final SNode node_8073526852157565631 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = SNodeOperations.copyNode(voidPointerType);
+            SNode res = returnType.value;
             return res;
           }
         }.invoke();
@@ -105,7 +114,7 @@ public class TaskDefinitionBuilder {
         SNode node_3074299910032666692 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.StructDeclaration", null);
-            SPropertyOperations.set(res, "name", (NameGenerator.getTaskStructName()));
+            SPropertyOperations.set(res, "name", (name));
             SPropertyOperations.set(res, "exported", "" + ((true)));
             ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_8073526852157571034);
             ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_8073526852157572265);
@@ -121,88 +130,7 @@ public class TaskDefinitionBuilder {
 
 
 
-  public static SNode buildFutureStruct() {
-    SNode futureStruct = new _FunctionTypes._return_P0_E0<SNode>() {
-      public SNode invoke() {
-        final SNode node_1504369025025729889 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
-            SPropertyOperations.set(res, "text", ("pthread_t"));
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025729886 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
-            SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
-            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_1504369025025729889);
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025729504 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
-            SPropertyOperations.set(res, "name", ("pth"));
-            SLinkOperations.setTarget(res, "type", node_1504369025025729886, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_4390787788467081431 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.VoidType", null);
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025732513 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
-            SLinkOperations.setTarget(res, "baseType", node_4390787788467081431, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025732059 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
-            SPropertyOperations.set(res, "name", ("result"));
-            SLinkOperations.setTarget(res, "type", node_1504369025025732513, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025733351 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.BooleanType", null);
-            return res;
-          }
-        }.invoke();
-        final SNode node_1504369025025732938 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
-            SPropertyOperations.set(res, "name", ("finished"));
-            SLinkOperations.setTarget(res, "type", node_1504369025025733351, true);
-            return res;
-          }
-        }.invoke();
-        SNode node_1504369025025727583 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.StructDeclaration", null);
-            SPropertyOperations.set(res, "exported", "" + ((true)));
-            SPropertyOperations.set(res, "name", (NameGenerator.getFutureStructName()));
-            ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_1504369025025729504);
-            ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_1504369025025732059);
-            ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_1504369025025732938);
-            return res;
-          }
-        }.invoke();
-        return node_1504369025025727583;
-      }
-    }.invoke();
-
-    return futureStruct;
-  }
-
-
-
-  public static SNode buildVoidFutureStruct() {
+  public static SNode buildFutureStruct(boolean isVoid, final String name) {
     SNode futureStruct = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_482600553440675156 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -246,7 +174,7 @@ public class TaskDefinitionBuilder {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.StructDeclaration", null);
             SPropertyOperations.set(res, "exported", "" + ((true)));
-            SPropertyOperations.set(res, "name", (NameGenerator.getVoidFutureStructName()));
+            SPropertyOperations.set(res, "name", (name));
             ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_482600553440675150);
             ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_482600553440675170);
             return res;
@@ -256,12 +184,41 @@ public class TaskDefinitionBuilder {
       }
     }.invoke();
 
+    if (!(isVoid)) {
+      ListSequence.fromList(SLinkOperations.getTargets(futureStruct, "members", true)).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
+        public SNode invoke() {
+          final SNode node_5267241343319432501 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("jetbrains.mps.baseLanguage.structure.VoidType", null);
+              return res;
+            }
+          }.invoke();
+          final SNode node_5267241343319432500 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+              SLinkOperations.setTarget(res, "baseType", node_5267241343319432501, true);
+              return res;
+            }
+          }.invoke();
+          SNode node_5267241343319430772 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
+              SPropertyOperations.set(res, "name", ("result"));
+              SLinkOperations.setTarget(res, "type", node_5267241343319432500, true);
+              return res;
+            }
+          }.invoke();
+          return node_5267241343319430772;
+        }
+      }.invoke());
+    }
+
     return futureStruct;
   }
 
 
 
-  public static SNode buildFutureFunction(final SNode taskStruct, final SNode futureStruct) {
+  public static SNode buildFutureFunction(final SNode taskStruct, final SNode futureStruct, final String name) {
     final SNode taskArgument = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_8073526852157303303 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -511,7 +468,7 @@ public class TaskDefinitionBuilder {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.Function", null);
             SPropertyOperations.set(res, "inline", "" + ((false)));
             SPropertyOperations.set(res, "exported", "" + ((true)));
-            SPropertyOperations.set(res, "name", (NameGenerator.getFutureFunctionName()));
+            SPropertyOperations.set(res, "name", (name));
             SPropertyOperations.set(res, "overriddenCodeLocation", (""));
             SPropertyOperations.set(res, "contextNodeId", (""));
             SPropertyOperations.set(res, "contextModelId", (""));
@@ -531,7 +488,7 @@ public class TaskDefinitionBuilder {
 
 
 
-  public static SNode buildFutureJoinFunction(final SNode futureStruct) {
+  public static SNode buildFutureJoinFunction(final SNode futureStruct, final String name) {
     final SNode futureArgument = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_4390787788469319494 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -738,7 +695,7 @@ public class TaskDefinitionBuilder {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.Function", null);
             SPropertyOperations.set(res, "inline", "" + ((false)));
             SPropertyOperations.set(res, "exported", "" + ((true)));
-            SPropertyOperations.set(res, "name", (NameGenerator.getFutureJoinFunctionName()));
+            SPropertyOperations.set(res, "name", (name));
             SPropertyOperations.set(res, "overriddenCodeLocation", (""));
             SPropertyOperations.set(res, "contextNodeId", (""));
             SPropertyOperations.set(res, "contextModelId", (""));
