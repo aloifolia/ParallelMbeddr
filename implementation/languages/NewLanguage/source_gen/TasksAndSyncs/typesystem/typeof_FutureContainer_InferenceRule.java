@@ -19,11 +19,11 @@ public class typeof_FutureContainer_InferenceRule extends AbstractInferenceRule_
 
   public void applyRule(final SNode futureContainer, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      final SNode taskAsExprType = typeCheckingContext.typeOf(SLinkOperations.getTarget(futureContainer, "task", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6843270485077601981", true);
-      typeCheckingContext.whenConcrete(taskAsExprType, new Runnable() {
+      final SNode taskType = typeCheckingContext.typeOf(SLinkOperations.getTarget(futureContainer, "task", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6843270485077601981", true);
+      typeCheckingContext.whenConcrete(taskType, new Runnable() {
         public void run() {
           SNode futureType = SConceptOperations.createNewNode("TasksAndSyncs.structure.FutureType", null);
-          SLinkOperations.setTarget(futureType, "returnType", SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(taskAsExprType), "TasksAndSyncs.structure.TaskType"), "returnType", true)), true);
+          SLinkOperations.setTarget(futureType, "returnType", SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.as(typeCheckingContext.getExpandedNode(taskType), "TasksAndSyncs.structure.TaskType"), "returnType", true)), true);
 
           {
             SNode _nodeToCheck_1029348928467 = futureContainer;

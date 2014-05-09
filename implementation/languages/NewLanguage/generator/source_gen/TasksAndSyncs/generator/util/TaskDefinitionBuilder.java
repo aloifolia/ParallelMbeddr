@@ -202,6 +202,65 @@ public class TaskDefinitionBuilder {
 
 
 
+  public static SNode buildVoidFutureStruct() {
+    SNode futureStruct = new _FunctionTypes._return_P0_E0<SNode>() {
+      public SNode invoke() {
+        final SNode node_482600553440675156 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
+            SPropertyOperations.set(res, "text", ("pthread_t"));
+            return res;
+          }
+        }.invoke();
+        final SNode node_482600553440675153 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
+            SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_482600553440675156);
+            return res;
+          }
+        }.invoke();
+        final SNode node_482600553440675150 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
+            SPropertyOperations.set(res, "name", ("pth"));
+            SLinkOperations.setTarget(res, "type", node_482600553440675153, true);
+            return res;
+          }
+        }.invoke();
+        final SNode node_482600553440675173 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.BooleanType", null);
+            return res;
+          }
+        }.invoke();
+        final SNode node_482600553440675170 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.Member", null);
+            SPropertyOperations.set(res, "name", ("finished"));
+            SLinkOperations.setTarget(res, "type", node_482600553440675173, true);
+            return res;
+          }
+        }.invoke();
+        SNode node_482600553440675145 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.StructDeclaration", null);
+            SPropertyOperations.set(res, "exported", "" + ((true)));
+            SPropertyOperations.set(res, "name", (NameGenerator.getVoidFutureStructName()));
+            ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_482600553440675150);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "members", true)).addElement(node_482600553440675170);
+            return res;
+          }
+        }.invoke();
+        return node_482600553440675145;
+      }
+    }.invoke();
+
+    return futureStruct;
+  }
+
+
+
   public static SNode buildFutureFunction(final SNode taskStruct, final SNode futureStruct) {
     final SNode taskArgument = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {

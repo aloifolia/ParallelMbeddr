@@ -26,34 +26,25 @@ public class TaskType_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Collection_p6qso6_a");
     editorCell.setBig(true);
     editorCell.addEditorCell(this.createConstant_p6qso6_a0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_p6qso6_b0(editorContext, node));
-    editorCell.addEditorCell(this.createRefNode_p6qso6_c0(editorContext, node));
-    editorCell.addEditorCell(this.createConstant_p6qso6_d0(editorContext, node));
+    editorCell.addEditorCell(this.createRefNode_p6qso6_b0(editorContext, node));
+    editorCell.addEditorCell(this.createConstant_p6qso6_c0(editorContext, node));
     return editorCell;
   }
 
   private EditorCell createConstant_p6qso6_a0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Task");
+    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "Task<");
     editorCell.setCellId("Constant_p6qso6_a0");
-    editorCell.setDefaultText("");
-    return editorCell;
-  }
-
-  private EditorCell createConstant_p6qso6_b0(EditorContext editorContext, SNode node) {
-    EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, "<");
-    editorCell.setCellId("Constant_p6qso6_b0");
     Style style = new StyleImpl();
-    style.set(StyleAttributes.PUNCTUATION_LEFT, true);
     style.set(StyleAttributes.PUNCTUATION_RIGHT, true);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
   }
 
-  private EditorCell createRefNode_p6qso6_c0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefNode_p6qso6_b0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
     provider.setRole("returnType");
-    provider.setNoTargetText("<no returnType>");
+    provider.setNoTargetText("");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
@@ -70,9 +61,9 @@ public class TaskType_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  private EditorCell createConstant_p6qso6_d0(EditorContext editorContext, SNode node) {
+  private EditorCell createConstant_p6qso6_c0(EditorContext editorContext, SNode node) {
     EditorCell_Constant editorCell = new EditorCell_Constant(editorContext, node, ">");
-    editorCell.setCellId("Constant_p6qso6_d0");
+    editorCell.setCellId("Constant_p6qso6_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.PUNCTUATION_LEFT, true);
     editorCell.getStyle().putAll(style);

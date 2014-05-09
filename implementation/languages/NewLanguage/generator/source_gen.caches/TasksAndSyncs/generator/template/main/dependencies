@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
   <dependency className="TasksAndSyncs.generator.template.main.QueriesGenerated" file="QueriesGenerated.java">
+    <classNode dependClassName="TasksAndSyncs.generator.util.Analyzer" />
     <classNode dependClassName="TasksAndSyncs.generator.util.NameGenerator" />
     <classNode dependClassName="TasksAndSyncs.generator.util.TaskDefinitionBuilder" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />

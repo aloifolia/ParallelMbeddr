@@ -41,6 +41,9 @@ public class FutureResult_Constraints extends BaseConstraintsDescriptor {
     if (!(SNodeOperations.isInstanceOf(expressionType, "TasksAndSyncs.structure.FutureType"))) {
       return false;
     }
+    if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "TasksAndSyncs.structure.FutureType"), "returnType", true), "com.mbeddr.core.pointers.structure.PointerType"))) {
+      return false;
+    }
     return !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "TasksAndSyncs.structure.FutureType"), "returnType", true), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "com.mbeddr.core.expressions.structure.VoidType"));
   }
 

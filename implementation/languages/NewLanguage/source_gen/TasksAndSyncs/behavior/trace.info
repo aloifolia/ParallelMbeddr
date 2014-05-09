@@ -16,61 +16,47 @@
   <unitInfo fileName="SyncVariable_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
   <unitInfo fileName="Sync_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" />
   <unitInfo fileName="TaskType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
-  <unitInfo fileName="Task_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
+  <unitInfo fileName="Task_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
   <unitInfo fileName="Unshare_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.Unshare_BehaviorDescriptor" />
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1304213873205104705">
     <nodeInfo nodeId="1304213873205105308" fileName="TaskType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873210007797" fileName="TaskType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="203" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873210332944" fileName="TaskType_Behavior.java" startLine="18" startPosition="203" endLine="19" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873210325375" fileName="TaskType_Behavior.java" startLine="19" startPosition="24" endLine="20" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6596313669096236075" fileName="TaskType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="221" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
     <nodeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getUsedBytes_6941595764870551407#(Lorg/jetbrains/mps/openapi/model/SNode;)I" />
-    <nodeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="17" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+    <nodeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="17" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
     <scopeInfo nodeId="1304213873205104858" fileName="TaskType_Behavior.java" startLine="10" startPosition="43" endLine="10" endPosition="43" />
     <scopeInfo nodeId="1304213873205105302" fileName="TaskType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" />
+    <scopeInfo nodeId="1304213873209982035" fileName="TaskType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="221" />
     <scopeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0">
       <varInfo nodeId="1304213873205104705" varName="thisNode" />
     </scopeInfo>
     <scopeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0">
       <varInfo nodeId="1304213873205104705" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873209982035" fileName="TaskType_Behavior.java" startLine="17" startPosition="78" endLine="20" endPosition="24">
-      <varInfo nodeId="1304213873210007800" varName="presentation" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="17" startPosition="0" endLine="22" endPosition="0">
+    <scopeInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="17" startPosition="0" endLine="20" endPosition="0">
       <varInfo nodeId="1304213873205104705" varName="thisNode" />
     </scopeInfo>
-    <unitInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="9" startPosition="0" endLine="23" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_Behavior" />
+    <unitInfo nodeId="1304213873205104705" fileName="TaskType_Behavior.java" startLine="9" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1304213873205105885">
-    <nodeInfo nodeId="1304213873205105898" fileName="FutureType_Behavior.java" startLine="15" startPosition="78" endLine="16" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873210688031" fileName="FutureType_Behavior.java" startLine="19" startPosition="78" endLine="20" endPosition="210" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="1304213873210688080" fileName="FutureType_Behavior.java" startLine="20" startPosition="210" endLine="21" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="1304213873210688084" fileName="FutureType_Behavior.java" startLine="21" startPosition="24" endLine="22" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="4644263955272634191" fileName="FutureType_Behavior.java" startLine="25" startPosition="79" endLine="26" endPosition="172" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="12" startPosition="0" endLine="14" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="15" startPosition="0" endLine="18" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getUsedBytes_6941595764870551407#(Lorg/jetbrains/mps/openapi/model/SNode;)I" />
-    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="25" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="call_genStructName_4644263955272627622#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="19" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
-    <scopeInfo nodeId="1304213873205105887" fileName="FutureType_Behavior.java" startLine="12" startPosition="43" endLine="12" endPosition="43" />
-    <scopeInfo nodeId="1304213873205105892" fileName="FutureType_Behavior.java" startLine="15" startPosition="78" endLine="16" endPosition="13" />
-    <scopeInfo nodeId="4644263955272627625" fileName="FutureType_Behavior.java" startLine="25" startPosition="79" endLine="26" endPosition="172" />
-    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="12" startPosition="0" endLine="14" endPosition="0">
+    <nodeInfo nodeId="1304213873205105898" fileName="FutureType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="482600553438812901" fileName="FutureType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="223" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getUsedBytes_6941595764870551407#(Lorg/jetbrains/mps/openapi/model/SNode;)I" />
+    <nodeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="17" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+    <scopeInfo nodeId="1304213873205105887" fileName="FutureType_Behavior.java" startLine="10" startPosition="43" endLine="10" endPosition="43" />
+    <scopeInfo nodeId="1304213873205105892" fileName="FutureType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" />
+    <scopeInfo nodeId="1304213873210688030" fileName="FutureType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="223" />
+    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0">
       <varInfo nodeId="1304213873205105885" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="15" startPosition="0" endLine="18" endPosition="0">
+    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0">
       <varInfo nodeId="1304213873205105885" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873210688030" fileName="FutureType_Behavior.java" startLine="19" startPosition="78" endLine="22" endPosition="24">
-      <varInfo nodeId="1304213873210688032" varName="presentation" />
-    </scopeInfo>
-    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="25" startPosition="0" endLine="28" endPosition="0">
+    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="17" startPosition="0" endLine="20" endPosition="0">
       <varInfo nodeId="1304213873205105885" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="19" startPosition="0" endLine="24" endPosition="0">
-      <varInfo nodeId="1304213873205105885" varName="thisNode" />
-    </scopeInfo>
-    <unitInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="11" startPosition="0" endLine="29" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_Behavior" />
+    <unitInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="9" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1924594752095363568">
     <nodeInfo nodeId="1924594752095479302" fileName="SharedRessourceType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -161,6 +147,20 @@
       <varInfo nodeId="4960020358030004495" varName="thisNode" />
     </scopeInfo>
     <unitInfo nodeId="4960020358030004495" fileName="Future_Behavior.java" startLine="7" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.behavior.Future_Behavior" />
+  </root>
+  <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/6596313669096321363">
+    <nodeInfo nodeId="6596313669096347843" fileName="Task_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="184" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6596313669096321363" fileName="Task_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="6596313669096321363" fileName="Task_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+    <scopeInfo nodeId="6596313669096321365" fileName="Task_Behavior.java" startLine="10" startPosition="43" endLine="10" endPosition="43" />
+    <scopeInfo nodeId="6596313669096321369" fileName="Task_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="184" />
+    <scopeInfo nodeId="6596313669096321363" fileName="Task_Behavior.java" startLine="10" startPosition="0" endLine="12" endPosition="0">
+      <varInfo nodeId="6596313669096321363" varName="thisNode" />
+    </scopeInfo>
+    <scopeInfo nodeId="6596313669096321363" fileName="Task_Behavior.java" startLine="13" startPosition="0" endLine="16" endPosition="0">
+      <varInfo nodeId="6596313669096321363" varName="thisNode" />
+    </scopeInfo>
+    <unitInfo nodeId="6596313669096321363" fileName="Task_Behavior.java" startLine="9" startPosition="0" endLine="17" endPosition="0" unitName="TasksAndSyncs.behavior.Task_Behavior" />
   </root>
 </debugInfo>
 

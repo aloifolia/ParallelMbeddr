@@ -15,8 +15,6 @@ public class TaskType_Behavior {
   }
 
   public static String virtual_getPresentation_1213877396640(SNode thisNode) {
-    String presentation = "Task<" + BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(thisNode, "returnType", true), "virtual_getPresentation_1213877396640", new Object[]{}) + ">";
-    presentation += ">";
-    return presentation;
+    return "Task<" + StringUtils.stripEnd(BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(thisNode, "returnType", true), "virtual_getPresentation_1213877396640", new Object[]{}), " \n\r\t") + ">";
   }
 }

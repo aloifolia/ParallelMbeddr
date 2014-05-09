@@ -14,6 +14,11 @@
 extern "C" {
 #endif
 
+struct GenericDeclarations_VoidFuture {
+  pthread_t pth;
+  int8_t finished;
+};
+
 struct GenericDeclarations_Future {
   pthread_t pth;
   void* result;
@@ -27,9 +32,9 @@ struct GenericDeclarations_Task {
 
 void GenericDeclarations_joinFuture(struct GenericDeclarations_Future* future);
 
-void* GenericDeclarations_getFutureResult(struct GenericDeclarations_Future* future);
-
 struct GenericDeclarations_Future GenericDeclarations_runTaskAndGetFuture(struct GenericDeclarations_Task task);
+
+void* GenericDeclarations_getFutureResult(struct GenericDeclarations_Future* future);
 
 
 #ifdef __cplusplus

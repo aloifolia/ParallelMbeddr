@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="4g6vfeaihwr61ac47edydc9fnnyrmdz">
+<dependencies version="2" modelHash="-69s6e0vkc6zz7l0qkqrwv22drwsfzyf">
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.util(JDK/java.util@java_stub)" />
@@ -28,14 +28,14 @@
   <dep model="r:055bac8c-a50b-42ec-a317-e20a256152b4(com.mbeddr.core.debug.structure)" hash="-e1h42pgzk1gnqu2mpbarqe2z5raqvq0" />
   <dep model="r:0d8c18c2-3a01-472e-96fe-573575c47352(com.mbeddr.mpsutil.blutil.generator.template.main@generator)" hash="4ylzy2lerbkmk78tel8fo92cun5u6oi" />
   <dep model="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" hash="-4j7dh5roamz2nvmbh2v66fbvd45dkl7" />
-  <dep model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" hash="-4ecaxjvaqr2phcui6h63isjk4mi7jfe" />
+  <dep model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" hash="5g1agws6clffpgsoc7pnen1329bw71p" />
   <dep model="r:3b7ed80f-6cfd-45bc-b051-2f66c620dd27(jetbrains.mps.lang.traceable.structure)" hash="9wy5xay4fxryhg7hl9tcowq0jfepue8" />
   <dep model="r:4903509f-5416-46ff-9a8b-44b5a178b568(com.mbeddr.mpsutil.plantuml.node.structure)" hash="-5nad0b35dfl8an5y98szewb4r42ukw" />
   <dep model="r:4e770e63-2ef5-4a0d-b2e8-c5c1a1565703(com.mbeddr.core.udt.behavior)" hash="dgqjkeiugvb63ry73q8n4z8n05hwva8" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-7eypklgrzhtrsuqnoq6skfl2b0f1t90" />
   <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="-41zirjxer9xb4ozqfynf19wt0w0f1h9" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="6b45ozdo1epmadonrn2a28zrg1vgd2x" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-ddb49a7vcxhidxqtkfoksq7cha6rbia" />
   <dep model="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" hash="-axh9m3z96jqvkxu9ihczdmt23r7cjax" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" hash="-4ker834zjc3ekw0wrms7ukq5cn24pa1" />
@@ -46,11 +46,12 @@
   <dep model="r:f5bd2ad9-cd54-4408-b815-07f9f306f074(com.mbeddr.mpsutil.blutil.structure)" hash="apvu5w3thi38o324j7u2ch6yf2xmal" />
   <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" hash="a576g9gc2wfnw9bdzsbk3tlpczw0kkk" />
   <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" hash="3x2smvppmr270aafmczj8hmunnhm13i" />
-  <common hash="2z3bm83vnwyqp688ee7dohz2mzu51vl" dependsOnNodes="true">
+  <common hash="-nwx5fwaye8e04uz35wwf2an1ozj58g" dependsOnNodes="true">
     <dep root="1304213873204338637" />
     <dep root="2744793885329324038" />
     <dep root="4644263955273508744" />
     <dep root="4644263955274589693" />
+    <dep root="482600553440749741" />
     <dep root="6340335959758487421" />
     <dep root="6843270485077871160" />
     <dep root="7288607883539514946" />
@@ -102,7 +103,7 @@
     <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" />
     <file name="QueriesGenerated.java" />
   </common>
-  <source id="1304213873204338637" name="main" hash="6wb6vory2zd51c9wtwjcvfcom5jk8as">
+  <source id="1304213873204338637" name="main" hash="3b5k649qespspg0z4dbxm61t2lfw274">
     <dep model="r:00000000-0000-4000-0000-011c895902e9(jetbrains.mps.lang.generator.generator.baseLanguage.template.main@generator)" />
   </source>
   <source id="8801852084534119714" name="TypeSizeConfiguration (T.g.t.main)" hash="bz33m8ovw1ps3vfrbtocdf371bxwfil" />
@@ -110,7 +111,8 @@
   <source id="4644263955273508744" name="weave_TaskArgsStruct" hash="-1d3cr1ge9tli0stba9v33yyd0a5qtv5" />
   <source id="4644263955274589693" name="weave_TaskFunDecl" hash="-8mhlxb5vqoknnpqg9ouqbn2udyx0awc" />
   <source id="6843270485077871160" name="replaceGenericDotsByContainers" hash="bhlaxda9avhjvit1g4gr4hv6e566utl" />
-  <source id="6340335959758487421" name="importGenericTaskDeclarations" hash="-en9awcxtm40rf8soy17ufr3kwqqqbpp" />
+  <source id="6340335959758487421" name="importGenericTaskDeclarations" hash="5h1jsdr7pkxph7ongspwhzdo3pi1dgx" />
   <source id="7288607883539514946" name="weave_FutureFunction" hash="8p76e2igushuoq8ko5ycu74orbe58xv" />
+  <source id="482600553440749741" name="weave_VoidTaskFunDecl" hash="4kt10ii6td94gr8ny6zuti9ti4bvhfw" />
 </dependencies>
 

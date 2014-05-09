@@ -22,6 +22,12 @@ public class NameGenerator {
 
 
 
+  public static String getVoidFutureStructName() {
+    return "VoidFuture";
+  }
+
+
+
   public static String getFutureFunctionName() {
     return "runTaskAndGetFuture";
   }
