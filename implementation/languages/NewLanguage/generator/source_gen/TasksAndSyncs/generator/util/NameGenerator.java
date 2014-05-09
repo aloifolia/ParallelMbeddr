@@ -52,6 +52,18 @@ public class NameGenerator {
 
 
 
+  public static String getVoidFutureSaveAndJoinFunctionName() {
+    return "saveAndJoinVoidFuture";
+  }
+
+
+
+  public static String getFutureSaveAndJoinFunctionName() {
+    return "saveAndJoinFuture";
+  }
+
+
+
   public static String getFutureResultFunctionName() {
     return "getFutureResult";
   }

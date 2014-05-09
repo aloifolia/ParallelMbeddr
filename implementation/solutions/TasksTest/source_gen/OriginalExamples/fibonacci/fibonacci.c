@@ -11,7 +11,7 @@ struct fibonacci_Args_a0a0a2a0 {
 struct fibonacci_Args_a0a0a0a {
 };
 
-struct fibonacci_Args_a0a0a0a0a {
+struct fibonacci_Args_a0a0a0a_0 {
 };
 
 struct fibonacci_Args_a0a0a2a0_0 {
@@ -32,17 +32,15 @@ static void fibonacci_foo(void);
 
 static void* fibonacci_parFun_a0a0a2a0(void* voidArgs);
 
-static void* fibonacci_parFun_a0a0a0a0a(void* voidArgs);
+static void* fibonacci_parFun_a0a0a0a(void* voidArgs);
 
-static inline void fibonacci_saveFutureAndJoin(void);
-
-static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a0a0a(void);
+static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a0a(void);
 
 static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a2a0(int8_t i);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  fibonacci_saveFutureAndJoin();
+  GenericDeclarations_saveAndJoinVoidFuture((GenericDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0a0a())));
   struct GenericDeclarations_Future fiboFutures[50];
   for ( int8_t i = 0; i < 50; ++i )
   {
@@ -88,26 +86,19 @@ static void* fibonacci_parFun_a0a0a2a0(void* voidArgs)
 }
 
 
-static void* fibonacci_parFun_a0a0a0a0a(void* voidArgs) 
+static void* fibonacci_parFun_a0a0a0a(void* voidArgs) 
 {
-  struct fibonacci_Args_a0a0a0a0a* args = ((struct fibonacci_Args_a0a0a0a0a*)(voidArgs));
+  struct fibonacci_Args_a0a0a0a_0* args = ((struct fibonacci_Args_a0a0a0a_0*)(voidArgs));
   fibonacci_foo();
   return 0;
 }
 
 
-static inline void fibonacci_saveFutureAndJoin(void) 
-{
-  struct GenericDeclarations_VoidFuture future = (GenericDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0a0a0a()));
-  return GenericDeclarations_joinVoidFuture(&future);
-}
-
-
-static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a0a0a(void) 
+static inline struct GenericDeclarations_Task fibonacci_taskInit_a0a0a0a(void) 
 {
   
-  struct fibonacci_Args_a0a0a0a0a* args_a0a0a0a0a = malloc(sizeof(struct fibonacci_Args_a0a0a0a0a));
-  struct GenericDeclarations_Task task1 = {args_a0a0a0a0a,&fibonacci_parFun_a0a0a0a0a};
+  struct fibonacci_Args_a0a0a0a_0* args_a0a0a0a = malloc(sizeof(struct fibonacci_Args_a0a0a0a_0));
+  struct GenericDeclarations_Task task1 = {args_a0a0a0a,&fibonacci_parFun_a0a0a0a};
   return task1;
 }
 
