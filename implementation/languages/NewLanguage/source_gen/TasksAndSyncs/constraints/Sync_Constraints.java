@@ -36,7 +36,7 @@ public class Sync_Constraints extends BaseConstraintsDescriptor {
 
   public static boolean static_canBeAParent(SNode node, SNode childNode, SNode childConcept, SNode link, final IOperationContext operationContext) {
     for (SNode ressource : ListSequence.fromList(SLinkOperations.getTargets(node, "ressources", true))) {
-      if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(ressource), "TasksAndSyncs.structure.SharedRessourceType"))) {
+      if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(ressource), "TasksAndSyncs.structure.SharedType"))) {
         return false;
       }
     }

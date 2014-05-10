@@ -114,5 +114,23 @@
     </dependencies>
     <rename id="6i3o.1924594752095502558" type="CONCEPT" from="SharedRessourceVal" to="Unshare" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="18" />
+    </dependencies>
+    <rename id="6i3o.1924594752095321661" type="CONCEPT" from="SharedRessourceType" to="SharedType" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="19" />
+    </dependencies>
+    <rename id="6i3o.1924594752095502558" type="CONCEPT" from="Unshare" to="SharedGet" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="20" />
+    </dependencies>
+    <rename id="6i3o.3570654511858570918" type="CONCEPT" from="SetShared" to="SharedSet" />
+  </StructureModification>
 </history>
 

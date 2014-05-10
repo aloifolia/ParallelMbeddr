@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="dgwkcyk6v2cyv7h2x7h4z105dt8d9z">
+<dependencies version="2" modelHash="7igpf25yuul9kt98h7gaf0juezjbzlc">
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor.descriptor(MPS.Editor/jetbrains.mps.openapi.editor.descriptor@java_stub)" />
@@ -7,15 +7,16 @@
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="-erhs8245rrxarsir75oeypz6lamscet" />
   <dep model="r:00000000-0000-4000-0000-011c89590303(jetbrains.mps.lang.smodel.generator.baseLanguage.template.main@generator)" hash="-7rgu9ik8e4lg6l58nkzeswaixleu3oi" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-ddb49a7vcxhidxqtkfoksq7cha6rbia" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-5q8sx0ineq7lvcaw0i23mcf1crjwe1p" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="4sj9olpvo7cx5o2uynkpinlq5or0xmi" dependsOnNodes="true">
+  <common hash="-1eb8yfylq2d953hnn2g0rsugs2q8mtj" dependsOnNodes="true">
     <dep root="1304213873204897467" />
     <dep root="1304213873205054709" />
     <dep root="1304213873206872171" />
     <dep root="1924594752095484752" />
     <dep root="3074299910026283505" />
+    <dep root="3570654511858678999" />
     <dep root="3604883996548064328" />
     <dep root="5267241343317952386" />
     <dep root="5267241343317952719" />
@@ -76,12 +77,12 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="ExprBoundToStruct_Editor.java" />
   </source>
-  <source id="1924594752095484752" name="SharedRessourceType_Editor" hash="-2js31zk9k3l1f3m2k9ck51ovpanv9gs">
+  <source id="1924594752095484752" name="SharedType_Editor" hash="-5nxut1uln1ri0l97vtc1i40b03y254b">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="SharedRessourceType_Editor.java" />
+    <file name="SharedType_Editor.java" />
   </source>
   <source id="5267241343317952386" name="FutureContainer_Editor" hash="-dxuz8oo3b8uck8g87ht7eoi0pp5uwj6">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
@@ -103,6 +104,13 @@
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="FutureResultContainer_Editor.java" />
+  </source>
+  <source id="3570654511858678999" name="SharedSet_Editor" hash="2wyacj1gpner7x8f6h54n2wu66c5gcc">
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="SharedSet_Editor.java" />
   </source>
 </dependencies>
 

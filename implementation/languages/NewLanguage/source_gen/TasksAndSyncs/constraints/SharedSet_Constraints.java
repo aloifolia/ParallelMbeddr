@@ -12,9 +12,9 @@ import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class Share_Constraints extends BaseConstraintsDescriptor {
-  public Share_Constraints() {
-    super("TasksAndSyncs.structure.Share");
+public class SharedSet_Constraints extends BaseConstraintsDescriptor {
+  public SharedSet_Constraints() {
+    super("TasksAndSyncs.structure.SharedSet");
   }
 
   @Override
@@ -37,8 +37,12 @@ public class Share_Constraints extends BaseConstraintsDescriptor {
     if (!(SNodeOperations.isInstanceOf(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"))) {
       return false;
     }
-    return !(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.SharedType"));
+    SNode expressionType = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true));
+    if (!(SNodeOperations.isInstanceOf(expressionType, "TasksAndSyncs.structure.SharedType"))) {
+      return false;
+    }
+    return !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "TasksAndSyncs.structure.SharedType"), "baseType", true), "com.mbeddr.core.expressions.structure.VoidType"));
   }
 
-  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "1924594752097762139");
+  private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "3570654511858680087");
 }

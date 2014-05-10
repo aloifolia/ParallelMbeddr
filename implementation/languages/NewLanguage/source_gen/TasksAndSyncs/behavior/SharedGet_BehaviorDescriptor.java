@@ -7,12 +7,12 @@ import com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor
 import org.jetbrains.mps.openapi.model.SNode;
 import com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior;
 
-public class Unshare_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IGenericDotTarget_BehaviorDescriptor {
-  public Unshare_BehaviorDescriptor() {
+public class SharedGet_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IGenericDotTarget_BehaviorDescriptor {
+  public SharedGet_BehaviorDescriptor() {
   }
 
   public SNode virtual_getTarget_7034214596260727602(SNode thisNode) {
-    return Unshare_Behavior.virtual_getTarget_7034214596260727602(thisNode);
+    return SharedGet_Behavior.virtual_getTarget_7034214596260727602(thisNode);
   }
 
   public boolean virtual_isLValue_6118219496712710630(SNode thisNode) {
@@ -25,6 +25,6 @@ public class Unshare_BehaviorDescriptor extends Expression_BehaviorDescriptor im
 
   @Override
   public String getConceptFqName() {
-    return "TasksAndSyncs.structure.Unshare";
+    return "TasksAndSyncs.structure.SharedGet";
   }
 }

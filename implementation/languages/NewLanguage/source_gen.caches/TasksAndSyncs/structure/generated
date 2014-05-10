@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-ddb49a7vcxhidxqtkfoksq7cha6rbia">
+<dependencies version="2" modelHash="-5q8sx0ineq7lvcaw0i23mcf1crjwe1p">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
@@ -8,7 +8,7 @@
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="140g5j7s1890xm32wrvx6tomugipq7o" dependsOnNodes="true">
+  <common hash="-b1bgzofbvgaqdsfli6lt4zopba6bc7b" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
@@ -19,6 +19,7 @@
     <dep root="1924594752097591879" />
     <dep root="2744793885339890637" />
     <dep root="3074299910025607357" />
+    <dep root="3570654511858570918" />
     <dep root="3604883996548046056" />
     <dep root="3604883996549755172" />
     <dep root="6843270485077468311" />
@@ -48,8 +49,9 @@
   <source id="7288607883536646834" name="FutureJoinContainer" hash="-d3wb3p5w67p1qaz5ypb2315s3q76hqh" />
   <source id="7288607883536878936" name="FutureResultContainer" hash="1cperzfumfluslk8u119ohzgo3935ue" />
   <source id="961131662869355681" name="CompoundLiteral" hash="3bpxl856mf7ode6fr6k1ko81i86snau" />
-  <source id="1924594752095321661" name="SharedRessourceType" hash="-45s7k8cokjubir08j99vzmov9gm0ib2" />
-  <source id="1924594752095502558" name="Unshare" hash="-696m943t50ly9bg2zadt3gnpi54gbtn" />
+  <source id="1924594752095321661" name="SharedType" hash="-3iaiv5f3agr3uqt656xdumtsqyoudnk" />
+  <source id="1924594752095502558" name="SharedGet" hash="azemzghyy0inw1wvg9m03bfpt26s43" />
   <source id="1924594752097591879" name="Share" hash="duueyv2r3g1y50j3r1jgqahlf5k8i08" />
+  <source id="3570654511858570918" name="SharedSet" hash="-6ol13iokzlmbt9g7ohrsgdklo8aj72l" />
 </dependencies>
 

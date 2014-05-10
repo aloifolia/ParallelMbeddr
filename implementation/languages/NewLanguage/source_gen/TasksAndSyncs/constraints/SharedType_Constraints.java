@@ -11,9 +11,9 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class SharedRessourceType_Constraints extends BaseConstraintsDescriptor {
-  public SharedRessourceType_Constraints() {
-    super("TasksAndSyncs.structure.SharedRessourceType");
+public class SharedType_Constraints extends BaseConstraintsDescriptor {
+  public SharedType_Constraints() {
+    super("TasksAndSyncs.structure.SharedType");
   }
 
   @Override
@@ -33,7 +33,7 @@ public class SharedRessourceType_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAParent(SNode node, SNode childNode, SNode childConcept, SNode link, final IOperationContext operationContext) {
-    return !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "baseType", true), "TasksAndSyncs.structure.SharedRessourceType"));
+    return !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "baseType", true), "TasksAndSyncs.structure.SharedType"));
   }
 
   private static SNodePointer canBeParentBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "1924594752097616218");

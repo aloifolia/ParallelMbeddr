@@ -4,7 +4,7 @@
   <language namespace="023e30f7-586d-416b-97aa-7d26dae53e75(TasksAndSyncs)" />
   <language namespace="92d2ea16-5a42-4fdf-a676-c7604efe3504(de.slisson.mps.richtext)" />
   <devkit namespace="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="18" implicit="yes" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="21" implicit="yes" />
   <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="7" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
   <import index="yq40" modelUID="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" version="4" implicit="yes" />
@@ -44,7 +44,7 @@
           <node role="type" roleId="mj1l.318113533128716676" type="yq40.ArrayType" typeId="yq40.5679441017214012545" id="4390787788463062686" nodeInfo="ng">
             <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
             <property name="const" nameId="mj1l.2941277002445651368" value="false" />
-            <node role="baseType" roleId="yq40.2963921683065158286" type="6i3o.SharedRessourceType" typeId="6i3o.1924594752095321661" id="4390787788463031061" nodeInfo="ng">
+            <node role="baseType" roleId="yq40.2963921683065158286" type="6i3o.SharedType" typeId="6i3o.1924594752095321661" id="4390787788463031061" nodeInfo="ng">
               <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
               <property name="const" nameId="mj1l.2941277002445651368" value="false" />
               <node role="baseType" roleId="6i3o.1924594752095363444" type="yq40.PointerType" typeId="yq40.279446265608459824" id="4390787788463031461" nodeInfo="ng">
@@ -267,7 +267,7 @@
                     </node>
                   </node>
                   <node role="left" roleId="mj1l.8860443239512128064" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="4390787788463224323" nodeInfo="ng">
-                    <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.Unshare" typeId="6i3o.1924594752095502558" id="4390787788463229466" nodeInfo="ng" />
+                    <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedGet" typeId="6i3o.1924594752095502558" id="4390787788463229466" nodeInfo="ng" />
                     <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4390787788463207144" nodeInfo="ng">
                       <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4390787788463050886" resolveInfo="result" />
                     </node>
@@ -290,7 +290,7 @@
       </node>
       <node role="arguments" roleId="x27k.5708867820623310661" type="x27k.Argument" typeId="x27k.7892328519581704407" id="4390787788463050886" nodeInfo="ng">
         <property name="name" nameId="tpck.1169194664001" value="result" />
-        <node role="type" roleId="mj1l.318113533128716676" type="6i3o.SharedRessourceType" typeId="6i3o.1924594752095321661" id="4390787788463050882" nodeInfo="ng">
+        <node role="type" roleId="mj1l.318113533128716676" type="6i3o.SharedType" typeId="6i3o.1924594752095321661" id="4390787788463050882" nodeInfo="ng">
           <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
           <property name="const" nameId="mj1l.2941277002445651368" value="false" />
           <node role="baseType" roleId="6i3o.1924594752095363444" type="yq40.PointerType" typeId="yq40.279446265608459824" id="4390787788463053918" nodeInfo="ng">

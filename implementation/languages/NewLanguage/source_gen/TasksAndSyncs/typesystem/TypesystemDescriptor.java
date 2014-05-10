@@ -34,11 +34,15 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
+      InferenceRule_Runtime inferenceRule = new typeof_SharedGet_InferenceRule();
+      this.myInferenceRules.add(inferenceRule);
+    }
+    {
       InferenceRule_Runtime inferenceRule = new typeof_SharedRessource_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_SharedRessourceVal_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_SharedSet_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {

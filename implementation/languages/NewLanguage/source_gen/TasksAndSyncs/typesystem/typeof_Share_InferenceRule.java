@@ -23,7 +23,7 @@ public class typeof_Share_InferenceRule extends AbstractInferenceRule_Runtime im
       final SNode expressionType = typeCheckingContext.typeOf(expression, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752097738954", true);
       typeCheckingContext.whenConcrete(expressionType, new Runnable() {
         public void run() {
-          SNode sharedType = SConceptOperations.createNewNode("TasksAndSyncs.structure.SharedRessourceType", null);
+          SNode sharedType = SConceptOperations.createNewNode("TasksAndSyncs.structure.SharedType", null);
           SLinkOperations.setTarget(sharedType, "baseType", SNodeOperations.cast(typeCheckingContext.getExpandedNode(expressionType), "com.mbeddr.core.expressions.structure.Type"), true);
           {
             SNode _nodeToCheck_1029348928467 = share;

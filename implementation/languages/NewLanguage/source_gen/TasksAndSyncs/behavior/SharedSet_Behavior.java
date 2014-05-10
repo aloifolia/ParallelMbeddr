@@ -4,7 +4,7 @@ package TasksAndSyncs.behavior;
 
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class Unshare_Behavior {
+public class SharedSet_Behavior {
   public static void init(SNode thisNode) {
   }
 

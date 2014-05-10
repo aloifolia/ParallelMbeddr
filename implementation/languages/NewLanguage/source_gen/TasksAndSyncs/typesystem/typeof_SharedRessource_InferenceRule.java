@@ -24,7 +24,7 @@ public class typeof_SharedRessource_InferenceRule extends AbstractInferenceRule_
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SharedRessourceType";
+    return "TasksAndSyncs.structure.SharedType";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

@@ -54,6 +54,6 @@ public class IType_subTypeOf_SharedRessourceType_InequationReplacementRule exten
   }
 
   public String getApplicableSupertypeConceptFQName() {
-    return "TasksAndSyncs.structure.SharedRessourceType";
+    return "TasksAndSyncs.structure.SharedType";
   }
 }

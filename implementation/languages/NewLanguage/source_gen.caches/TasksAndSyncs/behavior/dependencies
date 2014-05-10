@@ -11,12 +11,13 @@
     <classNode dependClassName="TasksAndSyncs.behavior.FutureType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Future_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Share_BehaviorDescriptor" />
-    <classNode dependClassName="TasksAndSyncs.behavior.SharedRessourceType_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedGet_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedSet_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncVariable_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Sync_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
-    <classNode dependClassName="TasksAndSyncs.behavior.Unshare_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.Arrays" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
@@ -125,7 +126,35 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.SharedRessourceType_Behavior" file="SharedRessourceType_Behavior.java">
+  <dependency className="TasksAndSyncs.behavior.SharedGet_Behavior" file="SharedGet_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SharedGet_BehaviorDescriptor" file="SharedGet_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedGet_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SharedSet_Behavior" file="SharedSet_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SharedSet_BehaviorDescriptor" file="SharedSet_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedSet_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SharedType_Behavior" file="SharedType_Behavior.java">
     <classNode dependClassName="TasksAndSyncs.behavior.StringUtils" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
@@ -133,8 +162,8 @@
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.behavior.SharedRessourceType_BehaviorDescriptor" file="SharedRessourceType_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.SharedRessourceType_Behavior" />
+  <dependency className="TasksAndSyncs.behavior.SharedType_BehaviorDescriptor" file="SharedType_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.SharedType_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
@@ -185,20 +214,6 @@
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
-  </dependency>
-  <dependency className="TasksAndSyncs.behavior.Unshare_Behavior" file="Unshare_Behavior.java">
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-  </dependency>
-  <dependency className="TasksAndSyncs.behavior.Unshare_BehaviorDescriptor" file="Unshare_BehaviorDescriptor.java">
-    <classNode dependClassName="TasksAndSyncs.behavior.Unshare_Behavior" />
-    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
-    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
-    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
 </dependenciesRoot>
