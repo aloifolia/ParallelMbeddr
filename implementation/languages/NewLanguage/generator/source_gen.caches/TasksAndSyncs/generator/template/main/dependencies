@@ -2,12 +2,17 @@
 <dependenciesRoot>
   <dependency className="TasksAndSyncs.generator.template.main.QueriesGenerated" file="QueriesGenerated.java">
     <classNode dependClassName="TasksAndSyncs.generator.util.Analyzer" />
+    <classNode dependClassName="TasksAndSyncs.generator.util.ImplementationModuleBuilder" />
     <classNode dependClassName="TasksAndSyncs.generator.util.NameGenerator" />
+    <classNode dependClassName="TasksAndSyncs.generator.util.Pair" />
+    <classNode dependClassName="TasksAndSyncs.generator.util.SyncDefinitionBuilder" />
     <classNode dependClassName="TasksAndSyncs.generator.util.TaskDefinitionBuilder" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
     <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.ArrayList" />
+    <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.generator.runtime.Generated" />
     <classNode dependClassName="jetbrains.mps.generator.template.BaseMappingRuleContext" />

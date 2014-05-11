@@ -5,7 +5,13 @@ package TasksAndSyncs.generator.util;
 
 public class NameGenerator {
   public static String getGenericTaskModuleName() {
-    return "GenericDeclarations";
+    return "GenericTaskDeclarations";
+  }
+
+
+
+  public static String getGenericSyncModuleName() {
+    return "GenericSyncDeclarations";
   }
 
 

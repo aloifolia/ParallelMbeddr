@@ -1,10 +1,12 @@
-#ifndef TESTSYNC_H
-#define TESTSYNC_H
+#ifndef TESTSYNC2_H
+#define TESTSYNC2_H
 
 
 #include <stdint.h>
 
 #include <stddef.h>
+
+#include "testSync.h"
 
 #include "GenericTaskDeclarations.h"
 
@@ -18,23 +20,14 @@
 extern "C" {
 #endif
 
-struct testSync_A {
+struct testSync2_A {
 };
 
-typedef struct testSync_A AB;
-struct testSync_SharedAB _0 {
+struct testSync2_SharedA _1 {
   pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
-  AB value;
+  struct testSync2_A value;
 };
-
-struct testSync_SharedA _0 {
-  pthread_mutexattr_t mutexAttribute;
-  pthread_mutex_t mutex;
-  struct testSync_A value;
-};
-
-int32_t testSync_main(int32_t argc,char* argv[]);
 
 
 #ifdef __cplusplus

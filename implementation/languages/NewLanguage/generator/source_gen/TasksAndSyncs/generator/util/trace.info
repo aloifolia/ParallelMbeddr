@@ -1,51 +1,311 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
   <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2431880409855437720">
-    <nodeInfo nodeId="6079605392878612673" fileName="NameGenerator.java" startLine="7" startPosition="51" endLine="8" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6079605392878665777" fileName="NameGenerator.java" startLine="13" startPosition="44" endLine="14" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1504369025024429324" fileName="NameGenerator.java" startLine="19" startPosition="46" endLine="20" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="482600553440659527" fileName="NameGenerator.java" startLine="25" startPosition="50" endLine="26" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="8073526852157137813" fileName="NameGenerator.java" startLine="31" startPosition="48" endLine="32" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="5267241343320548275" fileName="NameGenerator.java" startLine="37" startPosition="52" endLine="38" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="4390787788465640176" fileName="NameGenerator.java" startLine="43" startPosition="52" endLine="44" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="5267241343320549384" fileName="NameGenerator.java" startLine="49" startPosition="56" endLine="50" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="7518664430153883471" fileName="NameGenerator.java" startLine="55" startPosition="63" endLine="56" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="7518664430153886999" fileName="NameGenerator.java" startLine="61" startPosition="59" endLine="62" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="4390787788468836303" fileName="NameGenerator.java" startLine="67" startPosition="54" endLine="68" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6079605392878612673" fileName="NameGenerator.java" startLine="7" startPosition="51" endLine="8" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580872974" fileName="NameGenerator.java" startLine="13" startPosition="51" endLine="14" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6079605392878665777" fileName="NameGenerator.java" startLine="19" startPosition="44" endLine="20" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1504369025024429324" fileName="NameGenerator.java" startLine="25" startPosition="46" endLine="26" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="482600553440659527" fileName="NameGenerator.java" startLine="31" startPosition="50" endLine="32" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="8073526852157137813" fileName="NameGenerator.java" startLine="37" startPosition="48" endLine="38" endPosition="33" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5267241343320548275" fileName="NameGenerator.java" startLine="43" startPosition="52" endLine="44" endPosition="37" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="4390787788465640176" fileName="NameGenerator.java" startLine="49" startPosition="52" endLine="50" endPosition="24" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5267241343320549384" fileName="NameGenerator.java" startLine="55" startPosition="56" endLine="56" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="7518664430153883471" fileName="NameGenerator.java" startLine="61" startPosition="63" endLine="62" endPosition="35" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="7518664430153886999" fileName="NameGenerator.java" startLine="67" startPosition="59" endLine="68" endPosition="31" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="4390787788468836303" fileName="NameGenerator.java" startLine="73" startPosition="54" endLine="74" endPosition="29" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="6079605392878621889" fileName="NameGenerator.java" startLine="7" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getGenericTaskModuleName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getTaskStructName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureStructName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="482600553440659525" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureStructName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="31" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="5267241343320548273" fileName="NameGenerator.java" startLine="37" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="4390787788465640174" fileName="NameGenerator.java" startLine="43" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureJoinFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="5267241343320549382" fileName="NameGenerator.java" startLine="49" startPosition="0" endLine="52" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureJoinFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="7518664430153883469" fileName="NameGenerator.java" startLine="55" startPosition="0" endLine="58" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureSaveAndJoinFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="7518664430153886997" fileName="NameGenerator.java" startLine="61" startPosition="0" endLine="64" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureSaveAndJoinFunctionName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="4390787788468836301" fileName="NameGenerator.java" startLine="67" startPosition="0" endLine="70" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureResultFunctionName#()Ljava/lang/String;" />
-    <scopeInfo nodeId="6079605392878612478" fileName="NameGenerator.java" startLine="7" startPosition="51" endLine="8" endPosition="33" />
-    <scopeInfo nodeId="6079605392878665776" fileName="NameGenerator.java" startLine="13" startPosition="44" endLine="14" endPosition="18" />
-    <scopeInfo nodeId="1504369025024429323" fileName="NameGenerator.java" startLine="19" startPosition="46" endLine="20" endPosition="20" />
-    <scopeInfo nodeId="482600553440659526" fileName="NameGenerator.java" startLine="25" startPosition="50" endLine="26" endPosition="24" />
-    <scopeInfo nodeId="8073526852157137812" fileName="NameGenerator.java" startLine="31" startPosition="48" endLine="32" endPosition="33" />
-    <scopeInfo nodeId="5267241343320548274" fileName="NameGenerator.java" startLine="37" startPosition="52" endLine="38" endPosition="37" />
-    <scopeInfo nodeId="4390787788465640175" fileName="NameGenerator.java" startLine="43" startPosition="52" endLine="44" endPosition="24" />
-    <scopeInfo nodeId="5267241343320549383" fileName="NameGenerator.java" startLine="49" startPosition="56" endLine="50" endPosition="28" />
-    <scopeInfo nodeId="7518664430153883470" fileName="NameGenerator.java" startLine="55" startPosition="63" endLine="56" endPosition="35" />
-    <scopeInfo nodeId="7518664430153886998" fileName="NameGenerator.java" startLine="61" startPosition="59" endLine="62" endPosition="31" />
-    <scopeInfo nodeId="4390787788468836302" fileName="NameGenerator.java" startLine="67" startPosition="54" endLine="68" endPosition="29" />
+    <nodeInfo nodeId="2852056939580872972" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getGenericSyncModuleName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getTaskStructName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureStructName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="482600553440659525" fileName="NameGenerator.java" startLine="31" startPosition="0" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureStructName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="37" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="5267241343320548273" fileName="NameGenerator.java" startLine="43" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="4390787788465640174" fileName="NameGenerator.java" startLine="49" startPosition="0" endLine="52" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureJoinFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="5267241343320549382" fileName="NameGenerator.java" startLine="55" startPosition="0" endLine="58" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureJoinFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="7518664430153883469" fileName="NameGenerator.java" startLine="61" startPosition="0" endLine="64" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getVoidFutureSaveAndJoinFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="7518664430153886997" fileName="NameGenerator.java" startLine="67" startPosition="0" endLine="70" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureSaveAndJoinFunctionName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="4390787788468836301" fileName="NameGenerator.java" startLine="73" startPosition="0" endLine="76" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getFutureResultFunctionName#()Ljava/lang/String;" />
+    <scopeInfo nodeId="6079605392878612478" fileName="NameGenerator.java" startLine="7" startPosition="51" endLine="8" endPosition="37" />
+    <scopeInfo nodeId="2852056939580872973" fileName="NameGenerator.java" startLine="13" startPosition="51" endLine="14" endPosition="37" />
+    <scopeInfo nodeId="6079605392878665776" fileName="NameGenerator.java" startLine="19" startPosition="44" endLine="20" endPosition="18" />
+    <scopeInfo nodeId="1504369025024429323" fileName="NameGenerator.java" startLine="25" startPosition="46" endLine="26" endPosition="20" />
+    <scopeInfo nodeId="482600553440659526" fileName="NameGenerator.java" startLine="31" startPosition="50" endLine="32" endPosition="24" />
+    <scopeInfo nodeId="8073526852157137812" fileName="NameGenerator.java" startLine="37" startPosition="48" endLine="38" endPosition="33" />
+    <scopeInfo nodeId="5267241343320548274" fileName="NameGenerator.java" startLine="43" startPosition="52" endLine="44" endPosition="37" />
+    <scopeInfo nodeId="4390787788465640175" fileName="NameGenerator.java" startLine="49" startPosition="52" endLine="50" endPosition="24" />
+    <scopeInfo nodeId="5267241343320549383" fileName="NameGenerator.java" startLine="55" startPosition="56" endLine="56" endPosition="28" />
+    <scopeInfo nodeId="7518664430153883470" fileName="NameGenerator.java" startLine="61" startPosition="63" endLine="62" endPosition="35" />
+    <scopeInfo nodeId="7518664430153886998" fileName="NameGenerator.java" startLine="67" startPosition="59" endLine="68" endPosition="31" />
+    <scopeInfo nodeId="4390787788468836302" fileName="NameGenerator.java" startLine="73" startPosition="54" endLine="74" endPosition="29" />
     <scopeInfo nodeId="6079605392878621889" fileName="NameGenerator.java" startLine="7" startPosition="0" endLine="10" endPosition="0" />
-    <scopeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" />
-    <scopeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" />
-    <scopeInfo nodeId="482600553440659525" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" />
-    <scopeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="31" startPosition="0" endLine="34" endPosition="0" />
-    <scopeInfo nodeId="5267241343320548273" fileName="NameGenerator.java" startLine="37" startPosition="0" endLine="40" endPosition="0" />
-    <scopeInfo nodeId="4390787788465640174" fileName="NameGenerator.java" startLine="43" startPosition="0" endLine="46" endPosition="0" />
-    <scopeInfo nodeId="5267241343320549382" fileName="NameGenerator.java" startLine="49" startPosition="0" endLine="52" endPosition="0" />
-    <scopeInfo nodeId="7518664430153883469" fileName="NameGenerator.java" startLine="55" startPosition="0" endLine="58" endPosition="0" />
-    <scopeInfo nodeId="7518664430153886997" fileName="NameGenerator.java" startLine="61" startPosition="0" endLine="64" endPosition="0" />
-    <scopeInfo nodeId="4390787788468836301" fileName="NameGenerator.java" startLine="67" startPosition="0" endLine="70" endPosition="0" />
-    <unitInfo nodeId="2431880409855437720" fileName="NameGenerator.java" startLine="6" startPosition="0" endLine="71" endPosition="0" unitName="TasksAndSyncs.generator.util.NameGenerator" />
+    <scopeInfo nodeId="2852056939580872972" fileName="NameGenerator.java" startLine="13" startPosition="0" endLine="16" endPosition="0" />
+    <scopeInfo nodeId="6079605392878665775" fileName="NameGenerator.java" startLine="19" startPosition="0" endLine="22" endPosition="0" />
+    <scopeInfo nodeId="1504369025024429322" fileName="NameGenerator.java" startLine="25" startPosition="0" endLine="28" endPosition="0" />
+    <scopeInfo nodeId="482600553440659525" fileName="NameGenerator.java" startLine="31" startPosition="0" endLine="34" endPosition="0" />
+    <scopeInfo nodeId="8073526852157137811" fileName="NameGenerator.java" startLine="37" startPosition="0" endLine="40" endPosition="0" />
+    <scopeInfo nodeId="5267241343320548273" fileName="NameGenerator.java" startLine="43" startPosition="0" endLine="46" endPosition="0" />
+    <scopeInfo nodeId="4390787788465640174" fileName="NameGenerator.java" startLine="49" startPosition="0" endLine="52" endPosition="0" />
+    <scopeInfo nodeId="5267241343320549382" fileName="NameGenerator.java" startLine="55" startPosition="0" endLine="58" endPosition="0" />
+    <scopeInfo nodeId="7518664430153883469" fileName="NameGenerator.java" startLine="61" startPosition="0" endLine="64" endPosition="0" />
+    <scopeInfo nodeId="7518664430153886997" fileName="NameGenerator.java" startLine="67" startPosition="0" endLine="70" endPosition="0" />
+    <scopeInfo nodeId="4390787788468836301" fileName="NameGenerator.java" startLine="73" startPosition="0" endLine="76" endPosition="0" />
+    <unitInfo nodeId="2431880409855437720" fileName="NameGenerator.java" startLine="6" startPosition="0" endLine="77" endPosition="0" unitName="TasksAndSyncs.generator.util.NameGenerator" />
+  </root>
+  <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2852056939580287594">
+    <nodeInfo nodeId="2852056939581336376" fileName="SyncDefinitionBuilder.java" startLine="20" startPosition="133" endLine="21" endPosition="26" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="2852056939581297848" fileName="SyncDefinitionBuilder.java" startLine="21" startPosition="26" endLine="22" endPosition="148" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939581197509" fileName="SyncDefinitionBuilder.java" startLine="22" startPosition="148" endLine="23" endPosition="69" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939581311161" fileName="SyncDefinitionBuilder.java" startLine="23" startPosition="69" endLine="24" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939581424890" fileName="SyncDefinitionBuilder.java" startLine="29" startPosition="133" endLine="30" endPosition="49" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="2852056939581424896" fileName="SyncDefinitionBuilder.java" startLine="31" startPosition="85" endLine="32" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939581424902" fileName="SyncDefinitionBuilder.java" startLine="32" startPosition="46" endLine="33" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939581424910" fileName="SyncDefinitionBuilder.java" startLine="34" startPosition="163" endLine="35" endPosition="36" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939581437459" fileName="SyncDefinitionBuilder.java" startLine="37" startPosition="5" endLine="38" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939582766728" fileName="SyncDefinitionBuilder.java" startLine="43" startPosition="104" endLine="44" endPosition="233" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939582760540" fileName="SyncDefinitionBuilder.java" startLine="44" startPosition="233" endLine="45" endPosition="72" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939582799236" fileName="SyncDefinitionBuilder.java" startLine="45" startPosition="72" endLine="46" endPosition="44" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580467278" fileName="SyncDefinitionBuilder.java" startLine="46" startPosition="44" endLine="47" endPosition="46" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="51" startPosition="33" endLine="52" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="52" startPosition="121" endLine="53" endPosition="74" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="53" startPosition="74" endLine="54" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="58" startPosition="33" endLine="59" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="59" startPosition="121" endLine="60" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="60" startPosition="79" endLine="61" endPosition="119" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="61" startPosition="119" endLine="62" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="66" startPosition="33" endLine="67" endPosition="103" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="67" startPosition="103" endLine="68" endPosition="69" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="68" startPosition="69" endLine="69" endPosition="83" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="69" startPosition="83" endLine="70" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="74" startPosition="33" endLine="75" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="75" startPosition="121" endLine="76" endPosition="70" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="76" startPosition="70" endLine="77" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="81" startPosition="33" endLine="82" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="82" startPosition="121" endLine="83" endPosition="79" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="83" startPosition="79" endLine="84" endPosition="119" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="84" startPosition="119" endLine="85" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="89" startPosition="33" endLine="90" endPosition="103" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="90" startPosition="103" endLine="91" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="91" startPosition="60" endLine="92" endPosition="83" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="92" startPosition="83" endLine="93" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="97" startPosition="33" endLine="98" endPosition="106" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="98" startPosition="106" endLine="99" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="103" startPosition="33" endLine="104" endPosition="103" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="104" startPosition="103" endLine="105" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="105" startPosition="60" endLine="106" endPosition="83" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="106" startPosition="83" endLine="107" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="111" startPosition="33" endLine="112" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="112" startPosition="114" endLine="113" endPosition="68" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="113" startPosition="68" endLine="114" endPosition="92" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="114" startPosition="92" endLine="115" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="115" startPosition="121" endLine="116" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="116" startPosition="121" endLine="117" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="117" startPosition="121" endLine="118" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="120" startPosition="19" endLine="121" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939581424908" fileName="SyncDefinitionBuilder.java" startLine="33" startPosition="79" endLine="36" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="97" startPosition="0" endLine="101" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="51" startPosition="0" endLine="56" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="74" startPosition="0" endLine="79" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939581368908" fileName="SyncDefinitionBuilder.java" startLine="20" startPosition="0" endLine="26" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="addStructForType#(Ljetbrains/mps/generator/template/TemplateQueryContext;Ljava/util/List;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="58" startPosition="0" endLine="64" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="66" startPosition="0" endLine="72" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="81" startPosition="0" endLine="87" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="89" startPosition="0" endLine="95" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="95" startPosition="19" endLine="101" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="103" startPosition="0" endLine="109" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939581424892" fileName="SyncDefinitionBuilder.java" startLine="30" startPosition="49" endLine="37" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="49" startPosition="29" endLine="56" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="72" startPosition="19" endLine="79" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="56" startPosition="19" endLine="64" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="64" startPosition="19" endLine="72" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="79" startPosition="19" endLine="87" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="87" startPosition="19" endLine="95" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="101" startPosition="19" endLine="109" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="111" startPosition="0" endLine="120" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939581424888" fileName="SyncDefinitionBuilder.java" startLine="29" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getStructForType#(Ljetbrains/mps/generator/template/TemplateQueryContext;Ljava/util/List;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="109" startPosition="19" endLine="120" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="49" startPosition="0" endLine="123" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="2852056939580462266" fileName="SyncDefinitionBuilder.java" startLine="47" startPosition="46" endLine="123" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939581371181" fileName="SyncDefinitionBuilder.java" startLine="43" startPosition="0" endLine="125" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="buildSharedStruct#(Ljetbrains/mps/generator/template/TemplateQueryContext;Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <scopeInfo nodeId="2852056939581424909" fileName="SyncDefinitionBuilder.java" startLine="34" startPosition="163" endLine="35" endPosition="36" />
+    <scopeInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="97" startPosition="33" endLine="99" endPosition="23">
+      <varInfo nodeId="2852056939580671647" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="51" startPosition="33" endLine="54" endPosition="23">
+      <varInfo nodeId="2852056939580659854" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="74" startPosition="33" endLine="77" endPosition="23">
+      <varInfo nodeId="2852056939580667990" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939581143049" fileName="SyncDefinitionBuilder.java" startLine="20" startPosition="133" endLine="24" endPosition="32">
+      <varInfo nodeId="2852056939581297849" varName="typeAndStruct" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="58" startPosition="33" endLine="62" endPosition="23">
+      <varInfo nodeId="2852056939580658214" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="66" startPosition="33" endLine="70" endPosition="23">
+      <varInfo nodeId="2852056939580657140" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="81" startPosition="33" endLine="85" endPosition="23">
+      <varInfo nodeId="2852056939580667991" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="89" startPosition="33" endLine="93" endPosition="23">
+      <varInfo nodeId="2852056939580667910" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="97" startPosition="0" endLine="101" endPosition="0" />
+    <scopeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="103" startPosition="33" endLine="107" endPosition="23">
+      <varInfo nodeId="2852056939580671103" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939581424895" fileName="SyncDefinitionBuilder.java" startLine="31" startPosition="85" endLine="36" endPosition="7">
+      <varInfo nodeId="2852056939581424903" varName="baseType" />
+      <varInfo nodeId="2852056939581424897" varName="currentType" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="51" startPosition="0" endLine="56" endPosition="0" />
+    <scopeInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="74" startPosition="0" endLine="79" endPosition="0" />
+    <scopeInfo nodeId="2852056939581368908" fileName="SyncDefinitionBuilder.java" startLine="20" startPosition="0" endLine="26" endPosition="0">
+      <varInfo nodeId="2852056939581222859" varName="genContext" />
+      <varInfo nodeId="2852056939581147457" varName="sharedType" />
+      <varInfo nodeId="2852056939581148858" varName="typesAndStructs" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="58" startPosition="0" endLine="64" endPosition="0" />
+    <scopeInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="66" startPosition="0" endLine="72" endPosition="0" />
+    <scopeInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="81" startPosition="0" endLine="87" endPosition="0" />
+    <scopeInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="89" startPosition="0" endLine="95" endPosition="0" />
+    <scopeInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="103" startPosition="0" endLine="109" endPosition="0" />
+    <scopeInfo nodeId="2852056939581424892" fileName="SyncDefinitionBuilder.java" startLine="30" startPosition="49" endLine="37" endPosition="5">
+      <varInfo nodeId="2852056939581424893" varName="typeAndStruct" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="111" startPosition="33" endLine="118" endPosition="23">
+      <varInfo nodeId="2852056939580462382" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939581424889" fileName="SyncDefinitionBuilder.java" startLine="29" startPosition="133" endLine="38" endPosition="16" />
+    <scopeInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="111" startPosition="0" endLine="120" endPosition="0" />
+    <scopeInfo nodeId="2852056939581424888" fileName="SyncDefinitionBuilder.java" startLine="29" startPosition="0" endLine="40" endPosition="0">
+      <varInfo nodeId="2852056939581424942" varName="genContext" />
+      <varInfo nodeId="2852056939581424949" varName="sharedType" />
+      <varInfo nodeId="2852056939581424944" varName="typesAndStructs" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="49" startPosition="29" endLine="121" endPosition="40">
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580462351" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580655953" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580657256" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580659788" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580666649" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580667984" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580667987" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580671092" />
+      <varInfo nodeId="2852056939580462350" varName="node_2852056939580671093" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="49" startPosition="0" endLine="123" endPosition="0" />
+    <scopeInfo nodeId="2852056939580343780" fileName="SyncDefinitionBuilder.java" startLine="43" startPosition="104" endLine="123" endPosition="15">
+      <varInfo nodeId="2852056939580467281" varName="name" />
+      <varInfo nodeId="2852056939582760543" varName="namePart1" />
+      <varInfo nodeId="2852056939582799239" varName="namePart2" />
+      <varInfo nodeId="2852056939582766731" varName="rawName" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939581371181" fileName="SyncDefinitionBuilder.java" startLine="43" startPosition="0" endLine="125" endPosition="0">
+      <varInfo nodeId="2852056939580463101" varName="genContext" />
+      <varInfo nodeId="2852056939580460939" varName="sharedType" />
+    </scopeInfo>
+    <unitInfo nodeId="2852056939580671647" fileName="SyncDefinitionBuilder.java" startLine="96" startPosition="51" endLine="101" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580659854" fileName="SyncDefinitionBuilder.java" startLine="50" startPosition="51" endLine="56" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580667990" fileName="SyncDefinitionBuilder.java" startLine="73" startPosition="51" endLine="79" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580658214" fileName="SyncDefinitionBuilder.java" startLine="57" startPosition="51" endLine="64" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580657140" fileName="SyncDefinitionBuilder.java" startLine="65" startPosition="51" endLine="72" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580667991" fileName="SyncDefinitionBuilder.java" startLine="80" startPosition="51" endLine="87" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580667910" fileName="SyncDefinitionBuilder.java" startLine="88" startPosition="51" endLine="95" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580671103" fileName="SyncDefinitionBuilder.java" startLine="102" startPosition="51" endLine="109" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580462382" fileName="SyncDefinitionBuilder.java" startLine="110" startPosition="45" endLine="120" endPosition="9" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$2" />
+    <unitInfo nodeId="2852056939580462350" fileName="SyncDefinitionBuilder.java" startLine="48" startPosition="15" endLine="123" endPosition="5" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder$1" />
+    <unitInfo nodeId="2852056939580287594" fileName="SyncDefinitionBuilder.java" startLine="17" startPosition="0" endLine="126" endPosition="0" unitName="TasksAndSyncs.generator.util.SyncDefinitionBuilder" />
+  </root>
+  <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2852056939580766772">
+    <nodeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="21" startPosition="33" endLine="22" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="22" startPosition="121" endLine="23" endPosition="57" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="23" startPosition="57" endLine="24" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="26" startPosition="19" endLine="27" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1504369025024173538" fileName="ImplementationModuleBuilder.java" startLine="29" startPosition="15" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="35" startPosition="35" endLine="36" endPosition="115" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="36" startPosition="115" endLine="37" endPosition="84" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="37" startPosition="84" endLine="38" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="40" startPosition="21" endLine="41" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6079605392878172738" fileName="ImplementationModuleBuilder.java" startLine="44" startPosition="5" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="6340335959758970971" fileName="ImplementationModuleBuilder.java" startLine="45" startPosition="0" endLine="46" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6079605392877398100" fileName="ImplementationModuleBuilder.java" startLine="46" startPosition="62" endLine="47" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="51" startPosition="33" endLine="52" endPosition="114" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="52" startPosition="114" endLine="53" endPosition="82" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="53" startPosition="82" endLine="54" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="56" startPosition="19" endLine="57" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="2852056939580815498" fileName="ImplementationModuleBuilder.java" startLine="59" startPosition="16" endLine="60" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="2852056939580815952" fileName="ImplementationModuleBuilder.java" startLine="60" startPosition="0" endLine="61" endPosition="32" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="21" startPosition="0" endLine="26" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="35" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="51" startPosition="0" endLine="56" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="19" startPosition="29" endLine="26" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="33" startPosition="31" endLine="40" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="49" startPosition="29" endLine="56" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="19" startPosition="0" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="33" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="49" startPosition="0" endLine="59" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="6340335959758530486" fileName="ImplementationModuleBuilder.java" startLine="17" startPosition="69" endLine="29" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6079605392877971284" fileName="ImplementationModuleBuilder.java" startLine="31" startPosition="126" endLine="43" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6079605392877442685" fileName="ImplementationModuleBuilder.java" startLine="47" startPosition="0" endLine="59" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6079605392877971277" fileName="ImplementationModuleBuilder.java" startLine="30" startPosition="0" endLine="44" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="2852056939580780370" fileName="ImplementationModuleBuilder.java" startLine="17" startPosition="0" endLine="63" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="buildGeneric#(Ljava/lang/String;Lorg/jetbrains/mps/openapi/model/SModel;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <scopeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="21" startPosition="33" endLine="24" endPosition="23">
+      <varInfo nodeId="3074299910032730430" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="35" startPosition="35" endLine="38" endPosition="25">
+      <varInfo nodeId="6079605392877971294" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="51" startPosition="33" endLine="54" endPosition="23">
+      <varInfo nodeId="6079605392877739089" varName="res" />
+    </scopeInfo>
+    <scopeInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="21" startPosition="0" endLine="26" endPosition="0" />
+    <scopeInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="35" startPosition="0" endLine="40" endPosition="0" />
+    <scopeInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="51" startPosition="0" endLine="56" endPosition="0" />
+    <scopeInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="19" startPosition="29" endLine="27" endPosition="40">
+      <varInfo nodeId="3074299910032730426" varName="node_3074299910032730427" />
+    </scopeInfo>
+    <scopeInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="33" startPosition="31" endLine="41" endPosition="42">
+      <varInfo nodeId="6079605392877971290" varName="node_6079605392877971291" />
+    </scopeInfo>
+    <scopeInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="49" startPosition="29" endLine="57" endPosition="40">
+      <varInfo nodeId="6079605392877649515" varName="node_6079605392877649516" />
+    </scopeInfo>
+    <scopeInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="19" startPosition="0" endLine="29" endPosition="0" />
+    <scopeInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="33" startPosition="0" endLine="43" endPosition="0" />
+    <scopeInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="49" startPosition="0" endLine="59" endPosition="0" />
+    <scopeInfo nodeId="6079605392877971282" fileName="ImplementationModuleBuilder.java" startLine="31" startPosition="126" endLine="43" endPosition="18" />
+    <scopeInfo nodeId="6079605392877971277" fileName="ImplementationModuleBuilder.java" startLine="30" startPosition="0" endLine="44" endPosition="5">
+      <varInfo nodeId="6079605392877971278" varName="module" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580767777" fileName="ImplementationModuleBuilder.java" startLine="17" startPosition="69" endLine="61" endPosition="32">
+      <varInfo nodeId="6340335959758530489" varName="implementationModule" />
+    </scopeInfo>
+    <scopeInfo nodeId="2852056939580780370" fileName="ImplementationModuleBuilder.java" startLine="17" startPosition="0" endLine="63" endPosition="0">
+      <varInfo nodeId="2852056939580784126" varName="model" />
+      <varInfo nodeId="2852056939580767804" varName="name" />
+    </scopeInfo>
+    <unitInfo nodeId="3074299910032730430" fileName="ImplementationModuleBuilder.java" startLine="20" startPosition="45" endLine="26" endPosition="9" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$2" />
+    <unitInfo nodeId="6079605392877971294" fileName="ImplementationModuleBuilder.java" startLine="34" startPosition="47" endLine="40" endPosition="11" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$3" />
+    <unitInfo nodeId="6079605392877739089" fileName="ImplementationModuleBuilder.java" startLine="50" startPosition="45" endLine="56" endPosition="9" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$4" />
+    <unitInfo nodeId="3074299910032730426" fileName="ImplementationModuleBuilder.java" startLine="18" startPosition="43" endLine="29" endPosition="5" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$1" />
+    <unitInfo nodeId="6079605392877971290" fileName="ImplementationModuleBuilder.java" startLine="32" startPosition="96" endLine="43" endPosition="7" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$2" />
+    <unitInfo nodeId="6079605392877649515" fileName="ImplementationModuleBuilder.java" startLine="48" startPosition="298" endLine="59" endPosition="5" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder$3" />
+    <unitInfo nodeId="2852056939580766772" fileName="ImplementationModuleBuilder.java" startLine="14" startPosition="0" endLine="64" endPosition="0" unitName="TasksAndSyncs.generator.util.ImplementationModuleBuilder" />
+  </root>
+  <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2852056939581079819">
+    <nodeInfo nodeId="2852056939581084269" fileName="Pair.java" startLine="7" startPosition="0" endLine="8" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="first" />
+    <nodeInfo nodeId="2852056939581084312" fileName="Pair.java" startLine="8" startPosition="0" endLine="9" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.FieldDeclaration" propertyString="second" />
+    <nodeInfo nodeId="2852056939581094328" fileName="Pair.java" startLine="10" startPosition="34" endLine="11" endPosition="23" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939581100201" fileName="Pair.java" startLine="11" startPosition="23" endLine="12" endPosition="25" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="2852056939581084245" fileName="Pair.java" startLine="10" startPosition="0" endLine="14" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="Pair#(nullnull)V" />
+    <scopeInfo nodeId="2852056939581084248" fileName="Pair.java" startLine="10" startPosition="34" endLine="12" endPosition="25" />
+    <scopeInfo nodeId="2852056939581084245" fileName="Pair.java" startLine="10" startPosition="0" endLine="14" endPosition="0">
+      <varInfo nodeId="2852056939581088495" varName="first" />
+      <varInfo nodeId="2852056939581088503" varName="second" />
+    </scopeInfo>
+    <unitInfo nodeId="2852056939581079819" fileName="Pair.java" startLine="6" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.generator.util.Pair" />
   </root>
   <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4390787788466980438">
     <nodeInfo nodeId="6079605392878743792" fileName="TaskDefinitionBuilder.java" startLine="23" startPosition="33" endLine="24" endPosition="112" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
