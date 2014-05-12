@@ -1,13 +1,10 @@
 #include "testSync2.h"
 
 
-#include "testSync.h"
 #include "GenericTaskDeclarations.h"
 #include "GenericSyncDeclarations.h"
 
-static <!TextGen not found for 'TasksAndSyncs.structure.SharedType'!> testSync2_a1;
+struct testSync2_SharedA_0 testSync2_a2;
 
-static <!TextGen not found for 'TasksAndSyncs.structure.SharedType'!> testSync2_xx;
-
-static <!TextGen not found for 'TasksAndSyncs.structure.SharedType'!> testSync2_a2;
+struct testSync2_SharedA_0 testSync2_a1;
 

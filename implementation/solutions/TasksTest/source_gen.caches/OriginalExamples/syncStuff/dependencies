@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="OriginalExamples.syncStuff.GenericDeclarations" file="GenericDeclarations.c" />
-  <dependency className="OriginalExamples.syncStuff.GenericDeclarations" file="GenericDeclarations.h" />
+  <dependency className="OriginalExamples.syncStuff.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="OriginalExamples.syncStuff.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="OriginalExamples.syncStuff.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="OriginalExamples.syncStuff.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
   <dependency className="OriginalExamples.syncStuff.TypeSizeConfiguration (O.syncStuff)" file="TypeSizeConfiguration (O.syncStuff)" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.c" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.h" />

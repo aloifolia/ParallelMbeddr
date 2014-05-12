@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-1jyrqftgvanav10naelz57heycbn4o3">
+<dependencies version="2" modelHash="-dwlv1lqltbd87d2rg56vpau7mp9k2vl">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-7eypklgrzhtrsuqnoq6skfl2b0f1t90" />
   <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="4g6vfeaihwr61ac47edydc9fnnyrmdz" />
-  <common hash="8rusor7g4zgagszfgz67gt1d8m5zayi">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-q7t6n0xe76vt1kfb4ld74d1qhr3he8" />
+  <common hash="3n3smiwqy8tei8t21kbn0f6hdzwopvj">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
@@ -16,8 +16,10 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
     <file name="BuildConfiguration (O.syncStuff)" />
-    <file name="GenericDeclarations.c" />
-    <file name="GenericDeclarations.h" />
+    <file name="GenericSyncDeclarations.c" />
+    <file name="GenericSyncDeclarations.h" />
+    <file name="GenericTaskDeclarations.c" />
+    <file name="GenericTaskDeclarations.h" />
     <file name="TypeSizeConfiguration (O.syncStuff)" />
     <file name="stdio" />
     <file name="stdlib" />
@@ -26,7 +28,7 @@
   </common>
   <source id="5867266020201107465" name="BuildConfiguration (O.syncStuff)" hash="9uw1z3zjdxbns9x3hd1zatqb1i68o99" />
   <source id="5867266020201107581" name="TypeSizeConfiguration (O.syncStuff)" hash="6797dl3ypxmsofyg9i1bbmh2eik3gn" />
-  <source id="5867266020201109512" name="syncStuff" hash="9inz2ngk4fgshys2fg8w3vw6mom85dt" />
+  <source id="5867266020201109512" name="syncStuff" hash="-8bj75kr7kmqublisz3n6g5a1mf50ohk" />
   <source id="6845764994851583673" name="stdio" hash="5ug2hod5pnb60j2ys7tb04o1ejh7n82" />
   <source id="6845764994850917945" name="stdlib" hash="-adj03vpiet9dm4u2otww4jt56wy7jus" />
 </dependencies>
