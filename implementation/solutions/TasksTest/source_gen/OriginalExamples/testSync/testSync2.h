@@ -27,9 +27,9 @@ struct testSync2_SharedA_0 {
   struct testSync2_A value;
 };
 
-extern struct testSync2_SharedA_0 testSync2_a2;
-
 extern struct testSync2_SharedA_0 testSync2_a1;
+
+extern struct testSync2_SharedA_0 testSync2_a2;
 
 
 #ifdef __cplusplus

@@ -31,10 +31,8 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 7:
         return Collections.<ConceptEditor>singletonList(new Sync_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new SyncVariable_Editor());
-      case 9:
         return Collections.<ConceptEditor>singletonList(new Task_Editor());
-      case 10:
+      case 9:
         return Collections.<ConceptEditor>singletonList(new TaskType_Editor());
       default:
     }
@@ -52,5 +50,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.SyncVariable", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.Sync", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

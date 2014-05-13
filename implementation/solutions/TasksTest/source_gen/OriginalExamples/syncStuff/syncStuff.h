@@ -6,11 +6,11 @@
 
 #include <stddef.h>
 
-#include <stdlib.h>
-
 #include "GenericTaskDeclarations.h"
 
-#include "GenericSyncDeclarations.h"
+#include "GenericSharedDeclarations.h"
+
+#include <pthread.h>
 
 
 

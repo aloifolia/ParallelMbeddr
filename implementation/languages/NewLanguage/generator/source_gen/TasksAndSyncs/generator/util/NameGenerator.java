@@ -10,8 +10,8 @@ public class NameGenerator {
 
 
 
-  public static String getGenericSyncModuleName() {
-    return "GenericSyncDeclarations";
+  public static String getGenericSharedModuleName() {
+    return "GenericSharedDeclarations";
   }
 
 

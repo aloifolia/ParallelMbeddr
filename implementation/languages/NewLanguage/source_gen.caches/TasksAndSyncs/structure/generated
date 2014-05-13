@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-5q8sx0ineq7lvcaw0i23mcf1crjwe1p">
+<dependencies version="2" modelHash="-dzxdl6q5t7sltvv7uhjhxj8z4hthqnu">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="-erhs8245rrxarsir75oeypz6lamscet" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
+  <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
@@ -21,7 +22,6 @@
     <dep root="3074299910025607357" />
     <dep root="3570654511858570918" />
     <dep root="3604883996548046056" />
-    <dep root="3604883996549755172" />
     <dep root="6843270485077468311" />
     <dep root="7288607883536646834" />
     <dep root="7288607883536878936" />
@@ -31,6 +31,7 @@
     <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
     <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
@@ -42,8 +43,7 @@
   <source id="1304213873205049565" name="TaskType" hash="358buxlpgsy8cmdhx73vvn785rrd571" />
   <source id="1304213873205054831" name="FutureType" hash="-6u0ftnzjom63sd12ur4v5p7hx5ugyxx" />
   <source id="2744793885339890637" name="FutureResult" hash="el2fnfxixsjm5jkl9n3ju0vkucglgt8" />
-  <source id="3604883996548046056" name="Sync" hash="-8e67hdvts6s64jt0o8igszartyo3m2u" />
-  <source id="3604883996549755172" name="SyncVariable" hash="cx3mdvesxfabc412tb27tjxwqu3ihh7" />
+  <source id="3604883996548046056" name="Sync" hash="-2nd3x8xwzxht1gmrmgzc2blz99gcvqd" />
   <source id="6843270485077468311" name="FutureContainer" hash="-63iq7i708gknadnsjown4x2aa2lfa46" />
   <source id="3074299910025607357" name="ExprBoundToStruct" hash="-bda8q8shzkufh6w6aaf6gly3v0c2nhl" />
   <source id="7288607883536646834" name="FutureJoinContainer" hash="-d3wb3p5w67p1qaz5ypb2315s3q76hqh" />

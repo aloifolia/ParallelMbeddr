@@ -29,11 +29,11 @@ static inline void testSync_init_i2_0(struct GenericSyncDeclarations_SharedInt32
 
 static inline void testSync_destroy_i2_0(struct GenericSyncDeclarations_SharedInt32_0* i2);
 
-static inline void testSync_destroy_foos_0(struct testSync_ContainsArray* foos);
-
 static void testSync_bar(struct testSync_ContainsArray* i);
 
 static inline void testSync_init_foos_0(struct testSync_ContainsArray* foos);
+
+static inline void testSync_destroy_foos_0(struct testSync_ContainsArray* foos);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -95,17 +95,17 @@ static void testSync_testFunc(void)
 
 void testSync_initGlobalMutexes_0(void) 
 {
-  GenericSyncDeclarations_initMutex_0(&testSync_i.mutexAttribute, &testSync_i.mutex);
   GenericSyncDeclarations_initMutex_0(&testSync2_a1.mutexAttribute, &testSync2_a1.mutex);
   GenericSyncDeclarations_initMutex_0(&testSync2_a2.mutexAttribute, &testSync2_a2.mutex);
+  GenericSyncDeclarations_initMutex_0(&testSync_i.mutexAttribute, &testSync_i.mutex);
 }
 
 
 void testSync_destroyGlobalMutexes_0(void) 
 {
-  GenericSyncDeclarations_destroyMutex_0(&testSync_i.mutex);
   GenericSyncDeclarations_destroyMutex_0(&testSync2_a1.mutex);
   GenericSyncDeclarations_destroyMutex_0(&testSync2_a2.mutex);
+  GenericSyncDeclarations_destroyMutex_0(&testSync_i.mutex);
 }
 
 
@@ -145,20 +145,6 @@ static  void testSync_destroy_i2_0(struct GenericSyncDeclarations_SharedInt32_0*
 }
 
 
-static  void testSync_destroy_foos_0(struct testSync_ContainsArray* foos) 
-{
-  for ( int8_t __i_0 = 0; __i_0 < 4; __i_0++ )
-  {
-    for ( int8_t __i_1 = 0; __i_1 < 42; __i_1++ )
-    {
-      GenericSyncDeclarations_destroyMutex_0(&foos[__i_0].myArray[__i_1].myShared.mutex);
-    }
-
-  }
-
-}
-
-
 static void testSync_bar(struct testSync_ContainsArray* i) 
 {
   i[3];
@@ -172,6 +158,20 @@ static  void testSync_init_foos_0(struct testSync_ContainsArray* foos)
     for ( int8_t __i_1 = 0; __i_1 < 42; __i_1++ )
     {
       GenericSyncDeclarations_initMutex_0(&foos[__i_0].myArray[__i_1].myShared.mutexAttribute, &foos[__i_0].myArray[__i_1].myShared.mutex);
+    }
+
+  }
+
+}
+
+
+static  void testSync_destroy_foos_0(struct testSync_ContainsArray* foos) 
+{
+  for ( int8_t __i_0 = 0; __i_0 < 4; __i_0++ )
+  {
+    for ( int8_t __i_1 = 0; __i_1 < 42; __i_1++ )
+    {
+      GenericSyncDeclarations_destroyMutex_0(&foos[__i_0].myArray[__i_1].myShared.mutex);
     }
 
   }

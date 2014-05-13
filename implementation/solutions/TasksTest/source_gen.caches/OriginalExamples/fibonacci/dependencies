@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependenciesRoot>
-  <dependency className="OriginalExamples.fibonacci.GenericDeclarations" file="GenericDeclarations.c" />
-  <dependency className="OriginalExamples.fibonacci.GenericDeclarations" file="GenericDeclarations.h" />
+  <dependency className="OriginalExamples.fibonacci.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="OriginalExamples.fibonacci.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="OriginalExamples.fibonacci.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="OriginalExamples.fibonacci.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
   <dependency className="OriginalExamples.fibonacci.Makefile" file="Makefile" />
   <dependency className="OriginalExamples.fibonacci.TypeSizeConfiguration (O.fibonacci)" file="TypeSizeConfiguration (O.fibonacci)" />
   <dependency className="OriginalExamples.fibonacci.fibonacci" file="fibonacci.c" />
