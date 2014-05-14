@@ -37,6 +37,10 @@ static void syncStuff_startSync_0(pthread_mutex_t* mutex_0);
 
 static void syncStuff_stopSync_0(pthread_mutex_t* mutex_1);
 
+static void syncStuff_startSync_1(pthread_mutex_t* mutex_3);
+
+static void syncStuff_stopSync_1(pthread_mutex_t* mutex_4);
+
 static void* syncStuff_parFun_a0i0b(void* voidArgs);
 
 static void* syncStuff_parFun_a0j0b(void* voidArgs);
@@ -57,7 +61,13 @@ int32_t main(int32_t argc, char* argv[])
   
   struct GenericTaskDeclarations_VoidFuture f1 = GenericTaskDeclarations_runTaskAndGetVoidFuture(syncStuff_taskInit_a0i0b());
   struct GenericTaskDeclarations_VoidFuture f2 = GenericTaskDeclarations_runTaskAndGetVoidFuture(syncStuff_taskInit_a0j0b(local2));
-  
+  pthread_mutex_t* mutex_2 = &local1.mutex;
+  syncStuff_startSync_0(mutex_2);
+  {
+    (local1).value = 1;
+  }
+
+  syncStuff_stopSync_0(mutex_2);
   
   GenericTaskDeclarations_joinVoidFuture(&f1);
   GenericTaskDeclarations_joinVoidFuture(&f2);
@@ -72,13 +82,14 @@ int32_t main(int32_t argc, char* argv[])
 
 static void syncStuff_changeGlobalDirectly(void) 
 {
-  pthread_mutex_t* mutex_2 = &(*syncStuff_global.mutex);
-  syncStuff_startSync_0(&mutex_2);
+  pthread_mutex_t* mutex_5 = &(*syncStuff_global).mutex;
+  syncStuff_startSync_1(mutex_5);
   {
-    *syncStuff_global.value = 4;
+    (*syncStuff_global).value = 4;
+    (*syncStuff_global).value;
   }
 
-  syncStuff_stopSync_0(&mutex_2);
+  syncStuff_stopSync_1(mutex_5);
 }
 
 
@@ -139,6 +150,27 @@ static void syncStuff_startSync_0(pthread_mutex_t* mutex_0)
 static void syncStuff_stopSync_0(pthread_mutex_t* mutex_1) 
 {
   mutex_unlock(mutex_1);
+}
+
+
+static void syncStuff_startSync_1(pthread_mutex_t* mutex_3) 
+{
+  while (1)
+  {
+    if ( mutex_try_lock(mutex_3) != 0 ) 
+    {
+      continue;
+    }
+
+    break;
+  }
+
+}
+
+
+static void syncStuff_stopSync_1(pthread_mutex_t* mutex_4) 
+{
+  mutex_unlock(mutex_4);
 }
 
 

@@ -2,7 +2,7 @@
 
 
 #include "GenericTaskDeclarations.h"
-#include "GenericSyncDeclarations.h"
+#include "GenericSharedDeclarations.h"
 
 struct testSync2_SharedA_0 testSync2_a1;
 

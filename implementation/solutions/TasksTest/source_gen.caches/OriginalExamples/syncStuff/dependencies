@@ -4,6 +4,7 @@
   <dependency className="OriginalExamples.syncStuff.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
   <dependency className="OriginalExamples.syncStuff.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
   <dependency className="OriginalExamples.syncStuff.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="OriginalExamples.syncStuff.Makefile" file="Makefile" />
   <dependency className="OriginalExamples.syncStuff.TypeSizeConfiguration (O.syncStuff)" file="TypeSizeConfiguration (O.syncStuff)" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.c" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.h" />

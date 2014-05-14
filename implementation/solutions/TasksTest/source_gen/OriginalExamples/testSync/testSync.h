@@ -10,7 +10,7 @@
 
 #include "GenericTaskDeclarations.h"
 
-#include "GenericSyncDeclarations.h"
+#include "GenericSharedDeclarations.h"
 
 
 
