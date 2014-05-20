@@ -132,5 +132,11 @@
     </dependencies>
     <rename id="6i3o.3570654511858570918" type="CONCEPT" from="SetShared" to="SharedSet" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="21" />
+    </dependencies>
+    <rename id="6i3o.6553204290893807643" type="CONCEPT" from="SyncRessource" to="SyncRessourcePlain" />
+  </StructureModification>
 </history>
 

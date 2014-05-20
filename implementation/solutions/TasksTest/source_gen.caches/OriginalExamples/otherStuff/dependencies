@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="OriginalExamples.otherStuff.Makefile" file="Makefile" />
+  <dependency className="OriginalExamples.otherStuff.TypeSizeConfiguration (O.otherStuff)" file="TypeSizeConfiguration (O.otherStuff)" />
+  <dependency className="OriginalExamples.otherStuff.otherStuff" file="otherStuff.c" />
+  <dependency className="OriginalExamples.otherStuff.otherStuff" file="otherStuff.h" />
+</dependenciesRoot>
+

@@ -933,7 +933,7 @@ public class SyncDefinitionBuilder {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryFunctionCall", null);
               SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
-              SPropertyOperations.set(res, "calledFunctionName", ("mutex_try_lock"));
+              SPropertyOperations.set(res, "calledFunctionName", ("mutex_trylock"));
               SLinkOperations.setTarget(res, "dummyType", node_3348893923577562266, true);
               ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_3348893923577594526);
               return res;

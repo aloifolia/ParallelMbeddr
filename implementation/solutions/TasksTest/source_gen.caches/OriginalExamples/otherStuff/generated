@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="5bulu402n4sd88jnq5ic1rgb78h3nqx">
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
+  <common hash="-3k8h7whw2fai585t8qjww4sdr822cj8">
+    <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (O.otherStuff)" />
+    <file name="otherStuff.c" />
+    <file name="otherStuff.h" />
+  </common>
+  <source id="6480032978531807461" name="otherStuff" hash="-4k6u7zmds780bq1sqdw7yaf5d6goko4" />
+  <source id="6480032978531810188" name="TypeSizeConfiguration (O.otherStuff)" hash="8b2znr8ajagq3klwyf45u1em6yvs7ki" />
+  <source id="6480032978531810396" name="BuildConfiguration (O.otherStuff)" hash="-bydyb51tz3erf10i6y6daj553var2wc" />
+</dependencies>
+

@@ -10,8 +10,6 @@
 
 #include "GenericSharedDeclarations.h"
 
-#include <pthread.h>
-
 
 
 #ifdef __cplusplus

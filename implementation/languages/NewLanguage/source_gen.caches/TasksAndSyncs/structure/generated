@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-dzxdl6q5t7sltvv7uhjhxj8z4hthqnu">
+<dependencies version="2" modelHash="-735i9tojqq7z1kazbqqj8iy4gp70144">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="-erhs8245rrxarsir75oeypz6lamscet" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
+  <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="-41zirjxer9xb4ozqfynf19wt0w0f1h9" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="-b1bgzofbvgaqdsfli6lt4zopba6bc7b" dependsOnNodes="true">
+  <common hash="ajj8q9qxoc3hkswsz6ztnr3l4k6j1rt" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
@@ -22,6 +23,10 @@
     <dep root="3074299910025607357" />
     <dep root="3570654511858570918" />
     <dep root="3604883996548046056" />
+    <dep root="6553204290893807643" />
+    <dep root="6553204290894227496" />
+    <dep root="6553204290895587770" />
+    <dep root="6553204290895819072" />
     <dep root="6843270485077468311" />
     <dep root="7288607883536646834" />
     <dep root="7288607883536878936" />
@@ -31,6 +36,7 @@
     <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
     <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
     <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
@@ -43,7 +49,7 @@
   <source id="1304213873205049565" name="TaskType" hash="358buxlpgsy8cmdhx73vvn785rrd571" />
   <source id="1304213873205054831" name="FutureType" hash="-6u0ftnzjom63sd12ur4v5p7hx5ugyxx" />
   <source id="2744793885339890637" name="FutureResult" hash="el2fnfxixsjm5jkl9n3ju0vkucglgt8" />
-  <source id="3604883996548046056" name="Sync" hash="-2nd3x8xwzxht1gmrmgzc2blz99gcvqd" />
+  <source id="3604883996548046056" name="Sync" hash="-d2vfl9pscw4gzkw6ithr2ntw35av5dg" />
   <source id="6843270485077468311" name="FutureContainer" hash="-63iq7i708gknadnsjown4x2aa2lfa46" />
   <source id="3074299910025607357" name="ExprBoundToStruct" hash="-bda8q8shzkufh6w6aaf6gly3v0c2nhl" />
   <source id="7288607883536646834" name="FutureJoinContainer" hash="-d3wb3p5w67p1qaz5ypb2315s3q76hqh" />
@@ -53,5 +59,9 @@
   <source id="1924594752095502558" name="SharedGet" hash="azemzghyy0inw1wvg9m03bfpt26s43" />
   <source id="1924594752097591879" name="Share" hash="duueyv2r3g1y50j3r1jgqahlf5k8i08" />
   <source id="3570654511858570918" name="SharedSet" hash="-6ol13iokzlmbt9g7ohrsgdklo8aj72l" />
+  <source id="6553204290893807643" name="SyncRessourcePlain" hash="-7pydf160f4jh6dijbvjdt13wfzzlfl7" />
+  <source id="6553204290894227496" name="Sync2" hash="-e423q155qbws6egtlfi0l03oq44ndrb" />
+  <source id="6553204290895587770" name="SyncRessourceNamed" hash="-b5apfytyw6evpmuxpbzk4fo3d4zpd5g" />
+  <source id="6553204290895819072" name="SyncRessource" hash="-5vhekkh107v3rihkmu6qbswtt2sctwr" />
 </dependencies>
 
