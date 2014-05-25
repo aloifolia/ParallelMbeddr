@@ -12,6 +12,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -31,55 +32,25 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
         return;
       }
 
-      if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.statements.structure.LocalVarRef")) {
+      if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference")) {
         if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode sync) {
             return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
               public boolean accept(SNode syncRessource) {
-                return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.LocalVarRef") && SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.LocalVarRef"), "var", false) == SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "com.mbeddr.core.statements.structure.LocalVarRef"), "var", false);
+                return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference") && BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{});
               }
             });
           }
         }))) {
           {
             MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred local variable is not synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "937153820561438262", null, errorTarget);
-          }
-        }
-      } else if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.modules.structure.GlobalVarRef")) {
-        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
-          public boolean accept(SNode sync) {
-            return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
-              public boolean accept(SNode syncRessource) {
-                return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.modules.structure.GlobalVarRef") && SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.modules.structure.GlobalVarRef"), "var", false) == SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "com.mbeddr.core.modules.structure.GlobalVarRef"), "var", false);
-              }
-            });
-          }
-        }))) {
-          {
-            MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred global variable is not synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "937153820561514176", null, errorTarget);
-          }
-        }
-      } else if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.modules.structure.ArgumentRef")) {
-        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
-          public boolean accept(SNode sync) {
-            return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
-              public boolean accept(SNode syncRessource) {
-                return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.modules.structure.ArgumentRef") && SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.modules.structure.ArgumentRef"), "arg", false) == SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "com.mbeddr.core.modules.structure.ArgumentRef"), "arg", false);
-              }
-            });
-          }
-        }))) {
-          {
-            MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred argument is not synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "937153820561541869", null, errorTarget);
+            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred variable is not synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5853110027232979766", null, errorTarget);
           }
         }
       } else {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "expression must be synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "937153820561588685", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "expression must be synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5853110027233019383", null, errorTarget);
         }
       }
     }
