@@ -8,6 +8,8 @@
 
 #include "GenericSharedDeclarations.h"
 
+#include "GenericSyncDeclarations.h"
+
 #include <pthread.h>
 
 
@@ -34,15 +36,15 @@ struct GenericTaskDeclarations_VoidFuture {
 
 struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task);
 
+void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future);
+
 void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future);
 
-void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future);
+struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task);
 
 void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future);
 
 void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* future);
-
-struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task);
 
 void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future);
 

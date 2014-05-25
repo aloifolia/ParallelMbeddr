@@ -1506,47 +1506,55 @@
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/6553204290899988300">
     <nodeInfo nodeId="6553204290900008210" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="122" endLine="24" endPosition="232" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="26" startPosition="7" endLine="27" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="27" startPosition="60" endLine="28" endPosition="367" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="33" startPosition="46" endLine="34" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="5" endLine="39" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="39" startPosition="130" endLine="40" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="44" startPosition="30" endLine="45" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233360295" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="26" startPosition="7" endLine="27" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="5853110027233360295" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="27" startPosition="60" endLine="28" endPosition="367" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="31" startPosition="7" endLine="32" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="32" startPosition="60" endLine="33" endPosition="367" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="46" endLine="39" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="43" startPosition="5" endLine="44" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="44" startPosition="130" endLine="45" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="49" startPosition="30" endLine="50" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkSharedSetForArrayType_NonTypesystemRule#()V" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="33" startPosition="0" endLine="36" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="44" startPosition="0" endLine="47" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="25" startPosition="208" endLine="29" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="37" startPosition="68" endLine="41" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="6553204290899992948" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="24" startPosition="232" endLine="30" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="37" startPosition="0" endLine="43" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="32" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="0" endLine="41" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="49" startPosition="0" endLine="52" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="5853110027233360295" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="25" startPosition="294" endLine="29" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="30" startPosition="633" endLine="34" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="42" startPosition="68" endLine="46" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="42" startPosition="0" endLine="48" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="5853110027233321146" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="24" startPosition="232" endLine="35" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="37" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
     <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="20" startPosition="57" endLine="20" endPosition="57" />
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="33" startPosition="46" endLine="34" endPosition="47" />
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="44" startPosition="30" endLine="45" endPosition="17" />
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="46" endLine="39" endPosition="47" />
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="49" startPosition="30" endLine="50" endPosition="17" />
     <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="22" endPosition="0" />
-    <scopeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="26" startPosition="7" endLine="28" endPosition="367">
+    <scopeInfo nodeId="5853110027233360295" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="26" startPosition="7" endLine="28" endPosition="367">
+      <varInfo nodeId="5853110027233360295" varName="_reporter_2309309498" />
+      <varInfo nodeId="5853110027233360295" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="6553204290900007508" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="31" startPosition="7" endLine="33" endPosition="367">
       <varInfo nodeId="6553204290900007508" varName="_reporter_2309309498" />
       <varInfo nodeId="6553204290900007508" varName="errorTarget" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="5" endLine="40" endPosition="45">
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="43" startPosition="5" endLine="45" endPosition="45">
       <varInfo nodeId="6553204290899988300" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="33" startPosition="0" endLine="36" endPosition="0" />
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="44" startPosition="0" endLine="47" endPosition="0" />
-    <scopeInfo nodeId="6553204290899992949" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="25" startPosition="208" endLine="29" endPosition="7" />
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="37" startPosition="68" endLine="41" endPosition="5" />
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="37" startPosition="0" endLine="43" endPosition="0">
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="38" startPosition="0" endLine="41" endPosition="0" />
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="49" startPosition="0" endLine="52" endPosition="0" />
+    <scopeInfo nodeId="5853110027233321149" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="25" startPosition="294" endLine="29" endPosition="7" />
+    <scopeInfo nodeId="5853110027233329393" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="30" startPosition="633" endLine="34" endPosition="7" />
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="42" startPosition="68" endLine="46" endPosition="5" />
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="42" startPosition="0" endLine="48" endPosition="0">
       <varInfo nodeId="6553204290899988300" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290899988301" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="122" endLine="30" endPosition="5">
+    <scopeInfo nodeId="6553204290899988301" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="122" endLine="35" endPosition="5">
       <varInfo nodeId="6553204290900008213" varName="expressionType" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="32" endPosition="0">
+    <scopeInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="37" endPosition="0">
       <varInfo nodeId="6553204290899988300" varName="sharedSet" />
       <varInfo nodeId="6553204290899988300" varName="status" />
       <varInfo nodeId="6553204290899988300" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="19" startPosition="0" endLine="48" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedSetForArrayType_NonTypesystemRule" />
+    <unitInfo nodeId="6553204290899988300" fileName="checkSharedSetForArrayType_NonTypesystemRule.java" startLine="19" startPosition="0" endLine="53" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedSetForArrayType_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/6843270485077601638">
     <nodeInfo nodeId="6843270485077601953" fileName="typeof_FutureContainer_InferenceRule.java" startLine="21" startPosition="5" endLine="22" endPosition="211" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />

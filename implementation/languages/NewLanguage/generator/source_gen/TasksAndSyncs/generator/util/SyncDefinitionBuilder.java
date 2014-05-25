@@ -1040,6 +1040,7 @@ public class SyncDefinitionBuilder {
         SNode node_3348893923577066539 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.Function", null);
+            SPropertyOperations.set(res, "exported", "" + ((true)));
             SPropertyOperations.set(res, "name", (genContext.createUniqueName("startSync", null)));
             SPropertyOperations.set(res, "__inlinetext", (""));
             SPropertyOperations.set(res, "contextModelId", (null));
@@ -1079,6 +1080,7 @@ public class SyncDefinitionBuilder {
         SNode node_3348893923577842214 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.Function", null);
+            SPropertyOperations.set(res, "exported", "" + ((true)));
             SPropertyOperations.set(res, "name", (genContext.createUniqueName("stopSync", null)));
             SPropertyOperations.set(res, "__inlinetext", (""));
             SPropertyOperations.set(res, "contextModelId", (null));

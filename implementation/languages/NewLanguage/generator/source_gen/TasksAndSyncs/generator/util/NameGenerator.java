@@ -16,6 +16,12 @@ public class NameGenerator {
 
 
 
+  public static String getGenericSyncModuleName() {
+    return "GenericSyncDeclarations";
+  }
+
+
+
   public static String getTaskStructName() {
     return "Task";
   }

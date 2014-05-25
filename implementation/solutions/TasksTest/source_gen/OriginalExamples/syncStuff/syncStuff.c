@@ -3,6 +3,7 @@
 
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
+#include "GenericSyncDeclarations.h"
 
 static struct GenericSharedDeclarations_SharedInt32_0* syncStuff_global;
 
@@ -16,13 +17,9 @@ static inline void syncStuff_init_sharedVal_0(struct GenericSharedDeclarations_S
 
 static inline void syncStuff_destroy_sharedVal_0(struct GenericSharedDeclarations_SharedInt32_0* sharedVal);
 
-static void syncStuff_startSync_0(pthread_mutex_t* mutex_0,pthread_mutex_t* mutex_1);
-
-static void syncStuff_stopSync_0(pthread_mutex_t* mutex_2,pthread_mutex_t* mutex_3);
+static inline void syncStuff_init_container_0(struct syncStuff_SharedContainer* container);
 
 static inline void syncStuff_destroy_container_0(struct syncStuff_SharedContainer* container);
-
-static inline void syncStuff_init_container_0(struct syncStuff_SharedContainer* container);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -33,13 +30,23 @@ int32_t main(int32_t argc, char* argv[])
   syncStuff_init_sharedVal_0(&sharedVal);
   {
     struct GenericSharedDeclarations_SharedInt32_0* containerI = &(container.i);
-    syncStuff_startSync_0(&(sharedVal.mutex), &(containerI->mutex));
+    GenericSyncDeclarations_startSync_0(&(sharedVal.mutex), &(containerI->mutex));
     {
       sharedVal.value = 5;
       containerI->value = 6;
     }
 
-    syncStuff_stopSync_0(&(sharedVal.mutex), &(containerI->mutex));
+    GenericSyncDeclarations_stopSync_0(&(sharedVal.mutex), &(containerI->mutex));
+  }
+
+  {
+    struct GenericSharedDeclarations_SharedInt32_0* containerI = &(container.i);
+    GenericSyncDeclarations_startSync_0(&(containerI->mutex), &(sharedVal.mutex));
+    {
+      sharedVal.value = 5;
+    }
+
+    GenericSyncDeclarations_stopSync_0(&(containerI->mutex), &(sharedVal.mutex));
   }
 
   syncStuff_destroyAllGlobalMutexes_0();
@@ -85,43 +92,15 @@ static  void syncStuff_destroy_sharedVal_0(struct GenericSharedDeclarations_Shar
 }
 
 
-static void syncStuff_startSync_0(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1) 
+static  void syncStuff_init_container_0(struct syncStuff_SharedContainer* container) 
 {
-  while (1)
-  {
-    if ( mutex_trylock(mutex_0) != 0 ) 
-    {
-      continue;
-    }
-
-    if ( mutex_trylock(mutex_1) != 0 ) 
-    {
-      mutex_unlock(mutex_0);
-      continue;
-    }
-
-    break;
-  }
-
-}
-
-
-static void syncStuff_stopSync_0(pthread_mutex_t* mutex_2, pthread_mutex_t* mutex_3) 
-{
-  mutex_unlock(mutex_2);
-  mutex_unlock(mutex_3);
+  GenericSharedDeclarations_initMutex_0(&container->i.mutexAttribute, &container->i.mutex);
 }
 
 
 static  void syncStuff_destroy_container_0(struct syncStuff_SharedContainer* container) 
 {
   GenericSharedDeclarations_destroyMutex_0(&container->i.mutex);
-}
-
-
-static  void syncStuff_init_container_0(struct syncStuff_SharedContainer* container) 
-{
-  GenericSharedDeclarations_initMutex_0(&container->i.mutexAttribute, &container->i.mutex);
 }
 
 

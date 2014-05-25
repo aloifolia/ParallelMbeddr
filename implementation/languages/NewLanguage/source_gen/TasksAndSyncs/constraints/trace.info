@@ -9,30 +9,30 @@
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="67" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="31" startPosition="5" endLine="32" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="32" startPosition="0" endLine="33" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1924594752095549917" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511860220238" fileName="SharedGet_Constraints.java" startLine="39" startPosition="5" endLine="40" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511860220249" fileName="SharedGet_Constraints.java" startLine="41" startPosition="96" endLine="42" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511860220256" fileName="SharedGet_Constraints.java" startLine="43" startPosition="5" endLine="44" endPosition="214" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="47" startPosition="0" endLine="48" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeChildBreakingPoint" />
+    <nodeInfo nodeId="5853110027233290263" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233290270" fileName="SharedGet_Constraints.java" startLine="39" startPosition="5" endLine="40" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="5853110027233290281" fileName="SharedGet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233290289" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233290301" fileName="SharedGet_Constraints.java" startLine="46" startPosition="5" endLine="47" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="50" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeChildBreakingPoint" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="SharedGet_Constraints#()V" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="28" startPosition="0" endLine="31" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1924594752095549915" fileName="SharedGet_Constraints.java" startLine="36" startPosition="148" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="3570654511860220247" fileName="SharedGet_Constraints.java" startLine="40" startPosition="206" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="5853110027233290261" fileName="SharedGet_Constraints.java" startLine="36" startPosition="148" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="5853110027233290279" fileName="SharedGet_Constraints.java" startLine="40" startPosition="206" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="5853110027233290287" fileName="SharedGet_Constraints.java" startLine="43" startPosition="5" endLine="46" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="hasOwnCanBeChildMethod#()Z" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="canBeChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
-    <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="36" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="static_canBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
+    <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="36" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="static_canBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="16" startPosition="34" endLine="17" endPosition="47" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="21" startPosition="43" endLine="22" endPosition="16" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="67" />
-    <scopeInfo nodeId="1924594752095549916" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" />
-    <scopeInfo nodeId="3570654511860220248" fileName="SharedGet_Constraints.java" startLine="41" startPosition="96" endLine="42" endPosition="19" />
+    <scopeInfo nodeId="5853110027233290262" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" />
+    <scopeInfo nodeId="5853110027233290280" fileName="SharedGet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" />
+    <scopeInfo nodeId="5853110027233290288" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="26" startPosition="200" endLine="33" endPosition="18">
       <varInfo nodeId="1924594752095549307" varName="result" />
-    </scopeInfo>
-    <scopeInfo nodeId="1924594752095998037" fileName="SharedGet_Constraints.java" startLine="36" startPosition="148" endLine="44" endPosition="214">
-      <varInfo nodeId="3570654511860220239" varName="expressionType" />
     </scopeInfo>
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0">
       <varInfo nodeId="1924594752095549307" varName="checkingNodeContext" />
@@ -42,14 +42,17 @@
       <varInfo nodeId="1924594752095549307" varName="operationContext" />
       <varInfo nodeId="1924594752095549307" varName="parentNode" />
     </scopeInfo>
-    <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="36" startPosition="0" endLine="46" endPosition="0">
+    <scopeInfo nodeId="1924594752095998037" fileName="SharedGet_Constraints.java" startLine="36" startPosition="148" endLine="47" endPosition="17">
+      <varInfo nodeId="5853110027233290271" varName="expressionType" />
+    </scopeInfo>
+    <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="36" startPosition="0" endLine="49" endPosition="0">
       <varInfo nodeId="1924594752095549307" varName="childConcept" />
       <varInfo nodeId="1924594752095549307" varName="link" />
       <varInfo nodeId="1924594752095549307" varName="node" />
       <varInfo nodeId="1924594752095549307" varName="operationContext" />
       <varInfo nodeId="1924594752095549307" varName="parentNode" />
     </scopeInfo>
-    <unitInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="15" startPosition="0" endLine="49" endPosition="0" unitName="TasksAndSyncs.constraints.SharedGet_Constraints" />
+    <unitInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="15" startPosition="0" endLine="52" endPosition="0" unitName="TasksAndSyncs.constraints.SharedGet_Constraints" />
   </root>
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/1924594752097616166">
     <nodeInfo nodeId="1924594752097616166" fileName="SharedType_Constraints.java" startLine="15" startPosition="35" endLine="16" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
@@ -242,28 +245,28 @@
     <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="32" startPosition="0" endLine="33" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="3570654511858687650" fileName="SharedSet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="3570654511858722882" fileName="SharedSet_Constraints.java" startLine="39" startPosition="5" endLine="40" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511858766772" fileName="SharedSet_Constraints.java" startLine="41" startPosition="400" endLine="42" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511858690405" fileName="SharedSet_Constraints.java" startLine="43" startPosition="5" endLine="44" endPosition="214" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="47" startPosition="0" endLine="48" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeChildBreakingPoint" />
+    <nodeInfo nodeId="5853110027233268523" fileName="SharedSet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233274580" fileName="SharedSet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5853110027233281618" fileName="SharedSet_Constraints.java" startLine="46" startPosition="5" endLine="47" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="50" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeChildBreakingPoint" />
     <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="SharedSet_Constraints#()V" />
     <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="28" startPosition="0" endLine="31" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="3570654511858682590" fileName="SharedSet_Constraints.java" startLine="36" startPosition="148" endLine="39" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="3570654511858759319" fileName="SharedSet_Constraints.java" startLine="40" startPosition="206" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="5853110027233265779" fileName="SharedSet_Constraints.java" startLine="40" startPosition="206" endLine="43" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="5853110027233271925" fileName="SharedSet_Constraints.java" startLine="43" startPosition="5" endLine="46" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="hasOwnCanBeChildMethod#()Z" />
     <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="canBeChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;Ljetbrains/mps/smodel/runtime/CheckingNodeContext;)Z" />
-    <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="36" startPosition="0" endLine="46" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="static_canBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
+    <nodeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="36" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="static_canBeAChild#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/smodel/IOperationContext;)Z" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="16" startPosition="34" endLine="17" endPosition="47" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="21" startPosition="43" endLine="22" endPosition="16" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="67" />
     <scopeInfo nodeId="3570654511858682591" fileName="SharedSet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" />
-    <scopeInfo nodeId="3570654511858759322" fileName="SharedSet_Constraints.java" startLine="41" startPosition="400" endLine="42" endPosition="19" />
+    <scopeInfo nodeId="5853110027233265782" fileName="SharedSet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" />
+    <scopeInfo nodeId="5853110027233271928" fileName="SharedSet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" />
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="26" startPosition="200" endLine="33" endPosition="18">
       <varInfo nodeId="3570654511858680035" varName="result" />
-    </scopeInfo>
-    <scopeInfo nodeId="3570654511858680088" fileName="SharedSet_Constraints.java" startLine="36" startPosition="148" endLine="44" endPosition="214">
-      <varInfo nodeId="3570654511858722885" varName="expressionType" />
     </scopeInfo>
     <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="25" startPosition="0" endLine="35" endPosition="0">
       <varInfo nodeId="3570654511858680035" varName="checkingNodeContext" />
@@ -273,14 +276,17 @@
       <varInfo nodeId="3570654511858680035" varName="operationContext" />
       <varInfo nodeId="3570654511858680035" varName="parentNode" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="36" startPosition="0" endLine="46" endPosition="0">
+    <scopeInfo nodeId="3570654511858680088" fileName="SharedSet_Constraints.java" startLine="36" startPosition="148" endLine="47" endPosition="17">
+      <varInfo nodeId="3570654511858722885" varName="expressionType" />
+    </scopeInfo>
+    <scopeInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="36" startPosition="0" endLine="49" endPosition="0">
       <varInfo nodeId="3570654511858680035" varName="childConcept" />
       <varInfo nodeId="3570654511858680035" varName="link" />
       <varInfo nodeId="3570654511858680035" varName="node" />
       <varInfo nodeId="3570654511858680035" varName="operationContext" />
       <varInfo nodeId="3570654511858680035" varName="parentNode" />
     </scopeInfo>
-    <unitInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="15" startPosition="0" endLine="49" endPosition="0" unitName="TasksAndSyncs.constraints.SharedSet_Constraints" />
+    <unitInfo nodeId="3570654511858680035" fileName="SharedSet_Constraints.java" startLine="15" startPosition="0" endLine="52" endPosition="0" unitName="TasksAndSyncs.constraints.SharedSet_Constraints" />
   </root>
   <root nodeRef="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)/4190647428591807515">
     <nodeInfo nodeId="4190647428591807515" fileName="FutureJoin_Constraints.java" startLine="16" startPosition="35" endLine="17" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.SuperConstructorInvocation" />
