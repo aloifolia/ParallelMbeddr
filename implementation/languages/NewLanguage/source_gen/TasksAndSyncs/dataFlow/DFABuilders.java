@@ -7,6 +7,6 @@ import jetbrains.mps.lang.dataFlow.DataFlowManager;
 
 public class DFABuilders extends DataFlowBuilders {
   public void install(DataFlowManager manager) {
-    manager.register("TasksAndSyncs.structure.SyncRessRef", new SyncRessRef_DataFlow());
+    manager.register("TasksAndSyncs.structure.SyncRessourceRef", new SyncRessourceRef_DataFlow());
   }
 }

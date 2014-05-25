@@ -10,6 +10,8 @@
 
 #include "GenericSharedDeclarations.h"
 
+#include <pthread.h>
+
 
 
 #ifdef __cplusplus
@@ -18,9 +20,13 @@ extern "C" {
 
 int32_t syncStuff_main(int32_t argc,char* argv[]);
 
-void syncStuff_initGlobalMutexes_0(void);
+void syncStuff_initGlobalMutexesFor1Module_0(void);
 
-void syncStuff_destroyGlobalMutexes_0(void);
+void syncStuff_destroyGlobalMutexesFor1Module_0(void);
+
+void syncStuff_initAllGlobalMutexes_0(void);
+
+void syncStuff_destroyAllGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus

@@ -10,9 +10,9 @@ import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class SyncRessourcePlain_Constraints extends BaseConstraintsDescriptor {
-  public SyncRessourcePlain_Constraints() {
-    super("TasksAndSyncs.structure.SyncRessourcePlain");
+public class SyncRessource_Constraints extends BaseConstraintsDescriptor {
+  public SyncRessource_Constraints() {
+    super("TasksAndSyncs.structure.SyncRessource");
   }
 
   @Override
@@ -32,7 +32,7 @@ public class SyncRessourcePlain_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAChild(SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
-    return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.Sync2");
+    return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.SyncStatement");
   }
 
   private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "6288388922746092275");

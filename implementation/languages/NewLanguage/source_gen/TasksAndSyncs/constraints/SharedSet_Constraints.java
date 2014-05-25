@@ -38,7 +38,7 @@ public class SharedSet_Constraints extends BaseConstraintsDescriptor {
       return false;
     }
     SNode expressionType = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true));
-    if (!(SNodeOperations.isInstanceOf(expressionType, "TasksAndSyncs.structure.SharedType"))) {
+    if (!(SNodeOperations.isInstanceOf(expressionType, "TasksAndSyncs.structure.SharedType")) && !(SNodeOperations.isInstanceOf(expressionType, "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
       return false;
     }
     return !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "TasksAndSyncs.structure.SharedType"), "baseType", true), "com.mbeddr.core.expressions.structure.VoidType"));

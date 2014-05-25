@@ -24,7 +24,7 @@ public class typeof_SyncRessNamed_InferenceRule extends AbstractInferenceRule_Ru
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessNamed";
+    return "TasksAndSyncs.structure.SyncRessourceNamed";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

@@ -7,8 +7,8 @@ import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.lang.dataFlow.DataFlowBuilderContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
-public class SyncRessRef_DataFlow extends DataFlowBuilder {
-  public SyncRessRef_DataFlow() {
+public class SyncRessourceRef_DataFlow extends DataFlowBuilder {
+  public SyncRessourceRef_DataFlow() {
   }
 
   public void build(final IOperationContext operationContext, final DataFlowBuilderContext _context) {

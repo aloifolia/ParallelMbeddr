@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
+  <root nodeRef="r:345b896d-de6a-4489-8c9b-7f5bc30ffd77(OriginalExamples.otherStuff)/5853110027215293222">
+    <unitInfo nodeId="5853110027215293222" fileName="toImport.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.otherStuff.toImport" />
+  </root>
   <root nodeRef="r:345b896d-de6a-4489-8c9b-7f5bc30ffd77(OriginalExamples.otherStuff)/6480032978531807461">
-    <nodeInfo nodeId="6480032978531792422" fileName="otherStuff.c" startLine="7" startPosition="2" endLine="7" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="6480032978531793929" fileName="otherStuff.c" startLine="7" startPosition="17" endLine="7" endPosition="24" conceptFqName="com.mbeddr.core.pointers.structure.ArrayInitExpression" />
-    <nodeInfo nodeId="6480032978531794018" fileName="otherStuff.c" startLine="7" startPosition="18" endLine="7" endPosition="19" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531794415" fileName="otherStuff.c" startLine="7" startPosition="20" endLine="7" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531794826" fileName="otherStuff.c" startLine="7" startPosition="22" endLine="7" endPosition="23" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531796027" fileName="otherStuff.c" startLine="8" startPosition="2" endLine="8" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="6480032978531800813" fileName="otherStuff.c" startLine="8" startPosition="17" endLine="8" endPosition="24" conceptFqName="com.mbeddr.core.pointers.structure.ArrayInitExpression" />
-    <nodeInfo nodeId="6480032978531801288" fileName="otherStuff.c" startLine="8" startPosition="18" endLine="8" endPosition="19" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531801635" fileName="otherStuff.c" startLine="8" startPosition="20" endLine="8" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531802000" fileName="otherStuff.c" startLine="8" startPosition="22" endLine="8" endPosition="23" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531803725" fileName="otherStuff.c" startLine="9" startPosition="2" endLine="9" endPosition="4" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="6480032978531804761" fileName="otherStuff.c" startLine="9" startPosition="2" endLine="9" endPosition="9" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="6480032978531803726" fileName="otherStuff.c" startLine="9" startPosition="2" endLine="9" endPosition="10" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="6480032978531804770" fileName="otherStuff.c" startLine="9" startPosition="7" endLine="9" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="6480032978531807581" fileName="otherStuff.c" startLine="10" startPosition="2" endLine="10" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="6480032978531807588" fileName="otherStuff.c" startLine="11" startPosition="2" endLine="11" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="6480032978531807589" fileName="otherStuff.c" startLine="11" startPosition="9" endLine="11" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="6480032978531807580" fileName="otherStuff.c" startLine="6" startPosition="0" endLine="13" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="6480032978531807578" fileName="otherStuff.c" startLine="5" startPosition="0" endLine="14" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
-    <nodeInfo nodeId="6480032978531807461" fileName="otherStuff.h" startLine="15" startPosition="0" endLine="16" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.otherStuff.main" />
-    <unitInfo nodeId="6480032978531807461" fileName="otherStuff.c" startLine="1" startPosition="0" endLine="15" endPosition="0" unitName="OriginalExamples.otherStuff.otherStuff" />
+    <nodeInfo nodeId="6480032978531792422" fileName="otherStuff.c" startLine="8" startPosition="2" endLine="8" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="6480032978531793929" fileName="otherStuff.c" startLine="8" startPosition="17" endLine="8" endPosition="24" conceptFqName="com.mbeddr.core.pointers.structure.ArrayInitExpression" />
+    <nodeInfo nodeId="6480032978531794018" fileName="otherStuff.c" startLine="8" startPosition="18" endLine="8" endPosition="19" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531794415" fileName="otherStuff.c" startLine="8" startPosition="20" endLine="8" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531794826" fileName="otherStuff.c" startLine="8" startPosition="22" endLine="8" endPosition="23" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531796027" fileName="otherStuff.c" startLine="9" startPosition="2" endLine="9" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="6480032978531800813" fileName="otherStuff.c" startLine="9" startPosition="17" endLine="9" endPosition="24" conceptFqName="com.mbeddr.core.pointers.structure.ArrayInitExpression" />
+    <nodeInfo nodeId="6480032978531801288" fileName="otherStuff.c" startLine="9" startPosition="18" endLine="9" endPosition="19" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531801635" fileName="otherStuff.c" startLine="9" startPosition="20" endLine="9" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531802000" fileName="otherStuff.c" startLine="9" startPosition="22" endLine="9" endPosition="23" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531803725" fileName="otherStuff.c" startLine="10" startPosition="2" endLine="10" endPosition="4" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="6480032978531804761" fileName="otherStuff.c" startLine="10" startPosition="2" endLine="10" endPosition="9" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="6480032978531803726" fileName="otherStuff.c" startLine="10" startPosition="2" endLine="10" endPosition="10" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="6480032978531804770" fileName="otherStuff.c" startLine="10" startPosition="7" endLine="10" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="6480032978531807581" fileName="otherStuff.c" startLine="11" startPosition="2" endLine="11" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="6480032978531807588" fileName="otherStuff.c" startLine="12" startPosition="2" endLine="12" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="6480032978531807589" fileName="otherStuff.c" startLine="12" startPosition="9" endLine="12" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="6480032978531807580" fileName="otherStuff.c" startLine="7" startPosition="0" endLine="14" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="6480032978531807578" fileName="otherStuff.c" startLine="6" startPosition="0" endLine="15" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="6480032978531807461" fileName="otherStuff.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.otherStuff.main" />
+    <unitInfo nodeId="6480032978531807461" fileName="otherStuff.c" startLine="1" startPosition="0" endLine="16" endPosition="0" unitName="OriginalExamples.otherStuff.otherStuff" />
   </root>
 </debugInfo>
 

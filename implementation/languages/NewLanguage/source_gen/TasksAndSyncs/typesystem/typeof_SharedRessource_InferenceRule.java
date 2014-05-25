@@ -15,11 +15,11 @@ public class typeof_SharedRessource_InferenceRule extends AbstractInferenceRule_
   public typeof_SharedRessource_InferenceRule() {
   }
 
-  public void applyRule(final SNode sharedRessourceType, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode sharedType, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      SNode _nodeToCheck_1029348928467 = sharedRessourceType;
+      SNode _nodeToCheck_1029348928467 = sharedType;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752095483152", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752095482553", true), (SNode) SNodeOperations.copyNode(sharedRessourceType), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752095482553", true), (SNode) SNodeOperations.copyNode(sharedType), _info_12389875345);
     }
   }
 

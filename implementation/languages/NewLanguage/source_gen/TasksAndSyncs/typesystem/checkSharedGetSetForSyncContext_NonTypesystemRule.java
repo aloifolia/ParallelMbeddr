@@ -27,12 +27,12 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
     if (SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedGet") || SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedSet")) {
       final SNode sharedExpr = SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGetOrSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
 
-      if (SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncRessRef")) {
+      if (SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncRessourceRef")) {
         return;
       }
 
       if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.statements.structure.LocalVarRef")) {
-        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.Sync2")).any(new IWhereFilter<SNode>() {
+        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode sync) {
             return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
               public boolean accept(SNode syncRessource) {
@@ -47,7 +47,7 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
           }
         }
       } else if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.modules.structure.GlobalVarRef")) {
-        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.Sync2")).any(new IWhereFilter<SNode>() {
+        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode sync) {
             return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
               public boolean accept(SNode syncRessource) {
@@ -62,7 +62,7 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
           }
         }
       } else if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.modules.structure.ArgumentRef")) {
-        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.Sync2")).any(new IWhereFilter<SNode>() {
+        if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode sync) {
             return ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).any(new IWhereFilter<SNode>() {
               public boolean accept(SNode syncRessource) {

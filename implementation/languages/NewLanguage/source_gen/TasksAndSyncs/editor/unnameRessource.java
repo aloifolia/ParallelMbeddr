@@ -28,7 +28,7 @@ public class unnameRessource {
     }
 
     public void execute_internal(EditorContext editorContext, SNode node) {
-      SNode syncRessource = SNodeFactoryOperations.createNewNode("TasksAndSyncs.structure.SyncRessourcePlain", null);
+      SNode syncRessource = SNodeFactoryOperations.createNewNode("TasksAndSyncs.structure.SyncRessource", null);
       SLinkOperations.setTarget(syncRessource, "expression", SNodeOperations.copyNode(SLinkOperations.getTarget(node, "expression", true)), true);
       SNodeOperations.replaceWithAnother(node, syncRessource);
     }

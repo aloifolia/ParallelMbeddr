@@ -9,8 +9,8 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.typesystem.inference.TypeChecker;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
@@ -22,17 +22,18 @@ public class checkSyncRessourcesForSharedness_NonTypesystemRule extends Abstract
 
   public void applyRule(final SNode sync, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     for (SNode ressource : ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true))) {
-      if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(ressource), "TasksAndSyncs.structure.SharedType"))) {
+      SNode ressourceType = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(ressource, "expression", true));
+      if (!(SNodeOperations.isInstanceOf(ressourceType, "TasksAndSyncs.structure.SharedType")) && !(SNodeOperations.isInstanceOf(ressourceType, "com.mbeddr.core.pointers.structure.PointerType")) && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(ressourceType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType")) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(ressource, "only shared ressources are synchronizeable", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6553204290892996497", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(ressource, "only shared ressource reference or pointer to shared ressource allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5853110027224839643", null, errorTarget);
         }
       }
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.Sync";
+    return "TasksAndSyncs.structure.SyncStatement";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

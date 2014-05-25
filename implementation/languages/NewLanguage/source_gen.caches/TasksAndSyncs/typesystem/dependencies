@@ -86,7 +86,6 @@
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_SyncRessNamed_InferenceRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_SyncRessRef_InferenceRule" />
-    <classNode dependClassName="TasksAndSyncs.typesystem.typeof_Sync_InferenceRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_Task_InferenceRule" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.InequationReplacementRule_Runtime" />
@@ -364,7 +363,6 @@
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.Runnable" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
@@ -391,17 +389,6 @@
   <dependency className="TasksAndSyncs.typesystem.typeof_SyncRessRef_InferenceRule" file="typeof_SyncRessRef_InferenceRule.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
-    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />
-    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractInferenceRule_Runtime" />
-    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.InferenceRule_Runtime" />
-  </dependency>
-  <dependency className="TasksAndSyncs.typesystem.typeof_Sync_InferenceRule" file="typeof_Sync_InferenceRule.java">
-    <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
     <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.EquationInfo" />

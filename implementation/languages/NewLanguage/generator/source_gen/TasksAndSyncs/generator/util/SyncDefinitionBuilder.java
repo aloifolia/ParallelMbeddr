@@ -19,6 +19,7 @@ import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
+import jetbrains.mps.typesystem.inference.TypeChecker;
 
 public class SyncDefinitionBuilder {
 
@@ -836,7 +837,7 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static SNode buildStartSyncFunction(final TemplateQueryContext genContext, List<SNode> ressources) {
+  public static SNode buildStartSyncFunction(final TemplateQueryContext genContext, int numberOfArguments) {
     final SNode whileLoop = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_3348893923577374856 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -865,7 +866,7 @@ public class SyncDefinitionBuilder {
 
     List<SNode> arguments = new ArrayList<SNode>();
     List<SNode> argumentRefs = new ArrayList<SNode>();
-    for (SNode ressource : ListSequence.fromList(ressources)) {
+    for (int i = 0; i < numberOfArguments; ++i) {
       final SNode argument = new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
           final SNode node_3348893923579976538 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -923,9 +924,9 @@ public class SyncDefinitionBuilder {
               return res;
             }
           }.invoke();
-          final SNode node_3348893923577594526 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_5853110027229257734 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
-              SNode res = argumentRef;
+              SNode res = SNodeOperations.copyNode(argumentRef);
               return res;
             }
           }.invoke();
@@ -935,7 +936,7 @@ public class SyncDefinitionBuilder {
               SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
               SPropertyOperations.set(res, "calledFunctionName", ("mutex_trylock"));
               SLinkOperations.setTarget(res, "dummyType", node_3348893923577562266, true);
-              ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_3348893923577594526);
+              ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_5853110027229257734);
               return res;
             }
           }.invoke();
@@ -984,7 +985,7 @@ public class SyncDefinitionBuilder {
           public SNode invoke() {
             final SNode node_3348893923577833650 = new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
-                SNode res = previousArgRef;
+                SNode res = SNodeOperations.copyNode(previousArgRef);
                 return res;
               }
             }.invoke();
@@ -1060,7 +1061,7 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static SNode buildStopSyncFunction(final TemplateQueryContext genContext, List<SNode> ressources) {
+  public static SNode buildStopSyncFunction(final TemplateQueryContext genContext, int numberOfArguments) {
     SNode stopSyncFunction = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_3348893923577842215 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1094,7 +1095,7 @@ public class SyncDefinitionBuilder {
 
     List<SNode> arguments = new ArrayList<SNode>();
     List<SNode> unlockStatements = new ArrayList<SNode>();
-    for (SNode ressource : ListSequence.fromList(ressources)) {
+    for (int i = 0; i < numberOfArguments; ++i) {
       final SNode argument = new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
           final SNode node_3348893923579966801 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1170,19 +1171,23 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static Tuples._2<List<SNode>, List<SNode>> buildMutexDeclarationsAndReferences(final TemplateQueryContext genContext, List<SNode> expressions) {
+
+  /**
+   * TODO: remove
+   */
+  public static Tuples._2<List<SNode>, List<SNode>> buildMutexDeclarationsAndReferences(final TemplateQueryContext genContext, List<SNode> ressources) {
     List<SNode> references = new ArrayList<SNode>();
     final List<SNode> mutexDeclarations = new ArrayList<SNode>();
 
-    for (final SNode expression : ListSequence.fromList(expressions)) {
+    for (final SNode ressource : ListSequence.fromList(ressources)) {
+      final Wrappers._T<SNode> wrappedExpression = new Wrappers._T<SNode>();
       // preserve the binding of * for dereferences in the output: (*foo).mutex 
-      final Wrappers._T<SNode> wrappedExpression = new Wrappers._T<SNode>(expression);
-      if (SNodeOperations.isInstanceOf(expression, "com.mbeddr.core.pointers.structure.DerefExpr")) {
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(ressource, "expression", true), "com.mbeddr.core.pointers.structure.DerefExpr")) {
         wrappedExpression.value = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             final SNode node_3018789929293339415 = new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
-                SNode res = expression;
+                SNode res = SLinkOperations.getTarget(ressource, "expression", true);
                 return res;
               }
             }.invoke();
@@ -1196,6 +1201,8 @@ public class SyncDefinitionBuilder {
             return node_3018789929293338739;
           }
         }.invoke();
+      } else {
+        wrappedExpression.value = SLinkOperations.getTarget(ressource, "expression", true);
       }
 
       ListSequence.fromList(mutexDeclarations).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1285,6 +1292,97 @@ public class SyncDefinitionBuilder {
     }
 
     return MultiTuple.<List<SNode>,List<SNode>>from(mutexDeclarations, references);
+  }
+
+
+
+  public static List<SNode> buildMutexRefs(TemplateQueryContext genContext, List<SNode> ressources) {
+    List<SNode> mutexReferences = new ArrayList<SNode>();
+
+    for (final SNode ressource : ListSequence.fromList(ressources)) {
+      final Wrappers._T<SNode> wrappedExpression = new Wrappers._T<SNode>();
+      // preserve the binding of * for dereferences in the output: (*foo).mutex 
+      if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(ressource, "expression", true), "com.mbeddr.core.pointers.structure.DerefExpr")) {
+        wrappedExpression.value = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            final SNode node_5853110027229907128 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SLinkOperations.getTarget(ressource, "expression", true);
+                return res;
+              }
+            }.invoke();
+            SNode node_5853110027229907127 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.ParensExpression", null);
+                SLinkOperations.setTarget(res, "expression", node_5853110027229907128, true);
+                return res;
+              }
+            }.invoke();
+            return node_5853110027229907127;
+          }
+        }.invoke();
+      } else {
+        wrappedExpression.value = SLinkOperations.getTarget(ressource, "expression", true);
+      }
+
+      final Wrappers._T<String> mutexAccessSign = new Wrappers._T<String>();
+      if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(ressource, "expression", true)), "com.mbeddr.core.pointers.structure.PointerType")) {
+        mutexAccessSign.value = "->";
+      } else {
+        mutexAccessSign.value = ".";
+      }
+
+      ListSequence.fromList(mutexReferences).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
+        public SNode invoke() {
+          final SNode node_5853110027231590363 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = wrappedExpression.value;
+              return res;
+            }
+          }.invoke();
+          final SNode node_5853110027231590361 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AnyNodeItem", null);
+              SLinkOperations.setTarget(res, "theNode", node_5853110027231590363, true);
+              return res;
+            }
+          }.invoke();
+          final SNode node_5853110027231590366 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
+              SPropertyOperations.set(res, "text", (mutexAccessSign.value + "mutex"));
+              return res;
+            }
+          }.invoke();
+          final SNode node_5853110027232305191 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextExpression", null);
+              SPropertyOperations.set(res, "requiredStdHeader", (null));
+              ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_5853110027231590361);
+              ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_5853110027231590366);
+              return res;
+            }
+          }.invoke();
+          final SNode node_5853110027232303628 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.ParensExpression", null);
+              SLinkOperations.setTarget(res, "expression", node_5853110027232305191, true);
+              return res;
+            }
+          }.invoke();
+          SNode node_5853110027231590358 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.ReferenceExpr", null);
+              SLinkOperations.setTarget(res, "expression", node_5853110027232303628, true);
+              return res;
+            }
+          }.invoke();
+          return node_5853110027231590358;
+        }
+      }.invoke());
+    }
+
+    return mutexReferences;
   }
 
 

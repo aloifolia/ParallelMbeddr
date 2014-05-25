@@ -5,7 +5,7 @@ package TasksAndSyncs.behavior;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
-public class SyncRessRef_Behavior {
+public class SyncRessourceRef_Behavior {
   public static void init(SNode thisNode) {
   }
 

@@ -144,5 +144,29 @@
     </dependencies>
     <rename id="6i3o.6553204290893807643" type="CONCEPT" from="SyncRessourcePlain" to="SyncRess" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="23" />
+    </dependencies>
+    <rename id="6i3o.6553204290894227496" type="CONCEPT" from="Sync2" to="SyncStatement" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="24" />
+    </dependencies>
+    <rename id="6i3o.6553204290893807643" type="CONCEPT" from="SyncRessourcePlain" to="SyncRessource" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="25" />
+    </dependencies>
+    <rename id="6i3o.6288388922743435028" type="CONCEPT" from="SyncRessRef" to="SyncRessourceRef" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="26" />
+    </dependencies>
+    <rename id="6i3o.6288388922742659454" type="CONCEPT" from="SyncRessNamed" to="SyncRessourceNamed" />
+  </StructureModification>
 </history>
 

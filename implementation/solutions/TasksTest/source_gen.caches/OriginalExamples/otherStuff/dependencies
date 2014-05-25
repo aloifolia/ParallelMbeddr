@@ -4,5 +4,7 @@
   <dependency className="OriginalExamples.otherStuff.TypeSizeConfiguration (O.otherStuff)" file="TypeSizeConfiguration (O.otherStuff)" />
   <dependency className="OriginalExamples.otherStuff.otherStuff" file="otherStuff.c" />
   <dependency className="OriginalExamples.otherStuff.otherStuff" file="otherStuff.h" />
+  <dependency className="OriginalExamples.otherStuff.toImport" file="toImport.c" />
+  <dependency className="OriginalExamples.otherStuff.toImport" file="toImport.h" />
 </dependenciesRoot>
 

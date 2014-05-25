@@ -8,7 +8,7 @@ import com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 
-public class Sync2_Behavior {
+public class SyncStatement_Behavior {
   public static void init(SNode thisNode) {
   }
 

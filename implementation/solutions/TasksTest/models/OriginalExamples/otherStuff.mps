@@ -107,6 +107,9 @@
         </node>
       </node>
     </node>
+    <node role="imports" roleId="x27k.1317894735999304826" type="vs0r.DefaultGenericChunkDependency" typeId="vs0r.747084250476811597" id="5853110027215293954" nodeInfo="ng">
+      <link role="chunk" roleId="vs0r.747084250476878887" targetNodeId="5853110027215293222" resolveInfo="toImport" />
+    </node>
   </root>
   <root type="mj1l.TypeSizeConfiguration" typeId="mj1l.3335993110369795380" id="6480032978531810188" nodeInfo="ng">
     <node role="pointerDiffType" roleId="mj1l.3813668170744198630" type="mj1l.UnsignedInt32tType" typeId="mj1l.8463282783691618450" id="6480032978531810236" nodeInfo="ng">
@@ -295,7 +298,13 @@
       <node role="referencedModules" roleId="51wr.5046689135693761559" type="51wr.ModuleRef" typeId="51wr.7717755763392524107" id="6480032978531810407" nodeInfo="ng">
         <link role="module" roleId="51wr.7717755763392524108" targetNodeId="6480032978531807461" resolveInfo="otherStuff" />
       </node>
+      <node role="referencedModules" roleId="51wr.5046689135693761559" type="51wr.ModuleRef" typeId="51wr.7717755763392524107" id="5853110027215294672" nodeInfo="ng">
+        <link role="module" roleId="51wr.7717755763392524108" targetNodeId="5853110027215293222" resolveInfo="toImport" />
+      </node>
     </node>
+  </root>
+  <root type="x27k.ImplementationModule" typeId="x27k.6437088627575722830" id="5853110027215293222" nodeInfo="ng">
+    <property name="name" nameId="tpck.1169194664001" value="toImport" />
   </root>
 </model>
 
