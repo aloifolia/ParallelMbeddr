@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="4lzng1eyplowwnpymjke5uwf30oi006">
+<dependencies version="2" modelHash="-cixd9f1dgwozeqasz8m6hy7c7h08trv">
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.util(JDK/java.util@java_stub)" />
@@ -7,6 +7,7 @@
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.components(MPS.Core/jetbrains.mps.components@java_stub)" />
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.generator.runtime(MPS.Core/jetbrains.mps.generator.runtime@java_stub)" />
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.generator.template(MPS.Core/jetbrains.mps.generator.template@java_stub)" />
+  <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.behaviour(MPS.Core/jetbrains.mps.smodel.behaviour@java_stub)" />
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.language(MPS.Core/jetbrains.mps.smodel.language@java_stub)" />
   <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
   <dep model="f:java_stub#8865b7a8-5271-43d3-884c-6fd1d9cfdd34#org.jetbrains.mps.openapi.model(MPS.OpenAPI/org.jetbrains.mps.openapi.model@java_stub)" />
@@ -42,10 +43,11 @@
   <dep model="r:c6ce92e7-5a98-4a6f-866a-ec8b9e945dd8(com.mbeddr.core.expressions.behavior)" hash="ea3m6p9rtkkizrp7e8xo32i2bby1ooo" />
   <dep model="r:c71b740e-a20d-4190-9688-0f8df932da4d(jetbrains.mps.baseLanguage.tuples.generator.template.main@generator)" hash="2523qsg2wkvgaszvvvm7oz1usghuhbm" />
   <dep model="r:d1558b8f-fc9e-4ca7-bb90-70ac789f336e(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.post@generator)" hash="d89nlgk5po3tb7rzdfyr42lqyn0e1xk" />
+  <dep model="r:da9fd96f-5c71-45ab-b2da-1aa6232ec67f(com.mbeddr.core.statements.behavior)" hash="cjiytaj141brqgv3nlmvldr36apyxzx" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
   <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" hash="a576g9gc2wfnw9bdzsbk3tlpczw0kkk" />
   <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" hash="3x2smvppmr270aafmczj8hmunnhm13i" />
-  <common hash="ei05p19y47o7cmremgshr7u37ozgbdr" dependsOnNodes="true">
+  <common hash="bv99ka3u9xbizp6j6cjesh4hf7zxty8" dependsOnNodes="true">
     <dep root="1304213873204338637" />
     <dep root="2648922052117976115" />
     <dep root="2852056939580752790" />
@@ -63,6 +65,7 @@
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.components(MPS.Core/jetbrains.mps.components@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.generator.runtime(MPS.Core/jetbrains.mps.generator.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.generator.template(MPS.Core/jetbrains.mps.generator.template@java_stub)" />
+    <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.behaviour(MPS.Core/jetbrains.mps.smodel.behaviour@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.smodel.language(MPS.Core/jetbrains.mps.smodel.language@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="f:java_stub#8865b7a8-5271-43d3-884c-6fd1d9cfdd34#org.jetbrains.mps.openapi.model(MPS.OpenAPI/org.jetbrains.mps.openapi.model@java_stub)" />
@@ -98,20 +101,21 @@
     <dep model="r:c6ce92e7-5a98-4a6f-866a-ec8b9e945dd8(com.mbeddr.core.expressions.behavior)" />
     <dep model="r:c71b740e-a20d-4190-9688-0f8df932da4d(jetbrains.mps.baseLanguage.tuples.generator.template.main@generator)" />
     <dep model="r:d1558b8f-fc9e-4ca7-bb90-70ac789f336e(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.post@generator)" />
+    <dep model="r:da9fd96f-5c71-45ab-b2da-1aa6232ec67f(com.mbeddr.core.statements.behavior)" />
     <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" />
     <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" />
     <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" />
     <file name="QueriesGenerated.java" />
   </common>
-  <source id="1304213873204338637" name="main" hash="dlvfs7m3280vb89lkejkri3dzy08b36">
+  <source id="1304213873204338637" name="main" hash="7sg55ook7imjkv6wj808ypwydtpcr5k">
     <dep model="r:00000000-0000-4000-0000-011c895902e9(jetbrains.mps.lang.generator.generator.baseLanguage.template.main@generator)" />
   </source>
   <source id="8801852084534119714" name="TypeSizeConfiguration (T.g.t.main)" hash="bz33m8ovw1ps3vfrbtocdf371bxwfil" />
   <source id="4644263955273508744" name="weave_TaskArgsStruct" hash="-2f8aigfbvwjw2t4541r47kv2ynqbybx" />
-  <source id="4644263955274589693" name="weave_TaskFunDecl" hash="-8mhlxb5vqoknnpqg9ouqbn2udyx0awc" />
+  <source id="4644263955274589693" name="weave_TaskFunDecl" hash="djida4zfr2jj9ldf87nk6sqefaeo6z7" />
   <source id="6340335959758487421" name="importGenericTaskDeclarations" hash="-h6ji53nursbrgyk9bvfzeot51gc6s6" />
   <source id="7288607883539514946" name="weave_FutureFunction" hash="8p76e2igushuoq8ko5ycu74orbe58xv" />
-  <source id="482600553440749741" name="weave_VoidTaskFunDecl" hash="-bvmmkxzsst3ijfxfznrwxjgg3gr2fqe" />
+  <source id="482600553440749741" name="weave_VoidTaskFunDecl" hash="cp7b8wyht88ss93zf9cgme5bu9nd50q" />
   <source id="2852056939580752790" name="importSharedDeclarations" hash="-99f0qzhxceafxptbcrat50jmoui92gd" />
   <source id="2648922052117976115" name="replaceSharedTypesByStructs" hash="bbh33jwtujnjvichbr2p5m9i2uap71f" />
   <source id="3348893923579063299" name="replaceSyncDeclarations" hash="-dllcvjvt9ro1julslyya4b4oejgtttx" />
