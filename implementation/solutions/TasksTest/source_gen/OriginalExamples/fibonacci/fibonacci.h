@@ -18,7 +18,7 @@
 extern "C" {
 #endif
 
-#define FIBONACCI_fiboCount (50)
+#define FIBONACCI_fiboCount (40)
 int32_t fibonacci_main(int32_t argc,char* argv[]);
 
 

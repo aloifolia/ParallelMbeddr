@@ -398,8 +398,8 @@ public class SyncDefinitionBuilder {
 
   public static List<SNode> buildInitMutexCallsFor(TemplateQueryContext genContext, SNode initMutexFunction, SNode currentType, SNode currentPath, final SNode currentInit) {
     // If the variable type is a one dimensional array the dimension may have to be extracted from the 
-    // initialization list. However, multi-dimensional arrays and arrays as struct fields carry their   
-    // dimensions always with themselves. 
+    // initialization list. In comparison, multi-dimensional arrays and arrays as struct fields carry    
+    // their dimensions always with themselves. 
     {
       SNode arrayType = currentType;
       if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
@@ -509,7 +509,7 @@ public class SyncDefinitionBuilder {
 
     List<SNode> subCalls = buildNestedInitMutexCallsFor(genContext, initMutexFunction, SLinkOperations.getTarget(currentType, "baseType", true), subPath);
 
-    if (subCalls == null) {
+    if (subCalls == null || ListSequence.fromList(subCalls).isEmpty()) {
       return null;
     }
 
