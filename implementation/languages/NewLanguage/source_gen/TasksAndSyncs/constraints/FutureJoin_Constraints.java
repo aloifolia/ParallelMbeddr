@@ -37,7 +37,10 @@ public class FutureJoin_Constraints extends BaseConstraintsDescriptor {
     if (!(SNodeOperations.isInstanceOf(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"))) {
       return false;
     }
-    return SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.FutureType");
+    if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.FutureType"))) {
+      return false;
+    }
+    return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)), "TasksAndSyncs.structure.FutureType"), "returnType", true), "com.mbeddr.core.expressions.structure.VoidType");
   }
 
   private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "4190647428591808681");
