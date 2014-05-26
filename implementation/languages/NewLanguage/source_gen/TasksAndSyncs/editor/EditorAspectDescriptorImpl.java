@@ -17,28 +17,22 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 0:
         return Collections.<ConceptEditor>singletonList(new ExprBoundToStruct_Editor());
       case 1:
-        return Collections.<ConceptEditor>singletonList(new FutureContainer_Editor());
-      case 2:
-        return Collections.<ConceptEditor>singletonList(new FutureJoinContainer_Editor());
-      case 3:
-        return Collections.<ConceptEditor>singletonList(new FutureResultContainer_Editor());
-      case 4:
         return Collections.<ConceptEditor>singletonList(new FutureType_Editor());
-      case 5:
+      case 2:
         return Collections.<ConceptEditor>singletonList(new SharedSet_Editor());
-      case 6:
+      case 3:
         return Collections.<ConceptEditor>singletonList(new SharedType_Editor());
-      case 7:
+      case 4:
         return Collections.<ConceptEditor>singletonList(new SyncRessource_Editor());
-      case 8:
+      case 5:
         return Collections.<ConceptEditor>singletonList(new SyncRessourceNamed_Editor());
-      case 9:
+      case 6:
         return Collections.<ConceptEditor>singletonList(new SyncRessourceRef_Editor());
-      case 10:
+      case 7:
         return Collections.<ConceptEditor>singletonList(new SyncStatement_Editor());
-      case 11:
+      case 8:
         return Collections.<ConceptEditor>singletonList(new Task_Editor());
-      case 12:
+      case 9:
         return Collections.<ConceptEditor>singletonList(new TaskType_Editor());
       default:
     }
@@ -56,5 +50,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
   }
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0a = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

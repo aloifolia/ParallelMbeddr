@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-doo4toazakb8vkf2ecwnta5mq3zbkrj">
+<dependencies version="2" modelHash="-d0dyc5bwr1d0b1qd6286bff5km32540">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
@@ -26,9 +26,6 @@
     <dep root="6288388922743435028" />
     <dep root="6553204290893807643" />
     <dep root="6553204290894227496" />
-    <dep root="6843270485077468311" />
-    <dep root="7288607883536646834" />
-    <dep root="7288607883536878936" />
     <dep root="961131662869355681" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
@@ -48,10 +45,7 @@
   <source id="1304213873205049565" name="TaskType" hash="358buxlpgsy8cmdhx73vvn785rrd571" />
   <source id="1304213873205054831" name="FutureType" hash="-6u0ftnzjom63sd12ur4v5p7hx5ugyxx" />
   <source id="2744793885339890637" name="FutureResult" hash="el2fnfxixsjm5jkl9n3ju0vkucglgt8" />
-  <source id="6843270485077468311" name="FutureContainer" hash="-63iq7i708gknadnsjown4x2aa2lfa46" />
   <source id="3074299910025607357" name="ExprBoundToStruct" hash="-bda8q8shzkufh6w6aaf6gly3v0c2nhl" />
-  <source id="7288607883536646834" name="FutureJoinContainer" hash="-d3wb3p5w67p1qaz5ypb2315s3q76hqh" />
-  <source id="7288607883536878936" name="FutureResultContainer" hash="1cperzfumfluslk8u119ohzgo3935ue" />
   <source id="961131662869355681" name="CompoundLiteral" hash="3bpxl856mf7ode6fr6k1ko81i86snau" />
   <source id="1924594752095321661" name="SharedType" hash="-3iaiv5f3agr3uqt656xdumtsqyoudnk" />
   <source id="1924594752095502558" name="SharedGet" hash="azemzghyy0inw1wvg9m03bfpt26s43" />

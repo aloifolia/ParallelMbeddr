@@ -20,41 +20,35 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 2:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Future").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").properties("variableName").alias("run", "").create();
       case 3:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureContainer").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"task"}, new boolean[]{false}).create();
-      case 4:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureJoin").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("join", "").create();
-      case 5:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureJoinContainer").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"future"}, new boolean[]{false}).create();
-      case 6:
+      case 4:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureResult").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("result", "").create();
-      case 7:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureResultContainer").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"future"}, new boolean[]{false}).create();
-      case 8:
+      case 5:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.FutureType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType"}, new boolean[]{false}).alias("Future", "").create();
-      case 9:
+      case 6:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Share").super_("jetbrains.mps.baseLanguage.structure.Expression").parents("jetbrains.mps.baseLanguage.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("share", "").create();
-      case 10:
+      case 7:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SharedGet").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").alias("get", "").create();
-      case 11:
+      case 8:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SharedSet").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.expressions.structure.IGenericDotTarget").children(new String[]{"value"}, new boolean[]{false}).alias("set", "").create();
-      case 12:
+      case 9:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SharedType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"baseType"}, new boolean[]{false}).alias("shared", "").create();
-      case 13:
+      case 10:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessource").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).create();
-      case 14:
+      case 11:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceNamed").super_("TasksAndSyncs.structure.SyncRessource").parents("TasksAndSyncs.structure.SyncRessource", "com.mbeddr.core.base.structure.IIdentifierNamedConcept").create();
-      case 15:
+      case 12:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceRef").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.base.structure.IReference").references("syncRessource").create();
-      case 16:
+      case 13:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStatement").super_("com.mbeddr.core.statements.structure.Statement").parents("com.mbeddr.core.statements.structure.Statement", "com.mbeddr.core.statements.structure.ILocalVarScopeProvider").children(new String[]{"ressources", "statements"}, new boolean[]{true, false}).alias("sync", "").create();
-      case 17:
+      case 14:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).alias("|", "").create();
-      case 18:
+      case 15:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.TaskType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType"}, new boolean[]{false}).alias("Task", "").create();
       default:
         return StructureAspectInterpreted.getInstance().getDescriptor(conceptFqName);
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.CompoundLiteral", "TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureContainer", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureJoinContainer", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureResultContainer", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.CompoundLiteral", "TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

@@ -15,7 +15,7 @@
   <dep model="r:9058158e-0926-42f8-8d00-d1d86f1ff722(com.mbeddr.core.debug.behavior)" hash="-8mzndnnjd8q7aqrzsdhtu6hcipn90k9" />
   <dep model="r:95397225-9080-48bc-b1aa-0ce7c4f3d2ce(jetbrains.mps.lang.traceable.behavior)" hash="-50o2eb4gj9y6plhtyg7xngclc55vzq9" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-doo4toazakb8vkf2ecwnta5mq3zbkrj" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-d0dyc5bwr1d0b1qd6286bff5km32540" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:c6ce92e7-5a98-4a6f-866a-ec8b9e945dd8(com.mbeddr.core.expressions.behavior)" hash="ea3m6p9rtkkizrp7e8xo32i2bby1ooo" />
@@ -60,10 +60,7 @@
     <file name="BehaviorAspectDescriptor.java" />
     <file name="CompoundLiteral_BehaviorDescriptor.java" />
     <file name="ExprBoundToStruct_BehaviorDescriptor.java" />
-    <file name="FutureContainer_BehaviorDescriptor.java" />
-    <file name="FutureJoinContainer_BehaviorDescriptor.java" />
     <file name="FutureJoin_BehaviorDescriptor.java" />
-    <file name="FutureResultContainer_BehaviorDescriptor.java" />
     <file name="FutureResult_BehaviorDescriptor.java" />
     <file name="FutureType_BehaviorDescriptor.java" />
     <file name="Future_BehaviorDescriptor.java" />
