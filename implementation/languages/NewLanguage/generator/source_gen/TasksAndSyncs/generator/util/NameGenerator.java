@@ -79,4 +79,10 @@ public class NameGenerator {
   public static String getFutureResultFunctionName() {
     return "getFutureResult";
   }
+
+
+
+  public static String getFutureSaveAndResultFunctionName() {
+    return "saveFutureAndGetResult";
+  }
 }

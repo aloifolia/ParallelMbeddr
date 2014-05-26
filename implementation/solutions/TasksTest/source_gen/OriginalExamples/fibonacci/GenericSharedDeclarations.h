@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include "GenericSyncDeclarations.h"
+
 #include <pthread.h>
 
 
