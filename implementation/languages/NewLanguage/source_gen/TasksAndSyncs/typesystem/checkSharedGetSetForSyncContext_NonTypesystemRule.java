@@ -23,7 +23,7 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
   }
 
   public void applyRule(final SNode sharedGetOrSet, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    // this rule checks lexically whether a shared ressource that is to be set oder get is synchronized 
+    // this rule asserts lexically whether a shared ressource that is to be set oder get is synchronized 
     // in some surrounding sync context 
     if (SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedGet") || SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedSet")) {
       final SNode sharedExpr = SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGetOrSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);

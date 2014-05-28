@@ -23,23 +23,15 @@ public class checkTaskForAddressDeReference_NonTypesystemRule extends AbstractNo
 
   public void applyRule(final SNode task, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     Iterable<SNode> expressionsToCheck = Sequence.fromIterable(Sequence.<SNode>singleton(SLinkOperations.getTarget(task, "expression", true))).concat(ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(task, "expression", true), "com.mbeddr.core.expressions.structure.Expression", false, new String[]{})));
-
     for (SNode dereference : Sequence.fromIterable(SNodeOperations.ofConcept(expressionsToCheck, "com.mbeddr.core.pointers.structure.DerefExpr"))) {
-      if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(dereference, "expression", true)), "TasksAndSyncs.structure.SharedType"))) {
+      if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(dereference, "expression", true)), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
           IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(dereference, "only pointers to shared ressources may be dereferenced (*) in task context", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5669061138460795729", null, errorTarget);
         }
       }
     }
-    for (SNode reference : Sequence.fromIterable(SNodeOperations.ofConcept(expressionsToCheck, "com.mbeddr.core.pointers.structure.ReferenceExpr"))) {
-      if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(reference, "expression", true)), "TasksAndSyncs.structure.SharedType"))) {
-        {
-          MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(reference, "only shared ressources may be referenced (&) in task context", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5669061138460797309", null, errorTarget);
-        }
-      }
-    }
+
   }
 
   public String getApplicableConceptFQName() {

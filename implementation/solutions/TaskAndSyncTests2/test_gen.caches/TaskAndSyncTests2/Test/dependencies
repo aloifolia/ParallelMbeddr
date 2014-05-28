@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="TaskAndSyncTests2.Test.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="TaskAndSyncTests2.Test.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="TaskAndSyncTests2.Test.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="TaskAndSyncTests2.Test.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="TaskAndSyncTests2.Test.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="TaskAndSyncTests2.Test.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+</dependenciesRoot>
+

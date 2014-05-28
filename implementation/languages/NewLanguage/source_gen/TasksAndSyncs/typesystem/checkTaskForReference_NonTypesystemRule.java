@@ -34,7 +34,7 @@ public class checkTaskForReference_NonTypesystemRule extends AbstractNonTypesyst
             IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(expression, "array " + arrayString + " cannot be used in pointer-like copy position => use safe access through: *shared<" + arrayString + ">", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6480032978539178806", null, errorTarget);
           }
         } else {
-          for (String errorMessage : Checker.checkExprForUnsyncedPointers(expression)) {
+          for (String errorMessage : Checker.checkExprForUnsharedPointers(expression)) {
             {
               MessageTarget errorTarget = new NodeMessageTarget();
               IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(expression, errorMessage, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6480032978538683224", null, errorTarget);

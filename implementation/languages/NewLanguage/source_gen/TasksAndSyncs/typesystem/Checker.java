@@ -5,9 +5,9 @@ package TasksAndSyncs.typesystem;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.List;
+import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
-import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
@@ -38,23 +38,29 @@ public class Checker {
 
 
 
-  public static List<String> checkExprForUnsyncedPointers(SNode expression) {
+  public static List<String> checkExprForUnsharedPointers(SNode expression) {
+    return checkTypeForUnsharedPointers(TypeChecker.getInstance().getTypeOf(expression));
+  }
+
+
+
+  public static List<String> checkTypeForUnsharedPointers(SNode type) {
     List<String> errorMessages = ListSequence.fromList(new ArrayList<String>());
-    {
-      SNode pointerType = TypeChecker.getInstance().getTypeOf(expression);
-      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
-        if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(pointerType, "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
-          ListSequence.fromList(errorMessages).addElement("node of pointer type must point to shared ressource");
-        }
+    if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
+      SNode pointerType = SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.PointerType");
+      if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(pointerType, "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
+        ListSequence.fromList(errorMessages).addElement("node of pointer type must point to shared ressource");
+      } else {
+        ListSequence.fromList(errorMessages).addSequence(ListSequence.fromList(checkTypeForUnsharedPointers(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(pointerType, "baseType", true), "TasksAndSyncs.structure.SharedType"), "baseType", true))));
       }
-    }
-    {
-      SNode structType = TypeChecker.getInstance().getTypeOf(expression);
-      if (SNodeOperations.isInstanceOf(structType, "com.mbeddr.core.udt.structure.StructType")) {
-        for (SNode field : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false)))) {
-          ListSequence.fromList(errorMessages).addSequence(ListSequence.fromList(checkStructFieldForUnsyncedPointers(field, SPropertyOperations.getString(SLinkOperations.getTarget(structType, "struct", false), "name"))));
-        }
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.udt.structure.StructType")) {
+      SNode structType = SNodeOperations.cast(type, "com.mbeddr.core.udt.structure.StructType");
+      for (SNode field : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false)))) {
+        ListSequence.fromList(errorMessages).addSequence(ListSequence.fromList(checkTypeForUnsharedPointers(SLinkOperations.getTarget(field, "type", true))));
       }
+    } else if (SNodeOperations.isInstanceOf(type, "TasksAndSyncs.structure.SharedType")) {
+      SNode sharedType = SNodeOperations.cast(type, "TasksAndSyncs.structure.SharedType");
+      ListSequence.fromList(errorMessages).addSequence(ListSequence.fromList(checkTypeForUnsharedPointers(SLinkOperations.getTarget(sharedType, "baseType", true))));
     }
     return errorMessages;
   }
@@ -62,6 +68,7 @@ public class Checker {
 
 
   public static List<String> checkStructFieldForUnsyncedPointers(SNode field, String structName) {
+    // TODO: remove 
     List<String> errorMessages = ListSequence.fromList(new ArrayList<String>());
     {
       SNode pointerType = SLinkOperations.getTarget(field, "type", true);
@@ -85,6 +92,7 @@ public class Checker {
 
 
   public static boolean arePathsEqual(SNode expression1, SNode expression2) {
+    // todo: remove 
     if (!(SPropertyOperations.getString(SNodeOperations.getConceptDeclaration(expression1), "name").equals(SPropertyOperations.getString(SNodeOperations.getConceptDeclaration(expression2), "name")))) {
       return false;
     }
