@@ -29,10 +29,11 @@ public class typeof_SharedSet_InferenceRule extends AbstractInferenceRule_Runtim
                 final SNode valueType = typeCheckingContext.typeOf(SLinkOperations.getTarget(sharedSet, "value", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3570654511859521315", true);
                 typeCheckingContext.whenConcrete(valueType, new Runnable() {
                   public void run() {
+                    // ensure that only compatible data is copied into the shared ressource 
                     SNode sharedBaseType = SLinkOperations.getTarget(SNodeOperations.cast(typeCheckingContext.getExpandedNode(expressionType), "TasksAndSyncs.structure.SharedType"), "baseType", true);
                     {
                       SNode _nodeToCheck_1029348928467 = sharedSet;
-                      EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, trim_go4jj6_a0a0b0a0a0a0a0b(BehaviorReflection.invokeVirtual(String.class, typeCheckingContext.getExpandedNode(valueType), "virtual_getPresentation_1213877396640", new Object[]{})) + " is not a subtype of " + sharedBaseType, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3570654511859525175", 0, null);
+                      EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, trim_go4jj6_a0a0c0a0a0a0a0b(BehaviorReflection.invokeVirtual(String.class, typeCheckingContext.getExpandedNode(valueType), "virtual_getPresentation_1213877396640", new Object[]{})) + " is not a subtype of " + sharedBaseType, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3570654511859525175", 0, null);
                       typeCheckingContext.createLessThanInequality((SNode) typeCheckingContext.getExpandedNode(valueType), (SNode) sharedBaseType, false, true, _info_12389875345);
                     }
                   }
@@ -65,7 +66,7 @@ public class typeof_SharedSet_InferenceRule extends AbstractInferenceRule_Runtim
     return false;
   }
 
-  public static String trim_go4jj6_a0a0b0a0a0a0a0b(String str) {
+  public static String trim_go4jj6_a0a0c0a0a0a0a0b(String str) {
     return (str == null ? null : str.trim());
   }
 }

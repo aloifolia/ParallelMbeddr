@@ -8,30 +8,28 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.typesystem.inference.TypeChecker;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class checkSharedGetForAdressOperator_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public checkSharedGetForAdressOperator_NonTypesystemRule() {
+public class checkAdressOperatorForSharedSubPath_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public checkAdressOperatorForSharedSubPath_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode sharedGet, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    SNode parent = SNodeOperations.getParent(SNodeOperations.getParent(sharedGet));
-    while (SNodeOperations.isInstanceOf(parent, "com.mbeddr.core.expressions.structure.ParensExpression")) {
-      parent = SNodeOperations.getParent(parent);
-    }
-    if (SNodeOperations.isInstanceOf(parent, "com.mbeddr.core.pointers.structure.ReferenceExpr")) {
+  public void applyRule(final SNode referenceExpr, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(referenceExpr, "expression", true)), "TasksAndSyncs.structure.SharedType")) && Checker.pathContainsSharedGet(SLinkOperations.getTarget(referenceExpr, "expression", true))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(parent, "address of value of shared ressource may not be requested", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6553204290898717987", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(referenceExpr, "address of shared ressource (sub) value may not be requested", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559367289", null, errorTarget);
       }
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SharedGet";
+    return "com.mbeddr.core.pointers.structure.ReferenceExpr";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

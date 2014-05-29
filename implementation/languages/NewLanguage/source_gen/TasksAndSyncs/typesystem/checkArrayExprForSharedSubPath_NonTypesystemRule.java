@@ -7,7 +7,6 @@ import jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
@@ -15,24 +14,21 @@ import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class checkSharedPointerAsAssignmentTarget_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public checkSharedPointerAsAssignmentTarget_NonTypesystemRule() {
+public class checkArrayExprForSharedSubPath_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public checkArrayExprForSharedSubPath_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode assignmentExpr, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    SNode target = SLinkOperations.getTarget(assignmentExpr, "left", true);
-    if (SNodeOperations.isInstanceOf(target, "com.mbeddr.core.pointers.structure.DerefExpr")) {
-      if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(target), "TasksAndSyncs.structure.SharedType")) {
-        {
-          MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(target, "shared ressource may not be overwritten", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6553204290899768118", null, errorTarget);
-        }
+  public void applyRule(final SNode expression, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(expression), "com.mbeddr.core.pointers.structure.ArrayType") && !(SNodeOperations.isInstanceOf(SNodeOperations.getParent(expression), "com.mbeddr.core.pointers.structure.ArrayAccessExpr")) && Checker.pathContainsSharedGet(expression)) {
+      {
+        MessageTarget errorTarget = new NodeMessageTarget();
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(expression, "array address leakage", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195561396267", null, errorTarget);
       }
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "com.mbeddr.core.expressions.structure.AssignmentExpr";
+    return "com.mbeddr.core.expressions.structure.Expression";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

@@ -10,6 +10,7 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import java.util.ArrayList;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 
 public class Checker {
@@ -67,26 +68,44 @@ public class Checker {
 
 
 
-  public static List<String> checkStructFieldForUnsyncedPointers(SNode field, String structName) {
-    // TODO: remove 
-    List<String> errorMessages = ListSequence.fromList(new ArrayList<String>());
-    {
-      SNode pointerType = SLinkOperations.getTarget(field, "type", true);
-      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
-        if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(pointerType, "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
-          ListSequence.fromList(errorMessages).addElement("field '" + SPropertyOperations.getString(field, "name") + "' of pointer type in struct '" + structName + "' must point to shared ressource");
+  public static boolean typeContainsSharedElements(SNode type) {
+    if (SNodeOperations.isInstanceOf(type, "TasksAndSyncs.structure.SharedType")) {
+      return true;
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
+      return false;
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.udt.structure.StructType")) {
+      return ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.udt.structure.StructType"), "struct", false))).any(new IWhereFilter<SNode>() {
+        public boolean accept(SNode field) {
+          return typeContainsSharedElements(SLinkOperations.getTarget(field, "type", true));
         }
-      }
+      });
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      return typeContainsSharedElements(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true));
     }
-    {
-      SNode structType = TypeChecker.getInstance().getTypeOf(field);
-      if (SNodeOperations.isInstanceOf(structType, "com.mbeddr.core.udt.structure.StructType")) {
-        for (SNode subField : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false)))) {
-          ListSequence.fromList(errorMessages).addSequence(ListSequence.fromList(checkStructFieldForUnsyncedPointers(subField, SPropertyOperations.getString(SLinkOperations.getTarget(structType, "struct", false), "name"))));
-        }
-      }
+    // all other types that might be (hopefully no relevant ones...) 
+    return false;
+  }
+
+
+
+  public static boolean pathContainsSharedGet(SNode path) {
+    if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.expressions.structure.GenericDotExpression") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "target", true), "TasksAndSyncs.structure.SharedGet")) {
+      return true;
+    } else if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.expressions.structure.ParensExpression")) {
+      return pathContainsSharedGet(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.expressions.structure.ParensExpression"), "expression", true));
+    } else if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.pointers.structure.ArrayAccessExpr")) {
+      return pathContainsSharedGet(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.pointers.structure.ArrayAccessExpr"), "expression", true));
+    } else if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.expressions.structure.GenericDotExpression") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "target", true), "com.mbeddr.core.udt.structure.GenericMemberRef")) {
+      return pathContainsSharedGet(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true));
+    } else if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.pointers.structure.ReferenceExpr")) {
+      // together with the next condition: check for *(&(*...)) 
+      return pathContainsSharedGet(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.pointers.structure.ReferenceExpr"), "expression", true));
+    } else if (SNodeOperations.isInstanceOf(path, "com.mbeddr.core.pointers.structure.DerefExpr")) {
+      // together with the previous condition: check for *(&(*...)) 
+      return pathContainsSharedGet(SLinkOperations.getTarget(SNodeOperations.cast(path, "com.mbeddr.core.pointers.structure.DerefExpr"), "expression", true));
     }
-    return errorMessages;
+    // all other paths that might be (hopefully no relevant ones...) 
+    return false;
   }
 
 

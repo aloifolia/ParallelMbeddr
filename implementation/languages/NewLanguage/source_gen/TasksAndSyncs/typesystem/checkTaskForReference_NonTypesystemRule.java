@@ -26,9 +26,10 @@ public class checkTaskForReference_NonTypesystemRule extends AbstractNonTypesyst
     Iterable<SNode> expressionsToCheck = Sequence.fromIterable(Sequence.<SNode>singleton(SLinkOperations.getTarget(task, "expression", true))).concat(ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(task, "expression", true), "com.mbeddr.core.expressions.structure.Expression", false, new String[]{})));
 
     for (SNode expression : Sequence.fromIterable(expressionsToCheck)) {
-      if (Checker.refersToRessource(expression) && Checker.isInCopyPosition(expression)) {
+
+      if (SNodeOperations.isInstanceOf(expression, "com.mbeddr.core.statements.structure.IVariableReference")) {
         if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(expression), "com.mbeddr.core.pointers.structure.ArrayType")) {
-          String arrayString = trim_f7dij5_a0a0a0a0a2a1(BehaviorReflection.invokeVirtual(String.class, SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(expression), "com.mbeddr.core.pointers.structure.ArrayType"), "virtual_getPresentation_1213877396640", new Object[]{}));
+          String arrayString = trim_f7dij5_a0a0a0a1a2a1(BehaviorReflection.invokeVirtual(String.class, SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(expression), "com.mbeddr.core.pointers.structure.ArrayType"), "virtual_getPresentation_1213877396640", new Object[]{}));
           {
             MessageTarget errorTarget = new NodeMessageTarget();
             IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(expression, "array " + arrayString + " cannot be used in pointer-like copy position => use safe access through: *shared<" + arrayString + ">", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6480032978539178806", null, errorTarget);
@@ -41,6 +42,8 @@ public class checkTaskForReference_NonTypesystemRule extends AbstractNonTypesyst
             }
           }
         }
+      }
+      if (Checker.refersToRessource(expression) && Checker.isInCopyPosition(expression)) {
       }
     }
   }
@@ -60,7 +63,7 @@ public class checkTaskForReference_NonTypesystemRule extends AbstractNonTypesyst
     return false;
   }
 
-  public static String trim_f7dij5_a0a0a0a0a2a1(String str) {
+  public static String trim_f7dij5_a0a0a0a1a2a1(String str) {
     return (str == null ? null : str.trim());
   }
 }

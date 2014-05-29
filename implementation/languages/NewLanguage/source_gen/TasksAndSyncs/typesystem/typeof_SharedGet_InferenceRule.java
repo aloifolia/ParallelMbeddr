@@ -17,15 +17,22 @@ public class typeof_SharedGet_InferenceRule extends AbstractInferenceRule_Runtim
   }
 
   public void applyRule(final SNode sharedGet, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    final SNode sharedRessource = SLinkOperations.getTarget(SNodeOperations.as(SNodeOperations.getParent(sharedGet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
     {
-      final SNode sharedRessourceAsExprType = typeCheckingContext.typeOf(sharedRessource, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004793", true);
-      typeCheckingContext.whenConcrete(sharedRessourceAsExprType, new Runnable() {
+      final SNode expressionType = typeCheckingContext.typeOf(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004793", true);
+      typeCheckingContext.whenConcrete(expressionType, new Runnable() {
         public void run() {
-          {
-            SNode _nodeToCheck_1029348928467 = sharedGet;
-            EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004782", 0, null);
-            typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004789", true), (SNode) SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(typeCheckingContext.getExpandedNode(sharedRessourceAsExprType), "TasksAndSyncs.structure.SharedType"), "baseType", true)), _info_12389875345);
+          if (SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(expressionType), "TasksAndSyncs.structure.SharedType")) {
+            {
+              SNode _nodeToCheck_1029348928467 = sharedGet;
+              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004782", 0, null);
+              typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004789", true), (SNode) SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(typeCheckingContext.getExpandedNode(expressionType), "TasksAndSyncs.structure.SharedType"), "baseType", true)), _info_12389875345);
+            }
+          } else if (SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(expressionType), "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(typeCheckingContext.getExpandedNode(expressionType), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType")) {
+            {
+              SNode _nodeToCheck_1029348928467 = sharedGet;
+              EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195560701193", 0, null);
+              typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195560701202", true), (SNode) SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(typeCheckingContext.getExpandedNode(expressionType), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType"), "baseType", true)), _info_12389875345);
+            }
           }
         }
       }, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "1924594752096004780", false, false);
