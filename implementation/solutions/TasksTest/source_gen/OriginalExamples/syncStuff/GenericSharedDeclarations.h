@@ -16,10 +16,16 @@
 extern "C" {
 #endif
 
-struct GenericSharedDeclarations_SharedInt32_0 {
+struct GenericSharedDeclarations_SharedInt_0 {
   pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   int32_t value;
+};
+
+struct GenericSharedDeclarations_SharedArrayContainer_Array_0 {
+  pthread_mutexattr_t mutexAttribute;
+  pthread_mutex_t mutex;
+  struct syncStuff_ArrayContainer value[5];
 };
 
 void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute,pthread_mutex_t* mutex);

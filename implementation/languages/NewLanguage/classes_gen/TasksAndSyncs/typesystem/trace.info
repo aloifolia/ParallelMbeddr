@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="106" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
+  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="110" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873205167535">
     <nodeInfo nodeId="482600553438622806" fileName="typeof_Task_InferenceRule.java" startLine="22" startPosition="5" endLine="23" endPosition="211" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="482600553438926433" fileName="typeof_Task_InferenceRule.java" startLine="25" startPosition="27" endLine="26" endPosition="102" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -933,6 +933,47 @@
       <varInfo nodeId="483189195561396263" varName="typeCheckingContext" />
     </scopeInfo>
     <unitInfo nodeId="483189195561396263" fileName="checkArrayExprForSharedSubPath_NonTypesystemRule.java" startLine="17" startPosition="0" endLine="45" endPosition="0" unitName="TasksAndSyncs.typesystem.checkArrayExprForSharedSubPath_NonTypesystemRule" />
+  </root>
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/483189195578648528">
+    <nodeInfo nodeId="483189195578724339" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="23" startPosition="7" endLine="24" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="483189195578724339" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="24" startPosition="60" endLine="25" endPosition="223" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="30" startPosition="46" endLine="31" endPosition="56" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="35" startPosition="5" endLine="36" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="36" startPosition="130" endLine="37" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="41" startPosition="30" endLine="42" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkFunctionArgumentForArrayType_NonTypesystemRule#()V" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="33" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="41" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="483189195578724339" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="22" startPosition="405" endLine="26" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="34" startPosition="68" endLine="38" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="483189195578658228" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="21" startPosition="121" endLine="27" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="34" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="18" startPosition="64" endLine="18" endPosition="64" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="30" startPosition="46" endLine="31" endPosition="56" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="41" startPosition="30" endLine="42" endPosition="17" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
+    <scopeInfo nodeId="483189195578724339" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="23" startPosition="7" endLine="25" endPosition="223">
+      <varInfo nodeId="483189195578724339" varName="_reporter_2309309498" />
+      <varInfo nodeId="483189195578724339" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="35" startPosition="5" endLine="37" endPosition="45">
+      <varInfo nodeId="483189195578648528" varName="b" />
+    </scopeInfo>
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="33" endPosition="0" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="41" startPosition="0" endLine="44" endPosition="0" />
+    <scopeInfo nodeId="483189195578658229" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="22" startPosition="405" endLine="26" endPosition="7" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="34" startPosition="68" endLine="38" endPosition="5" />
+    <scopeInfo nodeId="483189195578648529" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="21" startPosition="121" endLine="27" endPosition="5" />
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="34" startPosition="0" endLine="40" endPosition="0">
+      <varInfo nodeId="483189195578648528" varName="argument" />
+    </scopeInfo>
+    <scopeInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="29" endPosition="0">
+      <varInfo nodeId="483189195578648528" varName="argument" />
+      <varInfo nodeId="483189195578648528" varName="status" />
+      <varInfo nodeId="483189195578648528" varName="typeCheckingContext" />
+    </scopeInfo>
+    <unitInfo nodeId="483189195578648528" fileName="checkFunctionArgumentForArrayType_NonTypesystemRule.java" startLine="17" startPosition="0" endLine="45" endPosition="0" unitName="TasksAndSyncs.typesystem.checkFunctionArgumentForArrayType_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/6288388922743510677">
     <nodeInfo nodeId="6288388922743514555" fileName="typeof_SyncRessRef_InferenceRule.java" startLine="19" startPosition="5" endLine="20" endPosition="53" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />

@@ -14,12 +14,12 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.ArrayList;
+import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
-import jetbrains.mps.typesystem.inference.TypeChecker;
 
 public class SyncDefinitionBuilder {
 
@@ -48,7 +48,9 @@ public class SyncDefinitionBuilder {
 
 
   public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode sharedType) {
-    String rawName = BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(sharedType, "baseType", true), "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("\\s", "").replaceAll("\\*", "Pointer");
+    String rawName = BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(sharedType, "baseType", true), "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("\\s|\\d", "").replaceAll("\\*", "_Pointer").replaceAll("\\[\\]", "_Array");
+    System.out.println("from:" + BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(sharedType, "baseType", true), "virtual_getPresentation_1213877396640", new Object[]{}));
+    System.out.println("  to:" + rawName);
     String namePart1 = "Shared" + rawName.substring(0, 1).toUpperCase();
     String namePart2 = rawName.substring(1);
     final String name = namePart1 + namePart2;
@@ -396,33 +398,59 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static List<SNode> buildInitMutexCallsFor(TemplateQueryContext genContext, SNode initMutexFunction, SNode currentType, SNode currentPath, final SNode currentInit) {
+  public static SNode sizeOfArray(final SNode arrayDeclaration) {
+    if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), arrayDeclaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.pointers.structure.ArrayType"))) {
+      return null;
+    }
+    if ((SLinkOperations.getTarget(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), arrayDeclaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.pointers.structure.ArrayType"), "sizeExpr", true) != null)) {
+      return SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), arrayDeclaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.pointers.structure.ArrayType"), "sizeExpr", true));
+    }
+    if (SNodeOperations.isInstanceOf(arrayDeclaration, "com.mbeddr.core.statements.structure.LocalVariableDeclaration")) {
+      return new _FunctionTypes._return_P0_E0<SNode>() {
+        public SNode invoke() {
+          SNode node_483189195580155346 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
+              SPropertyOperations.set(res, "value", (String.valueOf(ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(arrayDeclaration, "com.mbeddr.core.statements.structure.LocalVariableDeclaration"), "init", true), "com.mbeddr.core.pointers.structure.ArrayInitExpression"), "exprs", true)).count())));
+              return res;
+            }
+          }.invoke();
+          return node_483189195580155346;
+        }
+      }.invoke();
+    }
+    if (SNodeOperations.isInstanceOf(arrayDeclaration, "com.mbeddr.core.modules.structure.GlobalVariableDeclaration")) {
+      return new _FunctionTypes._return_P0_E0<SNode>() {
+        public SNode invoke() {
+          SNode node_483189195580259761 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
+              SPropertyOperations.set(res, "value", (String.valueOf(ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(arrayDeclaration, "com.mbeddr.core.modules.structure.GlobalVariableDeclaration"), "init", true), "com.mbeddr.core.pointers.structure.ArrayInitExpression"), "exprs", true)).count())));
+              return res;
+            }
+          }.invoke();
+          return node_483189195580259761;
+        }
+      }.invoke();
+    }
+    return null;
+  }
+
+
+
+  public static List<SNode> buildInitMutexCallsFor(TemplateQueryContext genContext, SNode initMutexFunction, SNode type, SNode path, SNode variableDeclaration) {
     // If the variable type is a one dimensional array the dimension may have to be extracted from the 
     // initialization list. In comparison, multi-dimensional arrays and arrays as struct fields carry    
     // their dimensions always with themselves. 
     {
-      SNode arrayType = currentType;
+      SNode arrayType = type;
       if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
-        SNode arrayLength = SLinkOperations.getTarget(arrayType, "sizeExpr", true);
-        if (arrayLength == null) {
-          arrayLength = new _FunctionTypes._return_P0_E0<SNode>() {
-            public SNode invoke() {
-              SNode node_5244467561016168572 = new _FunctionTypes._return_P0_E0<SNode>() {
-                public SNode invoke() {
-                  SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
-                  SPropertyOperations.set(res, "value", (String.valueOf(ListSequence.fromList(SLinkOperations.getTargets(SNodeOperations.cast(currentInit, "com.mbeddr.core.pointers.structure.ArrayInitExpression"), "exprs", true)).count())));
-                  return res;
-                }
-              }.invoke();
-              return node_5244467561016168572;
-            }
-          }.invoke();
-        }
-        return buildNestedInitMutexCallsForArrayType(genContext, initMutexFunction, arrayType, currentPath, arrayLength);
+        SNode arrayLength = sizeOfArray(variableDeclaration);
+        return buildNestedInitMutexCallsForArrayType(genContext, initMutexFunction, arrayType, path, arrayLength);
       }
     }
 
-    return buildNestedInitMutexCallsFor(genContext, initMutexFunction, currentType, currentPath);
+    return buildNestedInitMutexCallsFor(genContext, initMutexFunction, type, path);
   }
 
 

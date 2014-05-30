@@ -24,8 +24,10 @@
     <classNode dependClassName="TasksAndSyncs.generator.util.Pair" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_Behavior" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
+    <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.lang.System" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
