@@ -5,13 +5,13 @@ package TasksAndSyncs.generator.util;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.TemplateQueryContext;
 import java.util.List;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import com.mbeddr.core.expressions.behavior.Type_Behavior;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.ArrayList;
 import jetbrains.mps.typesystem.inference.TypeChecker;
@@ -24,20 +24,19 @@ import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
 public class SyncDefinitionBuilder {
 
 
-  public static SNode addStructForType(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode sharedType) {
+  public static SNode addStructForSharedBaseType(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode baseType) {
     // create a new entry 
-    Pair<SNode, SNode> typeAndStruct = new Pair(SLinkOperations.getTarget(sharedType, "baseType", true), buildSharedStruct(genContext, sharedType));
+    Pair<SNode, SNode> typeAndStruct = new Pair(baseType, buildSharedStruct(genContext, baseType));
     ListSequence.fromList(typesAndStructs).addElement(typeAndStruct);
     return typeAndStruct.second;
   }
 
 
 
-  public static SNode getStructForType(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode sharedType) {
+  public static SNode getStructForSharedBaseType(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode baseType) {
     // try to find an existing entry in the list 
     for (Pair<SNode, SNode> typeAndStruct : ListSequence.fromList(typesAndStructs)) {
       SNode currentType = typeAndStruct.first;
-      SNode baseType = SLinkOperations.getTarget(sharedType, "baseType", true);
       if (Type_Behavior.call_isSubtypeOf_2124837493917340416(currentType, baseType) && Type_Behavior.call_isSubtypeOf_2124837493917340416(baseType, currentType)) {
         return typeAndStruct.second;
       }
@@ -47,10 +46,8 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode sharedType) {
-    String rawName = BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(sharedType, "baseType", true), "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("\\s|\\d", "").replaceAll("\\*", "_Pointer").replaceAll("\\[\\]", "_Array");
-    System.out.println("from:" + BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(sharedType, "baseType", true), "virtual_getPresentation_1213877396640", new Object[]{}));
-    System.out.println("  to:" + rawName);
+  public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode baseType) {
+    String rawName = BehaviorReflection.invokeVirtual(String.class, baseType, "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("\\s|\\d", "").replaceAll("\\*", "_Pointer").replaceAll("\\[\\]", "_Array");
     String namePart1 = "Shared" + rawName.substring(0, 1).toUpperCase();
     String namePart2 = rawName.substring(1);
     final String name = namePart1 + namePart2;
@@ -104,7 +101,7 @@ public class SyncDefinitionBuilder {
         }.invoke();
         final SNode node_2852056939580671093 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = SNodeOperations.copyNode(SLinkOperations.getTarget(sharedType, "baseType", true));
+            SNode res = SNodeOperations.copyNode(baseType);
             return res;
           }
         }.invoke();
@@ -1447,5 +1444,45 @@ public class SyncDefinitionBuilder {
     for (SNode element : ListSequence.fromList(source)) {
       ListSequence.fromList(target).addElement(SNodeOperations.copyNode(element));
     }
+  }
+
+
+
+  public static SNode getContainedStructType(SNode type) {
+    if (SNodeOperations.isInstanceOf(type, "TasksAndSyncs.structure.SharedType")) {
+      return getContainedStructType(SLinkOperations.getTarget(SNodeOperations.cast(type, "TasksAndSyncs.structure.SharedType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      return getContainedStructType(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
+      return getContainedStructType(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.udt.structure.StructType")) {
+      return SNodeOperations.cast(type, "com.mbeddr.core.udt.structure.StructType");
+    }
+    return null;
+  }
+
+
+
+  public static SNode getContainedTypeDefType(SNode type) {
+    if (SNodeOperations.isInstanceOf(type, "TasksAndSyncs.structure.SharedType")) {
+      return getContainedTypeDefType(SLinkOperations.getTarget(SNodeOperations.cast(type, "TasksAndSyncs.structure.SharedType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      return getContainedTypeDefType(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
+      return getContainedTypeDefType(SLinkOperations.getTarget(SNodeOperations.cast(type, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true));
+    } else if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.udt.structure.TypeDefType")) {
+      return SNodeOperations.cast(type, "com.mbeddr.core.udt.structure.TypeDefType");
+    }
+    return null;
+  }
+
+
+
+  public static SNode extractTypeDefType(SNode type) {
+    SNode originalType = SLinkOperations.getTarget(SLinkOperations.getTarget(type, "typeDef", false), "original", true);
+    if (SNodeOperations.isInstanceOf(originalType, "com.mbeddr.core.udt.structure.TypeDefType")) {
+      return extractTypeDefType(originalType);
+    }
+    return originalType;
   }
 }

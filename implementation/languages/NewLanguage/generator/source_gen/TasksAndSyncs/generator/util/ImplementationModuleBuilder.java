@@ -10,6 +10,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.generator.template.TemplateQueryContext;
 
 public class ImplementationModuleBuilder {
 
@@ -59,5 +60,52 @@ public class ImplementationModuleBuilder {
     }.invoke());
 
     return implementationModule;
+  }
+
+
+
+  public static SNode buildSharedModuleFor(final SNode implementationModule, final TemplateQueryContext genContext, SModel model) {
+    final SNode sharedModule = new _FunctionTypes._return_P0_E0<SNode>() {
+      public SNode invoke() {
+        SNode node_483189195593417237 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.ImplementationModule", null);
+            SPropertyOperations.set(res, "name", (genContext.createUniqueName(SPropertyOperations.getString(implementationModule, "name") + "_SharedTypes", null)));
+            return res;
+          }
+        }.invoke();
+        return node_483189195593417237;
+      }
+    }.invoke();
+
+    ListSequence.fromList(SLinkOperations.getTargets(implementationModule, "imports", true)).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
+      public SNode invoke() {
+        SNode node_483189195593417255 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.ModuleImport", null);
+            SLinkOperations.setTarget(res, "module", sharedModule, false);
+            return res;
+          }
+        }.invoke();
+        return node_483189195593417255;
+      }
+    }.invoke());
+
+    SModelOperations.addRootNode(model, sharedModule);
+
+    ListSequence.fromList(SLinkOperations.getTargets(ListSequence.fromList(SLinkOperations.getTargets(ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.buildconfig.structure.BuildConfiguration")).first(), "binaries", true)).first(), "referencedModules", true)).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
+      public SNode invoke() {
+        SNode node_483189195593417281 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.buildconfig.structure.ModuleRef", null);
+            SLinkOperations.setTarget(res, "module", sharedModule, false);
+            return res;
+          }
+        }.invoke();
+        return node_483189195593417281;
+      }
+    }.invoke());
+
+    return sharedModule;
   }
 }

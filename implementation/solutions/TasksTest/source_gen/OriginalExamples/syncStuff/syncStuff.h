@@ -12,19 +12,13 @@
 
 #include "GenericSyncDeclarations.h"
 
-#include <pthread.h>
+#include "syncStuff_SharedTypes_0.h"
 
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-struct syncStuff_SharedA_0 {
-  pthread_mutexattr_t mutexAttribute;
-  pthread_mutex_t mutex;
-  struct syncStuff_A value;
-};
 
 int32_t syncStuff_main(int32_t argc,char* argv[]);
 

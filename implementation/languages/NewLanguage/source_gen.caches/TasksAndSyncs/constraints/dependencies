@@ -8,7 +8,6 @@
     <classNode dependClassName="TasksAndSyncs.constraints.Share_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.SharedGet_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.SharedSet_Constraints" />
-    <classNode dependClassName="TasksAndSyncs.constraints.SharedType_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.SyncRessourceNamed_Constraints" />
     <classNode dependClassName="TasksAndSyncs.constraints.SyncRessource_Constraints" />
     <classNode dependClassName="java.lang.String" />
@@ -97,17 +96,6 @@
     <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
     <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
     <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeChecker" />
-    <classNode dependClassName="org.jetbrains.annotations.Nullable" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
-  </dependency>
-  <dependency className="TasksAndSyncs.constraints.SharedType_Constraints" file="SharedType_Constraints.java">
-    <classNode dependClassName="java.lang.Override" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
-    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
-    <classNode dependClassName="jetbrains.mps.smodel.SNodePointer" />
-    <classNode dependClassName="jetbrains.mps.smodel.runtime.CheckingNodeContext" />
     <classNode dependClassName="org.jetbrains.annotations.Nullable" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.base.BaseConstraintsDescriptor" />
