@@ -18,7 +18,7 @@ struct syncStuff_SharedTypes_0_ArrayContainer {
   int32_t val[5];
 };
 
-struct syncStuff_SharedTypes_0_SharedArrayContainer_Array_0 {
+struct syncStuff_SharedTypes_0_SharedOf_ArrayOf_ArrayContainer_0 {
   pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   struct syncStuff_SharedTypes_0_ArrayContainer value[5];

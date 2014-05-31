@@ -7,12 +7,12 @@ import jetbrains.mps.generator.template.TemplateQueryContext;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import com.mbeddr.core.expressions.behavior.Type_Behavior;
-import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import java.util.ArrayList;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
@@ -47,10 +47,7 @@ public class SyncDefinitionBuilder {
 
 
   public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode baseType) {
-    String rawName = BehaviorReflection.invokeVirtual(String.class, baseType, "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("\\s|\\d", "").replaceAll("\\*", "_Pointer").replaceAll("\\[\\]", "_Array");
-    String namePart1 = "Shared" + rawName.substring(0, 1).toUpperCase();
-    String namePart2 = rawName.substring(1);
-    final String name = namePart1 + namePart2;
+    final String name = "SharedOf_" + structNameForBaseType(baseType).replaceAll("\\s", "");
     return new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_2852056939580659788 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -127,6 +124,30 @@ public class SyncDefinitionBuilder {
         return node_2852056939580462351;
       }
     }.invoke();
+  }
+
+
+
+  private static String structNameForBaseType(SNode baseType) {
+    {
+      SNode sharedType = baseType;
+      if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
+        return "SharedOf_" + structNameForBaseType(SLinkOperations.getTarget(sharedType, "baseType", true));
+      }
+    }
+    {
+      SNode arrayType = baseType;
+      if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
+        return "ArrayOf_" + structNameForBaseType(SLinkOperations.getTarget(arrayType, "baseType", true));
+      }
+    }
+    {
+      SNode pointerType = baseType;
+      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
+        return "PointerOf_" + structNameForBaseType(SLinkOperations.getTarget(pointerType, "baseType", true));
+      }
+    }
+    return BehaviorReflection.invokeVirtual(String.class, baseType, "virtual_getPresentation_1213877396640", new Object[]{});
   }
 
 
