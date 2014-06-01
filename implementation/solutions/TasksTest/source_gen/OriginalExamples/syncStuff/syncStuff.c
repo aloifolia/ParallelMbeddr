@@ -32,10 +32,6 @@ struct syncStuff_ArrayArrayContainer {
 
 typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0 A;
 typedef A C;
-static inline void syncStuff_init_x_0(struct GenericSharedDeclarations_SharedOf_int32_0* x);
-
-static inline void syncStuff_destroy_x_0(struct GenericSharedDeclarations_SharedOf_int32_0* x);
-
 int32_t main(int32_t argc, char* argv[]) 
 {
   syncStuff_initAllGlobalMutexes_0();
@@ -44,10 +40,7 @@ int32_t main(int32_t argc, char* argv[])
   
   
   
-  struct GenericSharedDeclarations_SharedOf_int32_0 x;
-  syncStuff_init_x_0(&x);
   
-  syncStuff_destroy_x_0(&x);
   return 0;
 }
 
@@ -61,18 +54,6 @@ void syncStuff_initGlobalMutexesFor1Module_0(void)
 void syncStuff_initAllGlobalMutexes_0(void) 
 {
   syncStuff_initGlobalMutexesFor1Module_0();
-}
-
-
-static  void syncStuff_init_x_0(struct GenericSharedDeclarations_SharedOf_int32_0* x) 
-{
-  GenericSharedDeclarations_initMutex_0(&x->mutexAttribute, &x->mutex);
-}
-
-
-static  void syncStuff_destroy_x_0(struct GenericSharedDeclarations_SharedOf_int32_0* x) 
-{
-  GenericSharedDeclarations_destroyMutex_0(&x->mutex);
 }
 
 

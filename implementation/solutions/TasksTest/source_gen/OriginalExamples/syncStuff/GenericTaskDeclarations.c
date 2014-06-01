@@ -4,11 +4,15 @@
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
 
-struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
 {
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericTaskDeclarations_Future){ .pth = pth };
+  GenericTaskDeclarations_joinVoidFuture(&future);
+}
+
+
+void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
+{
+  return GenericTaskDeclarations_getFutureResult(&future);
 }
 
 
@@ -23,12 +27,6 @@ void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* f
 }
 
 
-void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
-{
-  GenericTaskDeclarations_joinFuture(&future);
-}
-
-
 void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
 {
   if ( !(future->finished) ) 
@@ -37,6 +35,20 @@ void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidF
     future->finished = 1;
   }
 
+}
+
+
+struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  pthread_create(&pth,0,task.fun,task.args);
+  return (struct GenericTaskDeclarations_Future){ .pth = pth };
+}
+
+
+void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
+{
+  GenericTaskDeclarations_joinFuture(&future);
 }
 
 
@@ -61,18 +73,6 @@ struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetV
   pthread_t pth;
   pthread_create(&pth,0,task.fun,task.args);
   return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
-}
-
-
-void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
-{
-  return GenericTaskDeclarations_getFutureResult(&future);
-}
-
-
-void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
-{
-  GenericTaskDeclarations_joinVoidFuture(&future);
 }
 
 

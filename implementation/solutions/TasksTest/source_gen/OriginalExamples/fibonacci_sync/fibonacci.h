@@ -10,7 +10,7 @@
 
 #include "GenericSharedDeclarations.h"
 
-#include <pthread.h>
+#include "GenericSyncDeclarations.h"
 
 
 
@@ -18,11 +18,8 @@
 extern "C" {
 #endif
 
+#define FIBONACCI_fiboCount (40)
 int32_t fibonacci_main(int32_t argc,char* argv[]);
-
-void fibonacci_initGlobalMutexes_0(void);
-
-void fibonacci_destroyGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus

@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_fibonacci=fibonacci.o GenericTaskDeclarations.o GenericSharedDeclarations.o
+_OBJ_fibonacci=fibonacci.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o
 OBJ_fibonacci=$(patsubst %,$(ODIR)/%,$(_OBJ_fibonacci))
 
 
