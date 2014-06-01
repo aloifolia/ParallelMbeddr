@@ -22,10 +22,10 @@ struct GenericSharedDeclarations_SharedOf_int32_0 {
   int32_t value;
 };
 
-struct GenericSharedDeclarations_SharedOf_ArrayOf_PointerOf_SharedOf_int32_0 {
+struct GenericSharedDeclarations_SharedOf_ArrayOf_PointerOf_SharedOf_int32_0_0 {
   pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
-  struct GenericSharedDeclarations_SharedOf_int32_0* value[FIBONACCI_fiboCount];
+  struct GenericSharedDeclarations_SharedOf_int32_0* value[40];
 };
 
 void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute,pthread_mutex_t* mutex);

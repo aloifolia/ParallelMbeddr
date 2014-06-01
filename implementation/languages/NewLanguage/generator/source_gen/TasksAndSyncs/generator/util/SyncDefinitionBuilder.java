@@ -6,12 +6,12 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.generator.template.TemplateQueryContext;
 import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import com.mbeddr.core.expressions.behavior.Type_Behavior;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import java.util.ArrayList;
 import jetbrains.mps.typesystem.inference.TypeChecker;
@@ -20,6 +20,12 @@ import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.baseLanguage.tuples.runtime.Tuples;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple;
+import java.util.Map;
+import org.jetbrains.mps.openapi.model.SModel;
+import jetbrains.mps.internal.collections.runtime.MapSequence;
+import java.util.HashMap;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 
 public class SyncDefinitionBuilder {
 
@@ -33,11 +39,125 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static SNode getStructForSharedBaseType(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode baseType) {
+  public static int numberOfNestedSharedTypes(SNode type) {
+    {
+      SNode sharedType = type;
+      if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
+        return 1 + numberOfNestedSharedTypes(SLinkOperations.getTarget(sharedType, "baseType", true));
+      }
+    }
+    {
+      SNode arrayType = type;
+      if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
+        return numberOfNestedSharedTypes(SLinkOperations.getTarget(arrayType, "baseType", true));
+      }
+    }
+    {
+      SNode pointerType = type;
+      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
+        return numberOfNestedSharedTypes(SLinkOperations.getTarget(pointerType, "baseType", true));
+      }
+    }
+    return 0;
+  }
+
+
+
+  /**
+   * @type: A type that does not contain any typedefs.
+   * @returns: An equivalent type that does not contain any shared types but corresponding struct types; these struct 
+   * are generated on the fly during the process (or reused if a mapping from a shared to a struct type is already 
+   * existant.
+   */
+  public static SNode mapSharedTypesToStructTypes(TemplateQueryContext genContext, List<Pair<SNode, SNode>> typesAndStructs, SNode type) {
+    {
+      SNode sharedType = type;
+      if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
+        SNode mappedStructType = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.StructType", null);
+        SNode knownStruct = getStructForSharedType(typesAndStructs, sharedType);
+        if (knownStruct != null) {
+          SLinkOperations.setTarget(mappedStructType, "struct", knownStruct, false);
+        } else {
+          SNode mappedBaseType = mapSharedTypesToStructTypes(genContext, typesAndStructs, SLinkOperations.getTarget(sharedType, "baseType", true));
+          Pair<SNode, SNode> typeAndStruct = new Pair(sharedType, buildSharedStruct(genContext, mappedBaseType));
+          ListSequence.fromList(typesAndStructs).addElement(typeAndStruct);
+          SLinkOperations.setTarget(mappedStructType, "struct", typeAndStruct.second, false);
+        }
+        return mappedStructType;
+      }
+    }
+
+    {
+      SNode arrayType = type;
+      if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
+        SNode mappedType = SNodeOperations.copyNode(arrayType);
+        SLinkOperations.setTarget(mappedType, "baseType", mapSharedTypesToStructTypes(genContext, typesAndStructs, SLinkOperations.getTarget(arrayType, "baseType", true)), true);
+        return mappedType;
+      }
+    }
+
+    {
+      SNode pointerType = type;
+      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
+        SNode mappedType = SNodeOperations.copyNode(pointerType);
+        SLinkOperations.setTarget(mappedType, "baseType", mapSharedTypesToStructTypes(genContext, typesAndStructs, SLinkOperations.getTarget(pointerType, "baseType", true)), true);
+        return mappedType;
+      }
+    }
+
+    return SNodeOperations.copyNode(type);
+  }
+
+
+
+  public static SNode resolveNestedTypeDefsAndConstants(SNode type) {
+    {
+      SNode sharedType = type;
+      if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
+        SNode newType = SNodeOperations.copyNode(sharedType);
+        SLinkOperations.setTarget(newType, "baseType", resolveNestedTypeDefsAndConstants(SLinkOperations.getTarget(sharedType, "baseType", true)), true);
+        return newType;
+      }
+    }
+    {
+      SNode arrayType = type;
+      if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
+        SNode newType = SNodeOperations.copyNode(arrayType);
+        if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(newType, "sizeExpr", true), "com.mbeddr.core.modules.structure.GlobalConstantRef")) {
+          SLinkOperations.setTarget(newType, "sizeExpr", SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(newType, "sizeExpr", true), "com.mbeddr.core.modules.structure.GlobalConstantRef"), "constant", false), "value", true)), true);
+        }
+        SLinkOperations.setTarget(newType, "baseType", resolveNestedTypeDefsAndConstants(SLinkOperations.getTarget(arrayType, "baseType", true)), true);
+        return newType;
+      }
+    }
+    {
+      SNode pointerType = type;
+      if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
+        SNode newType = SNodeOperations.copyNode(pointerType);
+        SLinkOperations.setTarget(newType, "baseType", resolveNestedTypeDefsAndConstants(SLinkOperations.getTarget(pointerType, "baseType", true)), true);
+        return newType;
+      }
+    }
+    {
+      SNode typeDefType = type;
+      if (SNodeOperations.isInstanceOf(typeDefType, "com.mbeddr.core.udt.structure.TypeDefType")) {
+        return resolveNestedTypeDefsAndConstants(SLinkOperations.getTarget(SLinkOperations.getTarget(typeDefType, "typeDef", false), "original", true));
+      }
+    }
+    return SNodeOperations.copyNode(type);
+  }
+
+
+
+
+  /**
+   * @type: a type that does not contain any typedefs
+   */
+  public static SNode getStructForSharedType(List<Pair<SNode, SNode>> typesAndStructs, SNode type) {
     // try to find an existing entry in the list 
     for (Pair<SNode, SNode> typeAndStruct : ListSequence.fromList(typesAndStructs)) {
       SNode currentType = typeAndStruct.first;
-      if (Type_Behavior.call_isSubtypeOf_2124837493917340416(currentType, baseType) && Type_Behavior.call_isSubtypeOf_2124837493917340416(baseType, currentType)) {
+      if (Type_Behavior.call_isSubtypeOf_2124837493917340416(currentType, type) && Type_Behavior.call_isSubtypeOf_2124837493917340416(type, currentType)) {
         return typeAndStruct.second;
       }
     }
@@ -46,8 +166,8 @@ public class SyncDefinitionBuilder {
 
 
 
-  public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode baseType) {
-    final String name = "SharedOf_" + structNameForBaseType(baseType).replaceAll("\\s", "");
+  public static SNode buildSharedStruct(final TemplateQueryContext genContext, final SNode type) {
+    final String name = "SharedOf_" + structNameForType(type).replaceAll("\\s", "");
     return new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_2852056939580659788 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -98,7 +218,7 @@ public class SyncDefinitionBuilder {
         }.invoke();
         final SNode node_2852056939580671093 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = SNodeOperations.copyNode(baseType);
+            SNode res = SNodeOperations.copyNode(type);
             return res;
           }
         }.invoke();
@@ -128,26 +248,26 @@ public class SyncDefinitionBuilder {
 
 
 
-  private static String structNameForBaseType(SNode baseType) {
+  private static String structNameForType(SNode type) {
     {
-      SNode sharedType = baseType;
+      SNode sharedType = type;
       if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
-        return "SharedOf_" + structNameForBaseType(SLinkOperations.getTarget(sharedType, "baseType", true));
+        return "SharedOf_" + structNameForType(SLinkOperations.getTarget(sharedType, "baseType", true));
       }
     }
     {
-      SNode arrayType = baseType;
+      SNode arrayType = type;
       if (SNodeOperations.isInstanceOf(arrayType, "com.mbeddr.core.pointers.structure.ArrayType")) {
-        return "ArrayOf_" + structNameForBaseType(SLinkOperations.getTarget(arrayType, "baseType", true));
+        return "ArrayOf_" + structNameForType(SLinkOperations.getTarget(arrayType, "baseType", true));
       }
     }
     {
-      SNode pointerType = baseType;
+      SNode pointerType = type;
       if (SNodeOperations.isInstanceOf(pointerType, "com.mbeddr.core.pointers.structure.PointerType")) {
-        return "PointerOf_" + structNameForBaseType(SLinkOperations.getTarget(pointerType, "baseType", true));
+        return "PointerOf_" + structNameForType(SLinkOperations.getTarget(pointerType, "baseType", true));
       }
     }
-    return BehaviorReflection.invokeVirtual(String.class, baseType, "virtual_getPresentation_1213877396640", new Object[]{});
+    return BehaviorReflection.invokeVirtual(String.class, type, "virtual_getPresentation_1213877396640", new Object[]{});
   }
 
 
@@ -2096,5 +2216,37 @@ public class SyncDefinitionBuilder {
       return extractTypeDefType(originalType);
     }
     return originalType;
+  }
+
+
+
+  public static Map<Integer, List<List<SNode>>> typesByNumberOfNestedShared(SModel model) {
+    Map<Integer, List<List<SNode>>> typesByNumberOfNestedShared = MapSequence.fromMap(new HashMap<Integer, List<List<SNode>>>());
+    // collect all shared type instance in an ordered fashion (by number of nested shared types and by the type itself) 
+    for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule"))) {
+      for (final SNode sharedType : ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SharedType", false, new String[]{}))) {
+        int numberOfNestedSharedTypes = SyncDefinitionBuilder.numberOfNestedSharedTypes(SyncDefinitionBuilder.resolveNestedTypeDefsAndConstants(sharedType));
+        List<List<SNode>> typesOnSameLevel;
+        if (MapSequence.fromMap(typesByNumberOfNestedShared).containsKey(numberOfNestedSharedTypes)) {
+          typesOnSameLevel = MapSequence.fromMap(typesByNumberOfNestedShared).get(numberOfNestedSharedTypes);
+        } else {
+          typesOnSameLevel = ListSequence.fromList(new ArrayList<List<SNode>>());
+          MapSequence.fromMap(typesByNumberOfNestedShared).put(numberOfNestedSharedTypes, typesOnSameLevel);
+        }
+        List<SNode> equalTypes = ListSequence.fromList(typesOnSameLevel).findFirst(new IWhereFilter<List<SNode>>() {
+          public boolean accept(List<SNode> typeList) {
+            return Type_Behavior.call_isSubtypeOf_2124837493917340416(ListSequence.fromList(typeList).first(), sharedType) && Type_Behavior.call_isSubtypeOf_2124837493917340416(sharedType, ListSequence.fromList(typeList).first());
+          }
+        });
+        if (equalTypes == null) {
+          equalTypes = new ArrayList<SNode>();
+          ListSequence.fromList(typesOnSameLevel).addElement(equalTypes);
+        }
+
+        ListSequence.fromList(equalTypes).addElement(sharedType);
+      }
+    }
+
+    return typesByNumberOfNestedShared;
   }
 }
