@@ -45,11 +45,11 @@
     <nodeInfo nodeId="483189195602574128" fileName="fibonacci.c" startLine="50" startPosition="51" endLine="50" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
     <nodeInfo nodeId="483189195602547133" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="483189195602547132" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="24" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="483189195602547119" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="103" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="483189195602547118" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="104" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="483189195602547119" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="107" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="483189195602547118" fileName="fibonacci.c" startLine="52" startPosition="8" endLine="52" endPosition="108" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="483189195602547134" fileName="fibonacci.c" startLine="52" startPosition="20" endLine="52" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="483189195602547120" fileName="fibonacci.c" startLine="52" startPosition="27" endLine="52" endPosition="103" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="483189195602547122" fileName="fibonacci.c" startLine="52" startPosition="71" endLine="52" endPosition="102" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="483189195602547120" fileName="fibonacci.c" startLine="52" startPosition="27" endLine="52" endPosition="107" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="483189195602547122" fileName="fibonacci.c" startLine="52" startPosition="75" endLine="52" endPosition="106" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="483189195602574128" fileName="fibonacci.c" startLine="55" startPosition="6" endLine="55" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="483189195602574128" fileName="fibonacci.c" startLine="55" startPosition="6" endLine="55" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="483189195602574128" fileName="fibonacci.c" startLine="55" startPosition="48" endLine="55" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
@@ -117,12 +117,12 @@
     <nodeInfo nodeId="483189195602199755" fileName="fibonacci.c" startLine="83" startPosition="53" endLine="83" endPosition="58" conceptFqName="com.mbeddr.core.expressions.structure.PostIncrementExpression" />
     <nodeInfo nodeId="483189195601068324" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="483189195601068323" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="22" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="483189195601068312" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="116" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="483189195601068311" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="117" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="483189195601068312" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="120" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="483189195601068311" fileName="fibonacci.c" startLine="85" startPosition="6" endLine="85" endPosition="121" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="483189195602222537" fileName="fibonacci.c" startLine="85" startPosition="18" endLine="85" endPosition="21" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="483189195601068313" fileName="fibonacci.c" startLine="85" startPosition="25" endLine="85" endPosition="116" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="483189195601068315" fileName="fibonacci.c" startLine="85" startPosition="69" endLine="85" endPosition="115" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="483189195601068315" fileName="fibonacci.c" startLine="85" startPosition="100" endLine="85" endPosition="114" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="483189195601068313" fileName="fibonacci.c" startLine="85" startPosition="25" endLine="85" endPosition="120" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="483189195601068315" fileName="fibonacci.c" startLine="85" startPosition="73" endLine="85" endPosition="119" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="483189195601068315" fileName="fibonacci.c" startLine="85" startPosition="104" endLine="85" endPosition="118" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="4390787788462580251" fileName="fibonacci.c" startLine="90" startPosition="2" endLine="90" endPosition="69" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="4390787788462580251" fileName="fibonacci.c" startLine="90" startPosition="2" endLine="90" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="4390787788462580251" fileName="fibonacci.c" startLine="90" startPosition="44" endLine="90" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />

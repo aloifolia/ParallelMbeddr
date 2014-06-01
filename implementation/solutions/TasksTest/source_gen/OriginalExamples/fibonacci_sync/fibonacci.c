@@ -49,7 +49,7 @@ int32_t main(int32_t argc, char* argv[])
       struct GenericSharedDeclarations_SharedOf_int32_0* slotI = &(slots[__i]);
       GenericSyncDeclarations_startSyncFor1Mutex(&(slotI->mutex));
       {
-        fiboFutures[__i] = GenericTaskDeclarations_runTaskAndGetFuture(fibonacci_taskInit_a0a0a0a6a1());
+        fiboFutures[__i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0a0a6a1());
       }
 
       GenericSyncDeclarations_stopSyncFor1Mutex(&(slotI->mutex));
@@ -82,7 +82,7 @@ int32_t main(int32_t argc, char* argv[])
   {
     for ( int8_t __i = 0; __i < FIBONACCI_fiboCount; __i++ )
     {
-      fiboFutures[__i] = GenericTaskDeclarations_runTaskAndGetFuture(fibonacci_taskInit_a0a0a0a01a1(resultsPointer));
+      fiboFutures[__i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0a0a01a1(resultsPointer));
     }
 
   }
