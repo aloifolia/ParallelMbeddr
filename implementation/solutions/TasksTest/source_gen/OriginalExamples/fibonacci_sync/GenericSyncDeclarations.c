@@ -11,7 +11,7 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
     ++*waitingCounter;
     *waitingCounter = (*waitingCounter + 1) % 17;
     *mask |= 1 << *waitingCounter;
-    struct timespec sleepingTime = ((struct timespec)({ .tv_nsec = clock() &*mask}));
+    struct timespec sleepingTime = (struct timespec){ .tv_nsec = clock() &*mask};
     nanosleep(&sleepingTime,0);
   }
 
@@ -25,7 +25,7 @@ void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0)
   while (1)
   {
     GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask);
-    if ( mutex_trylock(mutex_0) != 0 ) 
+    if ( pthread_mutex_trylock(mutex_0) != 0 ) 
     {
       continue;
     }

@@ -1114,7 +1114,7 @@ public class SyncDefinitionBuilder {
         return node_483189195599383269;
       }
     }.invoke();
-    final SNode sleepingTime = new _FunctionTypes._return_P0_E0<SNode>() {
+    final SNode sleepingTimeDeclaration = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_483189195598439710 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
@@ -1128,16 +1128,30 @@ public class SyncDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_483189195599571599 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_4335879941157733962 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
+            SPropertyOperations.set(res, "text", ("("));
+            return res;
+          }
+        }.invoke();
+        final SNode node_4335879941157742914 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SNodeOperations.copyNode(timespecType);
+            return res;
+          }
+        }.invoke();
+        final SNode node_4335879941157742645 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AnyNodeItem", null);
+            SLinkOperations.setTarget(res, "theNode", node_4335879941157742914, true);
             return res;
           }
         }.invoke();
         final SNode node_483189195599594176 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
-            SPropertyOperations.set(res, "text", ("{ .tv_nsec = clock() &"));
+            SPropertyOperations.set(res, "text", ("){ .tv_nsec = clock() &"));
             return res;
           }
         }.invoke();
@@ -1161,37 +1175,16 @@ public class SyncDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_483189195599577155 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextExpression", null);
-            SPropertyOperations.set(res, "requiredStdHeader", ("<time.h>"));
-            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599594176);
-            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599598317);
-            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599602390);
-            return res;
-          }
-        }.invoke();
-        final SNode node_483189195599571399 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.CastExpression", null);
-            SLinkOperations.setTarget(res, "targetType", node_483189195599571599, true);
-            SLinkOperations.setTarget(res, "expr", node_483189195599577155, true);
-            return res;
-          }
-        }.invoke();
-        final SNode node_483189195599571184 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AnyNodeItem", null);
-            SLinkOperations.setTarget(res, "theNode", node_483189195599571399, true);
-            return res;
-          }
-        }.invoke();
         final SNode node_483189195599477978 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextExpression", null);
             SPropertyOperations.set(res, "requiredStdHeader", (null));
             SLinkOperations.setTarget(res, "dummyType", node_483189195599562249, true);
-            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599571184);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_4335879941157733962);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_4335879941157742645);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599594176);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599598317);
+            ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599602390);
             return res;
           }
         }.invoke();
@@ -1377,14 +1370,14 @@ public class SyncDefinitionBuilder {
         }.invoke();
         final SNode node_483189195599150264 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = sleepingTime;
+            SNode res = sleepingTimeDeclaration;
             return res;
           }
         }.invoke();
         final SNode node_4335879941136601093 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.LocalVarRef", null);
-            SLinkOperations.setTarget(res, "var", sleepingTime, false);
+            SLinkOperations.setTarget(res, "var", sleepingTimeDeclaration, false);
             return res;
           }
         }.invoke();
@@ -1678,7 +1671,7 @@ public class SyncDefinitionBuilder {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryFunctionCall", null);
               SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
-              SPropertyOperations.set(res, "calledFunctionName", ("mutex_trylock"));
+              SPropertyOperations.set(res, "calledFunctionName", ("pthread_mutex_trylock"));
               SLinkOperations.setTarget(res, "dummyType", node_3348893923577562266, true);
               ListSequence.fromList(SLinkOperations.getTargets(res, "arguments", true)).addElement(node_5853110027229257734);
               return res;
