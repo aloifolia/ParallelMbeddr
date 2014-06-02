@@ -5405,9 +5405,9 @@
             <property name="name" nameId="tpck.1169194664001" value="sharedToResolved" />
           </node>
           <node role="inputSequence" roleId="tp2q.1153944424730" type="tpee.DotExpression" typeId="tpee.1197027756228" id="4335879941184962513" nodeInfo="nn">
-            <node role="operand" roleId="tpee.1197027771414" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941177329444" nodeInfo="nn">
-              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941177088811" resolveInfo="getSharedToResolvedTypes" />
-              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+            <node role="operand" roleId="tpee.1197027771414" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941186341294" nodeInfo="nn">
+              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186341245" resolveInfo="getSharedToResolvedTypes" />
+              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
               <node role="actualArgument" roleId="tpee.1068499141038" type="tpcw.ConceptFunctionParameter_model" typeId="tpcw.1161622665029" id="4335879941177362169" nodeInfo="nn" />
             </node>
             <node role="operation" roleId="tpee.1197027833540" type="tp2q.SortOperation" typeId="tp2q.1205679737078" id="4335879941184982544" nodeInfo="nn">
@@ -5836,8 +5836,8 @@
               <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
             </node>
             <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="2648922052118625803" nodeInfo="nn">
-              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
-              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.2648922052118606257" resolveInfo="buildInitMutexFunction" />
+              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189134626" resolveInfo="buildInitMutexFunction" />
+              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
               <node role="actualArgument" roleId="tpee.1068499141038" type="tpf3.TemplateFunctionParameter_generationContext" typeId="tpf3.1216860049635" id="2648922052118625889" nodeInfo="nn" />
             </node>
           </node>
@@ -5887,8 +5887,8 @@
               <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
             </node>
             <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5244467561009518971" nodeInfo="nn">
-              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561005167600" resolveInfo="buildDestroyMutexFunction" />
-              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+              <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189134760" resolveInfo="buildDestroyMutexFunction" />
+              <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
               <node role="actualArgument" roleId="tpee.1068499141038" type="tpf3.TemplateFunctionParameter_generationContext" typeId="tpf3.1216860049635" id="5244467561009518972" nodeInfo="nn" />
             </node>
           </node>
@@ -6050,8 +6050,8 @@
                     </node>
                     <node role="operation" roleId="tpee.1197027833540" type="tp2q.AddAllElementsOperation" typeId="tp2q.1160666733551" id="5244467561008073593" nodeInfo="nn">
                       <node role="argument" roleId="tp2q.1160666822012" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5244467561005631380" nodeInfo="nn">
-                        <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.2648922052118704545" resolveInfo="buildInitMutexCallsFor" />
-                        <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+                        <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189134925" resolveInfo="buildInitMutexCallsFor" />
+                        <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                         <node role="actualArgument" roleId="tpee.1068499141038" type="tpf3.TemplateFunctionParameter_generationContext" typeId="tpf3.1216860049635" id="5244467561005663213" nodeInfo="nn" />
                         <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5244467561005734630" nodeInfo="nn">
                           <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="2648922052118531450" resolveInfo="initMutexFunction" />
@@ -6127,8 +6127,8 @@
                   <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
                 </node>
                 <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5853110027205488535" nodeInfo="nn">
-                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
-                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561006661595" resolveInfo="buildVoidExportedFunction" />
+                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186142240" resolveInfo="buildVoidExportedFunction" />
+                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                   <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5853110027205580891" nodeInfo="nn">
                     <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5853110027205474364" resolveInfo="callsOfInitGlobalMutexesFor1Module" />
                   </node>
@@ -6212,8 +6212,8 @@
             </node>
             <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="5853110027206291489" nodeInfo="nn">
               <node role="expression" roleId="tpee.1068580123156" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5853110027206291490" nodeInfo="nn">
-                <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561006036968" resolveInfo="convertInitToDestroyMutexCall" />
-                <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+                <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189135285" resolveInfo="convertInitToDestroyMutexCall" />
+                <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                 <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5853110027206301329" nodeInfo="nn">
                   <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5853110027206235111" resolveInfo="destroyGlobalMutexesFor1Module" />
                 </node>
@@ -6511,8 +6511,8 @@
                   <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
                 </node>
                 <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5244467561006825195" nodeInfo="nn">
-                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561006661595" resolveInfo="buildVoidExportedFunction" />
-                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186142240" resolveInfo="buildVoidExportedFunction" />
+                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                   <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5853110027206512202" nodeInfo="nn">
                     <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5853110027205363152" resolveInfo="callsOfInitGlobalMutexesForAllModules" />
                   </node>
@@ -6581,8 +6581,8 @@
                   <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
                 </node>
                 <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5853110027206547962" nodeInfo="nn">
-                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561006661595" resolveInfo="buildVoidExportedFunction" />
-                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+                  <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186142240" resolveInfo="buildVoidExportedFunction" />
+                  <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                   <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5853110027206550307" nodeInfo="nn">
                     <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5853110027206371295" resolveInfo="callsOfDestroyGlobalMutexesForAllModules" />
                   </node>
@@ -7088,8 +7088,8 @@
                         </node>
                         <node role="operation" roleId="tpee.1197027833540" type="tp2q.AddAllElementsOperation" typeId="tp2q.1160666733551" id="5244467561010836843" nodeInfo="nn">
                           <node role="argument" roleId="tp2q.1160666822012" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5244467561010836844" nodeInfo="nn">
-                            <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
-                            <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.2648922052118704545" resolveInfo="buildInitMutexCallsFor" />
+                            <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189134925" resolveInfo="buildInitMutexCallsFor" />
+                            <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                             <node role="actualArgument" roleId="tpee.1068499141038" type="tpf3.TemplateFunctionParameter_generationContext" typeId="tpf3.1216860049635" id="5244467561010836845" nodeInfo="nn" />
                             <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5244467561010836846" nodeInfo="nn">
                               <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="2648922052118531450" resolveInfo="initMutexFunction" />
@@ -7252,8 +7252,8 @@
                         </node>
                         <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="5147307853640028527" nodeInfo="nn">
                           <node role="expression" roleId="tpee.1068580123156" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5147307853640028636" nodeInfo="nn">
-                            <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5244467561006036968" resolveInfo="convertInitToDestroyMutexCall" />
-                            <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+                            <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941189135285" resolveInfo="convertInitToDestroyMutexCall" />
+                            <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                             <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.DotExpression" typeId="tpee.1197027756228" id="5147307853640032849" nodeInfo="nn">
                               <node role="operand" roleId="tpee.1197027771414" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853640028819" nodeInfo="nn">
                                 <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5244467561011331588" resolveInfo="localDestroyStatements" />
@@ -7555,22 +7555,22 @@
                         </node>
                       </node>
                     </node>
-                    <node role="statement" roleId="tpee.1068581517665" type="tpee.LocalVariableDeclarationStatement" typeId="tpee.1068581242864" id="5147307853645700282" nodeInfo="nn">
-                      <node role="localVariableDeclaration" roleId="tpee.1068581242865" type="tpee.LocalVariableDeclaration" typeId="tpee.1068581242863" id="5147307853645700285" nodeInfo="nr">
+                    <node role="statement" roleId="tpee.1068581517665" type="tpee.LocalVariableDeclarationStatement" typeId="tpee.1068581242864" id="4335879941188107521" nodeInfo="nn">
+                      <node role="localVariableDeclaration" roleId="tpee.1068581242865" type="tpee.LocalVariableDeclaration" typeId="tpee.1068581242863" id="4335879941188107522" nodeInfo="nr">
                         <property name="name" nameId="tpck.1169194664001" value="localInitFunction" />
-                        <node role="type" roleId="tpee.5680397130376446158" type="tp25.SNodeType" typeId="tp25.1138055754698" id="5147307853645700280" nodeInfo="in">
+                        <node role="type" roleId="tpee.5680397130376446158" type="tp25.SNodeType" typeId="tp25.1138055754698" id="4335879941188107523" nodeInfo="in">
                           <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
                         </node>
-                        <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5147307853645718685" nodeInfo="nn">
-                          <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5147307853645499653" resolveInfo="buildVoidInlineFunction" />
-                          <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853645720822" nodeInfo="nn">
+                        <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941188117684" nodeInfo="nn">
+                          <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186142258" resolveInfo="buildVoidInlineFunction" />
+                          <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188117886" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5244467561011299377" resolveInfo="localInitStatements" />
                           </node>
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646094377" nodeInfo="nn">
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188117887" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853645999523" resolveInfo="initArgs" />
                           </node>
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646221938" nodeInfo="nn">
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188117888" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853646200483" resolveInfo="localInitFuncName" />
                           </node>
                         </node>
@@ -7588,7 +7588,7 @@
                         </node>
                         <node role="operation" roleId="tpee.1197027833540" type="tp2q.AddElementOperation" typeId="tp2q.1160612413312" id="5147307853646640122" nodeInfo="nn">
                           <node role="argument" roleId="tp2q.1160612519549" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646640987" nodeInfo="nn">
-                            <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853645700285" resolveInfo="localInitFunction" />
+                            <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188107522" resolveInfo="localInitFunction" />
                           </node>
                         </node>
                       </node>
@@ -7598,7 +7598,7 @@
                         <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="5147307853649370419" nodeInfo="nn">
                           <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="5147307853649354717" nodeInfo="nn">
                             <node role="operand" roleId="tpee.1197027771414" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853649334475" nodeInfo="nn">
-                              <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853645700285" resolveInfo="localInitFunction" />
+                              <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188107522" resolveInfo="localInitFunction" />
                             </node>
                             <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="5147307853649364203" nodeInfo="nn">
                               <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="5147307853649364205" nodeInfo="ng">
@@ -7689,22 +7689,22 @@
                         </node>
                       </node>
                     </node>
-                    <node role="statement" roleId="tpee.1068581517665" type="tpee.LocalVariableDeclarationStatement" typeId="tpee.1068581242864" id="5147307853646453958" nodeInfo="nn">
-                      <node role="localVariableDeclaration" roleId="tpee.1068581242865" type="tpee.LocalVariableDeclaration" typeId="tpee.1068581242863" id="5147307853646453959" nodeInfo="nr">
+                    <node role="statement" roleId="tpee.1068581517665" type="tpee.LocalVariableDeclarationStatement" typeId="tpee.1068581242864" id="4335879941188132742" nodeInfo="nn">
+                      <node role="localVariableDeclaration" roleId="tpee.1068581242865" type="tpee.LocalVariableDeclaration" typeId="tpee.1068581242863" id="4335879941188132743" nodeInfo="nr">
                         <property name="name" nameId="tpck.1169194664001" value="localDestroyFunction" />
-                        <node role="type" roleId="tpee.5680397130376446158" type="tp25.SNodeType" typeId="tp25.1138055754698" id="5147307853646453960" nodeInfo="in">
+                        <node role="type" roleId="tpee.5680397130376446158" type="tp25.SNodeType" typeId="tp25.1138055754698" id="4335879941188132744" nodeInfo="in">
                           <link role="concept" roleId="tp25.1138405853777" targetNodeId="x27k.6437088627575724001" resolveInfo="Function" />
                         </node>
-                        <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="5147307853646453961" nodeInfo="nn">
-                          <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.5147307853645499653" resolveInfo="buildVoidInlineFunction" />
-                          <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646487134" nodeInfo="nn">
+                        <node role="initializer" roleId="tpee.1068431790190" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941188156074" nodeInfo="nn">
+                          <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186142258" resolveInfo="buildVoidInlineFunction" />
+                          <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188156323" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5244467561011331588" resolveInfo="localDestroyStatements" />
                           </node>
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853648749569" nodeInfo="nn">
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188156324" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853648731101" resolveInfo="destroyArgs" />
                           </node>
-                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646489387" nodeInfo="nn">
+                          <node role="actualArgument" roleId="tpee.1068499141038" type="tpee.VariableReference" typeId="tpee.1068498886296" id="4335879941188156325" nodeInfo="nn">
                             <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853646453966" resolveInfo="localDestroyFuncName" />
                           </node>
                         </node>
@@ -7722,7 +7722,7 @@
                         </node>
                         <node role="operation" roleId="tpee.1197027833540" type="tp2q.AddElementOperation" typeId="tp2q.1160612413312" id="5147307853646643346" nodeInfo="nn">
                           <node role="argument" roleId="tp2q.1160612519549" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646699696" nodeInfo="nn">
-                            <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853646453959" resolveInfo="localDestroyFunction" />
+                            <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188132743" resolveInfo="localDestroyFunction" />
                           </node>
                         </node>
                       </node>
@@ -7732,7 +7732,7 @@
                         <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="5147307853649501563" nodeInfo="nn">
                           <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="5147307853649501564" nodeInfo="nn">
                             <node role="operand" roleId="tpee.1197027771414" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853649518783" nodeInfo="nn">
-                              <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853646453959" resolveInfo="localDestroyFunction" />
+                              <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188132743" resolveInfo="localDestroyFunction" />
                             </node>
                             <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="5147307853649501566" nodeInfo="nn">
                               <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="5147307853649501567" nodeInfo="ng">
@@ -7894,7 +7894,7 @@
                               <node role="children" roleId="hba4.4481811096720537463" type="hba4.RefStep" typeId="hba4.4481811096721038000" id="5147307853646774790" nodeInfo="ng">
                                 <link role="refLink" roleId="hba4.4481811096721038001" targetNodeId="x27k.5950410542643524493" />
                                 <node role="target" roleId="hba4.4481811096721038002" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646774848" nodeInfo="nn">
-                                  <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853645700285" resolveInfo="localInitFunction" />
+                                  <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188107522" resolveInfo="localInitFunction" />
                                 </node>
                               </node>
                               <node role="children" roleId="hba4.4481811096720537463" type="hba4.ChildStep" typeId="hba4.4481811096720537459" id="5147307853646774978" nodeInfo="ng">
@@ -7933,7 +7933,7 @@
                               <node role="children" roleId="hba4.4481811096720537463" type="hba4.RefStep" typeId="hba4.4481811096721038000" id="5147307853646782502" nodeInfo="ng">
                                 <link role="refLink" roleId="hba4.4481811096721038001" targetNodeId="x27k.5950410542643524493" />
                                 <node role="target" roleId="hba4.4481811096721038002" type="tpee.VariableReference" typeId="tpee.1068498886296" id="5147307853646795828" nodeInfo="nn">
-                                  <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="5147307853646453959" resolveInfo="localDestroyFunction" />
+                                  <link role="variableDeclaration" roleId="tpee.1068581517664" targetNodeId="4335879941188132743" resolveInfo="localDestroyFunction" />
                                 </node>
                               </node>
                               <node role="children" roleId="hba4.4481811096720537463" type="hba4.ChildStep" typeId="hba4.4481811096720537459" id="5147307853646782504" nodeInfo="ng">
@@ -8353,9 +8353,9 @@
               </node>
             </node>
             <node role="operand" roleId="tpee.1197027771414" type="tpee.DotExpression" typeId="tpee.1197027756228" id="4335879941178035443" nodeInfo="nn">
-              <node role="operand" roleId="tpee.1197027771414" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941178028873" nodeInfo="nn">
-                <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941177088811" resolveInfo="getSharedToResolvedTypes" />
-                <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.2852056939580287594" resolveInfo="SyncBuilder" />
+              <node role="operand" roleId="tpee.1197027771414" type="tpee.StaticMethodCall" typeId="tpee.1081236700937" id="4335879941186341293" nodeInfo="nn">
+                <link role="baseMethodDeclaration" roleId="tpee.1068499141037" targetNodeId="ys6a.4335879941186341245" resolveInfo="getSharedToResolvedTypes" />
+                <link role="classConcept" roleId="tpee.1144433194310" targetNodeId="ys6a.4335879941181356877" resolveInfo="SharedBuilder" />
                 <node role="actualArgument" roleId="tpee.1068499141038" type="tpcw.ConceptFunctionParameter_model" typeId="tpcw.1161622665029" id="4335879941178029889" nodeInfo="nn" />
               </node>
               <node role="operation" roleId="tpee.1197027833540" type="tp2q.SortOperation" typeId="tp2q.1205679737078" id="4335879941178040161" nodeInfo="nn">
