@@ -12,6 +12,10 @@
 
 #include "GenericSharedDeclarations.h"
 
+#include "GenericSyncDeclarations.h"
+
+#include "testSync_SharedTypes_0.h"
+
 
 
 #ifdef __cplusplus
@@ -20,9 +24,9 @@ extern "C" {
 
 int32_t testSync_main(int32_t argc,char* argv[]);
 
-void testSync_initGlobalMutexes_0(void);
+void testSync_initGlobalMutexesFor1Module_0(void);
 
-void testSync_destroyGlobalMutexes_0(void);
+void testSync_initAllGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus

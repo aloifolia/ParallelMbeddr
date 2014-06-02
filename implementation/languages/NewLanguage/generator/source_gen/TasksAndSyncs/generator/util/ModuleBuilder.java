@@ -11,6 +11,9 @@ import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.TemplateQueryContext;
+import jetbrains.mps.internal.collections.runtime.Sequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 
 public class ModuleBuilder {
 
@@ -107,5 +110,19 @@ public class ModuleBuilder {
     }.invoke());
 
     return sharedModule;
+  }
+
+
+
+  public static void importModule(SNode moduleToImport, final SNode target) {
+    if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getTargets(target, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency")).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SLinkOperations.getTarget(it, "chunk", false) == target;
+      }
+    }))) {
+      SNode newImport = SConceptOperations.createNewNode("com.mbeddr.core.base.structure.DefaultGenericChunkDependency", null);
+      SLinkOperations.setTarget(newImport, "chunk", moduleToImport, false);
+      ListSequence.fromList(SLinkOperations.getTargets(target, "imports", true)).addElement(newImport);
+    }
   }
 }

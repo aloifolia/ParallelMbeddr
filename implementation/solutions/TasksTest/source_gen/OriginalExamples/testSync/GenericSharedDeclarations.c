@@ -1,6 +1,7 @@
 #include "GenericSharedDeclarations.h"
 
 
+#include "GenericSyncDeclarations.h"
 
 void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute, pthread_mutex_t* mutex) 
 {
