@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <time.h>
+
 
 
 #ifdef __cplusplus

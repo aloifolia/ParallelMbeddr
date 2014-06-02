@@ -13,7 +13,7 @@ static struct GenericSharedDeclarations_SharedOf_int32_0 syncStuff_global2;
 static int32_t* syncStuff_globalLeak;
 
 typedef struct GenericSharedDeclarations_SharedOf_int32_0* APrime;
-typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0 B;
+typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0_0 B;
 struct syncStuff_SharedContainer {
   struct GenericSharedDeclarations_SharedOf_int32_0 i;
 };
@@ -30,7 +30,7 @@ struct syncStuff_ArrayArrayContainer {
   struct syncStuff_SharedTypes_0_ArrayContainer c;
 };
 
-typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0 A;
+typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0_0 A;
 typedef A C;
 int32_t main(int32_t argc, char* argv[]) 
 {

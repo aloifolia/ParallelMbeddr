@@ -12,7 +12,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.generator.template.TemplateQueryContext;
 
-public class ImplementationModuleBuilder {
+public class ModuleBuilder {
 
 
   public static SNode buildGeneric(final String name, SModel model) {

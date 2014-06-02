@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
   <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="19" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSharedDeclarations" />
-  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="21" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSyncDeclarations" />
   <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="79" endPosition="0" unitName="OriginalExamples.syncStuff.GenericTaskDeclarations" />
   <unitInfo fileName="syncStuff_SharedTypes_0.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff_SharedTypes_0" />
   <root nodeRef="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/5867266020201109512">
     <nodeInfo nodeId="483189195596759220" fileName="syncStuff.c" startLine="15" startPosition="0" endLine="15" endPosition="66" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
-    <nodeInfo nodeId="483189195596738644" fileName="syncStuff.c" startLine="16" startPosition="0" endLine="16" endPosition="79" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
-    <nodeInfo nodeId="483189195596727943" fileName="syncStuff.c" startLine="33" startPosition="0" endLine="33" endPosition="79" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
+    <nodeInfo nodeId="483189195596738644" fileName="syncStuff.c" startLine="16" startPosition="0" endLine="16" endPosition="81" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
+    <nodeInfo nodeId="483189195596727943" fileName="syncStuff.c" startLine="33" startPosition="0" endLine="33" endPosition="81" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
     <nodeInfo nodeId="483189195596771915" fileName="syncStuff.c" startLine="34" startPosition="0" endLine="34" endPosition="12" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
     <nodeInfo nodeId="5867266020201788284" fileName="syncStuff.c" startLine="37" startPosition="2" endLine="37" endPosition="36" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="5867266020201788284" fileName="syncStuff.c" startLine="37" startPosition="2" endLine="37" endPosition="37" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />

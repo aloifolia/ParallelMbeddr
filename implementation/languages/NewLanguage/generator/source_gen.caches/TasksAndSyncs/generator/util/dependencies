@@ -8,7 +8,7 @@
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.generator.util.ImplementationModuleBuilder" file="ImplementationModuleBuilder.java">
+  <dependency className="TasksAndSyncs.generator.util.ModuleBuilder" file="ModuleBuilder.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
     <classNode dependClassName="jetbrains.mps.generator.template.TemplateQueryContext" />
@@ -24,24 +24,33 @@
     <classNode dependClassName="java.lang.String" />
   </dependency>
   <dependency className="TasksAndSyncs.generator.util.Pair" file="Pair.java" />
-  <dependency className="TasksAndSyncs.generator.util.SyncDefinitionBuilder" file="SyncDefinitionBuilder.java">
+  <dependency className="TasksAndSyncs.generator.util.SharedBuilder" file="SharedBuilder.java">
     <classNode dependClassName="TasksAndSyncs.generator.util.Pair" />
+    <classNode dependClassName="TasksAndSyncs.generator.util.SyncBuilder" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_Behavior" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.List" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
+    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
+    <classNode dependClassName="jetbrains.mps.generator.template.TemplateQueryContext" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="TasksAndSyncs.generator.util.SyncBuilder" file="SyncBuilder.java">
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
     <classNode dependClassName="java.lang.Class" />
-    <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="java.util.ArrayList" />
     <classNode dependClassName="java.util.HashMap" />
     <classNode dependClassName="java.util.List" />
     <classNode dependClassName="java.util.Map" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime.Wrappers" />
     <classNode dependClassName="jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.MultiTuple" />
-    <classNode dependClassName="jetbrains.mps.baseLanguage.tuples.runtime.Tuples" />
     <classNode dependClassName="jetbrains.mps.generator.template.TemplateQueryContext" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IWhereFilter" />
+    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.IVisitor" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
     <classNode dependClassName="jetbrains.mps.internal.collections.runtime.MapSequence" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
@@ -55,7 +64,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SModel" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
-  <dependency className="TasksAndSyncs.generator.util.TaskDefinitionBuilder" file="TaskDefinitionBuilder.java">
+  <dependency className="TasksAndSyncs.generator.util.TaskBuilder" file="TaskBuilder.java">
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />

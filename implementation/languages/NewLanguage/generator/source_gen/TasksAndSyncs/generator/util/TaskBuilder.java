@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 
-public class TaskDefinitionBuilder {
+public class TaskBuilder {
 
 
   public static SNode buildTaskStruct(boolean isVoid, final String name) {
