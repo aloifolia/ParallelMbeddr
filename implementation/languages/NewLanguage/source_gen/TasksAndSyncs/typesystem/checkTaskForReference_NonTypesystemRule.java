@@ -42,8 +42,12 @@ public class checkTaskForReference_NonTypesystemRule extends AbstractNonTypesyst
             }
           }
         }
-      }
-      if (Checker.refersToRessource(expression) && Checker.isInCopyPosition(expression)) {
+      } else if (SNodeOperations.isInstanceOf(expression, "com.mbeddr.core.util.structure.ForRangeRef")) {
+        // somewhat too specific, should be replaced by something more generic some time 
+        {
+          MessageTarget errorTarget = new NodeMessageTarget();
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(expression, "for ranges cannot be referred to in task", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195638410902", null, errorTarget);
+        }
       }
     }
   }

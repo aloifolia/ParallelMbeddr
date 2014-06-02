@@ -5,6 +5,8 @@ package TasksAndSyncs.generator.util;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 
 public class Analyzer {
 
@@ -35,4 +37,12 @@ public class Analyzer {
   }
 
 
+
+  public static boolean taskExprContainsRebindableRefs(SNode taskExpression) {
+    return (SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference") && SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.modules.structure.GlobalVarRef")) || ListSequence.fromList(SNodeOperations.getDescendants(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(SNodeOperations.isInstanceOf(it, "com.mbeddr.core.modules.structure.GlobalVarRef"));
+      }
+    }).count() > 0;
+  }
 }

@@ -12,6 +12,10 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import java.util.List;
+import java.util.ArrayList;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 
 public class TaskDefinitionBuilder {
 
@@ -1158,5 +1162,31 @@ public class TaskDefinitionBuilder {
     }.invoke();
 
     return futureSaveAndResultFunction;
+  }
+
+
+
+  public static List<SNode> getIVarRefsFromTaskExpr(SNode node) {
+    final List<SNode> varRefs = new ArrayList<SNode>();
+    ListSequence.fromList(SNodeOperations.getDescendants(node, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(SNodeOperations.isInstanceOf(it, "com.mbeddr.core.modules.structure.GlobalVarRef"));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(final SNode currentRef) {
+        if (!(ListSequence.fromList(varRefs).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode existingRef) {
+            return BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), existingRef, "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), currentRef, "virtual_getVariable_2486081302460156153", new Object[]{});
+          }
+        }))) {
+          ListSequence.fromList(varRefs).addElement(currentRef);
+        }
+      }
+    });
+
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference")) {
+      ListSequence.fromList(varRefs).addElement(SNodeOperations.cast(SLinkOperations.getTarget(node, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"));
+    }
+    return varRefs;
   }
 }
