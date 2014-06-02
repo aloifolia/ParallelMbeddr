@@ -35,7 +35,7 @@ public class SyncStatement_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Collection_6a0nmk_a");
     editorCell.setBig(true);
     Style style = new StyleImpl();
-    style.set(StyleAttributes.SELECTABLE, false);
+    style.set(StyleAttributes.SELECTABLE, true);
     editorCell.getStyle().putAll(style);
     editorCell.addEditorCell(this.createConstant_6a0nmk_a0(editorContext, node));
     editorCell.addEditorCell(this.createRefNodeList_6a0nmk_b0(editorContext, node));
@@ -49,6 +49,7 @@ public class SyncStatement_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Constant_6a0nmk_a0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.PUNCTUATION_RIGHT, true);
+    style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
@@ -131,6 +132,7 @@ public class SyncStatement_Editor extends DefaultNodeEditor {
     editorCell.setCellId("Constant_6a0nmk_c0");
     Style style = new StyleImpl();
     style.set(StyleAttributes.PUNCTUATION_LEFT, true);
+    style.set(StyleAttributes.SELECTABLE, false);
     editorCell.getStyle().putAll(style);
     editorCell.setDefaultText("");
     return editorCell;
@@ -138,13 +140,16 @@ public class SyncStatement_Editor extends DefaultNodeEditor {
 
   private EditorCell createRefNode_6a0nmk_d0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefNodeCellProvider(node, editorContext);
-    provider.setRole("statements");
-    provider.setNoTargetText("<no statements>");
+    provider.setRole("body");
+    provider.setNoTargetText("<no body>");
     EditorCell editorCell;
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
-      editorCell.setRole("statements");
+      editorCell.setRole("body");
     }
+    Style style = new StyleImpl();
+    style.set(StyleAttributes.SELECTABLE, false);
+    editorCell.getStyle().putAll(style);
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
     Class attributeKind = provider.getRoleAttributeClass();

@@ -4,6 +4,14 @@
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
 
+struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  pthread_create(&pth,0,task.fun,task.args);
+  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
+}
+
+
 void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
 {
   if ( future->finished ) 
@@ -20,15 +28,17 @@ void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Fut
 }
 
 
-void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
-{
-  GenericTaskDeclarations_joinFuture(&future);
-}
-
-
 void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
 {
   return GenericTaskDeclarations_getFutureResult(&future);
+}
+
+
+struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  pthread_create(&pth,0,task.fun,task.args);
+  return (struct GenericTaskDeclarations_Future){ .pth = pth };
 }
 
 
@@ -49,14 +59,6 @@ void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclaration
 }
 
 
-struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
-{
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
-}
-
-
 void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* future) 
 {
   if ( !(future->finished) ) 
@@ -68,11 +70,9 @@ void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* f
 }
 
 
-struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
 {
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericTaskDeclarations_Future){ .pth = pth };
+  GenericTaskDeclarations_joinFuture(&future);
 }
 
 

@@ -8,6 +8,8 @@ import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.smodel.IOperationContext;
 import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
 public class SyncRessource_Constraints extends BaseConstraintsDescriptor {
@@ -32,7 +34,10 @@ public class SyncRessource_Constraints extends BaseConstraintsDescriptor {
   }
 
   public static boolean static_canBeAChild(SNode node, SNode parentNode, SNode link, SNode childConcept, final IOperationContext operationContext) {
-    return SNodeOperations.isInstanceOf(parentNode, "TasksAndSyncs.structure.SyncStatement");
+    if ((SNodeOperations.getAncestor(node, "TasksAndSyncs.structure.SyncStatement", false, false) == null)) {
+      return false;
+    }
+    return !(ListSequence.fromList(SNodeOperations.getAncestors(node, null, false)).contains(SLinkOperations.getTarget(SNodeOperations.getAncestor(node, "TasksAndSyncs.structure.SyncStatement", false, false), "body", true)));
   }
 
   private static SNodePointer canBeChildBreakingPoint = new SNodePointer("r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)", "6288388922746092275");

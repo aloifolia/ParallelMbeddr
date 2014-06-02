@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="54" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
+  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="58" endPosition="0" unitName="TasksAndSyncs.behavior.BehaviorAspectDescriptor" />
   <unitInfo fileName="CompoundLiteral_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.CompoundLiteral_BehaviorDescriptor" />
   <unitInfo fileName="ExprBoundToStruct_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.ExprBoundToStruct_BehaviorDescriptor" />
   <unitInfo fileName="FutureJoin_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.FutureJoin_BehaviorDescriptor" />
@@ -15,7 +15,9 @@
   <unitInfo fileName="SyncRessourceNamed_BehaviorDescriptor.java" startLine="11" startPosition="0" endLine="40" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessourceNamed_BehaviorDescriptor" />
   <unitInfo fileName="SyncRessourceRef_BehaviorDescriptor.java" startLine="9" startPosition="0" endLine="22" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessourceRef_BehaviorDescriptor" />
   <unitInfo fileName="SyncRessource_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessource_BehaviorDescriptor" />
+  <unitInfo fileName="SyncStart_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" />
   <unitInfo fileName="SyncStatement_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="27" endPosition="0" unitName="TasksAndSyncs.behavior.SyncStatement_BehaviorDescriptor" />
+  <unitInfo fileName="SyncStop_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncStop_BehaviorDescriptor" />
   <unitInfo fileName="TaskType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
   <unitInfo fileName="Task_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1304213873205104705">

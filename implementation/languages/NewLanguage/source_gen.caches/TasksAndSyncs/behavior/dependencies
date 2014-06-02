@@ -14,7 +14,9 @@
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessourceNamed_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessourceRef_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessource_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStatement_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncStop_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.TaskType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.Task_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.String" />
@@ -186,6 +188,12 @@
     <classNode dependClassName="java.lang.String" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" file="SyncStart_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStatement_Behavior" file="SyncStatement_Behavior.java">
     <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
     <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
@@ -205,6 +213,12 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SyncStop_BehaviorDescriptor" file="SyncStop_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.TaskType_Behavior" file="TaskType_Behavior.java">

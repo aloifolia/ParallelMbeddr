@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="e8c6lf5c0hz1ei0cjqxwv2kzjvns1ms">
+<dependencies version="2" modelHash="cew3ywkym1xcdpwsh31ps4l0imd7u1h">
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
   <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor.descriptor(MPS.Editor/jetbrains.mps.openapi.editor.descriptor@java_stub)" />
@@ -16,17 +16,20 @@
   <dep model="r:00000000-0000-4000-0000-011c89590303(jetbrains.mps.lang.smodel.generator.baseLanguage.template.main@generator)" hash="-7rgu9ik8e4lg6l58nkzeswaixleu3oi" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
   <dep model="r:53e59391-150a-45ff-930e-2b4fdafb0904(com.mbeddr.core.expressions.editor)" hash="-c6yqkehrhwpg71lmoci3z01yilqqjbo" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-d0dyc5bwr1d0b1qd6286bff5km32540" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-3zevyeblkdqr5huo864he68mqcemmdm" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="-dh3h1y2xoptj5lgq10sd9knoeyuxwuf" />
   <dep model="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" hash="-4ker834zjc3ekw0wrms7ukq5cn24pa1" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
-  <common hash="-ay64yebyodaetieelba1gusir7g1m6k" dependsOnNodes="true">
+  <common hash="-4e0ono8lzsx3y9p5co5501zrezeolv2" dependsOnNodes="true">
     <dep root="1304213873204897467" />
     <dep root="1304213873205054709" />
     <dep root="1304213873206872171" />
     <dep root="1924594752095484752" />
     <dep root="3074299910026283505" />
     <dep root="3570654511858678999" />
+    <dep root="4335879941138581254" />
+    <dep root="4335879941138597459" />
+    <dep root="4335879941144970621" />
     <dep root="6288388922742659997" />
     <dep root="6288388922743435312" />
     <dep root="6288388922746130131" />
@@ -85,14 +88,14 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="SharedSet_Editor.java" />
   </source>
-  <source id="6553204290894224125" name="SyncRessource_Editor" hash="96ryvxre6hj2y5vv6zvlhh3s41t9n23">
+  <source id="6553204290894224125" name="SyncRessource_Editor" hash="4tfb9r27texdcna1btnuirl5q5vami6">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="SyncRessource_Editor.java" />
   </source>
-  <source id="6553204290894227615" name="SyncStatement_Editor" hash="d8wuv3l1yb33wbpouqbyacffsxz0390">
+  <source id="6553204290894227615" name="SyncStatement_Editor" hash="-8iapdr72fr0sxrzedwzlsfipe01xmf4">
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
     <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
@@ -133,6 +136,29 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <dep model="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" />
     <file name="unnameRessource.java" />
+  </source>
+  <source id="4335879941138581254" name="SyncStart_Editor" hash="-569gocsejiemhycqahinktpm6limapd">
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="SyncStart_Editor.java" />
+  </source>
+  <source id="4335879941138597459" name="SyncStop_Editor" hash="55ded617som63bp2dzs2d9t3h9oo2t8">
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cellLayout(MPS.Editor/jetbrains.mps.nodeEditor.cellLayout@java_stub)" />
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="SyncStop_Editor.java" />
+  </source>
+  <source id="4335879941144970621" name="SyncRessourceRefByName_Editor" hash="7duckfj89fpeotmex8ytqudfxzll82r">
+    <dep model="f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.cells(MPS.Editor/jetbrains.mps.nodeEditor.cells@java_stub)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959029f(jetbrains.mps.lang.editor.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
+    <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
+    <file name="SyncRessourceRefByName_Editor.java" />
   </source>
 </dependencies>
 

@@ -40,15 +40,21 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 12:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceRef").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.base.structure.IReference").references("syncRessource").create();
       case 13:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStatement").super_("com.mbeddr.core.statements.structure.Statement").parents("com.mbeddr.core.statements.structure.Statement", "com.mbeddr.core.statements.structure.ILocalVarScopeProvider").children(new String[]{"ressources", "statements"}, new boolean[]{true, false}).alias("sync", "").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceRefByName").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").properties("name").create();
       case 14:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).alias("|", "").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStart").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"exprs"}, new boolean[]{true}).create();
       case 15:
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStatement").super_("com.mbeddr.core.statements.structure.Statement").parents("com.mbeddr.core.statements.structure.Statement", "com.mbeddr.core.statements.structure.ILocalVarScopeProvider").children(new String[]{"ressources", "body"}, new boolean[]{true, false}).alias("sync", "").create();
+      case 16:
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStop").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"exprs"}, new boolean[]{true}).create();
+      case 17:
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.Task").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).alias("|", "").create();
+      case 18:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.TaskType").super_("com.mbeddr.core.expressions.structure.Type").parents("com.mbeddr.core.expressions.structure.Type").children(new String[]{"returnType"}, new boolean[]{false}).alias("Task", "").create();
       default:
         return StructureAspectInterpreted.getInstance().getDescriptor(conceptFqName);
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.CompoundLiteral", "TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.CompoundLiteral", "TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.Share", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncRessource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncRessourceRefByName", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

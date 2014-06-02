@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-d0dyc5bwr1d0b1qd6286bff5km32540">
+<dependencies version="2" modelHash="-3zevyeblkdqr5huo864he68mqcemmdm">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
@@ -10,7 +10,7 @@
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
   <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" hash="a576g9gc2wfnw9bdzsbk3tlpczw0kkk" />
-  <common hash="civ5w4lerbjhk0xuvvjijmvnj7ymofm" dependsOnNodes="true">
+  <common hash="aj78cykrdey5fzjqq5f9z731obipayg" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
@@ -22,6 +22,9 @@
     <dep root="2744793885339890637" />
     <dep root="3074299910025607357" />
     <dep root="3570654511858570918" />
+    <dep root="4335879941138580937" />
+    <dep root="4335879941138597391" />
+    <dep root="4335879941144934382" />
     <dep root="6288388922742659454" />
     <dep root="6288388922743435028" />
     <dep root="6553204290893807643" />
@@ -52,8 +55,11 @@
   <source id="1924594752097591879" name="Share" hash="duueyv2r3g1y50j3r1jgqahlf5k8i08" />
   <source id="3570654511858570918" name="SharedSet" hash="-6ol13iokzlmbt9g7ohrsgdklo8aj72l" />
   <source id="6553204290893807643" name="SyncRessource" hash="-8v8b9f9zrqxyalwi32qjn9uacxx88j5" />
-  <source id="6553204290894227496" name="SyncStatement" hash="3gvun7b9re03s6gxzudl8ujd1lgaus1" />
+  <source id="6553204290894227496" name="SyncStatement" hash="d6nlfcsmaxc8116i6pdxlvia59wxfzh" />
   <source id="6288388922742659454" name="SyncRessourceNamed" hash="75gkr6qsuf7iqvj42r3cvxedn0r24rr" />
   <source id="6288388922743435028" name="SyncRessourceRef" hash="-65nra0onl5z8pqqdpxbld8xeytjhgt6" />
+  <source id="4335879941138580937" name="SyncStart" hash="9phw2mljqdligobnmwx8z9i2rsxlzrv" />
+  <source id="4335879941138597391" name="SyncStop" hash="7yyq7k0st78xknliscj3u75ved7cw15" />
+  <source id="4335879941144934382" name="SyncRessourceRefByName" hash="dg8zy252h79bnbhjwhhxtd6hcrr25c5" />
 </dependencies>
 
