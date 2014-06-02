@@ -12,6 +12,7 @@
     <classNode dependClassName="TasksAndSyncs.behavior.SharedSet_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SharedType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessourceNamed_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncRessourceRefByName_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessourceRef_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncRessource_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" />
@@ -168,6 +169,12 @@
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
+  <dependency className="TasksAndSyncs.behavior.SyncRessourceRefByName_BehaviorDescriptor" file="SyncRessourceRefByName_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncRessourceRef_Behavior" file="SyncRessourceRef_Behavior.java">
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
@@ -195,22 +202,22 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStatement_Behavior" file="SyncStatement_Behavior.java">
-    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
-    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
-    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.scope.Scope" />
+    <classNode dependClassName="jetbrains.mps.scope.SimpleRoleScope" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStatement_BehaviorDescriptor" file="SyncStatement_BehaviorDescriptor.java">
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStatement_Behavior" />
-    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_BehaviorDescriptor" />
-    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
     <classNode dependClassName="com.mbeddr.core.statements.behavior.Statement_BehaviorDescriptor" />
-    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.ScopeProvider_Behavior" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.ScopeProvider_BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.scope.Scope" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
