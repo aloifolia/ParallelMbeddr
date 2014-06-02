@@ -33,10 +33,10 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
   if ( *waitingCounter != 0 ) 
   {
     ++*waitingCounter;
-    ??? = (*waitingCounter + 1) % 17;
+    *waitingCounter = (*waitingCounter + 1) % 17;
     *mask |= 1 << *waitingCounter;
     struct timespec sleepingTime = ((struct timespec)({ .tv_nsec = clock() &*mask}));
-    nanosleep(&???,0);
+    nanosleep(&sleepingTime,0);
   }
 
 }

@@ -1271,7 +1271,7 @@ public class SyncDefinitionBuilder {
         }.invoke();
         final SNode node_483189195598838552 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = waitingCounterArgDeref;
+            SNode res = SNodeOperations.copyNode(waitingCounterArgDeref);
             return res;
           }
         }.invoke();
@@ -1381,16 +1381,17 @@ public class SyncDefinitionBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_483189195599369280 = new _FunctionTypes._return_P0_E0<SNode>() {
+        final SNode node_4335879941136601093 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode res = sleepingTime;
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.LocalVarRef", null);
+            SLinkOperations.setTarget(res, "var", sleepingTime, false);
             return res;
           }
         }.invoke();
         final SNode node_483189195599369012 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.ReferenceExpr", null);
-            SLinkOperations.setTarget(res, "expression", node_483189195599369280, true);
+            SLinkOperations.setTarget(res, "expression", node_4335879941136601093, true);
             return res;
           }
         }.invoke();

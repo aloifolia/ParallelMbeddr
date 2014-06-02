@@ -395,6 +395,7 @@
                     <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="483189195602286209" nodeInfo="ng">
                       <node role="expr" roleId="c4fa.7254843406768833939" type="c4fa.ArbitraryFunctionCall" typeId="c4fa.3108382027639947181" id="483189195602286210" nodeInfo="ng">
                         <property name="calledFunctionName" nameId="c4fa.3108382027639948867" value="printf" />
+                        <property name="requiredStdHeader" nameId="c4fa.3108382027639948845" value="&lt;stdio.h&gt;" />
                         <node role="arguments" roleId="c4fa.3108382027639948855" type="yq40.StringLiteral" typeId="yq40.6113173064526131575" id="483189195602286211" nodeInfo="ng">
                           <property name="value" nameId="yq40.6113173064526131578" value="%d-th fibo is %d" />
                         </node>
