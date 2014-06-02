@@ -202,22 +202,22 @@
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStatement_Behavior" file="SyncStatement_Behavior.java">
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
     <classNode dependClassName="java.lang.Object" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations" />
-    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
-    <classNode dependClassName="jetbrains.mps.scope.Scope" />
-    <classNode dependClassName="jetbrains.mps.scope.SimpleRoleScope" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStatement_BehaviorDescriptor" file="SyncStatement_BehaviorDescriptor.java">
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStatement_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
     <classNode dependClassName="com.mbeddr.core.statements.behavior.Statement_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Iterable" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.ScopeProvider_Behavior" />
-    <classNode dependClassName="jetbrains.mps.lang.core.behavior.ScopeProvider_BehaviorDescriptor" />
-    <classNode dependClassName="jetbrains.mps.scope.Scope" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="java.lang.Cloneable" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />

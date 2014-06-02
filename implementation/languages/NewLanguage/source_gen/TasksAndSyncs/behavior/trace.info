@@ -180,23 +180,28 @@
     <unitInfo nodeId="6288388922743436674" fileName="SyncRessourceRef_Behavior.java" startLine="8" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessourceRef_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/6553204290897934395">
-    <nodeInfo nodeId="4335879941193173261" fileName="SyncStatement_Behavior.java" startLine="17" startPosition="89" endLine="18" endPosition="148" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="4335879941193178600" fileName="SyncStatement_Behavior.java" startLine="19" startPosition="5" endLine="20" endPosition="183" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="13" startPosition="0" endLine="15" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-    <nodeInfo nodeId="4335879941193171353" fileName="SyncStatement_Behavior.java" startLine="16" startPosition="101" endLine="19" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="16" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getScope_3734116213129936182#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/scope/Scope;" />
-    <scopeInfo nodeId="6553204290897934397" fileName="SyncStatement_Behavior.java" startLine="13" startPosition="43" endLine="13" endPosition="43" />
-    <scopeInfo nodeId="4335879941193171356" fileName="SyncStatement_Behavior.java" startLine="17" startPosition="89" endLine="18" endPosition="148" />
-    <scopeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="13" startPosition="0" endLine="15" endPosition="0">
+    <nodeInfo nodeId="7254843406768755680" fileName="SyncStatement_Behavior.java" startLine="15" startPosition="127" endLine="16" endPosition="139" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="7254843406768755714" fileName="SyncStatement_Behavior.java" startLine="16" startPosition="139" endLine="17" endPosition="147" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="7254843406768755724" fileName="SyncStatement_Behavior.java" startLine="18" startPosition="38" endLine="19" endPosition="218" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="7254843406768755738" fileName="SyncStatement_Behavior.java" startLine="20" startPosition="5" endLine="21" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="12" startPosition="0" endLine="14" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="7254843406768755722" fileName="SyncStatement_Behavior.java" startLine="17" startPosition="147" endLine="20" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="15" startPosition="0" endLine="23" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getLocalVarScope_2093108837558189309#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;I)Lcom/mbeddr/core/statements/behavior/LocalVarScope;" />
+    <scopeInfo nodeId="6553204290897934397" fileName="SyncStatement_Behavior.java" startLine="12" startPosition="43" endLine="12" endPosition="43" />
+    <scopeInfo nodeId="7254843406768755723" fileName="SyncStatement_Behavior.java" startLine="18" startPosition="38" endLine="19" endPosition="218" />
+    <scopeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="12" startPosition="0" endLine="14" endPosition="0">
       <varInfo nodeId="6553204290897934395" varName="thisNode" />
     </scopeInfo>
-    <scopeInfo nodeId="4335879941193134688" fileName="SyncStatement_Behavior.java" startLine="16" startPosition="101" endLine="20" endPosition="183" />
-    <scopeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="16" startPosition="0" endLine="22" endPosition="0">
-      <varInfo nodeId="4335879941193134859" varName="child" />
-      <varInfo nodeId="4335879941193134857" varName="kind" />
+    <scopeInfo nodeId="7254843406768606798" fileName="SyncStatement_Behavior.java" startLine="15" startPosition="127" endLine="21" endPosition="17">
+      <varInfo nodeId="7254843406768755715" varName="outercScopeProvider" />
+      <varInfo nodeId="7254843406768755681" varName="scope" />
+    </scopeInfo>
+    <scopeInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="15" startPosition="0" endLine="23" endPosition="0">
+      <varInfo nodeId="7254843406768606799" varName="context" />
+      <varInfo nodeId="7254843406768606801" varName="statementIndex" />
       <varInfo nodeId="6553204290897934395" varName="thisNode" />
     </scopeInfo>
-    <unitInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="12" startPosition="0" endLine="23" endPosition="0" unitName="TasksAndSyncs.behavior.SyncStatement_Behavior" />
+    <unitInfo nodeId="6553204290897934395" fileName="SyncStatement_Behavior.java" startLine="11" startPosition="0" endLine="24" endPosition="0" unitName="TasksAndSyncs.behavior.SyncStatement_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/6596313669096321363">
     <nodeInfo nodeId="6596313669096347843" fileName="Task_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="184" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />

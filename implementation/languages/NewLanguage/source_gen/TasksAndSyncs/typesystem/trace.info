@@ -1370,82 +1370,104 @@
     <unitInfo nodeId="6553204290892862144" fileName="checkSyncRessourcesForSharedness_NonTypesystemRule.java" startLine="19" startPosition="0" endLine="53" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSyncRessourcesForSharedness_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/6553204290893368798">
-    <nodeInfo nodeId="937153820564635040" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="25" startPosition="127" endLine="26" endPosition="105" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
-    <nodeInfo nodeId="937153820564640931" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="26" startPosition="105" endLine="27" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
-    <nodeInfo nodeId="937153820561168218" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="28" startPosition="177" endLine="29" endPosition="204" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="937153820563262342" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="29" startPosition="204" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="937153820561274721" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="31" startPosition="97" endLine="32" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="937153820561290143" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="33" startPosition="7" endLine="34" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="5853110027232979788" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="58" endLine="40" endPosition="677" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="5853110027232979766" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="45" startPosition="11" endLine="46" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="5853110027232979766" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="46" startPosition="64" endLine="47" endPosition="253" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="51" startPosition="9" endLine="52" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="52" startPosition="62" endLine="53" endPosition="245" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="59" startPosition="46" endLine="60" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="64" startPosition="5" endLine="65" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="65" startPosition="130" endLine="66" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="70" startPosition="30" endLine="71" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkSharedGetSetForSyncContext_NonTypesystemRule#()V" />
-    <nodeInfo nodeId="937153820561269789" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="33" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="5853110027232979786" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="59" startPosition="0" endLine="62" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="70" startPosition="0" endLine="73" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="5853110027232979766" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="44" startPosition="14" endLine="48" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="50" startPosition="14" endLine="54" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="68" endLine="67" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="5853110027232979780" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="37" startPosition="45" endLine="42" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="5853110027233019100" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="50" startPosition="12" endLine="55" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="0" endLine="69" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="5853110027232979778" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="37" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-    <nodeInfo nodeId="5853110027232979764" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="35" startPosition="112" endLine="49" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="5853110027232975972" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="34" startPosition="0" endLine="55" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="937153820561039167" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="27" startPosition="40" endLine="56" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="25" startPosition="0" endLine="58" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="22" startPosition="62" endLine="22" endPosition="62" />
-    <scopeInfo nodeId="937153820561269792" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="31" startPosition="97" endLine="32" endPosition="15" />
-    <scopeInfo nodeId="5853110027232979787" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="58" endLine="40" endPosition="677" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="59" startPosition="46" endLine="60" endPosition="62" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="70" startPosition="30" endLine="71" endPosition="17" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="22" startPosition="0" endLine="24" endPosition="0" />
-    <scopeInfo nodeId="5853110027232979766" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="45" startPosition="11" endLine="47" endPosition="253">
-      <varInfo nodeId="5853110027232979766" varName="_reporter_2309309498" />
-      <varInfo nodeId="5853110027232979766" varName="errorTarget" />
+    <nodeInfo nodeId="937153820564635040" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="24" startPosition="127" endLine="25" endPosition="105" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="937153820564640931" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="25" startPosition="105" endLine="26" endPosition="40" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="937153820561168218" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="27" startPosition="177" endLine="28" endPosition="198" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194315336" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="28" startPosition="198" endLine="29" endPosition="120" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="937153820563262342" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="29" startPosition="120" endLine="30" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="4335879941194289101" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="33" startPosition="11" endLine="34" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194289101" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="34" startPosition="64" endLine="35" endPosition="286" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194347137" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="38" startPosition="119" endLine="39" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194431189" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="41" startPosition="47" endLine="42" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.BreakStatement" />
+    <nodeInfo nodeId="4335879941194445636" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="45" startPosition="672" endLine="46" endPosition="51" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="4335879941194446860" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="46" startPosition="51" endLine="47" endPosition="20" conceptFqName="jetbrains.mps.baseLanguage.structure.BreakStatement" />
+    <nodeInfo nodeId="4335879941194458996" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="52" startPosition="11" endLine="53" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194458996" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="53" startPosition="64" endLine="54" endPosition="253" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194483198" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="57" startPosition="11" endLine="58" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4335879941194483198" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="58" startPosition="64" endLine="59" endPosition="281" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="9" endLine="64" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="64" startPosition="62" endLine="65" endPosition="245" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="71" startPosition="46" endLine="72" endPosition="62" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="76" startPosition="5" endLine="77" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="77" startPosition="130" endLine="78" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="82" startPosition="30" endLine="83" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="23" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkSharedGetSetForSyncContext_NonTypesystemRule#()V" />
+    <nodeInfo nodeId="4335879941194427264" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="40" startPosition="173" endLine="43" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="71" startPosition="0" endLine="74" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="82" startPosition="0" endLine="85" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="4335879941194289101" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="32" startPosition="274" endLine="36" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4335879941194445634" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="44" startPosition="115" endLine="48" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="4335879941194458996" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="51" startPosition="45" endLine="55" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4335879941194483198" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="56" startPosition="174" endLine="60" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="62" startPosition="14" endLine="66" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="75" startPosition="68" endLine="79" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4335879941194503188" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="62" startPosition="12" endLine="67" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4335879941194213798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="31" startPosition="97" endLine="37" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="4335879941194444838" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="43" startPosition="11" endLine="49" endPosition="11" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="75" startPosition="0" endLine="81" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="4335879941194425333" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="42" endLine="50" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.ForeachStatement" />
+    <nodeInfo nodeId="4335879941194455619" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="50" startPosition="9" endLine="61" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="937153820561269789" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="67" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="937153820561039167" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="26" startPosition="40" endLine="68" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="24" startPosition="0" endLine="70" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="21" startPosition="62" endLine="21" endPosition="62" />
+    <scopeInfo nodeId="4335879941194427265" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="41" startPosition="47" endLine="42" endPosition="18" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="71" startPosition="46" endLine="72" endPosition="62" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="82" startPosition="30" endLine="83" endPosition="17" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="23" endPosition="0" />
+    <scopeInfo nodeId="4335879941194289101" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="33" startPosition="11" endLine="35" endPosition="286">
+      <varInfo nodeId="4335879941194289101" varName="_reporter_2309309498" />
+      <varInfo nodeId="4335879941194289101" varName="errorTarget" />
     </scopeInfo>
-    <scopeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="51" startPosition="9" endLine="53" endPosition="245">
+    <scopeInfo nodeId="4335879941194445635" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="45" startPosition="672" endLine="47" endPosition="20" />
+    <scopeInfo nodeId="4335879941194458996" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="52" startPosition="11" endLine="54" endPosition="253">
+      <varInfo nodeId="4335879941194458996" varName="_reporter_2309309498" />
+      <varInfo nodeId="4335879941194458996" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="4335879941194483198" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="57" startPosition="11" endLine="59" endPosition="281">
+      <varInfo nodeId="4335879941194483198" varName="_reporter_2309309498" />
+      <varInfo nodeId="4335879941194483198" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="5853110027233019383" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="9" endLine="65" endPosition="245">
       <varInfo nodeId="5853110027233019383" varName="_reporter_2309309498" />
       <varInfo nodeId="5853110027233019383" varName="errorTarget" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="64" startPosition="5" endLine="66" endPosition="45">
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="76" startPosition="5" endLine="78" endPosition="45">
       <varInfo nodeId="6553204290893368798" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="5853110027232979786" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0">
-      <varInfo nodeId="5853110027232979786" varName="syncRessource" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="71" startPosition="0" endLine="74" endPosition="0" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="82" startPosition="0" endLine="85" endPosition="0" />
+    <scopeInfo nodeId="4335879941194213801" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="32" startPosition="274" endLine="36" endPosition="11" />
+    <scopeInfo nodeId="4335879941194444844" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="44" startPosition="115" endLine="48" endPosition="13" />
+    <scopeInfo nodeId="4335879941194455622" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="51" startPosition="45" endLine="55" endPosition="11" />
+    <scopeInfo nodeId="4335879941194459332" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="56" startPosition="174" endLine="60" endPosition="11" />
+    <scopeInfo nodeId="4335879941194503189" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="62" startPosition="14" endLine="66" endPosition="9" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="75" startPosition="68" endLine="79" endPosition="5" />
+    <scopeInfo nodeId="937153820561269792" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="31" startPosition="97" endLine="37" endPosition="9" />
+    <scopeInfo nodeId="4335879941194444838" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="43" startPosition="11" endLine="49" endPosition="11">
+      <varInfo nodeId="4335879941194444840" varName="syncRessource" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="59" startPosition="0" endLine="62" endPosition="0" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="70" startPosition="0" endLine="73" endPosition="0" />
-    <scopeInfo nodeId="5853110027232979765" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="44" startPosition="14" endLine="48" endPosition="11" />
-    <scopeInfo nodeId="5853110027233019101" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="50" startPosition="14" endLine="54" endPosition="9" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="68" endLine="67" endPosition="5" />
-    <scopeInfo nodeId="5853110027232979779" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="37" startPosition="45" endLine="42" endPosition="15" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="63" startPosition="0" endLine="69" endPosition="0">
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="75" startPosition="0" endLine="81" endPosition="0">
       <varInfo nodeId="6553204290893368798" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="5853110027232979778" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="37" startPosition="0" endLine="44" endPosition="0">
-      <varInfo nodeId="5853110027232979778" varName="sync" />
+    <scopeInfo nodeId="4335879941194425339" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="40" startPosition="173" endLine="49" endPosition="11" />
+    <scopeInfo nodeId="4335879941194425333" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="39" startPosition="42" endLine="50" endPosition="9">
+      <varInfo nodeId="4335879941194425335" varName="sync" />
     </scopeInfo>
-    <scopeInfo nodeId="5853110027232975975" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="35" startPosition="112" endLine="49" endPosition="9" />
-    <scopeInfo nodeId="937153820561039170" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="28" startPosition="177" endLine="55" endPosition="7">
+    <scopeInfo nodeId="4335879941194491563" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="38" startPosition="119" endLine="61" endPosition="9">
+      <varInfo nodeId="4335879941194347140" varName="matchedSyncRessource" />
+    </scopeInfo>
+    <scopeInfo nodeId="937153820561039170" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="27" startPosition="177" endLine="67" endPosition="7">
+      <varInfo nodeId="4335879941194315337" varName="possibleTaskContext" />
       <varInfo nodeId="937153820561168221" varName="sharedExpr" />
     </scopeInfo>
-    <scopeInfo nodeId="6553204290893368799" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="25" startPosition="127" endLine="56" endPosition="5" />
-    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="25" startPosition="0" endLine="58" endPosition="0">
+    <scopeInfo nodeId="6553204290893368799" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="24" startPosition="127" endLine="68" endPosition="5" />
+    <scopeInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="24" startPosition="0" endLine="70" endPosition="0">
       <varInfo nodeId="6553204290893368798" varName="sharedGetOrSet" />
       <varInfo nodeId="6553204290893368798" varName="status" />
       <varInfo nodeId="6553204290893368798" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="5853110027232979786" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="38" startPosition="103" endLine="42" endPosition="13" unitName="TasksAndSyncs.typesystem.checkSharedGetSetForSyncContext_NonTypesystemRule$2" />
-    <unitInfo nodeId="5853110027232979778" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="36" startPosition="167" endLine="44" endPosition="9" unitName="TasksAndSyncs.typesystem.checkSharedGetSetForSyncContext_NonTypesystemRule$1" />
-    <unitInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="74" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedGetSetForSyncContext_NonTypesystemRule" />
+    <unitInfo nodeId="6553204290893368798" fileName="checkSharedGetSetForSyncContext_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="86" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedGetSetForSyncContext_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/6553204290898691871">
     <nodeInfo nodeId="483189195559367289" fileName="checkAdressOperatorForSharedSubPath_NonTypesystemRule.java" startLine="24" startPosition="7" endLine="25" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
