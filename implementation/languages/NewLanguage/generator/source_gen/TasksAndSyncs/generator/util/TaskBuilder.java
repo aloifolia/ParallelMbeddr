@@ -1179,14 +1179,10 @@ public class TaskBuilder {
             return BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), existingRef, "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), currentRef, "virtual_getVariable_2486081302460156153", new Object[]{});
           }
         }))) {
-          ListSequence.fromList(varRefs).addElement(currentRef);
+          ListSequence.fromList(varRefs).addElement(SNodeOperations.copyNode(currentRef));
         }
       }
     });
-
-    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference")) {
-      ListSequence.fromList(varRefs).addElement(SNodeOperations.cast(SLinkOperations.getTarget(node, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"));
-    }
     return varRefs;
   }
 }

@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  26 APR 2014 17:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 06:22
 entering extended mode
 **main.tex
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.tex
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -606,8 +606,8 @@ s TUD-Design package
 (C:\devel\latex\tuddesign\tex\latex\tuddesign\thesis\tudthess_title.sty
 Package: tudthess_title 2010/03/22 0.99 Joe Werner's TUD-Design-Manual package
 ))
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\config/package-impor
-t.tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+(C:\Users\Bastian\Desktop\github-master\Thesis\config/package-import.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
@@ -867,12 +867,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 ))
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\config/macros.tex)
+(C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
 
 LaTeX Warning: Unused global option(s):
     [10pt,accentcolor=tud1b,colorback,linedtoc,bigchapter,noresetcounter].
 
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.aux)
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
@@ -971,12 +971,12 @@ LaTeX Info: Redefining \ref on input line 10.
 LaTeX Info: Redefining \pageref on input line 10.
 LaTeX Info: Redefining \nameref on input line 10.
 
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.out)
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.out)
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
 \@outlinefile=\write3
 \c@lstlisting=\count144
 
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/header.tex
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/header.tex
 \@TUD@tmp@baselineskip=\skip110
 \TUD@titleboxheight=\skip111
 \TUD@titleboxdepth=\skip112
@@ -1102,7 +1102,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
 \@TUD@titlelines=\count145
- <tud_logo.pdf, id=51, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=91, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1132,8 +1132,8 @@ l.7 \makethesistitle
                      [0
 
 ])
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/introduction
-_motivation.tex
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/introduction_motivation.
+tex
 Kapitel 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1154,7 +1154,7 @@ LaTeX Font Info:    Try loading font information for TS1+5ch on input line 4.
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd
 File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
 ))
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/basics.tex
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/basics.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
@@ -1164,73 +1164,152 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
 ]
 Kapitel 2.
-)
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/analysis_exi
-sting_work.tex [2
 
-]
-Kapitel 3.
+LaTeX Warning: Citation `PrinciplesOfModernOS' on page II undefined on input li
+ne 4.
+
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 8.25606pt on input line 14.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.85603pt on input line 14.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 4.99202pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 8.08401pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.73401pt on input line 14.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 4.888pt on input line 14.
+[2
+
+] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
+ []
+
 )
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/implementati
-on.tex
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/analysis_existing_work.t
+ex
+Underfull \hbox (badness 10000) in paragraph at lines 40--1
+
+ []
+
+[4]
+Kapitel 3.
+) (C:\Users\Bastian\Desktop\github-master\Thesis\content/implementation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
 
-[3
+[5
 
 ]
 Kapitel 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 12--13
+Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-)
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/evaluation.t
-ex [4
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[6
 
 ]
 Kapitel 5.
-)
-(C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\content/summary_pros
-pect.tex) (C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.bbl
-[5
+) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [7
 
-]
-
-LaTeX Warning: Empty `thebibliography' environment or \BreakBibliography
-               before end of `thebibliography' environment on input line 3.
-
-)
+])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [6
+ [8
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
- (C:\Users\Bastian\Dropbox\Karriere\Uni\Masterarbeit\Thesis\main.aux)
+
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 01B69680E6BAA09A905CE4D908687F01;650.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: D8DD237E150A6C333D6B9B44B150B4BF;1410
+(rerunfilecheck)             After:  EF56733DE4CC2D170E610E725503D59F;1467.
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 13850 strings out of 493921
- 213721 string characters out of 3144870
- 343498 words of memory out of 3000000
- 16809 multiletter control sequences out of 15000+200000
- 78410 words of font info for 62 fonts, out of 3000000 for 9000
+ 13959 strings out of 493921
+ 215415 string characters out of 3144870
+ 349489 words of memory out of 3000000
+ 16870 multiletter control sequences out of 15000+200000
+ 103444 words of font info for 94 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,12n,77p,298b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,12n,77p,2033b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/devel/
 latex/tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesi
 gn/fonts/type1/softmake/charter/5chr8a.pfb><C:/devel/latex/tuddesign/fonts/type
-1/softmake/frontpage/5fpm8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/
-frontpage/5fpr8a.pfb>
-Output written on main.pdf (8 pages, 77864 bytes).
+1/softmake/charter/5chri8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/f
+rontpage/5fpm8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpage/5f
+pr8a.pfb>
+Output written on main.pdf (10 pages, 125446 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 21 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 244 PDF objects out of 1000 (max. 8388607)
+ 64 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

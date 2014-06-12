@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="19" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSharedDeclarations" />
-  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="21" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="22" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSyncDeclarations" />
   <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="79" endPosition="0" unitName="OriginalExamples.syncStuff.GenericTaskDeclarations" />
   <unitInfo fileName="syncStuff_SharedTypes_0.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff_SharedTypes_0" />
   <root nodeRef="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/5867266020201109512">

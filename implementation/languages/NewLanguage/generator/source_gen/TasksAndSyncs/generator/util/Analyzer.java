@@ -39,7 +39,7 @@ public class Analyzer {
 
 
   public static boolean taskExprContainsRebindableRefs(SNode taskExpression) {
-    return (SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference") && SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.modules.structure.GlobalVarRef")) || ListSequence.fromList(SNodeOperations.getDescendants(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
+    return (SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference") && !(SNodeOperations.isInstanceOf(taskExpression, "com.mbeddr.core.modules.structure.GlobalVarRef"))) || ListSequence.fromList(SNodeOperations.getDescendants(taskExpression, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return !(SNodeOperations.isInstanceOf(it, "com.mbeddr.core.modules.structure.GlobalVarRef"));
       }

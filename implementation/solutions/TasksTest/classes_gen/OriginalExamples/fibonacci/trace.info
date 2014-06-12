@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="19" endPosition="0" unitName="OriginalExamples.fibonacci.GenericSharedDeclarations" />
-  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.fibonacci.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="OriginalExamples.fibonacci.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="22" endPosition="0" unitName="OriginalExamples.fibonacci.GenericSyncDeclarations" />
   <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="79" endPosition="0" unitName="OriginalExamples.fibonacci.GenericTaskDeclarations" />
   <root nodeRef="r:d756aa49-c094-4fcf-bb18-49fc47999121(OriginalExamples.fibonacci)/4390787788462527589">
     <nodeInfo nodeId="5853110027247907851" fileName="fibonacci.c" startLine="34" startPosition="2" endLine="34" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />

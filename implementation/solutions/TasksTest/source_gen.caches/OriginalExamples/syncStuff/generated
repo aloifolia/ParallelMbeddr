@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="ekqg9l0qiye5xf0k7tzf1jdxitaqnle">
+<dependencies version="2" modelHash="80212ewz5o2jp0rrioclxh0d6ob2cfq">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
   <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="dihpw94nxjf6ivj1e4px9h5d9f80p52" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-dka92h57hfaxrffykptui4k9lkp20u6" />
   <common hash="6dxqsh8ori0a47lld5mr8vbssegmnbv">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
@@ -30,6 +30,6 @@
   </common>
   <source id="5867266020201107465" name="BuildConfiguration (O.syncStuff)" hash="-8ci40aqffjc0px38ehzf9ntu32otzse" />
   <source id="5867266020201107581" name="TypeSizeConfiguration (O.syncStuff)" hash="6797dl3ypxmsofyg9i1bbmh2eik3gn" />
-  <source id="5867266020201109512" name="syncStuff" hash="-725ocu0smhd8xx685fvfo6uf1qoyo7d" />
+  <source id="5867266020201109512" name="syncStuff" hash="-542yza2i8tf1jdtaqwb9b0anjkx87oe" />
 </dependencies>
 

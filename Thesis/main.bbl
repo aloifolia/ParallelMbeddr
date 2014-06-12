@@ -1,3 +1,112 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{LanguageWorkbenches}
+Language workbenches: The killer-app for domain specific languages?
+
+\bibitem{IntroductionToOperatingSystems}
+{\em Introduction To Operating Systems: Concepts And Practice An 2Nd Ed.}
+\newblock Prentice-Hall Of India Pvt. Limited, 2007.
+
+\bibitem{TransactionalProgrammabilityAndPerformance}
+L.W. Baugh and University of~Illinois~at Urbana-Champaign.
+\newblock {\em Transactional Programmability and Performance}.
+\newblock University of Illinois at Urbana-Champaign, 2008.
+
+\bibitem{SoftReal-TimeSystems}
+G.C. Buttazzo, G.~Lipari, L.~Abeni, and M.~Caccamo.
+\newblock {\em Soft Real-Time Systems: Predictability vs. Efficiency:
+  Predictability vs. Efficiency}.
+\newblock Series in Computer Science. Springer, 2006.
+
+\bibitem{ParCompArchitecture_HW/SW_Approach}
+D.E. Culler, J.P. Singh, and A.~Gupta.
+\newblock {\em Parallel Computer Architecture: A Hardware/software Approach}.
+\newblock The Morgan Kaufmann Series in Computer Architecture and Design
+  Series. Morgan Kaufmann Publishers, 1999.
+
+\bibitem{OSs_AConceptBasedApproach}
+D.M. Dhamdhere.
+\newblock {\em Operating Systems: A Concept-based Approach,2E}.
+\newblock McGraw-Hill Higher Education, 2006.
+
+\bibitem{ParallelComputing}
+E.H. D'Hollander, G.R. Joubert, F.~Peters, and U.~Trottenberg.
+\newblock {\em Parallel Computing: Fundamentals, Applications and New
+  Directions: Fundamentals, Applications and New Directions}.
+\newblock Advances in Parallel Computing. Elsevier Science, 1998.
+
+\bibitem{OperatingSystems_by_Dhotre}
+I.A. Dhotre.
+\newblock {\em Operating Systems}.
+\newblock Technical Publications, 2007.
+
+\bibitem{PrinciplesOfTransactionalMemory}
+R.~Guerraoui, M.~Kapa{\l}ka, and N.~Lynch.
+\newblock {\em Principles of Transactional Memory}.
+\newblock Synthesis lectures on distributed computing theory. Morgan \&
+  Claypool Publishers, 2010.
+
+\bibitem{OperatingSystems_by_Haldar}
+S.~Haldar and A.A. Aravind.
+\newblock {\em Operating Systems}.
+\newblock Pearson Education, 2009.
+
+\bibitem{TransactionalMemory}
+T.~Harris, J.R. Larus, and R.~Rajwar.
+\newblock {\em Transactional Memory}.
+\newblock Synthesis lectures in computer architecture. Morgan \& Claypool,
+  2010.
+
+\bibitem{UniversalModularACTORFormalism}
+Carl Hewitt, Peter Bishop, and Richard Steiger.
+\newblock A universal modular actor formalism for artificial intelligence.
+\newblock In {\em Proceedings of the 3rd International Joint Conference on
+  Artificial Intelligence}, IJCAI'73, pages 235--245, San Francisco, CA, USA,
+  1973. Morgan Kaufmann Publishers Inc.
+
+\bibitem{TamingJavaThreads}
+A.~Holub.
+\newblock {\em Taming Java Threads}.
+\newblock Apresspod Series. Apress, 2000.
+
+\bibitem{MultiProgWithJavaTech}
+B.~Lewis and D.J. Berg.
+\newblock {\em Multithreaded Programming with Java Technology}.
+\newblock Sun Microsystems Press Java series. Prentice Hall, 2000.
+
+\bibitem{AdvancedLinuxProgramming}
+C.S. LLC, M.L. Mitchell, A.~Samuel, and J.~Oldham.
+\newblock {\em Advanced Linux Programming}.
+\newblock Pearson Education, 2001.
+
+\bibitem{ThePolyadicPi-Calculus}
+Robin Milner.
+\newblock The polyadic pi-calculus: a tutorial.
+\newblock Technical report, Logic and Algebra of Specification, 1991.
+
+\bibitem{DebuggingRaceConditions}
+Robert H.~B. Netzer, Timothy~W. Brennan, and Suresh~K. Damodaran-Kamal.
+\newblock Debugging race conditions in message-passing programs.
+\newblock In {\em Proceedings of the SIGMETRICS Symposium on Parallel and
+  Distributed Tools}, SPDT '96, pages 31--40, New York, NY, USA, 1996. ACM.
+
+\bibitem{DistributedSharedMemory}
+J.~Protic, M.~Tomasevic, and V.~Milutinovi{\'c}.
+\newblock {\em Distributed Shared Memory: Concepts and Systems}.
+\newblock Systems Series. Wiley, 1998.
+
+\bibitem{OfficialISC2Guide}
+C.~Steven~Hernandez.
+\newblock {\em Official (ISC)2 Guide to the CISSP CBK, Second Edition}.
+\newblock (ISC)2 Press. Taylor \& Francis, 2009.
+
+\bibitem{GenericTools_SpecificLanguages}
+Markus Völter.
+\newblock Generic tools, specific languages.
+
+\bibitem{MakingEmbeddedSystems}
+E.~White.
+\newblock {\em Making Embedded Systems: Design Patterns for Great Software}.
+\newblock O'Reilly Media, 2011.
 
 \end{thebibliography}

@@ -3341,10 +3341,8 @@
     <nodeInfo nodeId="483189195629631243" fileName="TaskBuilder.java" startLine="1169" startPosition="65" endLine="1170" endPosition="55" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="483189195629569602" fileName="TaskBuilder.java" startLine="1172" startPosition="39" endLine="1173" endPosition="101" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="483189195632880509" fileName="TaskBuilder.java" startLine="1178" startPosition="52" endLine="1179" endPosition="309" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="483189195632986525" fileName="TaskBuilder.java" startLine="1181" startPosition="14" endLine="1182" endPosition="64" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="483189195632584455" fileName="TaskBuilder.java" startLine="1185" startPosition="7" endLine="1186" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
-    <nodeInfo nodeId="483189195629884940" fileName="TaskBuilder.java" startLine="1187" startPosition="151" endLine="1188" endPosition="182" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="483189195630601767" fileName="TaskBuilder.java" startLine="1189" startPosition="5" endLine="1190" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="483189195632986525" fileName="TaskBuilder.java" startLine="1181" startPosition="14" endLine="1182" endPosition="90" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="483189195630601767" fileName="TaskBuilder.java" startLine="1185" startPosition="7" endLine="1186" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="5267241343319354587" fileName="TaskBuilder.java" startLine="47" startPosition="10" endLine="49" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
     <nodeInfo nodeId="4390787788467220724" fileName="TaskBuilder.java" startLine="307" startPosition="0" endLine="310" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
     <nodeInfo nodeId="4390787788467261136" fileName="TaskBuilder.java" startLine="333" startPosition="0" endLine="336" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
@@ -3358,7 +3356,6 @@
     <nodeInfo nodeId="4390787788468357443" fileName="TaskBuilder.java" startLine="976" startPosition="0" endLine="979" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
     <nodeInfo nodeId="483189195629562028" fileName="TaskBuilder.java" startLine="1172" startPosition="0" endLine="1175" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
     <nodeInfo nodeId="483189195632750706" fileName="TaskBuilder.java" startLine="1178" startPosition="0" endLine="1181" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
-    <nodeInfo nodeId="483189195629713393" fileName="TaskBuilder.java" startLine="1186" startPosition="0" endLine="1189" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="5853110027238343643" fileName="TaskBuilder.java" startLine="27" startPosition="0" endLine="31" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="8073526852157551468" fileName="TaskBuilder.java" startLine="55" startPosition="0" endLine="59" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="8073526852157565627" fileName="TaskBuilder.java" startLine="74" startPosition="0" endLine="78" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -3634,10 +3631,10 @@
     <nodeInfo nodeId="5853110027242044357" fileName="TaskBuilder.java" startLine="1048" startPosition="117" endLine="1066" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="5853110027242023221" fileName="TaskBuilder.java" startLine="1074" startPosition="0" endLine="1092" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="8073526852157550420" fileName="TaskBuilder.java" startLine="51" startPosition="55" endLine="70" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="483189195634151793" fileName="TaskBuilder.java" startLine="1169" startPosition="0" endLine="1188" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getIVarRefsFromTaskExpr#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
     <nodeInfo nodeId="8073526852157300649" fileName="TaskBuilder.java" startLine="225" startPosition="112" endLine="245" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="5853110027242023218" fileName="TaskBuilder.java" startLine="1072" startPosition="149" endLine="1092" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="5853110027241911555" fileName="TaskBuilder.java" startLine="1048" startPosition="0" endLine="1069" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="buildFutureSaveAndResultFunction#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Ljava/lang/String;)Lorg/jetbrains/mps/openapi/model/SNode;" />
-    <nodeInfo nodeId="483189195634151793" fileName="TaskBuilder.java" startLine="1169" startPosition="0" endLine="1192" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="getIVarRefsFromTaskExpr#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/util/List;" />
     <nodeInfo nodeId="5267241343319430771" fileName="TaskBuilder.java" startLine="193" startPosition="0" endLine="217" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="3074299910032666691" fileName="TaskBuilder.java" startLine="105" startPosition="0" endLine="130" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="4390787788465667790" fileName="TaskBuilder.java" startLine="497" startPosition="0" endLine="522" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -3685,8 +3682,7 @@
     <scopeInfo nodeId="4390787788468357444" fileName="TaskBuilder.java" startLine="976" startPosition="47" endLine="977" endPosition="82" />
     <scopeInfo nodeId="483189195629562029" fileName="TaskBuilder.java" startLine="1172" startPosition="39" endLine="1173" endPosition="101" />
     <scopeInfo nodeId="483189195632750707" fileName="TaskBuilder.java" startLine="1178" startPosition="52" endLine="1179" endPosition="309" />
-    <scopeInfo nodeId="483189195632692374" fileName="TaskBuilder.java" startLine="1181" startPosition="14" endLine="1182" endPosition="64" />
-    <scopeInfo nodeId="483189195629713396" fileName="TaskBuilder.java" startLine="1187" startPosition="151" endLine="1188" endPosition="182" />
+    <scopeInfo nodeId="483189195632692374" fileName="TaskBuilder.java" startLine="1181" startPosition="14" endLine="1182" endPosition="90" />
     <scopeInfo nodeId="5853110027238343643" fileName="TaskBuilder.java" startLine="27" startPosition="33" endLine="29" endPosition="23">
       <varInfo nodeId="5853110027238343643" varName="res" />
     </scopeInfo>
@@ -4262,18 +4258,21 @@
       <varInfo nodeId="5853110027242023221" varName="node_5853110027242023225" />
     </scopeInfo>
     <scopeInfo nodeId="8073526852157551308" fileName="TaskBuilder.java" startLine="53" startPosition="0" endLine="70" endPosition="0" />
+    <scopeInfo nodeId="483189195634085253" fileName="TaskBuilder.java" startLine="1169" startPosition="65" endLine="1186" endPosition="19">
+      <varInfo nodeId="483189195629631246" varName="varRefs" />
+    </scopeInfo>
     <scopeInfo nodeId="8073526852157303178" fileName="TaskBuilder.java" startLine="227" startPosition="0" endLine="245" endPosition="0" />
     <scopeInfo nodeId="5853110027242023221" fileName="TaskBuilder.java" startLine="1074" startPosition="0" endLine="1092" endPosition="0" />
     <scopeInfo nodeId="5853110027241911558" fileName="TaskBuilder.java" startLine="1048" startPosition="117" endLine="1067" endPosition="93">
       <varInfo nodeId="5853110027242044360" varName="returnType" />
     </scopeInfo>
+    <scopeInfo nodeId="483189195634151793" fileName="TaskBuilder.java" startLine="1169" startPosition="0" endLine="1188" endPosition="0">
+      <varInfo nodeId="483189195634151414" varName="node" />
+    </scopeInfo>
     <scopeInfo nodeId="5853110027241911555" fileName="TaskBuilder.java" startLine="1048" startPosition="0" endLine="1069" endPosition="0">
       <varInfo nodeId="5853110027242011748" varName="futureResultFunction" />
       <varInfo nodeId="5853110027242011746" varName="futureStruct" />
       <varInfo nodeId="5853110027242011750" varName="name" />
-    </scopeInfo>
-    <scopeInfo nodeId="483189195634085253" fileName="TaskBuilder.java" startLine="1169" startPosition="65" endLine="1190" endPosition="19">
-      <varInfo nodeId="483189195629631246" varName="varRefs" />
     </scopeInfo>
     <scopeInfo nodeId="5267241343319430771" fileName="TaskBuilder.java" startLine="193" startPosition="31" endLine="215" endPosition="42">
       <varInfo nodeId="5267241343319430771" varName="node_5267241343319430772" />
@@ -4294,9 +4293,6 @@
       <varInfo nodeId="4390787788468271624" varName="node_4390787788468271625" />
       <varInfo nodeId="4390787788468271624" varName="node_4390787788469317143" />
       <varInfo nodeId="4390787788468271624" varName="node_4390787788469317488" />
-    </scopeInfo>
-    <scopeInfo nodeId="483189195634151793" fileName="TaskBuilder.java" startLine="1169" startPosition="0" endLine="1192" endPosition="0">
-      <varInfo nodeId="483189195634151414" varName="node" />
     </scopeInfo>
     <scopeInfo nodeId="5267241343319430771" fileName="TaskBuilder.java" startLine="193" startPosition="0" endLine="217" endPosition="0" />
     <scopeInfo nodeId="8073526852157336498" fileName="TaskBuilder.java" startLine="247" startPosition="29" endLine="271" endPosition="40">
@@ -4645,7 +4641,7 @@
     <unitInfo nodeId="8073526852158877887" fileName="TaskBuilder.java" startLine="274" startPosition="41" endLine="369" endPosition="5" unitName="TasksAndSyncs.generator.util.TaskBuilder$9" />
     <unitInfo nodeId="4390787788465438995" fileName="TaskBuilder.java" startLine="524" startPosition="35" endLine="715" endPosition="5" unitName="TasksAndSyncs.generator.util.TaskBuilder$13" />
     <unitInfo nodeId="4390787788468271637" fileName="TaskBuilder.java" startLine="768" startPosition="35" endLine="1041" endPosition="5" unitName="TasksAndSyncs.generator.util.TaskBuilder$16" />
-    <unitInfo nodeId="4390787788466980438" fileName="TaskBuilder.java" startLine="20" startPosition="0" endLine="1193" endPosition="0" unitName="TasksAndSyncs.generator.util.TaskBuilder" />
+    <unitInfo nodeId="4390787788466980438" fileName="TaskBuilder.java" startLine="20" startPosition="0" endLine="1189" endPosition="0" unitName="TasksAndSyncs.generator.util.TaskBuilder" />
   </root>
   <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5267241343316315776">
     <nodeInfo nodeId="5267241343316323047" fileName="Analyzer.java" startLine="15" startPosition="289" endLine="16" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -4693,7 +4689,7 @@
     <scopeInfo nodeId="5267241343316878760" fileName="Analyzer.java" startLine="14" startPosition="0" endLine="38" endPosition="0">
       <varInfo nodeId="5267241343316318100" varName="expression" />
     </scopeInfo>
-    <unitInfo nodeId="483189195627962501" fileName="Analyzer.java" startLine="42" startPosition="380" endLine="46" endPosition="5" unitName="TasksAndSyncs.generator.util.Analyzer$1" />
+    <unitInfo nodeId="483189195627962501" fileName="Analyzer.java" startLine="42" startPosition="383" endLine="46" endPosition="5" unitName="TasksAndSyncs.generator.util.Analyzer$1" />
     <unitInfo nodeId="5267241343316315776" fileName="Analyzer.java" startLine="11" startPosition="0" endLine="49" endPosition="0" unitName="TasksAndSyncs.generator.util.Analyzer" />
   </root>
 </debugInfo>

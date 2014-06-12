@@ -4,28 +4,6 @@
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
 
-struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
-{
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
-}
-
-
-struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
-{
-  pthread_t pth;
-  pthread_create(&pth,0,task.fun,task.args);
-  return (struct GenericTaskDeclarations_Future){ .pth = pth };
-}
-
-
-void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
-{
-  GenericTaskDeclarations_joinFuture(&future);
-}
-
-
 void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
 {
   if ( future->finished ) 
@@ -39,12 +17,6 @@ void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Fut
     return future->result;
   }
 
-}
-
-
-void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
-{
-  GenericTaskDeclarations_joinVoidFuture(&future);
 }
 
 
@@ -65,6 +37,28 @@ void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarati
 }
 
 
+struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  pthread_create(&pth,0,task.fun,task.args);
+  return (struct GenericTaskDeclarations_Future){ .pth = pth };
+}
+
+
+struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  pthread_create(&pth,0,task.fun,task.args);
+  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
+}
+
+
+void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
+{
+  GenericTaskDeclarations_joinVoidFuture(&future);
+}
+
+
 void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* future) 
 {
   if ( !(future->finished) ) 
@@ -73,6 +67,12 @@ void GenericTaskDeclarations_joinFuture(struct GenericTaskDeclarations_Future* f
     future->finished = 1;
   }
 
+}
+
+
+void GenericTaskDeclarations_saveAndJoinFuture(struct GenericTaskDeclarations_Future future) 
+{
+  GenericTaskDeclarations_joinFuture(&future);
 }
 
 

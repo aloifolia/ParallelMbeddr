@@ -1,10 +1,12 @@
-#ifndef TOIMPORT_H
-#define TOIMPORT_H
+#ifndef GENERICSYNCDECLARATIONS_H
+#define GENERICSYNCDECLARATIONS_H
 
 
 #include <stdint.h>
 
 #include <stddef.h>
+
+#include <time.h>
 
 
 

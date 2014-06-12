@@ -1,12 +1,23 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{Basics}{}% 2
-\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 3
-\BOOKMARK [1][-]{section.3.1}{Existing work}{chapter.3}% 4
-\BOOKMARK [1][-]{section.3.2}{Language Design}{chapter.3}% 5
-\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 6
-\BOOKMARK [1][-]{section.4.1}{Mbeddr}{chapter.4}% 7
-\BOOKMARK [1][-]{section.4.2}{Tasks and Futures}{chapter.4}% 8
-\BOOKMARK [1][-]{section.4.3}{Synchronization}{chapter.4}% 9
-\BOOKMARK [1][-]{section.4.4}{Optimization}{chapter.4}% 10
-\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 11
-\BOOKMARK [0][-]{section*.3}{Literaturverzeichnis}{}% 12
+\BOOKMARK [0][-]{chapter.2}{Background}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Processes and Threads}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Parallelism and concurrency}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Types of parallelism}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.4}{Data races}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Communication model: shared memory}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.6}{Communication model: message passing}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.7}{Communication model: transactional memory}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.8}{Coarse- and fine-grained synchronization}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.9}{Embedded programming}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.10}{MPS and mbeddr}{chapter.2}% 12
+\BOOKMARK [0][-]{chapter.3}{Analysis}{}% 13
+\BOOKMARK [1][-]{section.3.1}{Existing work}{chapter.3}% 14
+\BOOKMARK [1][-]{section.3.2}{Language Design}{chapter.3}% 15
+\BOOKMARK [0][-]{chapter.4}{Design and Implementation}{}% 16
+\BOOKMARK [1][-]{section.4.1}{Tasks and }{chapter.4}% 17
+\BOOKMARK [1][-]{section.4.2}{Mbeddr}{chapter.4}% 18
+\BOOKMARK [1][-]{section.4.3}{Tasks and Futures}{chapter.4}% 19
+\BOOKMARK [1][-]{section.4.4}{Synchronization}{chapter.4}% 20
+\BOOKMARK [1][-]{section.4.5}{Optimization}{chapter.4}% 21
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 22
+\BOOKMARK [0][-]{section*.3}{Literaturverzeichnis}{}% 23

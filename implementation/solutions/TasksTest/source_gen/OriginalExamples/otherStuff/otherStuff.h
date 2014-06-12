@@ -6,7 +6,11 @@
 
 #include <stddef.h>
 
-#include "toImport.h"
+#include "GenericTaskDeclarations.h"
+
+#include "GenericSharedDeclarations.h"
+
+#include "GenericSyncDeclarations.h"
 
 
 
