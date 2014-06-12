@@ -31,10 +31,8 @@ In order to keep structures and computations synchronized the simplest approach 
 \section{MPS and mbeddr}
 ``JetBrains MPS\footnote{http://jetbrains.com/mps} is an open source [...] language workbench developed over the last ten years by JetBrains. ''\cite{GenericTools_SpecificLanguages} As such it provides an projectional editor which lets the user directly work on the abstract syntax tree (AST) of the program\cite{LanguageWorkbenches}. It supports the development and composition of potentially syntactically ambiguous modular language extensions in combination with the development of integrated development environments or extensions thereof. Mbeddr is an extension of MPS tailored for the embedded software development in C. Every program written in the mbeddr IDE is translated to C99 source code which are then be further processed by the gcc tool chain\footnote{http://gcc.gnu.org/}. The implementation of C in mbeddr does not only provide extensions to the core of C but also has a few differences to the basis of C99. They will be introduced as needed.
 
-\Bastian{Add explanations for MPS aspects, type-system checking rules... as needed}
+\TODO{Add explanations for MPS aspects, type-system checking rules... as needed}
 
-\Bastian{Maybe add section for explicit vs. implicit parallel programming, look at Programming Distributed Systems by H. E. Bal, pp. 113-114}
+\TODO{Maybe add section for explicit vs. implicit parallel programming, look at Programming Distributed Systems by H. E. Bal, pp. 113-114}
 
-\Bastian{Move to implementation: ``In order to abstract from the actual implementation, e.g. as a thread, and generalize the language design a concurrent execution unit is called task. Similar to a thread a task may share data with its process.''}
-
-\Bastian{Implementation: coarse- vs. fine-grained synchronization, problems => implicit synchronization not exhaustive => optimization for safe lock avoidance helpful}
+\TODO{Implementation: coarse- vs. fine-grained synchronization, problems => implicit synchronization not exhaustive => optimization for safe lock avoidance helpful}

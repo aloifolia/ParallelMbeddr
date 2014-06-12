@@ -1,0 +1,18 @@
+\let\origlstlisting=\lstlisting
+\let\endoriglstlisting=\endlstlisting
+\renewenvironment{lstlisting}
+    {\mathcode`\-=\hyphenmathcode
+     \everymath{}\mathsurround=0pt\origlstlisting}
+    {\endoriglstlisting}
+
+\lstdefinestyle{c}{
+language=C,
+basicstyle=\small\sffamily,
+numbers=left,
+numberstyle=\tiny,
+frame=L,
+columns=fullflexible,
+showstringspaces=false
+}
+
+\lstnewenvironment{ccode}{\lstset{style=c}}{}

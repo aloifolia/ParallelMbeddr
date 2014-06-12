@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 17:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 19:14
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1144,7 +1144,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
 \@TUD@titlelines=\count148
- <tud_logo.pdf, id=103, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=95, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1174,8 +1174,29 @@ l.7 \makethesistitle
                      [0
 
 ])
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.toc
+Overfull \hbox (1.01984pt too wide) detected at line 18
+ []\T1/5ch/m/n/10 VIII
+ []
+
+
+Overfull \hbox (1.01984pt too wide) detected at line 19
+ []\T1/5ch/m/n/10 VIII
+ []
+
+
+Overfull \hbox (0.78983pt too wide) detected at line 23
+ \T1/5fp/mb/n/10 XIII
+ []
+
+)
+\tf@toc=\write4
+
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/introduction_motivation.
-tex
+tex [1
+
+
+]
 Kapitel 1.
 
 Class scrreprt Warning: \float@addtolists detected!
@@ -1201,14 +1222,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
  []
 
-[1
-
+[2
 
 ]
 Kapitel 2.
 
-LaTeX Warning: Citation `PrinciplesOfModernOS' on page II undefined on input li
-ne 4.
+LaTeX Warning: Citation `PrinciplesOfModernOS' on page III undefined on input l
+ine 4.
 
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 8.25606pt on input line 14.
@@ -1258,9 +1278,9 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.73401pt on input line 14.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 4.888pt on input line 14.
-[2
+[3
 
-] [3]
+] [4]
 Underfull \hbox (badness 10000) in paragraph at lines 34--35
 
  []
@@ -1270,29 +1290,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 36--37
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--39
-
- []
-
-)
-(C:\Users\Bastian\Desktop\github-master\Thesis\content/analysis_existing_work.t
-ex
-Underfull \hbox (badness 10000) in paragraph at lines 40--1
-
- []
-
-[4]
-Kapitel 3.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/implementation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 14--1
+Underfull \hbox (badness 10000) in paragraph at lines 38--1
 
  []
 
-[5
-
-]
-Kapitel 4.
+[5]
+Kapitel 3.
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/tasks.tex
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 4.
 
@@ -1395,24 +1399,38 @@ Overfull \hbox (15.10028pt too wide) in paragraph at lines 84--109
 LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <9.1> not available
 (Font)              Font shape `T1/5fp/m/sl' tried instead on input line 124.
 [7]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
-[8])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[9]
-Kapitel 5.
-) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [10
+Underfull \hbox (badness 10000) in paragraph at lines 166--1
 
-] [11
+ []
+
+[8] [9]
+Overfull \hbox (12.99788pt too wide) in paragraph at lines 91--101
+[]$[]$ $[]$ 
+ []
+
+
+Overfull \hbox (12.99788pt too wide) in paragraph at lines 102--112
+[]$[]$ $[]$ 
+ []
+
+[10])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[11]
+Kapitel 4.
+) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [12
+
+] [13
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
- [12]
+ [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2C5E042DE36B68C646F178C14B41A01A;1596.
+(rerunfilecheck)             Checksum: 4CA9698E67500711A125D3C902B06E34;1494.
 
 
 LaTeX Warning: There were undefined references.
@@ -1420,11 +1438,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 14995 strings out of 493921
- 229210 string characters out of 3144870
- 388714 words of memory out of 3000000
- 17730 multiletter control sequences out of 15000+200000
- 190996 words of font info for 150 fonts, out of 3000000 for 9000
+ 15078 strings out of 493921
+ 230449 string characters out of 3144870
+ 388748 words of memory out of 3000000
+ 17759 multiletter control sequences out of 15000+200000
+ 191795 words of font info for 152 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,15n,95p,2033b,1942s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
@@ -1442,9 +1460,9 @@ n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
 athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
 fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (14 pages, 217485 bytes).
+Output written on main.pdf (16 pages, 235028 bytes).
 PDF statistics:
- 450 PDF objects out of 1000 (max. 8388607)
- 182 named destinations out of 1000 (max. 500000)
- 218 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 544 PDF objects out of 1000 (max. 8388607)
+ 235 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,166 @@
+\section{Tasks}
+The basic parallelization element is a \textit{task}. It denotes a parallel unit of execution and, as the name suggests, aims at task parallelism. As the implementation of the underlying parallelization technique might change in the future it is reasonable to abstract the terminology from it. The most basic task which always exists executes the code of the entry function of the program.
+\subsection{Design}
+The syntax \texttt{e} of expressions in mbeddr is extended by
+
+$e ::= ...|\;\mathit{|e|}$
+
+When executed a task term yields a handle to a parallel unit of execution. This way the initialization of the task and the actual execution are decoupled and can happen . When it is run the embraced expression is executed and its value is returned. If the type of the expression is void no value will be returned. The type of a task reflects this return value.
+
+$t ::= ... |\;\mathit{Task{<}t{>}}$
+
+Due to implementation reasons(TODO: ref) the embraced return type of a task must be either void or a pointer to the type of the embraced expression:
+
+\begin{align*}
+\inference*[VoidTask]{e |- \mathit{void}}{|e| |- \mathit{Task{<}void{>}}} 
+\qquad\qquad
+\inference*[NonVoidTask]{e |- t & t \neq \mathit{void}}{|e| |- \mathit{Task{<}void{\text{*}}{>}}}
+\end{align*}
+
+
+\subsection{Translation}
+The pthreads library was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code as opposed to frameworks like OpenMP (TODO: reference). Every task in ParalllelMbeddr is represented by a thread in pthreads. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
+%\begin{ccode}
+%void* parFun_X(void* voidArgs) {...}
+%\end{ccode}
+\begin{ccode}
+void* parFun_X(void* voidArgs) {...}
+\end{ccode}
+
+The \CODE{X} in the name symbolizes that for every task a unique adaptee of this function with the prefix \CODE{parfun\_} and some unique suffix chosen by the framework is generated\footnote{In the following explanations \CODE{X} will always denote some arbitrary suffix. Keep in mind that these suffixes do not necessarily coincide for different kinds of components.}.
+
+If a task contains any references to local variables or function arguments they need to be bound to capture the variable state at the time of the task initiliazation. Such state is represented by an argument struct:
+
+\begin{ccode}
+struct Args_X {
+  t_1 v_1;
+  ...
+  t_n v_n;
+}
+\end{ccode}
+
+where every \CODE{v\_i} denotes an equally named reference in the task expression to a variable of type \CODE{t\_i}.
+
+The generated function \CODE{parFun\_X} is then given an instance of \CODE{Args\_X} which it uses to bind the references of the task expression to. The full function definition of a task e of type \CODE{Task<t*>} is, thus:
+
+\begin{ccode}
+void* parFun_X(void* voidArgs) {
+  t* result = malloc(sizeof(t));
+  Args_X* args = (Args_X*) voidArgs;
+  *result = e';
+  return result;
+}
+\end{ccode}
+
+where \CODE{e'} is the expression obtained when every local variable reference and function argument reference \CODE{r} in \CODE{e} is substituted by a reference to an equally named and typed field in args:
+
+$r\;/\;args\text{-->}r$
+
+If the embraced expression of a task does not contain any reference of this kind (e.g. only references to global variables) the \CODE{args} definition line is omitted as is clearly the---otherwise empty---\CODE{struct Args\_X}. In this case \CODE{e'} equals \CODE{e}.
+
+The generated function of a task of type \CODE{Task<void>} renounces the result-related statements:
+
+\begin{ccode}
+void* parFun_X(void* voidArgs) {
+  t* result = malloc(sizeof(t));
+  Args_X* args = (Args_X*) voidArgs;
+  e';
+}
+\end{ccode}
+
+Again, any argument-related code is generated as needed.
+
+The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99}:
+\begin{ccode}
+exported struct Task {
+  void* args;
+  (void*) => (void*) fun;
+}
+\end{ccode}
+
+As opposed to the unique definitions of other elements that need to be defined for every occurence of a task (the ones with the \CODE{X} suffixes) \CODE{struct Task} is generic and is reused for every task. Generic declarations are kept in fixed seperately generated modules and are imported into the user-defined modules.
+With these components in mind the actual translation of a task expression becomes an mbeddr block expression\footnote{A block expression contains a list of statements of which the mandatory yield statement returns the result value.}:
+
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+{
+  Args_X* args_X = malloc(sizeof(Args_X));
+  args_X->v_1 = v_1;
+  ...
+  args_X->v_n = v_n;
+  yield (Task_X){args_X, parFun_X};
+}
+\end{ccode}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+$\Longrightarrow$
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+inline Args_X taskInit(t_1 v_1, ..., t_n v_n) {
+  Args_X* args_X = malloc(sizeof(Args_X));
+  args_X - >v_1 = v_1;
+  ...
+  args_X->v_n = v_n;
+  return (Task_X){ args_X, parFun_X };
+}
+\end{ccode}
+\end{minipage}
+
+The expression of the \CODE{yield} statement is a compound literal which on evaluation creates an instance of the aforementioned \CODE{struct Task}. The block expression is then further reduced by mbeddr to an inline function\footnote{Whereas in C for every struct type \CODE{T} a typedef has to be defined in order to reference this type directly with \CODE{T} instead of \CODE{struct T} in mbeddr this definition is done implicitly.}.
+
+Without any references to bind a task is just reduced to the compound literal:
+
+\begin{ccode}
+(Task_X){ null, parFun_X }
+\end{ccode}
+
+\subsection{Example code}
+The running example is chosen such as to be easy to understand in exchange for a realistic scenario. In this program for a range of numbers from 0 up to some threshold the cardinality of the set of factors is calculated in parallel:
+
+\begin{ccode}
+#constant threshold = 40; 
+exported int32 main(int32 argc, string[] argv) { 
+  // every task calculates the factor count for one number
+  Task<int32*>[threshold] tasks; 
+  for (int8 i = 0; i < threshold; ++i) { 
+    tasks[i] = |calcFactors(i + 2)|; 
+  } for 
+  // ...
+  return 0; 
+} main (function)
+
+\end{ccode}
+
+The generation to C99 code yields the following intermediary helper code\footnote{Mbeddr specific details have been reduced in order to enhance the legibility of the code}:
+\begin{ccode}
+// generic declarations module
+exported struct Task {
+  void* args; 
+  (void*)=>(void*) fun; 
+};
+// user-defined module
+struct Args_a0a0b0b { // note the arbitrary suffix
+  int8 i;             
+};
+void* parFun_a0a0b0b(void* voidArgs) { 
+  int32* result = malloc(sizeof(int32)); 
+  Args_a0a0b0b* args = ((Args_a0a0b0b*) voidArgs); 
+  *result = calcFactors((args)->i + 2); 
+  return result; 
+} parFun_a0a0b0b (function)             
+inline Task taskInit_a0a0b0b(int8 i) { 
+  Args_a0a0b0b* args_a0a0b0b = malloc(sizeof(Args_a0a0b0b)); 
+  args_a0a0b0b->i = i; 
+  return (Task){ args_a0a0b0b , :parFun_a0a0b0b }; 
+} taskInit_a0a0b0b (function)
+\end{ccode}
+The generated struct contains exactly one element for the referenced variable in the task expression. A new reference to this element replaces the corresponding reference in the expression embraced by the task when it is copied into the parallel function. The initialization function allocates memory on the heap and uses it to safe the value of the variable. The content of the main function simply becomes:
+\begin{ccode}
+Task[threshold] tasks; 
+for (int8 i = 0; i < threshold; ++i) { 
+  tasks[i] = taskInit_a0a0b0b(i); 
+} for
+\end{ccode}
+
+\TODO{Figure out argument deletion and write about it here}

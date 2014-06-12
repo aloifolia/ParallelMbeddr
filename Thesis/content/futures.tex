@@ -1,0 +1,142 @@
+\section{Futures}
+Whenever a task \CODE{t} is run, as will be shown, a \textit{future} is generated. Futures in ParallelMbeddr are based on Halstead's definition of a future\cite{Halstead_Multilisp}. A Future is a handle to a running task that can be used to retrieve the result of this task from within some other task \CODE{u}. As soon as this happens the formerly in parallel running task u joins t which means that it waits for t to finish in order to get its result value. The asynchronous execution is, thus, synchronized.
+
+\subsection{Design}
+The syntax of expressions in mbeddr is extended by\footnote{If the expression e has a pointer type the dots (\CODE{.}) are replaced by arrows (\CODE{->}).}:
+
+$ e ::= ...|\;e.\mathit{run}\;|\;e.\mathit{result}\;|\;e.\mathit{join} $
+
+As with tasks the type of a future parameterized by its return type:
+
+$ t ::= ...|\;\mathit{Future{<}t{>}}$
+
+\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a future {e} and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. For efficiency reasons (see translation (TODO: ref)) it is not possible to \CODE{join} a future that returns a result. These properties are reflected in the typing rules:
+
+\begin{center}
+\begin{align*}
+\inference*[Future]{e |- \mathit{Task{<}t{>}}}{e.\mathit{run} |- \mathit{Future{<}t{>}}}
+\qquad\qquad
+\inference*[FutureResult]{e |- \mathit{Task{<}t\text{*}{>}}}{e.\mathit{result} |- t\text{*}}
+\qquad\qquad
+\inference*[FutureJoin]{e |- \mathit{Task{<}void{>}}}{e.\mathit{join} |- \mathit{void}}
+\end{align*}
+\end{center}
+
+\CODE{result} returns a pointer to a heap-managed value. Hence the programmer has to take of freeing the value eventually.
+
+\subsection{Translation}
+A future type \CODE{Future<t*>} is translated to a generic \CODE{struct} that contains a handle to the thread, a storage for the result value---which is dropped for futures of type \CODE{Future<void>}---and a flag that indicates whether the thread is already finished:
+\begin{ccode}
+exported struct Future { 
+  pthread_t pth; 
+  boolean finished; 
+  void* result; 
+};
+\end{ccode}
+
+For every task and future expression shown above a generic function reflects the semantics in the translation. The \CODE{run} of a task involves taking a task, creating a pthread with the task's function pointer and arguments and generating a future with the initialized thread handle\footnote{Obviously the thread handle is copied into the \CODE{Future}. This is safe as can be seen when looking at the POSIX function \CODE{pthread\_t pthread\_self(void)} which also returns a copy of a thread handle. This useful property is worth mentioning since it does not hold for all POSIX related data structures as will become clear in the synchronization section(TODO: ref).}:
+\begin{ccode}
+exported Future runTaskAndGetFuture(Task task) { 
+  pthread_t pth; 
+  pthread_create (&pth, null, task.fun, task.args);
+  return ( node: Future ){ .pth = pth }; 
+} runTaskAndGetFuture (function)
+\end{ccode}
+A corresponding function called \CODE{runTaskAndGetVoidFuture} is generated for futures that return nothing. The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. It expects a function pointer of type \CODE{void* -> void*} which is the reason why the function generated for a task is equally typed. The result is, thus, a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existance of the value after thread termination could not be guaranteed a dangling pointer\cite{UnderstandingAndUsingCPointers} could emerge. The only safe alternative that fits the task-future structure well is to allocate memory on the heap and return the address of this memory(TODO: back-ref to parFun). The translation of the result retrieval is:
+
+\begin{ccode}
+exported void* getFutureResult(Future* future) { 
+  if (!future->finished) { 
+    pthread_join (future->pth, &(future->result)); 
+    future->finished = true; 
+  } if 
+  return future->result; 
+} getFutureResult (function)
+\end{ccode}
+The \CODE{else} block reflects the usual future semantic. First the future is used to join the thread which blocks the execution until the thread is finished. Additionally the result is copied into the designated slot of the future. The result is at last returned. In POSIX a thread can only be joined once; every subsequent call causes a runtime error. In order to allow the user to request the result multiple times nevertheless the \CODE{finished} flag is used to decide whether a join should happen. The same basic structure can be found in the translation of the \CODE{join} function for a future of type \CODE{Future<void>}. The main difference is the missing result-related code:
+\begin{ccode}
+exported void joinVoidFuture(VoidFuture* future) { 
+  if (!future->finished) { 
+    pthread_join (future->pth, null); 
+    future->finished = true; 
+  } if 
+} joinVoidFuture (function)
+\end{ccode}
+Both aforementioned generated functions take their future parameters by address. This is necessary to make the setting of the future data work. Otherwise only copies of the proivded future arguments would be filled with data which would clearly not be intended by the programmer. This necessity in turn does not assort well with chained future expressions like:
+
+\begin{ccode}
+Task<int32*> task = |(int32)23|;
+int32* result23 = task.run.result;
+\end{ccode}
+
+In this sample code the result of the future is requested before without being stored and accessed via address. Hence the code contradicts the previously given definition of the translation of \CODE{result}. A first caveat would be to change the line to:
+
+\begin{ccode}
+int32* result23 = (&(task.run)).result;
+\end{ccode}
+
+This on the other hand is not allowed because \CODE{task.run} is no lvalue\cite[pp.~147-148]{CPrimerPlus} which disallows the utilization of the address operator. In order to allow for the unmodified code two wrapper functions, one for each \CODE{join} and \CODE{result}, are provided. These functions each take a future by argument, thus binding it to an adressable location, and call above corresponding functions in turn:
+\begin{ccode}
+exported void* saveFutureAndGetResult(Future future) { 
+  return getFutureResult(&future); 
+} saveFutureAndGetResult (function)
+
+exported void saveAndJoinVoidFuture(VoidFuture future) { 
+  joinVoidFuture(&future); 
+} saveAndJoinVoidFuture (function)
+\end{ccode}
+
+By making use of the presented functions the reductions of \CODE{e.run}, \CODE{e.join} and \CODE{e.result} (with: \CODE{e'} is the reduced value of \CODE{e}) straightforwardly become function calls thereof:
+
+\begin{minipage}{0.5\textwidth}
+\begin{ccode}
+runTaskAndGetFuture(e')
+\end{ccode}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{ccode}
+runTaskAndGetVoidFuture(e')
+\end{ccode}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\begin{ccode}
+getFutureResult(&e')
+\end{ccode}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{ccode}
+joinFuture(&e')
+\end{ccode}
+\end{minipage}
+
+\subsection{Example code}
+The running factors example can now be extended with future-related expressions:
+\begin{ccode}
+// futures is an array of futures that on 
+// each return a pointer to a heap-managed value of type int32
+Future<int32*>[threshold] futures; 
+for (int8 i = 0; i < threshold; ++i) { 
+  futures[i] = tasks[i].run; 
+} for 
+ 
+int32*[threshold] results; 
+for (int8 i = 0; i < threshold; ++i) { 
+  results[i] = futures[i].result; 
+  printf ("fibo[%d] = %d\n", i, *(results[i])); 
+} for
+\end{ccode}
+
+The sample translation contains the aforementioned generic definitions for future handling. The expressions become simple function calls:
+\begin{ccode}
+Future[threshold] futures; 
+for (int8 i = 0; i < threshold; ++i) { 
+  futures[i] = runTaskAndGetFuture(tasks[i]); 
+} for 
+ 
+int32*[threshold] results; 
+for (int8 i = 0; i < threshold; ++i) { 
+  results[i] = ((int32*) getFutureResult(&futures[i])); 
+  printf ("fibo[%d] = %d\n", i, *(results[i])); 
+} for
+\end{ccode}
