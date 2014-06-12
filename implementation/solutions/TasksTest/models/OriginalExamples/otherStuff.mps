@@ -73,7 +73,12 @@
             <node role="expression" roleId="6i3o.2744793885328637740" type="mj1l.TrueLiteral" typeId="mj1l.8860443239512128094" id="9181285766592778856" nodeInfo="ng" />
           </node>
         </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="6480032978531807581" nodeInfo="ng" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="9181285766595814751" nodeInfo="ng">
+          <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AndExpression" typeId="mj1l.8399455261460717640" id="9181285766595815174" nodeInfo="ng">
+            <node role="right" roleId="mj1l.8860443239512128065" type="mj1l.Expression" typeId="mj1l.8860443239512128050" id="9181285766595815176" nodeInfo="ng" />
+            <node role="left" roleId="mj1l.8860443239512128064" type="mj1l.TrueLiteral" typeId="mj1l.8860443239512128094" id="9181285766595814749" nodeInfo="ng" />
+          </node>
+        </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="6480032978531807588" nodeInfo="ng">
           <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="6480032978531807589" nodeInfo="ng">
             <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />

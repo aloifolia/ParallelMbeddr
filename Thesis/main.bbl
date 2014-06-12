@@ -51,6 +51,11 @@ S.~Haldar and A.A. Aravind.
 \newblock {\em Operating Systems}.
 \newblock Pearson Education, 2009.
 
+\bibitem{Halstead_Multilisp}
+Robert~H. Halstead, Jr.
+\newblock Multilisp: A language for concurrent symbolic computation.
+\newblock {\em ACM Trans. Program. Lang. Syst.}, 7(4):501--538, October 1985.
+
 \bibitem{TransactionalMemory}
 T.~Harris, J.R. Larus, and R.~Rajwar.
 \newblock {\em Transactional Memory}.
@@ -94,6 +99,11 @@ Robert H.~B. Netzer, Timothy~W. Brennan, and Suresh~K. Damodaran-Kamal.
 J.~Protic, M.~Tomasevic, and V.~Milutinovi{\'c}.
 \newblock {\em Distributed Shared Memory: Concepts and Systems}.
 \newblock Systems Series. Wiley, 1998.
+
+\bibitem{UnderstandingAndUsingCPointers}
+R.~Reese.
+\newblock {\em Understanding and Using C Pointers}.
+\newblock O'Reilly Media, 2013.
 
 \bibitem{OfficialISC2Guide}
 C.~Steven~Hernandez.

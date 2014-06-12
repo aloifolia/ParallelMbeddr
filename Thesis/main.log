@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 08:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 17:44
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -866,63 +866,105 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \mathdisplay@stack=\toks35
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
-))
-(C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
+)
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\semantic.sty
+Package: semantic 2003/10/28 v2.0(epsilon) 
+
+Semantic Package v2.0(epsilon) [2003/10/28]
+CVSId: $Id: semantic.dtx,v 1.11 2003/10/28 13:45:57 turtle Exp $
+\c@@@conflict=\count137
+Loading features: 
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\ligature.sty
+\@pushedtoks=\toks36
+\@seentoks=\toks37
+)
+ math mode ligatures,
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\infernce.sty
+\@@tempa=\toks38
+\@@tempb=\toks39
+\@@pSpace=\skip109
+\@@pEnd=\skip110
+\@@nSpace=\skip111
+\@@aLineBox=\box37
+)
+ inference rules,
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\tdiagram.sty
+\@@xShift=\count138
+\@@yShift=\count139
+\@@symbol=\toks40
+\@@tempSymbol=\toks41
+)
+ T diagrams,
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\reserved.sty
+\@@spacing=\toks42
+\@@formating=\toks43
+)
+ reserved words,
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\semantic\shrthand.sty)
+ short hands,
+and general definitions.
+
+\@@maxwidth=\dimen153
+\@@pLineBox=\box38
+\@@cBox=\box39
+\@@pBox=\box40
+)) (C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
+(C:\Users\Bastian\Desktop\github-master\Thesis\config/code-formatting.tex)
 
 LaTeX Warning: Unused global option(s):
     [10pt,accentcolor=tud1b,colorback,linedtoc,bigchapter,noresetcounter].
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for MDA+cmr on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for MDA/cmr/m/n on input line 12.
+LaTeX Font Info:    Try loading font information for MDA+cmr on input line 12.
 
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdacmr.fd
 File: mdacmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 10.
-LaTeX Font Info:    Try loading font information for MDB+cmr on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for MDB/cmr/m/n on input line 12.
+LaTeX Font Info:    Try loading font information for MDB+cmr on input line 12.
 
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\mathdesign\mdbcmr.fd
 File: mdbcmr.fd 
 )
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Try loading font information for T1+5ch on input line 10.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Try loading font information for T1+5ch on input line 12.
 
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\charter\t15ch.fd
 File: t15ch.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5ch.
 )
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count137
-\scratchdimen=\dimen153
-\scratchbox=\box37
-\nofMPsegments=\count138
-\nofMParguments=\count139
-\everyMPshowfont=\toks36
-\MPscratchCnt=\count140
-\MPscratchDim=\dimen154
-\MPnumerator=\count141
-\makeMPintoPDFobject=\count142
-\everyMPtoPDFconversion=\toks37
+\scratchcounter=\count140
+\scratchdimen=\dimen154
+\scratchbox=\box41
+\nofMPsegments=\count141
+\nofMParguments=\count142
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count143
+\MPscratchDim=\dimen155
+\MPnumerator=\count144
+\makeMPintoPDFobject=\count145
+\everyMPtoPDFconversion=\toks45
 )
-\AtBeginShipoutBox=\box38
+\AtBeginShipoutBox=\box42
 
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -957,48 +999,48 @@ File: t15ch.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5ch.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\TUD@part@topskip=\skip109
-Package hyperref Info: Link coloring OFF on input line 10.
+\TUD@part@topskip=\skip112
+Package hyperref Info: Link coloring OFF on input line 12.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count143
+\c@section@level=\count146
 )
-LaTeX Info: Redefining \ref on input line 10.
-LaTeX Info: Redefining \pageref on input line 10.
-LaTeX Info: Redefining \nameref on input line 10.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
 \@outlinefile=\write3
-\c@lstlisting=\count144
+\c@lstlisting=\count147
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/header.tex
-\@TUD@tmp@baselineskip=\skip110
-\TUD@titleboxheight=\skip111
-\TUD@titleboxdepth=\skip112
-\TUD@subtitleboxheight=\skip113
-\TUD@subtitleboxdepth=\skip114
-\TUD@logoboxheight=\skip115
-\TUD@logoboxwidth=\skip116
-\TUD@colorbackheight=\skip117
-\TUD@colorbacktitleheight=\skip118
-\TUD@instboxheight=\skip119
-\TUD@instboxdepth=\skip120
-\TUD@instboxwidth=\skip121
-\TUD@instlogoheight=\skip122
-\TUD@instlogowidth=\skip123
-\TUD@sponsorheight=\skip124
-\TUD@titlebox=\box39
-\TUD@subtitlebox=\box40
-\TUD@logobox=\box41
-\TUD@instbox=\box42
-\TUD@sponsorbox=\box43
-\TUD@tmp@height=\skip125
-\TUD@tmp@depth=\skip126
+\@TUD@tmp@baselineskip=\skip113
+\TUD@titleboxheight=\skip114
+\TUD@titleboxdepth=\skip115
+\TUD@subtitleboxheight=\skip116
+\TUD@subtitleboxdepth=\skip117
+\TUD@logoboxheight=\skip118
+\TUD@logoboxwidth=\skip119
+\TUD@colorbackheight=\skip120
+\TUD@colorbacktitleheight=\skip121
+\TUD@instboxheight=\skip122
+\TUD@instboxdepth=\skip123
+\TUD@instboxwidth=\skip124
+\TUD@instlogoheight=\skip125
+\TUD@instlogowidth=\skip126
+\TUD@sponsorheight=\skip127
+\TUD@titlebox=\box43
+\TUD@subtitlebox=\box44
+\TUD@logobox=\box45
+\TUD@instbox=\box46
+\TUD@sponsorbox=\box47
+\TUD@tmp@height=\skip128
+\TUD@tmp@depth=\skip129
 LaTeX Font Info:    Try loading font information for T1+5fp on input line 7.
 
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\frontpage\t15fp.fd
@@ -1101,8 +1143,8 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.86201pt on input line 7.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
-\@TUD@titlelines=\count145
- <tud_logo.pdf, id=95, 157.58875pt x 63.23625pt>
+\@TUD@titlelines=\count148
+ <tud_logo.pdf, id=103, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1112,7 +1154,7 @@ File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
-\@TUD@logolines=\count146
+\@TUD@logolines=\count149
  [-1
 Non-PDF special ignored!
 
@@ -1251,60 +1293,158 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--1
 
 ]
 Kapitel 4.
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/tasks.tex
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 2--4
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 9.98405pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 7.00804pt on input line 6.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 6.04803pt on input line 6.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 22.
 
- []
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2014/03/04 1.5c listings language file
+)
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+)
+LaTeX Font Info:    Font shape `T1/5fp/b/n' in size <9.1> not available
+(Font)              Font shape `T1/5fp/mb/n' tried instead on input line 27.
+LaTeX Font Info:    Try loading font information for TS1+5fp on input line 27.
+
+(C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\frontpage\ts15fp.fd
+File: ts15fp.fd 2009/08/06 Fontinst v1.927 font definitions for TS1/5fp.
+)
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 8.25606pt on input line 30.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.85603pt on input line 30.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 4.99202pt on input line 30.
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <8.3> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 30.
 
 [6
 
-]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[7]
+]
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 88.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 88.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 8.93002pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 6.20401pt on input line 88.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.358pt on input line 88.
+
+Overfull \hbox (15.10028pt too wide) in paragraph at lines 84--109
+[]$[]$ $[]$ $[]$ 
+ []
+
+LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <9.1> not available
+(Font)              Font shape `T1/5fp/m/sl' tried instead on input line 124.
+[7]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
+[8])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[9]
 Kapitel 5.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [8
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [10
+
+] [11
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [9
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+ [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 40.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 40.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 2C5E042DE36B68C646F178C14B41A01A;1596.
 
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 0B6A0F9027BD550C38BE8452E074789A;1487
-(rerunfilecheck)             After:  CC47D8A8EC7A1605A35CE9B6C063A3FB;1475.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 42.
  ) 
 Here is how much of TeX's memory you used:
- 13970 strings out of 493921
- 215588 string characters out of 3144870
- 349489 words of memory out of 3000000
- 16878 multiletter control sequences out of 15000+200000
- 117977 words of font info for 96 fonts, out of 3000000 for 9000
+ 14995 strings out of 493921
+ 229210 string characters out of 3144870
+ 388714 words of memory out of 3000000
+ 17730 multiletter control sequences out of 15000+200000
+ 190996 words of font info for 150 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,13n,77p,2033b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/devel/
-latex/tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesi
-gn/fonts/type1/softmake/charter/5chr8a.pfb><C:/devel/latex/tuddesign/fonts/type
-1/softmake/charter/5chri8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/f
-rontpage/5fpm8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpage/5f
-pr8a.pfb>
-Output written on main.pdf (11 pages, 129769 bytes).
+ 65i,15n,95p,2033b,1942s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/devel/latex/
+tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
+ts/type1/softmake/charter/5chr8a.pfb><C:/devel/latex/tuddesign/fonts/type1/soft
+make/charter/5chri8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpa
+ge/5fpm8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpage/5fpr8a.p
+fb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpage/5fpr8a.pfb><C:/User
+s/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/bitstrea/charter/bchr8a.pfb><C
+:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/bitstrea/charter/bchri8a
+.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/mathdesign/mdbch/
+md-chr7t.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/mathdesig
+n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
+athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
+s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
+fonts/type1/public/txfonts/t1xtt.pfb>
+Output written on main.pdf (14 pages, 217485 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 66 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 450 PDF objects out of 1000 (max. 8388607)
+ 182 named destinations out of 1000 (max. 500000)
+ 218 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -30,7 +30,7 @@ static inline void fibonacci_init_slots_0(struct GenericSharedDeclarations_Share
 
 static inline void fibonacci_destroy_slots_0(struct GenericSharedDeclarations_SharedOf_int32_0 slots[40]);
 
-static inline struct GenericTaskDeclarations_Task fibonacci_taskInit_a0a0c0e0b(int8_t i,struct GenericSharedDeclarations_SharedOf_int32_0* slotI);
+static inline struct GenericTaskDeclarations_Task fibonacci_taskInit_a0a0c0e0b(struct GenericSharedDeclarations_SharedOf_int32_0* slotI,int8_t i);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -44,7 +44,7 @@ int32_t main(int32_t argc, char* argv[])
     struct GenericSharedDeclarations_SharedOf_int32_0* slotI = &(slots[i]);
     GenericSyncDeclarations_startSyncFor1Mutex(&slotI->mutex);
     {
-      fiboFutures[i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0c0e0b(i, slotI));
+      fiboFutures[i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(fibonacci_taskInit_a0a0c0e0b(slotI, i));
     }
 
     GenericSyncDeclarations_stopSyncFor1Mutex(&slotI->mutex);
@@ -123,13 +123,12 @@ static  void fibonacci_destroy_slots_0(struct GenericSharedDeclarations_SharedOf
 }
 
 
-static inline struct GenericTaskDeclarations_Task fibonacci_taskInit_a0a0c0e0b(int8_t i, struct GenericSharedDeclarations_SharedOf_int32_0* slotI) 
+static inline struct GenericTaskDeclarations_Task fibonacci_taskInit_a0a0c0e0b(struct GenericSharedDeclarations_SharedOf_int32_0* slotI, int8_t i) 
 {
   struct fibonacci_Args_a0a0c0e0b* args_a0a0c0e0b = malloc(sizeof(struct fibonacci_Args_a0a0c0e0b));
   args_a0a0c0e0b->i = i;
   args_a0a0c0e0b->slotI = slotI;
-  struct GenericTaskDeclarations_Task task = {args_a0a0c0e0b,&fibonacci_parFun_a0a0c0e0b};
-  return task;
+  return (struct GenericTaskDeclarations_Task){args_a0a0c0e0b,&fibonacci_parFun_a0a0c0e0b};
 }
 
 
