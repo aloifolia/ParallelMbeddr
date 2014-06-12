@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 06:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUN 2014 08:32
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1102,7 +1102,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
 \@TUD@titlelines=\count145
- <tud_logo.pdf, id=91, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=95, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1256,22 +1256,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--4
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
-
- []
-
-) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
 [6
 
-]
+]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[7]
 Kapitel 5.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [7
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [8
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 40.
- [8
+ [9
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 40.
@@ -1286,30 +1281,30 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D8DD237E150A6C333D6B9B44B150B4BF;1410
-(rerunfilecheck)             After:  EF56733DE4CC2D170E610E725503D59F;1467.
+(rerunfilecheck)             Before: 0B6A0F9027BD550C38BE8452E074789A;1487
+(rerunfilecheck)             After:  CC47D8A8EC7A1605A35CE9B6C063A3FB;1475.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 40.
  ) 
 Here is how much of TeX's memory you used:
- 13959 strings out of 493921
- 215415 string characters out of 3144870
+ 13970 strings out of 493921
+ 215588 string characters out of 3144870
  349489 words of memory out of 3000000
- 16870 multiletter control sequences out of 15000+200000
- 103444 words of font info for 94 fonts, out of 3000000 for 9000
+ 16878 multiletter control sequences out of 15000+200000
+ 117977 words of font info for 96 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,12n,77p,2033b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,13n,77p,2033b,490s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/devel/
 latex/tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesi
 gn/fonts/type1/softmake/charter/5chr8a.pfb><C:/devel/latex/tuddesign/fonts/type
 1/softmake/charter/5chri8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/f
 rontpage/5fpm8a.pfb><C:/devel/latex/tuddesign/fonts/type1/softmake/frontpage/5f
 pr8a.pfb>
-Output written on main.pdf (10 pages, 125446 bytes).
+Output written on main.pdf (11 pages, 129769 bytes).
 PDF statistics:
- 244 PDF objects out of 1000 (max. 8388607)
- 64 named destinations out of 1000 (max. 500000)
- 194 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 253 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 
