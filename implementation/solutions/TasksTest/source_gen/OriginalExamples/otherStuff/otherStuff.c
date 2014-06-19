@@ -8,6 +8,7 @@
 
 struct otherStuff_Args_a1a0 {
   int8_t b;
+  int8_t b;
 };
 
 struct otherStuff_Args_a4a0 {
@@ -26,7 +27,7 @@ int32_t main(int32_t argc, char* argv[])
   GenericTaskDeclarations_runTaskAndGetFuture(t);
   
   struct GenericTaskDeclarations_Task t2 = (struct GenericTaskDeclarations_Task){0,&otherStuff_parFun_a4a0};
-  
+  1 && <!TextGen not found for 'com.mbeddr.core.expressions.structure.Expression'!>;
   return 0;
 }
 
@@ -51,6 +52,7 @@ static void* otherStuff_parFun_a4a0(void* voidArgs)
 static inline struct GenericTaskDeclarations_Task otherStuff_taskInit_a1a0(int8_t b) 
 {
   struct otherStuff_Args_a1a0* args_a1a0 = malloc(sizeof(struct otherStuff_Args_a1a0));
+  args_a1a0->b = b;
   args_a1a0->b = b;
   return (struct GenericTaskDeclarations_Task){args_a1a0,&otherStuff_parFun_a1a0};
 }

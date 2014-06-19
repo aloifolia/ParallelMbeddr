@@ -49,22 +49,33 @@ public class SharedBuilder {
         ListSequence.fromList(SNodeOperations.getDescendants(module, "TasksAndSyncs.structure.SharedType", false, new String[]{})).visitAll(new IVisitor<SNode>() {
           public void visit(SNode orig) {
             SNode resolved = SNodeOperations.copyNode(orig);
-            ListSequence.fromList(SNodeOperations.getDescendants(resolved, "com.mbeddr.core.modules.structure.GlobalConstantRef", false, new String[]{})).visitAll(new IVisitor<SNode>() {
-              public void visit(SNode it) {
-                SNodeOperations.replaceWithAnother(it, SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, "constant", false), "value", true)));
-              }
-            });
-            ListSequence.fromList(SNodeOperations.getDescendants(resolved, "com.mbeddr.core.udt.structure.TypeDefType", false, new String[]{})).visitAll(new IVisitor<SNode>() {
-              public void visit(SNode it) {
-                SNodeOperations.replaceWithAnother(it, SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, "typeDef", false), "original", true)));
-              }
-            });
+            resolveType(resolved);
             MapSequence.fromMap(sharedToResolvedTypes).put(orig, resolved);
           }
         });
       }
     });
     return sharedToResolvedTypes;
+  }
+
+
+
+  public static void resolveType(SNode type) {
+    while (true) {
+      ListSequence.fromList(SNodeOperations.getDescendants(type, "com.mbeddr.core.modules.structure.GlobalConstantRef", false, new String[]{})).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          SNodeOperations.replaceWithAnother(it, SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, "constant", false), "value", true)));
+        }
+      });
+      ListSequence.fromList(SNodeOperations.getDescendants(type, "com.mbeddr.core.udt.structure.TypeDefType", false, new String[]{})).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          SNodeOperations.replaceWithAnother(it, SNodeOperations.copyNode(SLinkOperations.getTarget(SLinkOperations.getTarget(it, "typeDef", false), "original", true)));
+        }
+      });
+      if (ListSequence.fromList(SNodeOperations.getDescendants(type, "com.mbeddr.core.modules.structure.GlobalConstantRef", false, new String[]{})).count() == 0 && ListSequence.fromList(SNodeOperations.getDescendants(type, "com.mbeddr.core.udt.structure.TypeDefType", false, new String[]{})).count() == 0) {
+        break;
+      }
+    }
   }
 
 
@@ -259,8 +270,10 @@ public class SharedBuilder {
         return "PointerOf_" + structNameForType(SLinkOperations.getTarget(pointerType, "baseType", true));
       }
     }
-    return BehaviorReflection.invokeVirtual(String.class, type, "virtual_getPresentation_1213877396640", new Object[]{});
+    return BehaviorReflection.invokeVirtual(String.class, type, "virtual_getPresentation_1213877396640", new Object[]{}).replaceAll("[^\\w]", "_");
   }
+
+
 
   public static SNode buildInitMutexFunction(TemplateQueryContext genContext) {
     final SNode mutexAttribute = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -591,13 +604,47 @@ public class SharedBuilder {
 
 
 
-  private static List<SNode> buildNestedInitMutexCallsFor(TemplateQueryContext genContext, SNode initMutexFunction, SNode currentType, SNode currentPath) {
+  private static List<SNode> buildNestedInitMutexCallsFor(TemplateQueryContext genContext, SNode initMutexFunction, SNode currentType, final SNode currentPath) {
     {
       SNode sharedType = currentType;
       if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
         List<SNode> calls = new ArrayList<SNode>();
-        ListSequence.fromList(calls).insertElement(0, buildInitMutexCallFor(initMutexFunction, currentPath));
-        ListSequence.fromList(calls).addSequence(ListSequence.fromList(buildNestedInitMutexCallsFor(genContext, initMutexFunction, SLinkOperations.getTarget(sharedType, "baseType", true), currentPath)));
+        ListSequence.fromList(calls).insertElement(0, buildInitMutexCall(initMutexFunction, currentPath));
+        SNode sharedValuePath = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            final SNode node_8001979070713162305 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SNodeOperations.copyNode(currentPath);
+                return res;
+              }
+            }.invoke();
+            final SNode node_8001979070713104502 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AnyNodeItem", null);
+                SLinkOperations.setTarget(res, "theNode", node_8001979070713162305, true);
+                return res;
+              }
+            }.invoke();
+            final SNode node_8001979070713168057 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.AbritraryTextItem", null);
+                SPropertyOperations.set(res, "text", (".value"));
+                return res;
+              }
+            }.invoke();
+            SNode node_8001979070713103909 = new _FunctionTypes._return_P0_E0<SNode>() {
+              public SNode invoke() {
+                SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextExpression", null);
+                SPropertyOperations.set(res, "requiredStdHeader", (null));
+                ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_8001979070713104502);
+                ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_8001979070713168057);
+                return res;
+              }
+            }.invoke();
+            return node_8001979070713103909;
+          }
+        }.invoke();
+        ListSequence.fromList(calls).addSequence(ListSequence.fromList(buildNestedInitMutexCallsFor(genContext, initMutexFunction, SLinkOperations.getTarget(sharedType, "baseType", true), sharedValuePath)));
         return calls;
       }
     }
@@ -721,7 +768,7 @@ public class SharedBuilder {
 
 
 
-  private static SNode buildInitMutexCallFor(final SNode initMutexFunction, final SNode path) {
+  private static SNode buildInitMutexCall(final SNode initMutexFunction, final SNode path) {
     return new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_4335879941189135247 = new _FunctionTypes._return_P0_E0<SNode>() {

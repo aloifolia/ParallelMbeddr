@@ -12,16 +12,11 @@ struct calculations_Args_a0a0b0b {
   int8_t i;
 };
 
-struct calculations_Args_a4a1 {
-};
-
 static int32_t calculations_calcFactors(int8_t n);
 
 static void calculations_foo(void);
 
 static void* calculations_parFun_a0a0b0b(void* voidArgs);
-
-static void* calculations_parFun_a4a1(void* voidArgs);
 
 static inline struct GenericTaskDeclarations_Task calculations_taskInit_a0a0b0b(int8_t i);
 
@@ -39,8 +34,6 @@ int32_t main(int32_t argc, char* argv[])
     futures[i] = GenericTaskDeclarations_runTaskAndGetFuture(tasks[i]);
   }
 
-  struct GenericTaskDeclarations_Task t = (struct GenericTaskDeclarations_Task){0,&calculations_parFun_a4a1};
-  GenericTaskDeclarations_runTaskAndGetVoidFuture(t);
   
   int32_t* results[CALCULATIONS_threshold];
   for ( int8_t i = 0; i < CALCULATIONS_threshold; ++i )
@@ -82,13 +75,6 @@ static void* calculations_parFun_a0a0b0b(void* voidArgs)
   struct calculations_Args_a0a0b0b* args = ((struct calculations_Args_a0a0b0b*)(voidArgs));
   *result = calculations_calcFactors((args)->i + 1);
   return result;
-}
-
-
-static void* calculations_parFun_a4a1(void* voidArgs) 
-{
-  calculations_foo();
-  return 0;
 }
 
 

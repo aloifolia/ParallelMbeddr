@@ -1,9 +1,9 @@
-\let\origlstlisting=\lstlisting
-\let\endoriglstlisting=\endlstlisting
-\renewenvironment{lstlisting}
-    {\mathcode`\-=\hyphenmathcode
-     \everymath{}\mathsurround=0pt\origlstlisting}
-    {\endoriglstlisting}
+%\let\origlstlisting=\lstlisting
+%\let\endoriglstlisting=\endlstlisting
+%\renewenvironment{lstlisting}
+%    {\mathcode`\-=\hyphenmathcode
+%     \everymath{}\mathsurround=0pt\origlstlisting}
+%    {\endoriglstlisting}
 
 \lstdefinestyle{c}{
 language=C,
@@ -15,4 +15,5 @@ columns=fullflexible,
 showstringspaces=false
 }
 
-\lstnewenvironment{ccode}{\lstset{style=c}}{}
+\lstnewenvironment{ccode}{
+\mathligsoff\lstset{style=c}}{}

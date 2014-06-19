@@ -1,5 +1,5 @@
 \section{Futures}
-Whenever a task \CODE{t} is run, as will be shown, a \textit{future} is generated. Futures in ParallelMbeddr are based on Halstead's definition of a future\cite{Halstead_Multilisp}. A Future is a handle to a running task that can be used to retrieve the result of this task from within some other task \CODE{u}. As soon as this happens the formerly in parallel running task u joins t which means that it waits for t to finish in order to get its result value. The asynchronous execution is, thus, synchronized.
+Whenever a task \CODE{t} is run, as will be shown, a \textit{future} is generated. Futures in ParallelMbeddr are based on Halstead's definition of a future\cite{Halstead_Multilisp}. A future is a handle to a running task that can be used to retrieve the result of this task from within some other task \CODE{u}. As soon as this happens the formerly in parallel running task u joins t which means that it waits for t to finish in order to get its result value. The asynchronous execution is, thus, synchronized.
 
 \subsection{Design}
 The syntax of expressions in mbeddr is extended by\footnote{If the expression e has a pointer type the dots (\CODE{.}) are replaced by arrows (\CODE{->}).}:
