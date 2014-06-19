@@ -30,6 +30,16 @@ int32_t main(int32_t argc, char* argv[])
   testSync_init_iCopy_0(&iCopy);
   struct GenericSharedDeclarations_SharedOf_int32_0 i2;
   testSync_init_i2_0(&i2);
+  struct GenericSharedDeclarations_SharedOf_int32_0* sd = &i2;
+  struct GenericSharedDeclarations_SharedOf_int16_0* i2 = &i;
+  GenericSyncDeclarations_startSyncFor2Mutexes(&sd->mutex, &i2->mutex);
+  {
+    sd;
+  }
+
+  GenericSyncDeclarations_stopSyncFor2Mutexes(&sd->mutex, &i2->mutex);
+  <!TextGen not found for 'TasksAndSyncs.structure.SyncRessourceRef'!>;
+  <!TextGen not found for 'TasksAndSyncs.structure.SyncRessourceRef'!>;
   for ( int8_t __j = 0; __j < 34; __j++ )
   {
     __j + 6;

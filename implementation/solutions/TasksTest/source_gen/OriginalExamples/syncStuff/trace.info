@@ -2,7 +2,7 @@
 <debugInfo>
   <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSharedDeclarations" />
   <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="22" endPosition="0" unitName="OriginalExamples.syncStuff.GenericSyncDeclarations" />
-  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="79" endPosition="0" unitName="OriginalExamples.syncStuff.GenericTaskDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="58" endPosition="0" unitName="OriginalExamples.syncStuff.GenericTaskDeclarations" />
   <unitInfo fileName="syncStuff_SharedTypes_0.c" startLine="1" startPosition="0" endLine="5" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff_SharedTypes_0" />
   <root nodeRef="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/5867266020201109512">
     <nodeInfo nodeId="483189195596759220" fileName="syncStuff.c" startLine="15" startPosition="0" endLine="15" endPosition="66" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
@@ -17,18 +17,19 @@
     <nodeInfo nodeId="483189195559610999" fileName="syncStuff.c" startLine="41" startPosition="2" endLine="41" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="483189195561053801" fileName="syncStuff.c" startLine="42" startPosition="2" endLine="42" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="483189195601047671" fileName="syncStuff.c" startLine="43" startPosition="2" endLine="43" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="5867266020201790152" fileName="syncStuff.c" startLine="44" startPosition="2" endLine="44" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="5867266020201790180" fileName="syncStuff.c" startLine="44" startPosition="9" endLine="44" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="2" endLine="50" endPosition="100" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="2" endLine="50" endPosition="101" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="40" endLine="50" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="41" endLine="50" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="41" endLine="50" endPosition="73" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="75" endLine="50" endPosition="99" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="76" endLine="50" endPosition="93" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="76" endLine="50" endPosition="99" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="56" startPosition="2" endLine="56" endPosition="43" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="56" startPosition="2" endLine="56" endPosition="44" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="9181285766582035779" fileName="syncStuff.c" startLine="44" startPosition="2" endLine="44" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="5867266020201790152" fileName="syncStuff.c" startLine="45" startPosition="2" endLine="45" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="5867266020201790180" fileName="syncStuff.c" startLine="45" startPosition="9" endLine="45" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="2" endLine="51" endPosition="100" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="2" endLine="51" endPosition="101" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="40" endLine="51" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="41" endLine="51" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="41" endLine="51" endPosition="73" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="75" endLine="51" endPosition="99" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="76" endLine="51" endPosition="93" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="51" startPosition="76" endLine="51" endPosition="99" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="57" startPosition="2" endLine="57" endPosition="43" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="57" startPosition="2" endLine="57" endPosition="44" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="5867266020201177145" fileName="syncStuff.c" startLine="9" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
     <nodeInfo nodeId="8757804600221341104" fileName="syncStuff.c" startLine="11" startPosition="0" endLine="12" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
     <nodeInfo nodeId="2417420597978991997" fileName="syncStuff.c" startLine="13" startPosition="0" endLine="14" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
@@ -36,19 +37,19 @@
     <nodeInfo nodeId="2417420597978987531" fileName="syncStuff.c" startLine="21" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <nodeInfo nodeId="483189195559483636" fileName="syncStuff.c" startLine="25" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <nodeInfo nodeId="483189195562068628" fileName="syncStuff.c" startLine="29" startPosition="0" endLine="32" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="49" startPosition="0" endLine="52" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="55" startPosition="0" endLine="58" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="48" startPosition="0" endLine="53" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="syncStuff_initGlobalMutexesFor1Module_0" />
-    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="54" startPosition="0" endLine="59" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="syncStuff_initAllGlobalMutexes_0" />
-    <nodeInfo nodeId="5867266020201788284" fileName="syncStuff.c" startLine="36" startPosition="0" endLine="46" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="5867266020201788282" fileName="syncStuff.c" startLine="35" startPosition="0" endLine="47" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="50" startPosition="0" endLine="53" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="56" startPosition="0" endLine="59" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="49" startPosition="0" endLine="54" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="syncStuff_initGlobalMutexesFor1Module_0" />
+    <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="55" startPosition="0" endLine="60" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="syncStuff_initAllGlobalMutexes_0" />
+    <nodeInfo nodeId="5867266020201788284" fileName="syncStuff.c" startLine="36" startPosition="0" endLine="47" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5867266020201788282" fileName="syncStuff.c" startLine="35" startPosition="0" endLine="48" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.main" />
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.initGlobalMutexesFor1Module_0" />
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.initAllGlobalMutexes_0" />
     <nodeInfo nodeId="483189195562063330" fileName="syncStuff_SharedTypes_0.h" startLine="18" startPosition="14" endLine="18" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="483189195559485272" fileName="syncStuff_SharedTypes_0.h" startLine="24" startPosition="54" endLine="24" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="483189195559482831" fileName="syncStuff_SharedTypes_0.h" startLine="17" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
-    <unitInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="1" startPosition="0" endLine="60" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff" />
+    <unitInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="1" startPosition="0" endLine="61" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff" />
   </root>
 </debugInfo>
 

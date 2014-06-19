@@ -2,14 +2,13 @@
 <debugInfo>
   <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="OriginalExamples.calculations.GenericSharedDeclarations" />
   <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="77" endPosition="0" unitName="OriginalExamples.calculations.GenericSyncDeclarations" />
-  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="79" endPosition="0" unitName="OriginalExamples.calculations.GenericTaskDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="58" endPosition="0" unitName="OriginalExamples.calculations.GenericTaskDeclarations" />
   <unitInfo fileName="readerData_SharedTypes_0.c" startLine="1" startPosition="0" endLine="6" endPosition="0" unitName="OriginalExamples.calculations.readerData_SharedTypes_0" />
   <root nodeRef="r:d1acf823-fa9b-46a1-b811-10f95320a2c2(OriginalExamples.calculations)/9181285766582165792">
     <nodeInfo nodeId="9181285766582205833" fileName="main.c" startLine="268" startPosition="34" endLine="268" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
     <nodeInfo nodeId="9181285766582205833" fileName="main.c" startLine="279" startPosition="34" endLine="279" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
     <nodeInfo nodeId="9181285766582196429" fileName="readerData.h" startLine="25" startPosition="0" endLine="25" endPosition="43" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
     <nodeInfo nodeId="9181285766582205609" fileName="readerData.h" startLine="25" startPosition="22" endLine="25" endPosition="41" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
-    <nodeInfo nodeId="9181285766582205833" fileName="readerData_SharedTypes_0.h" startLine="20" startPosition="67" endLine="20" endPosition="91" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
     <nodeInfo nodeId="9181285766582192662" fileName="readerData_SharedTypes_0.h" startLine="19" startPosition="0" endLine="25" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <unitInfo nodeId="9181285766582165792" fileName="readerData.c" startLine="1" startPosition="0" endLine="10" endPosition="0" unitName="OriginalExamples.calculations.readerData" />
   </root>
@@ -22,6 +21,7 @@
     <nodeInfo nodeId="9181285766582197785" fileName="constants.h" startLine="22" startPosition="29" endLine="22" endPosition="32" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="9181285766583513609" fileName="constants.h" startLine="23" startPosition="0" endLine="23" endPosition="37" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" />
     <nodeInfo nodeId="9181285766583514060" fileName="constants.h" startLine="23" startPosition="35" endLine="23" endPosition="36" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="9181285766582193727" fileName="readerData_SharedTypes_0.h" startLine="20" startPosition="67" endLine="20" endPosition="70" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <unitInfo nodeId="9181285766582202768" fileName="constants.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="OriginalExamples.calculations.constants" />
   </root>
   <root nodeRef="r:d1acf823-fa9b-46a1-b811-10f95320a2c2(OriginalExamples.calculations)/9181285766582208135">
@@ -89,11 +89,11 @@
     <nodeInfo nodeId="9181285766583266501" fileName="main.c" startLine="75" startPosition="71" endLine="75" endPosition="90" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="9181285766583266501" fileName="main.c" startLine="75" startPosition="72" endLine="75" endPosition="83" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766583266501" fileName="main.c" startLine="75" startPosition="72" endLine="75" endPosition="90" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766585938945" fileName="main.c" startLine="77" startPosition="8" endLine="77" endPosition="144" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="80" endLine="77" endPosition="143" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="104" endLine="77" endPosition="117" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="119" endLine="77" endPosition="129" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="131" endLine="77" endPosition="142" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766585938945" fileName="main.c" startLine="77" startPosition="8" endLine="77" endPosition="119" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="55" endLine="77" endPosition="118" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="79" endLine="77" endPosition="90" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="92" endLine="77" endPosition="105" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="77" startPosition="107" endLine="77" endPosition="117" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766585902712" fileName="main.c" startLine="78" startPosition="8" endLine="78" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="9181285766586155011" fileName="main.c" startLine="78" startPosition="8" endLine="78" endPosition="66" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="9181285766585902714" fileName="main.c" startLine="78" startPosition="56" endLine="78" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
@@ -473,18 +473,20 @@
     <nodeInfo nodeId="9181285766583512307" fileName="main.c" startLine="251" startPosition="34" endLine="251" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="251" startPosition="60" endLine="251" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="251" startPosition="60" endLine="251" endPosition="67" conceptFqName="com.mbeddr.core.expressions.structure.PostIncrementExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="4" endLine="253" endPosition="126" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="4" endLine="253" endPosition="127" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="42" endLine="253" endPosition="87" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="4" endLine="253" endPosition="138" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="4" endLine="253" endPosition="139" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="42" endLine="253" endPosition="93" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="72" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="87" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="66" endLine="253" endPosition="71" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="89" endLine="253" endPosition="125" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="90" endLine="253" endPosition="112" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="90" endLine="253" endPosition="119" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="90" endLine="253" endPosition="125" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="113" endLine="253" endPosition="118" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="71" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="78" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="43" endLine="253" endPosition="93" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="72" endLine="253" endPosition="77" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="95" endLine="253" endPosition="137" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="96" endLine="253" endPosition="118" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="96" endLine="253" endPosition="124" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="96" endLine="253" endPosition="131" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="96" endLine="253" endPosition="137" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="253" startPosition="125" endLine="253" endPosition="130" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="261" startPosition="2" endLine="261" endPosition="38" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="261" startPosition="2" endLine="261" endPosition="39" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="267" startPosition="2" endLine="267" endPosition="86" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
@@ -501,20 +503,22 @@
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="268" startPosition="26" endLine="268" endPosition="58" conceptFqName="com.mbeddr.core.expressions.structure.LessExpression" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="268" startPosition="60" endLine="268" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="268" startPosition="60" endLine="268" endPosition="67" conceptFqName="com.mbeddr.core.expressions.structure.PostIncrementExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="4" endLine="270" endPosition="116" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="4" endLine="270" endPosition="117" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="42" endLine="270" endPosition="82" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="4" endLine="270" endPosition="128" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="4" endLine="270" endPosition="129" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="42" endLine="270" endPosition="88" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="60" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="67" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="82" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="61" endLine="270" endPosition="66" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="84" endLine="270" endPosition="115" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="85" endLine="270" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="85" endLine="270" endPosition="102" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="85" endLine="270" endPosition="109" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="85" endLine="270" endPosition="115" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="103" endLine="270" endPosition="108" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="66" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="43" endLine="270" endPosition="88" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="67" endLine="270" endPosition="72" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="90" endLine="270" endPosition="127" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="91" endLine="270" endPosition="100" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="91" endLine="270" endPosition="107" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="91" endLine="270" endPosition="114" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="91" endLine="270" endPosition="121" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="91" endLine="270" endPosition="127" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="270" startPosition="115" endLine="270" endPosition="120" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="278" startPosition="2" endLine="278" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="278" startPosition="2" endLine="278" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="278" startPosition="43" endLine="278" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
@@ -526,14 +530,15 @@
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="279" startPosition="26" endLine="279" endPosition="58" conceptFqName="com.mbeddr.core.expressions.structure.LessExpression" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="279" startPosition="60" endLine="279" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="279" startPosition="60" endLine="279" endPosition="67" conceptFqName="com.mbeddr.core.expressions.structure.PostIncrementExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="4" endLine="281" endPosition="77" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="4" endLine="281" endPosition="78" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="45" endLine="281" endPosition="76" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="4" endLine="281" endPosition="83" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="4" endLine="281" endPosition="84" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="45" endLine="281" endPosition="82" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="63" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="70" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="76" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="64" endLine="281" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="69" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="76" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="46" endLine="281" endPosition="82" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="281" startPosition="70" endLine="281" endPosition="75" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="289" startPosition="2" endLine="289" endPosition="94" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="289" startPosition="49" endLine="289" endPosition="93" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="289" startPosition="56" endLine="289" endPosition="92" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
@@ -553,27 +558,23 @@
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="292" startPosition="2" endLine="292" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="292" startPosition="2" endLine="292" endPosition="48" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="292" startPosition="34" endLine="292" endPosition="47" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="2" endLine="293" endPosition="85" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="45" endLine="293" endPosition="84" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="46" endLine="293" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="61" endLine="293" endPosition="83" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="294" startPosition="2" endLine="294" endPosition="14" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="294" startPosition="9" endLine="294" endPosition="13" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="2" endLine="300" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="51" endLine="300" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="58" endLine="300" endPosition="94" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="65" endLine="300" endPosition="93" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="2" endLine="301" endPosition="18" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="2" endLine="301" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="2" endLine="301" endPosition="41" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="2" endLine="301" endPosition="42" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="32" endLine="301" endPosition="41" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="302" startPosition="2" endLine="302" endPosition="89" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="302" startPosition="45" endLine="302" endPosition="88" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="302" startPosition="46" endLine="302" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="302" startPosition="63" endLine="302" endPosition="87" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="303" startPosition="2" endLine="303" endPosition="14" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="303" startPosition="9" endLine="303" endPosition="13" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="2" endLine="293" endPosition="86" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="9" endLine="293" endPosition="85" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="47" endLine="293" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="293" startPosition="62" endLine="293" endPosition="84" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="299" startPosition="2" endLine="299" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="299" startPosition="51" endLine="299" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="299" startPosition="58" endLine="299" endPosition="94" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="299" startPosition="65" endLine="299" endPosition="93" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="2" endLine="300" endPosition="18" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="2" endLine="300" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="2" endLine="300" endPosition="41" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="2" endLine="300" endPosition="42" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="300" startPosition="32" endLine="300" endPosition="41" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="2" endLine="301" endPosition="90" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="9" endLine="301" endPosition="89" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="47" endLine="301" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="301" startPosition="64" endLine="301" endPosition="88" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
     <nodeInfo nodeId="9181285766583188722" fileName="main.c" startLine="12" startPosition="0" endLine="13" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
     <nodeInfo nodeId="9181285766583471057" fileName="main.c" startLine="14" startPosition="0" endLine="15" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="34" startPosition="0" endLine="35" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.calculations.calculateFactorCountBlocks" />
@@ -620,23 +621,23 @@
     <nodeInfo nodeId="9181285766582311463" fileName="main.c" startLine="210" startPosition="8" endLine="215" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="241" startPosition="0" endLine="246" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="259" startPosition="0" endLine="264" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_initAllGlobalMutexes_0" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="298" startPosition="0" endLine="303" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766582311462" fileName="main.c" startLine="209" startPosition="8" endLine="215" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.IfStatement" />
     <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="232" startPosition="0" endLine="238" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="299" startPosition="0" endLine="305" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766583681086" fileName="main.c" startLine="148" startPosition="2" endLine="155" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="240" startPosition="0" endLine="247" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_parFun_a0a3a2e0c" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="288" startPosition="0" endLine="295" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="297" startPosition="0" endLine="304" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_taskInit_a0a0a1a2e0c" />
     <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="231" startPosition="0" endLine="239" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_parFun_a0a0a1a2e0c" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="249" startPosition="0" endLine="257" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="266" startPosition="0" endLine="274" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="277" startPosition="0" endLine="285" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="288" startPosition="0" endLine="296" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="9181285766586222983" fileName="main.c" startLine="298" startPosition="0" endLine="306" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_taskInit_a0a0a1a2e0c" />
     <nodeInfo nodeId="9181285766583314880" fileName="main.c" startLine="163" startPosition="2" endLine="172" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="287" startPosition="0" endLine="296" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_taskInit_a0a3a2e0c" />
     <nodeInfo nodeId="9181285766583314878" fileName="main.c" startLine="162" startPosition="2" endLine="172" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="248" startPosition="0" endLine="258" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_initGlobalMutexesFor1Module_0" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="265" startPosition="0" endLine="275" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_init_inputData_0" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.c" startLine="276" startPosition="0" endLine="286" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_destroy_inputData_0" />
-    <nodeInfo nodeId="9181285766585902703" fileName="main.c" startLine="287" startPosition="0" endLine="297" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main_taskInit_a0a3a2e0c" />
     <nodeInfo nodeId="9181285766584624539" fileName="main.c" startLine="119" startPosition="4" endLine="130" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766582307384" fileName="main.c" startLine="207" startPosition="6" endLine="218" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="9181285766583636576" fileName="main.c" startLine="146" startPosition="0" endLine="158" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
@@ -662,7 +663,7 @@
     <nodeInfo nodeId="9181285766582208135" fileName="main.h" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.calculations.main" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.h" startLine="29" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.calculations.initGlobalMutexesFor1Module_0" />
     <nodeInfo nodeId="9181285766582208135" fileName="main.h" startLine="31" startPosition="0" endLine="32" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.calculations.initAllGlobalMutexes_0" />
-    <unitInfo nodeId="9181285766582208135" fileName="main.c" startLine="1" startPosition="0" endLine="307" endPosition="0" unitName="OriginalExamples.calculations.main" />
+    <unitInfo nodeId="9181285766582208135" fileName="main.c" startLine="1" startPosition="0" endLine="305" endPosition="0" unitName="OriginalExamples.calculations.main" />
   </root>
   <root nodeRef="r:d1acf823-fa9b-46a1-b811-10f95320a2c2(OriginalExamples.calculations)/9181285766586649587">
     <unitInfo nodeId="9181285766586649587" fileName="writerData.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="OriginalExamples.calculations.writerData" />

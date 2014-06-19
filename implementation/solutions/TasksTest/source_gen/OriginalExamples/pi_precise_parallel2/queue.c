@@ -16,7 +16,13 @@ void queue_queueInit(struct queue_SharedTypes_0_SharedOf_Queue_0* queue)
     queue->value.deleteAt = 0;
     for ( int32_t i = 0; i < QUEUE_QUEUESIZE; ++i )
     {
-      mpf_init(<!TextGen not found for 'TasksAndSyncs.structure.SyncRessourceRef'!>->value);
+      struct GenericSharedDeclarations_SharedOf___mpf_t__0* slotI = &(queue->value.data[i]);
+      GenericSyncDeclarations_startSyncFor1Mutex(&slotI->mutex);
+      {
+        mpf_init(slotI->value);
+      }
+
+      GenericSyncDeclarations_stopSyncFor1Mutex(&slotI->mutex);
     }
 
   }
@@ -34,6 +40,7 @@ void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
       int32_t newInsertAt = (queue->value.insertAt + 1) % QUEUE_QUEUESIZE;
       if ( queue->value.deleteAt == newInsertAt ) 
       {
+        GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
         continue;
       }
 
@@ -46,6 +53,7 @@ void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
 
       GenericSyncDeclarations_stopSyncFor1Mutex(&slotI->mutex);
       queue->value.insertAt = newInsertAt;
+      GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
       break;
     }
 
@@ -63,6 +71,7 @@ void queue_queueSafeGet(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
     {
       if ( queue->value.deleteAt == queue->value.insertAt ) 
       {
+        GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
         continue;
       }
 
@@ -76,6 +85,7 @@ void queue_queueSafeGet(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
       GenericSyncDeclarations_stopSyncFor1Mutex(&slotI->mutex);
       int32_t newDeleteAt = (queue->value.deleteAt + 1) % QUEUE_QUEUESIZE;
       queue->value.deleteAt = newDeleteAt;
+      GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
       return ;
     }
 

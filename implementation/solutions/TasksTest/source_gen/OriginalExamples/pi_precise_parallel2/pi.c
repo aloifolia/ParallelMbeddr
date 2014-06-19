@@ -10,12 +10,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct pi_Args_a0a0a51a7 {
-  struct GenericSharedDeclarations_SharedOf_uint32_0 counter;
+struct pi_Args_a0a0a61a9 {
+  struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer;
   struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer;
 };
 
-struct pi_Args_a0u0h {
+struct pi_Args_a0v0j {
   struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer;
   struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer;
 };
@@ -26,7 +26,7 @@ static void pi_calcPiWithThreshold(uint32_t threshold);
 
 static void pi_map(uint32_t threshold,struct GenericSharedDeclarations_SharedOf_uint32_0* counter,struct queue_SharedTypes_0_SharedOf_Queue_0* resultQueue);
 
-static void pi_reduce(uint32_t threshold,struct GenericSharedDeclarations_SharedOf___mpf_t__0* result,struct queue_SharedTypes_0_SharedOf_Queue_0* resultQueue);
+static void pi_reduce(uint32_t numberOfItems,struct GenericSharedDeclarations_SharedOf___mpf_t__0* result,struct queue_SharedTypes_0_SharedOf_Queue_0* resultQueue);
 
 static void pi_calcPiBlock(mpf_t result,uint32_t start,uint32_t end);
 
@@ -34,9 +34,9 @@ static void pi_calcPiItem(mpf_t piItem,uint32_t index);
 
 static void pi_initMpfItems(mpf_t items[],int32_t size);
 
-static void* pi_parFun_a0a0a51a7(void* voidArgs);
+static void* pi_parFun_a0a0a61a9(void* voidArgs);
 
-static void* pi_parFun_a0u0h(void* voidArgs);
+static void* pi_parFun_a0v0j(void* voidArgs);
 
 static inline void pi_init_queue_0(struct queue_SharedTypes_0_SharedOf_Queue_0* queue);
 
@@ -50,9 +50,9 @@ static inline void pi_init_result_0(struct GenericSharedDeclarations_SharedOf___
 
 static inline void pi_destroy_result_0(struct GenericSharedDeclarations_SharedOf___mpf_t__0* result);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0a51a7(struct GenericSharedDeclarations_SharedOf_uint32_0 counter,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0a61a9(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0u0h(struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0v0j(struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -68,6 +68,7 @@ int32_t main(int32_t argc, char* argv[])
   
   struct GenericSharedDeclarations_SharedOf_uint32_0 counter;
   pi_init_counter_0(&counter);
+  struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer = &counter;
   GenericSyncDeclarations_startSyncFor1Mutex(&counter.mutex);
   {
     counter.value = 0;
@@ -78,7 +79,7 @@ int32_t main(int32_t argc, char* argv[])
   struct GenericTaskDeclarations_VoidFuture mappers[PI_MAPPERCOUNT];
   for ( int32_t i = 0; i < PI_MAPPERCOUNT; ++i )
   {
-    mappers[i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(pi_taskInit_a0a0a51a7(counter, queuePointer));
+    mappers[i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(pi_taskInit_a0a0a61a9(queuePointer, counterPointer));
   }
 
   
@@ -86,7 +87,7 @@ int32_t main(int32_t argc, char* argv[])
   pi_init_result_0(&result);
   struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer = &result;
   
-  struct GenericTaskDeclarations_VoidFuture reducer = GenericTaskDeclarations_runTaskAndGetVoidFuture(pi_taskInit_a0u0h(resultPointer, queuePointer));
+  struct GenericTaskDeclarations_VoidFuture reducer = GenericTaskDeclarations_runTaskAndGetVoidFuture(pi_taskInit_a0v0j(resultPointer, queuePointer));
   
   for ( int32_t i = 0; i < PI_MAPPERCOUNT; ++i )
   {
@@ -140,6 +141,12 @@ static void pi_map(uint32_t threshold, struct GenericSharedDeclarations_SharedOf
     GenericSyncDeclarations_startSyncFor1Mutex(&counter->mutex);
     {
       start = counter->value;
+      if ( start == threshold ) 
+      {
+        GenericSyncDeclarations_stopSyncFor1Mutex(&counter->mutex);
+        break;
+      }
+
       uint32_t possibleEnd = start + PI_BLOCKSIZE;
       end = (possibleEnd < threshold) ? (possibleEnd) : (threshold);
       counter->value = end;
@@ -157,18 +164,22 @@ static void pi_map(uint32_t threshold, struct GenericSharedDeclarations_SharedOf
 }
 
 
-static void pi_reduce(uint32_t threshold, struct GenericSharedDeclarations_SharedOf___mpf_t__0* result, struct queue_SharedTypes_0_SharedOf_Queue_0* resultQueue) 
+static void pi_reduce(uint32_t numberOfItems, struct GenericSharedDeclarations_SharedOf___mpf_t__0* result, struct queue_SharedTypes_0_SharedOf_Queue_0* resultQueue) 
 {
   mpf_t item;
   mpf_init(item);
   GenericSyncDeclarations_startSyncFor1Mutex(&result->mutex);
   {
-    for ( uint32_t i = 0; i < threshold; ++i )
+    for ( uint32_t i = 0; i < numberOfItems; ++i )
     {
       queue_queueSafeGet(resultQueue, item);
       mpf_add(result->value, result->value, item);
     }
 
+    mp_exp_t exp;
+    char* resultString = mpf_get_str(0, &exp, 10, 0, result->value);
+    printf("result:\n%s\n",resultString);
+    printf("testemich\n");
   }
 
   GenericSyncDeclarations_stopSyncFor1Mutex(&result->mutex);
@@ -217,18 +228,18 @@ static void pi_initMpfItems(mpf_t items[], int32_t size)
 }
 
 
-static void* pi_parFun_a0a0a51a7(void* voidArgs) 
+static void* pi_parFun_a0a0a61a9(void* voidArgs) 
 {
-  struct pi_Args_a0a0a51a7* args = ((struct pi_Args_a0a0a51a7*)(voidArgs));
-  pi_map(PI_THRESHOLD100000, &(args)->counter, (args)->queuePointer);
+  struct pi_Args_a0a0a61a9* args = ((struct pi_Args_a0a0a61a9*)(voidArgs));
+  pi_map(PI_THRESHOLD2, (args)->counterPointer, (args)->queuePointer);
   return 0;
 }
 
 
-static void* pi_parFun_a0u0h(void* voidArgs) 
+static void* pi_parFun_a0v0j(void* voidArgs) 
 {
-  struct pi_Args_a0u0h* args = ((struct pi_Args_a0u0h*)(voidArgs));
-  pi_reduce(PI_THRESHOLD100000, (args)->resultPointer, (args)->queuePointer);
+  struct pi_Args_a0v0j* args = ((struct pi_Args_a0v0j*)(voidArgs));
+  pi_reduce(PI_BLOCKCOUNT2, (args)->resultPointer, (args)->queuePointer);
   return 0;
 }
 
@@ -236,9 +247,9 @@ static void* pi_parFun_a0u0h(void* voidArgs)
 static  void pi_init_queue_0(struct queue_SharedTypes_0_SharedOf_Queue_0* queue) 
 {
   GenericSharedDeclarations_initMutex_0(&queue->mutexAttribute, &queue->mutex);
-  for ( int8_t __i_3 = 0; __i_3 < QUEUE_QUEUESIZE; __i_3++ )
+  for ( int8_t __i_1 = 0; __i_1 < QUEUE_QUEUESIZE; __i_1++ )
   {
-    GenericSharedDeclarations_initMutex_0(&queue->value.data[__i_3].mutexAttribute, &queue->value.data[__i_3].mutex);
+    GenericSharedDeclarations_initMutex_0(&queue->value.data[__i_1].mutexAttribute, &queue->value.data[__i_1].mutex);
   }
 
 }
@@ -247,9 +258,9 @@ static  void pi_init_queue_0(struct queue_SharedTypes_0_SharedOf_Queue_0* queue)
 static  void pi_destroy_queue_0(struct queue_SharedTypes_0_SharedOf_Queue_0* queue) 
 {
   GenericSharedDeclarations_destroyMutex_0(&queue->mutex);
-  for ( int8_t __i_3 = 0; __i_3 < QUEUE_QUEUESIZE; __i_3++ )
+  for ( int8_t __i_1 = 0; __i_1 < QUEUE_QUEUESIZE; __i_1++ )
   {
-    GenericSharedDeclarations_destroyMutex_0(&queue->value.data[__i_3].mutex);
+    GenericSharedDeclarations_destroyMutex_0(&queue->value.data[__i_1].mutex);
   }
 
 }
@@ -279,21 +290,21 @@ static  void pi_destroy_result_0(struct GenericSharedDeclarations_SharedOf___mpf
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0a51a7(struct GenericSharedDeclarations_SharedOf_uint32_0 counter, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0a61a9(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer) 
 {
-  struct pi_Args_a0a0a51a7* args_a0a0a51a7 = malloc(sizeof(struct pi_Args_a0a0a51a7));
-  args_a0a0a51a7->counter = counter;
-  args_a0a0a51a7->queuePointer = queuePointer;
-  return (struct GenericTaskDeclarations_Task){args_a0a0a51a7,&pi_parFun_a0a0a51a7};
+  struct pi_Args_a0a0a61a9* args_a0a0a61a9 = malloc(sizeof(struct pi_Args_a0a0a61a9));
+  args_a0a0a61a9->counterPointer = counterPointer;
+  args_a0a0a61a9->queuePointer = queuePointer;
+  return (struct GenericTaskDeclarations_Task){args_a0a0a61a9,&pi_parFun_a0a0a61a9};
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0u0h(struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0v0j(struct GenericSharedDeclarations_SharedOf___mpf_t__0* resultPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
 {
-  struct pi_Args_a0u0h* args_a0u0h = malloc(sizeof(struct pi_Args_a0u0h));
-  args_a0u0h->resultPointer = resultPointer;
-  args_a0u0h->queuePointer = queuePointer;
-  return (struct GenericTaskDeclarations_Task){args_a0u0h,&pi_parFun_a0u0h};
+  struct pi_Args_a0v0j* args_a0v0j = malloc(sizeof(struct pi_Args_a0v0j));
+  args_a0v0j->resultPointer = resultPointer;
+  args_a0v0j->queuePointer = queuePointer;
+  return (struct GenericTaskDeclarations_Task){args_a0v0j,&pi_parFun_a0v0j};
 }
 
 

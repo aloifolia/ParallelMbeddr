@@ -17,7 +17,7 @@ extern "C" {
 #endif
 
 struct readerData_SharedTypes_0_Data {
-  struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0 blocks[CONSTANTS_numberOfBlocks];
+  struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0 blocks[100];
   int16_t numberOfBlocks;
   int16_t lastBlockSize;
   int16_t nextBlockIndex;

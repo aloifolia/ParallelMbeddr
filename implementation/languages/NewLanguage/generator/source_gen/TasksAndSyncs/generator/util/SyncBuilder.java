@@ -943,4 +943,10 @@ public class SyncBuilder {
   }
 
 
+
+  public static void maybeAddSyncStopBefore(SNode syncStop, SNode flowBreaker, SNode loopOrFunction) {
+    if (ListSequence.fromList(SNodeOperations.getAncestors(syncStop, null, false)).contains(loopOrFunction)) {
+      SNodeOperations.insertPrevSiblingChild(flowBreaker, SNodeOperations.copyNode(syncStop));
+    }
+  }
 }

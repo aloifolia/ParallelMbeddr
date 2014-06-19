@@ -8,6 +8,9 @@
     <classNode dependClassName="TasksAndSyncs.generator.util.SharedBuilder" />
     <classNode dependClassName="TasksAndSyncs.generator.util.SyncBuilder" />
     <classNode dependClassName="TasksAndSyncs.generator.util.TaskBuilder" />
+    <classNode dependClassName="com.mbeddr.core.modules.behavior.ReturnStatement_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.BreakStatement_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ContinueStatement_Behavior" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Class" />

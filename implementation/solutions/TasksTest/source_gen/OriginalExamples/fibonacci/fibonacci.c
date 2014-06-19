@@ -87,8 +87,7 @@ static inline struct GenericTaskDeclarations_Task fibonacci_taskInit_a0a0a2a1(in
 {
   struct fibonacci_Args_a0a0a2a1* args_a0a0a2a1 = malloc(sizeof(struct fibonacci_Args_a0a0a2a1));
   args_a0a0a2a1->i = i;
-  struct GenericTaskDeclarations_Task task = {args_a0a0a2a1,&fibonacci_parFun_a0a0a2a1};
-  return task;
+  return (struct GenericTaskDeclarations_Task){args_a0a0a2a1,&fibonacci_parFun_a0a0a2a1};
 }
 
 

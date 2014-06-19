@@ -467,6 +467,8 @@
     <nodeInfo nodeId="3348893923588242795" fileName="SyncBuilder.java" startLine="939" startPosition="137" endLine="940" endPosition="186" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
     <nodeInfo nodeId="3348893923577842244" fileName="SyncBuilder.java" startLine="940" startPosition="186" endLine="941" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
     <nodeInfo nodeId="3348893923577842245" fileName="SyncBuilder.java" startLine="941" startPosition="0" endLine="942" endPosition="28" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="8001979070719037052" fileName="SyncBuilder.java" startLine="948" startPosition="110" endLine="949" endPosition="94" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070719002741" fileName="SyncBuilder.java" startLine="947" startPosition="102" endLine="950" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="483189195598681373" fileName="SyncBuilder.java" startLine="23" startPosition="0" endLine="27" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="483189195598684623" fileName="SyncBuilder.java" startLine="49" startPosition="0" endLine="53" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="483189195599391273" fileName="SyncBuilder.java" startLine="133" startPosition="0" endLine="137" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
@@ -541,6 +543,7 @@
     <nodeInfo nodeId="3348893923577842112" fileName="SyncBuilder.java" startLine="890" startPosition="0" endLine="895" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="3348893923578049062" fileName="SyncBuilder.java" startLine="912" startPosition="0" endLine="917" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="5853110027211440458" fileName="SyncBuilder.java" startLine="928" startPosition="0" endLine="933" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <nodeInfo nodeId="8001979070718973723" fileName="SyncBuilder.java" startLine="947" startPosition="0" endLine="952" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="maybeAddSyncStopBefore#(Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;Lorg/jetbrains/mps/openapi/model/SNode;)V" />
     <nodeInfo nodeId="483189195598306579" fileName="SyncBuilder.java" startLine="21" startPosition="29" endLine="27" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="483189195598320407" fileName="SyncBuilder.java" startLine="36" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="invoke#()Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="483189195598323896" fileName="SyncBuilder.java" startLine="47" startPosition="29" endLine="53" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -723,6 +726,7 @@
     <nodeInfo nodeId="483189195598659818" fileName="SyncBuilder.java" startLine="216" startPosition="0" endLine="479" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="3348893923579330409" fileName="SyncBuilder.java" startLine="484" startPosition="0" endLine="833" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="buildStartSyncFunction#(Ljetbrains/mps/generator/template/TemplateQueryContext;ILorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
     <nodeInfo nodeId="483189195598172309" fileName="SyncBuilder.java" startLine="19" startPosition="0" endLine="481" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="buildBackoffExponentiallyFunction#()Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <scopeInfo nodeId="8001979070719002742" fileName="SyncBuilder.java" startLine="948" startPosition="110" endLine="949" endPosition="94" />
     <scopeInfo nodeId="483189195598681373" fileName="SyncBuilder.java" startLine="23" startPosition="33" endLine="25" endPosition="23">
       <varInfo nodeId="483189195598681373" varName="res" />
     </scopeInfo>
@@ -945,6 +949,7 @@
     <scopeInfo nodeId="5853110027211440458" fileName="SyncBuilder.java" startLine="928" startPosition="35" endLine="931" endPosition="25">
       <varInfo nodeId="5853110027211440458" varName="res" />
     </scopeInfo>
+    <scopeInfo nodeId="8001979070718970107" fileName="SyncBuilder.java" startLine="947" startPosition="102" endLine="950" endPosition="5" />
     <scopeInfo nodeId="483189195598681373" fileName="SyncBuilder.java" startLine="23" startPosition="0" endLine="27" endPosition="0" />
     <scopeInfo nodeId="483189195598320407" fileName="SyncBuilder.java" startLine="36" startPosition="33" endLine="40" endPosition="23">
       <varInfo nodeId="483189195598320407" varName="res" />
@@ -1094,6 +1099,11 @@
       <varInfo nodeId="3348893923578045727" varName="res" />
     </scopeInfo>
     <scopeInfo nodeId="5853110027211440458" fileName="SyncBuilder.java" startLine="928" startPosition="0" endLine="933" endPosition="0" />
+    <scopeInfo nodeId="8001979070718973723" fileName="SyncBuilder.java" startLine="947" startPosition="0" endLine="952" endPosition="0">
+      <varInfo nodeId="8001979070718986648" varName="flowBreaker" />
+      <varInfo nodeId="8001979070718993057" varName="loopOrFunction" />
+      <varInfo nodeId="8001979070718983430" varName="syncStop" />
+    </scopeInfo>
     <scopeInfo nodeId="483189195598320407" fileName="SyncBuilder.java" startLine="36" startPosition="0" endLine="42" endPosition="0" />
     <scopeInfo nodeId="483189195598323902" fileName="SyncBuilder.java" startLine="62" startPosition="0" endLine="68" endPosition="0" />
     <scopeInfo nodeId="483189195599383301" fileName="SyncBuilder.java" startLine="120" startPosition="0" endLine="126" endPosition="0" />
@@ -1485,7 +1495,7 @@
     <unitInfo nodeId="3348893923577553458" fileName="SyncBuilder.java" startLine="676" startPosition="34" endLine="738" endPosition="7" unitName="TasksAndSyncs.generator.util.SyncBuilder$14" />
     <unitInfo nodeId="483189195598439014" fileName="SyncBuilder.java" startLine="130" startPosition="46" endLine="215" endPosition="5" unitName="TasksAndSyncs.generator.util.SyncBuilder$6" />
     <unitInfo nodeId="483189195598662597" fileName="SyncBuilder.java" startLine="217" startPosition="15" endLine="479" endPosition="5" unitName="TasksAndSyncs.generator.util.SyncBuilder$7" />
-    <unitInfo nodeId="2852056939580287594" fileName="SyncBuilder.java" startLine="16" startPosition="0" endLine="947" endPosition="0" unitName="TasksAndSyncs.generator.util.SyncBuilder" />
+    <unitInfo nodeId="2852056939580287594" fileName="SyncBuilder.java" startLine="16" startPosition="0" endLine="953" endPosition="0" unitName="TasksAndSyncs.generator.util.SyncBuilder" />
   </root>
   <root nodeRef="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2852056939580766772">
     <nodeInfo nodeId="3074299910032730430" fileName="ModuleBuilder.java" startLine="25" startPosition="33" endLine="26" endPosition="121" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />

@@ -10,6 +10,8 @@
 
 #include <pthread.h>
 
+#include <gmp.h>
+
 
 
 #ifdef __cplusplus

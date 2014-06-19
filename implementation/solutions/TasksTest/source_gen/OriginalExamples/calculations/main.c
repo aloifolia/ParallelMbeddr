@@ -47,7 +47,7 @@ static inline void main_init_inputData_0(struct readerData_SharedTypes_0_SharedO
 
 static inline void main_destroy_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data_0* inputData);
 
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(int16_t lastBlockSize,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock);
+static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock,int16_t lastBlockSize,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock);
 
 static inline struct GenericTaskDeclarations_Task main_taskInit_a0a0a1a2e0c(struct readerData_SharedTypes_0_SharedOf_Data_0 inputData);
 
@@ -74,7 +74,7 @@ int32_t main(int32_t argc, char* argv[])
       struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock = &(main_factorCountBlocks.value[0]);
       GenericSyncDeclarations_startSyncFor2Mutexes(&inputBlock->mutex, &resultBlock->mutex);
       {
-        <!TextGen not found for 'TasksAndSyncs.structure.TaskType'!> calcTask = main_taskInit_a0a3a2e0c(lastBlockSize, inputBlock, resultBlock);
+        struct GenericTaskDeclarations_Task calcTask = main_taskInit_a0a3a2e0c(resultBlock, lastBlockSize, inputBlock);
         GenericTaskDeclarations_runTaskAndGetVoidFuture(calcTask);
       }
 
@@ -250,7 +250,7 @@ void main_initGlobalMutexesFor1Module_0(void)
   GenericSharedDeclarations_initMutex_0(&main_factorCountBlocks.mutexAttribute, &main_factorCountBlocks.mutex);
   for ( int8_t __i_0 = 0; __i_0 < CONSTANTS_numberOfBlocks; __i_0++ )
   {
-    GenericSharedDeclarations_initMutex_0(&main_factorCountBlocks[__i_0].mutexAttribute, &main_factorCountBlocks[__i_0].mutex);
+    GenericSharedDeclarations_initMutex_0(&main_factorCountBlocks.value[__i_0].mutexAttribute, &main_factorCountBlocks.value[__i_0].mutex);
   }
 
 }
@@ -267,7 +267,7 @@ static  void main_init_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data
   GenericSharedDeclarations_initMutex_0(&inputData->mutexAttribute, &inputData->mutex);
   for ( int8_t __i_3 = 0; __i_3 < CONSTANTS_numberOfBlocks; __i_3++ )
   {
-    GenericSharedDeclarations_initMutex_0(&inputData->blocks[__i_3].mutexAttribute, &inputData->blocks[__i_3].mutex);
+    GenericSharedDeclarations_initMutex_0(&inputData->value.blocks[__i_3].mutexAttribute, &inputData->value.blocks[__i_3].mutex);
   }
 
 }
@@ -278,20 +278,19 @@ static  void main_destroy_inputData_0(struct readerData_SharedTypes_0_SharedOf_D
   GenericSharedDeclarations_destroyMutex_0(&inputData->mutex);
   for ( int8_t __i_3 = 0; __i_3 < CONSTANTS_numberOfBlocks; __i_3++ )
   {
-    GenericSharedDeclarations_destroyMutex_0(&inputData->blocks[__i_3].mutex);
+    GenericSharedDeclarations_destroyMutex_0(&inputData->value.blocks[__i_3].mutex);
   }
 
 }
 
 
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(int16_t lastBlockSize, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock) 
+static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock, int16_t lastBlockSize, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock) 
 {
   struct main_Args_a0a3a2e0c_0* args_a0a3a2e0c = malloc(sizeof(struct main_Args_a0a3a2e0c_0));
   args_a0a3a2e0c->inputBlock = inputBlock;
   args_a0a3a2e0c->resultBlock = resultBlock;
   args_a0a3a2e0c->lastBlockSize = lastBlockSize;
-  struct GenericTaskDeclarations_Task task = {args_a0a3a2e0c,&main_parFun_a0a3a2e0c};
-  return task;
+  return (struct GenericTaskDeclarations_Task){args_a0a3a2e0c,&main_parFun_a0a3a2e0c};
 }
 
 
@@ -299,8 +298,7 @@ static inline struct GenericTaskDeclarations_Task main_taskInit_a0a0a1a2e0c(stru
 {
   struct main_Args_a0a0a1a2e0c* args_a0a0a1a2e0c = malloc(sizeof(struct main_Args_a0a0a1a2e0c));
   args_a0a0a1a2e0c->inputData = inputData;
-  struct GenericTaskDeclarations_Task task = {args_a0a0a1a2e0c,&main_parFun_a0a0a1a2e0c};
-  return task;
+  return (struct GenericTaskDeclarations_Task){args_a0a0a1a2e0c,&main_parFun_a0a0a1a2e0c};
 }
 
 
