@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="9ipwujryu4nxvkr8zwl3w7n0t4o7y8d">
+<dependencies version="2" modelHash="20x4hk54y59hipgi6hixbkyb7u89j3o">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
   <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
@@ -10,7 +10,7 @@
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="-72duuo4h0yyy6mr9x5p7p1bgk48vgfo" />
   <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" hash="a576g9gc2wfnw9bdzsbk3tlpczw0kkk" />
-  <common hash="aj78cykrdey5fzjqq5f9z731obipayg" dependsOnNodes="true">
+  <common hash="3jndzaqzx0obzp8nphqvqk0wry9ugxn" dependsOnNodes="true">
     <dep root="1304213873204721600" />
     <dep root="1304213873204973711" />
     <dep root="1304213873204985423" />
@@ -29,6 +29,7 @@
     <dep root="6288388922743435028" />
     <dep root="6553204290893807643" />
     <dep root="6553204290894227496" />
+    <dep root="8001979070750286289" />
     <dep root="961131662869355681" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
@@ -61,5 +62,6 @@
   <source id="4335879941138580937" name="SyncStart" hash="9phw2mljqdligobnmwx8z9i2rsxlzrv" />
   <source id="4335879941138597391" name="SyncStop" hash="7yyq7k0st78xknliscj3u75ved7cw15" />
   <source id="4335879941144934382" name="SyncRessourceRefByName" hash="dg8zy252h79bnbhjwhhxtd6hcrr25c5" />
+  <source id="8001979070750286289" name="TaskClear" hash="59i27y0hxotqthwkaljqm1dfjgxdgdn" />
 </dependencies>
 

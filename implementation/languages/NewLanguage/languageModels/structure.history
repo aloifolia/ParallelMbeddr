@@ -174,5 +174,11 @@
     </dependencies>
     <rename id="6i3o.6553204290894227498" type="CHILD" from="statements" to="body" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="28" />
+    </dependencies>
+    <rename id="6i3o.8001979070750286289" type="CONCEPT" from="TaskFree" to="TaskClear" />
+  </StructureModification>
 </history>
 

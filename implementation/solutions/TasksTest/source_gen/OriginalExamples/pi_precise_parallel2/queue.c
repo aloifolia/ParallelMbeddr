@@ -7,7 +7,9 @@
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
 #include "queue_SharedTypes_0.h"
+#include <time.h>
 
+__attribute__((noinline, noclone))
 void queue_queueInit(struct queue_SharedTypes_0_SharedOf_Queue_0* queue) 
 {
   GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
@@ -30,7 +32,28 @@ void queue_queueInit(struct queue_SharedTypes_0_SharedOf_Queue_0* queue)
   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
 }
 
+__attribute__((noinline, noclone))
+void queue_queueClear(struct queue_SharedTypes_0_SharedOf_Queue_0* queue) 
+{
+  GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
+  {
+    for ( int32_t i = 0; i < QUEUE_QUEUESIZE; ++i )
+    {
+      struct GenericSharedDeclarations_SharedOf___mpf_t__0* slotI = &(queue->value.data[i]);
+      GenericSyncDeclarations_startSyncFor1Mutex(&slotI->mutex);
+      {
+        mpf_clear(slotI->value);
+      }
 
+      GenericSyncDeclarations_stopSyncFor1Mutex(&slotI->mutex);
+    }
+
+  }
+
+  GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+}
+
+__attribute__((noinline, noclone))
 void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_t item) 
 {
   while (1)
@@ -45,7 +68,7 @@ void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
       }
 
       
-      struct GenericSharedDeclarations_SharedOf___mpf_t__0* slotI = &(queue->value.data[newInsertAt]);
+      struct GenericSharedDeclarations_SharedOf___mpf_t__0* slotI = &(queue->value.data[queue->value.insertAt]);
       GenericSyncDeclarations_startSyncFor1Mutex(&slotI->mutex);
       {
         mpf_set(slotI->value, item);
@@ -62,13 +85,15 @@ void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_
 
 }
 
-
+__attribute__((noinline, noclone))
 void queue_queueSafeGet(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, mpf_t result) 
 {
   while (1)
   {
     GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
     {
+      struct timespec sleepingTime = (struct timespec) { .tv_nsec = 150 };
+      nanosleep(&sleepingTime,0);
       if ( queue->value.deleteAt == queue->value.insertAt ) 
       {
         GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);

@@ -1,7 +1,7 @@
 CC=gcc
-CFLAGS=-std=c99 -lgmp
+CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_pi=pi.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o
+_OBJ_pi=queue.o pi.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o queue_SharedTypes_0.o
 OBJ_pi=$(patsubst %,$(ODIR)/%,$(_OBJ_pi))
 
 

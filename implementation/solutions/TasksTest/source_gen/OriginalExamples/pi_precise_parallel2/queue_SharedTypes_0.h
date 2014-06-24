@@ -19,7 +19,7 @@ extern "C" {
 struct queue_SharedTypes_0_Queue {
   int32_t insertAt;
   int32_t deleteAt;
-  struct GenericSharedDeclarations_SharedOf___mpf_t__0 data[50];
+  struct GenericSharedDeclarations_SharedOf___mpf_t__0 data[10];
 };
 
 struct queue_SharedTypes_0_SharedOf_Queue_0 {

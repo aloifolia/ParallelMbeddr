@@ -11,7 +11,7 @@ static void pi_calcWithThreshold(mpf_t result,uint32_t threshold);
 
 static void pi_calcPiBlock(mpf_t result,uint32_t start,uint32_t end);
 
-static void pi_calcPiItem(mpf_t piItem,uint32_t index);
+static inline void pi_calcPiItem(mpf_t piItem,uint32_t index);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -20,15 +20,18 @@ int32_t main(int32_t argc, char* argv[])
   mpf_t pi160;
   mpf_init_set_str(pi160, ((char*)(PI_PI160)), PI_BASE);
   
-  mpf_t piAproxed100000;
-  mpf_init_set_ui(piAproxed100000, 0);
-  pi_calcWithThreshold(piAproxed100000, PI_THRESHOLD100000);
-  pi_calcAndPrintError(pi160, piAproxed100000);
+  mpf_t result;
+  mpf_init_set_ui(result, 0);
+  for ( uint32_t i = 0; i < PI_THRESHOLD; i += PI_BLOCKSIZE )
+  {
+    pi_calcPiBlock(result, i, i + PI_BLOCKSIZE);
+  }
+
+  pi_calcAndPrintError(pi160, result);
   
-  mpf_t piAproxed200000;
-  mpf_init_set_ui(piAproxed200000, 0);
-  pi_calcWithThreshold(piAproxed200000, PI_THRESHOLD200000);
-  pi_calcAndPrintError(pi160, piAproxed200000);
+  printf("pi(iterations = %d, precision = %d) = \n",PI_THRESHOLD,PI_PRECISION);
+  mpf_out_str(stdout, 10, 0, result);
+  printf("\n\n");
   
   return 0;
 }
@@ -49,18 +52,16 @@ static void pi_calcAndPrintError(mpf_t correctValue, mpf_t approxedValue)
 static void pi_calcWithThreshold(mpf_t result, uint32_t threshold) 
 {
   pi_calcPiBlock(result, 0, threshold);
-  printf("pi(iterations = %d, precision = %d) = \n",threshold,PI_PRECISION);
-  mpf_out_str(stdout, 10, 0, result);
-  printf("\n\n");
 }
 
 
 static void pi_calcPiBlock(mpf_t result, uint32_t start, uint32_t end) 
 {
+  mpf_t piItem;
+  mpf_init(piItem);
+  
   for ( uint32_t i = start; i < end; ++i )
   {
-    mpf_t piItem;
-    mpf_init(piItem);
     pi_calcPiItem(piItem, i);
     mpf_add(result, result, piItem);
   }
@@ -68,7 +69,7 @@ static void pi_calcPiBlock(mpf_t result, uint32_t start, uint32_t end)
 }
 
 
-static void pi_calcPiItem(mpf_t piItem, uint32_t index) 
+static inline void pi_calcPiItem(mpf_t piItem, uint32_t index) 
 {
   mpf_t dividend;
   mpf_t base;

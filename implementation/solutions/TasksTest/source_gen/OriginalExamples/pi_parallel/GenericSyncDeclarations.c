@@ -19,3 +19,27 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
 }
 
 
+void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  uint8_t waitingCounter = 0;
+  uint16_t mask = 0;
+  while (1)
+  {
+    GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask);
+    if ( pthread_mutex_trylock(mutex_0) != 0 ) 
+    {
+      continue;
+    }
+
+    break;
+  }
+
+}
+
+
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_1) 
+{
+  pthread_mutex_unlock(mutex_1);
+}
+
+

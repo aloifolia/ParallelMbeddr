@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-b78ej7v7u1s8ad6x5osl3h4wwmrs9w6">
+<dependencies version="2" modelHash="-6rx2ix4ovtvumcdctj1fxjrzax7b0y">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
@@ -8,8 +8,8 @@
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="cv2iru9h5c7dy70zqjq109i27h1sxi8" />
-  <common hash="-3jh1z9y5j5dmxco572dwzt4nnbxn87q" dependsOnNodes="true">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="2u6yi6bp2c2shnmmhctlbrtesiepsn2" />
+  <common hash="aqxzs80dq0uyetax4jkflbx71aj17fe" dependsOnNodes="true">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
@@ -36,8 +36,8 @@
     <file name="queue_SharedTypes_0.h" />
   </common>
   <source id="8001979070700482289" name="gmp" hash="1v28gw9qilwkpqcsole03p6x1m7d4jg" />
-  <source id="8001979070700482069" name="pi" hash="xy4hy0si6yz78yaijzdqkr2kspsjtz" />
-  <source id="8001979070700644525" name="queue" hash="-b5g1is1a24fi2b57qww4gzm4heq1670" />
+  <source id="8001979070700482069" name="pi" hash="-1ymt3xs1ojl3v1v2zyps44kd0nwej76" />
+  <source id="8001979070700644525" name="queue" hash="6vn2vhtkzk90f4uip76on2ervc1um8s" />
   <source id="8001979070702382532" name="TypeSizeConfiguration (O.pi_precise_parallel2)" hash="-2ij3ilpr4ufkeo3tasrvx175e8hllgf" />
   <source id="8001979070702383785" name="BuildConfiguration (O.pi_precise_parallel2)" hash="801x7e5fdcsdueji95qe5mhexp0tqbg" />
 </dependencies>
