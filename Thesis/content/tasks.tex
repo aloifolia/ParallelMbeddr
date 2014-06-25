@@ -5,7 +5,7 @@ The syntax \texttt{e} of expressions in mbeddr is extended by
 
 $e ::= ...|\;\mathit{|e|}$
 
-When executed a task term yields a handle to a parallel unit of execution. This way the initialization of the task and the actual execution are decoupled and can happen . When it is run the embraced expression is executed and its value is returned. If the type of the expression is void no value will be returned. The type of a task reflects this return value.
+When executed a task term yields a handle to a parallel unit of execution. This way the initialization of the task and the actual execution are decoupled and can happen independently. When a task is run the embraced expression is executed and its value is returned. If the type of the expression is void no value will be returned. The type of a task reflects this return value.
 
 $t ::= ... |\;\mathit{Task{<}t{>}}$
 
@@ -17,9 +17,17 @@ Due to implementation reasons(TODO: ref) the embraced return type of a task must
 \inference*[NonVoidTask]{e |- t & t \neq \mathit{void}}{|e| |- \mathit{Task{<}void{\text{*}}{>}}}
 \end{align*}
 
+When a task is not used anymore to produce running instances of itself it should be cleared in order to free the memory that it implicitly occupies on the heap:
+
+$e ::= ...|\;e.\mathit{clear}$
+\begin{align*}
+\inference*[VoidTask]{|e| |- \mathit{Task{<}void{>}}}{\qquad\mathit{void}\qquad} 
+\end{align*}
+
+If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by clearing the task by that it was created.
 
 \subsection{Translation}
-The pthreads library was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code as opposed to frameworks like OpenMP (TODO: reference). Every task in ParalllelMbeddr is represented by a thread in pthreads. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
+The pthreads library was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code as opposed to frameworks like OpenMP (TODO: reference). Every task in ParalllelMbeddr is represented by a thread as provided by the POSIX threads standard. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
 %\begin{ccode}
 %void* parFun_X(void* voidArgs) {...}
 %\end{ccode}
@@ -27,7 +35,7 @@ The pthreads library was chosen as a means to realize concurrency in the transla
 void* parFun_X(void* voidArgs) {...}
 \end{ccode}
 
-The \CODE{X} in the name symbolizes that for every task a unique adaptee of this function with the prefix \CODE{parfun\_} and some unique suffix chosen by the framework is generated\footnote{In the following explanations \CODE{X} will always denote some arbitrary suffix. Keep in mind that these suffixes do not necessarily coincide for different kinds of components.}.
+The \CODE{X} in the name symbolizes that for every task a unique adaptee of this function with the prefix \CODE{parFun\_} and some unique suffix chosen by the framework is generated\footnote{In the following explanations \CODE{X} will always denote some arbitrary suffix. Keep in mind that these suffixes do not necessarily coincide for different kinds of components.}.
 
 If a task contains any references to local variables or function arguments they need to be bound to capture the variable state at the time of the task initiliazation. Such state is represented by an argument struct:
 
@@ -39,9 +47,9 @@ struct Args_X {
 }
 \end{ccode}
 
-where every \CODE{v\_i} denotes an equally named reference in the task expression to a variable of type \CODE{t\_i}.
+where every \CODE{v\_i} represents an equally named reference in the task expression to a variable of type \CODE{t\_i}.
 
-The generated function \CODE{parFun\_X} is then given an instance of \CODE{Args\_X} which it uses to bind the references of the task expression to. The full function definition of a task e of type \CODE{Task<t*>} is, thus:
+The generated function \CODE{parFun\_X} is then given an instance of \CODE{Args\_X} which it uses to bind the references of the task expression to. The full function definition of a task \CODE{e} of type \CODE{Task<t*>} is, thus:
 
 \begin{ccode}
 void* parFun_X(void* voidArgs) {
@@ -56,7 +64,7 @@ where \CODE{e'} is the expression obtained when every local variable reference a
 
 $r\;/\;args\text{-->}r$
 
-If the embraced expression of a task does not contain any reference of this kind (e.g. only references to global variables) the \CODE{args} definition line is omitted as is clearly the---otherwise empty---\CODE{struct Args\_X}. In this case \CODE{e'} equals \CODE{e}.
+If the embraced expression of a task does not contain any reference of this kind (e.g. only references to global variables) the \CODE{args} definition line is omitted as is clearly the---otherwise empty---declaration of \CODE{struct Args\_X}. In this case \CODE{e'} equals \CODE{e}.
 
 The generated function of a task of type \CODE{Task<void>} renounces the result-related statements:
 
@@ -79,7 +87,7 @@ exported struct Task {
 \end{ccode}
 
 As opposed to the unique definitions of other elements that need to be defined for every occurence of a task (the ones with the \CODE{X} suffixes) \CODE{struct Task} is generic and is reused for every task. Generic declarations are kept in fixed seperately generated modules and are imported into the user-defined modules.
-With these components in mind the actual translation of a task expression becomes an mbeddr block expression\footnote{A block expression contains a list of statements of which the mandatory yield statement returns the result value.}:
+With these components in mind the actual translation of a task expression \CODE{|.|} that contains references \CODE{v\_i} to \CODE{v\_n} becomes an mbeddr block expression\footnote{A block expression contains a list of statements of which the mandatory yield statement returns the result value.}:
 
 \begin{minipage}{0.4\textwidth}
 \begin{ccode}
@@ -88,7 +96,7 @@ With these components in mind the actual translation of a task expression become
   args_X->v_1 = v_1;
   ...
   args_X->v_n = v_n;
-  yield (Task_X){args_X, parFun_X};
+  yield (Task){args_X, parFun_X};
 }
 \end{ccode}
 \end{minipage}
@@ -97,22 +105,33 @@ $\Longrightarrow$
 \end{minipage}
 \begin{minipage}{0.4\textwidth}
 \begin{ccode}
+taskInit(v_1, ..., v_n)
+\end{ccode}
+with
+\begin{ccode}
 inline Args_X taskInit(t_1 v_1, ..., t_n v_n) {
   Args_X* args_X = malloc(sizeof(Args_X));
   args_X - >v_1 = v_1;
   ...
   args_X->v_n = v_n;
-  return (Task_X){ args_X, parFun_X };
+  return (Task){ args_X, parFun_X };
 }
 \end{ccode}
 \end{minipage}
 
-The expression of the \CODE{yield} statement is a compound literal which on evaluation creates an instance of the aforementioned \CODE{struct Task}. The block expression is then further reduced by mbeddr to an inline function\footnote{Whereas in C for every struct type \CODE{T} a typedef has to be defined in order to reference this type directly with \CODE{T} instead of \CODE{struct T} in mbeddr this definition is done implicitly.}.
+The expression of the \CODE{yield} statement is a compound literal which on evaluation creates an instance of the aforementioned \CODE{struct Task}. The block expression is then further reduced by mbeddr to a call of a newly generated inline function\footnote{Whereas in C for every struct type \CODE{T} a typedef has to be defined in order to reference this type directly with \CODE{T} instead of \CODE{struct T} in mbeddr this definition is done implicitly.}.
 
 Without any references to bind a task is just reduced to the compound literal:
 
 \begin{ccode}
 (Task_X){ null, parFun_X }
+\end{ccode}
+
+By above definitions of \CODE{parFun\_X} and the reduction of a task it becomes clear that the input and output (I/O) of a task is routed via the heap instead of the stack. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments have to be deleted by the programmer by hand. Since the result is returned via a pointer onto the heap it becomes obvious that the return type of a task must either be a void type or a pointer type. Concerning task arguments one advantage of this implementation is that a task may be passed by value without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
+
+The clearance of a task \CODE{e.clear} in the generated code is a call of the \CODE{free} function of C parameterized with the arguments of the translated task \CODE{e'}:
+\begin{ccode}
+free(e'.args)
 \end{ccode}
 
 \subsection{Example code}

@@ -1,0 +1,77 @@
+\section{Shared memory}
+The previous chapters introduced the means to enable parallel execution of code in terms of tasks and futures. Still missing is the communication between tasks. The communication model of choice for ParallelMbeddr is shared memory. The reason for this choice follows from the objectives of the model: it should offer a reasonable performance, considering that it is supposed to be used in embedded systems; it should be safe by design in order to avoid the trip hazards that are involved with low-level synchronization approaches like mutexes. Transactional memory seems to be not ready for the embedded domain for performance reasons. By following argumentation message passing does not offer profound advantages in comparison to shared memory if the access to the shared memory is controlled in a sane way. Usually message passing forbids shared memory between two parallel XX of execution. Communication is then realized via sent messages. Strict seperation of memory does not fit the usual C workflow concerning pointer arithmetic. Therefore some form of memory sharing would have to be introduced into a message passing model in order to reduce performance loss. As this would lead to the same problems that the general shared memory model already suffers the opposite way is chosen: Instead of introducing shared memory in a message passing model a shared memory model is designed on top of which message passing can ever be attached in order to simplify the communication between tasks.
+
+Memory that is to be shared between two tasks must be explicitly declared by an according type. A variable of this type denotes a \textit{shared ressource}. Thus, a shared ressource can be regarded as a wrapper of data that is to be shared. In order to make use of a shared ressource it has to be synchronized first. Specific language elements are used to access and change the value of a shared ressource.
+
+\subsection{Design}
+The ressources to be shared are typed with the shared ressource type:
+
+$ t ::= ...|\;\mathit{shared{<}u{>}}\;|\;\mathit{shared{<}shared{<}u{>}{*}{>}}\;$
+
+$ u ::= t \qquad u != t*$
+
+The type parameterization denotes the base type of a shared type, i.e. the type of the data that is wrapped by a shared ressource. Due to reasons that will be explained in the SAFETY CHAPTER a shared ressource may have an arbitrary base type that does not denote a pointer to a value that is not shared\footnote{Differently said: A pointer wrapped in a shared ressource must point to a shared ressource itself.}. Further restrictions apply to shared types which are also investigated in the aforementioned section. The same applies to the \CODE{.set} expression by which the value of a shared ressource can be modified; the value can be retrieved via \CODE{.get}:
+
+$ e ::= e.\mathit{get}\;|\;e.\mathit{set(e)} $
+\begin{align*}
+\inference*[SharedGet]{e |- \mathit{shared{<}t{>}}} {\quad e.\mathit{get} |- t \quad}
+\qquad
+\inference*[SharedSet]{e |- \mathit{shared{<}t{>}} \quad e' |- t' \quad t' <: t} {\qquad\quad e.\mathit{set}(e') |- \mathit{void} \quad\qquad} 
+\end{align*}
+
+The syntax \texttt{stmts} of statements in mbeddr is extended by the synchronization statement:
+
+$ \mathit{stmt} ::= ...
+        |\;\mathit{sync}(res, ..., res) \{\;\mathit{stmt} ... \mathit{stmt}\;\}$
+        
+where \texttt{res} denotes the syntax of possible synchronization references. Each synchronization reference wraps a reference to a shared ressource:
+
+$ res ::= e\;|\;e\;\mathit{as}\;[\mathit{resName}] $
+
+Thus a shared ressource can be synchronized as is or be named. The latter allows the programmer to refer to the result of an arbitrary complex expression which evaluates to a shared ressource inside the \CODE{sync} statement:
+
+$ e ::= ...|\;[\mathit{resName}]$
+
+The type of such a reference is given by the corresponding named synchronization reference under the condition that \CODE{[resName]} is a descendant of the statement list in the abstract syntax tree (AST) of the code. Thus, the scope of a named synchronization ressource is restricted to the synchronization statement list. 
+
+In contrast to Java's synchronization blocks (TODO: google reference) the synchronization of tasks is not computation oriented but data oriented. The crucial difference is that a synchronized block \CODE{A} in Java is only protected against simultaneous executions by multiple threads. Thus, it is valid to access the data that is involved in \CODE{A} by some other computation whose protecting block (if any) is completely unrelated to A. Since low-level data races can obviously not be safely excluded with this scheme ParallelMbeddr ties the protection to the data that shall be shared. Every shared ressource is therefore protected seperately but application-wide. Concluding, consider two synchronization blocks which are about to be executed in parallel. If they contain synchronization references which overlap in terms of their referenced shared ressources their executions will be serialized:
+
+\Bastian{Maybe make diagram}
+\begin{ccode}
+shared<int32> value;
+shared<int32>* valuePointer = &value;
+shared<double> other;
+
+// simultaneous executions 
+sync(value) { value.set(0) }        sync(other, value) { value.set(0) }
+\end{ccode}
+==>
+\begin{ccode}
+// serialized executions, not necessarily in this order
+sync(value) { value.set(0) }
+sync(other, value) { value.set(0) }
+\end{ccode}
+
+The possibility to refer to multiple shared ressources in the synchronization list of a synchronization statement is not mere syntactic sugar for nested synchronization statements. Instead the semantics of a synchronization list is that all referenced shared ressources are synchronized over at once, but with a possible time delay. Hence, deadlocks by competing synchronization statements are avoided.
+
+As a result of the fact that generally access to shared ressources is ressource-centric, a value---wrapped in a shared ressource---which contains nested shared ressources is indepedently protected from the latter. Therefore a shared ressource of a struct with a shared member \CODE{b} is indepently synchronized from \CODE{b}:
+
+\Bastian{Maybe make diagram}
+\begin{ccode}
+struct A {
+  int32 a;
+  shared<int32> b; 
+}
+shared<A> sharedA;
+shared<int32>* b;
+sync(sharedA) { b = &(sharedA.get.b); }
+// simultaneous executions which will not affect one another
+sync(sharedA) { sharedA.get.a = 0; }   sync(b) { b->set(1); }
+\end{ccode}
+
+%. In this sense the synchronization itself is non-blocking which means that they will try to acquire the locks that are necessary in order to synchronize the access to the stated ressources. If this does not work they release all 
+
+\subsection{Implementation}
+In order to fully understand the translation of synchronization statements the translation of shared types is given first. For the implementation of shared types in C two main solutions are conceivable which differ in the coupling that they exhibit between the data that is to be shared and the additional data required for access restriction, i.e. synchronization. Nevertheless any solution must make use of additional data that can be used to synchronize two threads which try to read or write the shared data. To this end the most basic synchronization primitive, the mutex was chosen. Each protected data item is assigned to a mutex 
+
+In the first approach the data to be shared is stored as if no protection scheme existed, at all. A

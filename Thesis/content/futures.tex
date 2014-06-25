@@ -1,8 +1,8 @@
 \section{Futures}
-Whenever a task \CODE{t} is run, as will be shown, a \textit{future} is generated. Futures in ParallelMbeddr are based on Halstead's definition of a future\cite{Halstead_Multilisp}. A future is a handle to a running task that can be used to retrieve the result of this task from within some other task \CODE{u}. As soon as this happens the formerly in parallel running task u joins t which means that it waits for t to finish in order to get its result value. The asynchronous execution is, thus, synchronized.
+Whenever a task \CODE{t} is run, as will be shown, a \textit{future} is generated. Futures in ParallelMbeddr are based on Halstead's definition of a future\cite{Halstead_Multilisp}. A future is a handle to a running task that can be used to retrieve the result of this task from within some other task \CODE{u}. As soon as this happens the formerly in parallel running task \CODE{u} joins \CODE{t} which means that it waits for \CODE{t} to finish execution in order to get its result value. The asynchronous execution is, thus, synchronized.
 
 \subsection{Design}
-The syntax of expressions in mbeddr is extended by\footnote{If the expression e has a pointer type the dots (\CODE{.}) are replaced by arrows (\CODE{->}).}:
+The syntax \texttt{e} of expressions in mbeddr is extended by\footnote{If the expression e has a pointer type the dots (\CODE{.}) are replaced by arrows (\CODE{->}).}:
 
 $ e ::= ...|\;e.\mathit{run}\;|\;e.\mathit{result}\;|\;e.\mathit{join} $
 
@@ -10,7 +10,8 @@ As with tasks the type of a future parameterized by its return type:
 
 $ t ::= ...|\;\mathit{Future{<}t{>}}$
 
-\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a future {e} and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. For efficiency reasons (see translation (TODO: ref)) it is not possible to \CODE{join} a future that returns a result. These properties are reflected in the typing rules:
+\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a future \CODE{e} and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. %For efficiency reasons (see translation (TODO: ref)) it is not possible to \CODE{join} a future that returns a result. 
+These properties are reflected in the typing rules:
 
 \begin{center}
 \begin{align*}
@@ -22,6 +23,7 @@ $ t ::= ...|\;\mathit{Future{<}t{>}}$
 \end{align*}
 \end{center}
 
+As will be shown in the next section a 
 \CODE{result} returns a pointer to a heap-managed value. Hence the programmer has to take of freeing the value eventually.
 
 \subsection{Translation}
@@ -62,7 +64,7 @@ exported void joinVoidFuture(VoidFuture* future) {
   } if 
 } joinVoidFuture (function)
 \end{ccode}
-Both aforementioned generated functions take their future parameters by address. This is necessary to make the setting of the future data work. Otherwise only copies of the proivded future arguments would be filled with data which would clearly not be intended by the programmer. This necessity in turn does not assort well with chained future expressions like:
+Both aforementioned generated functions take their future parameters by address. This is necessary to make the setting of the future data work. Otherwise only copies of the provided future arguments would be filled with data which would clearly not be intended by the programmer. This necessity in turn does not assort well with chained future expressions like:
 
 \begin{ccode}
 Task<int32*> task = |(int32)23|;
@@ -75,7 +77,7 @@ In this sample code the result of the future is requested before without being s
 int32* result23 = (&(task.run)).result;
 \end{ccode}
 
-This on the other hand is not allowed because \CODE{task.run} is no lvalue\cite[pp.~147-148]{CPrimerPlus} which disallows the utilization of the address operator. In order to allow for the unmodified code two wrapper functions, one for each \CODE{join} and \CODE{result}, are provided. These functions each take a future by argument, thus binding it to an adressable location, and call above corresponding functions in turn:
+This on the other hand is not allowed because \CODE{task.run} is no lvalue\cite[pp.~147-148]{CPrimerPlus} which disallows the utilization of the address operator. In order to allow for such chainings the unmodified code two wrapper functions, one for each \CODE{join} and \CODE{result}, are provided. These functions each take a future by argument, thus binding it to an adressable location, and call above corresponding functions in turn:
 \begin{ccode}
 exported void* saveFutureAndGetResult(Future future) { 
   return getFutureResult(&future); 
