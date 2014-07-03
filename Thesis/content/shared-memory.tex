@@ -152,9 +152,11 @@ The statements are kept inside their statement list block in order to keep the s
 \item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{s};
 \item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{s};
 \item \textit{c} is a \textit{continue} statement and refers to a loop whose AST contains \textit{s}.
+\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of \textit{s}.
 \end{itemize}
+In this manner inconsistent synchronization states of shared ressources due to the aforementioned statements are omitted. 
 
-For each arity of synchronization ressources seperate versions of the \CODE{start}- and \CODE{stopSyncForNMutexes} functions are declared inside a generic C module. The latter kinds straightforwardly redirect their mutex parameters to calls of the \CODE{pthread\_mutex\_unlock} function:
+For each arity of synchronization ressources seperate versions of the \CODE{start}- and \CODE{stopSyncForNMutexes()} functions are declared inside a generic C module. A \CODE{stopSyncForNMutexes()} function straightforwardly redirects its mutex parameters to calls of the \CODE{pthread\_mutex\_unlock} function:
 \begin{ccode}
 // the corresponding function for exactly one mutex is skipped, here
 void stopSyncForNMutexes(pthread_mutex_t* mutex_1, ..., pthread_mutex_t* mutex_n) { 
@@ -169,6 +171,7 @@ void stopSyncForNMutexes(pthread_mutex_t* mutex_1, ..., pthread_mutex_t* mutex_n
 %https://wiki.cc.gatech.edu/multicore/index.php/Contention_Management#cite_note-adv-1
 Abstracted over the details of the actual implementation, synchronization statements synchronize their ressources atomically as was mentioned in the preceding design section. Since one or mor mutexes can be tentatively locked by multiple threads simultaneously specific contention management has to be taken care of. The illusion of atomic synchronization is realized by an implementation of the obstruction-free busy-wait protocol \textit{Polite}.In order to resolve conflicts Polite uses exponential backoff. The according backoff function is explained further down. The synchronization function tries to lock every mutex as given by its arguments. On failure it releases every mutex that was locked so far, uses the backoff function to delay its execution for a randomized amount of time and repeats afterwards. This scheme enables competing threads to proceed.
 \begin{ccode}
+// again, the equivalent function declaration for 1 mutex is skipped
 exported void startSyncForNMutexes(pthread_mutex_t* mutex_0, ..., pthread_mutex_t* mutex_n) { 
   uint8 waitingCounter = 4; 
   uint16 mask = 0; 
@@ -212,5 +215,3 @@ void randomWithXorShift(uint32* seed) {
 }
 \end{ccode}
 The generator was chosen for its high performance, low memory consumption and thread safety due to the utilization of the stack-managed seed parameter as opposed to the global state usage of the standard C random generator \CODE{rand()}.
-
-\TODO{sync => start/stop Mutex (start zu Beginn, stop am Ende und evtl. vor Kontrollfluss brechenden statements)}
