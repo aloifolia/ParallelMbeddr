@@ -147,7 +147,7 @@ stopSyncForNMutexes(&e_1.mutex, ..., &e_n.mutex);
 \end{minipage}
 \end{center}
 
-The statements are kept inside their statement list block in order to keep the scope of local variables inside synchronization statements. The block is reduced to another block where control flow breaking statements may be preceded by a similar call of the \CODE{stopSyncForNMutexes()} function under certain conditions. Let \textit{s} be a synchronization statement and \textit{c} be a control flow breaking statement which is nested on some level in the AST of \textit{s}' statement list. Then \textit{c} is preceded with a call to \CODE{stopSyncForNMutexes()} if one of the following cases hold:
+The statements are kept inside their statement list block in order to keep the scope of local variables inside synchronization statements. The block is reduced to another block where breaking statements that break the program flow structure may be preceded by a similar call of the \CODE{stopSyncForNMutexes()} function under certain conditions. Let \textit{s} be a synchronization statement and \textit{c} be a control flow breaking statement which is nested on some level in the AST of \textit{s}' statement list. Then \textit{c} is preceded with a call to \CODE{stopSyncForNMutexes()} if one of the following cases hold:
 \begin{itemize}
 \item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{s};
 \item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{s};
@@ -173,8 +173,8 @@ Abstracted over the details of the actual implementation, synchronization statem
 \begin{ccode}
 // again, the equivalent function declaration for 1 mutex is skipped
 exported void startSyncForNMutexes(pthread_mutex_t* mutex_0, ..., pthread_mutex_t* mutex_n) { 
-  uint8 waitingCounter = 4; 
-  uint16 mask = 0; 
+  uint8 waitingCounter = 0; 
+  uint16 mask = 16; 
   uint32 seed = (uint32)(uintptr_t) &waitingCounter; 
   while (true) { 
     if ([| pthread_mutex_trylock (mutex_0) |] != 0) { 
@@ -195,14 +195,14 @@ exported void startSyncForNMutexes(pthread_mutex_t* mutex_0, ..., pthread_mutex_
 }
 \end{ccode}
 
-The backoff realized by Polite randomizedly delays the execution  by less than \textit{limit} $ = 2^{n+k}$ ns\cite{AdvancedContentionManagement}. \textit{n} denotes the retry counter and \textit{k} denotes some constant offset which can be machine-tuned. When \textit{n} reaches a specific threshold \textit{m} it is reset to 0. The randomized wait time of the exponential backoff is used to avoid livelocks which could happen if two threads would repeatedly compete for the same ressources and delay their execution for equal amounts of time. In the current implementation \CODE{backoffExponentially()} the offset \textit{k} is set to 4 and the threshold \textit{m} is set to 17. Thus, maximum delays of about 100 ms (specifically 131 ms) are allowed\footnote{The search for machine- or application-specific optimal offsets and thresholds is a task for future enhancements of ParallelMbeddr.}. Note that \CODE{backoffExponentially()} keeps its main state inside the \CODE{startSyncForNMutexes()} function which will therefore be re-initialized before the execution of every synchronization block:
+The backoff realized by Polite randomizedly delays the execution  by less than \textit{limit} $ = 2^{n+k}$ ns\cite{AdvancedContentionManagement}. \textit{n} denotes the retry counter and \textit{k} denotes some constant offset which can be machine-tuned. When \textit{n} reaches a specific threshold \textit{m} it is reset to 0. The randomized wait time of the exponential backoff is used to avoid livelocks which could happen if two threads would repeatedly compete for the same ressources and delay their execution for equal amounts of time. In the current implementation \CODE{backoffExponentially()} the offset \textit{k} is set to 4 and the threshold \textit{m} is set to 17\footnote{\textit{k}'s value is reflected in the initial value ($2^4 = 16$) of \CODE{mask} whereas \textit{m}'s value is composed of mask's base and the divisor (13) in the calculation of the next \CODE{waitingCounter}.}. Thus, maximum delays of about 100 ms (specifically 131 ms) are allowed\footnote{The search for machine- or application-specific optimal offsets and thresholds is a task for future enhancements of ParallelMbeddr.}. Note that \CODE{backoffExponentially()} keeps its main state inside the \CODE{startSyncForNMutexes()} function which will therefore be re-initialized before the execution of every synchronization block:
 \begin{ccode}
 inline void backoffExponentially(uint8* waitingCounter, uint16* mask, uint32* seed) { 
   *mask |= 1 << *waitingCounter; 
   randomWithXorShift(seed); 
   struct timespec sleepingTime = (struct timespec){ .tv_nsec = *seed & *mask }; 
   nanosleep(&sleepingTime, null); 
-  *waitingCounter = (*waitingCounter + 1) % 17 || 4; 
+  *waitingCounter = (*waitingCounter + 1) % 13; 
 }
 \end{ccode}
 

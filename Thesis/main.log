@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  3 JUL 2014 18:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  3 JUL 2014 19:00
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1449,11 +1449,11 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 15326 strings out of 493921
- 234251 string characters out of 3144870
+ 15333 strings out of 493921
+ 234317 string characters out of 3144870
  391487 words of memory out of 3000000
- 17870 multiletter control sequences out of 15000+200000
- 194047 words of font info for 159 fonts, out of 3000000 for 9000
+ 17871 multiletter control sequences out of 15000+200000
+ 198580 words of font info for 165 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,15n,95p,2033b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
@@ -1471,9 +1471,9 @@ n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
 athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
 fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (21 pages, 288433 bytes).
+Output written on main.pdf (21 pages, 289624 bytes).
 PDF statistics:
- 734 PDF objects out of 1000 (max. 8388607)
- 362 named destinations out of 1000 (max. 500000)
+ 736 PDF objects out of 1000 (max. 8388607)
+ 363 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
