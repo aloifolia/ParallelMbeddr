@@ -24,7 +24,6 @@ struct queue_SharedTypes_0_Queue {
 };
 
 struct queue_SharedTypes_0_SharedOf_Queue_0 {
-  pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   struct queue_SharedTypes_0_Queue value;
 };

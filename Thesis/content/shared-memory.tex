@@ -24,13 +24,11 @@ The syntax \texttt{stmts} of statements in mbeddr is extended by the synchroniza
 $ \mathit{stmt} ::= ...
         |\;\mathit{sync}(res, ..., res) \{\;\mathit{stmt} ... \mathit{stmt}\;\}$
         
-where \texttt{res} denotes the syntax of possible synchronization references. Each synchronization reference wraps a reference to a shared ressource:
+where \texttt{res} denotes the syntax of possible synchronization references. Each synchronization reference \CODE{res} wraps a reference to a shared ressource. It can either be of type \CODE{shared<t>} or of type \CODE{shared<t>*}. A shared ressource can be synchronized as is or be named\footnote{text}:
 
 $ res ::= e\;|\;e\;\mathit{as}\;[\mathit{resName}] $
 
-Thus a shared ressource can be synchronized as is or be named. The latter allows the programmer to refer to the result of an arbitrary complex expression which evaluates to a shared ressource inside the \CODE{sync} statement:
-
-$ e ::= ...|\;[\mathit{resName}]$
+The latter allows the programmer to refer to the result of an arbitrary complex expression which evaluates to a shared ressource inside the \CODE{sync} statement. Hence, a named ressource can be seen as syntactic sugar for a local variable declaration of a specific type. The scope of a named ressource is restricted to the synchronization statement; it can be referenced from anywhere inside the abstract syntax tree (AST) of the synchronization sa
 
 The type of such a reference is given by the corresponding named synchronization reference under the condition that \CODE{[resName]} is a descendant of the statement list in the abstract syntax tree (AST) of the code. Thus, the scope of a named synchronization ressource is restricted to the synchronization statement list. 
 
@@ -72,6 +70,147 @@ sync(sharedA) { sharedA.get.a = 0; }   sync(b) { b->set(1); }
 %. In this sense the synchronization itself is non-blocking which means that they will try to acquire the locks that are necessary in order to synchronize the access to the stated ressources. If this does not work they release all 
 
 \subsection{Implementation}
-In order to fully understand the translation of synchronization statements the translation of shared types is given first. For the implementation of shared types in C two main solutions are conceivable which differ in the coupling that they exhibit between the data that is to be shared and the additional data required for access restriction, i.e. synchronization. Nevertheless any solution must make use of additional data that can be used to synchronize two threads which try to read or write the shared data. To this end the most basic synchronization primitive, the mutex was chosen. Each protected data item is assigned to a mutex 
+In order to fully understand the translation of synchronization statements the translation of shared types is given first. For the implementation of shared types in C two main solutions are conceivable which differ in the coupling that they exhibit between the data that is to be shared and the additional data required for access restriction, i.e. synchronization. Nevertheless any solution must make use of additional data that can be used to synchronize two threads which try to read or write the shared data. To this end the most basic synchronization primitive, the mutex was chosen: each protected data item is assigned exactly one. 
 
-In the first approach the data to be shared is stored as if no protection scheme existed, at all. A
+In the first solution the data to be shared is stored as if no protection scheme existed, at all. Additionally all mutexes that are created by the application are stored in one global map which indexes each mutex by the memory address of its corresponding shared datum. This approach offers the advantage that access to the data itself is not influenced by the mutex protection: Every reference to the value of a shared ressource \CODE{e.get} can directly be translated into a reference to the wrapped value. Additionally, since the mutexes are globally managed all data that is returned by a library can be made (pseudo-) synchronization safe: E.g. if a pointer to an arbitrary memory location \texttt{loc} is returned the pointed-to address can be used to create a new mutex and add a mapping to the global mutex map. However, this on-the-fly protection of memory locations can incur synchronization leaks: The compiler cannot guarantee that addresses returning functions with unknown implementation will not leak their return values to some other computation which accesses the according memory unsynchronized. This implies that such protection would only be safe if any reference to \texttt{loc} was wrapped in some shared ressource which in this scenario is not feasible. Hence, the design was chosen to not allow for such protection and consequently a global map would not be beneficial in this regard. A map solution would entail a space-time tradeoff. For illustrative purposes consider Google's C++ \textit{dense\_hash\_map} \footnote{http://goog-sparsehash.sourceforge.net/doc/dense\_hash\_map.html} provides comparatively fast access to its members but imposes additional memory requirements to slower hashmap implementations\footnote{http://incise.org/hash-table-benchmarks.html}. 
+
+The second solution for the implementation of shared types keeps each shareable datum and its mutex together: An instance of a struct with member fields for both components is used in place of the bare datum to be shared. In contrast to the aforementioned solution a reference to the value \CODE{e.get} needs one level of indirection via the struct instance. On the contrary the access of a mutex is simplified. As with the value it can be retrieved by a member access to the corresponding struct field whereas the map solution requires a map lookup to get the mutex (plus additional delay to make any access to the map thread-safe). The computational overhead imposed by a member lookup is deemed negligible in the overall application performance. The space required for the struct equals that of the individual fields plus additional padding\cite[pp.~303 ff.]{LinuxSystemProgramming}. The latter depends on the size of the data to be stored. In order to keep the the padding small small smart member ordering should be applied. 
+
+For this work the struct solution was chosen in order to keep the computational complexity of mutex lookups small (and deterministic -> TODO: ref) while not imposing too much space overhead and datum lookup overhead. For each kind of shared type \CODE{shared<t>} with the translated basetype \CODE{t'} a separate struct is generated:
+\begin{ccode}
+struct SharedOf_t {
+  pthread_mutex_t mutex;
+  t' value;
+}
+\end{ccode}
+Any nested shared types are, hence, translated first. For implementation reasons nested \textit{typedef}s and constants used in array types are also resolved in this process\footnote{Although the resolution of typedefs and constants impede corresponding changes made by the programmer in the translated C code this is not deemed an issue since generally changes should always be made from within mbeddr, i.e. on the original code.}. If the base type of the shared type is a generic C type the struct declaration is safed in a generic module. Otherwise it is stored in a module that is specifically created for the module that declares the base type in order to reduce the legibitily mitigations of the generated modules. In order to be visible in the generated module the base type declaration is lifted into this module. Should the seperation of modules prove useless it could be easily removed in the future.
+A local variable declaration \CODE{shared<t> v;} is then reduced to:
+\begin{ccode}
+SharedOf_t v;
+\end{ccode}
+Prior to any usage of a mutex it must be initialized first. This is done implicitly in order to free the programmer from this task. 
+\TODO{Code aendern: deletion reparieren}
+\TODO{Code aendern: pro Typ eine Init-Funktion, nicht wie bisher pro Variable. Letzteres zusaetzlich für Arrays von SharedTypes}
+\TODO{beschreiben...}
+\TODO{deletion aehnlich}
+\TODO{Prüfen, ob mutex-init-Reihenfolge richtig ist}
+ParallelMbeddr does not prevent the programmer from structuring the synchronization statements in such a way that a task will synchronize a shared variable multiple times (\textit{recursive synchronization}). The following code depicts such behavior:
+\begin{ccode}
+shared<int32> sharedValue;
+sync(sharedValue) {
+  sync(sharedValue) {
+    sharedValue.set(42);
+  }
+}
+\end{ccode}
+Since each synchronization statement locks the mutexes of the refered shared ressources (see below for details) a recursive synchronization results in a \textit{recursive lock} of the corresponding mutex. Mutexes as defined by the POSIX standard must be specifically initialized in order to allow for this behavior\footnote{By default a recursive lock results in undefined behaviour because a default mutex does not have a lock count which is required to make recursive locks work: http://linux.die.net/man/3/pthread\_mutex\_trylock}: A mutex attribute that specifies the recursiveness must be defined and initialized first. It can then be used by arbitrarily many mutexes. 
+For this purpose an application-wide attribute is defined in a generic module that is imported by all user-defined modules. It is initialized at the beginning of the main function:
+\begin{ccode}
+// inside the generic module:
+extern pthread_mutexattr_t mutexAttribute
+// at the beginning of main:
+pthread_mutexattr_settype(&mutexAttribute, PTHREAD_MUTEX_RECURSIVE);
+pthread_mutexattr_init(&mutexAttribute_0);
+\end{ccode}
+Every synchronization statement is reduced to its statement list---as a block---surrounded with calls to functions that control the synchronization of the mutexes. The reduction becomes:
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+sync(e) stmt_list
+\end{ccode}
+\end{minipage}
+\qquad==>\qquad
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+startSyncFor1Mutex(&e.mutex);
+stmt_list'
+stopSyncFor1Mutex(&e.mutex);
+\end{ccode}
+\end{minipage}
+\end{center}
+
+
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+sync(e_1, ..., e_n) stmt_list
+\end{ccode}
+\end{minipage}
+\qquad==>\qquad
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+startSyncForNMutexes(&e_1.mutex, ..., &e_n.mutex);
+stmt_list'
+stopSyncForNMutexes(&e_1.mutex, ..., &e_n.mutex);
+\end{ccode}
+\end{minipage}
+\end{center}
+
+The statements are kept inside their statement list block in order to keep the scope of local variables inside synchronization statements. The block is reduced to another block where control flow breaking statements may be preceded by a similar call of the \CODE{stopSyncForNMutexes()} function under certain conditions. Let \textit{s} be a synchronization statement and \textit{c} be a control flow breaking statement which is nested on some level in the AST of \textit{s}' statement list. Then \textit{c} is preceded with a call to \CODE{stopSyncForNMutexes()} if one of the following cases hold:
+\begin{itemize}
+\item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{s};
+\item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{s};
+\item \textit{c} is a \textit{continue} statement and refers to a loop whose AST contains \textit{s}.
+\end{itemize}
+
+For each arity of synchronization ressources seperate versions of the \CODE{start}- and \CODE{stopSyncForNMutexes} functions are declared inside a generic C module. The latter kinds straightforwardly redirect their mutex parameters to calls of the \CODE{pthread\_mutex\_unlock} function:
+\begin{ccode}
+// the corresponding function for exactly one mutex is skipped, here
+void stopSyncForNMutexes(pthread_mutex_t* mutex_1, ..., pthread_mutex_t* mutex_n) { 
+  pthread_mutex_unlock (mutex_1);
+  ...
+  pthread_mutex_unlock (mutex_n); 
+}
+\end{ccode}
+
+\TODO{erklaere livelock, wait-lock-(!)obstruction free und busy-wait protocol in basics}
+%https://www.cs.rochester.edu/u/scott/papers/2005_PODC_CM.pdf
+%https://wiki.cc.gatech.edu/multicore/index.php/Contention_Management#cite_note-adv-1
+Abstracted over the details of the actual implementation, synchronization statements synchronize their ressources atomically as was mentioned in the preceding design section. Since one or mor mutexes can be tentatively locked by multiple threads simultaneously specific contention management has to be taken care of. The illusion of atomic synchronization is realized by an implementation of the obstruction-free busy-wait protocol \textit{Polite}.In order to resolve conflicts Polite uses exponential backoff. The according backoff function is explained further down. The synchronization function tries to lock every mutex as given by its arguments. On failure it releases every mutex that was locked so far, uses the backoff function to delay its execution for a randomized amount of time and repeats afterwards. This scheme enables competing threads to proceed.
+\begin{ccode}
+exported void startSyncForNMutexes(pthread_mutex_t* mutex_0, ..., pthread_mutex_t* mutex_n) { 
+  uint8 waitingCounter = 4; 
+  uint16 mask = 0; 
+  uint32 seed = (uint32)(uintptr_t) &waitingCounter; 
+  while (true) { 
+    if ([| pthread_mutex_trylock (mutex_0) |] != 0) { 
+      backoffExponentially(&waitingCounter, &mask, &seed); 
+    } else if ([| pthread_mutex_trylock (mutex_1) |] != 0) { 
+      [| pthread_mutex_unlock (mutex_0) |]; 
+      backoffExponentially(&waitingCounter, &mask, &seed); 
+    } ...
+    } else if ([| pthread_mutex_trylock (mutex_n) |] != 0) { 
+      [| pthread_mutex_unlock (mutex_n-1) |];
+      ...
+      [| pthread_mutex_unlock (mutex_0) |]; 
+      backoffExponentially(&waitingCounter, &mask, &seed); 
+    } else { 
+      break; 
+    } 
+  }
+}
+\end{ccode}
+
+The backoff realized by Polite randomizedly delays the execution  by less than \textit{limit} $ = 2^{n+k}$ ns\cite{AdvancedContentionManagement}. \textit{n} denotes the retry counter and \textit{k} denotes some constant offset which can be machine-tuned. When \textit{n} reaches a specific threshold \textit{m} it is reset to 0. The randomized wait time of the exponential backoff is used to avoid livelocks which could happen if two threads would repeatedly compete for the same ressources and delay their execution for equal amounts of time. In the current implementation \CODE{backoffExponentially()} the offset \textit{k} is set to 4 and the threshold \textit{m} is set to 17. Thus, maximum delays of about 100 ms (specifically 131 ms) are allowed\footnote{The search for machine- or application-specific optimal offsets and thresholds is a task for future enhancements of ParallelMbeddr.}. Note that \CODE{backoffExponentially()} keeps its main state inside the \CODE{startSyncForNMutexes()} function which will therefore be re-initialized before the execution of every synchronization block:
+\begin{ccode}
+inline void backoffExponentially(uint8* waitingCounter, uint16* mask, uint32* seed) { 
+  *mask |= 1 << *waitingCounter; 
+  randomWithXorShift(seed); 
+  struct timespec sleepingTime = (struct timespec){ .tv_nsec = *seed & *mask }; 
+  nanosleep(&sleepingTime, null); 
+  *waitingCounter = (*waitingCounter + 1) % 17 || 4; 
+}
+\end{ccode}
+
+The generation of the pseudo-randomized delay is realized via utilization of the Marsaglia's Xorshift random number generator\cite{XorshiftRngs}:
+\begin{ccode}
+void randomWithXorShift(uint32* seed) { 
+  *seed ^= *seed << 13; 
+  *seed ^= *seed >> 17; 
+  *seed ^= *seed << 5; 
+}
+\end{ccode}
+The generator was chosen for its high performance, low memory consumption and thread safety due to the utilization of the stack-managed seed parameter as opposed to the global state usage of the standard C random generator \CODE{rand()}.
+
+\TODO{sync => start/stop Mutex (start zu Beginn, stop am Ende und evtl. vor Kontrollfluss brechenden statements)}

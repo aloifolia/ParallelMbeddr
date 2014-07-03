@@ -2,44 +2,90 @@
 
 
 
-static inline void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter,uint16_t* mask);
+static void GenericSyncDeclarations_randomWithXorShift(uint32_t* seed);
 
-static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter, uint16_t* mask) 
+static inline void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter,uint16_t* mask,uint32_t* seed);
+
+static void GenericSyncDeclarations_randomWithXorShift(uint32_t* seed) 
 {
-  if ( *waitingCounter == 0 ) 
-  {
-    ++*waitingCounter;
-    return ;
-  }
+  *seed ^= *seed << 13;
+  *seed ^= *seed >> 17;
+  *seed ^= *seed << 5;
+}
 
+
+static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter, uint16_t* mask, uint32_t* seed) 
+{
   *mask |= 1 << *waitingCounter;
-  struct timespec sleepingTime = (struct timespec){ .tv_nsec = clock() &*mask};
+  GenericSyncDeclarations_randomWithXorShift(seed);
+  struct timespec sleepingTime = (struct timespec){ .tv_nsec = *seed & *mask};
   nanosleep(&sleepingTime,0);
-  *waitingCounter = (*waitingCounter + 1) % 17;
+  *waitingCounter = (*waitingCounter + 1) % 17 || 4;
 }
 
 
 void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0) 
 {
-  uint8_t waitingCounter = 0;
+  uint8_t waitingCounter = 4;
   uint16_t mask = 0;
+  uint32_t seed = ((uint32_t)(((uintptr_t)(&waitingCounter))));
   while (1)
   {
-    GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask);
     if ( pthread_mutex_trylock(mutex_0) != 0 ) 
     {
-      continue;
+      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
+    }
+    else 
+    {
+      break;
     }
 
-    break;
   }
 
 }
 
 
-void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_1) 
+void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2) 
+{
+  uint8_t waitingCounter = 4;
+  uint16_t mask = 0;
+  uint32_t seed = ((uint32_t)(((uintptr_t)(&waitingCounter))));
+  while (1)
+  {
+    if ( pthread_mutex_trylock(mutex_0) != 0 ) 
+    {
+      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
+    }
+ else if (pthread_mutex_trylock(mutex_1) != 0) {
+      pthread_mutex_unlock(mutex_0);
+      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
+    }
+ else if (pthread_mutex_trylock(mutex_2) != 0) {
+      pthread_mutex_unlock(mutex_1);
+      pthread_mutex_unlock(mutex_0);
+      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
+    }
+    else 
+    {
+      break;
+    }
+
+  }
+
+}
+
+
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  pthread_mutex_unlock(mutex_0);
+}
+
+
+void GenericSyncDeclarations_stopSyncFor3Mutexes(pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2, pthread_mutex_t* mutex_3) 
 {
   pthread_mutex_unlock(mutex_1);
+  pthread_mutex_unlock(mutex_2);
+  pthread_mutex_unlock(mutex_3);
 }
 
 

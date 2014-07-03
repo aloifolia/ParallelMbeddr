@@ -22,7 +22,7 @@ int32_t main(int32_t argc, char* argv[])
   return 0;
 }
 
-__attribute__((noinline, noclone))
+
 static void pi_calcPiBlock(double* result, int32_t start, int32_t end) 
 {
   double piItem;
@@ -34,7 +34,7 @@ static void pi_calcPiBlock(double* result, int32_t start, int32_t end)
 
 }
 
-__attribute__((noinline, noclone))
+
 static void pi_calcPiItem(double* piItem, int32_t index) 
 {
   *piItem = 4.0 * (pow(-1.0,index) / (2.0 * index + 1.0));

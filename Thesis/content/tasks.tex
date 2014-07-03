@@ -1,5 +1,5 @@
 \section{Tasks}
-The basic parallelization element is a \textit{task}. It denotes a parallel unit of execution and, as the name suggests, aims at task parallelism. As the implementation of the underlying parallelization technique might change in the future it is reasonable to abstract the terminology from it. The most basic task which always exists executes the code of the entry function of the program.
+The basic parallelization element is a \textit{task}. It denotes a parallel unit of execution and, as the name suggests, aims at task parallelism. As the implementation of the underlying parallelization technique might change in the future it is reasonable to abstract the terminology from it. The most basic task which always exists executes the code of the entry function of the program. A task can also be regarded as a closure of the expression that shall be run in parallel. The reader should distinguish this `execution template' from the actual running instance of a task. The latter will further on be addressed as a \textit{running task}.
 \subsection{Design}
 The syntax \texttt{e} of expressions in mbeddr is extended by
 
@@ -24,7 +24,7 @@ $e ::= ...|\;e.\mathit{clear}$
 \inference*[VoidTask]{|e| |- \mathit{Task{<}void{>}}}{\qquad\mathit{void}\qquad} 
 \end{align*}
 
-If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by clearing the task by that it was created.
+If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data, the reference environment of its free variables, with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by clearing the task by that it was created. 
 
 \subsection{Translation}
 The pthreads library was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code as opposed to frameworks like OpenMP (TODO: reference). Every task in ParalllelMbeddr is represented by a thread as provided by the POSIX threads standard. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
@@ -78,11 +78,12 @@ void* parFun_X(void* voidArgs) {
 
 Again, any argument-related code is generated as needed.
 
-The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99}:
+The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99}. As the void pointer of the arguments does not keep their type information and therefore their size an additional field argsSize is needed in order to be able to create copies of the arguments later on(TODO forwared ref).
 \begin{ccode}
 exported struct Task {
   void* args;
   (void*) => (void*) fun;
+  size_t argsSize;
 }
 \end{ccode}
 
@@ -96,7 +97,7 @@ With these components in mind the actual translation of a task expression \CODE{
   args_X->v_1 = v_1;
   ...
   args_X->v_n = v_n;
-  yield (Task){args_X, parFun_X};
+  yield (Task){ args_X, parFun_X, sizeof(Args_X) };
 }
 \end{ccode}
 \end{minipage}
@@ -114,7 +115,7 @@ inline Args_X taskInit(t_1 v_1, ..., t_n v_n) {
   args_X - >v_1 = v_1;
   ...
   args_X->v_n = v_n;
-  return (Task){ args_X, parFun_X };
+  return (Task){ args_X, parFun_X, sizeof(Args_X) };
 }
 \end{ccode}
 \end{minipage}
@@ -124,10 +125,10 @@ The expression of the \CODE{yield} statement is a compound literal which on eval
 Without any references to bind a task is just reduced to the compound literal:
 
 \begin{ccode}
-(Task_X){ null, parFun_X }
+(Task_X){ null, parFun_X, 0 }
 \end{ccode}
 
-By above definitions of \CODE{parFun\_X} and the reduction of a task it becomes clear that the input and output (I/O) of a task is routed via the heap instead of the stack. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments have to be deleted by the programmer by hand. Since the result is returned via a pointer onto the heap it becomes obvious that the return type of a task must either be a void type or a pointer type. Concerning task arguments one advantage of this implementation is that a task may be passed by value without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
+By above definition of \CODE{parFun\_X} it becomes clear that the output of a task is routed via the heap instead of the stack. Additionally the arguments of a task---its environment---are stored on the heap before execution. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments of a task have to be deleted by the programmer by hand. Since the result is returned via a pointer onto the heap it becomes obvious that the return type of a task must either be a void type or a pointer type. Concerning task arguments one advantage of this implementation is that a task may be passed by value, e.g. when using a builder function to create tasks, without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
 
 The clearance of a task \CODE{e.clear} in the generated code is a call of the \CODE{free} function of C parameterized with the arguments of the translated task \CODE{e'}:
 \begin{ccode}

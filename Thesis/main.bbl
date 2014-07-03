@@ -84,6 +84,17 @@ C.S. LLC, M.L. Mitchell, A.~Samuel, and J.~Oldham.
 \newblock {\em Advanced Linux Programming}.
 \newblock Pearson Education, 2001.
 
+\bibitem{LinuxSystemProgramming}
+R.~Love.
+\newblock {\em Linux System Programming: Talking Directly to the Kernel and C
+  Library}.
+\newblock O'Reilly Media, 2013.
+
+\bibitem{XorshiftRngs}
+George Marsaglia.
+\newblock Xorshift rngs.
+\newblock {\em Journal of Statistical Software}, 8(14):1--6, 2003.
+
 \bibitem{ThePolyadicPi-Calculus}
 Robin Milner.
 \newblock The polyadic pi-calculus: a tutorial.
@@ -109,6 +120,13 @@ J.~Protic, M.~Tomasevic, and V.~Milutinovi{\'c}.
 R.~Reese.
 \newblock {\em Understanding and Using C Pointers}.
 \newblock O'Reilly Media, 2013.
+
+\bibitem{AdvancedContentionManagement}
+William~N Scherer~III and Michael~L Scott.
+\newblock Advanced contention management for dynamic software transactional
+  memory.
+\newblock In {\em Proceedings of the twenty-fourth annual ACM symposium on
+  Principles of distributed computing}, pages 240--248. ACM, 2005.
 
 \bibitem{OfficialISC2Guide}
 C.~Steven~Hernandez.
