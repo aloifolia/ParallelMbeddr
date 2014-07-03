@@ -59,9 +59,9 @@ static inline void pi_init_result2_0(struct GenericSharedDeclarations_SharedOf_l
 
 static inline void pi_destroy_result2_0(struct GenericSharedDeclarations_SharedOf_long_double_0* result2);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0l0f(struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0l0f(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a02a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a02a5(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -87,7 +87,7 @@ int32_t main(int32_t argc, char* argv[])
   struct GenericTaskDeclarations_VoidFuture mappers[PI_MAPPERCOUNT];
   for ( int32_t i = 0; i < PI_MAPPERCOUNT; ++i )
   {
-    mapperTasks[i] = pi_taskInit_a0a0l0f(counterPointer, queuePointer);
+    mapperTasks[i] = pi_taskInit_a0a0l0f(queuePointer, counterPointer);
     mappers[i] = GenericTaskDeclarations_runTaskAndGetVoidFuture(mapperTasks[i]);
     free(mapperTasks[i].args);
   }
@@ -116,7 +116,7 @@ int32_t main(int32_t argc, char* argv[])
   GenericSyncDeclarations_stopSyncFor3Mutexes(&result.mutex, &result1.mutex, &result2.mutex);
   struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer = &result;
   
-  struct GenericTaskDeclarations_Task reducerTask = pi_taskInit_a02a5(queuePointer, resultPointer);
+  struct GenericTaskDeclarations_Task reducerTask = pi_taskInit_a02a5(resultPointer, queuePointer);
   struct GenericTaskDeclarations_Future reducer = GenericTaskDeclarations_runTaskAndGetFuture(reducerTask);
   free(reducerTask.args);
   
@@ -324,7 +324,7 @@ static  void pi_destroy_result2_0(struct GenericSharedDeclarations_SharedOf_long
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0l0f(struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0l0f(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer) 
 {
   struct pi_Args_a0a0l0f* args_a0a0l0f = malloc(sizeof(struct pi_Args_a0a0l0f));
   args_a0a0l0f->counterPointer = counterPointer;
@@ -333,7 +333,7 @@ static inline struct GenericTaskDeclarations_Task pi_taskInit_a0a0l0f(struct Gen
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a02a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a02a5(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
 {
   struct pi_Args_a02a5* args_a02a5 = malloc(sizeof(struct pi_Args_a02a5));
   args_a02a5->resultPointer = resultPointer;

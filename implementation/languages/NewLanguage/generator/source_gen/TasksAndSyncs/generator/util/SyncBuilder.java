@@ -667,7 +667,7 @@ public class SyncBuilder {
         final SNode node_483189195598847048 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
-            SPropertyOperations.set(res, "value", ("17"));
+            SPropertyOperations.set(res, "value", ("13"));
             return res;
           }
         }.invoke();
@@ -679,26 +679,11 @@ public class SyncBuilder {
             return res;
           }
         }.invoke();
-        final SNode node_5512582143325215833 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
-            SPropertyOperations.set(res, "value", ("4"));
-            return res;
-          }
-        }.invoke();
-        final SNode node_5512582143325211314 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.OrExpression", null);
-            SLinkOperations.setTarget(res, "left", node_5512582143325211598, true);
-            SLinkOperations.setTarget(res, "right", node_5512582143325215833, true);
-            return res;
-          }
-        }.invoke();
         final SNode node_483189195598838364 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.AssignmentExpr", null);
             SLinkOperations.setTarget(res, "left", node_483189195598838552, true);
-            SLinkOperations.setTarget(res, "right", node_5512582143325211314, true);
+            SLinkOperations.setTarget(res, "right", node_5512582143325211598, true);
             return res;
           }
         }.invoke();
@@ -757,7 +742,7 @@ public class SyncBuilder {
         final SNode node_483189195599795899 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
-            SPropertyOperations.set(res, "value", ("4"));
+            SPropertyOperations.set(res, "value", ("0"));
             return res;
           }
         }.invoke();
@@ -785,7 +770,7 @@ public class SyncBuilder {
         final SNode node_483189195599803482 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.NumberLiteral", null);
-            SPropertyOperations.set(res, "value", ("0"));
+            SPropertyOperations.set(res, "value", ("16"));
             return res;
           }
         }.invoke();

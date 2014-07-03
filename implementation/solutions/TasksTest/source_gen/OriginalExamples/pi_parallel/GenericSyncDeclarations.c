@@ -20,14 +20,14 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
   GenericSyncDeclarations_randomWithXorShift(seed);
   struct timespec sleepingTime = (struct timespec){ .tv_nsec = *seed & *mask};
   nanosleep(&sleepingTime,0);
-  *waitingCounter = (*waitingCounter + 1) % 17 || 4;
+  *waitingCounter = (*waitingCounter + 1) % 13;
 }
 
 
 void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0) 
 {
-  uint8_t waitingCounter = 4;
-  uint16_t mask = 0;
+  uint8_t waitingCounter = 0;
+  uint16_t mask = 16;
   uint32_t seed = ((uint32_t)(((uintptr_t)(&waitingCounter))));
   while (1)
   {
@@ -45,10 +45,16 @@ void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0)
 }
 
 
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  pthread_mutex_unlock(mutex_0);
+}
+
+
 void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2) 
 {
-  uint8_t waitingCounter = 4;
-  uint16_t mask = 0;
+  uint8_t waitingCounter = 0;
+  uint16_t mask = 16;
   uint32_t seed = ((uint32_t)(((uintptr_t)(&waitingCounter))));
   while (1)
   {
@@ -72,12 +78,6 @@ void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthr
 
   }
 
-}
-
-
-void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
-{
-  pthread_mutex_unlock(mutex_0);
 }
 
 

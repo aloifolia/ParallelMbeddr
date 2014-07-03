@@ -18,91 +18,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa722af2-26f2-49c2-8670-07eea910cd96" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$13.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$26.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$27.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$28.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$28.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$29.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$29.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.pdf" afterPath="$PROJECT_DIR$/../Thesis/main.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.synctex.gz" afterPath="$PROJECT_DIR$/../Thesis/main.synctex.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSharedDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSharedDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSyncDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericSyncDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/GenericTaskDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SharedBuilder.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SharedBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SyncBuilder.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SyncBuilder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/content/futures.tex" afterPath="$PROJECT_DIR$/../Thesis/content/futures.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi_parallel/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi_parallel/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/content/literature.bib" afterPath="$PROJECT_DIR$/../Thesis/content/literature.bib" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.aux" afterPath="$PROJECT_DIR$/../Thesis/main.aux" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.bbl" afterPath="$PROJECT_DIR$/../Thesis/main.bbl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.log" afterPath="$PROJECT_DIR$/../Thesis/main.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/main.toc" afterPath="$PROJECT_DIR$/../Thesis/main.toc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi/pi.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi/pi.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/pi.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/pi.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/pi_parallel.mps" afterPath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/pi_parallel.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/queue_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/queue_SharedTypes_0.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/content/shared-memory.tex" afterPath="$PROJECT_DIR$/../Thesis/content/shared-memory.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Thesis/content/tasks.tex" afterPath="$PROJECT_DIR$/../Thesis/content/tasks.tex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/pi_parallel/trace.info" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/pi_parallel/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/trace.info" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/pi_parallel/trace.info" />
@@ -144,7 +67,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pi" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="pi" pinned="false" current="false" current-in-tab="false">
         <entry file="mps://node://OriginalExamples/OriginalExamples.pi_parallel/pi">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -204,15 +127,15 @@
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SyncBuilder">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="2821">
+              <memento viewPositionX="0" viewPositionY="1980">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="383" />
+                    <property name="caretX" value="119" />
                     <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
-                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143333673318" />
+                    <cellInfo cellId="Constant_tinaaq_b4a" cellNumber="0" isInList="false">
+                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143325211598" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -223,10 +146,35 @@
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3348893923579307197" />
                   </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/483189195598172309" />
-                  </foldedElement>
                 </folded>
+                <enabledHints />
+              </memento>
+              <inspectorMemento viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenericSyncDeclarations" pinned="false" current="true" current-in-tab="true">
+        <entry file="mps://node://OriginalExamples@transient32/OriginalExamples.pi_parallel@4_2/GenericSyncDeclarations">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="60">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="91" />
+                    <property name="caretXRelative" value="0" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:3d5d4a2f-1b1b-4e88-b87f-a68d0c5fe8f1(OriginalExamples.pi_parallel@4_2)/5512582143335777403" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <folded />
                 <enabledHints />
               </memento>
               <inspectorMemento viewPositionX="0" viewPositionY="0">
@@ -285,10 +233,16 @@
                 </selectionStack>
                 <folded>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948444" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183699148" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948444" />
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142276" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134838" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142258" />
@@ -296,29 +250,23 @@
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134760" />
                   </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186341245" />
+                  </foldedElement>
                   <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948484" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134838" />
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142240" />
                   </foldedElement>
                   <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183844855" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8001979070704575643" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186341245" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142240" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941187172883" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142276" />
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8001979070704575643" />
                   </foldedElement>
                 </folded>
                 <enabledHints />
@@ -664,7 +612,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="OriginalExamples@transient30">
+            <PATH_ELEMENT USER_OBJECT="OriginalExamples@transient32">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -682,7 +630,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="OriginalExamples@transient30">
+            <PATH_ELEMENT USER_OBJECT="OriginalExamples@transient32">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1263,7 +1211,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="fixed further task and shared&lt;&gt; related bugs&#10;" />
     <MESSAGE value="improved checking rules (incomplete, yet); goofing around with tests" />
     <MESSAGE value="completed checking rules&#10;" />
     <MESSAGE value="added support for shared arguments generation, some fixes" />
@@ -1288,7 +1235,8 @@
     <MESSAGE value="fixed some errors; added quite complicated (due to arbitrary precision arithmetic) pi example" />
     <MESSAGE value="added missing sync stops for flow breaking statements (break/continue/return)" />
     <MESSAGE value="added argument deletion, improved pi example (gave up on arbitrary precision pi example)" />
-    <option name="LAST_COMMIT_MESSAGE" value="added argument deletion, improved pi example (gave up on arbitrary precision pi example)" />
+    <MESSAGE value="generator improvements for syncs: goto support, better exponential backoff" />
+    <option name="LAST_COMMIT_MESSAGE" value="generator improvements for syncs: goto support, better exponential backoff" />
   </component>
   <component name="editorHistoryManager">
     <entry file="mps://node://TasksAndSyncs/TasksAndSyncs.structure/SyncRessource">
@@ -2447,10 +2395,16 @@
             </selectionStack>
             <folded>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948444" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183699148" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948444" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142276" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134838" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142258" />
@@ -2458,29 +2412,23 @@
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134760" />
               </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186341245" />
+              </foldedElement>
               <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183948484" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941189134838" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142240" />
               </foldedElement>
               <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941183844855" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8001979070704575643" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186341245" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142240" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941187172883" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4335879941186142276" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8001979070704575643" />
               </foldedElement>
             </folded>
             <enabledHints />
@@ -2546,70 +2494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SyncBuilder">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="2821">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="383" />
-                <property name="caretXRelative" value="8" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143333673318" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <folded>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143327269307" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3348893923579307197" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/483189195598172309" />
-              </foldedElement>
-            </folded>
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://OriginalExamples@transient30/OriginalExamples.pi_parallel@4_2/pi">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="1126">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="95" />
-                <property name="selectionEnd" value="4" />
-                <property name="caretXRelative" value="32" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_nx01kw_a0" cellNumber="0" isInList="false">
-                  <node node_reference="r:8949dc28-c16d-4394-9ab2-88960dfa7bea(OriginalExamples.pi_parallel@4_2)/5512582143335021848" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/replaceSyncDeclarations">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -2648,6 +2532,65 @@
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="Constant_u338ov_d0" cellNumber="0" isInList="false">
                   <node node_reference="r:ded946d6-2c37-47d1-8685-df39cbf13ba9(OriginalExamples.pi_parallel)/8001979070727118720" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SyncBuilder">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="1980">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="119" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_tinaaq_b4a" cellNumber="0" isInList="false">
+                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143325211598" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <folded>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143327269307" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3348893923579307197" />
+              </foldedElement>
+            </folded>
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://OriginalExamples@transient32/OriginalExamples.pi_parallel@4_2/GenericSyncDeclarations">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="60">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="91" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:3d5d4a2f-1b1b-4e88-b87f-a68d0c5fe8f1(OriginalExamples.pi_parallel@4_2)/5512582143335777403" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
