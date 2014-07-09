@@ -12,9 +12,15 @@ void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarati
 }
 
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
+void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
 {
-  GenericTaskDeclarations_joinVoidFuture(&future);
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,&(future->result));
+    future->finished = 1;
+  }
+
+  return future->result;
 }
 
 
@@ -36,26 +42,9 @@ struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetV
 }
 
 
-void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
 {
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,&(future->result));
-    future->finished = 1;
-  }
-
-  return future->result;
-}
-
-
-void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,0);
-    future->finished = 1;
-  }
-
+  GenericTaskDeclarations_joinVoidFuture(&future);
 }
 
 
@@ -74,6 +63,17 @@ struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFutur
   }
 
   return (struct GenericTaskDeclarations_Future){ .pth = pth };
+}
+
+
+void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,0);
+    future->finished = 1;
+  }
+
 }
 
 

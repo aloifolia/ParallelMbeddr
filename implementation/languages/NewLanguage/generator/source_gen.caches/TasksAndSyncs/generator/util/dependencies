@@ -33,6 +33,7 @@
     <classNode dependClassName="TasksAndSyncs.generator.util.Pair" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_Behavior" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

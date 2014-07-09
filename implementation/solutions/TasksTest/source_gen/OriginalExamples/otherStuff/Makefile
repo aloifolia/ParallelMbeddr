@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_syncStuff=otherStuff.o second.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o otherStuff_SharedTypes_0.o
+_OBJ_syncStuff=otherStuff.o second.o third.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o otherStuff_SharedTypes_0.o
 OBJ_syncStuff=$(patsubst %,$(ODIR)/%,$(_OBJ_syncStuff))
 
 

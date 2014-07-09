@@ -36,13 +36,13 @@ struct otherStuff_SharedTypes_0_SharedOf_A_0 {
   struct otherStuff_SharedTypes_0_A value;
 };
 
-void otherStuff_SharedTypes_0_mutexDestroy_0(struct otherStuff_SharedTypes_0_A* var);
-
-void otherStuff_SharedTypes_0_mutexDestroy_1(struct otherStuff_SharedTypes_0_SharedOf_A_0* var);
-
 void otherStuff_SharedTypes_0_mutexInit_1(struct otherStuff_SharedTypes_0_SharedOf_A_0* var);
 
 void otherStuff_SharedTypes_0_mutexInit_0(struct otherStuff_SharedTypes_0_A* var);
+
+void otherStuff_SharedTypes_0_mutexDestroy_1(struct otherStuff_SharedTypes_0_SharedOf_A_0* var);
+
+void otherStuff_SharedTypes_0_mutexDestroy_0(struct otherStuff_SharedTypes_0_A* var);
 
 
 #ifdef __cplusplus
