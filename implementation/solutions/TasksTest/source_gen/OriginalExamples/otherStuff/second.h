@@ -1,12 +1,10 @@
-#ifndef OTHERSTUFF_H
-#define OTHERSTUFF_H
+#ifndef SECOND_H
+#define SECOND_H
 
 
 #include <stdint.h>
 
 #include <stddef.h>
-
-#include "second.h"
 
 #include "GenericTaskDeclarations.h"
 
@@ -14,16 +12,18 @@
 
 #include "GenericSyncDeclarations.h"
 
-#include "otherStuff_SharedTypes_0.h"
-
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int32_t otherStuff_main(int32_t argc,char* argv[]);
+struct second_X {
+  int32_t x;
+};
 
+typedef struct second_X xs;
+typedef xs ys;
 
 #ifdef __cplusplus
 } /* extern "C" */

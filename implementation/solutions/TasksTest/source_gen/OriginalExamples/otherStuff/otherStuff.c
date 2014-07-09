@@ -1,60 +1,40 @@
 #include "otherStuff.h"
 
 
+#include "second.h"
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
-#include <stdlib.h>
+#include "otherStuff_SharedTypes_0.h"
+#include <pthread.h>
 
-struct otherStuff_Args_a1a0 {
-  int8_t b;
-  int8_t b;
-};
+static inline void otherStuff_init_myA_0(struct otherStuff_SharedTypes_0_SharedOf_A_0* myA);
 
-struct otherStuff_Args_a4a0 {
-};
-
-static void* otherStuff_parFun_a1a0(void* voidArgs);
-
-static void* otherStuff_parFun_a4a0(void* voidArgs);
-
-static inline struct GenericTaskDeclarations_Task otherStuff_taskInit_a1a0(int8_t b);
+static inline void otherStuff_destroy_myA_0(struct otherStuff_SharedTypes_0_SharedOf_A_0* myA);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  int8_t b = 1;
-  struct GenericTaskDeclarations_Task t = otherStuff_taskInit_a1a0(b);
-  GenericTaskDeclarations_runTaskAndGetFuture(t);
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
+  pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
   
-  struct GenericTaskDeclarations_Task t2 = (struct GenericTaskDeclarations_Task){0,&otherStuff_parFun_a4a0};
-  1 && <!TextGen not found for 'com.mbeddr.core.expressions.structure.Expression'!>;
+  struct otherStuff_SharedTypes_0_SharedOf_A_0 myA;
+  otherStuff_init_myA_0(&myA);
+  otherStuff_destroy_myA_0(&myA);
   return 0;
 }
 
 
-static void* otherStuff_parFun_a1a0(void* voidArgs) 
+static  void otherStuff_init_myA_0(struct otherStuff_SharedTypes_0_SharedOf_A_0* myA) 
 {
-  int8_t* result = malloc(sizeof(int8_t));
-  struct otherStuff_Args_a1a0* args = ((struct otherStuff_Args_a1a0*)(voidArgs));
-  *result = (args)->b;
-  return result;
+  pthread_mutex_init(&myA->mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutex_init(&myA->value.b.mutex,&GenericSharedDeclarations_mutexAttribute_0);
 }
 
 
-static void* otherStuff_parFun_a4a0(void* voidArgs) 
+static  void otherStuff_destroy_myA_0(struct otherStuff_SharedTypes_0_SharedOf_A_0* myA) 
 {
-  int8_t* result = malloc(sizeof(int8_t));
-  *result = 1;
-  return result;
-}
-
-
-static inline struct GenericTaskDeclarations_Task otherStuff_taskInit_a1a0(int8_t b) 
-{
-  struct otherStuff_Args_a1a0* args_a1a0 = malloc(sizeof(struct otherStuff_Args_a1a0));
-  args_a1a0->b = b;
-  args_a1a0->b = b;
-  return (struct GenericTaskDeclarations_Task){args_a1a0,&otherStuff_parFun_a1a0};
+  pthread_mutex_init(&myA->mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutex_init(&myA->value.b.mutex,&GenericSharedDeclarations_mutexAttribute_0);
 }
 
 

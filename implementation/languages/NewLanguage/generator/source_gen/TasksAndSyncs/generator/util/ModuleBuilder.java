@@ -81,18 +81,7 @@ public class ModuleBuilder {
       }
     }.invoke();
 
-    ListSequence.fromList(SLinkOperations.getTargets(implementationModule, "imports", true)).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
-      public SNode invoke() {
-        SNode node_483189195593417255 = new _FunctionTypes._return_P0_E0<SNode>() {
-          public SNode invoke() {
-            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.ModuleImport", null);
-            SLinkOperations.setTarget(res, "module", sharedModule, false);
-            return res;
-          }
-        }.invoke();
-        return node_483189195593417255;
-      }
-    }.invoke());
+    importModule(sharedModule, implementationModule);
 
     SModelOperations.addRootNode(model, sharedModule);
 
@@ -114,15 +103,29 @@ public class ModuleBuilder {
 
 
 
-  public static void importModule(SNode moduleToImport, final SNode target) {
-    if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getTargets(target, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency")).any(new IWhereFilter<SNode>() {
+  public static void importModule(final SNode moduleToImport, final SNode target) {
+    System.out.println("import " + moduleToImport + " into " + target);
+    if (moduleToImport == target) {
+      return;
+    }
+    if (Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getTargets(target, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency")).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SLinkOperations.getTarget(it, "chunk", false) == moduleToImport;
+      }
+    })) {
+      return;
+    }
+    if (Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getTargets(moduleToImport, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency")).any(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SLinkOperations.getTarget(it, "chunk", false) == target;
       }
-    }))) {
-      SNode newImport = SConceptOperations.createNewNode("com.mbeddr.core.base.structure.DefaultGenericChunkDependency", null);
-      SLinkOperations.setTarget(newImport, "chunk", moduleToImport, false);
-      ListSequence.fromList(SLinkOperations.getTargets(target, "imports", true)).addElement(newImport);
+    })) {
+      return;
     }
+    System.out.println("imports of moduleToImport: " + SNodeOperations.ofConcept(SLinkOperations.getTargets(moduleToImport, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency"));
+
+    SNode newImport = SConceptOperations.createNewNode("com.mbeddr.core.base.structure.DefaultGenericChunkDependency", null);
+    SLinkOperations.setTarget(newImport, "chunk", moduleToImport, false);
+    ListSequence.fromList(SLinkOperations.getTargets(target, "imports", true)).addElement(newImport);
   }
 }
