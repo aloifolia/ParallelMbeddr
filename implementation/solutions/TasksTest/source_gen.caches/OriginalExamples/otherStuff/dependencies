@@ -14,7 +14,5 @@
   <dependency className="OriginalExamples.otherStuff.otherStuff_SharedTypes_0" file="otherStuff_SharedTypes_0.h" />
   <dependency className="OriginalExamples.otherStuff.second" file="second.c" />
   <dependency className="OriginalExamples.otherStuff.second" file="second.h" />
-  <dependency className="OriginalExamples.otherStuff.third" file="third.c" />
-  <dependency className="OriginalExamples.otherStuff.third" file="third.h" />
 </dependenciesRoot>
 

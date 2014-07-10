@@ -16,8 +16,6 @@
 
 #include "otherStuff_SharedTypes_0.h"
 
-#include "third.h"
-
 
 
 #ifdef __cplusplus
@@ -26,9 +24,9 @@ extern "C" {
 
 int32_t otherStuff_main(int32_t argc,char* argv[]);
 
-void otherStuff_initGlobalMutexesFor1Module_1(void);
+void otherStuff_initGlobalMutexesFor1Module_0(void);
 
-void otherStuff_destroyGlobalMutexesFor1Module_1(void);
+void otherStuff_destroyGlobalMutexesFor1Module_0(void);
 
 void otherStuff_initAllGlobalMutexes_0(void);
 
