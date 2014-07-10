@@ -83,16 +83,59 @@ struct SharedOf_t {
   t' value;
 }
 \end{ccode}
-Any nested shared types are, hence, translated first. For implementation reasons nested \textit{typedef}s and constants used in array types are also resolved in this process\footnote{Although the resolution of typedefs and constants impede corresponding changes made by the programmer in the translated C code this is not deemed an issue since generally changes should always be made from within mbeddr, i.e. on the original code.}. If the base type of the shared type is a generic C type the struct declaration is safed in a generic module. Otherwise it is stored in a module that is specifically created for the module that declares the base type in order to reduce the legibitily mitigations of the generated modules. In order to be visible in the generated module the base type declaration is lifted into this module. Should the seperation of modules prove useless it could be easily removed in the future.
-A local variable declaration \CODE{shared<t> v;} is then reduced to:
+Any nested shared types are, hence, translated first. For implementation reasons nested \textit{typedef}s and constants used in array types are also resolved in this process\footnote{Although the resolution of typedefs and constants impede corresponding changes made by the programmer in the translated C code this is not deemed an issue since generally changes should always be made from within mbeddr, i.e. on the original code.}. Depending on the base type of the shared type the generated struct declaration is stored either in a generic module or in a newly generated other module: Consider the tree for a type \CODE{shared<t>} whose nodes are made of types and whose edges are formed by the base type relationship of shared types, array types and pointer types\footnote{Clearly, this tree will have only one branch.}. \TODO{Maybe add visualization}
+If the leave of the tree is a primitive C type the struct declaration is stored in a generic module. In any other case the leave must be some struct type \CODE{s}. In order to preserve the visibility of the corresponding struct in the newly generated struct \CODE{SharedOf\_t} the latter is stored in the same module. Since the generation of shared types related code can diminish the legibility of the resulting code profoundly for every such module a specific \textit{SharedTypes\_x} module is created and imported into the module that declares \CODE{s}. \textit{SharedTypes\_x} is used to store struct declarations like \CODE{SharedOf\_t}. Furthermore \CODE{s} is lifted into it in order to make it visible in the member declaration \CODE{value} of \CODE{SharedOf\_t}. For any field of \CODE{s} whose type tree contains another user-defined struct type the corresponding struct declaration is either lifted, as well (and recursively treated in the same way) or imported by its module. Should this separation of shared types related code and other user-defined code not proof well in praxis it could easily be deactivated.
+With the former generation of the struct declaration in mind a type \CODE{shared<t>} is reduced to:
 \begin{ccode}
-SharedOf_t v;
+SharedOf_t
 \end{ccode}
-Prior to any usage of a mutex it must be initialized first. This is done implicitly in order to free the programmer from this task. 
-\TODO{Code aendern: deletion reparieren}
-\TODO{Code aendern: pro Typ eine Init-Funktion, nicht wie bisher pro Variable. Letzteres zusaetzlich für Arrays von SharedTypes}
-\TODO{beschreiben...}
-\TODO{deletion aehnlich}
+The mutex in the equally named struct field which is used to synchronize one variable of an according type  must be initialized prior to any usage. This is done implicitly by generated code in order to free the programmer from this task. Accordingly, mutexes must be released before they get out of scope in order to prevent memory leaks. In the generated code both functionalities make use of corresponding functions, i.e. for every type who is one of the following types a pair of \CODE{mutexInit}--\CODE{mutexDestroy} functions is generated:
+
+\begin{itemize}
+\item shared types whose base types are shared types or for whom mutex functions are recursively generated
+\item array types who are not base types of array types themselves and whose base types are either shared types or struct types for whom mutex functions are recursively generated
+\item struct types whose structs contain at least one field with a type for which the same relation holds as for the aforementioned types
+\end{itemize}
+
+For example, a type \CODE{shared<int32>[42][24]} would enforce the generation of one mutex initialization and one mutex destruction function. \CODE{shared<int32>*} on the other hand would not do that which makes sense as any variable \CODE{v} of this type would only point to a shared ressource which must be referenced directly by another variable \CODE{v'} of type \CODE{shared<int32>} or be contained in the memory-addressable value of some more complex type \CODE{v''}. The declaration of \CODE{v'}, respectively \CODE{v''} would then trigger the initialization of the mutex of the shared ressource that \CODE{v} points to. The resulting mutex initialization functions for types of the aforementioned kind are declared as follows:
+\begin{ccode}
+// for a proper shared type shared<t> and the type t' that t is reduced to
+void mutexInit_X(SharedOf_t'* var) { 
+  pthread_mutex_init(&var->mutex, &mutexAttribute); 
+  mutexInit_X'(&var->value); 
+}
+
+// for a proper array type t[]...[] of 1 to n dimensions where ... denotes the occurrence of accordingly many symbols 
+// and t' denotes the reduced-to type
+void mutexInit_X(t'*...* var, int32 size_0, ..., int32 size_n) { 
+  for (int32 __i_0 = 0; __i_0 < size_0; __i_0++) { 
+    ...
+      for (int32 __i_n = 0; __i_n < size_n; __i_n++) {
+        // in case t is a struct type
+        mutexInit_X'(&var[__i_0]...[__i_n]);
+        // or, in case t is a shared type with generic C base type:
+        pthread_mutex_init(&var[__i_0]...[__i_n].mutex, &mutexAttribute);
+      }
+    ...
+  } 
+}
+
+// for a proper struct type t of a struct t { u_1 f_1; ...; u_n f_n } and according reduced field types u_1' to u_n'
+void mutexInit_X(SharedOf_t* var) {
+  //in case u_i demands further initialization
+  mutexInit_X'(&var->f_i);
+  // or, in case u_i is a shared type with generic C base type:
+  pthread_mutex_init(&var->f_i.mutex, &mutexAttribute);
+  ...
+  //in case u_j demands further initialization
+  mutexInit_X'(&var->f_j);
+  // or, in case u_j is a shared type with generic C base type:
+  pthread_mutex_init(&var->f_j.mutex, &mutexAttribute);  
+}
+\end{ccode}
+\TODO{erklaeren, dass deletion aehnlich aussieht, nur 2. parameter jeweils fehlt, beispiel fuer shared<t> zeigen}
+\TODO{Anwendung im Code zeigen: init und deletion}
+\TODO{Alternative: direkt init im Code oder pro Variable eine Fkt.: pro/contra aufzeigen}
 \TODO{Prüfen, ob mutex-init-Reihenfolge richtig ist}
 ParallelMbeddr does not prevent the programmer from structuring the synchronization statements in such a way that a task will synchronize a shared variable multiple times (\textit{recursive synchronization}). The following code depicts such behavior:
 \begin{ccode}

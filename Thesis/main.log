@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  3 JUL 2014 19:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  10 JUL 2014 19:11
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1414,27 +1414,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[13] [14]
-Overfull \hbox (11.69861pt too wide) in paragraph at lines 143--144
+[13] [14] [15]
+Overfull \hbox (11.69861pt too wide) in paragraph at lines 186--187
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.29721pt too wide) in paragraph at lines 145--146
+Overfull \hbox (10.29721pt too wide) in paragraph at lines 188--189
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[15])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[16]
+[16])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[17] [18]
 Kapitel 4.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [17
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [19
 
-] [18
+] [20
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [19]
+ [21]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
@@ -1449,10 +1449,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 15333 strings out of 493921
- 234317 string characters out of 3144870
- 391487 words of memory out of 3000000
- 17871 multiletter control sequences out of 15000+200000
+ 15380 strings out of 493921
+ 235016 string characters out of 3144870
+ 395487 words of memory out of 3000000
+ 17881 multiletter control sequences out of 15000+200000
  198580 words of font info for 165 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,15n,95p,2033b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1471,9 +1471,9 @@ n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
 athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
 fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (21 pages, 289624 bytes).
+Output written on main.pdf (23 pages, 301569 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
- 363 named destinations out of 1000 (max. 500000)
+ 787 PDF objects out of 1000 (max. 8388607)
+ 400 named destinations out of 1000 (max. 500000)
  226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
