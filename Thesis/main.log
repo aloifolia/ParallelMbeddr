@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  10 JUL 2014 19:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  12 JUL 2014 15:20
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1144,7 +1144,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
 \@TUD@titlelines=\count148
- <tud_logo.pdf, id=107, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=111, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1260,21 +1260,21 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 [3
 
 ] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 34--35
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--37
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/implementation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 38--1
+Underfull \hbox (badness 10000) in paragraph at lines 42--1
 
  []
 
-[5]
+[5] [6]
 Kapitel 3.
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/tasks.tex
 LaTeX Font Info:    Try loading font information for T1+txtt on input line 4.
@@ -1304,6 +1304,9 @@ LaTeX Font Info:    Try loading font information for TS1+5fp on input line 35.
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\frontpage\ts15fp.fd
 File: ts15fp.fd 2009/08/06 Fontinst v1.927 font definitions for TS1/5fp.
 )
+[7
+
+]
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 8.25606pt on input line 38.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
@@ -1312,10 +1315,6 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 4.99202pt on input line 38.
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <8.3> not available
 (Font)              Font shape `T1/txtt/bx/n' tried instead on input line 38.
-
-[6
-
-]
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
 (Font)              scaled to size 9.12006pt on input line 97.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
@@ -1385,15 +1384,15 @@ Overfull \hbox (15.10028pt too wide) in paragraph at lines 93--122
 []$[]$ $[]$ $[]$ 
  []
 
-[7]
+[8]
 LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <9.1> not available
 (Font)              Font shape `T1/5fp/m/sl' tried instead on input line 144.
- [8]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
+ [9]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
 Underfull \hbox (badness 10000) in paragraph at lines 186--1
 
  []
 
-[9] [10]
+[10] [11]
 Overfull \hbox (12.99788pt too wide) in paragraph at lines 99--109
 []$[]$ $[]$ 
  []
@@ -1404,7 +1403,7 @@ Overfull \hbox (12.99788pt too wide) in paragraph at lines 110--120
  []
 
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
-[11] [12]
+[12] [13]
 Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
@@ -1414,34 +1413,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[13] [14] [15]
-Overfull \hbox (11.69861pt too wide) in paragraph at lines 186--187
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 100--103
+
+ []
+
+[15] [16]
+Overfull \hbox (4.15462pt too wide) in paragraph at lines 173--175
+[][][][][][][][][][][][][][] 
+ []
+
+[17]
+Overfull \hbox (11.69861pt too wide) in paragraph at lines 229--230
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.29721pt too wide) in paragraph at lines 188--189
+Overfull \hbox (10.29721pt too wide) in paragraph at lines 231--232
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[16])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[17] [18]
+[18] [19]))
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex [20]
 Kapitel 4.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [19
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [21
 
-] [20
+] [22
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [21]
+ [23]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: A9942548147C92BF20356FA7EA56877E;1685.
+(rerunfilecheck)             Checksum: 63AD01B4650EC6E4F6B6533E815D7969;1735.
 
 
 LaTeX Warning: There were undefined references.
@@ -1449,13 +1458,13 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 15380 strings out of 493921
- 235016 string characters out of 3144870
- 395487 words of memory out of 3000000
- 17881 multiletter control sequences out of 15000+200000
+ 15426 strings out of 493921
+ 235808 string characters out of 3144870
+ 394854 words of memory out of 3000000
+ 17896 multiletter control sequences out of 15000+200000
  198580 words of font info for 165 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,15n,95p,2033b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,15n,95p,2089b,2008s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/devel/latex/
 tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
@@ -1471,9 +1480,9 @@ n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
 athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
 fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (23 pages, 301569 bytes).
+Output written on main.pdf (25 pages, 317927 bytes).
 PDF statistics:
- 787 PDF objects out of 1000 (max. 8388607)
- 400 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 845 PDF objects out of 1000 (max. 8388607)
+ 431 named destinations out of 1000 (max. 500000)
+ 234 words of extra memory for PDF output out of 10000 (max. 10000000)
 

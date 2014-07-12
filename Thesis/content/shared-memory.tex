@@ -97,7 +97,9 @@ The mutex in the equally named struct field which is used to synchronize one var
 \item struct types whose structs contain at least one field with a type for which the same relation holds as for the aforementioned types
 \end{itemize}
 
-For example, a type \CODE{shared<int32>[42][24]} would enforce the generation of one mutex initialization and one mutex destruction function. \CODE{shared<int32>*} on the other hand would not do that which makes sense as any variable \CODE{v} of this type would only point to a shared ressource which must be referenced directly by another variable \CODE{v'} of type \CODE{shared<int32>} or be contained in the memory-addressable value of some more complex type \CODE{v''}. The declaration of \CODE{v'}, respectively \CODE{v''} would then trigger the initialization of the mutex of the shared ressource that \CODE{v} points to. The resulting mutex initialization functions for types of the aforementioned kind are declared as follows:
+For example, a type \CODE{shared<int32>[42][24]} would enforce the generation of one mutex initialization and one mutex destruction function. \CODE{shared<int32>*} on the other hand would not do that which makes sense as any variable \CODE{v} of this type would only point to a shared ressource which must be referenced directly by another variable \CODE{v'} of type \CODE{shared<int32>} or be contained in the memory-addressable value of some more complex type \CODE{v''}. The declaration of \CODE{v'}, respectively \CODE{v''} would then trigger the initialization of the mutex of the shared ressource that \CODE{v} points to. The resulting mutex initialization functions for types of the aforementioned kind are declared as follows\footnote{The meaning of the mutex attribute will be declared later on.}:
+\TODO{Reparatur von shared<shared<int32>[5] five; siehe Code}
+\TODO{shared+struct: Faelle fuer arrays einfuegen}
 \begin{ccode}
 // for a proper shared type shared<t> and the type t' that t is reduced to
 void mutexInit_X(SharedOf_t'* var) { 
@@ -133,9 +135,50 @@ void mutexInit_X(SharedOf_t* var) {
   pthread_mutex_init(&var->f_j.mutex, &mutexAttribute);  
 }
 \end{ccode}
-\TODO{erklaeren, dass deletion aehnlich aussieht, nur 2. parameter jeweils fehlt, beispiel fuer shared<t> zeigen}
-\TODO{Anwendung im Code zeigen: init und deletion}
-\TODO{Alternative: direkt init im Code oder pro Variable eine Fkt.: pro/contra aufzeigen}
+The signature of \CODE{mutexInit\_X()} for arrays shows that those are not passed as arrays to the mutex functions but as pointers. This is due to the necessity of declaring multidimensional arrays at least partially with the size for each dimension (e.g. \CODE{int[][]} would be missing at least one dimension size). Nevertheless it would not make sense to declare one mutex function for each shape of dimension size. Since arrays are treated like pointers internally when they are passed as function arguments it is completely safe to cast them to appropriate pointer types and to equally type the according function parameters.
+
+The deletion of mutexes is defined quite similar with the main difference that the utilized according pthread function only takes one mutex. Therefore only the deletion for mutexes nested in ressources of shared types is shown:
+\begin{ccode}
+void mutexDestroy_1(SharedOf_t'* var) { 
+  pthread_mutex_destroy (&var->mutex); 
+  mutexInit_0(&var->value); 
+}
+\end{ccode}
+These presented functions are used to initialize mutexes at the begin of their life span and delete them right before the corresponding end. For mutexes refered to by global variables this means that they must be initialized at the beginning of the entry function of the program\footnote{There is no way to combine the definition and the initialization of mutexes as they are used in ParallelMbeddr.}. As forced by mbeddr the programmer thus has to specify a main function in one of the implementation modules. Similarly mutexes of local variables are initialized right after their declaration whereas mutexes of function arguments are declared at the beginning of the related function\footnote{The possibility to have function arguments which contain shared ressources and, hence mutexes is not an obvious design choice: C's pass-by-value semantics of function parameters causes parameters to be copied into functions. Therefore a shared ressource which is not passed by its addresses but by its actual value will provoke the generation of an equal shared ressource at the beginning of the function execution. This copy is synchronization-wise completely unrelated to the original shared ressource since mutex copies cannot be used to lock with their origins. They have therefore to be initialized and destroyed seperately. The use of shared ressources in such a manner can confuse programmers who are not aware of this fact. Nevertheless ParallelMbeddr allows this kind of utilization of shared ressources in order to not burden the programmer with having to copy large structs that contain shared ressources component-wise if the shared ressource data is not of relevance. Depending on the feedback of future users it should be considered whether warnings for unintended misuse of shared ressources in this way might be helpful.}. The deletion of mutexes for shared ressources must be accomplished before they get out of scope which, again, depends on the kind of variables they are refered to. 
+\TODO{Markus fragen, ob immer per main-Fkt. eingestiegen wird und ob Bibliotheksverwendung auch moeglich ist}
+%Mutexes for global variables must be deleted at the end of the entry function of the program and before any return 
+Local variables' mutexes are destroyed before the end of their surrounding scopes. Additionally special care has to be taken of any control flow breaking statement \textit{c} that occurs in the AST of the same function of some local variable declaration \textit{l} that refers to some value with a (nested) shared ressource.\TODO{forward ref to syncs} If 
+\begin{itemize}
+\item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{l};
+\item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{l};
+\item \textit{c} is a \textit{continue} statement and refers to a loop whose AST contains \textit{l};
+\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of any statement that follows \textit{l}
+\end{itemize}
+\textit{c} must be preceded with a destruction call of the mutex of the shared ressource of \textit{l}. \TODO{Implement!} The proper destruction of mutexes of function arguments on the other hand just requires according function calls at the end of their functions and before any return statement that refers to their functions. 
+The actual function to call for a variable or argument is either one of the \CODE{mutexDestroy\_X()} functions previously explained or a direct call of \CODE{pthread\_mutex\_destroy()} for ``simple'' shared ressources of generic C types, e.g.:
+\begin{center}
+\begin{minipage}{0.3\textwidth}
+\begin{ccode}
+// simple shared ressource
+shared<int32> v1;
+
+// complex shared ressource
+shared<int32>[2][3] v2;
+\end{ccode}
+\end{minipage}
+\qquad==>\qquad\qquad
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}
+SharedOf_int32_0 v1;
+pthread_mutex_init(&v1.mutex, &mutexAttribute);
+
+SharedOf_int32_0[2][3] v2;
+mutexInit_0((SharedOf_int32_0**)v2, 2, 3);
+\end{ccode}
+\end{minipage}
+\end{center}
+
+To recap: The mutex of a shared ressource is either directly initiliazed and destroy via appropriate pthread functions or it is indirectly handled via functions that are based on the types of the values that shared ressources are nested inside. This approach was chosen in order to reduce the amount of code duplication that would otherwise occur if mutexes of variables with shared ressources would be handled inline. As a result the generated code becomes more easily readable. The additional computational overhead due to function calls and returns should be regarded as an optimization concern of a further compilation step by a compiler like \textit{gcc}.
 \TODO{Prüfen, ob mutex-init-Reihenfolge richtig ist}
 ParallelMbeddr does not prevent the programmer from structuring the synchronization statements in such a way that a task will synchronize a shared variable multiple times (\textit{recursive synchronization}). The following code depicts such behavior:
 \begin{ccode}
@@ -209,10 +252,8 @@ void stopSyncForNMutexes(pthread_mutex_t* mutex_1, ..., pthread_mutex_t* mutex_n
 }
 \end{ccode}
 
-\TODO{erklaere livelock, wait-lock-(!)obstruction free und busy-wait protocol in basics}
-%https://www.cs.rochester.edu/u/scott/papers/2005_PODC_CM.pdf
-%https://wiki.cc.gatech.edu/multicore/index.php/Contention_Management#cite_note-adv-1
-Abstracted over the details of the actual implementation, synchronization statements synchronize their ressources atomically as was mentioned in the preceding design section. Since one or mor mutexes can be tentatively locked by multiple threads simultaneously specific contention management has to be taken care of. The illusion of atomic synchronization is realized by an implementation of the obstruction-free busy-wait protocol \textit{Polite}.In order to resolve conflicts Polite uses exponential backoff. The according backoff function is explained further down. The synchronization function tries to lock every mutex as given by its arguments. On failure it releases every mutex that was locked so far, uses the backoff function to delay its execution for a randomized amount of time and repeats afterwards. This scheme enables competing threads to proceed.
+Abstracted over the details of the actual implementation, synchronization statements synchronize their ressources atomically as was mentioned in the preceding design section. Since one or more mutexes can be tentatively locked by multiple threads simultaneously specific contention management has to be taken care of. The illusion of atomic synchronization is realized by an implementation of the obstruction-free\footnote{Busy-waiting means that the thread will repeatedly test a condition until it is met, without doing actual useful work\cite[p.~166]{AnIntroductionToParallelProgramming}. Thus, it is an alternative to suspending a thread and revoking it later on when some condition is met (which can, e.g., be realized by \textit{condition variables} as provided by POSIX threads\cite[p.~77]{ProgrammingWithPOSIXThreads}). Obstruction-free means that the execution of any thread which is at some time run in isolation such that the execution of obstructing other threads is interrupted meanwhile will progress. The existance of obstruction-freedom guarantees that no deadlocks will occur\cite{ObstructionFreeAuthorizationEnforcement}. However, livelocks and starvation are not necessarily avoided. Stronger degrees of non-blocking algorithms like lock-freedom and wait-freedom tackle these problems (partially) but are not relevant for this work. Further information on the latter is for instance provided by http://preshing.com/20120612/an-introduction-to-lock-free-programming/. %http://doc.akka.io/docs/akka/snapshot/general/terminology.html
+} busy-wait protocol \textit{Polite}. In order to resolve conflicts \textit{Polite} uses exponential backoff. The according backoff function is explained further down. The synchronization function tries to lock every mutex as given by its arguments. On failure it releases every mutex that was locked so far, uses the backoff function to delay its execution for a randomized amount of time and repeats afterwards. This scheme enables competing threads to proceed.
 \begin{ccode}
 // again, the equivalent function declaration for 1 mutex is skipped
 exported void startSyncForNMutexes(pthread_mutex_t* mutex_0, ..., pthread_mutex_t* mutex_n) { 

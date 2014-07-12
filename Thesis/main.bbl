@@ -7,10 +7,27 @@ Language workbenches: The killer-app for domain specific languages?
 {\em Introduction To Operating Systems: Concepts And Practice An 2Nd Ed.}
 \newblock Prentice-Hall Of India Pvt. Limited, 2007.
 
+\bibitem{ObstructionFreeAuthorizationEnforcement}
+David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
+\newblock Obstruction-free authorization enforcement: Aligning security with
+  business objectives.
+\newblock In {\em Computer Security Foundations Symposium (CSF), 2011 IEEE
+  24th}, pages 99--113. IEEE, 2011.
+
 \bibitem{TransactionalProgrammabilityAndPerformance}
 L.W. Baugh and University of~Illinois~at Urbana-Champaign.
 \newblock {\em Transactional Programmability and Performance}.
 \newblock University of Illinois at Urbana-Champaign, 2008.
+
+\bibitem{CForBASICProgrammers}
+T.D. Brown.
+\newblock {\em C for BASIC Programmers}.
+\newblock Silicon Press, 1987.
+
+\bibitem{ProgrammingWithPOSIXThreads}
+D.R. Butenhof.
+\newblock {\em Programming with POSIX Threads}.
+\newblock Addison-Wesley professional computing series. Addison-Wesley, 1997.
 
 \bibitem{SoftReal-TimeSystems}
 G.C. Buttazzo, G.~Lipari, L.~Abeni, and M.~Caccamo.
@@ -105,6 +122,11 @@ Robert H.~B. Netzer, Timothy~W. Brennan, and Suresh~K. Damodaran-Kamal.
 \newblock Debugging race conditions in message-passing programs.
 \newblock In {\em Proceedings of the SIGMETRICS Symposium on Parallel and
   Distributed Tools}, SPDT '96, pages 31--40, New York, NY, USA, 1996. ACM.
+
+\bibitem{AnIntroductionToParallelProgramming}
+P.~Pacheco.
+\newblock {\em An Introduction to Parallel Programming}.
+\newblock An Introduction to Parallel Programming. Elsevier Science, 2011.
 
 \bibitem{CPrimerPlus}
 S.~Prata.
