@@ -6,6 +6,23 @@
 #include <stdlib.h>
 #include <string.h>
 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
+{
+  GenericTaskDeclarations_joinVoidFuture(&future);
+}
+
+
+void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,0);
+    future->finished = 1;
+  }
+
+}
+
+
 void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
 {
   if ( !(future->finished) ) 
@@ -36,23 +53,6 @@ struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFutur
 }
 
 
-void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
-{
-  return GenericTaskDeclarations_getFutureResult(&future);
-}
-
-
-void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,0);
-    future->finished = 1;
-  }
-
-}
-
-
 struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
 {
   pthread_t pth;
@@ -71,9 +71,9 @@ struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetV
 }
 
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
+void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
 {
-  GenericTaskDeclarations_joinVoidFuture(&future);
+  return GenericTaskDeclarations_getFutureResult(&future);
 }
 
 

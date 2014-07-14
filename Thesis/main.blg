@@ -1,12 +1,16 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: content/literature.bib
+I was expecting a `,' or a `}'---line 156 of file content/literature.bib
+ :   
+ :   isbn={9788120332584},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "GenericTools_SpecificLanguages" isn't style-file defined
---line 186 of file content/literature.bib
+--line 187 of file content/literature.bib
 Warning--entry type for "LanguageWorkbenches" isn't style-file defined
---line 193 of file content/literature.bib
-Warning--I didn't find a database entry for "PrinciplesOfModernOS"
-Warning--to sort, need author, editor, or key in IntroductionToOperatingSystems
+--line 194 of file content/literature.bib
 Warning--to sort, need author or key in LanguageWorkbenches
-Warning--empty author and editor in IntroductionToOperatingSystems
-(There were 6 warnings)
+Warning--empty publisher in IntroductionToOperatingSystems
+Warning--empty year in IntroductionToOperatingSystems
+(There was 1 error message)
