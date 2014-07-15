@@ -31,6 +31,9 @@ import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import java.util.Set;
 import jetbrains.mps.internal.collections.runtime.SetSequence;
 import java.util.HashSet;
+import com.mbeddr.core.statements.behavior.BreakStatement_Behavior;
+import com.mbeddr.core.statements.behavior.ContinueStatement_Behavior;
+import com.mbeddr.core.modules.behavior.ReturnStatement_Behavior;
 
 public class SharedBuilder {
   /**
@@ -1627,19 +1630,12 @@ public class SharedBuilder {
         // add init call right behind the declaration 
         SNodeOperations.insertNextSiblingChild(declaration, mutexCalls.first);
 
-        // add destruction statements before each following return statement in the current or some sub scope  
-        for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
-          if (SNodeOperations.isInstanceOf(followingStatement, "com.mbeddr.core.modules.structure.ReturnStatement")) {
-            SNodeOperations.insertPrevSiblingChild(followingStatement, mutexCalls.second);
-          } else {
-            for (SNode nestedReturnStatement : ListSequence.fromList(SNodeOperations.getDescendants(followingStatement, "com.mbeddr.core.modules.structure.ReturnStatement", false, new String[]{}))) {
-              SNodeOperations.insertPrevSiblingChild(nestedReturnStatement, SNodeOperations.copyNode(mutexCalls.second));
-            }
-          }
-        }
+        // add destruction statements before any following relevant control flow breaking statements 
+        addMutexDestroyCallsForLocalVariable(mutexCalls.second, SNodeOperations.cast(declaration, "com.mbeddr.core.statements.structure.LocalVariableDeclaration"), function);
 
         // add destruction calls before the end of the variable's scope 
-        if (!(SNodeOperations.isInstanceOf(ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).last(), "com.mbeddr.core.modules.structure.ReturnStatement"))) {
+        SNode lastNextSibling = ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).last();
+        if (!(SNodeOperations.isInstanceOf(lastNextSibling, "com.mbeddr.core.modules.structure.ReturnStatement") || SNodeOperations.isInstanceOf(lastNextSibling, "com.mbeddr.core.statements.structure.BreakStatement") || SNodeOperations.isInstanceOf(lastNextSibling, "com.mbeddr.core.statements.structure.ContinueStatement") || SNodeOperations.isInstanceOf(lastNextSibling, "com.mbeddr.core.modules.structure.GotoStatement"))) {
           SNodeOperations.insertNextSiblingChild(ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).last(), mutexCalls.second);
         }
       } else if (SNodeOperations.isInstanceOf(declaration, "com.mbeddr.core.modules.structure.IArgumentLike")) {
@@ -1673,6 +1669,95 @@ public class SharedBuilder {
         }
       }
     }
+  }
+
+
+
+  private void addMutexDestroyCallsForLocalVariable(SNode mutexDestroyCall, SNode declaration, SNode surroundingFunction) {
+    // add a destruction statement before each following (nested) return statement that refers to the same function or 
+    // closure that 'declaration' is also nested in 
+    for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
+      for (SNode nestedReturnStatement : ListSequence.fromList(SNodeOperations.getDescendants(followingStatement, "com.mbeddr.core.modules.structure.ReturnStatement", false, new String[]{}))) {
+        SNode functionOrClosure = getFunctionOrClosureForReturn(nestedReturnStatement);
+        maybeAddMutexDestroyBefore(mutexDestroyCall, nestedReturnStatement, declaration, functionOrClosure);
+      }
+    }
+    for (SNode followingReturnStatement : Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNextSiblings(declaration, false), "com.mbeddr.core.modules.structure.ReturnStatement"))) {
+      SNode functionOrClosure = getFunctionOrClosureForReturn(followingReturnStatement);
+      maybeAddMutexDestroyBefore(mutexDestroyCall, followingReturnStatement, declaration, functionOrClosure);
+    }
+    // add a destruction statement before each follwing (nested) break statement that refers to the same loop or  
+    // switch case that 'declaration' is also nested in 
+    for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
+      for (SNode nestedBreakStatement : ListSequence.fromList(SNodeOperations.getDescendants(followingStatement, "com.mbeddr.core.statements.structure.BreakStatement", false, new String[]{}))) {
+        SNode loopOrSwitch = BreakStatement_Behavior.call_getLoopOrSwitch_1213877377041(nestedBreakStatement);
+        maybeAddMutexDestroyBefore(mutexDestroyCall, nestedBreakStatement, declaration, loopOrSwitch);
+      }
+    }
+    for (SNode followingBreakStatement : Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNextSiblings(declaration, false), "com.mbeddr.core.statements.structure.BreakStatement"))) {
+      SNode loopOrSwitch = BreakStatement_Behavior.call_getLoopOrSwitch_1213877377041(followingBreakStatement);
+      maybeAddMutexDestroyBefore(mutexDestroyCall, followingBreakStatement, declaration, loopOrSwitch);
+    }
+    // add a destruction statement before each follwing (nested) continue statement that refers to the same loop  
+    // that 'declaration' is also nested in 
+    for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
+      for (SNode nestedContinueStatement : ListSequence.fromList(SNodeOperations.getDescendants(followingStatement, "com.mbeddr.core.statements.structure.ContinueStatement", false, new String[]{}))) {
+        SNode loop = ContinueStatement_Behavior.call_getLoop_2496938924389293350(nestedContinueStatement);
+        maybeAddMutexDestroyBefore(mutexDestroyCall, nestedContinueStatement, declaration, loop);
+      }
+    }
+    for (SNode followingContinueStatement : Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNextSiblings(declaration, false), "com.mbeddr.core.statements.structure.ContinueStatement"))) {
+      SNode loop = ContinueStatement_Behavior.call_getLoop_2496938924389293350(followingContinueStatement);
+      maybeAddMutexDestroyBefore(mutexDestroyCall, followingContinueStatement, declaration, loop);
+    }
+    // add a destruction statement before each follwing (nested) goto statement that refers to a label outside any 
+    // AST of the statements that follow 'declaration' 
+    for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
+      for (final SNode nestedGotoStatement : ListSequence.fromList(SNodeOperations.getDescendants(followingStatement, "com.mbeddr.core.modules.structure.GotoStatement", false, new String[]{}))) {
+        if (!(ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return it == SLinkOperations.getTarget(nestedGotoStatement, "label", false) || ListSequence.fromList(SNodeOperations.getDescendants(it, "com.mbeddr.core.modules.structure.LabelStatement", false, new String[]{})).contains(SLinkOperations.getTarget(nestedGotoStatement, "label", false));
+          }
+        }))) {
+          addMutexDestroyBefore(mutexDestroyCall, nestedGotoStatement);
+        }
+      }
+    }
+    for (final SNode followingGotoStatement : Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getNextSiblings(declaration, false), "com.mbeddr.core.modules.structure.GotoStatement"))) {
+      if (!(ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).any(new IWhereFilter<SNode>() {
+        public boolean accept(SNode it) {
+          return it == SLinkOperations.getTarget(followingGotoStatement, "label", false) || ListSequence.fromList(SNodeOperations.getDescendants(it, "com.mbeddr.core.modules.structure.LabelStatement", false, new String[]{})).contains(SLinkOperations.getTarget(followingGotoStatement, "label", false));
+        }
+      }))) {
+        addMutexDestroyBefore(mutexDestroyCall, followingGotoStatement);
+      }
+    }
+  }
+
+
+
+  private SNode getFunctionOrClosureForReturn(SNode returnStatement) {
+    if (ReturnStatement_Behavior.call_isInClosure_8709258261381626604(returnStatement)) {
+      return SNodeOperations.getAncestor(returnStatement, "com.mbeddr.core.modules.structure.Closure", false, false);
+    }
+    if (ReturnStatement_Behavior.call_isInFunction_8709258261381626617(returnStatement)) {
+      return SNodeOperations.getAncestor(returnStatement, "com.mbeddr.core.modules.structure.Function", false, false);
+    }
+    return null;
+  }
+
+
+
+  private void maybeAddMutexDestroyBefore(SNode mutexDestroyCall, SNode flowBreaker, SNode declaration, SNode flowBreakerTarget) {
+    if ((declaration != null) && ListSequence.fromList(SNodeOperations.getAncestors(declaration, null, false)).contains(flowBreakerTarget)) {
+      addMutexDestroyBefore(mutexDestroyCall, flowBreaker);
+    }
+  }
+
+
+
+  public void addMutexDestroyBefore(SNode mutexDestroyCall, SNode flowBreaker) {
+    SNodeOperations.insertPrevSiblingChild(flowBreaker, SNodeOperations.copyNode(mutexDestroyCall));
   }
 
 

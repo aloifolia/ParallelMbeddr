@@ -17,20 +17,16 @@ extern "C" {
 #endif
 
 struct GenericSharedDeclarations_SharedOf_int16_0 {
-  pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   int16_t value;
 };
 
 struct GenericSharedDeclarations_SharedOf_int32_0 {
-  pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   int32_t value;
 };
 
-void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute,pthread_mutex_t* mutex);
-
-void GenericSharedDeclarations_destroyMutex_0(pthread_mutex_t* mutex);
+extern pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
 
 #ifdef __cplusplus

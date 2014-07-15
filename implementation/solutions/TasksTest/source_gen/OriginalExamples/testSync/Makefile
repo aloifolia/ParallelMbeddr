@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_testSync=testSync.o testSync2.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o testSync_SharedTypes_0.o
+_OBJ_testSync=testSync.o testSync2.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o
 OBJ_testSync=$(patsubst %,$(ODIR)/%,$(_OBJ_testSync))
 
 

@@ -5,98 +5,81 @@
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
-#include "testSync_SharedTypes_0.h"
+#include <pthread.h>
 
-static struct testSync_SharedTypes_0_SharedOf_B_0 testSync_b;
-
-static inline void testSync_init_i_0(struct GenericSharedDeclarations_SharedOf_int16_0* i);
-
-static inline void testSync_destroy_i_0(struct GenericSharedDeclarations_SharedOf_int16_0* i);
-
-static inline void testSync_init_iCopy_0(struct GenericSharedDeclarations_SharedOf_int16_0* iCopy);
-
-static inline void testSync_destroy_iCopy_0(struct GenericSharedDeclarations_SharedOf_int16_0* iCopy);
-
-static inline void testSync_init_i2_0(struct GenericSharedDeclarations_SharedOf_int32_0* i2);
-
-static inline void testSync_destroy_i2_0(struct GenericSharedDeclarations_SharedOf_int32_0* i2);
+static void testSync_foo(void);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
+  pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
   testSync_initAllGlobalMutexes_0();
-  struct GenericSharedDeclarations_SharedOf_int16_0 i;
-  testSync_init_i_0(&i);
-  struct GenericSharedDeclarations_SharedOf_int16_0 iCopy;
-  testSync_init_iCopy_0(&iCopy);
-  struct GenericSharedDeclarations_SharedOf_int32_0 i2;
-  testSync_init_i2_0(&i2);
-  struct GenericSharedDeclarations_SharedOf_int32_0* sd = &i2;
-  struct GenericSharedDeclarations_SharedOf_int16_0* i2 = &i;
-  GenericSyncDeclarations_startSyncFor2Mutexes(&sd->mutex, &i2->mutex);
-  {
-    sd;
-  }
-
-  GenericSyncDeclarations_stopSyncFor2Mutexes(&sd->mutex, &i2->mutex);
-  <!TextGen not found for 'TasksAndSyncs.structure.SyncRessourceRef'!>;
-  <!TextGen not found for 'TasksAndSyncs.structure.SyncRessourceRef'!>;
-  for ( int8_t __j = 0; __j < 34; __j++ )
-  {
-    __j + 6;
-  }
-
-  testSync_destroy_i_0(&i);
-  testSync_destroy_iCopy_0(&iCopy);
-  testSync_destroy_i2_0(&i2);
+  testSync_destroyAllGlobalMutexes_0();
   return 0;
 }
 
 
-void testSync_initGlobalMutexesFor1Module_0(void) 
+static void testSync_foo(void) 
 {
-  GenericSharedDeclarations_initMutex_0(&testSync_b.mutexAttribute, &testSync_b.mutex);
+  struct GenericSharedDeclarations_SharedOf_int16_0 i;
+  pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  goto HERE;
+
+  if ( 1 ) 
+  {
+    pthread_mutex_destroy(&i.mutex);
+    return ;
+  }
+
+  while (1)
+  {
+    struct GenericSharedDeclarations_SharedOf_int32_0 j;
+    pthread_mutex_init(&j.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+    if ( 0 ) 
+    {
+      struct GenericSharedDeclarations_SharedOf_int32_0 j2;
+      pthread_mutex_init(&j2.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+      pthread_mutex_destroy(&j.mutex);
+      pthread_mutex_destroy(&j2.mutex);
+      break;
+      pthread_mutex_destroy(&j.mutex);
+      pthread_mutex_destroy(&j2.mutex);
+      continue;
+    }
+
+    int16_t k = 3;
+    pthread_mutex_destroy(&j.mutex);
+  }
+
+  switch (0)
+  {
+    case 1: {
+      struct GenericSharedDeclarations_SharedOf_int32_0 j;
+      pthread_mutex_init(&j.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+      pthread_mutex_destroy(&j.mutex);
+      break;
+    }
+    case 0: {
+      struct GenericSharedDeclarations_SharedOf_int32_0 j;
+      pthread_mutex_init(&j.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+      pthread_mutex_destroy(&j.mutex);
+    }
+  }
+
+  
+  HERE:
+
+  pthread_mutex_destroy(&i.mutex);
 }
 
 
 void testSync_initAllGlobalMutexes_0(void) 
 {
-  testSync_initGlobalMutexesFor1Module_0();
 }
 
 
-static  void testSync_init_i_0(struct GenericSharedDeclarations_SharedOf_int16_0* i) 
+void testSync_destroyAllGlobalMutexes_0(void) 
 {
-  GenericSharedDeclarations_initMutex_0(&i->mutexAttribute, &i->mutex);
-}
-
-
-static  void testSync_destroy_i_0(struct GenericSharedDeclarations_SharedOf_int16_0* i) 
-{
-  GenericSharedDeclarations_destroyMutex_0(&i->mutex);
-}
-
-
-static  void testSync_init_iCopy_0(struct GenericSharedDeclarations_SharedOf_int16_0* iCopy) 
-{
-  GenericSharedDeclarations_initMutex_0(&iCopy->mutexAttribute, &iCopy->mutex);
-}
-
-
-static  void testSync_destroy_iCopy_0(struct GenericSharedDeclarations_SharedOf_int16_0* iCopy) 
-{
-  GenericSharedDeclarations_destroyMutex_0(&iCopy->mutex);
-}
-
-
-static  void testSync_init_i2_0(struct GenericSharedDeclarations_SharedOf_int32_0* i2) 
-{
-  GenericSharedDeclarations_initMutex_0(&i2->mutexAttribute, &i2->mutex);
-}
-
-
-static  void testSync_destroy_i2_0(struct GenericSharedDeclarations_SharedOf_int32_0* i2) 
-{
-  GenericSharedDeclarations_destroyMutex_0(&i2->mutex);
 }
 
 
