@@ -9,7 +9,7 @@ When executed a task term yields a handle to a parallel unit of execution. This 
 
 $t ::= ... |\;\mathit{Task{<}t{>}}$
 
-Due to implementation reasons(TODO: ref) the embraced return type of a task must be either \textit{void} or a pointer to the type of the embraced expression:
+Due to implementation reasons (see \ref{futuresTranslation} for details) the embraced return type of a task must be either \textit{void} or a pointer to the type of the embraced expression:
 
 \begin{align*}
 \inference*[VoidTask]{e |- \mathit{void}}{|e| |- \mathit{Task{<}void{>}}} 
@@ -27,7 +27,8 @@ $e ::= ...|\;e.\mathit{clear}$
 If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data, i.e. the reference environment of its free variables, with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by the clearance of its task template. 
 
 \subsection{Translation}
-The POSIX Threads standard and library (pthreads) was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code when compared to frameworks like OpenMP\footnote{http://openmp.org/}. Every task in ParalllelMbeddr is represented by a thread as provided by the POSIX threads standard. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
+\label{tasksTranslation}
+The POSIX Threads standard and library (pthreads) was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code when compared to frameworks like OpenMP\footnote{http://openmp.org/}. Every task in ParalllelMbeddr is represented by a thread as provided by the POSIX threads standard, a so-called \textit{pthread}\footnote{In the following sections `pthreads' will denote both the library and multiple threads as they are provided by the library. The context should always clarify which one is currently meant.}. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
 %\begin{ccode}
 %void* parFun_X(void* voidArgs) {...}
 %\end{ccode}
@@ -78,7 +79,7 @@ void* parFun_X(void* voidArgs) {
 
 Again, any argument-related code is generated as needed.
 
-The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99.}. The \textit{void} pointer of the arguments \CODE{voidArgs} does not keep their type information and with it their byte size. Therefore an additional field \CODE{argsSize} is needed in order to be able to create copies of the arguments later on(TODO forwared ref).
+The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99.}. The \textit{void} pointer of the arguments \CODE{voidArgs} does not keep their type information and with it their byte size. Therefore an additional field \CODE{argsSize} is needed in order to be able to create copies of the arguments later on (see \ref{futuresTranslation} for details).
 \begin{ccode}
 exported struct Task {
   void* args;
@@ -128,7 +129,7 @@ Without any references to bind a task is just reduced to the compound literal:
 (Task_X){ null, parFun_X, 0 }
 \end{ccode}
 
-By above definition of \CODE{parFun\_X} it becomes clear that the output of a task is routed via the heap instead of the stack. Additionally the arguments of a task---its environment---are stored on the heap before execution. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments of a task have to be deleted by the programmer by hand. Since for reasons to be explained later the result is returned via a pointer onto the heap it now becomes obvious that the return type of a task must either be a void type or a pointer type as was mentioned in the design section. Concerning task arguments one advantage of this implementation is that a task may be passed by value, e.g. when using a builder function to create tasks, without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
+By above definition of \CODE{parFun\_X} it becomes clear that the arguments of a task---its environment---are stored on the heap before execution. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments of a task have to be deleted by the programmer by hand. Since for reasons to be explained later the result is returned via a pointer onto the heap, as well, it now becomes obvious that the return type of a task must either be a void type or a pointer type as was mentioned in the design section. Concerning task arguments one advantage of this implementation is that a task may be passed by value, e.g. when using a builder function to create tasks, without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
 
 The clearance of a task \CODE{e.clear} in the generated code is a call of the \CODE{free} function of C parameterized with the arguments of the translated task \CODE{e'}:
 \begin{ccode}

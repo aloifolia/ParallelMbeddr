@@ -16,6 +16,7 @@
 \gdef\HyperFirstAtBeginDocument#1{#1}
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
+\providecommand \oddpage@label [2]{}
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -62,6 +63,7 @@
 \citation{CForBASICProgrammers}
 \@writefile{toc}{\contentsline {section}{\numberline {2.10}MPS and mbeddr}{5}{section.2.10}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.11}C}{5}{section.2.11}}
+\newlabel{cBasics}{{2.11}{5}{C}{section.2.11}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Design and Translation}{6}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -69,29 +71,46 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Tasks}{6}{section.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}Design}{6}{subsection.3.1.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Translation}{6}{subsection.3.1.2}}
+\newlabel{tasksTranslation}{{3.1.2}{6}{Translation}{subsection.3.1.2}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Example code}{8}{subsection.3.1.3}}
 \citation{Halstead_Multilisp}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Futures}{9}{section.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Design}{9}{subsection.3.2.1}}
 \citation{UnderstandingAndUsingCPointers}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Translation}{10}{subsection.3.2.2}}
+\newlabel{futuresTranslation}{{3.2.2}{10}{Translation}{subsection.3.2.2}{}}
 \citation{CPrimerPlus}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Example code}{11}{subsection.3.2.3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Shared memory}{12}{section.3.3}}
+\newlabel{sharedMemory}{{3.3}{12}{Shared memory}{section.3.3}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Design}{12}{subsection.3.3.1}}
+\citation{JavaPerformanceTuning}
+\citation{FastAndDeterministicHashTable}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Translation of shared types}{14}{subsection.3.3.2}}
 \citation{LinuxSystemProgramming}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Implementation}{14}{subsection.3.3.2}}
+\citation{Mutexes}
+\newlabel{mutexCopies}{{32}{18}{}{Hfootnote.32}{}}
+\citation{Mutexes}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Translation of synchronization statements}{19}{subsection.3.3.3}}
 \citation{AnIntroductionToParallelProgramming}
 \citation{ProgrammingWithPOSIXThreads}
 \citation{ObstructionFreeAuthorizationEnforcement}
 \citation{AdvancedContentionManagement}
 \citation{XorshiftRngs}
+\citation{ProgrammingInC}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Safety measures}{21}{section.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Avoidance of implicitly shared unprotected data}{21}{subsection.3.4.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Copying pointers to unshared data into tasks}{22}{subsection.3.4.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Unsynchronized access to synchronizable data}{22}{subsection.3.4.3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.4}Address leakage of shared ressource values}{23}{subsection.3.4.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Overwriting shared ressources}{24}{subsection.3.4.5}}
+\newlabel{overwritingSharedResources}{{3.4.5}{24}{Overwriting shared ressources}{subsection.3.4.5}{}}
 \bibdata{content/literature}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Evaluation}{21}{chapter.4}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Evaluation}{25}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\bibcite{LanguageWorkbenches}{1}
+\bibcite{Mutexes}{1}
 \bibcite{ObstructionFreeAuthorizationEnforcement}{2}
 \bibcite{TransactionalProgrammabilityAndPerformance}{3}
 \bibcite{CForBASICProgrammers}{4}
@@ -101,28 +120,32 @@
 \bibcite{OSs_AConceptBasedApproach}{8}
 \bibcite{ParallelComputing}{9}
 \bibcite{OperatingSystems_by_Dhotre}{10}
-\bibcite{PrinciplesOfModernOSs}{11}
-\bibcite{PrinciplesOfTransactionalMemory}{12}
-\bibcite{OperatingSystems_by_Haldar}{13}
-\bibcite{Halstead_Multilisp}{14}
-\bibcite{TransactionalMemory}{15}
-\bibcite{UniversalModularACTORFormalism}{16}
-\bibcite{TamingJavaThreads}{17}
-\bibcite{MultiProgWithJavaTech}{18}
-\bibcite{AdvancedLinuxProgramming}{19}
-\bibcite{LinuxSystemProgramming}{20}
-\bibcite{XorshiftRngs}{21}
-\bibcite{ThePolyadicPi-Calculus}{22}
-\bibcite{DebuggingRaceConditions}{23}
-\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{22}{section*.6}}
-\bibcite{AnIntroductionToParallelProgramming}{24}
-\bibcite{IntroductionToOperatingSystems}{25}
-\bibcite{CPrimerPlus}{26}
-\bibcite{DistributedSharedMemory}{27}
-\bibcite{UnderstandingAndUsingCPointers}{28}
-\bibcite{AdvancedContentionManagement}{29}
-\bibcite{OfficialISC2Guide}{30}
-\bibcite{GenericTools_SpecificLanguages}{31}
-\bibcite{MakingEmbeddedSystems}{32}
+\bibcite{LanguageWorkbenches}{11}
+\bibcite{PrinciplesOfModernOSs}{12}
+\bibcite{PrinciplesOfTransactionalMemory}{13}
+\bibcite{OperatingSystems_by_Haldar}{14}
+\bibcite{Halstead_Multilisp}{15}
+\bibcite{TransactionalMemory}{16}
+\bibcite{UniversalModularACTORFormalism}{17}
+\bibcite{TamingJavaThreads}{18}
+\bibcite{FastAndDeterministicHashTable}{19}
+\bibcite{MultiProgWithJavaTech}{20}
+\bibcite{AdvancedLinuxProgramming}{21}
+\@writefile{toc}{\contentsline {chapter}{Literaturverzeichnis}{26}{section*.6}}
+\bibcite{LinuxSystemProgramming}{22}
+\bibcite{XorshiftRngs}{23}
+\bibcite{ThePolyadicPi-Calculus}{24}
+\bibcite{ProgrammingInC}{25}
+\bibcite{DebuggingRaceConditions}{26}
+\bibcite{AnIntroductionToParallelProgramming}{27}
+\bibcite{IntroductionToOperatingSystems}{28}
+\bibcite{CPrimerPlus}{29}
+\bibcite{DistributedSharedMemory}{30}
+\bibcite{UnderstandingAndUsingCPointers}{31}
+\bibcite{AdvancedContentionManagement}{32}
+\bibcite{JavaPerformanceTuning}{33}
+\bibcite{OfficialISC2Guide}{34}
+\bibcite{GenericTools_SpecificLanguages}{35}
+\bibcite{MakingEmbeddedSystems}{36}
 \bibstyle{plain}
 \ttl@finishall

@@ -10,8 +10,7 @@ Like with tasks the type of a future is parameterized by its return type:
 
 $ t ::= ...|\;\mathit{Future{<}t{>}}$
 
-\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a running task that is represented by a future handle \CODE{e}, i.e. halts the execution of the calling task until \CODE{e}'s execution is finished, and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. %For efficiency reasons (see translation (TODO: ref)) it is not possible to \CODE{join} a future that returns a result. 
-These properties are reflected in the typing rules:
+\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a running task that is represented by a future handle \CODE{e}, i.e. halts the execution of the calling task until \CODE{e}'s execution is finished, and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. These properties are reflected in the typing rules:
 
 \begin{center}
 \begin{align*}
@@ -27,6 +26,7 @@ As was already depicted in the previous section
 \CODE{result} returns a pointer to a heap-managed value. Hence the programmer has to take care of freeing the value eventually.
 
 \subsection{Translation}
+\label{futuresTranslation}
 A future type \CODE{Future<t*>} is translated to a generic \CODE{struct} that contains a handle to the thread, a storage for the result value---which is dropped for futures of type \CODE{Future<void>}---and a flag that indicates whether the thread is already finished:
 \begin{ccode}
 exported struct Future { 
@@ -36,7 +36,7 @@ exported struct Future {
 };
 \end{ccode}
 
-For every task and future expression shown above a generic function reflects the semantics in the translation. The \CODE{run} of a task involves taking a task, creating a pthread with the task's function pointer and arguments and generating a future with the initialized thread handle\footnote{Obviously the thread handle is copied into the \CODE{Future}. This is safe as can be seen when looking at the POSIX function \CODE{pthread\_t pthread\_self(void)} which also returns a copy of a thread handle. This useful property is worth mentioning since it does not hold for all POSIX related data structures as will become clear in the synchronization section(TODO: ref).}:
+For every task and future expression shown above a generic function reflects the semantics in the translation. The \CODE{run} of a task involves taking a task, creating a pthread with the task's function pointer and arguments and generating a future with the initialized thread handle\footnote{Obviously the thread handle is copied into the \CODE{Future}. This is safe as can be seen when looking at the POSIX function \CODE{pthread\_t pthread\_self(void)} which also returns a copy of a thread handle. This useful property is worth mentioning since it does not hold for all POSIX related data structures as is explained in footnote \ref{mutexCopies}.}:
 \begin{ccode}
 Future runTaskAndGetFuture(Task task) { 
   pthread_t pth;
@@ -50,7 +50,7 @@ Future runTaskAndGetFuture(Task task) {
   return ( Future ){ .pth = pth }; 
 }
 \end{ccode}
-The code shows that the arguments to be provided to the thread are copied onto a new location on the heap although they already reside on the heap as was shown in the previous section (TODO: backref). It is necessary to do so in order to avoid dangling pointers. These could arise when a task is cleared so that its arguments get deleted while one ore more running instances (pthreads) of this task are not finished, yet. Furthermore generally every thread needs its own copy of the data in case it modifies it. A corresponding function to the previous function, called \CODE{runTaskAndGetVoidFuture}, is generated for futures that return nothing. The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. Like was already previously suggested it expects a function pointer of type \CODE{void* -> void*} which is the reason why the function generated for a task is equally typed. The result is, thus, a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existance of the value after thread termination could not be guaranteed a dangling pointer\cite{UnderstandingAndUsingCPointers} could emerge, which resembles the problem for thread arguments. The only safe alternative that fits the task-future structure well is to allocate memory on the heap and return the address of this memory(TODO: back-ref to parFun). The translation of the result retrieval is a call the function:
+The code shows that the arguments to be provided to the thread are copied onto a new location on the heap although they already reside on the heap as was shown in section \ref{tasksTranslation}. It is necessary to do so in order to avoid dangling pointers. These could arise when a task is cleared so that its arguments get deleted while one ore more running instances (pthreads) of this task are not finished, yet. Furthermore generally every thread needs its own copy of the data in case it modifies it. A corresponding function to the previous function, called \CODE{runTaskAndGetVoidFuture}, is generated for futures that return nothing. The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. Like was already previously suggested it expects a function pointer of type \CODE{void* -> void*} which is the reason why the function generated for a task is equally typed. The result is, thus, a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existance of the value after thread termination could not be guaranteed a dangling pointer\cite{UnderstandingAndUsingCPointers} could emerge, which resembles the problem for thread arguments. The only safe alternative that fits the task-future structure well is to allocate memory on the heap and return the address of this memory (see section \ref{tasksTranslation}). The translation of the result retrieval is a call the function:
 
 \begin{ccode}
 void* getFutureResult(Future* future) { 

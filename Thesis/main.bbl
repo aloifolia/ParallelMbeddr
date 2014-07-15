@@ -1,7 +1,11 @@
 \begin{thebibliography}{10}
 
-\bibitem{LanguageWorkbenches}
-Language workbenches: The killer-app for domain specific languages?
+\bibitem{Mutexes}
+{The Open Group} pthread\_mutex\_destroy, pthread\_mutex\_init - destroy and
+  initialize a mutex.
+\newblock
+  \url{http://pubs.opengroup.org/onlinepubs/009695399/functions/pthread\_mutex_destroy.html}.
+\newblock Accessed: 2014-07-15.
 
 \bibitem{ObstructionFreeAuthorizationEnforcement}
 David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
@@ -53,6 +57,12 @@ I.A. Dhotre.
 \newblock {\em Operating Systems}.
 \newblock Technical Publications, 2007.
 
+\bibitem{LanguageWorkbenches}
+Martin Fowler.
+\newblock Language workbenches: The killer-app for domain specific languages?
+\newblock \url{http://www.martinfowler.com/articles/languageWorkbench.html}.
+\newblock Published: 2005-06-12.
+
 \bibitem{PrinciplesOfModernOSs}
 J.M. Garrido, R.~Schlesinger, and K.~Hoganson.
 \newblock {\em Principles of Modern Operating Systems}.
@@ -92,6 +102,13 @@ A.~Holub.
 \newblock {\em Taming Java Threads}.
 \newblock Apresspod Series. Apress, 2000.
 
+\bibitem{FastAndDeterministicHashTable}
+Kun Huang, Gaogang Xie, Rui Li, and Shuai Xiong.
+\newblock Fast and deterministic hash table lookup using discriminative bloom
+  filters.
+\newblock {\em Journal of Network and Computer Applications}, 36(2):657--666,
+  2013.
+
 \bibitem{MultiProgWithJavaTech}
 B.~Lewis and D.J. Berg.
 \newblock {\em Multithreaded Programming with Java Technology}.
@@ -117,6 +134,11 @@ George Marsaglia.
 Robin Milner.
 \newblock The polyadic pi-calculus: a tutorial.
 \newblock Technical report, Logic and Algebra of Specification, 1991.
+
+\bibitem{ProgrammingInC}
+A.~Mittal.
+\newblock {\em Programming In C: A Practical Approach}.
+\newblock Pearson Education, 2010.
 
 \bibitem{DebuggingRaceConditions}
 Robert H.~B. Netzer, Timothy~W. Brennan, and Suresh~K. Damodaran-Kamal.
@@ -156,13 +178,18 @@ William~N Scherer~III and Michael~L Scott.
 \newblock In {\em Proceedings of the twenty-fourth annual ACM symposium on
   Principles of distributed computing}, pages 240--248. ACM, 2005.
 
+\bibitem{JavaPerformanceTuning}
+J.~Shirazi.
+\newblock {\em Java Performance Tuning}.
+\newblock Java Series. O'Reilly Media, Incorporated, 2003.
+
 \bibitem{OfficialISC2Guide}
 C.~Steven~Hernandez.
 \newblock {\em Official (ISC)2 Guide to the CISSP CBK, Second Edition}.
 \newblock (ISC)2 Press. Taylor \& Francis, 2009.
 
 \bibitem{GenericTools_SpecificLanguages}
-Markus Völter.
+Markus V{\"o}lter.
 \newblock Generic tools, specific languages.
 
 \bibitem{MakingEmbeddedSystems}

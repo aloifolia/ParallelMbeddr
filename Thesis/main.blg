@@ -8,9 +8,9 @@ I was expecting a `,' or a `}'---line 156 of file content/literature.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "GenericTools_SpecificLanguages" isn't style-file defined
 --line 187 of file content/literature.bib
-Warning--entry type for "LanguageWorkbenches" isn't style-file defined
---line 194 of file content/literature.bib
-Warning--to sort, need author or key in LanguageWorkbenches
+Warning--I'm ignoring LanguageWorkbenches's extra "note" field
+--line 198 of file content/literature.bib
+Warning--to sort, need author or key in Mutexes
 Warning--empty publisher in IntroductionToOperatingSystems
 Warning--empty year in IntroductionToOperatingSystems
 (There was 1 error message)

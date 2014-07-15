@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  14 JUL 2014 15:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  15 JUL 2014 17:37
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -908,7 +908,40 @@ and general definitions.
 \@@pLineBox=\box38
 \@@cBox=\box39
 \@@pBox=\box40
-)) (C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
+)
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjustbox.sty
+Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
+
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\trimclip.sty
+Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
+
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\collectbox\collectbox.st
+y
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box41
+)
+\tc@llx=\dimen154
+\tc@lly=\dimen155
+\tc@urx=\dimen156
+\tc@ury=\dimen157
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen158
+\adjbox@Height=\dimen159
+\adjbox@Depth=\dimen160
+\adjbox@Totalheight=\dimen161
+
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\ifoddpage\ifoddpage.sty
+Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
+\c@checkoddpage=\count140
+))) (C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
 (C:\Users\Bastian\Desktop\github-master\Thesis\config/code-formatting.tex)
 
 LaTeX Warning: Unused global option(s):
@@ -952,19 +985,19 @@ File: t15ch.fd 2008/06/23 Fontinst v1.927 font definitions for T1/5ch.
 )
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count140
-\scratchdimen=\dimen154
-\scratchbox=\box41
-\nofMPsegments=\count141
-\nofMParguments=\count142
+\scratchcounter=\count141
+\scratchdimen=\dimen162
+\scratchbox=\box42
+\nofMPsegments=\count142
+\nofMParguments=\count143
 \everyMPshowfont=\toks44
-\MPscratchCnt=\count143
-\MPscratchDim=\dimen155
-\MPnumerator=\count144
-\makeMPintoPDFobject=\count145
+\MPscratchCnt=\count144
+\MPscratchDim=\dimen163
+\MPnumerator=\count145
+\makeMPintoPDFobject=\count146
 \everyMPtoPDFconversion=\toks45
 )
-\AtBeginShipoutBox=\box42
+\AtBeginShipoutBox=\box43
 
 *geometry* detected driver: dvips
 *geometry* verbose mode - [ preamble ] result:
@@ -1007,7 +1040,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count147
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
@@ -1016,7 +1049,7 @@ LaTeX Info: Redefining \nameref on input line 12.
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.out)
 \@outlinefile=\write3
-\c@lstlisting=\count147
+\c@lstlisting=\count148
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/header.tex
 \@TUD@tmp@baselineskip=\skip113
@@ -1034,11 +1067,11 @@ LaTeX Info: Redefining \nameref on input line 12.
 \TUD@instlogoheight=\skip125
 \TUD@instlogowidth=\skip126
 \TUD@sponsorheight=\skip127
-\TUD@titlebox=\box43
-\TUD@subtitlebox=\box44
-\TUD@logobox=\box45
-\TUD@instbox=\box46
-\TUD@sponsorbox=\box47
+\TUD@titlebox=\box44
+\TUD@subtitlebox=\box45
+\TUD@logobox=\box46
+\TUD@instbox=\box47
+\TUD@sponsorbox=\box48
 \TUD@tmp@height=\skip128
 \TUD@tmp@depth=\skip129
 LaTeX Font Info:    Try loading font information for T1+5fp on input line 7.
@@ -1143,8 +1176,8 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.86201pt on input line 7.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 5.92201pt on input line 7.
-\@TUD@titlelines=\count148
- <tud_logo.pdf, id=111, 157.58875pt x 63.23625pt>
+\@TUD@titlelines=\count149
+ <tud_logo.pdf, id=139, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1154,7 +1187,7 @@ File: tud_logo.pdf Graphic file (type pdf)
 <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
 (pdftex.def)             Requested size: 134.92238pt x 62.59605pt.
-\@TUD@logolines=\count149
+\@TUD@logolines=\count150
  [-1
 Non-PDF special ignored!
 
@@ -1256,17 +1289,17 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 [3
 
 ] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/implementation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 41--1
+Underfull \hbox (badness 10000) in paragraph at lines 42--1
 
  []
 
@@ -1285,13 +1318,13 @@ LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 6.04803pt on input line 6.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 8.25606pt on input line 30.
+(Font)              scaled to size 8.25606pt on input line 31.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.85603pt on input line 30.
+(Font)              scaled to size 5.85603pt on input line 31.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 4.99202pt on input line 30.
+(Font)              scaled to size 4.99202pt on input line 31.
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <10> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 30.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 31.
 
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2014/03/04 1.5c listings language file
@@ -1299,85 +1332,86 @@ File: lstlang1.sty 2014/03/04 1.5c listings language file
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 )
+[6
+
+]
 LaTeX Font Info:    Font shape `T1/5fp/b/n' in size <9.1> not available
-(Font)              Font shape `T1/5fp/mb/n' tried instead on input line 35.
-LaTeX Font Info:    Try loading font information for TS1+5fp on input line 35.
+(Font)              Font shape `T1/5fp/mb/n' tried instead on input line 36.
+LaTeX Font Info:    Try loading font information for TS1+5fp on input line 36.
 
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\frontpage\ts15fp.fd
 File: ts15fp.fd 2009/08/06 Fontinst v1.927 font definitions for TS1/5fp.
 )
-[6
-
-]
 LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <8.3> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 38.
- [7]
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 9.12006pt on input line 98.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 6.33604pt on input line 98.
-LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 5.47203pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 8.93002pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.20401pt on input line 98.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.358pt on input line 98.
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 39.
 
-Overfull \hbox (2.5531pt too wide) in paragraph at lines 101--102
+[7]
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 9.12006pt on input line 99.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 6.33604pt on input line 99.
+LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
+(Font)              scaled to size 5.47203pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 8.93002pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 6.20401pt on input line 99.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.358pt on input line 99.
+
+Overfull \hbox (2.5531pt too wide) in paragraph at lines 102--103
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (9.72392pt too wide) in paragraph at lines 117--118
+Overfull \hbox (9.72392pt too wide) in paragraph at lines 118--119
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <9.1> not available
-(Font)              Font shape `T1/5fp/m/sl' tried instead on input line 144.
+(Font)              Font shape `T1/5fp/m/sl' tried instead on input line 145.
 [8]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
 [9] [10]
 Overfull \hbox (12.99788pt too wide) in paragraph at lines 99--109
@@ -1390,63 +1424,123 @@ Overfull \hbox (12.99788pt too wide) in paragraph at lines 110--120
  []
 
 [11]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
-Underfull \hbox (badness 10000) in paragraph at lines 31--32
+[12] <pics/ParallelExecutionAttempt.pdf, id=532, 224.33812pt x 168.63pt>
+File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
+<use pics/ParallelExecutionAttempt.pdf>
+Package pdftex.def Info: pics/ParallelExecutionAttempt.pdf used on input line 5
+6.
+(pdftex.def)             Requested size: 201.90244pt x 151.76558pt.
+
+Overfull \hbox (27.62627pt too wide) in paragraph at lines 56--57
+[][] 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+<pics/SerialExecution.pdf, id=533, 191.21437pt x 220.57407pt>
+File: pics/SerialExecution.pdf Graphic file (type pdf)
 
+<use pics/SerialExecution.pdf>
+Package pdftex.def Info: pics/SerialExecution.pdf used on input line 67.
+(pdftex.def)             Requested size: 172.09134pt x 198.51482pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Overfull \hbox (10.23518pt too wide) in paragraph at lines 83--84
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<pics/ParallelExecution.pdf, id=552, 224.33812pt x 168.63pt>
+File: pics/ParallelExecution.pdf Graphic file (type pdf)
+
+<use pics/ParallelExecution.pdf>
+Package pdftex.def Info: pics/ParallelExecution.pdf used on input line 92.
+(pdftex.def)             Requested size: 201.90244pt x 151.76558pt.
+
+Overfull \hbox (27.62627pt too wide) in paragraph at lines 92--93
+[][] 
+ []
+
+[14 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecutionAttemp
+t.pdf> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/SerialExecution.pdf
+
+pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
+s/pics/SerialExecution.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pdf
+
+pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
+s/pics/ParallelExecution.pdf): PDF inclusion: multiple pdfs with page group inc
+luded in a single page
+>] <pics/AstForBaseTypes.pdf, id=643, 114.30634pt x 315.33504pt>
+File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
+
+<use pics/AstForBaseTypes.pdf>
+Package pdftex.def Info: pics/AstForBaseTypes.pdf used on input line 128.
+(pdftex.def)             Requested size: 80.01387pt x 220.73302pt.
+
+Overfull \hbox (64.90321pt too wide) in paragraph at lines 114--130
+[]$[]$ $[]$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 57--58
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-[13] [14] [15] [16]
-Overfull \hbox (4.15462pt too wide) in paragraph at lines 187--189
+ [15]
+[16 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/AstForBaseTypes.pdf>]
+[17]
+Overfull \hbox (4.15462pt too wide) in paragraph at lines 263--265
 [][][][][][][][][][][][][][] 
  []
 
-[17]
-Overfull \hbox (11.69861pt too wide) in paragraph at lines 244--245
+[18]
+Overfull \hbox (11.69861pt too wide) in paragraph at lines 322--323
 [][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.29721pt too wide) in paragraph at lines 246--247
+Overfull \hbox (10.29721pt too wide) in paragraph at lines 324--325
 [][][][][][][][][][][][][][][][][][] 
  []
 
-[18])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[19] [20]
+[19] [20])
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/safety-enhancements.tex
+[21] [22]
+
+LaTeX Warning: Reference `TODO' on page 23 undefined on input line 79.
+
+)) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[23] [24]
 Kapitel 4.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [21
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [25
 
-] [22
+] [26
 
 ])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 41.
- [23]
+ [27]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 41.
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 41.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 41.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E30BE1A88B49D96600FBC029726DCB43;1732.
+(rerunfilecheck)             Checksum: EAEF2BEFE3F372418F7046BBEFBDA619;2385.
+
+
+LaTeX Warning: There were undefined references.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 41.
  ) 
 Here is how much of TeX's memory you used:
- 15442 strings out of 493921
- 236017 string characters out of 3144870
- 391924 words of memory out of 3000000
- 17898 multiletter control sequences out of 15000+200000
+ 16084 strings out of 493921
+ 247498 string characters out of 3144870
+ 406054 words of memory out of 3000000
+ 18434 multiletter control sequences out of 15000+200000
  198580 words of font info for 165 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,15n,95p,2212b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,15n,95p,2373b,1960s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/devel/latex/
 tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
@@ -1462,9 +1556,9 @@ n/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts/type1/m
 athdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/font
 s/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/
 fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (25 pages, 324132 bytes).
+Output written on main.pdf (29 pages, 925387 bytes).
 PDF statistics:
- 868 PDF objects out of 1000 (max. 8388607)
- 445 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1100 PDF objects out of 1200 (max. 8388607)
+ 522 named destinations out of 1000 (max. 500000)
+ 310 words of extra memory for PDF output out of 10000 (max. 10000000)
 
