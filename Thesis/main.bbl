@@ -41,6 +41,11 @@ D.E. Culler, J.P. Singh, and A.~Gupta.
 \newblock The Morgan Kaufmann Series in Computer Architecture and Design
   Series. Morgan Kaufmann Publishers, 1999.
 
+\bibitem{MapReduce}
+Jeffrey Dean and Sanjay Ghemawat.
+\newblock Mapreduce: simplified data processing on large clusters.
+\newblock {\em Communications of the ACM}, 51(1):107--113, 2008.
+
 \bibitem{OSs_AConceptBasedApproach}
 D.M. Dhamdhere.
 \newblock {\em Operating Systems: A Concept-based Approach,2E}.

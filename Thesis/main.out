@@ -24,11 +24,12 @@
 \BOOKMARK [2][-]{subsection.3.3.1}{Design}{section.3.3}% 24
 \BOOKMARK [2][-]{subsection.3.3.2}{Translation of shared types}{section.3.3}% 25
 \BOOKMARK [2][-]{subsection.3.3.3}{Translation of synchronization statements}{section.3.3}% 26
-\BOOKMARK [1][-]{section.3.4}{Safety measures}{chapter.3}% 27
-\BOOKMARK [2][-]{subsection.3.4.1}{Avoidance of implicitly shared unprotected data}{section.3.4}% 28
-\BOOKMARK [2][-]{subsection.3.4.2}{Copying pointers to unshared data into tasks}{section.3.4}% 29
-\BOOKMARK [2][-]{subsection.3.4.3}{Unsynchronized access to synchronizable data}{section.3.4}% 30
-\BOOKMARK [2][-]{subsection.3.4.4}{Address leakage of shared ressource values}{section.3.4}% 31
-\BOOKMARK [2][-]{subsection.3.4.5}{Overwriting shared ressources}{section.3.4}% 32
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 33
-\BOOKMARK [0][-]{section*.6}{Literaturverzeichnis}{}% 34
+\BOOKMARK [2][-]{subsection.3.3.4}{Example code}{section.3.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Safety measures}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Avoidance of implicitly shared unprotected data}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Copying pointers to unshared data into tasks}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{Unsynchronized access to synchronizable data}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.4}{Address leakage of shared ressource values}{section.3.4}% 32
+\BOOKMARK [2][-]{subsection.3.4.5}{Overwriting shared ressources}{section.3.4}% 33
+\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 34
+\BOOKMARK [0][-]{section*.6}{Literaturverzeichnis}{}% 35

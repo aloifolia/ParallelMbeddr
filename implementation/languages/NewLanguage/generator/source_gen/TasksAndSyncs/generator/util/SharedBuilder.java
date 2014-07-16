@@ -7,6 +7,8 @@ import java.util.List;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import com.mbeddr.core.expressions.behavior.Type_Behavior;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
+import java.util.ArrayList;
+import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import java.util.Map;
 import jetbrains.mps.internal.collections.runtime.MapSequence;
 import java.util.HashMap;
@@ -22,10 +24,8 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.generator.template.TemplateQueryContext;
-import java.util.ArrayList;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import org.jetbrains.mps.openapi.model.SModel;
-import jetbrains.mps.internal.collections.runtime.IWhereFilter;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import java.util.Set;
@@ -58,10 +58,46 @@ public class SharedBuilder {
     for (Pair<U, T> typeAndStruct : ListSequence.fromList(typesToValues)) {
       SNode currentType = typeAndStruct.first;
       if (Type_Behavior.call_isSubtypeOf_2124837493917340416(currentType, type) && Type_Behavior.call_isSubtypeOf_2124837493917340416(SNodeOperations.cast(type, "com.mbeddr.core.expressions.structure.Type"), currentType)) {
-        return typeAndStruct.second;
+        List<SNode> subPoiLikes1 = getPointerLikeTypes(currentType);
+        List<SNode> subPoiLikes2 = getPointerLikeTypes(type);
+        if (ListSequence.fromList(subPoiLikes1).count() == ListSequence.fromList(subPoiLikes2).count()) {
+          boolean noCoincidingPointerAndArrayTypes = true;
+          for (int i = 0; i < ListSequence.fromList(subPoiLikes1).count(); ++i) {
+            noCoincidingPointerAndArrayTypes &= areNotPointerAndArrayTypes(ListSequence.fromList(subPoiLikes1).getElement(i), ListSequence.fromList(subPoiLikes2).getElement(i));
+          }
+          if (noCoincidingPointerAndArrayTypes) {
+            return typeAndStruct.second;
+          }
+        }
       }
     }
     return null;
+  }
+
+
+
+  public static boolean areNotPointerAndArrayTypes(SNode type1, SNode type2) {
+    if (SNodeOperations.isInstanceOf(type1, "com.mbeddr.core.pointers.structure.ArrayType") && SNodeOperations.isInstanceOf(type2, "com.mbeddr.core.pointers.structure.PointerType")) {
+      return false;
+    }
+    if (SNodeOperations.isInstanceOf(type1, "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(type2, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      return false;
+    }
+    return true;
+  }
+
+
+
+  private static List<SNode> getPointerLikeTypes(SNode type) {
+    List<SNode> pointerLikeTypes = new ArrayList<SNode>();
+    if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType") || SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
+      ListSequence.fromList(pointerLikeTypes).addElement(type);
+    }
+    return ListSequence.fromList(pointerLikeTypes).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(type, "com.mbeddr.core.expressions.structure.Type", false, new String[]{})).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.isInstanceOf(it, "com.mbeddr.core.pointers.structure.ArrayType") || SNodeOperations.isInstanceOf(it, "com.mbeddr.core.pointers.structure.PointerType");
+      }
+    }));
   }
 
 
@@ -214,7 +250,6 @@ public class SharedBuilder {
         resolveType(SLinkOperations.getTarget(member, "type", true));
       }
     });
-    SNode declaringModule = SNodeOperations.getAncestor(struct, "com.mbeddr.core.modules.structure.ImplementationModule", false, false);
     for (SNode member : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(struct))) {
       ListSequence.fromList(SNodeOperations.getDescendants(member, "com.mbeddr.core.udt.structure.StructType", false, new String[]{})).visitAll(new IVisitor<SNode>() {
         public void visit(SNode structType) {
@@ -967,6 +1002,9 @@ public class SharedBuilder {
         return node_5512582143363057690;
       }
     }.invoke();
+    if (SPropertyOperations.getString(initFunction, "name").equals("mutexInit_3")) {
+      System.out.println("init3, type: " + type + " -> arguments: " + arguments);
+    }
     ListSequence.fromList(SLinkOperations.getTargets(initFunction, "arguments", true)).addSequence(ListSequence.fromList(arguments));
     ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(initFunction, "body", true), "statements", true)).addSequence(Sequence.fromIterable(Sequence.fromArray(statements)));
     ListSequence.fromList(typesToMutexFunctions).addElement(new Pair(type, new Pair(initFunction, mutexInitToDestroyFunction(initFunction))));
@@ -1403,6 +1441,15 @@ public class SharedBuilder {
     }))) {
       return;
     }
+
+    System.out.println("found mutex function for struct member of " + structType);
+    System.out.println(" # first member: " + SLinkOperations.getTarget(ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).getElement(0), "type", true) + "  -> name: " + SPropertyOperations.getString(ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).getElement(0), "name"));
+    ListSequence.fromList(typesToMutexFunctions).visitAll(new IVisitor<Pair<SNode, Pair<SNode, SNode>>>() {
+      public void visit(Pair<SNode, Pair<SNode, SNode>> it) {
+        System.out.println("--> " + it.first + ", fun: " + it.second);
+      }
+    });
+
 
     final SNode varArgument = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {

@@ -109,7 +109,7 @@ runTaskAndGetVoidFuture(e')
 
 \begin{minipage}{0.5\textwidth}
 \begin{ccode}
-getFutureResult(&e')
+((t)getFutureResult(&e'))
 \end{ccode}
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
@@ -118,33 +118,47 @@ joinFuture(&e')
 \end{ccode}
 \end{minipage}
 
-\subsection{Example code}
-The running factors example can now be extended with future-related expressions:
-\begin{ccode}
-// futures is an array of futures that on 
-// each return a pointer to a heap-managed value of type int32
-Future<int32*>[threshold] futures; 
-for (int8 i = 0; i < threshold; ++i) { 
-  futures[i] = tasks[i].run; 
-} for 
- 
-int32*[threshold] results; 
-for (int8 i = 0; i < threshold; ++i) { 
-  results[i] = futures[i].result; 
-  printf ("fibo[%d] = %d\n", i, *(results[i])); 
-} for
-\end{ccode}
+The type cast of the result returned by \CODE{getFutureResult(\&e')} is necessary since it returns a generic pointer \CODE{void*} which may not be compatible with the receiver of the value. In consequence the result is cast to the result type of the future for which \CODE{e.result} was type checked.
 
-The sample translation contains the aforementioned generic definitions for future handling. The expressions become simple function calls:
+\subsection{Example code}
+\label{futuresExample}
+The running example concerning the $\pi$ approximation from section \ref{taskExample} can now be extended with the result-related code. The tasks that were previously declared are used to initiate a running task instance of each such `template':
 \begin{ccode}
-Future[threshold] futures; 
-for (int8 i = 0; i < threshold; ++i) { 
-  futures[i] = runTaskAndGetFuture(tasks[i]); 
-} for 
- 
-int32*[threshold] results; 
-for (int8 i = 0; i < threshold; ++i) { 
-  results[i] = ((int32*) getFutureResult(&futures[i])); 
-  printf ("fibo[%d] = %d\n", i, *(results[i])); 
-} for
+int32 main(int32 argc, string[] argv) {
+  Task<long double*>[RANGECOUNT] calculators; 
+  Future<long double*>[RANGECOUNT] partialResults;
+  
+  ... // task declarations
+  
+  for (i ++ in [0..RANGECOUNT[) { 
+    partialResults[i] = calculators[i].run; 
+    calculators[i].clear; 
+  }
+   
+  for (i ++ in [0..RANGECOUNT[) { 
+    result += *(partialResults[i].result); 
+    free(partialResults[i].result); 
+  }
+}
 \end{ccode}
+For every task that is run a future of the same type is created. After the initialization the tasks (i.e. the task templates, not the running instances thereof) are cleared in order to avoid memory leaks. The programmer is free to choose whether he is willing to do so. In case only a very limited amount of memory will be used by the tasks the clearance might not be deemed necessary. In the second loop the futures of all running tasks are used to retrieve and accumulate all partial $\pi$ results. In the end their memory is freed since they are located on the heap. Again, the freeing is up to the programmer and in the end of the program might not be even useful.
+The translation of the new code becomes:
+\begin{ccode}
+int32 main(int32 argc, string[] argv) {
+  Task[RANGECOUNT] calculators; 
+  Future[RANGECOUNT] partialResults;
+  
+  ... // task declarations
+  
+  for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
+    partialResults[__i] = runTaskAndGetFuture(calculators[__i]); 
+    free (calculators[__i].args); 
+  }
+   
+  for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
+    result += *(((long double*) getFutureResult(&partialResults[__i]))); 
+    free((long double*) getFutureResult(&partialResults[__i])); 
+  } for
+  
+\end{ccode}
+As the code shows the future type becomes the type of the according generic \CODE{Future} struct. Like the translation of the task type it loses the type parameterization \CODE{long double*} which is not necessary any more. The task running expression \CODE{calculators[i].run} and result retrieval expression \CODE{partialResults[i].result} are translated to calls of the newly generated generic functions \CODE{runTaskAndGetFuture()}, respectively \CODE{runTaskAndGetFuture()}. Their definitions can be seen in the previous section \ref{tasksTranslation}. Due to its genericity \CODE{runTaskAndGetFuture()} returns a result of type \CODE{void*} which means that its result must be cast by the compiler to an appropriate pointer type which in this case is \CODE{long double*} like in the original task and future definitions. Finally, the task clearance is simply reduced to a call of C's free function parameterized with the pointer to an argument struct instance that the task holds.

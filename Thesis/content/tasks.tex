@@ -137,49 +137,75 @@ free(e'.args)
 \end{ccode}
 
 \subsection{Example code}
-The running example is chosen such as to be easy to understand in exchange for a realistic scenario. In this program for a range of numbers from 0 up to some threshold the cardinality of the set of factors is calculated in parallel:
+\label{taskExample}
+The running example is about the calculation of $\pi$, based on the definition given in the concurrent-pi example for go\footnote{https://github.com/foamdino/learning-go/blob/master/concurrent-pi/concurrent-pi.go}. $\pi$ is approximated by the summation of a certain number \textit{n} of terms where \textit{n} determines the deviation of the result from the actual value of $\pi$: 
+${\pi}_{\mathrm{approx}} = \sum\limits_{i=0}^{n}4*{-1^i \over 2i+1}$. 
 
+In the first scenario the amount of work is distributed under a certain number of tasks each of which calculates the contribution of summands for a range of indices \textit{i}. The calculation of such a partial sum for a range $[\mathrm{start}, \mathrm{end}[$ of indices is done by the functions:
 \begin{ccode}
-#constant threshold = 40; 
-exported int32 main(int32 argc, string[] argv) { 
-  // every task calculates the factor count for one number
-  Task<int32*>[threshold] tasks; 
-  for (int8 i = 0; i < threshold; ++i) { 
-    tasks[i] = |calcFactors(i + 2)|; 
-  } for 
-  // ...
-  return 0; 
-} main (function)
-
+long double calcPiRange(uint32 start, uint32 end) { 
+  long double partialSum = 0; 
+  for (uint32 i = start; i < end; ++i) { 
+    partialSum += calcPiItem(i); 
+  }
+  return partialSum; 
+}
+ 
+long double calcPiItem(uint32 index) { 
+  return 4.0 * (pow (-1.0, index) / (2.0 * index + 1.0)); 
+}
 \end{ccode}
-
-The generation to C99 code yields the following intermediary helper code\footnote{Mbeddr specific details have been reduced in order to enhance the legibility of the code}:
+The work can be distributed among, e.g. 4 tasks where each task calculates a partial sum for an equally long range which is given by:
 \begin{ccode}
-// generic declarations module
-exported struct Task {
-  void* args; 
-  (void*)=>(void*) fun; 
+#constant RANGESIZE = 300000000;
+#constant RANGECOUNT = 4; 
+#constant THRESHOLD = RANGESIZE * RANGECOUNT;
+\end{ccode}
+These values are then used to initialize an array of tasks:
+\begin{ccode}
+int32 main(int32 argc, string[] argv) {
+...
+  Task<long double*>[RANGECOUNT] calculators;
+  for (i ++ in [0..RANGECOUNT[) { 
+    uint32 start = i * RANGESIZE; 
+    uint32 end = start + RANGESIZE; 
+    calculators[i] = |calcPiRange(start, end)|; 
+  }
+...
+}
+\end{ccode}
+The final reduction of the calculated values will be shown after the presentation of futures in section \ref{futuresExample}. The code is translated\footnote{For legibility reasons the code shown in the following listing and any other mbeddr code is a simplified version of the intermediate code that mbeddr actually generates. The performed changes are restricted to renamings and other minor adjustments.} to the building blocks that were introduced in \ref{tasksTranslation}:
+\begin{ccode}
+
+int32 main(int32 argc, string[] argv) {
+...
+  Task[RANGECOUNT] calculators;
+  for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
+    uint32 start = __i * RANGESIZE; 
+    uint32 end = start + RANGESIZE; 
+    calculators[__i] = taskInit_0(start, end); 
+  }
+...
+}
+
+struct Args_0 { 
+  uint32 start; 
+  uint32 end; 
 };
-// user-defined module
-struct Args_a0a0b0b { // note the arbitrary suffix
-  int8 i;             
-};
-void* parFun_a0a0b0b(void* voidArgs) { 
-  int32* result = malloc(sizeof(int32)); 
-  Args_a0a0b0b* args = ((Args_a0a0b0b*) voidArgs); 
-  *result = calcFactors((args)->i + 2); 
+
+inline Task taskInit_0(uint32 start, uint32 end) { 
+  Args_0* args_0 = malloc(sizeof(Args_0)); 
+  Args_0->start = start; 
+  Args_0->end = end; 
+  return (Task){ args_0 , :parFun_0 , sizeof (Args_0)}; 
+}
+
+void* parFun_0(void* voidArgs) { 
+  long double* result = malloc(sizeof(long double)); 
+  Args_0* args = ((Args_0*) voidArgs); 
+  *result = calcPiRange((args)->start, (args)->end); 
+  free(voidArgs); 
   return result; 
-} parFun_a0a0b0b (function)             
-inline Task taskInit_a0a0b0b(int8 i) { 
-  Args_a0a0b0b* args_a0a0b0b = malloc(sizeof(Args_a0a0b0b)); 
-  args_a0a0b0b->i = i; 
-  return (Task){ args_a0a0b0b , :parFun_a0a0b0b }; 
-} taskInit_a0a0b0b (function)
+}
 \end{ccode}
-The generated struct contains exactly one element for the referenced variable in the task expression. A new reference to this element replaces the corresponding reference in the expression embraced by the task when it is copied into the parallel function. The initialization function allocates memory on the heap and uses it to safe the value of the variable. The content of the main function simply becomes:
-\begin{ccode}
-Task[threshold] tasks; 
-for (int8 i = 0; i < threshold; ++i) { 
-  tasks[i] = taskInit_a0a0b0b(i); 
-} for
-\end{ccode}
+The type of \CODE{calculators} is translated into an array type of the generic \CODE{Task} struct type such that the type specification \CODE{long double*} which is not needed in the translated code gets lost in this process. The task expression \CODE{|calcPiRange(start, end)|} is translated into a function call of the generated inline function \CODE{taskInit\_0}. This function stores the values of the referenced local variables \CODE{start} and \CODE{end} in a structure which will later be used as the input for the parallel executed function \CODE{parFun\_0}. This function, the wrapped arguments and their size are stored in a generic \CODE{Task} structure instance which is the handle that will later be used to initiate the task. \CODE{parFun\_0} takes its arguments generically (as is required by the POSIX threads standard) and also returns its result generically via the heap. The calculation of the result is straightforwardly given by the execution of the expression of the original task sub expression \CODE{calcPiRange(start, end)} except that the two variable references are substituted by references to the according fields in the argument struct instance \CODE{voidArgs} which is cast to the appropriate type \CODE{Args\_0}.
