@@ -18,11 +18,6 @@ void queue_queueInit(struct queue_SharedTypes_0_SharedOf_Queue_0* queue)
 }
 
 
-void queue_queueClear(struct queue_SharedTypes_0_SharedOf_Queue_0* queue) 
-{
-}
-
-
 void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue, long double item) 
 {
   while (1)

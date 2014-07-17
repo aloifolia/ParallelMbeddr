@@ -23,8 +23,6 @@ extern "C" {
 #define QUEUE_QUEUESIZE (10)
 void queue_queueInit(struct queue_SharedTypes_0_SharedOf_Queue_0* queue);
 
-void queue_queueClear(struct queue_SharedTypes_0_SharedOf_Queue_0* queue);
-
 void queue_queueSafeAdd(struct queue_SharedTypes_0_SharedOf_Queue_0* queue,long double item);
 
 void queue_queueSafeGet(struct queue_SharedTypes_0_SharedOf_Queue_0* queue,long double* result);
