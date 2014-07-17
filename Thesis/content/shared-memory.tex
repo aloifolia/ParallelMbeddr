@@ -397,6 +397,7 @@ void randomWithXorShift(uint32* seed) {
 The generator was chosen for its high performance, low memory consumption and thread safety due to the utilization of the stack-managed \CODE{seed} parameter as opposed to the global state usage of the standard C random generator \CODE{rand()}. The fact that after a certain number---which may be smaller than in other generators---of repeated calls with the same seed value (i.e. the same memory address of a seed) repetitions of the sequence of calculated numbers will occur is not of relevance for the purpose of this work.
 
 \subsection{Example code}
+\label{sharedMemoryExample}
 In the previous sections \ref{taskExample} and \ref{futuresExample} the running example approximated the number $\pi$ by using tasks which calculate exactly one fraction of the result each and retrieving their results via futures. The amount of work was therefore partitioned in advance. In this section a more dynamic approach is chosen instead: The work of every task comprises major and minor rounds. A minor round is equivalent to the full calculation loop in the previous $\pi$ solution. In every step of a major round initiatiates a minor round by first coordinating with the other tasks which range of $\pi$ it should calculate. After having calculated the sum in a minor round the task then uses a queue to store its next partial result. A dedicated task is used to collect these partial results from the queue and accumulate them to a complete sum which in the end is the result of the over-all approximated $\pi$. The communication-based solution can be seen as a map-reduce implementation where partial results a mapped onto the queue by a certain number of tasks and from there reduced to a final result by a seperate task (compare with \cite{MapReduce}).
 In order to understand the new implementation first consider that a thread-safe queue of a certain size and slots of type \CODE{long double} is given as a blackbox. Further suppose that functions for the initialization, for adding a value and getting the next value (or wait for the next value) exist:
 \begin{ccode}
@@ -433,16 +434,13 @@ exported int32 main(int32 argc, string[] argv) {
   shared<long double> result; 
   shared<long double>* resultPointer = &result; 
    
-  Task<void> reducerTask = |reduce(RANGECOUNT, resultPointer, queuePointer)|; 
-  Future<void> reducer = reducerTask.run; 
-  reducerTask.clear; 
-  reducer.join; 
+  |reduce(RANGECOUNT, resultPointer, queuePointer)|.run.join;
   
   return 0; 
 }
 \end{ccode}
 
-First the queue is defined as being shared in order to be accessible by all tasks. After the initialization a pointer to the queue is created which is necessary since any other reference inside a task expression to the queue variable would otherwise cause a copy of the queue struct instance into the task, regardless of whether later on the address of the referred value is retrieved via the \CODE{\&} operator. This `shortcoming' of the current semantics could be addressed by the introduction of a new address operator that creates a temporary variable of the addressed value and should be considered for future extensions of ParallelMbeddr. Similar to the queue a \CODE{counter} variable is introduced which will be used by the tasks to check and communicate how many ranges have been processed so far. Then one mapper task is defined and initialized with a task expression of a call to the \CODE{map()} function. For communication purposes every it gets the queue pointer and the counter pointer. Additionally, although due to the use of constants not necessary in the current example every mapper is told the maximum number of items that need to be calculated. This single task template is used to create multiple running tasks and safe their handles as futures in a \CODE{mappers} array. The reducer uses a pointer to a result value memory location to safe its result. Further it gets access to the queue via a pointer thereof and is told how many items (\CODE{RANGECOUNT}) it shall read from the queue before termination. At last the main task joins solely the reducer task since after its termination every task will be finished.
+First the queue is defined as being shared in order to be accessible by all tasks. After the initialization a pointer to the queue is created which is necessary since any other reference inside a task expression to the queue variable would otherwise cause a copy of the queue struct instance into the task, regardless of whether later on the address of the referred value is retrieved via the \CODE{\&} operator. This `shortcoming' of the current semantics could be addressed by the introduction of a new address operator that creates a temporary variable of the addressed value and should be considered for future extensions of ParallelMbeddr. Similar to the queue a \CODE{counter} variable is introduced which will be used by the tasks to check and communicate how many ranges have been processed so far. Then one mapper task is defined and initialized with a task expression of a call to the \CODE{map()} function. For communication purposes every it gets the queue pointer and the counter pointer. Additionally, although due to the use of constants not necessary in the current example every mapper is told the maximum number of items that need to be calculated. This single task template is used to create multiple running tasks and safe their handles as futures in a \CODE{mappers} array. The reducer uses a pointer to a result value memory location to safe its result. Further it gets access to the queue via a pointer thereof and is told how many items (\CODE{RANGECOUNT}) it shall read from the queue before termination. The code shows the first example for a task chain: First the task is declared, then an instance of it is run in parallel and immediately the main task joins the reducer. Since between the run and the join nothing is done in the main task the serialized execution could also be realized by a simple function call to \CODE{reduce()}. For demonstrative purposes the code was chosen this way nevertheless. The main task joins solely the reducer task since after its termination every mapper task will also be finished.
 The \CODE{map()} function iteratively calculates complete ranges of fractions of $\pi$ until the maximum number of items as given by \CODE{threshold} is reached:
 \begin{ccode}
 void map(uint32 threshold, shared<uint32>* counter, shared<Queue>* resultQueue) { 
@@ -546,13 +544,23 @@ for (int8 __i = 0; __i < MAPPERCOUNT; __i++) {
 free(mapperTask.args);
 
 // reducer:
-Task reducerTask = taskInit_1(resultPointer, queuePointer); 
-VoidFuture reducer = runTaskAndGetVoidFuture(reducerTask); 
-free(reducerTask.args); 
-joinVoidFuture(&reducer);
+saveAndJoinVoidFuture(futureInit_0(resultPointer, queuePointer));
 \end{ccode}
 
-Since in the new solution the tasks do not return any results directly, the \CODE{VoidFuture} struct and respective functions are used. For the lack of valuable new insight the declarations of the \CODE{taskInit\_X()} functions and \CODE{Args\_X} structs is skipped, here. Instead the relevant lines of \CODE{map()} and \CODE{reduce()} are shown. Inside \CODE{map()} the synchronization statement of \CODE{counter} is replaced by its statement list which is surrounded by calls to appropriate functions:
+Since in the new solution the tasks do not return any results directly, the \CODE{VoidFuture} struct and respective functions are used. For the lack of valuable new insight the declarations of the \CODE{taskInit\_0()} function and \CODE{Args\_X} structs is skipped, here. Instead recall the original code \CODE{|reduce(RANGECOUNT, resultPointer, queuePointer)|.run.join}. As was shown in section \ref{futuresTranslation} the run call and the task declaration are reduced to a call of a function which combines the intialization of a task with the one of a future of a parallel running instance of this task. This call is reflected by \CODE{futureInit\_0(resultPointer, queuePointer)}. Furthermore the join of the task must first bind the created future handle to some addressable location before it can use this handle by its address. For this reason \CODE{saveAndJoinVoidFuture} is used in place of \CODE{joinVoidFuture}. The declaration of \CODE{futureInit\_0} follows:
+\begin{ccode}
+VoidFuture futureInit_0(SharedOf_long_double_0* resultPointer, SharedOf_Queue_0* queuePointer) { 
+  Args_1* args_1 = malloc(sizeof(Args_1)); 
+  args_1->resultPointer = resultPointer; 
+  args_1->queuePointer = queuePointer; 
+  pthread_t pth; 
+  pthread_create (&pth, null, :parFun_1, args_1) |]; 
+  return (VoidFuture){ .pth = pth }; 
+}
+\end{ccode}
+The original declaration of the reducer task contains references to the local variables \CODE{resultPointer} and \CODE{queuePointer} which is why they are bound to equally named fields in the argument struct. An instance of the \CODE{VoidFuture} struct is returned as the parallel task does not return a value and, thus, had the type \CODE{task<void>}.
+
+Inside the helper function \CODE{map()} the synchronization statement of \CODE{counter} is replaced by its statement list which is surrounded by calls to appropriate functions:
 \begin{ccode}
 while (true) {
   uint32 start; 

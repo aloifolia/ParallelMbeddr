@@ -1,6 +1,7 @@
 \section{Tasks}
 The basic parallelization element is a \textit{task}. It denotes a parallel unit of execution and, as the name suggests, aims at task parallelism. As the implementation of the underlying parallelization technique might change in the future it is reasonable to abstract the terminology from it. The most basic task which always exists executes the code of the entry function of the program. A task can also be regarded as a closure of the expression that shall be run in parallel. The reader should distinguish this `execution template' from the actual running instance of a task. The latter will further on be addressed as a \textit{running task}.
 \subsection{Design}
+\label{tasksDesign}
 The syntax \texttt{e} of expressions in mbeddr is extended by
 
 $e ::= ...|\;\mathit{|e|}$
@@ -24,7 +25,7 @@ $e ::= ...|\;e.\mathit{clear}$
 \inference*[VoidTask]{|e| |- \mathit{Task{<}void{>}}}{\qquad\mathit{void}\qquad} 
 \end{align*}
 
-If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data, i.e. the reference environment of its free variables, with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by the clearance of its task template. 
+If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data, i.e. the reference environment of its free variables, with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by the clearance of its task template. The clearance of a task is only necessary if the task is stored somewhere. Thus, a task that is directly run via \CODE{|e|.run} need not be cleared which makes such expressions memory safe.
 
 \subsection{Translation}
 \label{tasksTranslation}
@@ -128,6 +129,8 @@ Without any references to bind a task is just reduced to the compound literal:
 \begin{ccode}
 (Task_X){ null, parFun_X, 0 }
 \end{ccode}
+
+The reduction of a task is accomplished differently if the task is immediately run via \CODE{|e|.run}. Section \ref{futuresTranslation} will show how it is done.
 
 By above definition of \CODE{parFun\_X} it becomes clear that the arguments of a task---its environment---are stored on the heap before execution. This approach was chosen mainly in order to simplify the generation of the resulting code. In exchange both the result and the arguments of a task have to be deleted by the programmer by hand. Since for reasons to be explained later the result is returned via a pointer onto the heap, as well, it now becomes obvious that the return type of a task must either be a void type or a pointer type as was mentioned in the design section. Concerning task arguments one advantage of this implementation is that a task may be passed by value, e.g. when using a builder function to create tasks, without the possible need to copy multiple arguments. Instead just the pointer to the heap-managed data is copied. As will be shown in the (FUTURE WORK) chapter a stack-based implementation of task (I/O) is conceivable. 
 

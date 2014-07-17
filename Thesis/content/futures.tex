@@ -50,7 +50,10 @@ Future runTaskAndGetFuture(Task task) {
   return ( Future ){ .pth = pth }; 
 }
 \end{ccode}
-The code shows that the arguments to be provided to the thread are copied onto a new location on the heap although they already reside on the heap as was shown in section \ref{tasksTranslation}. It is necessary to do so in order to avoid dangling pointers. These could arise when a task is cleared so that its arguments get deleted while one ore more running instances (pthreads) of this task are not finished, yet. Furthermore generally every thread needs its own copy of the data in case it modifies it. A corresponding function to the previous function, called \CODE{runTaskAndGetVoidFuture}, is generated for futures that return nothing. The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. Like was already previously suggested it expects a function pointer of type \CODE{void* -> void*} which is the reason why the function generated for a task is equally typed. The result is, thus, a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existance of the value after thread termination could not be guaranteed a dangling pointer\cite{UnderstandingAndUsingCPointers} could emerge, which resembles the problem for thread arguments. The only safe alternative that fits the task-future structure well is to allocate memory on the heap and return the address of this memory (see section \ref{tasksTranslation}). The translation of the result retrieval is a call the function:
+The code shows that the arguments to be provided to the thread are copied onto a new location on the heap although they already reside on the heap as was shown in section \ref{tasksTranslation}. It is necessary to do so in order to avoid dangling pointers. These could arise when a task is cleared so that its arguments get deleted while one ore more running instances (pthreads) of this task are not finished, yet. Furthermore generally every thread needs its own copy of the data in case it modifies it. A corresponding function to the previous function, called \CODE{runTaskAndGetVoidFuture}, is generated for futures that return nothing. 
+
+
+The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. As was already previously suggested it expects a function pointer of type \CODE{void* -> void*} which is the reason why the function generated for a task is equally typed. The result is, thus, a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existance of the value after thread termination could not be guaranteed a dangling pointer\cite{UnderstandingAndUsingCPointers} could emerge, which resembles the problem for thread arguments. The only safe alternative that fits the task-future structure well is to allocate memory on the heap and return the address of this memory (see section \ref{tasksTranslation}). The translation of the result retrieval is a call the function:
 
 \begin{ccode}
 void* getFutureResult(Future* future) { 
@@ -118,7 +121,32 @@ joinFuture(&e')
 \end{ccode}
 \end{minipage}
 
-The type cast of the result returned by \CODE{getFutureResult(\&e')} is necessary since it returns a generic pointer \CODE{void*} which may not be compatible with the receiver of the value. In consequence the result is cast to the result type of the future for which \CODE{e.result} was type checked.
+The type cast of the result returned by \CODE{getFutureResult(\&e')} is necessary since it returns a generic pointer \CODE{void*} which may not be compatible with the receiver of the value. In consequence the result is cast to the result type of the future for which \CODE{e.result} was type checked. 
+For expressions of the kind \CODE{|e|.run} the reduction to a call of \CODE{runTaskAndGetFuture()} is not applied. Instead a call to a specific function \CODE{futureInit\_X} that combines both the logic of the task initialization and the future initialization is created. Suppose \CODE{e} contains references to local variables or arguments. Similar to the \CODE{taskInit\_X()} expression block from section \ref{tasksTranslation} the future initialization function first allocates memory on the heap for the values of the referred variables. To this end it uses an instance of the \CODE{Args\_X} struct that was created for the task to store the values. Afterwards instead of wrapping the arguments struct inside a \CODE{Task} struct instance the function directly declares a pthread and initializes it with the arguments and a pointer to the function \CODE{parFun\_X} that was created for the task:
+\begin{ccode}
+Future futureInit_X(t_1 v_1, ..., t_n v_n) { 
+  Args_X* args_X = malloc(sizeof(Args_X)); 
+  args_X->v_1 = v_1; 
+  ...
+  args_X->v_n = v_n; 
+  pthread_t pth; 
+  pthread_create (&pth, null, :parFun_X, args_X); 
+  return (Future){ .pth = pth }; 
+}
+\end{ccode}
+If \CODE{e} does not contain any references to local variables or function arguments the arguments-related code is omitted and \CODE{null} is given as argument parameter to \CODE{pthread\_create()}:
+\begin{ccode}
+Future futureInit_X() {
+  pthread_t pth; 
+  pthread_create(&pth, null, :parFun_X, null); 
+  return (Future){ .pth = pth }; 
+}
+\end{ccode}
+In case the type of \CODE{e} is \CODE{void} the struct type \CODE{Future} is replaced by \CODE{VoidFuture} in either declaration of \CODE{futureInit\_X}. The code shows why no clearance of the arguments for a task in the case of a direct run of the task is required as was mentioned in section \ref{tasksDesign}: Since the arguments struct instance is only used for exactly one running task no further copies of the arguments are needed. Hence, the freeing of the heap-allocated memory can be left to the function \CODE{parFun\_X}. \CODE{futureInit\_X} is called in the reduction of \CODE{|e|.run}:
+\begin{ccode}
+futureInit_X(v_1, ..., v_n)
+\end{ccode}
+Whereas the following section will show the generation of expressions \CODE{e.run} to calls of \CODE{runTaskAndGetFuture} the reduction to a call of \CODE{futureInit\_X} is depicted in section \ref{sharedMemoryExample}.
 
 \subsection{Example code}
 \label{futuresExample}
@@ -158,7 +186,7 @@ int32 main(int32 argc, string[] argv) {
   for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
     result += *(((long double*) getFutureResult(&partialResults[__i]))); 
     free((long double*) getFutureResult(&partialResults[__i])); 
-  } for
+  }
   
 \end{ccode}
 As the code shows the future type becomes the type of the according generic \CODE{Future} struct. Like the translation of the task type it loses the type parameterization \CODE{long double*} which is not necessary any more. The task running expression \CODE{calculators[i].run} and result retrieval expression \CODE{partialResults[i].result} are translated to calls of the newly generated generic functions \CODE{runTaskAndGetFuture()}, respectively \CODE{runTaskAndGetFuture()}. Their definitions can be seen in the previous section \ref{tasksTranslation}. Due to its genericity \CODE{runTaskAndGetFuture()} returns a result of type \CODE{void*} which means that its result must be cast by the compiler to an appropriate pointer type which in this case is \CODE{long double*} like in the original task and future definitions. Finally, the task clearance is simply reduced to a call of C's free function parameterized with the pointer to an argument struct instance that the task holds.
