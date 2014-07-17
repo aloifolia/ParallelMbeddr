@@ -16,9 +16,7 @@
 extern "C" {
 #endif
 
-void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute,pthread_mutex_t* mutex);
-
-void GenericSharedDeclarations_destroyMutex_0(pthread_mutex_t* mutex);
+extern pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
 
 #ifdef __cplusplus

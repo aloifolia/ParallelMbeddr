@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="20x4hk54y59hipgi6hixbkyb7u89j3o">
+<dependencies version="2" modelHash="arpt3ig8ju43fvl3l1wndt624789wj0">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-azzr309h14jc8esf0b78xmy287ekk6c" />
-  <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" hash="4tm6634ivear25zt7b693exhz0ltcpm" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="-erhs8245rrxarsir75oeypz6lamscet" />
   <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" hash="cuy2txgk8l04xd3o518p93nppf0vcdi" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
@@ -18,7 +17,6 @@
     <dep root="1304213873205054831" />
     <dep root="1924594752095321661" />
     <dep root="1924594752095502558" />
-    <dep root="1924594752097591879" />
     <dep root="2744793885339890637" />
     <dep root="3074299910025607357" />
     <dep root="3570654511858570918" />
@@ -33,7 +31,6 @@
     <dep root="961131662869355681" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
-    <dep model="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c8959032f(jetbrains.mps.baseLanguage.collections.generator.baseLanguage.template.main@generator)" />
     <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
@@ -53,7 +50,6 @@
   <source id="961131662869355681" name="CompoundLiteral" hash="3bpxl856mf7ode6fr6k1ko81i86snau" />
   <source id="1924594752095321661" name="SharedType" hash="-3iaiv5f3agr3uqt656xdumtsqyoudnk" />
   <source id="1924594752095502558" name="SharedGet" hash="azemzghyy0inw1wvg9m03bfpt26s43" />
-  <source id="1924594752097591879" name="Share" hash="duueyv2r3g1y50j3r1jgqahlf5k8i08" />
   <source id="3570654511858570918" name="SharedSet" hash="-6ol13iokzlmbt9g7ohrsgdklo8aj72l" />
   <source id="6553204290893807643" name="SyncRessource" hash="-8v8b9f9zrqxyalwi32qjn9uacxx88j5" />
   <source id="6553204290894227496" name="SyncStatement" hash="-3lhv94act90ugcsjr5s15rwylh3yq57" />

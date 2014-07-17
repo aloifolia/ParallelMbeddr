@@ -11,8 +11,8 @@ static void testSync_foo(void);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   testSync_initAllGlobalMutexes_0();
   testSync_destroyAllGlobalMutexes_0();
   return 0;
@@ -21,6 +21,7 @@ int32_t main(int32_t argc, char* argv[])
 
 static void testSync_foo(void) 
 {
+  
   struct GenericSharedDeclarations_SharedOf_int16_0 i;
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   goto HERE;

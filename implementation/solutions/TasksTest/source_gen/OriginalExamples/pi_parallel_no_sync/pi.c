@@ -24,8 +24,8 @@ static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t e
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   pi_initAllGlobalMutexes_0();
   long double result = 0;
   

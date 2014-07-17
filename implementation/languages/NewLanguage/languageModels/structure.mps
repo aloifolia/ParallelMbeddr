@@ -129,14 +129,6 @@
       <link role="intfc" roleId="tpce.1169127628841" targetNodeId="mj1l.4620120465980511009" resolveInfo="IGenericDotTarget" />
     </node>
   </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="1924594752097591879" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="Share" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="share" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpee.1068431790191" resolveInfo="Expression" />
-    <node role="implements" roleId="tpce.1169129564478" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="1924594752097614466" nodeInfo="ig">
-      <link role="intfc" roleId="tpce.1169127628841" targetNodeId="mj1l.4620120465980511009" resolveInfo="IGenericDotTarget" />
-    </node>
-  </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="3570654511858570918" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="SharedSet" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="set" />
