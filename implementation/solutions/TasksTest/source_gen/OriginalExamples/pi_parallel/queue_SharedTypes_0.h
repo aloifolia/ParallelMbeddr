@@ -27,13 +27,13 @@ struct queue_SharedTypes_0_SharedOf_Queue_0 {
   struct queue_SharedTypes_0_Queue value;
 };
 
+void queue_SharedTypes_0_mutexDestroy_1(struct queue_SharedTypes_0_Queue* var);
+
 void queue_SharedTypes_0_mutexDestroy_2(struct queue_SharedTypes_0_SharedOf_Queue_0* var);
 
 void queue_SharedTypes_0_mutexInit_1(struct queue_SharedTypes_0_Queue* var);
 
 void queue_SharedTypes_0_mutexInit_2(struct queue_SharedTypes_0_SharedOf_Queue_0* var);
-
-void queue_SharedTypes_0_mutexDestroy_1(struct queue_SharedTypes_0_Queue* var);
 
 
 #ifdef __cplusplus

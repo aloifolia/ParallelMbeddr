@@ -9,7 +9,7 @@ void GenericSharedDeclarations_mutexInit_0(struct GenericSharedDeclarations_Shar
 {
   for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
   {
-    pthread_mutex_destroy(&var[__i_0].mutex);
+    pthread_mutex_init(&var[__i_0].mutex,&GenericSharedDeclarations_mutexAttribute_0);
   }
 
 }
@@ -19,7 +19,7 @@ void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_S
 {
   for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
   {
-    pthread_mutex_init(&var[__i_0].mutex,&GenericSharedDeclarations_mutexAttribute_0);
+    pthread_mutex_destroy(&var[__i_0].mutex);
   }
 
 }

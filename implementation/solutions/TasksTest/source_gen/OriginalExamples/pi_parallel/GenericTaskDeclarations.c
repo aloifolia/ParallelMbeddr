@@ -12,6 +12,24 @@ void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarati
 }
 
 
+struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
+{
+  pthread_t pth;
+  if ( task.argsSize == 0 ) 
+  {
+    pthread_create(&pth,0,task.fun,0);
+  }
+  else 
+  {
+    void* args = malloc(task.argsSize);
+    memcpy(args,task.args,task.argsSize);
+    pthread_create(&pth,0,task.fun,args);
+  }
+
+  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
+}
+
+
 void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
 {
   if ( !(future->finished) ) 
@@ -56,24 +74,6 @@ struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFutur
   }
 
   return (struct GenericTaskDeclarations_Future){ .pth = pth };
-}
-
-
-struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
-{
-  pthread_t pth;
-  if ( task.argsSize == 0 ) 
-  {
-    pthread_create(&pth,0,task.fun,0);
-  }
-  else 
-  {
-    void* args = malloc(task.argsSize);
-    memcpy(args,task.args,task.argsSize);
-    pthread_create(&pth,0,task.fun,args);
-  }
-
-  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
 }
 
 

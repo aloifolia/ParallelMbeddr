@@ -536,7 +536,7 @@ public class SharedBuilder {
       }
     }.invoke());
 
-    ListSequence.fromList(initCalls).visitAll(new IVisitor<SNode>() {
+    ListSequence.fromList(initCalls).reversedList().visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(entryFunction, "body", true), "statements", true)).insertElement(0, it);
       }
@@ -857,7 +857,7 @@ public class SharedBuilder {
       });
       initBase = buildMutexInitCall(basePath, SNodeOperations.cast(_baseType.value, "TasksAndSyncs.structure.SharedType"));
       destroyBase = SNodeOperations.copyNode(initBase);
-      mutexInitToDestroyCallInline(initBase);
+      mutexInitToDestroyCallInline(destroyBase);
     }
     return new Pair(initBase, destroyBase);
   }
@@ -1458,6 +1458,7 @@ public class SharedBuilder {
     } else {
       Pair<SNode, SNode> initAndDestroyBase = buildInitAndDestroyBase(SNodeOperations.cast(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.expressions.structure.Type"), extendedPath);
       ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForInitRange, "body", true), "statements", true)).addElement(initAndDestroyBase.first);
+      System.out.println();
       ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForDestroyRange, "body", true), "statements", true)).addElement(initAndDestroyBase.second);
     }
     return new Pair(nestedForInitRange, nestedForDestroyRange);

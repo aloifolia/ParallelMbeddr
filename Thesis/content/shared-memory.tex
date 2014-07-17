@@ -285,8 +285,8 @@ For this purpose an application-wide attribute is defined in a generic module th
 // inside the generic module:
 pthread_mutexattr_t mutexAttribute
 // at the beginning of main:
-pthread_mutexattr_settype(&mutexAttribute, PTHREAD_MUTEX_RECURSIVE);
 pthread_mutexattr_init(&mutexAttribute);
+pthread_mutexattr_settype(&mutexAttribute, PTHREAD_MUTEX_RECURSIVE);
 \end{ccode}
 
 \subsection{Translation of synchronization statements}
@@ -398,3 +398,191 @@ The generator was chosen for its high performance, low memory consumption and th
 
 \subsection{Example code}
 In the previous sections \ref{taskExample} and \ref{futuresExample} the running example approximated the number $\pi$ by using tasks which calculate exactly one fraction of the result each and retrieving their results via futures. The amount of work was therefore partitioned in advance. In this section a more dynamic approach is chosen instead: The work of every task comprises major and minor rounds. A minor round is equivalent to the full calculation loop in the previous $\pi$ solution. In every step of a major round initiatiates a minor round by first coordinating with the other tasks which range of $\pi$ it should calculate. After having calculated the sum in a minor round the task then uses a queue to store its next partial result. A dedicated task is used to collect these partial results from the queue and accumulate them to a complete sum which in the end is the result of the over-all approximated $\pi$. The communication-based solution can be seen as a map-reduce implementation where partial results a mapped onto the queue by a certain number of tasks and from there reduced to a final result by a seperate task (compare with \cite{MapReduce}).
+In order to understand the new implementation first consider that a thread-safe queue of a certain size and slots of type \CODE{long double} is given as a blackbox. Further suppose that functions for the initialization, for adding a value and getting the next value (or wait for the next value) exist:
+\begin{ccode}
+struct Queue {...}
+void queueInit(shared<Queue>* queue);
+void queueSafeAdd(shared<Queue>* queue, long double item);
+void queueSafeGet(shared<Queue>* queue, long double* result);
+\end{ccode}
+Like in the previous approach the amount of work to be done is defined by a range size (number of minor task rounds) and the number of ranges altogether. Additionally the number of mapper tasks is set to a certain value that should be in the order of the number of processors:
+\begin{ccode}
+#constant RANGESIZE = 300000000; 
+#constant RANGECOUNT = 4; 
+#constant THRESHOLD = RANGESIZE * RANGECOUNT; 
+#constant MAPPERCOUNT = 2;
+\end{ccode}
+These constants are used to initialize the mappers and the reducer in the main function appropriately:
+\begin{ccode}
+exported int32 main(int32 argc, string[] argv) { 
+  shared<Queue> queue; 
+  queueInit(&queue); 
+  shared<Queue>* queuePointer = &queue; 
+   
+  shared<uint32> counter; 
+  shared<uint32>* counterPointer = &counter; 
+  sync(counter) { counter.set(0); } 
+
+  Task<void> mapperTask = |map(THRESHOLD, counterPointer, queuePointer)|; 
+  Future<void>[MAPPERCOUNT] mappers; 
+  for (i ++ in [0..MAPPERCOUNT[) { 
+    mappers[i] = mapperTask.run; 
+  }
+  mapperTask.clear;
+   
+  shared<long double> result; 
+  shared<long double>* resultPointer = &result; 
+   
+  Task<void> reducerTask = |reduce(RANGECOUNT, resultPointer, queuePointer)|; 
+  Future<void> reducer = reducerTask.run; 
+  reducerTask.clear; 
+  reducer.join; 
+  
+  return 0; 
+}
+\end{ccode}
+
+First the queue is defined as being shared in order to be accessible by all tasks. After the initialization a pointer to the queue is created which is necessary since any other reference inside a task expression to the queue variable would otherwise cause a copy of the queue struct instance into the task, regardless of whether later on the address of the referred value is retrieved via the \CODE{\&} operator. This `shortcoming' of the current semantics could be addressed by the introduction of a new address operator that creates a temporary variable of the addressed value and should be considered for future extensions of ParallelMbeddr. Similar to the queue a \CODE{counter} variable is introduced which will be used by the tasks to check and communicate how many ranges have been processed so far. Then one mapper task is defined and initialized with a task expression of a call to the \CODE{map()} function. For communication purposes every it gets the queue pointer and the counter pointer. Additionally, although due to the use of constants not necessary in the current example every mapper is told the maximum number of items that need to be calculated. This single task template is used to create multiple running tasks and safe their handles as futures in a \CODE{mappers} array. The reducer uses a pointer to a result value memory location to safe its result. Further it gets access to the queue via a pointer thereof and is told how many items (\CODE{RANGECOUNT}) it shall read from the queue before termination. At last the main task joins solely the reducer task since after its termination every task will be finished.
+The \CODE{map()} function iteratively calculates complete ranges of fractions of $\pi$ until the maximum number of items as given by \CODE{threshold} is reached:
+\begin{ccode}
+void map(uint32 threshold, shared<uint32>* counter, shared<Queue>* resultQueue) { 
+  while (true) { 
+    uint32 start; 
+    uint32 end; 
+     
+    sync(counter) { 
+      start = counter->get; 
+      if (start == threshold) { 
+        break; 
+      } 
+      uint32 possibleEnd = start + RANGESIZE; 
+      end = (possibleEnd <= threshold)?(possibleEnd):(threshold); 
+      counter->set(end); 
+    } 
+     
+    queueSafeAdd(resultQueue, calcPiBlock(start, end)); 
+  } 
+}
+\end{ccode}
+In every iteration the function synchronizes the shared ressources that \CODE{counter} points to in order to retrieve its value and increment it by the number of items that \CODE{map()} is going to calculate in the current round. It uses the \CODE{calcPiBlock()} function that was presented in section \ref{taskExample} to calculate a partial sum. Afterwards the result is added to the queue. 
+The \CODE{reduce()} function uses the queue to iteratively read all partial results and updates the value of the shared ressource of the final result accordingly:
+\begin{ccode}
+void reduce(uint32 numberOfItems, shared<long double>* finalResult, shared<Queue>* partialResultQueue) {
+  sync(finalResult) { 
+    for (uint32 i = 0; i < numberOfItems; ++i) { 
+      long double item; 
+      queueSafeGet(partialResultQueue, &item); 
+      finalResult->set(item + finalResult->get); 
+    }
+  }
+}
+\end{ccode}
+During the whole calculation \CODE{reduce()} synchronizes the result variable in order to keep the synchronization overhead small. It is able to do this because no other task will try to access the result before the termination of the single reducer task.
+
+In the beginning of the translated main function the global mutex attribute is initialized which will is reused for every mutex. Afterwards the declared queue is initialized:
+\begin{ccode}
+pthread_mutexattr_settype(&mutexAttribute_0, PTHREAD_MUTEX_RECURSIVE); 
+pthread_mutexattr_init(&mutexAttribute_0); 
+initAllGlobalMutexes_0(); 
+SharedOf_Queue_0 queue; 
+mutexInit_2(&queue); 
+queueInit(&queue); 
+SharedOf_Queue_0* queuePointer = &queue;
+\end{ccode}
+The translated struct type \CODE{SharedOf\_Queue\_0} of the original type \CODE{shared<Queue>} refers to a struct that contains a field for the protected queue and a mutex field:
+\begin{ccode}
+struct SharedOf_Queue_0 { 
+  pthread_mutex_t mutex; 
+  Queue value; 
+};
+\end{ccode}
+The mutex initialization function \CODE{mutexInit\_2()} initializes the mutex of the shared queue and calls another initialization function which takes care of initializing any nested mutexes of the \CODE{Queue} struct. Similarly a destruction function is generated:
+\begin{ccode}
+void mutexInit_2(SharedOf_Queue_0* var) { 
+  pthread_mutex_init(&var->mutex, &mutexAttribute_0); 
+  mutexInit_1(&var->value); 
+}
+void mutexDestroy_2(SharedOf_Queue_0* var) { 
+  pthread_mutex_destroy(&var->mutex);
+  mutexDestroy_1(&var->value); 
+}      
+\end{ccode}
+Similar to the declarations for the queue the mbeddr generator creates declarations of a struct for the \CODE{result} variable. The initialization and destruction of \CODE{result} is accomplished inline by calls to the pthreads functions since there exist no nested mutexes for the fields of the struct:
+\begin{ccode}
+struct SharedOf_long_double_0 { 
+  pthread_mutex_t mutex; 
+  long double value; 
+};
+... // in main()
+SharedOf_long_double_0 result; 
+pthread_mutex_init(&result.mutex, &mutexAttribute_0); 
+SharedOf_long_double_0* resultPointer = &result;
+\end{ccode}
+Lastly the \CODE{counter} variable shows how translated shared ressources can be synchronized\footnote{The declarations of the struct and the mutex functions for it are skipped, here}. For the duration of the setting of \CODE{counter}'s value its mutex is locked. The setting of the value is done by an assignment to the \CODE{value} field of the generated struct that keeps the value of the shared ressource:
+\begin{ccode}
+SharedOf_uint32_0 counter; 
+pthread_mutex_init(&counter.mutex, &mutexAttribute_0); 
+SharedOf_uint32_0* counterPointer = &counter;
+
+startSyncFor1Mutex(&counter.mutex); 
+{ counter.value = 0; } 
+stopSyncFor1Mutex(&counter.mutex);
+\end{ccode}
+
+The mutexes of all shared ressources are destroyed at the end of the main function. Although this should not be necessary for local variables of the entry function of the program the compiler currently does not distinguish between the main function and any other function for which such calls would be necessary\TODO{maybe fix this}:
+\begin{ccode}
+mutexDestroy_2(&queue); 
+pthread_mutex_destroy(&counter.mutex); 
+pthread_mutex_destroy(&result.mutex);
+\end{ccode}
+The initializations of the tasks and the declarations of the futures is quite similar to those in section \ref{taskExample}:
+\begin{ccode}
+Task mapperTask = taskInit_0(queuePointer, counterPointer);
+// mappers:
+VoidFuture[MAPPERCOUNT] mappers; 
+for (int8 __i = 0; __i < MAPPERCOUNT; __i++) { 
+  mappers[__i] = runTaskAndGetVoidFuture(mapperTask); 
+}
+free(mapperTask.args);
+
+// reducer:
+Task reducerTask = taskInit_1(resultPointer, queuePointer); 
+VoidFuture reducer = runTaskAndGetVoidFuture(reducerTask); 
+free(reducerTask.args); 
+joinVoidFuture(&reducer);
+\end{ccode}
+
+Since in the new solution the tasks do not return any results directly, the \CODE{VoidFuture} struct and respective functions are used. For the lack of valuable new insight the declarations of the \CODE{taskInit\_X()} functions and \CODE{Args\_X} structs is skipped, here. Instead the relevant lines of \CODE{map()} and \CODE{reduce()} are shown. Inside \CODE{map()} the synchronization statement of \CODE{counter} is replaced by its statement list which is surrounded by calls to appropriate functions:
+\begin{ccode}
+while (true) {
+  uint32 start; 
+  uint32 end;
+  
+  startSyncFor1Mutex(&counter->mutex); 
+  { 
+    start = counter->value; 
+    if (start == threshold) { 
+      stopSyncFor1Mutex(&counter->mutex); 
+      break; 
+    }
+    uint32 possibleEnd = start + RANGESIZE; 
+    end = (possibleEnd <= threshold)?(possibleEnd):(threshold); 
+    counter->value = end; 
+  } 
+  stopSyncFor1Mutex(&counter->mutex);
+  
+  queueSafeAdd(resultQueue, calcPiBlock(start, end));
+}
+\end{ccode}
+The break statement is preceded by another call to the synchronization stop function as the function would otherwise return in a state where \CODE{counter} would still be locked which would ultimately cause the program to fail. The former expressions to get and set the value of \CODE{counter} are translated to accesses of the translated \CODE{value} field of the \CODE{counter} struct instance. The synchronization statement of \CODE{reduce()} is likewise translated to its statement list with surrounding synchronization calls. The translation of the expression \CODE{finalResult->set(item + finalResult->get)} contains two accesses to the aforementioned \CODE{value} field, one for \CODE{.set} and one for \CODE{.get}:
+\begin{ccode}
+startSyncFor1Mutex(&result->mutex); 
+{ 
+  for (uint32 i = 0; i < numberOfItems; ++i) { 
+    long double item; 
+    queueSafeGet(resultQueue, &item); 
+    result->value = item + result->value; 
+  }
+} 
+stopSyncFor1Mutex(&result->mutex);
+\end{ccode}

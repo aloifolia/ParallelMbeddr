@@ -25,12 +25,12 @@
 \contentsline {subsection}{\numberline {3.3.2}Translation of shared types}{15}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Translation of synchronization statements}{20}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Example code}{22}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Safety measures}{22}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Avoidance of implicitly shared unprotected data}{23}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Copying pointers to unshared data into tasks}{23}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Unsynchronized access to synchronizable data}{24}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Address leakage of shared ressource values}{24}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Overwriting shared ressources}{25}{subsection.3.4.5}
-\contentsline {chapter}{\numberline {4}Evaluation}{26}{chapter.4}
-\contentsline {chapter}{Literaturverzeichnis}{27}{section*.6}
+\contentsline {section}{\numberline {3.4}Safety measures}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Avoidance of implicitly shared unprotected data}{26}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Copying pointers to unshared data into tasks}{27}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Unsynchronized access to synchronizable data}{27}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Address leakage of shared ressource values}{28}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Overwriting shared ressources}{28}{subsection.3.4.5}
+\contentsline {chapter}{\numberline {4}Evaluation}{30}{chapter.4}
+\contentsline {chapter}{Literaturverzeichnis}{31}{section*.6}
 \contentsfinish 

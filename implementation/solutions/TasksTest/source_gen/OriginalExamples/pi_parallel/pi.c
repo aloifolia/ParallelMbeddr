@@ -7,6 +7,7 @@
 #include "GenericSyncDeclarations.h"
 #include <pthread.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 
 struct pi_Args_a8a5 {
@@ -31,14 +32,14 @@ static void* pi_parFun_a8a5(void* voidArgs);
 
 static void* pi_parFun_a61a5(void* voidArgs);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a61a5(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a61a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   pi_initAllGlobalMutexes_0();
   struct queue_SharedTypes_0_SharedOf_Queue_0 queue;
   queue_SharedTypes_0_mutexInit_2(&queue);
@@ -55,7 +56,7 @@ int32_t main(int32_t argc, char* argv[])
 
   GenericSyncDeclarations_stopSyncFor1Mutex(&counter.mutex);
   
-  struct GenericTaskDeclarations_Task mapperTask = pi_taskInit_a8a5(queuePointer, counterPointer);
+  struct GenericTaskDeclarations_Task mapperTask = pi_taskInit_a8a5(counterPointer, queuePointer);
   struct GenericTaskDeclarations_VoidFuture mappers[PI_MAPPERCOUNT];
   for ( int8_t __i = 0; __i < PI_MAPPERCOUNT; __i++ )
   {
@@ -68,11 +69,17 @@ int32_t main(int32_t argc, char* argv[])
   pthread_mutex_init(&result.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer = &result;
   
-  struct GenericTaskDeclarations_Task reducerTask = pi_taskInit_a61a5(resultPointer, queuePointer);
+  struct GenericTaskDeclarations_Task reducerTask = pi_taskInit_a61a5(queuePointer, resultPointer);
   struct GenericTaskDeclarations_VoidFuture reducer = GenericTaskDeclarations_runTaskAndGetVoidFuture(reducerTask);
   free(reducerTask.args);
   GenericTaskDeclarations_joinVoidFuture(&reducer);
   
+  GenericSyncDeclarations_startSyncFor1Mutex(&result.mutex);
+  {
+    printf("pi: %.50Lf",result.value);
+  }
+
+  GenericSyncDeclarations_stopSyncFor1Mutex(&result.mutex);
   pi_destroyAllGlobalMutexes_0();
   queue_SharedTypes_0_mutexDestroy_2(&queue);
   pthread_mutex_destroy(&counter.mutex);
@@ -175,7 +182,7 @@ void pi_destroyAllGlobalMutexes_0(void)
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
 {
   struct pi_Args_a8a5* args_a8a5 = malloc(sizeof(struct pi_Args_a8a5));
   args_a8a5->counterPointer = counterPointer;
@@ -184,7 +191,7 @@ static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct queue_
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a61a5(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a61a5(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer) 
 {
   struct pi_Args_a61a5* args_a61a5 = malloc(sizeof(struct pi_Args_a61a5));
   args_a61a5->resultPointer = resultPointer;
