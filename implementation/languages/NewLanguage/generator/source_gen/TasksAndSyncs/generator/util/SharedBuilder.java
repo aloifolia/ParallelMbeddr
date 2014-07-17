@@ -26,11 +26,11 @@ import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.generator.template.TemplateQueryContext;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import org.jetbrains.mps.openapi.model.SModel;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
 import java.util.Set;
 import jetbrains.mps.internal.collections.runtime.SetSequence;
 import java.util.HashSet;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import com.mbeddr.core.statements.behavior.BreakStatement_Behavior;
 import com.mbeddr.core.statements.behavior.ContinueStatement_Behavior;
 import com.mbeddr.core.modules.behavior.ReturnStatement_Behavior;
@@ -759,13 +759,14 @@ public class SharedBuilder {
 
 
 
-  private SNode buildInitBase(SNode baseType, final SNode basePath) {
+  private Pair<SNode, SNode> buildInitAndDestroyBase(SNode baseType, final SNode basePath) {
     final Wrappers._T<SNode> _baseType = new Wrappers._T<SNode>(baseType);
     SNode typeToSearchFor = removeArraySizesShallowly(_baseType.value);
     final Pair<SNode, SNode> baseFunctions = getValueForType(typesToMutexFunctions, typeToSearchFor);
     SNode initBase;
+    SNode destroyBase;
     if (baseFunctions != null) {
-      final Wrappers._T<SNode> path = new Wrappers._T<SNode>(null);
+      final Wrappers._T<SNode> path = new Wrappers._T<SNode>();
       if (SNodeOperations.isInstanceOf(_baseType.value, "com.mbeddr.core.pointers.structure.ArrayType")) {
         path.value = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
@@ -845,6 +846,9 @@ public class SharedBuilder {
           _baseType.value = SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(_baseType.value, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true), "com.mbeddr.core.expressions.structure.Type");
         }
       }
+
+      destroyBase = SNodeOperations.copyNode(initBase);
+      SLinkOperations.setTarget(SNodeOperations.cast(SLinkOperations.getTarget(destroyBase, "expr", true), "com.mbeddr.core.modules.structure.FunctionCall"), "function", baseFunctions.second, false);
     } else {
       ListSequence.fromList(typesToMutexFunctions).visitAll(new IVisitor<Pair<SNode, Pair<SNode, SNode>>>() {
         public void visit(Pair<SNode, Pair<SNode, SNode>> it) {
@@ -852,8 +856,10 @@ public class SharedBuilder {
         }
       });
       initBase = buildMutexInitCall(basePath, SNodeOperations.cast(_baseType.value, "TasksAndSyncs.structure.SharedType"));
+      destroyBase = SNodeOperations.copyNode(initBase);
+      mutexInitToDestroyCallInline(initBase);
     }
-    return initBase;
+    return new Pair(initBase, destroyBase);
   }
 
 
@@ -962,15 +968,19 @@ public class SharedBuilder {
 
 
 
-  private void buildMutexInitAndDestroyFunctions(SNode type, SNode argument, SNode... statements) {
+  private void buildMutexInitAndDestroyFunctions(SNode type, SNode argument, SNode initBase, SNode destroyBase) {
     List<SNode> arguments = new ArrayList<SNode>();
     ListSequence.fromList(arguments).addElement(argument);
-    buildMutexInitAndDestroyFunctions(type, arguments, statements);
+    List<SNode> initStatements = new ArrayList<SNode>();
+    ListSequence.fromList(initStatements).addElement(initBase);
+    List<SNode> destroyStatements = new ArrayList<SNode>();
+    ListSequence.fromList(initStatements).addElement(destroyBase);
+    buildMutexInitAndDestroyFunctions(type, arguments, initStatements, destroyStatements);
   }
 
 
 
-  private void buildMutexInitAndDestroyFunctions(SNode type, List<SNode> arguments, SNode... statements) {
+  private void buildMutexInitAndDestroyFunctions(SNode type, List<SNode> arguments, List<SNode> initStatements, List<SNode> destroyStatements) {
     SNode initFunction = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_5512582143363057693 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1006,8 +1016,12 @@ public class SharedBuilder {
       System.out.println("init3, type: " + type + " -> arguments: " + arguments);
     }
     ListSequence.fromList(SLinkOperations.getTargets(initFunction, "arguments", true)).addSequence(ListSequence.fromList(arguments));
-    ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(initFunction, "body", true), "statements", true)).addSequence(Sequence.fromIterable(Sequence.fromArray(statements)));
-    ListSequence.fromList(typesToMutexFunctions).addElement(new Pair(type, new Pair(initFunction, mutexInitToDestroyFunction(initFunction))));
+    ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(initFunction, "body", true), "statements", true)).addSequence(ListSequence.fromList(initStatements));
+
+    SNode destroyFunction = mutexInitToDestroyFunction(initFunction);
+    ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(destroyFunction, "body", true), "statements", true)).clear();
+    ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(destroyFunction, "body", true), "statements", true)).addSequence(ListSequence.fromList(destroyStatements));
+    ListSequence.fromList(typesToMutexFunctions).addElement(new Pair(type, new Pair(initFunction, destroyFunction)));
   }
 
 
@@ -1216,6 +1230,8 @@ public class SharedBuilder {
         return node_5512582143338281383;
       }
     }.invoke();
+    SNode destroySelf = SNodeOperations.copyNode(initSelf);
+    mutexInitToDestroyCallInline(destroySelf);
     SNode valueAccess = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         final SNode node_5512582143344405167 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1247,9 +1263,19 @@ public class SharedBuilder {
         return node_5512582143344404575;
       }
     }.invoke();
-    SNode initBase = buildInitBase(SLinkOperations.getTarget(sharedType, "baseType", true), valueAccess);
 
-    buildMutexInitAndDestroyFunctions(sharedType, argument, initSelf, initBase);
+    Pair<SNode, SNode> initAndDestroyBase = buildInitAndDestroyBase(SLinkOperations.getTarget(sharedType, "baseType", true), valueAccess);
+
+    List<SNode> initStatements = new ArrayList<SNode>();
+    ListSequence.fromList(initStatements).addElement(initSelf);
+    ListSequence.fromList(initStatements).addElement(initAndDestroyBase.first);
+    List<SNode> destroyStatements = new ArrayList<SNode>();
+    ListSequence.fromList(destroyStatements).addElement(destroySelf);
+    ListSequence.fromList(destroyStatements).addElement(initAndDestroyBase.second);
+    List<SNode> arguments = new ArrayList<SNode>();
+    ListSequence.fromList(arguments).addElement(argument);
+
+    buildMutexInitAndDestroyFunctions(sharedType, arguments, initStatements, destroyStatements);
   }
 
 
@@ -1346,7 +1372,7 @@ public class SharedBuilder {
       return;
     }
 
-    SNode initByForRange = buildNestedForRanges(arrayType, sizeArguments, new _FunctionTypes._return_P0_E0<SNode>() {
+    Pair<SNode, SNode> initAndDestroyRanges = buildNestedForRanges(arrayType, sizeArguments, new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         SNode node_5512582143340698153 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
@@ -1358,18 +1384,22 @@ public class SharedBuilder {
         return node_5512582143340698153;
       }
     }.invoke());
+    List<SNode> initStatements = new ArrayList<SNode>();
+    ListSequence.fromList(initStatements).addElement(initAndDestroyRanges.first);
+    List<SNode> destroyStatements = new ArrayList<SNode>();
+    ListSequence.fromList(destroyStatements).addElement(initAndDestroyRanges.second);
     List<SNode> allArguments = new ArrayList<SNode>();
     ListSequence.fromList(allArguments).addElement(varArgument);
     ListSequence.fromList(allArguments).addSequence(ListSequence.fromList(sizeArguments));
-    buildMutexInitAndDestroyFunctions(removeArraySizes(arrayType), allArguments, initByForRange);
+    buildMutexInitAndDestroyFunctions(removeArraySizes(arrayType), allArguments, initStatements, destroyStatements);
   }
 
 
 
-  private SNode buildNestedForRanges(SNode arrayType, final List<SNode> sizeArguments, final SNode path) {
-    final SNode nestedForRange = SNodeFactoryOperations.createNewNode("com.mbeddr.core.util.structure.ForRangeStatement", null);
-    SPropertyOperations.set(nestedForRange, "name", genContext.createUniqueName("i_", null));
-    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForRange, "range", true), "left", new _FunctionTypes._return_P0_E0<SNode>() {
+  private Pair<SNode, SNode> buildNestedForRanges(SNode arrayType, final List<SNode> sizeArguments, final SNode path) {
+    final SNode nestedForInitRange = SNodeFactoryOperations.createNewNode("com.mbeddr.core.util.structure.ForRangeStatement", null);
+    SPropertyOperations.set(nestedForInitRange, "name", genContext.createUniqueName("i_", null));
+    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForInitRange, "range", true), "left", new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         SNode node_5512582143339965225 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
@@ -1381,8 +1411,8 @@ public class SharedBuilder {
         return node_5512582143339965225;
       }
     }.invoke(), true);
-    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForRange, "range", true), "right", SNodeOperations.copyNode(SLinkOperations.getTarget(arrayType, "sizeExpr", true)), true);
-    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForRange, "range", true), "right", new _FunctionTypes._return_P0_E0<SNode>() {
+    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForInitRange, "range", true), "right", SNodeOperations.copyNode(SLinkOperations.getTarget(arrayType, "sizeExpr", true)), true);
+    SLinkOperations.setTarget(SLinkOperations.getTarget(nestedForInitRange, "range", true), "right", new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
         SNode node_5512582143343361929 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
@@ -1405,7 +1435,7 @@ public class SharedBuilder {
         final SNode node_5512582143339973406 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.util.structure.ForRangeRef", null);
-            SLinkOperations.setTarget(res, "forRange", nestedForRange, false);
+            SLinkOperations.setTarget(res, "forRange", nestedForInitRange, false);
             return res;
           }
         }.invoke();
@@ -1420,12 +1450,17 @@ public class SharedBuilder {
         return node_5512582143339972299;
       }
     }.invoke();
+    SNode nestedForDestroyRange = SNodeOperations.copyNode(nestedForInitRange);
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.pointers.structure.ArrayType")) {
-      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForRange, "body", true), "statements", true)).addElement(buildNestedForRanges(SNodeOperations.cast(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.pointers.structure.ArrayType"), ListSequence.fromList(sizeArguments).tail(ListSequence.fromList(sizeArguments).count() - 1).toListSequence(), extendedPath));
+      Pair<SNode, SNode> subRanges = buildNestedForRanges(SNodeOperations.cast(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.pointers.structure.ArrayType"), ListSequence.fromList(sizeArguments).tail(ListSequence.fromList(sizeArguments).count() - 1).toListSequence(), extendedPath);
+      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForInitRange, "body", true), "statements", true)).addElement(subRanges.first);
+      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForDestroyRange, "body", true), "statements", true)).addElement(subRanges.second);
     } else {
-      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForRange, "body", true), "statements", true)).addElement(buildInitBase(SNodeOperations.cast(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.expressions.structure.Type"), extendedPath));
+      Pair<SNode, SNode> initAndDestroyBase = buildInitAndDestroyBase(SNodeOperations.cast(SLinkOperations.getTarget(arrayType, "baseType", true), "com.mbeddr.core.expressions.structure.Type"), extendedPath);
+      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForInitRange, "body", true), "statements", true)).addElement(initAndDestroyBase.first);
+      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(nestedForDestroyRange, "body", true), "statements", true)).addElement(initAndDestroyBase.second);
     }
-    return nestedForRange;
+    return new Pair(nestedForInitRange, nestedForDestroyRange);
   }
 
 
@@ -1478,12 +1513,13 @@ public class SharedBuilder {
       }
     }.invoke();
     List<SNode> initStatements = new ArrayList<SNode>();
+    List<SNode> destroyStatements = new ArrayList<SNode>();
     for (final SNode member : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return getValueForType(typesToMutexFunctions, removeArraySizes(SLinkOperations.getTarget(it, "type", true))) != null || SNodeOperations.isInstanceOf(SLinkOperations.getTarget(it, "type", true), "TasksAndSyncs.structure.SharedType");
       }
     })) {
-      ListSequence.fromList(initStatements).addElement(buildInitBase(SNodeOperations.copyNode(SLinkOperations.getTarget(member, "type", true)), new _FunctionTypes._return_P0_E0<SNode>() {
+      Pair<SNode, SNode> initAndDestroyField = buildInitAndDestroyBase(SNodeOperations.copyNode(SLinkOperations.getTarget(member, "type", true)), new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
           final SNode node_5512582143345904219 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
@@ -1509,9 +1545,15 @@ public class SharedBuilder {
           }.invoke();
           return node_5512582143345888922;
         }
-      }.invoke()));
+      }.invoke());
+      ListSequence.fromList(initStatements).addElement(initAndDestroyField.first);
+      ListSequence.fromList(destroyStatements).addElement(initAndDestroyField.second);
     }
-    buildMutexInitAndDestroyFunctions(structType, varArgument, ListSequence.fromList(initStatements).toGenericArray(SNode.class));
+
+    List<SNode> arguments = new ArrayList<SNode>();
+    ListSequence.fromList(arguments).addElement(varArgument);
+
+    buildMutexInitAndDestroyFunctions(structType, arguments, initStatements, destroyStatements);
   }
 
 

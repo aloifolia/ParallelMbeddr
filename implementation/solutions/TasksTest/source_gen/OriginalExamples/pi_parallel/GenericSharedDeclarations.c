@@ -5,7 +5,7 @@
 
 pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
-void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_SharedOf_long_double_0* var, int32_t size_0) 
+void GenericSharedDeclarations_mutexInit_0(struct GenericSharedDeclarations_SharedOf_long_double_0* var, int32_t size_0) 
 {
   for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
   {
@@ -15,7 +15,7 @@ void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_S
 }
 
 
-void GenericSharedDeclarations_mutexInit_0(struct GenericSharedDeclarations_SharedOf_long_double_0* var, int32_t size_0) 
+void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_SharedOf_long_double_0* var, int32_t size_0) 
 {
   for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
   {

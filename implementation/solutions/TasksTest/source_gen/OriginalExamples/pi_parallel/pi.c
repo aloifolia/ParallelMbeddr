@@ -151,6 +151,7 @@ static void* pi_parFun_a8a5(void* voidArgs)
 {
   struct pi_Args_a8a5* args = ((struct pi_Args_a8a5*)(voidArgs));
   pi_map(PI_THRESHOLD, (args)->counterPointer, (args)->queuePointer);
+  free(voidArgs);
   return 0;
 }
 
@@ -159,6 +160,7 @@ static void* pi_parFun_a61a5(void* voidArgs)
 {
   struct pi_Args_a61a5* args = ((struct pi_Args_a61a5*)(voidArgs));
   pi_reduce(PI_RANGECOUNT, (args)->resultPointer, (args)->queuePointer);
+  free(voidArgs);
   return 0;
 }
 

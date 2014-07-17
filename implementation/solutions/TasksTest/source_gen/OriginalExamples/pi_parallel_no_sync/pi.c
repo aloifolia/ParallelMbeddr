@@ -20,7 +20,7 @@ static long double pi_calcPiItem(uint32_t index);
 
 static void* pi_parFun_a0c0f0e(void* voidArgs);
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t start,uint32_t end);
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t end,uint32_t start);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -36,7 +36,7 @@ int32_t main(int32_t argc, char* argv[])
   {
     uint32_t start = __i * PI_RANGESIZE;
     uint32_t end = start + PI_RANGESIZE;
-    calculators[__i] = pi_taskInit_a0c0f0e(start, end);
+    calculators[__i] = pi_taskInit_a0c0f0e(end, start);
   }
 
   
@@ -99,7 +99,7 @@ void pi_destroyAllGlobalMutexes_0(void)
 }
 
 
-static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t start, uint32_t end) 
+static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t end, uint32_t start) 
 {
   struct pi_Args_a0c0f0e* args_a0c0f0e = malloc(sizeof(struct pi_Args_a0c0f0e));
   args_a0c0f0e->start = start;
