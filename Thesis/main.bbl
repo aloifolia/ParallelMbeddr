@@ -161,6 +161,11 @@ Bhatt P.C.P.
 \newblock {\em Introduction To Operating Systems: Concepts And Practice An 2Nd
   Ed.}
 
+\bibitem{TypesAndProgrammingLanguages}
+B.C. Pierce.
+\newblock {\em Types and Programming Languages}.
+\newblock MIT Press, 2002.
+
 \bibitem{CPrimerPlus}
 S.~Prata.
 \newblock {\em C Primer Plus}.
@@ -187,6 +192,12 @@ William~N Scherer~III and Michael~L Scott.
 J.~Shirazi.
 \newblock {\em Java Performance Tuning}.
 \newblock Java Series. O'Reilly Media, Incorporated, 2003.
+
+\bibitem{GeneratorUserGuide}
+Konstantin Solomatov and Vaclav Pech.
+\newblock {JetBRAINS} generator user guide.
+\newblock \url{http://confluence.jetbrains.com/display/MPSD30/Generator}.
+\newblock Accessed: 2014-07-18.
 
 \bibitem{OfficialISC2Guide}
 C.~Steven~Hernandez.

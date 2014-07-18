@@ -22,7 +22,7 @@ When a task is not used anymore to produce running instances of itself it should
 
 $e ::= ...|\;e.\mathit{clear}$
 \begin{align*}
-\inference*[VoidTask]{|e| |- \mathit{Task{<}void{>}}}{\qquad\mathit{void}\qquad} 
+\inference*[VoidTask]{|e| |- \mathit{Task{<}void{>}}}{e.\mathit{clear |-} \mathit{void}} 
 \end{align*}
 
 If a task is copied by the pass-by-value semantics of C the copied task will share the heap-managed data, i.e. the reference environment of its free variables, with the original task. Therefore a task needs to be cleared only once in order to avoid memory leaks. Keep in mind that a running instance of a task will not be affected by the clearance of its task template. The clearance of a task is only necessary if the task is stored somewhere. Thus, a task that is directly run via \CODE{|e|.run} need not be cleared which makes such expressions memory safe.

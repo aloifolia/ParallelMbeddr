@@ -1,4 +1,5 @@
 \section{Safety measures}
+\label{safetyMeasures}
 So far the basic blocks that constitute parallel code execution and shared data synchronization, namely tasks, shared ressources and synchronization thereof, were introduced. Still missing are most of the rules which ensure that only shared ressources may be shared and that these can only be used in a sane way. The current section fills this gap by giving an informal overview of the rules that were implemented in ParallelMbeddr, categorized by their objectives. In the following paragraphs \CODE{t} denotes some arbitrary type.
 
 \subsection{Avoidance of implicitly shared unprotected data}

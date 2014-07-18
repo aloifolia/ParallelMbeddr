@@ -42,7 +42,7 @@ vContentContent.set(1);
 
 The type of a reference to a named ressource is given by the corresponding shared ressource that is bound by the  synchronization reference.
 
-In contrast to Java's synchronization blocks and methods\cite[p.~279]{JavaPerformanceTuning} the synchronization of tasks is not computation oriented but data oriented. The crucial difference is that a synchronized block \CODE{A} in Java is only protected against simultaneous executions by multiple threads. Thus, it is valid to access the data that is involved in \CODE{A} by some other computation whose protecting block (if any) is completely unrelated to \CODE{A}. Since low-level data races can obviously not be safely excluded with this scheme ParallelMbeddr ties the protection to the data that shall be shared. Every shared ressource is therefore protected seperately and application-wide. Concluding, consider two synchronization blocks which are about to be executed in parallel. If they contain synchronization references which overlap in terms of their referenced shared ressources their executions will be serialized. For instance take two tasks \textit{t1} and \textit{t2} that have access to the same shared ressource which is referenced by a global variable \CODE{value}. \textit{t1} wants to synchronize \CODE{value}, simultaneously \textit{t2} wants to synchronize \CODE{valuePointer} which points to \CODE{value}'s shared ressource and some other shared ressource that is available via the variable \CODE{other}:
+In contrast to Java's synchronization blocks and methods\cite[p.~279]{JavaPerformanceTuning} the synchronization of tasks is not computation oriented but data oriented. The crucial difference is that a synchronized block \CODE{A} in Java is only protected against simultaneous executions by multiple threads. Thus, it is valid to access the data that is involved in \CODE{A} by some other computation whose protecting block (if any) is completely unrelated to \CODE{A}. Since low-level data races can obviously not be safely excluded with this scheme ParallelMbeddr ties the protection to the data that shall be shared. Every shared ressource, i.e. block of shareable data, is therefore protected seperately and application-wide. ParallelMbeddr does not yet face higher-level data races which involve multiple shared ressources. Dependencies between shared ressources must be resolved by the programmer by wrapping the dependent data inside a single shared ressource, e.g. as fields of a struct. Concluding, consider two synchronization blocks which are about to be executed in parallel. If they contain synchronization references which overlap in terms of their referenced shared ressources their executions will be serialized. For instance take two tasks \textit{t1} and \textit{t2} that have access to the same shared ressource which is referenced by a global variable \CODE{value}. \textit{t1} wants to synchronize \CODE{value}, simultaneously \textit{t2} wants to synchronize \CODE{valuePointer} which points to \CODE{value}'s shared ressource and some other shared ressource that is available via the variable \CODE{other}:
 
 \begin{ccode}
 shared<int32> value;
@@ -52,18 +52,20 @@ shared<double> other;
 The synchronization semantics will then cause one thread to wait for the other to finish the execution of the blocking synchronization statement before it starts the execution of its own synchronization statement. The execution order might therefore be changed in the following manner:
 
 \adjustbox{valign=t}{
-\begin{minipage}{0.35\textwidth}
+\begin{minipage}{0.4\textwidth}
 \includegraphics[scale=.9]{pics/ParallelExecutionAttempt}
 \end{minipage}
 }
 \begin{minipage}{0.2\textwidth}
 \begin{center}
 \vspace{3.5cm}
-\qquad\quad$\Longrightarrow$
+$\longrightarrow$
+
+actual execution
 \end{center}
 \end{minipage}
 \adjustbox{valign=t}{
-\begin{minipage}{0.35\textwidth}
+\begin{minipage}{0.4\textwidth}
 \includegraphics[scale=.9]{pics/SerialExecution}
 \end{minipage}}
 
@@ -85,14 +87,13 @@ sync(sharedA) { sharedB = &(sharedA.get.b); }
 \end{minipage}
 \begin{minipage}{0.2\textwidth}
 \begin{center}
-\qquad\quad$\Longrightarrow$
 \end{center}
 \end{minipage}
 \begin{minipage}{0.35\textwidth}
 \includegraphics[scale=.9]{pics/ParallelExecution}
 \end{minipage}
 
-%. In this sense the synchronization itself is non-blocking which means that they will try to acquire the locks that are necessary in order to synchronize the access to the stated ressources. If this does not work they release all 
+The translation of shared ressources is currently only supported for executable programs. Therefore it is not safe to use shared types and synchronization statements in libraries that are written with mbeddr. The explanations of the following section are therefore focused to according scenarios, although the translation for library code would only change in details: in the structure of some function calls.
 
 \subsection{Translation of shared types}
 In order to fully understand the translation of synchronization statements the translation of shared types is given first. For the implementation of shared types in C two main solutions are conceivable which differ in the coupling that they exhibit between the data that is to be shared and the additional data required for access restriction, i.e. synchronization. In any case a solution must make use of additional data that can be used to synchronize two threads which try to read or write the shared data. To this end the most basic synchronization primitive, the mutex was chosen: each protected data item is assigned exactly one. 
@@ -119,7 +120,7 @@ shared<shared<A[10][20]>*>
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 \begin{center}
-\quad$\Longrightarrow$\qquad
+\quad$\longrightarrow$\qquad
 
 the simplified type AST
 \end{center}
