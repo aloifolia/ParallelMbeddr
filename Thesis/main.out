@@ -1,36 +1,24 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Background}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Processes and Threads}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Parallelism and concurrency}{chapter.2}% 4
-\BOOKMARK [1][-]{section.2.3}{Types of parallelism}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Data races}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.5}{Communication model: shared memory}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.6}{Communication model: message passing}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.7}{Communication model: transactional memory}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.8}{Coarse- and fine-grained synchronization}{chapter.2}% 10
-\BOOKMARK [1][-]{section.2.9}{Embedded programming}{chapter.2}% 11
-\BOOKMARK [1][-]{section.2.10}{MPS and mbeddr}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.11}{C}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Design and Translation}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Notation}{chapter.3}% 15
-\BOOKMARK [1][-]{section.3.2}{Tasks}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.2.1}{Design}{section.3.2}% 17
-\BOOKMARK [2][-]{subsection.3.2.2}{Translation}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.3}{Example code}{section.3.2}% 19
-\BOOKMARK [1][-]{section.3.3}{Futures}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.1}{Design}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.2}{Translation}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.3}{Example code}{section.3.3}% 23
-\BOOKMARK [1][-]{section.3.4}{Shared memory}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.4.1}{Design}{section.3.4}% 25
-\BOOKMARK [2][-]{subsection.3.4.2}{Translation of shared types}{section.3.4}% 26
-\BOOKMARK [2][-]{subsection.3.4.3}{Translation of synchronization statements}{section.3.4}% 27
-\BOOKMARK [2][-]{subsection.3.4.4}{Example code}{section.3.4}% 28
-\BOOKMARK [1][-]{section.3.5}{Safety measures}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.5.1}{Avoidance of implicitly shared unprotected data}{section.3.5}% 30
-\BOOKMARK [2][-]{subsection.3.5.2}{Copying pointers to unshared data into tasks}{section.3.5}% 31
-\BOOKMARK [2][-]{subsection.3.5.3}{Unsynchronized access to synchronizable data}{section.3.5}% 32
-\BOOKMARK [2][-]{subsection.3.5.4}{Address leakage of shared ressource values}{section.3.5}% 33
-\BOOKMARK [2][-]{subsection.3.5.5}{Overwriting shared ressources}{section.3.5}% 34
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 35
-\BOOKMARK [0][-]{section*.6}{Literaturverzeichnis}{}% 36
+\BOOKMARK [0][-]{chapter.3}{Design and Translation}{}% 3
+\BOOKMARK [1][-]{section.3.1}{Tasks}{chapter.3}% 4
+\BOOKMARK [2][-]{subsection.3.1.1}{Design}{section.3.1}% 5
+\BOOKMARK [2][-]{subsection.3.1.2}{Translation}{section.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.1.3}{Example code}{section.3.1}% 7
+\BOOKMARK [1][-]{section.3.2}{Futures}{chapter.3}% 8
+\BOOKMARK [2][-]{subsection.3.2.1}{Design}{section.3.2}% 9
+\BOOKMARK [2][-]{subsection.3.2.2}{Translation}{section.3.2}% 10
+\BOOKMARK [2][-]{subsection.3.2.3}{Example code}{section.3.2}% 11
+\BOOKMARK [1][-]{section.3.3}{Shared memory}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.3.1}{Design}{section.3.3}% 13
+\BOOKMARK [2][-]{subsection.3.3.2}{Translation of shared types}{section.3.3}% 14
+\BOOKMARK [2][-]{subsection.3.3.3}{Translation of synchronization statements}{section.3.3}% 15
+\BOOKMARK [2][-]{subsection.3.3.4}{Example code}{section.3.3}% 16
+\BOOKMARK [1][-]{section.3.4}{Safety measures}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.4.1}{Avoidance of implicitly shared unprotected data}{section.3.4}% 18
+\BOOKMARK [2][-]{subsection.3.4.2}{Copying pointers to unshared data into tasks}{section.3.4}% 19
+\BOOKMARK [2][-]{subsection.3.4.3}{Unsynchronized access to synchronizable data}{section.3.4}% 20
+\BOOKMARK [2][-]{subsection.3.4.4}{Address leakage of shared resource values}{section.3.4}% 21
+\BOOKMARK [2][-]{subsection.3.4.5}{Overwriting shared resources}{section.3.4}% 22
+\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 23
+\BOOKMARK [0][-]{section*.18}{Literaturverzeichnis}{}% 24

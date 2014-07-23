@@ -33,7 +33,7 @@ static void* pi_parFun_a0a61a5(void* voidArgs);
 
 static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct GenericSharedDeclarations_SharedOf_uint32_0* counterPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
 
-static struct GenericTaskDeclarations_VoidFuture pi_futureInit_a0q0f(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer,struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer);
+static struct GenericTaskDeclarations_VoidFuture pi_futureInit_a0q0f(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer,struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -68,7 +68,7 @@ int32_t main(int32_t argc, char* argv[])
   pthread_mutex_init(&result.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer = &result;
   
-  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0q0f(queuePointer, resultPointer));
+  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0q0f(resultPointer, queuePointer));
   
   
   GenericSyncDeclarations_startSyncFor1Mutex(&result.mutex);
@@ -190,7 +190,7 @@ static inline struct GenericTaskDeclarations_Task pi_taskInit_a8a5(struct Generi
 }
 
 
-static struct GenericTaskDeclarations_VoidFuture pi_futureInit_a0q0f(struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer, struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer) 
+static struct GenericTaskDeclarations_VoidFuture pi_futureInit_a0q0f(struct GenericSharedDeclarations_SharedOf_long_double_0* resultPointer, struct queue_SharedTypes_0_SharedOf_Queue_0* queuePointer) 
 {
   struct pi_Args_a0a61a5* args_a0q0f = malloc(sizeof(struct pi_Args_a0a61a5));
   args_a0q0f->resultPointer = resultPointer;

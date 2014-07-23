@@ -29,7 +29,7 @@ If a task is copied by the pass-by-value semantics of C the copied task will sha
 
 \subsection{Translation}
 \label{tasksTranslation}
-The POSIX Threads standard and library (pthreads) was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code when compared to frameworks like OpenMP\footnote{http://openmp.org/}. Every task in ParalllelMbeddr is represented by a thread as provided by the POSIX threads standard, a so-called \textit{pthread}\footnote{In the following sections `pthreads' will denote both the library and multiple threads as they are provided by the library. The context should always clarify which one is currently meant.}. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
+The POSIX Threads standard and library (pthreads) was chosen as a means to realize concurrency in the translation. It supports all necessary parallelization features and provides a more direct control of the generated code when compared to frameworks like OpenMP\footnote{http://openmp.org/}. Every task in ParallelMbeddr is represented by a thread as provided by the POSIX threads standard, a so-called \textit{pthread}\footnote{In the following sections `pthreads' will denote both the library and multiple threads as they are provided by the library. The context should always clarify which one is currently meant.}. As the thread initialization function of pthreads takes a function pointer of type \CODE{void* -> void*} the computation of the translated task is represented by an according function:
 %\begin{ccode}
 %void* parFun_X(void* voidArgs) {...}
 %\end{ccode}
@@ -62,7 +62,7 @@ void* parFun_X(void* voidArgs) {
 }
 \end{ccode}
 
-where \CODE{e'} is the expression obtained when every local variable reference and function argument reference \CODE{r} in \CODE{e} is substituted by a reference to an equally named and typed field in args:
+where \CODE{e'} is the expression obtained when every local variable reference and function argument reference \CODE{r} in \CODE{e} is substituted by a reference to an equally named and typed field in \CODE{args}:
 
 $r\;/\;args\text{-->}r$
 
@@ -80,7 +80,7 @@ void* parFun_X(void* voidArgs) {
 
 Again, any argument-related code is generated as needed.
 
-The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initilization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99.}. The \textit{void} pointer of the arguments \CODE{voidArgs} does not keep their type information and with it their byte size. Therefore an additional field \CODE{argsSize} is needed in order to be able to create copies of the arguments later on (see \ref{futuresTranslation} for details).
+The aforementioned handle that a task yields is represented by an instance of a corresponding struct that captures both the initialization state and the computation of the embraced expression\footnote{\CODE{(void*) => (void*) fun} is mbeddr syntax for the not easily edible function pointer \CODE{void *(*fun) (void *)} in standard C99.}. The \textit{void} pointer of the arguments \CODE{voidArgs} does not keep their type information and with it their byte size. Therefore an additional field \CODE{argsSize} is needed in order to be able to create copies of the arguments later on (see \ref{futuresTranslation} for details).
 \begin{ccode}
 exported struct Task {
   void* args;
@@ -89,7 +89,7 @@ exported struct Task {
 }
 \end{ccode}
 
-As opposed to the unique definitions of other elements that need to be defined for every occurence of a task (the ones with the \CODE{X} suffixes) \CODE{struct Task} is generic and is reused for every task. Generic declarations are kept in fixed seperately generated modules and are imported into the user-defined modules.
+As opposed to the unique definitions of other elements that need to be defined for every occurrence of a task (the ones with the \CODE{X} suffixes) \CODE{struct Task} is generic and is reused for every task. Generic declarations are kept in fixed separately generated modules and are imported into the user-defined modules.
 With these components in mind the actual translation of a task expression \CODE{|.|} that contains references \CODE{v\_i} to \CODE{v\_n} which need to be bound becomes an mbeddr block expression\footnote{A block expression contains a list of statements of which the mandatory yield statement returns the result value..}:
 
 \begin{center}
@@ -177,7 +177,7 @@ int32 main(int32 argc, string[] argv) {
 ...
 }
 \end{ccode}
-The final reduction of the calculated values will be shown after the presentation of futures in section \ref{futuresExample}. The code is translated\footnote{For legibility reasons the code shown in the following listing and any other mbeddr code is a simplified version of the intermediate code that mbeddr actually generates. The performed changes are restricted to renamings and other minor adjustments.} to the building blocks that were introduced in \ref{tasksTranslation}:
+The final reduction of the calculated values will be shown after the presentation of futures in section \ref{futuresExample}. The code is translated\footnote{For legibility reasons the code shown in the following listing and any other mbeddr code is a simplified version of the intermediate code that mbeddr actually generates. The performed changes are restricted to renaming and other minor adjustments.} to the building blocks that were introduced in \ref{tasksTranslation}:
 \begin{ccode}
 
 int32 main(int32 argc, string[] argv) {

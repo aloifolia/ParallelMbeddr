@@ -7,6 +7,11 @@
   \url{http://pubs.opengroup.org/onlinepubs/009695399/functions/pthread\_mutex_destroy.html}.
 \newblock Accessed: 2014-07-15.
 
+\bibitem{TheDProgrammingLanguage}
+A.~Alexandrescu.
+\newblock {\em The D Programming Language}.
+\newblock Pearson Education, 2010.
+
 \bibitem{ObstructionFreeAuthorizationEnforcement}
 David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
 \newblock Obstruction-free authorization enforcement: Aligning security with
@@ -68,6 +73,11 @@ Martin Fowler.
 \newblock \url{http://www.martinfowler.com/articles/languageWorkbench.html}.
 \newblock Published: 2005-06-12.
 
+\bibitem{ConcurrentAndDistributedComputingInJava}
+V.K. Garg.
+\newblock {\em Concurrent and Distributed Computing in Java}.
+\newblock Wiley, 2005.
+
 \bibitem{PrinciplesOfModernOSs}
 J.M. Garrido, R.~Schlesinger, and K.~Hoganson.
 \newblock {\em Principles of Modern Operating Systems}.
@@ -101,6 +111,11 @@ Carl Hewitt, Peter Bishop, and Richard Steiger.
 \newblock In {\em Proceedings of the 3rd International Joint Conference on
   Artificial Intelligence}, IJCAI'73, pages 235--245, San Francisco, CA, USA,
   1973. Morgan Kaufmann Publishers Inc.
+
+\bibitem{CommunicatingSequentialProcesses}
+C.~A.~R. Hoare.
+\newblock Communicating sequential processes.
+\newblock {\em Commun. ACM}, 21(8):666--677, August 1978.
 
 \bibitem{TamingJavaThreads}
 A.~Holub.

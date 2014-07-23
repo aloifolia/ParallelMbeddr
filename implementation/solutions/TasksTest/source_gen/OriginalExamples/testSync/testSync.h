@@ -14,6 +14,8 @@
 
 #include "GenericSyncDeclarations.h"
 
+#include <pthread.h>
+
 
 
 #ifdef __cplusplus
@@ -22,9 +24,9 @@ extern "C" {
 
 int32_t testSync_main(int32_t argc,char* argv[]);
 
-void testSync_initAllGlobalMutexes_0(void);
+void testSync_initGlobalMutexesFor1Module_0(void);
 
-void testSync_destroyAllGlobalMutexes_0(void);
+void testSync_initAllGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus

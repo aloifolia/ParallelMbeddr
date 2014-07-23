@@ -1585,29 +1585,20 @@ public class SharedBuilder {
 
 
   public void buildGlobalMutexCalls() {
-    Pair<List<SNode>, List<SNode>> mutexCallsForModules = buildGlobalMutexCallsForModules();
-    SNode initAllGlobals = buildGlobalMutexContainerCall("initAllGlobalMutexes", mutexCallsForModules.first, entryModule);
-    // TODO: maybe remove destroy stuff 
-    final SNode destroyAllGlobals = buildGlobalMutexContainerCall("destroyAllGlobalMutexes", mutexCallsForModules.second, entryModule);
-    ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(entryFunction, "body", true), "statements", true)).insertElement(0, initAllGlobals);
-    // TODO: maybe remove the rest 
-    ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(entryFunction, "body", true), "com.mbeddr.core.modules.structure.ReturnStatement", false, new String[]{})).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        SNodeOperations.insertPrevSiblingChild(it, SNodeOperations.copyNode(destroyAllGlobals));
-      }
-    });
-    if (BehaviorReflection.invokeVirtual(Boolean.TYPE, SLinkOperations.getTarget(entryFunction, "type", true), "virtual_isVoid_7892328519581699357", new Object[]{}) && !(SNodeOperations.isInstanceOf(ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(entryFunction, "body", true), "statements", true)).last(), "com.mbeddr.core.modules.structure.ReturnStatement"))) {
-      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(entryFunction, "body", true), "statements", true)).addElement(destroyAllGlobals);
+    List<SNode> mutexCallsForModules = buildGlobalMutexCallsForModules();
+    if (ListSequence.fromList(mutexCallsForModules).count() > 0) {
+      SNode initAllGlobals = buildGlobalMutexContainerCall("initAllGlobalMutexes", mutexCallsForModules, entryModule);
+      ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(entryFunction, "body", true), "statements", true)).insertElement(0, initAllGlobals);
     }
   }
 
 
 
-  private Pair<List<SNode>, List<SNode>> buildGlobalMutexCallsForModules() {
-    Pair<List<SNode>, List<SNode>> globalMutexCallsForModules = new Pair(new ArrayList<SNode>(), new ArrayList<SNode>());
+  private List<SNode> buildGlobalMutexCallsForModules() {
+    List<SNode> globalMutexCallsForModules = new ArrayList<SNode>();
     for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule"))) {
-      Pair<List<SNode>, List<SNode>> moduleSpecificCalls = buildGlobalMutexCallsForModule(implementationModule);
-      if (ListSequence.fromList(moduleSpecificCalls.first).isEmpty()) {
+      List<SNode> moduleSpecificCalls = buildGlobalMutexCallsForModule(implementationModule);
+      if (ListSequence.fromList(moduleSpecificCalls).isEmpty()) {
         continue;
       }
 
@@ -1617,18 +1608,15 @@ public class SharedBuilder {
       ModuleBuilder.importModule(implementationModule, entryModule);
 
       // create init function for global mutexes of the current module 
-      ListSequence.fromList(globalMutexCallsForModules.first).addElement(buildGlobalMutexContainerCall("initGlobalMutexesFor1Module", moduleSpecificCalls.first, implementationModule));
-      // TODO: maybe remove 
-      // create destruction function for global mutexes of the current module 
-      ListSequence.fromList(globalMutexCallsForModules.second).addElement(buildGlobalMutexContainerCall("destroyGlobalMutexesFor1Module", moduleSpecificCalls.second, implementationModule));
+      ListSequence.fromList(globalMutexCallsForModules).addElement(buildGlobalMutexContainerCall("initGlobalMutexesFor1Module", moduleSpecificCalls, implementationModule));
     }
     return globalMutexCallsForModules;
   }
 
 
 
-  private Pair<List<SNode>, List<SNode>> buildGlobalMutexCallsForModule(SNode implementationModule) {
-    Pair<List<SNode>, List<SNode>> moduleSpecificCalls = new Pair(new ArrayList<SNode>(), new ArrayList<SNode>());
+  private List<SNode> buildGlobalMutexCallsForModule(SNode implementationModule) {
+    List<SNode> moduleSpecificCalls = new ArrayList<SNode>();
 
     for (final SNode declaration : ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.GlobalVariableDeclaration", false, new String[]{}))) {
       Pair<SNode, SNode> mutexCalls = buildMutexCallsForVariable(new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1647,8 +1635,7 @@ public class SharedBuilder {
         continue;
       }
 
-      ListSequence.fromList(moduleSpecificCalls.first).addElement(mutexCalls.first);
-      ListSequence.fromList(moduleSpecificCalls.second).addElement(mutexCalls.second);
+      ListSequence.fromList(moduleSpecificCalls).addElement(mutexCalls.first);
     }
 
     return moduleSpecificCalls;
