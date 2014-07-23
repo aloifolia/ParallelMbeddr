@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_calculations=constants.o main.o readerData.o writerData.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o readerData_SharedTypes_0.o
+_OBJ_calculations=constants.o main.o readerData.o writerData.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o readerData_SharedTypes_0.o main_SharedTypes_0.o
 OBJ_calculations=$(patsubst %,$(ODIR)/%,$(_OBJ_calculations))
 
 

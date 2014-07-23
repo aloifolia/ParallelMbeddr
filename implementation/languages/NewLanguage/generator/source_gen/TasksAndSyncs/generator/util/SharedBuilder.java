@@ -9,27 +9,27 @@ import com.mbeddr.core.expressions.behavior.Type_Behavior;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import java.util.ArrayList;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import java.util.Set;
+import jetbrains.mps.internal.collections.runtime.SetSequence;
+import java.util.HashSet;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
+import jetbrains.mps.internal.collections.runtime.IVisitor;
+import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import java.util.Map;
 import jetbrains.mps.internal.collections.runtime.MapSequence;
 import java.util.HashMap;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SModelOperations;
-import jetbrains.mps.internal.collections.runtime.IVisitor;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.IMapping;
 import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.baseLanguage.closures.runtime.Wrappers;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
-import com.mbeddr.core.udt.behavior.SUDeclaration_Behavior;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.generator.template.TemplateQueryContext;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import org.jetbrains.mps.openapi.model.SModel;
 import jetbrains.mps.smodel.action.SNodeFactoryOperations;
-import java.util.Set;
-import jetbrains.mps.internal.collections.runtime.SetSequence;
-import java.util.HashSet;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import com.mbeddr.core.statements.behavior.BreakStatement_Behavior;
 import com.mbeddr.core.statements.behavior.ContinueStatement_Behavior;
@@ -102,6 +102,49 @@ public class SharedBuilder {
 
 
 
+  public Set<SNode> getStructsWithNestedSharedData() {
+    final Set<SNode> structs = SetSequence.fromSet(new HashSet<SNode>());
+    ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule")).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode module) {
+        ListSequence.fromList(SNodeOperations.getDescendants(module, "com.mbeddr.core.udt.structure.StructDeclaration", false, new String[]{})).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode struct) {
+            SetSequence.fromSet(structs).addSequence(SetSequence.fromSet(getStructsWithNestedSharedDataRec(struct)));
+          }
+        });
+      }
+    });
+    System.out.println("found structs: " + structs);
+    return structs;
+  }
+
+
+
+  private Set<SNode> getStructsWithNestedSharedDataRec(SNode struct) {
+    Set<SNode> structsWithNestedSharedData = SetSequence.fromSet(new HashSet<SNode>());
+    for (SNode member : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(struct))) {
+      SNode strippedMemberType = resolveAndStripArrayTypes(SLinkOperations.getTarget(member, "type", true));
+      if (SNodeOperations.isInstanceOf(strippedMemberType, "TasksAndSyncs.structure.SharedType")) {
+        SetSequence.fromSet(structsWithNestedSharedData).addElement(struct);
+      } else if (SNodeOperations.isInstanceOf(strippedMemberType, "com.mbeddr.core.udt.structure.StructType")) {
+        SetSequence.fromSet(structsWithNestedSharedData).addSequence(SetSequence.fromSet(getStructsWithNestedSharedDataRec(SLinkOperations.getTarget(SNodeOperations.cast(strippedMemberType, "com.mbeddr.core.udt.structure.StructType"), "struct", false))));
+      }
+    }
+    return structsWithNestedSharedData;
+  }
+
+
+
+  private static SNode resolveAndStripArrayTypes(SNode type) {
+    SNode typeCopy = SNodeOperations.copyNode(type);
+    resolveType(typeCopy);
+    while (SNodeOperations.isInstanceOf(typeCopy, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      typeCopy = SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(typeCopy, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true), "com.mbeddr.core.expressions.structure.Type");
+    }
+    return typeCopy;
+  }
+
+
+
   public Map<SNode, SNode> getSharedToResolvedTypes() {
     final Map<SNode, SNode> sharedToResolvedTypes = MapSequence.fromMap(new HashMap<SNode, SNode>());
     ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule")).visitAll(new IVisitor<SNode>() {
@@ -164,6 +207,7 @@ public class SharedBuilder {
       if ((nestedStructType != null)) {
         SNode structModule = SNodeOperations.getAncestor(SLinkOperations.getTarget(nestedStructType, "struct", false), "com.mbeddr.core.modules.structure.ImplementationModule", false, false);
         if (!(MapSequence.fromMap(structToSharedModule).containsKey(SLinkOperations.getTarget(nestedStructType, "struct", false)))) {
+          System.out.println("struct adddddddd: " + SLinkOperations.getTarget(nestedStructType, "struct", false) + " -> " + structModule);
           MapSequence.fromMap(structToSharedModule).put(SLinkOperations.getTarget(nestedStructType, "struct", false), MapSequence.fromMap(moduleToSharedModule).get(structModule));
         }
         definitionModule = MapSequence.fromMap(structToSharedModule).get(SLinkOperations.getTarget(nestedStructType, "struct", false));
@@ -172,6 +216,7 @@ public class SharedBuilder {
         definitionModule = genericSharedModule;
       }
       MapSequence.fromMap(structToSharedModule).put(SLinkOperations.getTarget(structType, "struct", false), definitionModule);
+      System.out.println("struct edddddddd: " + SLinkOperations.getTarget(structType, "struct", false) + " -> " + definitionModule);
     }
   }
 
@@ -234,6 +279,8 @@ public class SharedBuilder {
 
 
   public void addNewStructTypesToModules(Map<SNode, SNode> structToSharedModule) {
+    System.out.println("module to shared module: " + MapSequence.fromMap(moduleToSharedModule).keySet() + " -> " + MapSequence.fromMap(moduleToSharedModule).values());
+    System.out.println("struct to shared module: " + MapSequence.fromMap(structToSharedModule).keySet() + " -> " + MapSequence.fromMap(structToSharedModule).values());
     for (IMapping<SNode, SNode> structAndModule : MapSequence.fromMap(structToSharedModule)) {
       System.out.println("add struct to module, struct: " + structAndModule.key() + ", module: " + structAndModule.value());
       addOrLiftStruct(structAndModule.key(), SNodeOperations.getAncestor(structAndModule.key(), "com.mbeddr.core.modules.structure.ImplementationModule", false, false), structAndModule.value());
@@ -242,7 +289,11 @@ public class SharedBuilder {
 
 
 
-  private void addOrLiftStruct(SNode struct, final SNode moduleToLiftFrom, final SNode targetModule) {
+  public void addOrLiftStruct(SNode struct, final SNode moduleToLiftFrom, final SNode targetModule) {
+    if (targetModule == null || targetModule == SNodeOperations.getAncestor(struct, "com.mbeddr.core.modules.structure.ImplementationModule", false, false)) {
+      return;
+    }
+
     ListSequence.fromList(SLinkOperations.getTargets(targetModule, "contents", true)).addElement(struct);
     SPropertyOperations.set(struct, "exported", "" + (true));
     ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(struct)).visitAll(new IVisitor<SNode>() {
@@ -719,7 +770,6 @@ public class SharedBuilder {
         }.invoke());
       }
     }
-    System.out.println("all var types: " + allTypes);
 
     return allTypes;
   }
@@ -746,7 +796,7 @@ public class SharedBuilder {
     for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule"))) {
       SNode foundFunction = ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.Function", false, new String[]{})).findFirst(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
-          return SPropertyOperations.getString(it, "name").equals("main");
+          return BehaviorReflection.invokeVirtual(Boolean.TYPE, it, "virtual_actsAsMainFunction_3209727427932102770", new Object[]{});
         }
       });
       if (foundFunction != null) {
@@ -1012,9 +1062,6 @@ public class SharedBuilder {
         return node_5512582143363057690;
       }
     }.invoke();
-    if (SPropertyOperations.getString(initFunction, "name").equals("mutexInit_3")) {
-      System.out.println("init3, type: " + type + " -> arguments: " + arguments);
-    }
     ListSequence.fromList(SLinkOperations.getTargets(initFunction, "arguments", true)).addSequence(ListSequence.fromList(arguments));
     ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(initFunction, "body", true), "statements", true)).addSequence(ListSequence.fromList(initStatements));
 
@@ -1478,8 +1525,6 @@ public class SharedBuilder {
       return;
     }
 
-    System.out.println("found mutex function for struct member of " + structType);
-    System.out.println(" # first member: " + SLinkOperations.getTarget(ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).getElement(0), "type", true) + "  -> name: " + SPropertyOperations.getString(ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).getElement(0), "name"));
     ListSequence.fromList(typesToMutexFunctions).visitAll(new IVisitor<Pair<SNode, Pair<SNode, SNode>>>() {
       public void visit(Pair<SNode, Pair<SNode, SNode>> it) {
         System.out.println("--> " + it.first + ", fun: " + it.second);
@@ -1719,8 +1764,12 @@ public class SharedBuilder {
         // add init call right behind the declaration 
         SNodeOperations.insertNextSiblingChild(declaration, mutexCalls.first);
 
+        // no mutex destruction  
+        if (BehaviorReflection.invokeVirtual(Boolean.TYPE, function, "virtual_actsAsMainFunction_3209727427932102770", new Object[]{})) {
+          continue;
+        }
         // add destruction statements before any following relevant control flow breaking statements 
-        addMutexDestroyCallsForLocalVariable(mutexCalls.second, SNodeOperations.cast(declaration, "com.mbeddr.core.statements.structure.LocalVariableDeclaration"), function);
+        addMutexDestroyCallsForLocalVariable(mutexCalls.second, SNodeOperations.cast(declaration, "com.mbeddr.core.statements.structure.LocalVariableDeclaration"));
 
         // add destruction calls before the end of the variable's scope 
         SNode lastNextSibling = ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).last();
@@ -1762,7 +1811,7 @@ public class SharedBuilder {
 
 
 
-  private void addMutexDestroyCallsForLocalVariable(SNode mutexDestroyCall, SNode declaration, SNode surroundingFunction) {
+  private void addMutexDestroyCallsForLocalVariable(SNode mutexDestroyCall, SNode declaration) {
     // add a destruction statement before each following (nested) return statement that refers to the same function or 
     // closure that 'declaration' is also nested in 
     for (SNode followingStatement : ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false))) {
@@ -1839,6 +1888,9 @@ public class SharedBuilder {
 
   private void maybeAddMutexDestroyBefore(SNode mutexDestroyCall, SNode flowBreaker, SNode declaration, SNode flowBreakerTarget) {
     if ((declaration != null) && ListSequence.fromList(SNodeOperations.getAncestors(declaration, null, false)).contains(flowBreakerTarget)) {
+      if (SNodeOperations.isInstanceOf(flowBreakerTarget, "com.mbeddr.core.modules.structure.Function") && BehaviorReflection.invokeVirtual(Boolean.TYPE, SNodeOperations.cast(flowBreakerTarget, "com.mbeddr.core.modules.structure.Function"), "virtual_actsAsMainFunction_3209727427932102770", new Object[]{})) {
+        return;
+      }
       addMutexDestroyBefore(mutexDestroyCall, flowBreaker);
     }
   }
@@ -1859,18 +1911,6 @@ public class SharedBuilder {
 
     SNode baseTypeToSearchFor = (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType") ? removeArraySizes(type) : type);
     final Pair<SNode, SNode> mutexFunctions = getValueForType(typesToMutexFunctions, baseTypeToSearchFor);
-    if (SPropertyOperations.getString(declaration, "name").equals("slotI")) {
-      System.out.println("slotI !" + declaration);
-      System.out.println("-> type " + type);
-      System.out.println("-> baseTypeToSearchFor" + baseTypeToSearchFor);
-      System.out.println("-> found funs " + mutexFunctions);
-      System.out.println("-> all funs " + typesToMutexFunctions);
-      ListSequence.fromList(typesToMutexFunctions).visitAll(new IVisitor<Pair<SNode, Pair<SNode, SNode>>>() {
-        public void visit(Pair<SNode, Pair<SNode, SNode>> it) {
-          System.out.println("---> " + it.first);
-        }
-      });
-    }
 
     if (mutexFunctions == null) {
       if (!(SNodeOperations.isInstanceOf(type, "TasksAndSyncs.structure.SharedType"))) {
@@ -1937,8 +1977,6 @@ public class SharedBuilder {
         }.invoke(), true);
       }
       SLinkOperations.setTarget(castBaseType, "baseType", SNodeOperations.copyNode(baseType), true);
-      System.out.println("baseType: " + castBaseType);
-      System.out.println("castExprType: " + SLinkOperations.getTarget(castExpr, "targetType", true));
       ListSequence.fromList(arguments).insertElement(0, castExpr);
     } else {
       ListSequence.fromList(arguments).addElement(new _FunctionTypes._return_P0_E0<SNode>() {
@@ -2020,11 +2058,16 @@ public class SharedBuilder {
   public Map<SNode, SNode> moduleToSharedModule;
 
 
-  public Map<SNode, SNode> buildSharedModules(List<SNode> resolvedSharedTypes) {
+  public Map<SNode, SNode> buildSharedModules(List<SNode> resolvedSharedTypes, Set<SNode> structsWithNestedSharedData) {
     moduleToSharedModule = MapSequence.fromMap(new HashMap<SNode, SNode>());
     ListSequence.fromList(resolvedSharedTypes).visitAll(new IVisitor<SNode>() {
       public void visit(SNode it) {
         buildSharedModulesRec(it, false);
+      }
+    });
+    SetSequence.fromSet(structsWithNestedSharedData).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        buildSharedModuleForStruct(it);
       }
     });
     return moduleToSharedModule;
@@ -2032,7 +2075,7 @@ public class SharedBuilder {
 
 
 
-  public boolean buildSharedModulesRec(SNode type, boolean buildInAnyCase) {
+  private boolean buildSharedModulesRec(SNode type, boolean buildInAnyCase) {
     {
       SNode sharedType = type;
       if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
@@ -2057,13 +2100,31 @@ public class SharedBuilder {
 
         SNode structModule = SNodeOperations.getAncestor(SLinkOperations.getTarget(structType, "struct", false), "com.mbeddr.core.modules.structure.ImplementationModule", false, false);
         if ((buildInAnyCase || membersHaveNestedShared.value) && !(MapSequence.fromMap(moduleToSharedModule).containsKey(structModule))) {
-          System.out.println("add new module: " + structModule);
-          System.out.println("   -> existing: " + moduleToSharedModule);
           MapSequence.fromMap(moduleToSharedModule).put(structModule, ModuleBuilder.buildSharedModuleFor(structModule, genContext, model));
         }
         return membersHaveNestedShared.value;
       }
     }
     return false;
+  }
+
+
+
+  public void buildSharedModulesForStructs(Set<SNode> structsWithNestedSharedData) {
+    SetSequence.fromSet(structsWithNestedSharedData).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        buildSharedModuleForStruct(it);
+      }
+    });
+  }
+
+
+
+  private void buildSharedModuleForStruct(SNode struct) {
+    SNode structModule = SNodeOperations.getAncestor(struct, "com.mbeddr.core.modules.structure.ImplementationModule", false, false);
+    if (SetSequence.fromSet(MapSequence.fromMap(moduleToSharedModule).keySet()).contains(structModule)) {
+      return;
+    }
+    MapSequence.fromMap(moduleToSharedModule).put(structModule, ModuleBuilder.buildSharedModuleFor(structModule, genContext, model));
   }
 }

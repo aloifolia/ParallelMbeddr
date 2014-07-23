@@ -36,6 +36,7 @@
     <classNode dependClassName="com.mbeddr.core.statements.behavior.BreakStatement_Behavior" />
     <classNode dependClassName="com.mbeddr.core.statements.behavior.ContinueStatement_Behavior" />
     <classNode dependClassName="com.mbeddr.core.udt.behavior.SUDeclaration_Behavior" />
+    <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Integer" />
     <classNode dependClassName="java.lang.Object" />

@@ -16,6 +16,10 @@
 
 #include "GenericSyncDeclarations.h"
 
+#include "main_SharedTypes_0.h"
+
+#include <pthread.h>
+
 #include <stdio.h>
 
 

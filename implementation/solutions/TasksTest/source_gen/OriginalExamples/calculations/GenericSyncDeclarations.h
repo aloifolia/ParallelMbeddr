@@ -8,6 +8,8 @@
 
 #include <time.h>
 
+#include <stdint.h>
+
 #include <pthread.h>
 
 
@@ -18,11 +20,11 @@ extern "C" {
 
 void GenericSyncDeclarations_startSyncFor2Mutexes(pthread_mutex_t* mutex_0,pthread_mutex_t* mutex_1);
 
-void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_2);
+void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0);
 
-void GenericSyncDeclarations_stopSyncFor2Mutexes(pthread_mutex_t* mutex_3,pthread_mutex_t* mutex_4);
+void GenericSyncDeclarations_stopSyncFor2Mutexes(pthread_mutex_t* mutex_0,pthread_mutex_t* mutex_1);
 
-void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_5);
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_2);
 
 
 #ifdef __cplusplus

@@ -3,17 +3,25 @@
 
 #include "GenericSyncDeclarations.h"
 
-void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute, pthread_mutex_t* mutex) 
+pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
+
+void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_SharedOf_int32_0* var, int32_t size_0) 
 {
-  pthread_mutexattr_init(mutexAttribute);
-  pthread_mutexattr_settype(mutexAttribute,PTHREAD_MUTEX_RECURSIVE);
-  pthread_mutex_init(mutex,mutexAttribute);
+  for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
+  {
+    pthread_mutex_destroy(&var[__i_0].mutex);
+  }
+
 }
 
 
-void GenericSharedDeclarations_destroyMutex_0(pthread_mutex_t* mutex) 
+void GenericSharedDeclarations_mutexInit_0(struct GenericSharedDeclarations_SharedOf_int32_0* var, int32_t size_0) 
 {
-  pthread_mutex_destroy(mutex);
+  for ( int32_t __i_0 = 0; __i_0 < size_0; __i_0++ )
+  {
+    pthread_mutex_init(&var[__i_0].mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  }
+
 }
 
 

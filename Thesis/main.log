@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  23 JUL 2014 10:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  23 JUL 2014 12:00
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1505,7 +1505,10 @@ Overfull \hbox (3.86574pt too wide) in paragraph at lines 196--197
 ][][][][][][] 
  []
 
-[26] [27]
+[26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27]
 Overfull \hbox (24.26323pt too wide) in paragraph at lines 265--267
 [][][][][][][][][][][][][][] 
  []
@@ -1520,19 +1523,23 @@ Overfull \hbox (31.0133pt too wide) in paragraph at lines 326--327
 [][][][][][][][][][][][][][][][][][] 
  []
 
-
+[29]
 Overfull \hbox (6.908pt too wide) in paragraph at lines 341--342
 []\T1/5ch/m/n/11 For each ari-ty of syn-chro-ni-za-ti-on re-sources se-pa-ra-te
  ver-si-ons of the \T1/txtt/bx/n/11 start\T1/5ch/m/n/11 - and \T1/txtt/bx/n/11 
 stopSyncForNMutexes()
  []
 
-[29]
+
 Overfull \hbox (29.0557pt too wide) in paragraph at lines 355--356
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[30] [31] [32] [33] [34] [35] [36])
+[30] [31] [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+[34] [35] [36])
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/safety-enhancements.tex
 [37] [38] [39] [40]))
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex [41]
@@ -1589,7 +1596,7 @@ athdesign/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts
 /type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiK
 TeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (47 pages, 990759 bytes).
+Output written on main.pdf (47 pages, 990768 bytes).
 PDF statistics:
  1431 PDF objects out of 1440 (max. 8388607)
  757 named destinations out of 1000 (max. 500000)

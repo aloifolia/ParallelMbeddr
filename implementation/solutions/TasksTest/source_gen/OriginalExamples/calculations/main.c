@@ -6,6 +6,7 @@
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
+#include "main_SharedTypes_0.h"
 #include <math.h>
 #include <stdlib.h>
 
@@ -13,52 +14,37 @@ static struct GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_ArrayOf_int32_
 
 static int32_t main_calculationCountPerWorker[CONSTANTS_numberOfWorkers];
 
-struct main_Args_a0a1a2a3a2 {
-  int16_t lastBlockSize;
-};
-
 struct main_Args_a0a3a2e0c {
-  int16_t lastBlockSize;
-};
-
-struct main_Args_a0a0a1a2e0c {
-  struct readerData_SharedTypes_0_SharedOf_Data_0 inputData;
-};
-
-struct main_Args_a0a3a2e0c_0 {
-  struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock;
+  struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock;
   struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock;
   int16_t lastBlockSize;
 };
 
 static int32_t main_calculateFactorCountBlocks(struct readerData_SharedTypes_0_SharedOf_Data_0* data);
 
-static void main_calculateFactorCountBlock(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock,int16_t blockSize);
+static void main_calculateFactorCountBlock(struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock,int16_t blockSize);
 
 static int32_t main_calculateFactorCount(int32_t number);
 
 static int8_t main_readFile(int32_t argc,char* argv[],struct readerData_SharedTypes_0_SharedOf_Data_0* data);
 
-static void* main_parFun_a0a0a1a2e0c(void* voidArgs);
+static void* main_parFun_a0a0a1a2a3a2(void* voidArgs);
 
 static void* main_parFun_a0a3a2e0c(void* voidArgs);
 
-static inline void main_init_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data_0* inputData);
+static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(int16_t lastBlockSize,struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock);
 
-static inline void main_destroy_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data_0* inputData);
-
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock,int16_t lastBlockSize,struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock);
-
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a0a1a2e0c(struct readerData_SharedTypes_0_SharedOf_Data_0 inputData);
+static struct GenericTaskDeclarations_Future main_futureInit_a0a0b0c0d0c(struct readerData_SharedTypes_0_SharedOf_Data_0 inputData);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
+  pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
+  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   main_initAllGlobalMutexes_0();
   struct readerData_SharedTypes_0_SharedOf_Data_0 inputData;
-  main_init_inputData_0(&inputData);
+  readerData_SharedTypes_0_mutexInit_4(&inputData);
   if ( !(main_readFile(argc, argv, &inputData)) ) 
   {
-    main_destroy_inputData_0(&inputData);
     return -1;
   }
 
@@ -70,11 +56,11 @@ int32_t main(int32_t argc, char* argv[])
     if ( blockCount == 1 ) 
     {
       struct GenericTaskDeclarations_VoidFuture calculator;
-      struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock = &(inputData.value.blocks[0]);
+      struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock = &(inputData.value.blocks[0]);
       struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock = &(main_factorCountBlocks.value[0]);
       GenericSyncDeclarations_startSyncFor2Mutexes(&inputBlock->mutex, &resultBlock->mutex);
       {
-        struct GenericTaskDeclarations_Task calcTask = main_taskInit_a0a3a2e0c(resultBlock, lastBlockSize, inputBlock);
+        struct GenericTaskDeclarations_Task calcTask = main_taskInit_a0a3a2e0c(lastBlockSize, inputBlock, resultBlock);
         GenericTaskDeclarations_runTaskAndGetVoidFuture(calcTask);
       }
 
@@ -87,7 +73,7 @@ int32_t main(int32_t argc, char* argv[])
       struct GenericTaskDeclarations_Future calculators;
       for ( int8_t i = 0; i < CONSTANTS_numberOfWorkers; ++i )
       {
-        calculators = GenericTaskDeclarations_runTaskAndGetFuture(main_taskInit_a0a0a1a2e0c(inputData));
+        calculators = main_futureInit_a0a0b0c0d0c(inputData);
       }
 
       for ( int8_t i = 0; i < CONSTANTS_numberOfWorkers; ++i )
@@ -102,7 +88,6 @@ int32_t main(int32_t argc, char* argv[])
 
   GenericSyncDeclarations_stopSyncFor2Mutexes(&inputData.mutex, &main_factorCountBlocks.mutex);
   
-  main_destroy_inputData_0(&inputData);
   return 0;
 }
 
@@ -110,7 +95,7 @@ int32_t main(int32_t argc, char* argv[])
 static int32_t main_calculateFactorCountBlocks(struct readerData_SharedTypes_0_SharedOf_Data_0* data) 
 {
   int32_t calculationCount = 0;
-  struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* currentInputBlock;
+  struct GenericSharedDeclarations_SharedOf_Block_0* currentInputBlock;
   struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* currentResultBlock;
   int16_t currentBlockSize;
   while (1)
@@ -119,6 +104,7 @@ static int32_t main_calculateFactorCountBlocks(struct readerData_SharedTypes_0_S
     {
       if ( data->value.nextBlockIndex >= data->value.numberOfBlocks ) 
       {
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&data->mutex, &main_factorCountBlocks.mutex);
         return calculationCount;
       }
 
@@ -142,7 +128,7 @@ static int32_t main_calculateFactorCountBlocks(struct readerData_SharedTypes_0_S
 }
 
 
-static void main_calculateFactorCountBlock(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock, int16_t blockSize) 
+static void main_calculateFactorCountBlock(struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock, int16_t blockSize) 
 {
   GenericSyncDeclarations_startSyncFor2Mutexes(&inputBlock->mutex, &resultBlock->mutex);
   {
@@ -194,7 +180,7 @@ static int8_t main_readFile(int32_t argc, char* argv[], struct readerData_Shared
     int32_t number;
     while (!(feof(file)))
     {
-      struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* currentData = &(data->value.blocks[currentDataIndex]);
+      struct GenericSharedDeclarations_SharedOf_Block_0* currentData = &(data->value.blocks[currentDataIndex]);
       GenericSyncDeclarations_startSyncFor1Mutex(&currentData->mutex);
       {
         fscan(file,"%d",&number);
@@ -210,6 +196,7 @@ static int8_t main_readFile(int32_t argc, char* argv[], struct readerData_Shared
         {
           data->value.numberOfBlocks = CONSTANTS_numberOfBlocks;
           data->value.lastBlockSize = CONSTANTS_blockSize;
+          GenericSyncDeclarations_stopSyncFor1Mutex(&data->mutex);
           return 1;
         }
 
@@ -228,31 +215,28 @@ static int8_t main_readFile(int32_t argc, char* argv[], struct readerData_Shared
 }
 
 
-static void* main_parFun_a0a0a1a2e0c(void* voidArgs) 
+static void* main_parFun_a0a0a1a2a3a2(void* voidArgs) 
 {
   int32_t* result = malloc(sizeof(int32_t));
-  struct main_Args_a0a0a1a2e0c* args = ((struct main_Args_a0a0a1a2e0c*)(voidArgs));
+  struct main_SharedTypes_0_Args_a0a0a1a2a3a2* args = ((struct main_SharedTypes_0_Args_a0a0a1a2a3a2*)(voidArgs));
   *result = main_calculateFactorCountBlocks(&(args)->inputData);
+  free(voidArgs);
   return result;
 }
 
 
 static void* main_parFun_a0a3a2e0c(void* voidArgs) 
 {
-  struct main_Args_a0a3a2e0c_0* args = ((struct main_Args_a0a3a2e0c_0*)(voidArgs));
-  main_calculateFactorCountBlock((args)->, (args)->, (args)->lastBlockSize);
+  struct main_Args_a0a3a2e0c* args = ((struct main_Args_a0a3a2e0c*)(voidArgs));
+  main_calculateFactorCountBlock((args)->inputBlock, (args)->resultBlock, (args)->lastBlockSize);
+  free(voidArgs);
   return 0;
 }
 
 
 void main_initGlobalMutexesFor1Module_0(void) 
 {
-  GenericSharedDeclarations_initMutex_0(&main_factorCountBlocks.mutexAttribute, &main_factorCountBlocks.mutex);
-  for ( int8_t __i_0 = 0; __i_0 < CONSTANTS_numberOfBlocks; __i_0++ )
-  {
-    GenericSharedDeclarations_initMutex_0(&main_factorCountBlocks.value[__i_0].mutexAttribute, &main_factorCountBlocks.value[__i_0].mutex);
-  }
-
+  GenericSharedDeclarations_mutexInit_3(&main_factorCountBlocks);
 }
 
 
@@ -262,43 +246,23 @@ void main_initAllGlobalMutexes_0(void)
 }
 
 
-static  void main_init_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data_0* inputData) 
+static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(int16_t lastBlockSize, struct GenericSharedDeclarations_SharedOf_Block_0* inputBlock, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock) 
 {
-  GenericSharedDeclarations_initMutex_0(&inputData->mutexAttribute, &inputData->mutex);
-  for ( int8_t __i_3 = 0; __i_3 < CONSTANTS_numberOfBlocks; __i_3++ )
-  {
-    GenericSharedDeclarations_initMutex_0(&inputData->value.blocks[__i_3].mutexAttribute, &inputData->value.blocks[__i_3].mutex);
-  }
-
-}
-
-
-static  void main_destroy_inputData_0(struct readerData_SharedTypes_0_SharedOf_Data_0* inputData) 
-{
-  GenericSharedDeclarations_destroyMutex_0(&inputData->mutex);
-  for ( int8_t __i_3 = 0; __i_3 < CONSTANTS_numberOfBlocks; __i_3++ )
-  {
-    GenericSharedDeclarations_destroyMutex_0(&inputData->value.blocks[__i_3].mutex);
-  }
-
-}
-
-
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a3a2e0c(struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* resultBlock, int16_t lastBlockSize, struct GenericSharedDeclarations_SharedOf_ArrayOf_int32_0* inputBlock) 
-{
-  struct main_Args_a0a3a2e0c_0* args_a0a3a2e0c = malloc(sizeof(struct main_Args_a0a3a2e0c_0));
+  struct main_Args_a0a3a2e0c* args_a0a3a2e0c = malloc(sizeof(struct main_Args_a0a3a2e0c));
   args_a0a3a2e0c->inputBlock = inputBlock;
   args_a0a3a2e0c->resultBlock = resultBlock;
   args_a0a3a2e0c->lastBlockSize = lastBlockSize;
-  return (struct GenericTaskDeclarations_Task){args_a0a3a2e0c,&main_parFun_a0a3a2e0c};
+  return (struct GenericTaskDeclarations_Task){args_a0a3a2e0c,&main_parFun_a0a3a2e0c,sizeof(struct main_Args_a0a3a2e0c)};
 }
 
 
-static inline struct GenericTaskDeclarations_Task main_taskInit_a0a0a1a2e0c(struct readerData_SharedTypes_0_SharedOf_Data_0 inputData) 
+static struct GenericTaskDeclarations_Future main_futureInit_a0a0b0c0d0c(struct readerData_SharedTypes_0_SharedOf_Data_0 inputData) 
 {
-  struct main_Args_a0a0a1a2e0c* args_a0a0a1a2e0c = malloc(sizeof(struct main_Args_a0a0a1a2e0c));
-  args_a0a0a1a2e0c->inputData = inputData;
-  return (struct GenericTaskDeclarations_Task){args_a0a0a1a2e0c,&main_parFun_a0a0a1a2e0c};
+  struct main_SharedTypes_0_Args_a0a0a1a2a3a2* args_a0a0b0c0d0c = malloc(sizeof(struct main_SharedTypes_0_Args_a0a0a1a2a3a2));
+  args_a0a0b0c0d0c->inputData = inputData;
+  pthread_t pth;
+  pthread_create(&pth,0,&main_parFun_a0a0a1a2a3a2,args_a0a0b0c0d0c);
+  return (struct GenericTaskDeclarations_Future){ .pth =pth};
 }
 
 

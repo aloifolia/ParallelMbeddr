@@ -24,3 +24,30 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
 }
 
 
+void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  uint8_t waitingCounter = 0;
+  uint16_t mask = 16;
+  uint32_t seed = ((uint32_t)(((uintptr_t)(&waitingCounter))));
+  while (1)
+  {
+    if ( pthread_mutex_trylock(mutex_0) != 0 ) 
+    {
+      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
+    }
+    else 
+    {
+      break;
+    }
+
+  }
+
+}
+
+
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  pthread_mutex_unlock(mutex_0);
+}
+
+

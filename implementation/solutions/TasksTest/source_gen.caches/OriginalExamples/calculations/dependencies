@@ -12,6 +12,8 @@
   <dependency className="OriginalExamples.calculations.constants" file="constants.h" />
   <dependency className="OriginalExamples.calculations.main" file="main.c" />
   <dependency className="OriginalExamples.calculations.main" file="main.h" />
+  <dependency className="OriginalExamples.calculations.main_SharedTypes_0" file="main_SharedTypes_0.c" />
+  <dependency className="OriginalExamples.calculations.main_SharedTypes_0" file="main_SharedTypes_0.h" />
   <dependency className="OriginalExamples.calculations.readerData" file="readerData.c" />
   <dependency className="OriginalExamples.calculations.readerData" file="readerData.h" />
   <dependency className="OriginalExamples.calculations.readerData_SharedTypes_0" file="readerData_SharedTypes_0.c" />

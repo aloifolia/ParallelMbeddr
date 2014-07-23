@@ -24,10 +24,6 @@ extern "C" {
 #define PI_PI (3.1415926535897932384626)
 int32_t pi_main(int32_t argc,char* argv[]);
 
-void pi_initAllGlobalMutexes_0(void);
-
-void pi_destroyAllGlobalMutexes_0(void);
-
 
 #ifdef __cplusplus
 } /* extern "C" */

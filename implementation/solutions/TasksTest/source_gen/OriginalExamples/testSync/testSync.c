@@ -45,13 +45,27 @@ static struct GenericTaskDeclarations_Future testSync_futureInit_a0d0c(int32_t b
 
 static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0e0c(void);
 
-static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0f0c(int32_t b,int32_t a);
+static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0f0c(int32_t a,int32_t b);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
   pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   testSync_initAllGlobalMutexes_0();
+  struct GenericSharedDeclarations_SharedOf_int32_0 myShared;
+  pthread_mutex_init(&myShared.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSyncDeclarations_startSyncFor1Mutex(&myShared.mutex);
+  {
+    myShared.value = 5;
+    if ( 1 ) 
+    {
+      GenericSyncDeclarations_stopSyncFor1Mutex(&myShared.mutex);
+      return 1;
+    }
+
+  }
+
+  GenericSyncDeclarations_stopSyncFor1Mutex(&myShared.mutex);
   return 0;
 }
 
@@ -63,7 +77,7 @@ static void testSync_foo(void)
   ((uint8_t volatile  const *)(GenericTaskDeclarations_saveFutureAndGetResult(testSync_futureInit_a0c0c())));
   ((int32_t*)(GenericTaskDeclarations_saveFutureAndGetResult(testSync_futureInit_a0d0c(b, a))));
   GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0e0c());
-  GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0f0c(b, a));
+  GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0f0c(a, b));
   
   struct GenericSharedDeclarations_SharedOf_int16_0 i;
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
@@ -202,7 +216,7 @@ static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0e0c(void)
 }
 
 
-static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0f0c(int32_t b, int32_t a) 
+static struct GenericTaskDeclarations_VoidFuture testSync_futureInit_a0f0c(int32_t a, int32_t b) 
 {
   struct testSync_Args_a0a5a2* args_a0f0c = malloc(sizeof(struct testSync_Args_a0a5a2));
   args_a0f0c->a = a;

@@ -4,7 +4,6 @@
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
-#include <pthread.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -24,9 +23,6 @@ static inline struct GenericTaskDeclarations_Task pi_taskInit_a0c0f0e(uint32_t e
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
-  pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
-  pi_initAllGlobalMutexes_0();
   long double result = 0;
   
   struct GenericTaskDeclarations_Task calculators[PI_RANGECOUNT];
@@ -56,7 +52,6 @@ int32_t main(int32_t argc, char* argv[])
   
   printf("result: %.50Lf\n\n",result);
   
-  pi_destroyAllGlobalMutexes_0();
   return 0;
 }
 
@@ -86,16 +81,6 @@ static void* pi_parFun_a0c0f0e(void* voidArgs)
   *result = pi_calcPiRange((args)->start, (args)->end);
   free(voidArgs);
   return result;
-}
-
-
-void pi_initAllGlobalMutexes_0(void) 
-{
-}
-
-
-void pi_destroyAllGlobalMutexes_0(void) 
-{
 }
 
 

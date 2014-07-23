@@ -17,14 +17,15 @@ extern "C" {
 #endif
 
 struct GenericSharedDeclarations_SharedOf_int32_0 {
-  pthread_mutexattr_t mutexAttribute;
   pthread_mutex_t mutex;
   int32_t value;
 };
 
-void GenericSharedDeclarations_initMutex_0(pthread_mutexattr_t* mutexAttribute,pthread_mutex_t* mutex);
+extern pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
-void GenericSharedDeclarations_destroyMutex_0(pthread_mutex_t* mutex);
+void GenericSharedDeclarations_mutexDestroy_0(struct GenericSharedDeclarations_SharedOf_int32_0* var,int32_t size_0);
+
+void GenericSharedDeclarations_mutexInit_0(struct GenericSharedDeclarations_SharedOf_int32_0* var,int32_t size_0);
 
 
 #ifdef __cplusplus

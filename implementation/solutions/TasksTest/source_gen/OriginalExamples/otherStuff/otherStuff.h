@@ -22,11 +22,8 @@
 extern "C" {
 #endif
 
+#define OTHERSTUFF_x ("sd")
 int32_t otherStuff_main(int32_t argc,char* argv[]);
-
-void otherStuff_initAllGlobalMutexes_0(void);
-
-void otherStuff_destroyAllGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus
