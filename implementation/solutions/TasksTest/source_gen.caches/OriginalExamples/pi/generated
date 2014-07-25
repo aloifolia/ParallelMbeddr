@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-6zom1gx0b9mww4lw1l72sui3qwsjqup">
-  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
-  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
-  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
-  <common hash="-edkipz4y0k1llj2rxgtz7zh6j971y9v">
+<dependencies version="2" modelHash="bh07opnkahrv0yc9c7svnx3h2rz1ykk">
+  <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
+  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
+  <common hash="dodgiequqh8ovdk0q7607p8pl1ci1f4">
+    <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="Makefile" />
     <file name="TypeSizeConfiguration (O.pi)" />
     <file name="pi.c" />
     <file name="pi.h" />
   </common>
-  <source id="8001979070698621471" name="BuildConfiguration (O.pi)" hash="c1m26ynfd04vymlvu7iyjtk5h6ap4oe" />
-  <source id="8001979070698675139" name="TypeSizeConfiguration (O.pi)" hash="-ck0b025t7hz0ckes275ep2uhridcwra" />
-  <source id="8001979070698675409" name="pi" hash="chtprmxf9d2i2w2hdbyaor81t46z0sq" />
+  <source id="8001979070698621471" name="BuildConfiguration (O.pi)" hash="-4r06ue1k7cs3hjuvrmf6zgjxsbcusa2" />
+  <source id="8001979070698675139" name="TypeSizeConfiguration (O.pi)" hash="-8x2a0jfhnjp8fy7di7jjwahjx4pb7he" />
+  <source id="8001979070698675409" name="pi" hash="-6a6rqbfdnf69wp6sccrcb5m430sbc7c" />
 </dependencies>
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="a2o1hj9fxrib0nr7cbmyfygnmkjbiok">
-  <dep model="024ac12e-d557-4696-b681-ada7398d02fd/r:b0400902-2f0a-4508-bfb5-fb0cc962653a(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="9e5w1wuze3ign99oq792qw34ltrozfa">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
-  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
-  <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
-  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
-  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
-  <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
-  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-6dnr20cp9lrwj1bna8zt02ubjh3vuxh" />
-  <common hash="4oy1j2l4o2kpsldcev6drh1ze4sahy6" dependsOnNodes="true">
-    <dep model="024ac12e-d557-4696-b681-ada7398d02fd/r:b0400902-2f0a-4508-bfb5-fb0cc962653a(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+  <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" hash="-8z6n86chwfndp71gon0ndia1r3da53z" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="8lgl3r2ysysy6zuu0m1mr591yay4bbw" />
+  <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-7eypklgrzhtrsuqnoq6skfl2b0f1t90" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="7s0icbhyradx5n5lqvsr1ruwnej8wpb" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="8ho0sy100fvh34ynh4zs1hqj76ff5h0" />
+  <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5nh6iajuy6inevutzhm5ac9yvhynhgy" />
+  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-34opq4r37whlwfl9qm2mtv7buiaq5jn" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-d3ndioh5imkl0wo2qsew7vhxd07rmh0" />
+  <common hash="16lk5hx2t15xihzuazehh1zaimzri1t" dependsOnNodes="true">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <dep model="r:5502bfb4-a967-4ca4-be6d-8754034c6d99(com.mbeddr.core.buildconfig.generator.template.main@generator)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
     <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
@@ -32,9 +32,9 @@
     <file name="testSync2.c" />
     <file name="testSync2.h" />
   </common>
-  <source id="1924594752097177062" name="testSync" hash="1sb427w8xhfqbp4gj3e0przseec0fez" />
-  <source id="1924594752097177159" name="TypeSizeConfiguration (O.testSync)" hash="dg0v7k1zw6q0mbrayxlbv6skgc8ye9q" />
-  <source id="4390787788474557360" name="BuildConfiguration (O.testSync)" hash="-3pqwfp5iypxfypcq4kovg8p63odiqft" />
-  <source id="2852056939582972559" name="testSync2" hash="1e6af2fverlttjbzlddvs37h8jyfh52" />
+  <source id="1924594752097177062" name="testSync" hash="amjz960wgqzycp81nqpwy499p86dh0k" />
+  <source id="1924594752097177159" name="TypeSizeConfiguration (O.testSync)" hash="bfmcakj42m4nmtd63w0kf22f2zm4vno" />
+  <source id="4390787788474557360" name="BuildConfiguration (O.testSync)" hash="36s70qkc6bqlkmrvkdj893sij07kx20" />
+  <source id="2852056939582972559" name="testSync2" hash="4n2p5v9ehbyzjc75sbxr5axc8qo1wmb" />
 </dependencies>
 
