@@ -1,18 +1,19 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Parallel programming}{3}{section.2.1}
 \contentsline {subsubsection}{Processes and threads}{3}{subsubsection*.4}
 \contentsline {subsubsection}{Parallelism and concurrency}{3}{subsubsection*.5}
-\contentsline {subsubsection}{Types of parallelism}{3}{subsubsection*.6}
-\contentsline {subsubsection}{Data races}{3}{subsubsection*.7}
-\contentsline {subsubsection}{Communication model: shared memory}{4}{subsubsection*.8}
-\contentsline {subsubsection}{Communication model: message passing}{4}{subsubsection*.9}
-\contentsline {subsubsection}{Communication model: transactional memory}{5}{subsubsection*.10}
-\contentsline {subsubsection}{Coarse- and fine-grained synchronization}{5}{subsubsection*.11}
-\contentsline {subsubsection}{Embedded programming}{5}{subsubsection*.12}
-\contentsline {subsubsection}{MPS and mbeddr}{6}{subsubsection*.13}
-\contentsline {subsubsection}{C}{6}{subsubsection*.14}
+\contentsline {subsubsection}{Data races}{4}{subsubsection*.6}
+\contentsline {subsubsection}{Communication model: shared memory}{4}{subsubsection*.7}
+\contentsline {subsubsection}{Communication model: message passing}{5}{subsubsection*.8}
+\contentsline {subsubsection}{Communication model: transactional memory}{5}{subsubsection*.9}
+\contentsline {subsubsection}{Coarse- and fine-grained synchronization}{5}{subsubsection*.10}
+\contentsline {section}{\numberline {2.2}Embedded programming with mbeddr}{5}{section.2.2}
+\contentsline {subsubsection}{Embedded programming}{6}{subsubsection*.11}
+\contentsline {subsubsection}{MPS and mbeddr}{6}{subsubsection*.12}
+\contentsline {subsubsection}{C}{7}{subsubsection*.13}
 \contentsline {chapter}{\numberline {3}Design and Translation}{8}{chapter.3}
-\contentsline {subsubsection}{Notation}{8}{subsubsection*.15}
+\contentsline {subsubsection}{Notation}{8}{subsubsection*.14}
 \contentsline {section}{\numberline {3.1}Tasks}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Design}{9}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Translation}{9}{subsection.3.1.2}
@@ -33,5 +34,5 @@
 \contentsline {subsection}{\numberline {3.4.4}Address leakage of shared resource values}{40}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Overwriting shared resources}{41}{subsection.3.4.5}
 \contentsline {chapter}{\numberline {4}Evaluation}{42}{chapter.4}
-\contentsline {chapter}{Literaturverzeichnis}{43}{section*.18}
+\contentsline {chapter}{Literaturverzeichnis}{43}{section*.17}
 \contentsfinish 

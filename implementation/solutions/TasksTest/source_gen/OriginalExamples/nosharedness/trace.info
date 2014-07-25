@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <root nodeRef="r:16012a7d-feb4-451f-acb3-ce59d159c0b8(OriginalExamples.nosharedness)/5402960089350645229">
+    <nodeInfo nodeId="5402960089350645233" fileName="first.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="5402960089350645240" fileName="first.c" startLine="8" startPosition="2" endLine="8" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="5402960089350645241" fileName="first.c" startLine="8" startPosition="9" endLine="8" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="5402960089350645232" fileName="first.c" startLine="6" startPosition="0" endLine="9" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5402960089350645230" fileName="first.c" startLine="5" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="5402960089350645229" fileName="first.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.nosharedness.main" />
+    <unitInfo nodeId="5402960089350645229" fileName="first.c" startLine="1" startPosition="0" endLine="11" endPosition="0" unitName="OriginalExamples.nosharedness.first" />
+  </root>
+  <root nodeRef="r:16012a7d-feb4-451f-acb3-ce59d159c0b8(OriginalExamples.nosharedness)/5402960089350649681">
+    <nodeInfo nodeId="5402960089350649685" fileName="second.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="5402960089350649692" fileName="second.c" startLine="8" startPosition="2" endLine="8" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="5402960089350649693" fileName="second.c" startLine="8" startPosition="9" endLine="8" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="5402960089350649684" fileName="second.c" startLine="6" startPosition="0" endLine="9" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5402960089350649682" fileName="second.c" startLine="5" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="5402960089350649681" fileName="second.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.nosharedness.main" />
+    <unitInfo nodeId="5402960089350649681" fileName="second.c" startLine="1" startPosition="0" endLine="11" endPosition="0" unitName="OriginalExamples.nosharedness.second" />
+  </root>
+</debugInfo>
+
