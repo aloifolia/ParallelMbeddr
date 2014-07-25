@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -20,7 +22,7 @@
 extern "C" {
 #endif
 
-int32_t syncStuff_main(int32_t argc,char* argv[]);
+int32_t syncStuff_main(int32_t argc, char* argv[]);
 
 void syncStuff_initGlobalMutexesFor1Module_0(void);
 

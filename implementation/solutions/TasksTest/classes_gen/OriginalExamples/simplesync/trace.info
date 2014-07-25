@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="OriginalExamples.simplesync.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="47" endPosition="0" unitName="OriginalExamples.simplesync.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="OriginalExamples.simplesync.GenericTaskDeclarations" />
+  <root nodeRef="r:fdb3c8cc-75ea-4571-a72a-e269f669100f(OriginalExamples.simplesync)/1512430185615731175">
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="13" startPosition="0" endLine="13" endPosition="61" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="17" startPosition="0" endLine="17" endPosition="61" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="33" startPosition="2" endLine="33" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="33" startPosition="2" endLine="33" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="33" startPosition="25" endLine="33" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="33" startPosition="26" endLine="33" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="34" startPosition="2" endLine="34" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="34" startPosition="2" endLine="34" endPosition="97" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="34" startPosition="28" endLine="34" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="34" startPosition="29" endLine="34" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="34" startPosition="72" endLine="34" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="35" startPosition="2" endLine="35" endPosition="37" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="35" startPosition="2" endLine="35" endPosition="38" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185616059275" fileName="simplesync.c" startLine="37" startPosition="4" endLine="37" endPosition="27" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185616059441" fileName="simplesync.c" startLine="37" startPosition="4" endLine="37" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.PostIncrementExpression" />
+    <nodeInfo nodeId="1512430185616059276" fileName="simplesync.c" startLine="37" startPosition="4" endLine="37" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185616061126" fileName="simplesync.c" startLine="38" startPosition="4" endLine="38" endPosition="40" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185616061126" fileName="simplesync.c" startLine="38" startPosition="4" endLine="38" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185616061297" fileName="simplesync.c" startLine="38" startPosition="11" endLine="38" endPosition="34" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185616061309" fileName="simplesync.c" startLine="38" startPosition="11" endLine="38" endPosition="39" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
+    <nodeInfo nodeId="1512430185616061372" fileName="simplesync.c" startLine="38" startPosition="38" endLine="38" endPosition="39" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="39" startPosition="4" endLine="39" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="39" startPosition="4" endLine="39" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="39" startPosition="47" endLine="39" endPosition="72" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615969851" fileName="simplesync.c" startLine="39" startPosition="48" endLine="39" endPosition="66" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="39" startPosition="48" endLine="39" endPosition="72" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615969863" fileName="simplesync.c" startLine="41" startPosition="6" endLine="41" endPosition="24" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615969888" fileName="simplesync.c" startLine="41" startPosition="6" endLine="41" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615969888" fileName="simplesync.c" startLine="41" startPosition="6" endLine="41" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="1512430185615969864" fileName="simplesync.c" startLine="41" startPosition="6" endLine="41" endPosition="35" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615970834" fileName="simplesync.c" startLine="41" startPosition="33" endLine="41" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="43" startPosition="4" endLine="43" endPosition="72" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="43" startPosition="4" endLine="43" endPosition="73" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="43" startPosition="46" endLine="43" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615969851" fileName="simplesync.c" startLine="43" startPosition="47" endLine="43" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="43" startPosition="47" endLine="43" endPosition="71" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185616059740" fileName="simplesync.c" startLine="44" startPosition="4" endLine="44" endPosition="27" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185616059909" fileName="simplesync.c" startLine="44" startPosition="4" endLine="44" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.PostDecrementExpression" />
+    <nodeInfo nodeId="1512430185616059741" fileName="simplesync.c" startLine="44" startPosition="4" endLine="44" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615968257" fileName="simplesync.c" startLine="46" startPosition="2" endLine="46" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="47" startPosition="2" endLine="47" endPosition="30" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615966783" fileName="simplesync.c" startLine="47" startPosition="2" endLine="47" endPosition="31" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="48" startPosition="2" endLine="48" endPosition="30" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615968773" fileName="simplesync.c" startLine="48" startPosition="2" endLine="48" endPosition="31" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615965813" fileName="simplesync.c" startLine="49" startPosition="2" endLine="49" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="1512430185615740207" fileName="simplesync.c" startLine="50" startPosition="2" endLine="50" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1512430185615740208" fileName="simplesync.c" startLine="50" startPosition="9" endLine="50" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="55" startPosition="2" endLine="55" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="55" startPosition="2" endLine="55" endPosition="72" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="55" startPosition="45" endLine="55" endPosition="70" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615962438" fileName="simplesync.c" startLine="55" startPosition="46" endLine="55" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="55" startPosition="46" endLine="55" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615962452" fileName="simplesync.c" startLine="57" startPosition="4" endLine="57" endPosition="22" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615962477" fileName="simplesync.c" startLine="57" startPosition="4" endLine="57" endPosition="28" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615962477" fileName="simplesync.c" startLine="57" startPosition="4" endLine="57" endPosition="59" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="1512430185615962453" fileName="simplesync.c" startLine="57" startPosition="4" endLine="57" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615962773" fileName="simplesync.c" startLine="57" startPosition="31" endLine="57" endPosition="49" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615962949" fileName="simplesync.c" startLine="57" startPosition="31" endLine="57" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615964433" fileName="simplesync.c" startLine="57" startPosition="31" endLine="57" endPosition="59" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
+    <nodeInfo nodeId="1512430185615964496" fileName="simplesync.c" startLine="57" startPosition="58" endLine="57" endPosition="59" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="59" startPosition="2" endLine="59" endPosition="70" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="59" startPosition="2" endLine="59" endPosition="71" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="59" startPosition="44" endLine="59" endPosition="69" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615962438" fileName="simplesync.c" startLine="59" startPosition="45" endLine="59" endPosition="63" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="59" startPosition="45" endLine="59" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615966947" fileName="simplesync.c" startLine="64" startPosition="2" endLine="64" endPosition="18" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="64" startPosition="2" endLine="64" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="65" startPosition="2" endLine="65" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="65" startPosition="9" endLine="65" endPosition="10" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615968777" fileName="simplesync.c" startLine="70" startPosition="2" endLine="70" endPosition="18" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="70" startPosition="2" endLine="70" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="71" startPosition="2" endLine="71" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="71" startPosition="9" endLine="71" endPosition="10" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="2" endLine="76" endPosition="91" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="2" endLine="76" endPosition="92" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="21" endLine="76" endPosition="46" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="22" endLine="76" endPosition="40" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="22" endLine="76" endPosition="46" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="47" endLine="76" endPosition="90" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="76" startPosition="48" endLine="76" endPosition="90" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="81" startPosition="2" endLine="81" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="81" startPosition="2" endLine="81" endPosition="45" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="86" startPosition="2" endLine="86" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="2" endLine="87" endPosition="51" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="2" endLine="87" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="17" endLine="87" endPosition="21" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="18" endLine="87" endPosition="21" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="22" endLine="87" endPosition="23" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="24" endLine="87" endPosition="48" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="87" startPosition="49" endLine="87" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="88" startPosition="2" endLine="88" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="88" startPosition="9" endLine="88" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="88" startPosition="55" endLine="88" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="93" startPosition="2" endLine="93" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="2" endLine="94" endPosition="51" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="2" endLine="94" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="17" endLine="94" endPosition="21" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="18" endLine="94" endPosition="21" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="22" endLine="94" endPosition="23" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="24" endLine="94" endPosition="48" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="94" startPosition="49" endLine="94" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.NullExpression" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="95" startPosition="2" endLine="95" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="95" startPosition="9" endLine="95" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="95" startPosition="55" endLine="95" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="1512430185615960018" fileName="simplesync.c" startLine="9" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="1512430185616056589" fileName="simplesync.c" startLine="11" startPosition="0" endLine="12" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="21" startPosition="0" endLine="22" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.foo" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.parFun_a0c0c" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.parFun_a0d0c" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.futureInit_a2a2" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="29" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.futureInit_a3a2" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="14" startPosition="0" endLine="16" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <nodeInfo nodeId="1512430185615969541" fileName="simplesync.c" startLine="40" startPosition="4" endLine="42" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615962430" fileName="simplesync.c" startLine="56" startPosition="2" endLine="58" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="75" startPosition="0" endLine="77" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="80" startPosition="0" endLine="82" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="63" startPosition="0" endLine="66" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="69" startPosition="0" endLine="72" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="74" startPosition="0" endLine="78" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_initGlobalMutexesFor1Module_0" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="79" startPosition="0" endLine="83" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_initAllGlobalMutexes_0" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="85" startPosition="0" endLine="89" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="92" startPosition="0" endLine="96" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615966779" fileName="simplesync.c" startLine="62" startPosition="0" endLine="67" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_parFun_a0c0c" />
+    <nodeInfo nodeId="1512430185615968776" fileName="simplesync.c" startLine="68" startPosition="0" endLine="73" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_parFun_a0d0c" />
+    <nodeInfo nodeId="1512430185615961875" fileName="simplesync.c" startLine="54" startPosition="0" endLine="60" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615967129" fileName="simplesync.c" startLine="84" startPosition="0" endLine="90" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_futureInit_a2a2" />
+    <nodeInfo nodeId="1512430185615968774" fileName="simplesync.c" startLine="91" startPosition="0" endLine="97" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_futureInit_a3a2" />
+    <nodeInfo nodeId="1512430185615961873" fileName="simplesync.c" startLine="53" startPosition="0" endLine="61" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="simplesync_foo" />
+    <nodeInfo nodeId="1512430185616057977" fileName="simplesync.c" startLine="36" startPosition="2" endLine="45" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615740199" fileName="simplesync.c" startLine="32" startPosition="0" endLine="51" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1512430185615740197" fileName="simplesync.c" startLine="31" startPosition="0" endLine="52" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.main" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.h" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.initGlobalMutexesFor1Module_0" />
+    <nodeInfo nodeId="1512430185615731175" fileName="simplesync.h" startLine="29" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.simplesync.initAllGlobalMutexes_0" />
+    <unitInfo nodeId="1512430185615731175" fileName="simplesync.c" startLine="1" startPosition="0" endLine="98" endPosition="0" unitName="OriginalExamples.simplesync.simplesync" />
+  </root>
+</debugInfo>
+

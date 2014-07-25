@@ -6,74 +6,62 @@
 #include <stdlib.h>
 #include <string.h>
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(struct GenericTaskDeclarations_VoidFuture future) 
-{
-  GenericTaskDeclarations_joinVoidFuture(&future);
-}
-
-
-void* GenericTaskDeclarations_getFutureResult(struct GenericTaskDeclarations_Future* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,&(future->result));
-    future->finished = 1;
-  }
-
-  return future->result;
-}
-
-
-void GenericTaskDeclarations_joinVoidFuture(struct GenericTaskDeclarations_VoidFuture* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,0);
-    future->finished = 1;
-  }
-
-}
-
-
-void* GenericTaskDeclarations_saveFutureAndGetResult(struct GenericTaskDeclarations_Future future) 
+void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
 {
   return GenericTaskDeclarations_getFutureResult(&future);
 }
 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
+{
+  GenericTaskDeclarations_joinVoidFuture(&future);
+}
 
-struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_runTaskAndGetVoidFuture(struct GenericTaskDeclarations_Task task) 
+GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task) 
 {
   pthread_t pth;
   if ( task.argsSize == 0 ) 
   {
     pthread_create(&pth,0,task.fun,0);
-  }
-  else 
+  }  else 
   {
     void* args = malloc(task.argsSize);
     memcpy(args,task.args,task.argsSize);
     pthread_create(&pth,0,task.fun,args);
   }
-
-  return (struct GenericTaskDeclarations_VoidFuture){ .pth = pth };
+  return (GenericTaskDeclarations_Future_t){ .pth = pth };
 }
 
-
-struct GenericTaskDeclarations_Future GenericTaskDeclarations_runTaskAndGetFuture(struct GenericTaskDeclarations_Task task) 
+GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
 {
   pthread_t pth;
   if ( task.argsSize == 0 ) 
   {
     pthread_create(&pth,0,task.fun,0);
-  }
-  else 
+  }  else 
   {
     void* args = malloc(task.argsSize);
     memcpy(args,task.args,task.argsSize);
     pthread_create(&pth,0,task.fun,args);
   }
-
-  return (struct GenericTaskDeclarations_Future){ .pth = pth };
+  return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
 }
 
+void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,&(future->result));
+    future->finished = true;
+  }
+  return future->result;
+}
+
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,0);
+    future->finished = true;
+  }
+}
 

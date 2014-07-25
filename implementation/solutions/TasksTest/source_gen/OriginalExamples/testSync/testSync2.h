@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -18,6 +20,7 @@
 extern "C" {
 #endif
 
+typedef struct testSync2_A testSync2_A_t;
 struct testSync2_A {
 };
 

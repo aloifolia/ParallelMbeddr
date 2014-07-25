@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="29" />
+      <model index="l64z" modelUID="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)" version="-1" />
+      <model index="ys6a" modelUID="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" version="-1" />
+      <model index="bo25" modelUID="r:2ca2ebc9-2f21-49e7-873d-18685b41b4cb(TasksAndSyncs.textGen)" version="-1" />
+      <model index="bhm7" modelUID="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)" version="-1" />
+      <model index="i2vu" modelUID="r:00f32f25-75a6-49a6-af81-37dd76f38844(TasksAndSyncs.editor)" version="-1" />
+      <model index="mf34" modelUID="r:b07c62c3-74af-480d-b99b-2af576db48db(TasksAndSyncs.actions)" version="-1" />
+      <model index="lkwc" modelUID="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" version="-1" />
+      <model index="x783" modelUID="r:6474b750-4b62-4680-b79e-ac1d734caa1e(TasksAndSyncs.dataFlow)" version="-1" />
+      <model index="oosr" modelUID="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)" version="-1" />
+      <model index="xfy9" modelUID="r:34253c73-478e-46da-af27-d85cd064edf4(TasksAndSyncs.refactorings)" version="-1" />
+    </dependencies>
+    <RenameModel oldModel="r:00f32f25-75a6-49a6-af81-37dd76f38844(TasksAndSyncs.editor)" newModel="r:00f32f25-75a6-49a6-af81-37dd76f38844(parallelization.editor)" />
+    <RenameModel oldModel="r:b07c62c3-74af-480d-b99b-2af576db48db(TasksAndSyncs.actions)" newModel="r:b07c62c3-74af-480d-b99b-2af576db48db(parallelization.actions)" />
+    <RenameModel oldModel="r:2ca2ebc9-2f21-49e7-873d-18685b41b4cb(TasksAndSyncs.textGen)" newModel="r:2ca2ebc9-2f21-49e7-873d-18685b41b4cb(parallelization.textGen)" />
+    <RenameModel oldModel="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)" newModel="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(parallelization.behavior)" />
+    <RenameModel oldModel="r:6474b750-4b62-4680-b79e-ac1d734caa1e(TasksAndSyncs.dataFlow)" newModel="r:6474b750-4b62-4680-b79e-ac1d734caa1e(parallelization.dataFlow)" />
+    <RenameModel oldModel="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" newModel="r:af54e311-659f-4265-b558-862058cfed70(parallelization.structure)" />
+    <RenameModel oldModel="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)" newModel="r:daf934de-3466-4fa8-a227-270fedb7e2f2(parallelization.typesystem)" />
+    <RenameModel oldModel="r:1131838a-735d-45d7-9c86-9e6994478367(TasksAndSyncs.constraints)" newModel="r:1131838a-735d-45d7-9c86-9e6994478367(parallelization.constraints)" />
+    <RenameModel oldModel="r:34253c73-478e-46da-af27-d85cd064edf4(TasksAndSyncs.refactorings)" newModel="r:34253c73-478e-46da-af27-d85cd064edf4(parallelization.refactorings)" />
+    <RenameModel oldModel="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" newModel="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(parallelization.generator.template.main@generator)" />
+    <RenameModel oldModel="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" newModel="r:20ef2229-3f5d-4588-9872-c9b31539ef30(parallelization.generator.util)" />
+  </StructureModification>
+</history>
+

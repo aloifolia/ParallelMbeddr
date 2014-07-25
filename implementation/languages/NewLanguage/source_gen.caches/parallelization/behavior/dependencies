@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="parallelization.behavior.BehaviorAspectDescriptor" file="BehaviorAspectDescriptor.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="java.util.Arrays" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.BehaviorDescriptor" />
+    <classNode dependClassName="jetbrains.mps.smodel.runtime.interpreted.BehaviorAspectInterpreted" />
+    <classNode dependClassName="parallelization.behavior.ExprBoundToStruct_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.FutureJoin_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.FutureResult_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.FutureType_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.Future_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SharedGet_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SharedSet_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SharedType_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncRessourceNamed_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncRessourceRefByName_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncRessourceRef_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncRessource_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncStart_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncStatement_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.SyncStop_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.TaskClear_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.TaskType_BehaviorDescriptor" />
+    <classNode dependClassName="parallelization.behavior.Task_BehaviorDescriptor" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.BehaviorAspectDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.ExprBoundToStruct_BehaviorDescriptor" file="ExprBoundToStruct_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureJoin_Behavior" file="FutureJoin_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureJoin_BehaviorDescriptor" file="FutureJoin_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.FutureJoin_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureResult_Behavior" file="FutureResult_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureResult_BehaviorDescriptor" file="FutureResult_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.FutureResult_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureType_Behavior" file="FutureType_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.StringUtils" />
+  </dependency>
+  <dependency className="parallelization.behavior.FutureType_BehaviorDescriptor" file="FutureType_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.FutureType_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.Future_Behavior" file="Future_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.Future_BehaviorDescriptor" file="Future_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.Future_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedGet_Behavior" file="SharedGet_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedGet_BehaviorDescriptor" file="SharedGet_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SharedGet_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedSet_Behavior" file="SharedSet_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedSet_BehaviorDescriptor" file="SharedSet_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SharedSet_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedType_Behavior" file="SharedType_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.StringUtils" />
+  </dependency>
+  <dependency className="parallelization.behavior.SharedType_BehaviorDescriptor" file="SharedType_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SharedType_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.StringUtils" file="StringUtils.java">
+    <classNode dependClassName="java.lang.String" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncRessourceNamed_BehaviorDescriptor" file="SyncRessourceNamed_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.base.behavior.IIdentifierNamedConcept_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.base.behavior.IIdentifierNamedConcept_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.core.behavior.INamedConcept_Behavior" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.language.SConcept" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SyncRessource_BehaviorDescriptor" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncRessourceRefByName_BehaviorDescriptor" file="SyncRessourceRefByName_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncRessourceRef_Behavior" file="SyncRessourceRef_Behavior.java">
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncRessourceRef_BehaviorDescriptor" file="SyncRessourceRef_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.base.behavior.IReference_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SyncRessourceRef_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncRessource_BehaviorDescriptor" file="SyncRessource_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncStart_BehaviorDescriptor" file="SyncStart_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncStatement_Behavior" file="SyncStatement_Behavior.java">
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncStatement_BehaviorDescriptor" file="SyncStatement_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.ILocalVarScopeProvider_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVarScope" />
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.Statement_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Iterable" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.SyncStatement_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.SyncStop_BehaviorDescriptor" file="SyncStop_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.TaskClear_Behavior" file="TaskClear_Behavior.java">
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.TaskClear_BehaviorDescriptor" file="TaskClear_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_Behavior" />
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.IGenericDotTarget_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.TaskClear_Behavior" />
+    <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.TaskType_Behavior" file="TaskType_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.StringUtils" />
+  </dependency>
+  <dependency className="parallelization.behavior.TaskType_BehaviorDescriptor" file="TaskType_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Type_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.TaskType_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="parallelization.behavior.Task_Behavior" file="Task_Behavior.java">
+    <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+  </dependency>
+  <dependency className="parallelization.behavior.Task_BehaviorDescriptor" file="Task_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode dependClassName="parallelization.behavior.Task_Behavior" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+</dependenciesRoot>
+

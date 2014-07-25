@@ -7,24 +7,26 @@
 #include "syncStuff_SharedTypes_0.h"
 #include <pthread.h>
 
-static struct GenericSharedDeclarations_SharedOf_int32_0* syncStuff_global;
+static GenericSharedDeclarations_SharedOf_int32_0_t* syncStuff_global;
 
-static struct GenericSharedDeclarations_SharedOf_int32_0 syncStuff_global2;
+static GenericSharedDeclarations_SharedOf_int32_0_t syncStuff_global2;
 
 static int32_t* syncStuff_globalLeak;
 
-typedef struct GenericSharedDeclarations_SharedOf_int32_0* APrime;
-typedef struct GenericSharedDeclarations_SharedOf_APrime_0 B;
+typedef GenericSharedDeclarations_SharedOf_int32_0_t* syncStuff_APrime;
+typedef GenericSharedDeclarations_SharedOf_APrime_0_t syncStuff_B;
+typedef struct syncStuff_SharedPointerContainer syncStuff_SharedPointerContainer_t;
 struct syncStuff_SharedPointerContainer {
   int32_t* i;
 };
 
+typedef struct syncStuff_ArrayArrayContainer syncStuff_ArrayArrayContainer_t;
 struct syncStuff_ArrayArrayContainer {
-  struct syncStuff_SharedTypes_0_ArrayContainer c;
+  syncStuff_SharedTypes_0_ArrayContainer_t c;
 };
 
-typedef struct GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0_0 A;
-typedef A C;
+typedef GenericSharedDeclarations_SharedOf_PointerOf_SharedOf_int32_0_0_t syncStuff_A;
+typedef syncStuff_A syncStuff_C;
 int32_t main(int32_t argc, char* argv[]) 
 {
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
@@ -40,16 +42,13 @@ int32_t main(int32_t argc, char* argv[])
   return 0;
 }
 
-
 void syncStuff_initGlobalMutexesFor1Module_0(void) 
 {
   pthread_mutex_init(&syncStuff_global2.mutex,&GenericSharedDeclarations_mutexAttribute_0);
 }
 
-
 void syncStuff_initAllGlobalMutexes_0(void) 
 {
   syncStuff_initGlobalMutexesFor1Module_0();
 }
-
 
