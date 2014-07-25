@@ -54,10 +54,10 @@
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.main" />
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.initGlobalMutexesFor1Module_0" />
     <nodeInfo nodeId="5867266020201109512" fileName="syncStuff.h" startLine="29" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.syncStuff.initAllGlobalMutexes_0" />
-    <nodeInfo nodeId="483189195562063330" fileName="syncStuff_SharedTypes_0.h" startLine="23" startPosition="14" endLine="23" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="483189195562063330" fileName="syncStuff_SharedTypes_0.h" startLine="28" startPosition="14" endLine="28" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="483189195559485272" fileName="syncStuff_SharedTypes_0.h" startLine="34" startPosition="49" endLine="34" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="483189195559482831" fileName="syncStuff_SharedTypes_0.h" startLine="22" startPosition="0" endLine="25" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
-    <nodeInfo nodeId="5853110027213210234" fileName="syncStuff_SharedTypes_0.h" startLine="27" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <nodeInfo nodeId="5853110027213210234" fileName="syncStuff_SharedTypes_0.h" startLine="22" startPosition="0" endLine="25" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <nodeInfo nodeId="483189195559482831" fileName="syncStuff_SharedTypes_0.h" startLine="27" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <nodeInfo nodeId="483189195559483636" fileName="syncStuff_SharedTypes_0.h" startLine="38" startPosition="0" endLine="41" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <unitInfo nodeId="5867266020201109512" fileName="syncStuff.c" startLine="1" startPosition="0" endLine="55" endPosition="0" unitName="OriginalExamples.syncStuff.syncStuff" />
   </root>

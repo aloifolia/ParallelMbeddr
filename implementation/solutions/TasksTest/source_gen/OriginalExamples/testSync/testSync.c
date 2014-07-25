@@ -45,11 +45,11 @@ static void* testSync_parFun_a0a5a2(void* voidArgs);
 
 static GenericTaskDeclarations_Future_t testSync_futureInit_a0c0c(void);
 
-static GenericTaskDeclarations_Future_t testSync_futureInit_a0d0c(int32_t b, int32_t a);
+static GenericTaskDeclarations_Future_t testSync_futureInit_a0d0c(int32_t a, int32_t b);
 
 static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0e0c(void);
 
-static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0f0c(int32_t b, int32_t a);
+static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0f0c(int32_t a, int32_t b);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -76,9 +76,9 @@ static void testSync_foo(void)
   int32_t a = 0;
   int32_t b = 1;
   ((uint8_t volatile  const *)(GenericTaskDeclarations_saveFutureAndGetResult(testSync_futureInit_a0c0c())));
-  ((int32_t*)(GenericTaskDeclarations_saveFutureAndGetResult(testSync_futureInit_a0d0c(b, a))));
+  ((int32_t*)(GenericTaskDeclarations_saveFutureAndGetResult(testSync_futureInit_a0d0c(a, b))));
   GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0e0c());
-  GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0f0c(b, a));
+  GenericTaskDeclarations_saveAndJoinVoidFuture(testSync_futureInit_a0f0c(a, b));
   
   GenericSharedDeclarations_SharedOf_int16_0_t i;
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
@@ -185,7 +185,7 @@ static GenericTaskDeclarations_Future_t testSync_futureInit_a0c0c(void)
   return (GenericTaskDeclarations_Future_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_Future_t testSync_futureInit_a0d0c(int32_t b, int32_t a) 
+static GenericTaskDeclarations_Future_t testSync_futureInit_a0d0c(int32_t a, int32_t b) 
 {
   testSync_Args_a0a3a2_t* args_a0d0c = malloc(sizeof(testSync_Args_a0a3a2_t));
   args_a0d0c->b = b;
@@ -202,7 +202,7 @@ static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0e0c(void)
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0f0c(int32_t b, int32_t a) 
+static GenericTaskDeclarations_VoidFuture_t testSync_futureInit_a0f0c(int32_t a, int32_t b) 
 {
   testSync_Args_a0a5a2_t* args_a0f0c = malloc(sizeof(testSync_Args_a0a5a2_t));
   args_a0f0c->a = a;

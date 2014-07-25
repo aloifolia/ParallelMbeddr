@@ -21,21 +21,6 @@ GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFu
   return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
 }
 
-void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
-{
-  return GenericTaskDeclarations_getFutureResult(&future);
-}
-
-void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,&(future->result));
-    future->finished = true;
-  }
-  return future->result;
-}
-
 void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
 {
   GenericTaskDeclarations_joinVoidFuture(&future);
@@ -54,6 +39,21 @@ GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(Gen
     pthread_create(&pth,0,task.fun,args);
   }
   return (GenericTaskDeclarations_Future_t){ .pth = pth };
+}
+
+void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
+{
+  return GenericTaskDeclarations_getFutureResult(&future);
+}
+
+void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,&(future->result));
+    future->finished = true;
+  }
+  return future->result;
 }
 
 void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 

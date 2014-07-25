@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="3w753u96za4b1fpahbgnnehhxyqnwjg">
+<dependencies version="2" modelHash="brz9lxc76967rnu3t706qc7p6anablb">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-5mgxduek28h3ywdzzsk4capaz4hgjm0" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="303xz1b2lyseld0axia86q3lpvucmq6" />
@@ -27,7 +27,6 @@
     <dep root="6553204290893807643" />
     <dep root="6553204290894227496" />
     <dep root="8001979070750286289" />
-    <dep root="961131662869355681" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" />
     <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" />
@@ -45,7 +44,6 @@
   <source id="1304213873205054831" name="FutureType" hash="-6u0ftnzjom63sd12ur4v5p7hx5ugyxx" />
   <source id="2744793885339890637" name="FutureResult" hash="el2fnfxixsjm5jkl9n3ju0vkucglgt8" />
   <source id="3074299910025607357" name="ExprBoundToStruct" hash="-bda8q8shzkufh6w6aaf6gly3v0c2nhl" />
-  <source id="961131662869355681" name="CompoundLiteral" hash="3bpxl856mf7ode6fr6k1ko81i86snau" />
   <source id="1924594752095321661" name="SharedType" hash="-3iaiv5f3agr3uqt656xdumtsqyoudnk" />
   <source id="1924594752095502558" name="SharedGet" hash="azemzghyy0inw1wvg9m03bfpt26s43" />
   <source id="3570654511858570918" name="SharedSet" hash="-6ol13iokzlmbt9g7ohrsgdklo8aj72l" />
