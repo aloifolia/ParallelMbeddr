@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  25 JUL 2014 19:35
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  25 JUL 2014 19:40
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1433,7 +1433,7 @@ of ex-pres-si-ons \T1/txtt/bx/n/11 e.run \T1/5ch/m/n/11 to calls of \T1/txtt/bx
 LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <10> not available
 (Font)              Font shape `T1/5fp/m/sl' tried instead on input line 159.
 [18]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
-[19] [20] <pics/ParallelExecutionAttempt.pdf, id=611, 224.33812pt x 168.63pt>
+[19] [20] <pics/ParallelExecutionAttempt.pdf, id=613, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1445,7 +1445,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 56--57
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=612, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=614, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1461,7 +1461,7 @@ Overfull \hbox (28.4835pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pics/ParallelExecution.pdf, id=631, 224.33812pt x 168.63pt>
+<pics/ParallelExecution.pdf, id=633, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1487,7 +1487,7 @@ ded in a single page
 pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
 s/pics/ParallelExecution.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
->] [23] <pics/AstForBaseTypes.pdf, id=732, 114.30634pt x 315.33504pt>
+>] [23] <pics/AstForBaseTypes.pdf, id=734, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
@@ -1573,10 +1573,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 44.
  ) 
 Here is how much of TeX's memory you used:
- 16441 strings out of 493921
- 253112 string characters out of 3144870
- 396006 words of memory out of 3000000
- 18545 multiletter control sequences out of 15000+200000
+ 16443 strings out of 493921
+ 253185 string characters out of 3144870
+ 396062 words of memory out of 3000000
+ 18546 multiletter control sequences out of 15000+200000
  186273 words of font info for 170 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,15n,95p,2375b,1960s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1596,9 +1596,9 @@ athdesign/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts
 /type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiK
 TeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (47 pages, 993680 bytes).
+Output written on main.pdf (47 pages, 994206 bytes).
 PDF statistics:
- 1442 PDF objects out of 1728 (max. 8388607)
- 759 named destinations out of 1000 (max. 500000)
+ 1444 PDF objects out of 1728 (max. 8388607)
+ 760 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
