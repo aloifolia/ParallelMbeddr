@@ -196,14 +196,6 @@
       <link role="target" roleId="tpce.1071599976176" targetNodeId="mj1l.8860443239512128050" resolveInfo="Expression" />
     </node>
   </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="4335879941144934382" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="SyncRessourceRefByName" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="mj1l.8860443239512128050" resolveInfo="Expression" />
-    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="4335879941144970551" nodeInfo="ig">
-      <property name="name" nameId="tpck.1169194664001" value="name" />
-      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983041843" resolveInfo="string" />
-    </node>
-  </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8001979070750286289" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="TaskClear" />
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="clear" />

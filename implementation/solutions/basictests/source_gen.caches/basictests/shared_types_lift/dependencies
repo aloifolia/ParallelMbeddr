@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="basictests.shared_types_lift.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="basictests.shared_types_lift.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="basictests.shared_types_lift.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="basictests.shared_types_lift.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="basictests.shared_types_lift.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="basictests.shared_types_lift.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="basictests.shared_types_lift.Makefile" file="Makefile" />
+  <dependency className="basictests.shared_types_lift.TypeSizeConfiguration (b.shared_types_lift)" file="TypeSizeConfiguration (b.shared_types_lift)" />
+  <dependency className="basictests.shared_types_lift.provider1" file="provider1.c" />
+  <dependency className="basictests.shared_types_lift.provider1" file="provider1.h" />
+  <dependency className="basictests.shared_types_lift.provider1_SharedTypes_0" file="provider1_SharedTypes_0.c" />
+  <dependency className="basictests.shared_types_lift.provider1_SharedTypes_0" file="provider1_SharedTypes_0.h" />
+  <dependency className="basictests.shared_types_lift.provider2" file="provider2.c" />
+  <dependency className="basictests.shared_types_lift.provider2" file="provider2.h" />
+  <dependency className="basictests.shared_types_lift.shared_types_lift" file="shared_types_lift.c" />
+  <dependency className="basictests.shared_types_lift.shared_types_lift" file="shared_types_lift.h" />
+  <dependency className="basictests.shared_types_lift.user" file="user.c" />
+  <dependency className="basictests.shared_types_lift.user" file="user.h" />
+  <dependency className="basictests.shared_types_lift.user_SharedTypes_0" file="user_SharedTypes_0.c" />
+  <dependency className="basictests.shared_types_lift.user_SharedTypes_0" file="user_SharedTypes_0.h" />
+</dependenciesRoot>
+

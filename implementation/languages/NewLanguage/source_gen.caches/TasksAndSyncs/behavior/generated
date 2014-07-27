@@ -13,7 +13,7 @@
   <dep model="r:9058158e-0926-42f8-8d00-d1d86f1ff722(com.mbeddr.core.debug.behavior)" hash="4bdmcsfqui6vyccp3l6nc2rh6powf01" />
   <dep model="r:95397225-9080-48bc-b1aa-0ce7c4f3d2ce(jetbrains.mps.lang.traceable.behavior)" hash="-8tt98n4qboxyxzyzfjb0fiyw2n67xb3" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="brz9lxc76967rnu3t706qc7p6anablb" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="7bfyg8ka4czo4hnrql25rb3elafxu2x" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="b4ewbuz42qcbg1awca5bacgi0vopxqt" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
   <dep model="r:c6ce92e7-5a98-4a6f-866a-ec8b9e945dd8(com.mbeddr.core.expressions.behavior)" hash="705ny7j0gypxrl54jhllf1xtd3ro11d" />
@@ -63,7 +63,6 @@
     <file name="SharedType_BehaviorDescriptor.java" />
     <file name="StringUtils.java" />
     <file name="SyncRessourceNamed_BehaviorDescriptor.java" />
-    <file name="SyncRessourceRefByName_BehaviorDescriptor.java" />
     <file name="SyncRessourceRef_BehaviorDescriptor.java" />
     <file name="SyncRessource_BehaviorDescriptor.java" />
     <file name="SyncStart_BehaviorDescriptor.java" />

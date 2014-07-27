@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="basictests.syncs_multiple_resources.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="basictests.syncs_multiple_resources.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="basictests.syncs_multiple_resources.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="basictests.syncs_multiple_resources.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="basictests.syncs_multiple_resources.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="basictests.syncs_multiple_resources.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="basictests.syncs_multiple_resources.Makefile" file="Makefile" />
+  <dependency className="basictests.syncs_multiple_resources.TypeSizeConfiguration (b.syncs_multiple_resources)" file="TypeSizeConfiguration (b.syncs_multiple_resources)" />
+  <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources" file="syncs_multiple_resources.c" />
+  <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources" file="syncs_multiple_resources.h" />
+</dependenciesRoot>
+

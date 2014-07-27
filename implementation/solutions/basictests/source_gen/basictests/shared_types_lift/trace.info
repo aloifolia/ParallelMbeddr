@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="basictests.shared_types_lift.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="25" endPosition="0" unitName="basictests.shared_types_lift.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="basictests.shared_types_lift.GenericTaskDeclarations" />
+  <unitInfo fileName="provider1_SharedTypes_0.c" startLine="1" startPosition="0" endLine="17" endPosition="0" unitName="basictests.shared_types_lift.provider1_SharedTypes_0" />
+  <unitInfo fileName="user_SharedTypes_0.c" startLine="1" startPosition="0" endLine="41" endPosition="0" unitName="basictests.shared_types_lift.user_SharedTypes_0" />
+  <root nodeRef="r:b0624059-df14-45bb-8f01-a04b58b53146(basictests.shared_types_lift)/3227138667934510498">
+    <nodeInfo nodeId="3227138667934510504" fileName="provider2.h" startLine="23" startPosition="0" endLine="23" endPosition="77" conceptFqName="com.mbeddr.core.udt.structure.TypeDef" />
+    <unitInfo nodeId="3227138667934510498" fileName="provider2.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="basictests.shared_types_lift.provider2" />
+  </root>
+  <root nodeRef="r:b0624059-df14-45bb-8f01-a04b58b53146(basictests.shared_types_lift)/3271375101727084024">
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="12" startPosition="2" endLine="12" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="12" startPosition="2" endLine="12" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="12" startPosition="25" endLine="12" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="12" startPosition="26" endLine="12" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="13" startPosition="2" endLine="13" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="13" startPosition="2" endLine="13" endPosition="97" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="13" startPosition="28" endLine="13" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="13" startPosition="29" endLine="13" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="13" startPosition="72" endLine="13" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="3227138667934558959" fileName="shared_types_lift.c" startLine="14" startPosition="2" endLine="14" endPosition="40" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="15" startPosition="2" endLine="15" endPosition="37" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="15" startPosition="2" endLine="15" endPosition="38" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="15" startPosition="33" endLine="15" endPosition="36" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="15" startPosition="34" endLine="15" endPosition="36" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="3271375101727084052" fileName="shared_types_lift.c" startLine="16" startPosition="2" endLine="16" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="3271375101727084053" fileName="shared_types_lift.c" startLine="17" startPosition="2" endLine="17" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="3271375101727084054" fileName="shared_types_lift.c" startLine="17" startPosition="9" endLine="17" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101727084030" fileName="shared_types_lift.c" startLine="11" startPosition="0" endLine="18" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3271375101727084029" fileName="shared_types_lift.c" startLine="10" startPosition="0" endLine="19" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="3271375101727084024" fileName="shared_types_lift.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.shared_types_lift.main" />
+    <unitInfo nodeId="3271375101727084024" fileName="shared_types_lift.c" startLine="1" startPosition="0" endLine="20" endPosition="0" unitName="basictests.shared_types_lift.shared_types_lift" />
+  </root>
+  <root nodeRef="r:b0624059-df14-45bb-8f01-a04b58b53146(basictests.shared_types_lift)/3271375101727087424">
+    <nodeInfo nodeId="3271375101727087426" fileName="provider1_SharedTypes_0.h" startLine="20" startPosition="0" endLine="23" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <unitInfo nodeId="3271375101727087424" fileName="provider1.c" startLine="1" startPosition="0" endLine="9" endPosition="0" unitName="basictests.shared_types_lift.provider1" />
+  </root>
+  <root nodeRef="r:b0624059-df14-45bb-8f01-a04b58b53146(basictests.shared_types_lift)/3271375101727087425">
+    <nodeInfo nodeId="3271375101727088427" fileName="user_SharedTypes_0.h" startLine="30" startPosition="0" endLine="33" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <nodeInfo nodeId="3271375101727088438" fileName="user_SharedTypes_0.h" startLine="24" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <unitInfo nodeId="3271375101727087425" fileName="user.c" startLine="1" startPosition="0" endLine="11" endPosition="0" unitName="basictests.shared_types_lift.user" />
+  </root>
+</debugInfo>
+

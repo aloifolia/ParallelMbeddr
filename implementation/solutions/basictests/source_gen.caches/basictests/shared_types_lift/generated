@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="-5r2enq0tz0k9w51cwosutpwkzjd3c3a">
+  <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
+  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-21i2obreykxbxrerau3ugiah4u8h3c8" />
+  <common hash="-axxazkacme5c1yv50buuyiznsxcygbx">
+    <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
+    <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+    <file name="GenericSharedDeclarations.c" />
+    <file name="GenericSharedDeclarations.h" />
+    <file name="GenericSyncDeclarations.c" />
+    <file name="GenericSyncDeclarations.h" />
+    <file name="GenericTaskDeclarations.c" />
+    <file name="GenericTaskDeclarations.h" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (b.shared_types_lift)" />
+    <file name="provider1.c" />
+    <file name="provider1.h" />
+    <file name="provider1_SharedTypes_0.c" />
+    <file name="provider1_SharedTypes_0.h" />
+    <file name="provider2.c" />
+    <file name="provider2.h" />
+    <file name="shared_types_lift.c" />
+    <file name="shared_types_lift.h" />
+    <file name="user.c" />
+    <file name="user.h" />
+    <file name="user_SharedTypes_0.c" />
+    <file name="user_SharedTypes_0.h" />
+  </common>
+  <source id="3271375101727083971" name="BuildConfiguration (b.shared_types_lift)" hash="-717xk3k496rf9ww99pjfkv1pzqgrovl" />
+  <source id="3271375101727083977" name="TypeSizeConfiguration (b.shared_types_lift)" hash="elqeu6tvd7vaat4teptc4kydrlfenno" />
+  <source id="3271375101727084024" name="shared_types_lift" hash="-3dukrsenzxz0738omucqu7f2vwltjyw" />
+  <source id="3271375101727087424" name="provider1" hash="-d1vd010jbrwworx2titotrmyu6utya8" />
+  <source id="3271375101727087425" name="user" hash="7tzfk8kuyccg6145lami6ugaptqfrns" />
+  <source id="3227138667934510498" name="provider2" hash="-7cgx6v66610i9breiie6b7msjscbjqw" />
+</dependencies>
+

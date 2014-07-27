@@ -79,7 +79,8 @@
     <classNode dependClassName="TasksAndSyncs.typesystem.checkSharedTypeForSharedPointer_NonTypesystemRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.checkSharedTypeForVoid_NonTypesystemRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.checkStaticLocalVariableForSharedness_NonTypesystemRule" />
-    <classNode dependClassName="TasksAndSyncs.typesystem.checkSyncRessourcesForSharedness_NonTypesystemRule" />
+    <classNode dependClassName="TasksAndSyncs.typesystem.checkSyncRessourceForBinding_NonTypesystemRule" />
+    <classNode dependClassName="TasksAndSyncs.typesystem.checkSyncRessourceForSharedness_NonTypesystemRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.checkTaskForReference_NonTypesystemRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_FutureJoin_InferenceRule" />
     <classNode dependClassName="TasksAndSyncs.typesystem.typeof_Future_InferenceRule" />
@@ -298,12 +299,25 @@
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime" />
     <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
   </dependency>
-  <dependency className="TasksAndSyncs.typesystem.checkSyncRessourcesForSharedness_NonTypesystemRule" file="checkSyncRessourcesForSharedness_NonTypesystemRule.java">
+  <dependency className="TasksAndSyncs.typesystem.checkSyncRessourceForBinding_NonTypesystemRule" file="checkSyncRessourceForBinding_NonTypesystemRule.java">
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.errors.IErrorReporter" />
     <classNode dependClassName="jetbrains.mps.errors.messageTargets.MessageTarget" />
     <classNode dependClassName="jetbrains.mps.errors.messageTargets.NodeMessageTarget" />
-    <classNode dependClassName="jetbrains.mps.internal.collections.runtime.ListSequence" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
+    <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />
+    <classNode dependClassName="jetbrains.mps.smodel.SModelUtil_new" />
+    <classNode dependClassName="jetbrains.mps.typesystem.inference.TypeCheckingContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.AbstractNonTypesystemRule_Runtime" />
+    <classNode extendsClassName="jetbrains.mps.lang.typesystem.runtime.NonTypesystemRule_Runtime" />
+  </dependency>
+  <dependency className="TasksAndSyncs.typesystem.checkSyncRessourceForSharedness_NonTypesystemRule" file="checkSyncRessourceForSharedness_NonTypesystemRule.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.errors.IErrorReporter" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.MessageTarget" />
+    <classNode dependClassName="jetbrains.mps.errors.messageTargets.NodeMessageTarget" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus" />

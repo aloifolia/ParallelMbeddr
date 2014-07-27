@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="asa37f503mev7sabmxe8plsq5zd8u23">
+<dependencies version="2" modelHash="-21i2obreykxbxrerau3ugiah4u8h3c8">
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang.reflect(JDK/java.lang.reflect@java_stub)" />
@@ -29,14 +29,14 @@
   <dep model="r:055bac8c-a50b-42ec-a317-e20a256152b4(com.mbeddr.core.debug.structure)" hash="6k3sqsf2ui2kd0n68nj599u0w94zgog" />
   <dep model="r:0d8c18c2-3a01-472e-96fe-573575c47352(com.mbeddr.mpsutil.blutil.generator.template.main@generator)" hash="6cefoacb1ttiafhjt0y8vm61q90u6ny" />
   <dep model="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" hash="821haez2zkfcfxyckxeifgmykc9g323" />
-  <dep model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" hash="25yj64zl9qmq6whxfviu83sd0s9h0lp" />
+  <dep model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" hash="-hil4b2v6ghv54nz4uajll6hv5roebp" />
   <dep model="r:3b7ed80f-6cfd-45bc-b051-2f66c620dd27(jetbrains.mps.lang.traceable.structure)" hash="9wy5xay4fxryhg7hl9tcowq0jfepue8" />
   <dep model="r:4903509f-5416-46ff-9a8b-44b5a178b568(com.mbeddr.mpsutil.plantuml.node.structure)" hash="-5nad0b35dfl8an5y98szewb4r42ukw" />
   <dep model="r:4e770e63-2ef5-4a0d-b2e8-c5c1a1565703(com.mbeddr.core.udt.behavior)" hash="-3tn5fufylnvx5hdfl18074nxsqf06w3" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="-4kyvescdofbohq5gkntbny9d6gbpbt3" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="brz9lxc76967rnu3t706qc7p6anablb" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="7bfyg8ka4czo4hnrql25rb3elafxu2x" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="b4ewbuz42qcbg1awca5bacgi0vopxqt" />
   <dep model="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" hash="e5zswcvgdspmt039m3gg97emcadi0ez" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
@@ -51,6 +51,7 @@
   <common hash="-d57w08xg018h333xiv1i2xxs7lho27x" dependsOnNodes="true">
     <dep root="1304213873204338637" />
     <dep root="2852056939580752790" />
+    <dep root="3227138667944301639" />
     <dep root="3271375101705763883" />
     <dep root="3348893923579063299" />
     <dep root="4644263955273508744" />
@@ -109,7 +110,7 @@
     <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" />
     <file name="QueriesGenerated.java" />
   </common>
-  <source id="1304213873204338637" name="main" hash="9n4q6w9g6ytz1seyzzfcjanupqdv8cz">
+  <source id="1304213873204338637" name="main" hash="cxb4e4pdl08iend81zvb560ljc8w01n">
     <dep model="r:00000000-0000-4000-0000-011c895902e9(jetbrains.mps.lang.generator.generator.baseLanguage.template.main@generator)" />
   </source>
   <source id="8801852084534119714" name="TypeSizeConfiguration (T.g.t.main)" hash="bz33m8ovw1ps3vfrbtocdf371bxwfil" />
@@ -118,9 +119,10 @@
   <source id="6340335959758487421" name="importGenericTaskDeclarations" hash="6o960kuf6sji23f3q2w5lft0cbcwt2b" />
   <source id="7288607883539514946" name="weave_FutureFunction" hash="-1zg82fnjs4p8r1kdindqesracke48ol" />
   <source id="482600553440749741" name="weave_VoidTaskFunDecl" hash="93ty6f7kwswhmae0pq00lz2exfbhm9o" />
-  <source id="2852056939580752790" name="importSharedDeclarations" hash="dy4py1d749ta9vxgp2dxx7k1od6inmj" />
+  <source id="2852056939580752790" name="importSharedDeclarations" hash="98agfbzwwe12jezkk46nufxyik1cmrz" />
   <source id="3348893923579063299" name="replaceSyncDeclarations" hash="-dxspaftzk114v2srd43nekp95rawnhe" />
   <source id="5853110027234870832" name="createGenericModules" hash="-8ks0v3c56axzm7auryw0gt9q5tzxpp5" />
   <source id="3271375101705763883" name="renameShadowingSharedVariables" hash="-c2q76d9f2a1gf2xiunk1e06cbgly13v" />
+  <source id="3227138667944301639" name="replaceNamedRessources" hash="-dbe1armkmqy8butd9086c5j4uj3xw1n" />
 </dependencies>
 
