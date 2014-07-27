@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-6ipu4j38dd83x0odvapgwtcvrhk02x1">
+<dependencies version="2" modelHash="-49qbudrk1wohq5hyypnmxslwyz6p78a">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
   <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
   <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-21i2obreykxbxrerau3ugiah4u8h3c8" />
-  <common hash="cxjjrcbna3153b58g4657d1rsagvodm">
+  <common hash="e7bsuy73ed9a5y2guzecnc8tajnonyp">
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
@@ -20,14 +20,12 @@
     <file name="GenericTaskDeclarations.c" />
     <file name="GenericTaskDeclarations.h" />
     <file name="Makefile" />
-    <file name="TypeSizeConfiguration (b.syncs_multiple_resources)" />
-    <file name="syncs_multiple_resources.c" />
-    <file name="syncs_multiple_resources.h" />
-    <file name="syncs_multiple_resources_SharedTypes_0.c" />
-    <file name="syncs_multiple_resources_SharedTypes_0.h" />
+    <file name="TypeSizeConfiguration (b.syncs_stop)" />
+    <file name="syncs_stop.c" />
+    <file name="syncs_stop.h" />
   </common>
-  <source id="3227138667937541238" name="syncs_multiple_resources" hash="-ervbuf9noy0wfilla3rdkwjcul5d60a" />
-  <source id="3227138667937541272" name="TypeSizeConfiguration (b.syncs_multiple_resources)" hash="bazo66mp896ygzdjm9ouc3mh43rufok" />
-  <source id="3227138667937541319" name="BuildConfiguration (b.syncs_multiple_resources)" hash="8jfkgc8h6hhewlgzen3s797oac3irlb" />
+  <source id="3227138667949597815" name="syncs_stop" hash="-9u1vxhwdukz2dbs8ervoi5x9jk0reja" />
+  <source id="3227138667949597849" name="TypeSizeConfiguration (b.syncs_stop)" hash="6w63x8lzvjg95mkqhern1wedt5u7l3j" />
+  <source id="3227138667949597896" name="BuildConfiguration (b.syncs_stop)" hash="-w8hh9h5k0e8it6op8pufrorj2nwix7" />
 </dependencies>
 

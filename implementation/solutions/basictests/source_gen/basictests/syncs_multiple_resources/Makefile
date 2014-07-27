@@ -1,7 +1,7 @@
 CC=gcc
 CFLAGS=-std=c99
 ODIR=./bin
-_OBJ_syncs_multiple_resources=syncs_multiple_resources.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o
+_OBJ_syncs_multiple_resources=syncs_multiple_resources.o GenericTaskDeclarations.o GenericSharedDeclarations.o GenericSyncDeclarations.o syncs_multiple_resources_SharedTypes_0.o
 OBJ_syncs_multiple_resources=$(patsubst %,$(ODIR)/%,$(_OBJ_syncs_multiple_resources))
 
 

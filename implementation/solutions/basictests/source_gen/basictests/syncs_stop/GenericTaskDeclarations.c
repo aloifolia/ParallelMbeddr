@@ -16,21 +16,6 @@ void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* 
   return future->result;
 }
 
-GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
-{
-  pthread_t pth;
-  if ( task.argsSize == 0 ) 
-  {
-    pthread_create(&pth,0,task.fun,0);
-  }  else 
-  {
-    void* args = malloc(task.argsSize);
-    memcpy(args,task.args,task.argsSize);
-    pthread_create(&pth,0,task.fun,args);
-  }
-  return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
-}
-
 GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task) 
 {
   pthread_t pth;
@@ -46,9 +31,9 @@ GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(Gen
   return (GenericTaskDeclarations_Future_t){ .pth = pth };
 }
 
-void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
 {
-  return GenericTaskDeclarations_getFutureResult(&future);
+  GenericTaskDeclarations_joinVoidFuture(&future);
 }
 
 void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
@@ -60,8 +45,23 @@ void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t
   }
 }
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
+void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
 {
-  GenericTaskDeclarations_joinVoidFuture(&future);
+  return GenericTaskDeclarations_getFutureResult(&future);
+}
+
+GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
+{
+  pthread_t pth;
+  if ( task.argsSize == 0 ) 
+  {
+    pthread_create(&pth,0,task.fun,0);
+  }  else 
+  {
+    void* args = malloc(task.argsSize);
+    memcpy(args,task.args,task.argsSize);
+    pthread_create(&pth,0,task.fun,args);
+  }
+  return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
 }
 

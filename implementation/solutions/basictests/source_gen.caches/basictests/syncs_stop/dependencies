@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="basictests.syncs_stop.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="basictests.syncs_stop.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="basictests.syncs_stop.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="basictests.syncs_stop.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="basictests.syncs_stop.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="basictests.syncs_stop.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="basictests.syncs_stop.Makefile" file="Makefile" />
+  <dependency className="basictests.syncs_stop.TypeSizeConfiguration (b.syncs_stop)" file="TypeSizeConfiguration (b.syncs_stop)" />
+  <dependency className="basictests.syncs_stop.syncs_stop" file="syncs_stop.c" />
+  <dependency className="basictests.syncs_stop.syncs_stop" file="syncs_stop.h" />
+</dependenciesRoot>
+

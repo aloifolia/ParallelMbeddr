@@ -24,12 +24,6 @@ struct GenericSharedDeclarations_SharedOf_int32_0 {
   int32_t value;
 };
 
-typedef struct GenericSharedDeclarations_SharedOf_double_0 GenericSharedDeclarations_SharedOf_double_0_t;
-struct GenericSharedDeclarations_SharedOf_double_0 {
-  pthread_mutex_t mutex;
-  double value;
-};
-
 extern pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
 

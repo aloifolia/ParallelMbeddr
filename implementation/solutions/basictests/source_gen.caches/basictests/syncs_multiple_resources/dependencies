@@ -10,5 +10,7 @@
   <dependency className="basictests.syncs_multiple_resources.TypeSizeConfiguration (b.syncs_multiple_resources)" file="TypeSizeConfiguration (b.syncs_multiple_resources)" />
   <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources" file="syncs_multiple_resources.c" />
   <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources" file="syncs_multiple_resources.h" />
+  <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources_SharedTypes_0" file="syncs_multiple_resources_SharedTypes_0.c" />
+  <dependency className="basictests.syncs_multiple_resources.syncs_multiple_resources_SharedTypes_0" file="syncs_multiple_resources_SharedTypes_0.h" />
 </dependenciesRoot>
 

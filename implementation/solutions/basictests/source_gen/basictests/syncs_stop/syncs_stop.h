@@ -1,5 +1,5 @@
-#ifndef SYNCS_MULTIPLE_RESOURCES_H
-#define SYNCS_MULTIPLE_RESOURCES_H
+#ifndef SYNCS_STOP_H
+#define SYNCS_STOP_H
 
 
 #include <stdint.h>
@@ -14,15 +14,13 @@
 
 #include "GenericSyncDeclarations.h"
 
-#include "syncs_multiple_resources_SharedTypes_0.h"
-
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-int32_t syncs_multiple_resources_main(int32_t argc, char* argv[]);
+int32_t syncs_stop_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus
