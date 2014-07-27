@@ -170,10 +170,24 @@ public class TaskBuilder {
             return res;
           }
         }.invoke();
+        final SNode node_3271375101706096958 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("jetbrains.mps.baseLanguage.structure.VoidType", null);
+            return res;
+          }
+        }.invoke();
+        final SNode node_3271375101706096957 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+            SLinkOperations.setTarget(res, "baseType", node_3271375101706096958, true);
+            return res;
+          }
+        }.invoke();
         final SNode node_482600553440675153 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
+            SLinkOperations.setTarget(res, "dummyType", node_3271375101706096957, true);
             ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_482600553440675156);
             return res;
           }
@@ -278,10 +292,24 @@ public class TaskBuilder {
             return res;
           }
         }.invoke();
+        final SNode node_3271375101706097184 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("jetbrains.mps.baseLanguage.structure.VoidType", null);
+            return res;
+          }
+        }.invoke();
+        final SNode node_3271375101706097183 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+            SLinkOperations.setTarget(res, "baseType", node_3271375101706097184, true);
+            return res;
+          }
+        }.invoke();
         final SNode node_8073526852157338526 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
+            SLinkOperations.setTarget(res, "dummyType", node_3271375101706097183, true);
             ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_8073526852157352262);
             return res;
           }

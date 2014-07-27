@@ -22,8 +22,6 @@
 extern "C" {
 #endif
 
-void simplesync_bar(GenericSharedDeclarations_SharedOf_int32_0_t* valuePointer);
-
 int32_t simplesync_main(int32_t argc, char* argv[]);
 
 void simplesync_initGlobalMutexesFor1Module_0(void);

@@ -385,10 +385,24 @@ public class SyncBuilder {
             return res;
           }
         }.invoke();
+        final SNode node_3271375101706067250 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("jetbrains.mps.baseLanguage.structure.VoidType", null);
+            return res;
+          }
+        }.invoke();
+        final SNode node_3271375101706067249 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+            SLinkOperations.setTarget(res, "baseType", node_3271375101706067250, true);
+            return res;
+          }
+        }.invoke();
         SNode node_483189195599383269 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<time.h>"));
+            SLinkOperations.setTarget(res, "dummyType", node_3271375101706067249, true);
             ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_483189195599387422);
             return res;
           }
@@ -966,10 +980,24 @@ public class SyncBuilder {
             return res;
           }
         }.invoke();
+        final SNode node_3271375101706066485 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("jetbrains.mps.baseLanguage.structure.VoidType", null);
+            return res;
+          }
+        }.invoke();
+        final SNode node_3271375101706066484 = new _FunctionTypes._return_P0_E0<SNode>() {
+          public SNode invoke() {
+            SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+            SLinkOperations.setTarget(res, "baseType", node_3271375101706066485, true);
+            return res;
+          }
+        }.invoke();
         final SNode node_5512582143322759408 = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
             SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
+            SLinkOperations.setTarget(res, "dummyType", node_3271375101706066484, true);
             ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_5512582143322759411);
             return res;
           }
@@ -1296,10 +1324,24 @@ public class SyncBuilder {
               return res;
             }
           }.invoke();
+          final SNode node_3271375101706066378 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.VoidType", null);
+              return res;
+            }
+          }.invoke();
+          final SNode node_3271375101706066077 = new _FunctionTypes._return_P0_E0<SNode>() {
+            public SNode invoke() {
+              SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
+              SLinkOperations.setTarget(res, "baseType", node_3271375101706066378, true);
+              return res;
+            }
+          }.invoke();
           final SNode node_3348893923577842107 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.ArbitraryTextType", null);
               SPropertyOperations.set(res, "requiredStdHeader", ("<pthread.h>"));
+              SLinkOperations.setTarget(res, "dummyType", node_3271375101706066077, true);
               ListSequence.fromList(SLinkOperations.getTargets(res, "items", true)).addElement(node_3348893923579966801);
               return res;
             }

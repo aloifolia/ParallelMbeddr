@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="basictests.shared_types_global.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="25" endPosition="0" unitName="basictests.shared_types_global.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="basictests.shared_types_global.GenericTaskDeclarations" />
+  <unitInfo fileName="shared_types_global_SharedTypes_0.c" startLine="1" startPosition="0" endLine="6" endPosition="0" unitName="basictests.shared_types_global.shared_types_global_SharedTypes_0" />
+  <root nodeRef="r:9cc09d1f-ddb8-4843-ab0a-b156d331152e(basictests.shared_types_global)/3271375101694395134">
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="22" startPosition="2" endLine="22" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="22" startPosition="2" endLine="22" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="22" startPosition="25" endLine="22" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="22" startPosition="26" endLine="22" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="23" startPosition="2" endLine="23" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="23" startPosition="2" endLine="23" endPosition="97" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="23" startPosition="28" endLine="23" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="23" startPosition="29" endLine="23" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="23" startPosition="72" endLine="23" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="24" startPosition="2" endLine="24" endPosition="46" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="24" startPosition="2" endLine="24" endPosition="47" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395162" fileName="shared_types_global.c" startLine="25" startPosition="2" endLine="25" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="3271375101694395163" fileName="shared_types_global.c" startLine="26" startPosition="2" endLine="26" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="3271375101694395164" fileName="shared_types_global.c" startLine="26" startPosition="9" endLine="26" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="2" endLine="31" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="2" endLine="31" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="21" endLine="31" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="22" endLine="31" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="22" endLine="31" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="51" endLine="31" endPosition="94" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="31" startPosition="52" endLine="31" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="2" endLine="32" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="2" endLine="32" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="21" endLine="32" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="22" endLine="32" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="22" endLine="32" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="51" endLine="32" endPosition="94" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="32" startPosition="52" endLine="32" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="2" endLine="33" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="2" endLine="33" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="21" endLine="33" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="22" endLine="33" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="22" endLine="33" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="51" endLine="33" endPosition="94" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="33" startPosition="52" endLine="33" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="2" endLine="34" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="2" endLine="34" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="21" endLine="34" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="22" endLine="34" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="22" endLine="34" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="51" endLine="34" endPosition="94" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="34" startPosition="52" endLine="34" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="2" endLine="35" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="2" endLine="35" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="21" endLine="35" endPosition="50" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="22" endLine="35" endPosition="44" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="22" endLine="35" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="51" endLine="35" endPosition="94" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="35" startPosition="52" endLine="35" endPosition="94" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="40" startPosition="2" endLine="40" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="40" startPosition="2" endLine="40" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101694416934" fileName="shared_types_global.c" startLine="10" startPosition="0" endLine="11" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101694416935" fileName="shared_types_global.c" startLine="12" startPosition="0" endLine="13" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101694416936" fileName="shared_types_global.c" startLine="14" startPosition="0" endLine="15" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101694416937" fileName="shared_types_global.c" startLine="16" startPosition="0" endLine="17" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101694416938" fileName="shared_types_global.c" startLine="18" startPosition="0" endLine="19" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.GlobalVariableDeclaration" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="39" startPosition="0" endLine="41" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="38" startPosition="0" endLine="42" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="shared_types_global_initAllGlobalMutexes_0" />
+    <nodeInfo nodeId="3271375101694395140" fileName="shared_types_global.c" startLine="21" startPosition="0" endLine="27" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="30" startPosition="0" endLine="36" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3271375101694395139" fileName="shared_types_global.c" startLine="20" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="29" startPosition="0" endLine="37" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="shared_types_global_initGlobalMutexesFor1Module_0" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.shared_types_global.main" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.h" startLine="27" startPosition="0" endLine="28" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.shared_types_global.initGlobalMutexesFor1Module_0" />
+    <nodeInfo nodeId="3271375101694395134" fileName="shared_types_global.h" startLine="29" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.shared_types_global.initAllGlobalMutexes_0" />
+    <nodeInfo nodeId="3271375101694395160" fileName="shared_types_global_SharedTypes_0.h" startLine="35" startPosition="46" endLine="35" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101694395161" fileName="shared_types_global_SharedTypes_0.h" startLine="35" startPosition="49" endLine="35" endPosition="51" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101694395154" fileName="shared_types_global_SharedTypes_0.h" startLine="41" startPosition="46" endLine="41" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101694395135" fileName="shared_types_global_SharedTypes_0.h" startLine="22" startPosition="0" endLine="25" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
+    <unitInfo nodeId="3271375101694395134" fileName="shared_types_global.c" startLine="1" startPosition="0" endLine="43" endPosition="0" unitName="basictests.shared_types_global.shared_types_global" />
+  </root>
+</debugInfo>
+

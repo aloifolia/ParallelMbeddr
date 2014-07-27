@@ -45,4 +45,14 @@ public class Analyzer {
       }
     }).count() > 0;
   }
+
+
+
+  public static SNode getSurroundingFunctionOrClosure(SNode node) {
+    SNode closure = SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Closure", false, false);
+    if ((closure != null)) {
+      return closure;
+    }
+    return SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
+  }
 }

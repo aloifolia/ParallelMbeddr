@@ -94,6 +94,10 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
+      NonTypesystemRule_Runtime nonTypesystemRule = new checkSharedTypeForVoid_NonTypesystemRule();
+      this.myNonTypesystemRules.add(nonTypesystemRule);
+    }
+    {
       NonTypesystemRule_Runtime nonTypesystemRule = new checkStaticLocalVariableForSharedness_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }

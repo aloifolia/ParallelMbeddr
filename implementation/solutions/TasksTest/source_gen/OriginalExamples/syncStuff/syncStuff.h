@@ -24,10 +24,6 @@ extern "C" {
 
 int32_t syncStuff_main(int32_t argc, char* argv[]);
 
-void syncStuff_initGlobalMutexesFor1Module_0(void);
-
-void syncStuff_initAllGlobalMutexes_0(void);
-
 
 #ifdef __cplusplus
 } /* extern "C" */

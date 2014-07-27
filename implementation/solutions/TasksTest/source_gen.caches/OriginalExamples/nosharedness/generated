@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-75g7yv7r48gpccdzbpmhxqywbyab3d2">
+<dependencies version="2" modelHash="12erogksrlrrpmstqylu0pl8jpthpnp">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
   <common hash="-8l4en4c6tigng76usvayunwcbondpnt">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <file name="Makefile" />
     <file name="TypeSizeConfiguration (O.nosharedness)" />
@@ -14,7 +16,7 @@
   </common>
   <source id="5402960089350644843" name="BuildConfiguration (O.nosharedness)" hash="-dz6dc30hyomnrxvyseobi3hsg6drwkb" />
   <source id="5402960089350644959" name="TypeSizeConfiguration (O.nosharedness)" hash="-5r9ox3604k4i0flndnsue50dhknipwr" />
-  <source id="5402960089350645229" name="first" hash="-bjfejczfpkzcam4doigwjektygw148i" />
+  <source id="5402960089350645229" name="first" hash="-27cx9bqbi44m4murej5vduu6izl0jhe" />
   <source id="5402960089350649681" name="second" hash="-9u6clp22i2cs689qs2kejgupcs5umjv" />
 </dependencies>
 

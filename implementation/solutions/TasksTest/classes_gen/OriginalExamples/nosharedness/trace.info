@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
   <root nodeRef="r:16012a7d-feb4-451f-acb3-ce59d159c0b8(OriginalExamples.nosharedness)/5402960089350645229">
-    <nodeInfo nodeId="5402960089350645233" fileName="first.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="5402960089350645240" fileName="first.c" startLine="8" startPosition="2" endLine="8" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="5402960089350645241" fileName="first.c" startLine="8" startPosition="9" endLine="8" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="5402960089350645232" fileName="first.c" startLine="6" startPosition="0" endLine="9" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="5402960089350645230" fileName="first.c" startLine="5" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="3271375101709211139" fileName="first.c" startLine="9" startPosition="2" endLine="9" endPosition="21" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
+    <nodeInfo nodeId="3271375101709211142" fileName="first.c" startLine="9" startPosition="2" endLine="9" endPosition="22" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="5402960089350645240" fileName="first.c" startLine="10" startPosition="2" endLine="10" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="5402960089350645241" fileName="first.c" startLine="10" startPosition="9" endLine="10" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101709211593" fileName="first.c" startLine="15" startPosition="2" endLine="15" endPosition="3" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101709211623" fileName="first.c" startLine="15" startPosition="2" endLine="15" endPosition="7" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
+    <nodeInfo nodeId="3271375101709211594" fileName="first.c" startLine="15" startPosition="2" endLine="15" endPosition="8" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3271375101709211626" fileName="first.c" startLine="15" startPosition="6" endLine="15" endPosition="7" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="5402960089350645229" fileName="first.c" startLine="5" startPosition="0" endLine="6" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.nosharedness.closure_a0a0" />
+    <nodeInfo nodeId="3271375101709211139" fileName="first.c" startLine="14" startPosition="0" endLine="16" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="5402960089350645232" fileName="first.c" startLine="8" startPosition="0" endLine="11" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3271375101709211139" fileName="first.c" startLine="13" startPosition="0" endLine="17" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="first_closure_a0a0" />
+    <nodeInfo nodeId="5402960089350645230" fileName="first.c" startLine="7" startPosition="0" endLine="12" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="5402960089350645229" fileName="first.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.nosharedness.main" />
-    <unitInfo nodeId="5402960089350645229" fileName="first.c" startLine="1" startPosition="0" endLine="11" endPosition="0" unitName="OriginalExamples.nosharedness.first" />
+    <unitInfo nodeId="5402960089350645229" fileName="first.c" startLine="1" startPosition="0" endLine="18" endPosition="0" unitName="OriginalExamples.nosharedness.first" />
   </root>
   <root nodeRef="r:16012a7d-feb4-451f-acb3-ce59d159c0b8(OriginalExamples.nosharedness)/5402960089350649681">
     <nodeInfo nodeId="5402960089350649685" fileName="second.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />

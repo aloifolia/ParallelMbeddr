@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="126" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
+  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="130" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873205167535">
     <nodeInfo nodeId="482600553438622806" fileName="typeof_Task_InferenceRule.java" startLine="22" startPosition="5" endLine="23" endPosition="211" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="482600553438926433" fileName="typeof_Task_InferenceRule.java" startLine="25" startPosition="27" endLine="26" endPosition="102" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -656,6 +656,47 @@
     </scopeInfo>
     <unitInfo nodeId="2744793885339923009" fileName="typeof_TaskResult_InferenceRule.java" startLine="23" startPosition="61" endLine="31" endPosition="7" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule$1" />
     <unitInfo nodeId="2744793885339922998" fileName="typeof_TaskResult_InferenceRule.java" startLine="15" startPosition="0" endLine="50" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_TaskResult_InferenceRule" />
+  </root>
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3271375101704733483">
+    <nodeInfo nodeId="3271375101704744209" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="23" startPosition="7" endLine="24" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3271375101704744209" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="24" startPosition="60" endLine="25" endPosition="279" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="30" startPosition="46" endLine="31" endPosition="48" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="35" startPosition="5" endLine="36" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="36" startPosition="130" endLine="37" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="41" startPosition="30" endLine="42" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkSharedTypeForVoid_NonTypesystemRule#()V" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="33" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="41" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="3271375101704744209" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="22" startPosition="146" endLine="26" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="34" startPosition="68" endLine="38" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3271375101704739077" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="21" startPosition="123" endLine="27" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="34" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="29" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="18" startPosition="53" endLine="18" endPosition="53" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="30" startPosition="46" endLine="31" endPosition="48" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="41" startPosition="30" endLine="42" endPosition="17" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
+    <scopeInfo nodeId="3271375101704744209" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="23" startPosition="7" endLine="25" endPosition="279">
+      <varInfo nodeId="3271375101704744209" varName="_reporter_2309309498" />
+      <varInfo nodeId="3271375101704744209" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="35" startPosition="5" endLine="37" endPosition="45">
+      <varInfo nodeId="3271375101704733483" varName="b" />
+    </scopeInfo>
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="30" startPosition="0" endLine="33" endPosition="0" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="41" startPosition="0" endLine="44" endPosition="0" />
+    <scopeInfo nodeId="3271375101704739080" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="22" startPosition="146" endLine="26" endPosition="7" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="34" startPosition="68" endLine="38" endPosition="5" />
+    <scopeInfo nodeId="3271375101704733484" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="21" startPosition="123" endLine="27" endPosition="5" />
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="34" startPosition="0" endLine="40" endPosition="0">
+      <varInfo nodeId="3271375101704733483" varName="argument" />
+    </scopeInfo>
+    <scopeInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="21" startPosition="0" endLine="29" endPosition="0">
+      <varInfo nodeId="3271375101704733483" varName="sharedType" />
+      <varInfo nodeId="3271375101704733483" varName="status" />
+      <varInfo nodeId="3271375101704733483" varName="typeCheckingContext" />
+    </scopeInfo>
+    <unitInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="17" startPosition="0" endLine="45" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedTypeForVoid_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3570654511858805942">
     <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="23" startPosition="7" endLine="24" endPosition="330" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />

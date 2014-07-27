@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="70x4b521zl2jbqg5ctl5xzha4dh8uzi">
-  <dep model="b883285f-b09b-4185-859d-95da768e4ede/r:c3d5de21-0d1d-4750-a441-ce8c486d1612(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="207z18oazvbr8kxxukem7n79hzg2nsx">
+  <dep model="1b9288b6-fe24-43ac-93bd-549336538cfd/r:59ff4af3-4a24-43a5-892d-b2768b4c58dc(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
@@ -10,7 +10,7 @@
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
   <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-60nnqcc2wyqdfz363cuh9ydo6qymd09" />
   <common hash="b57znas5i778iey9ad45qcdd789rj0q">
-    <dep model="b883285f-b09b-4185-859d-95da768e4ede/r:c3d5de21-0d1d-4750-a441-ce8c486d1612(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+    <dep model="1b9288b6-fe24-43ac-93bd-549336538cfd/r:59ff4af3-4a24-43a5-892d-b2768b4c58dc(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
@@ -32,6 +32,7 @@
   </common>
   <source id="6244125718656340638" name="BuildConfiguration (O.simplesync)" hash="3lxwp1n32s3ncx0udnfmbovpkzdr9lx" />
   <source id="6244125718656340772" name="TypeSizeConfiguration (O.simplesync)" hash="-cyopt8od0cr2duueytcwllhpkc0aqoi" />
-  <source id="6244125718656341042" name="simplesync" hash="-28eie9gi46efo890u06xfgvtlbd1yhk" />
+  <source id="6244125718656341042" name="simplesync" hash="-7580vw355ve509mfqv9rut1udde4zsn" />
+  <source id="4666093872055017964" name="sdf" hash="e76eip9xz1rdh21lu6ycstitphnqz51" />
 </dependencies>
 
