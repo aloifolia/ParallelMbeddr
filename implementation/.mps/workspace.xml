@@ -18,36 +18,165 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa722af2-26f2-49c2-8670-07eea910cd96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/TypeSizeConfiguration (b.syncs_stop)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_stop/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_stop/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources_SharedTypes_0.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources_SharedTypes_0.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/syncs_stop.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/syncs_stop.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/basictests/syncs_stop.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_stop/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSharedDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSyncDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSyncDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericTaskDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericTaskDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_multiple_resources/dependencies" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_multiple_resources/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_multiple_resources/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/syncs_multiple_resources/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/syncs_multiple_resources.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/models/basictests/syncs_multiple_resources.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/basictests/syncs_multiple_resources.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_multiple_resources/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_multiple_resources/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/TypeSizeConfiguration (p.philosophers)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/TypeSizeConfiguration (p.pi_parallel_no_sync)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/TypeSizeConfiguration (p.pi_parallel_sync)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_serial/TypeSizeConfiguration (p.pi_serial)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/TypeSizeConfiguration (q.quicksort_parallel)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/TypeSizeConfiguration (q.quicksort_parallel_nosync)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/TypeSizeConfiguration (q.quicksort_parallel_sync)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_serial/TypeSizeConfiguration (q.quicksort_serial)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_serial/TypeSizeConfiguration (q.quicksort_serial)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_serial/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_serial/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_serial/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/philosophers/philosophers/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_parallel_no_sync/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_parallel_sync/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_serial/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_parallel_nosync/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_parallel_sync/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_serial/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_strings/quicksort_parallel/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_strings/quicksort_serial/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/philosophers/philosophers/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_parallel_no_sync/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_parallel_sync/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/pi/pi_serial/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_parallel_nosync/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_parallel_sync/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_generic/quicksort_serial/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_strings/quicksort_parallel/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen.caches/quicksort_strings/quicksort_serial/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/philosophers.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/philosophers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/philosophers/philosophers.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/philosophers_SharedTypes_0.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/philosophers_SharedTypes_0.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/pi.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/pi.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_serial/pi.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/pi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/pi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_serial/pi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/pi_clone.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/pi/pi_parallel_no_sync.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/pi/pi_parallel_sync.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/pi/pi_serial.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/queue.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/queue.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/queue_SharedTypes_0.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/queue_SharedTypes_0.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/quicksort.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/quicksort.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_serial/quicksort.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/quicksort.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_serial/quicksort.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/quicksort.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/quicksort.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_serial/quicksort.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/quicksort.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_serial/quicksort.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/quicksort_SharedTypes_0.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/quicksort_SharedTypes_0.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/quicksort_strings/quicksort_parallel.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/quicksort_generic/quicksort_parallel_nosync.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/quicksort_generic/quicksort_parallel_sync.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/quicksort_generic/quicksort_serial.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/models/quicksort_strings/quicksort_serial.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/scenarios.msd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/philosophers/philosophers/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/pi/pi_parallel_no_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/pi/pi_parallel_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/pi/pi_serial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/quicksort_generic/quicksort_parallel_nosync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/quicksort_generic/quicksort_parallel_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/quicksort_generic/quicksort_serial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/quicksort_strings/quicksort_parallel/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/classes_gen/quicksort_strings/quicksort_serial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/philosophers/philosophers/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_no_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_parallel_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/pi/pi_serial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_nosync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_parallel_sync/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_generic/quicksort_serial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_parallel/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/scenarios/source_gen/quicksort_strings/quicksort_serial/trace.info" />
+      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\classes_gen\TasksAndSyncs\behavior\SyncRessourceRefByName_BehaviorDescriptor.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\classes_gen\TasksAndSyncs\editor\SyncRessourceRefByName_Editor.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/editor/EditorAspectDescriptorImpl.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/editor/EditorAspectDescriptorImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$56.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$56.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$57.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$57.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$58.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$58.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$59$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$59$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$59.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$59.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$60.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$60.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$61.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$61.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$62.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$62.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$63.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$64.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$65.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$65.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$66.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$66.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$67.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$67.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$68.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder$68.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/SharedBuilder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/simplesync/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/simplesync/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/simplesync/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/simplesync/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SharedBuilder.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/SharedBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/simplesync/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/simplesync/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/modules.xml" afterPath="$PROJECT_DIR$/.mps/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/simplesync.mps" afterPath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/simplesync.mps" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/template/TasksAndSyncs/generator/util.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/template/TasksAndSyncs/generator/util.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.mps/workspace.xml" afterPath="$PROJECT_DIR$/.mps/workspace.xml" />
     </list>
     <ignored path="ParallelMbeddr.iws" />
@@ -64,7 +193,7 @@
       <list>
         <TabState>
           <option name="title" value="Console" />
-          <option name="history" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;model modelUID=&quot;r:1e67799f-e30c-4f21-99e3-8207ffa95222(TempModel_279489415202664)&quot;&gt;&#13;&#10;  &lt;persistence version=&quot;8&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;de1ad86d-6e50-4a02-b306-d4d17f64c375(jetbrains.mps.console.base)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;f26691d2-0def-4c06-aec6-2cb90c4af0a4(jetbrains.mps.console.scripts)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;1a8554c4-eb84-43ba-8c34-6f0d90c6e75a(jetbrains.mps.console.blCommand)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;a5e4de53-46a3-44da-aab3-68fdf1c34ed0(jetbrains.mps.console.ideCommands)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;995a7394-7f76-4b8b-a929-c53448708106(jetbrains.mps.console.internalCommands)&quot; /&gt;&#13;&#10;  &lt;devkit namespace=&quot;fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)&quot; /&gt;&#13;&#10;  &lt;import index=&quot;eynw&quot; modelUID=&quot;r:359b1d2b-77c4-46df-9bf2-b25cbea32254(jetbrains.mps.console.base.structure)&quot; version=&quot;1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;z2sp&quot; modelUID=&quot;r:e712f353-5c3c-4288-adce-87c956a52ffb(jetbrains.mps.console.scripts.structure)&quot; version=&quot;0&quot; /&gt;&#13;&#10;  &lt;import index=&quot;3xdn&quot; modelUID=&quot;r:935ba0ee-7291-4caa-a807-d76e8fc69391(jetbrains.mps.console.blCommand.structure)&quot; version=&quot;3&quot; /&gt;&#13;&#10;  &lt;import index=&quot;caxt&quot; modelUID=&quot;r:135a606f-0376-4c5c-9ab8-4030f051a062(jetbrains.mps.console.ideCommands.structure)&quot; version=&quot;-1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;wns9&quot; modelUID=&quot;r:90445206-a973-4c1d-b760-30e5c77b7497(jetbrains.mps.console.internalCommands.structure)&quot; version=&quot;-1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;tpck&quot; modelUID=&quot;r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)&quot; version=&quot;0&quot; implicit=&quot;yes&quot; /&gt;&#13;&#10;  &lt;root type=&quot;eynw.ConsoleRoot&quot; typeId=&quot;eynw.1583916890557930028&quot; id=&quot;3227138667934444620&quot; nodeInfo=&quot;ng&quot;&gt;&#13;&#10;    &lt;node role=&quot;history&quot; roleId=&quot;eynw.1583916890557930415&quot; type=&quot;eynw.History&quot; typeId=&quot;eynw.757553790980850366&quot; id=&quot;6244125718652950357&quot; nodeInfo=&quot;ng&quot; /&gt;&#13;&#10;    &lt;node role=&quot;commandHolder&quot; roleId=&quot;eynw.1583916890557930417&quot; type=&quot;eynw.CommandHolder&quot; typeId=&quot;eynw.351968380916615243&quot; id=&quot;3227138667934444621&quot; nodeInfo=&quot;ng&quot;&gt;&#13;&#10;      &lt;property name=&quot;name&quot; nameId=&quot;tpck.1169194664001&quot; value=&quot;CommandHolder&quot; /&gt;&#13;&#10;    &lt;/node&gt;&#13;&#10;  &lt;/root&gt;&#13;&#10;&lt;/model&gt;&#13;&#10;&#13;&#10;" />
+          <option name="history" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#13;&#10;&lt;model modelUID=&quot;r:91c0b850-109d-4ddc-b878-31bf07a48d86(TempModel_82161047664413)&quot;&gt;&#13;&#10;  &lt;persistence version=&quot;8&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;de1ad86d-6e50-4a02-b306-d4d17f64c375(jetbrains.mps.console.base)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;f26691d2-0def-4c06-aec6-2cb90c4af0a4(jetbrains.mps.console.scripts)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;1a8554c4-eb84-43ba-8c34-6f0d90c6e75a(jetbrains.mps.console.blCommand)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;a5e4de53-46a3-44da-aab3-68fdf1c34ed0(jetbrains.mps.console.ideCommands)&quot; /&gt;&#13;&#10;  &lt;language namespace=&quot;995a7394-7f76-4b8b-a929-c53448708106(jetbrains.mps.console.internalCommands)&quot; /&gt;&#13;&#10;  &lt;devkit namespace=&quot;fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)&quot; /&gt;&#13;&#10;  &lt;import index=&quot;eynw&quot; modelUID=&quot;r:359b1d2b-77c4-46df-9bf2-b25cbea32254(jetbrains.mps.console.base.structure)&quot; version=&quot;1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;z2sp&quot; modelUID=&quot;r:e712f353-5c3c-4288-adce-87c956a52ffb(jetbrains.mps.console.scripts.structure)&quot; version=&quot;0&quot; /&gt;&#13;&#10;  &lt;import index=&quot;3xdn&quot; modelUID=&quot;r:935ba0ee-7291-4caa-a807-d76e8fc69391(jetbrains.mps.console.blCommand.structure)&quot; version=&quot;3&quot; /&gt;&#13;&#10;  &lt;import index=&quot;caxt&quot; modelUID=&quot;r:135a606f-0376-4c5c-9ab8-4030f051a062(jetbrains.mps.console.ideCommands.structure)&quot; version=&quot;-1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;wns9&quot; modelUID=&quot;r:90445206-a973-4c1d-b760-30e5c77b7497(jetbrains.mps.console.internalCommands.structure)&quot; version=&quot;-1&quot; /&gt;&#13;&#10;  &lt;import index=&quot;tpck&quot; modelUID=&quot;r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)&quot; version=&quot;0&quot; implicit=&quot;yes&quot; /&gt;&#13;&#10;  &lt;root type=&quot;eynw.ConsoleRoot&quot; typeId=&quot;eynw.1583916890557930028&quot; id=&quot;4260631361688483947&quot; nodeInfo=&quot;ng&quot;&gt;&#13;&#10;    &lt;node role=&quot;history&quot; roleId=&quot;eynw.1583916890557930415&quot; type=&quot;eynw.History&quot; typeId=&quot;eynw.757553790980850366&quot; id=&quot;6244125718652950357&quot; nodeInfo=&quot;ng&quot; /&gt;&#13;&#10;    &lt;node role=&quot;commandHolder&quot; roleId=&quot;eynw.1583916890557930417&quot; type=&quot;eynw.CommandHolder&quot; typeId=&quot;eynw.351968380916615243&quot; id=&quot;4260631361688483948&quot; nodeInfo=&quot;ng&quot;&gt;&#13;&#10;      &lt;property name=&quot;name&quot; nameId=&quot;tpck.1169194664001&quot; value=&quot;CommandHolder&quot; /&gt;&#13;&#10;    &lt;/node&gt;&#13;&#10;  &lt;/root&gt;&#13;&#10;&lt;/model&gt;&#13;&#10;&#13;&#10;" />
         </TabState>
       </list>
     </option>
@@ -85,79 +214,79 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main" pinned="false" current="false" current-in-tab="false">
-        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/main">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="428">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="586" />
-                    <property name="caretXRelative" value="56" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4335879941149926096" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorLabels />
-                <folded />
-                <enabledHints />
-              </memento>
-              <inspectorMemento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-                <enabledHints />
-              </inspectorMemento>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="replaceNamedRessources" pinned="false" current="false" current-in-tab="false">
-        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/replaceNamedRessources">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="307">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="103" />
-                    <property name="caretXRelative" value="8" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/3227138667945855329" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorLabels />
-                <folded />
-                <enabledHints />
-              </memento>
-              <inspectorMemento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-                <enabledHints />
-              </inspectorMemento>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="syncs_stop" pinned="false" current="true" current-in-tab="true">
-        <entry file="mps://node://basictests/basictests.syncs_stop/syncs_stop">
+      <file leaf-file-name="philosophers" pinned="false" current="true" current-in-tab="true">
+        <entry file="mps://node://scenarios/philosophers.philosophers/philosophers">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
               <memento viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="99" />
-                    <property name="caretXRelative" value="16" />
+                    <property name="caretX" value="251" />
+                    <property name="caretXRelative" value="8" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                      <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/4260631361688581169" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="importSharedDeclarations" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/importSharedDeclarations">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="464">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="255" />
+                    <property name="caretXRelative" value="112" />
                     <property name="sideSelectDirection" value="NONE" />
                     <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:352c7bcb-c05e-45ee-941d-32a6bfdf6639(basictests.syncs_stop)/3227138667949870021" />
+                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/2098891715755463029" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SharedBuilder" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SharedBuilder">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="16" viewPositionY="15904">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="765" />
+                    <property name="caretXRelative" value="64" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_vgxjtu_a0" cellNumber="0" isInList="false">
+                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4260631361691950593" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -464,40 +593,11 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites">
+        <subPane />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests@transient56">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests.syncs_stop">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests@transient56">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Empty">
               <option name="myItemId" value="" />
@@ -583,11 +683,69 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
+            <PATH_ELEMENT USER_OBJECT="scenarios">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="scenarios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="quicksort_generic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="scenarios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="quicksort_generic">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="quicksort_generic.quicksort_parallel_sync">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="scenarios">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="philosophers">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="philosophers.philosophers">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -613,9 +771,6 @@
             </PATH_ELEMENT>
           </PATH>
         </subPane>
-      </pane>
-      <pane id="Favorites">
-        <subPane />
       </pane>
     </panes>
   </component>
@@ -813,7 +968,7 @@
       <window_info id="Bookmarks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="30" side_tool="false" content_ui="tabs" />
       <window_info id="Model Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.34471804" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Migration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27851853" sideWeight="0.53640777" order="16" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31703705" sideWeight="0.47694755" order="16" side_tool="true" content_ui="tabs" />
       <window_info id="Generation Tracer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3525926" sideWeight="0.43122977" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14563107" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Class Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16747573" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -822,14 +977,14 @@
       <window_info id="Verification (CBMC)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.6463512" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Tree" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27851853" sideWeight="0.53640777" order="21" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27555555" sideWeight="0.5063593" order="21" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24798061" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.63036567" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Type System Performance Data" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28761062" sideWeight="0.503231" order="22" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27851853" sideWeight="0.46359223" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15703703" sideWeight="0.4936407" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Node Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Workflow" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.60921365" order="2" side_tool="false" content_ui="tabs" />
@@ -840,12 +995,12 @@
       <window_info id="Supertypes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="mbeddr TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="25" side_tool="false" content_ui="tabs" />
       <window_info id="Typesystem Trace" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27588996" sideWeight="0.58197933" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2583466" sideWeight="0.58197933" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Classpath Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="27" side_tool="false" content_ui="tabs" />
       <window_info id="Cell Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="29" side_tool="false" content_ui="tabs" />
       <window_info id="Dependencies Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.49960285" order="19" side_tool="false" content_ui="tabs" />
       <window_info id="Feature Model Verification" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Module Consistency Verification" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="17" side_tool="false" content_ui="tabs" />
+      <window_info id="Module Consistency Verification" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
       <window_info id="mbeddr Analyze Error Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="24" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Switch Verification Tool" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -862,58 +1017,6 @@
       <window_info id="Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="mbeddr Analyze Error Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="24" side_tool="false" content_ui="tabs" />
-      <window_info id="Bookmarks" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="30" side_tool="false" content_ui="tabs" />
-      <window_info id="Switch Verification Tool" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Migration" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Generation Tracer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3539823" sideWeight="0.33921412" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2673667" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Class Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2944535" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Module Dependencies" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Search" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Tree" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25958702" sideWeight="0.63408726" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Type System Performance Data" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="State Machine Verification (NuSMV)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19321534" sideWeight="0.46849757" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Node Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Workflow" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259587" sideWeight="0.49918434" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Node Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18731563" sideWeight="0.33836377" order="17" side_tool="false" content_ui="tabs" />
-      <window_info id="Typechecker State" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="18" side_tool="false" content_ui="tabs" />
-      <window_info id="Typesystem Trace" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22160445" sideWeight="0.58197933" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Dependencies Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.49960285" order="19" side_tool="false" content_ui="tabs" />
-      <window_info id="Visualization" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Feature Model Verification (Yices)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Model Checker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.34471804" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18584071" sideWeight="0.5315024" order="16" side_tool="true" content_ui="tabs" />
-      <window_info id="Decision Table Verification (Yices)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="26" side_tool="false" content_ui="tabs" />
-      <window_info id="Verification (CBMC)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.6463512" order="20" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24041298" sideWeight="0.5315024" order="21" side_tool="true" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24798061" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="mbeddr Visualization" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28761062" sideWeight="0.50326264" order="22" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.60921365" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Replacement" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="28" side_tool="false" content_ui="tabs" />
-      <window_info id="Outline" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="RefactoringView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3259587" sideWeight="0.49676898" order="23" side_tool="false" content_ui="tabs" />
-      <window_info id="Supertypes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="mbeddr TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="25" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Classpath Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="27" side_tool="false" content_ui="tabs" />
-      <window_info id="Cell Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="29" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="UsagesViewTool">
     <version id="0.9997" />
@@ -941,7 +1044,7 @@
             <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
             <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
               <node>
-                <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="3348893923579330409" />
+                <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715746074908" />
               </node>
             </holder>
           </query>
@@ -977,18 +1080,18 @@
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SyncBuilder" info="" excluded="false" expanded="true" isresult="false" results_section="false">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="true" isresult="false" results_section="false">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2852056939580287594" />
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildStartSyncFunction(gencontext,int,node&amp;lt;Function&amp;gt;):node&amp;lt;Function&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SyncBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="false">
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="false">
                                         <role name="target" />
                                         <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="3348893923579330409" />
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715746074908" />
                                         </node>
                                       </data>
                                       <children />
@@ -1019,27 +1122,141 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="true" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="true" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="replaceSyncDeclarations" info="" excluded="false" expanded="true" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="true" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="3348893923579063299" />
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SyncBuilder.buildStartSyncFunction(gencontext,int,node&amp;lt;Function&amp;gt;):node&amp;lt;Function&amp;gt;" info="role: &lt;i&gt;rValue&lt;/i&gt;; in: &lt;i&gt;=&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                        <role name="target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
                                         <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="4335879941154127923" />
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
                                         </node>
                                       </data>
-                                      <children />
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754804816" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754818060" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildGlobalMutexCallsForModule(node&amp;lt;ImplementationModule&amp;gt;):nlist&amp;lt;ExpressionStatement&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715700339276" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888960" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888964" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715752673932" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754853665" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
                                     </child>
                                   </children>
                                 </child>
@@ -1060,27 +1277,141 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="replaceSyncDeclarations" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="3348893923579063299" />
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SyncBuilder.buildStartSyncFunction(gencontext,int,node&amp;lt;Function&amp;gt;):node&amp;lt;Function&amp;gt;" info="role: &lt;i&gt;rValue&lt;/i&gt;; in: &lt;i&gt;=&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                        <role name="target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
                                         <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="4335879941154127923" />
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
                                         </node>
                                       </data>
-                                      <children />
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754804816" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754818060" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildGlobalMutexCallsForModule(node&amp;lt;ImplementationModule&amp;gt;):nlist&amp;lt;ExpressionStatement&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715700339276" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888960" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888964" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715752673932" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754853665" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
                                     </child>
                                   </children>
                                 </child>
@@ -1101,27 +1432,141 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="replaceSyncDeclarations" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="3348893923579063299" />
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SyncBuilder.buildStartSyncFunction(gencontext,int,node&amp;lt;Function&amp;gt;):node&amp;lt;Function&amp;gt;" info="role: &lt;i&gt;rValue&lt;/i&gt;; in: &lt;i&gt;=&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                        <role name="target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
                                         <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="4335879941154127923" />
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
                                         </node>
                                       </data>
-                                      <children />
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754804816" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754818060" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildGlobalMutexCallsForModule(node&amp;lt;ImplementationModule&amp;gt;):nlist&amp;lt;ExpressionStatement&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715700339276" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888960" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754888964" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
+                                    </child>
+                                  </children>
+                                </child>
+                              </children>
+                            </child>
+                            <child>
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                <role name="model" />
+                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                              </data>
+                              <children>
+                                <child>
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="SharedBuilder" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                    <role name="root" />
+                                    <node>
+                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="4335879941181356877" />
+                                    </node>
+                                  </data>
+                                  <children>
+                                    <child>
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildLocalMutexCallsForFunction(node&amp;lt;Function&amp;gt;):void" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;SharedBuilder&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                        <role name="root to target" />
+                                        <node>
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715744869280" />
+                                        </node>
+                                      </data>
+                                      <children>
+                                        <child>
+                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="mutexCalls" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
+                                            <role name="root to target" />
+                                            <node>
+                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715752673932" />
+                                            </node>
+                                          </data>
+                                          <children>
+                                            <child>
+                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="buildMutexCallsForVariable(node&amp;lt;Expression&amp;gt;,node&amp;lt;IVariableDeclaration&amp;gt;):Pair&amp;lt;node&amp;lt;ExpressionStatement&amp;gt;,node&amp;lt;ExpressionStatement&amp;gt;&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;mutexCalls&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                                <role name="target" />
+                                                <node>
+                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="2098891715754853665" />
+                                                </node>
+                                              </data>
+                                              <children />
+                                            </child>
+                                          </children>
+                                        </child>
+                                      </children>
                                     </child>
                                   </children>
                                 </child>
@@ -1159,7 +1604,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="3 translation errors fixed" />
     <MESSAGE value="task init simplifications" />
     <MESSAGE value="generator: future result improved&#10;" />
     <MESSAGE value="fixed some errors; added quite complicated (due to arbitrary precision arithmetic) pi example" />
@@ -1184,658 +1628,10 @@
     <MESSAGE value="stuff" />
     <MESSAGE value="code: added simple test code to check for errors =&gt; fixed various errors" />
     <MESSAGE value="code: simplified (and fixed) desugaring of named ressources" />
-    <option name="LAST_COMMIT_MESSAGE" value="code: simplified (and fixed) desugaring of named ressources" />
+    <MESSAGE value="code: added further simple code examples for syncs" />
+    <option name="LAST_COMMIT_MESSAGE" value="code: added further simple code examples for syncs" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="mps://node://basictests/basictests.tasks_short/tasks_short">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="120">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-243" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Custom_6qawm_c0" cellNumber="0" isInList="false">
-                  <node node_reference="r:e9f5a078-96f1-46e9-9501-ee2f9548852b(basictests.tasks_short)/3271375101694232478" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.tasks_short/BuildConfiguration (b.tasks_short)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="187" />
-                <property name="caretXRelative" value="88" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:e9f5a078-96f1-46e9-9501-ee2f9548852b(basictests.tasks_short)/3271375101694104370" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.tasks_shorter/tasks_shorter">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="120">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-235" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Custom_6qawm_c0" cellNumber="0" isInList="false">
-                  <node node_reference="r:aad3bda7-a98b-4d1b-b8d6-b5d0d1e0645e(basictests.tasks_shorter)/3271375101694280197" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.tasks_shorter/TypeSizeConfiguration (b.tasks_shorter)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="35" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:aad3bda7-a98b-4d1b-b8d6-b5d0d1e0645e(basictests.tasks_shorter)/3271375101694280100" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.tasks_shorter/BuildConfiguration (b.tasks_shorter)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="203" />
-                <property name="caretXRelative" value="104" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:aad3bda7-a98b-4d1b-b8d6-b5d0d1e0645e(basictests.tasks_shorter)/3271375101694280098" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.tasks/tasks">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="209">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="47" />
-                <property name="caretXRelative" value="16" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:5be64868-9e55-4edb-aba2-f9baed1b1dcf(basictests.tasks)/3271375101694296831" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types/BuildConfiguration (b.shared_types)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="195" />
-                <property name="selectionEnd" value="12" />
-                <property name="caretXRelative" value="96" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:b616ea1e-5394-48fd-a4bc-f2c9dbc79c89(basictests.shared_types)/3271375101694360481" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_global/BuildConfiguration (b.shared_types_global)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="251" />
-                <property name="selectionEnd" value="19" />
-                <property name="caretXRelative" value="152" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:9cc09d1f-ddb8-4843-ab0a-b156d331152e(basictests.shared_types_global)/3271375101694395085" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_complex/BuildConfiguration (b.shared_types_complex)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="259" />
-                <property name="selectionEnd" value="20" />
-                <property name="caretXRelative" value="160" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:476ed568-0c6a-4db3-b8df-57e1b2d42eee(basictests.shared_types_complex)/3271375101694432797" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_destroy/shared_types_destroy">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="1382">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="319" />
-                <property name="caretXRelative" value="48" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_escapedValue_word4" cellNumber="0" isInList="false">
-                  <node node_reference="r:fa6179a3-4196-4c8f-8148-a05ab7409d13(basictests.shared_types_destroy)/3271375101723003658" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_destroy/BuildConfiguration (b.shared_types_destroy)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="259" />
-                <property name="selectionEnd" value="20" />
-                <property name="caretXRelative" value="160" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:fa6179a3-4196-4c8f-8148-a05ab7409d13(basictests.shared_types_destroy)/3271375101703177929" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SharedBuilder">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="10" viewPositionY="15441">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-31" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_359zr8_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2098891715743994505" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3735204333730969487" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/5512582143363057676" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3735204333727544913" />
-              </foldedElement>
-            </folded>
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="15" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellNumber="0" isInList="false">
-                  <node node_reference="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3227138667937815917" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs/TasksAndSyncs.structure/SharedType">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="55" />
-                <property name="caretXRelative" value="8" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_eb7h0d_c4a" cellNumber="0" isInList="false">
-                  <node node_reference="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3271375101704739077" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3271375101704733483" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types/shared_types">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="119" />
-                <property name="caretXRelative" value="32" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                  <node node_reference="r:b616ea1e-5394-48fd-a4bc-f2c9dbc79c89(basictests.shared_types)/3271375101705043603" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/renameShadowingSharedVariables">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="543" />
-                <property name="caretXRelative" value="32" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/3271375101706787232" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Analyzer">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="26">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-139" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_x5m1a6_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3271375101706593375" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://OriginalExamples/OriginalExamples.nosharedness/first">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="91" />
-                <property name="caretXRelative" value="8" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:16012a7d-feb4-451f-acb3-ce59d159c0b8(OriginalExamples.nosharedness)/3271375101709211626" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.modules.gen#1758019824472882132/com.mbeddr.core.modules.gen.generator.template.main@generator/map_Function2Prototype">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-43" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_fogur5_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)/7892328519581695240" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.modules.gen#1758019824472882132/com.mbeddr.core.modules.gen.generator.template.main@generator/map_ImplementationModule_C">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-431" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_nnob7w_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)/7863679314024242177" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-15" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_nnob7w_a_0" cellNumber="0" isInList="false">
-                  <node node_reference="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)/7863679314024242177" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.modules/com.mbeddr.core.modules.structure/Closure">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="71" />
-                <property name="caretXRelative" value="8" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_eb7h0d_c4a" cellNumber="0" isInList="false">
-                  <node node_reference="r:7b158038-abbe-4e11-b171-d5a959b4e91a(com.mbeddr.core.modules.typesystem)/4526266397512344927" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:7b158038-abbe-4e11-b171-d5a959b4e91a(com.mbeddr.core.modules.typesystem)/8257817273847023675" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_global/shared_types_global">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="127" />
-                <property name="caretXRelative" value="56" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                  <node node_reference="r:9cc09d1f-ddb8-4843-ab0a-b156d331152e(basictests.shared_types_global)/3271375101704880076" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://OriginalExamples/OriginalExamples.syncStuff/syncStuff">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="175" />
-                <property name="caretXRelative" value="40" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                  <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/3271375101723757466" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://basictests/basictests.shared_types_lift/shared_types_lift">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -2004,36 +1800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://basictests/basictests.syncs_no_ressources/BuildConfiguration (b.syncs_no_ressources)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="selectionStart" value="0" />
-                <property name="hasNonTrivialSelection" value="true" />
-                <property name="caretX" value="243" />
-                <property name="selectionEnd" value="18" />
-                <property name="caretXRelative" value="144" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:af37c2c6-8cc9-4e06-9995-c1b5414ea56a(basictests.syncs_no_resources)/3227138667935253723" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://basictests/basictests.syncs_no_resources/syncs_no_resources">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -2046,34 +1812,6 @@
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="Constant_6a0nmk_a1a" cellNumber="0" isInList="false">
                   <node node_reference="r:af37c2c6-8cc9-4e06-9995-c1b5414ea56a(basictests.syncs_no_resources)/3227138667937506780" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/importSharedDeclarations">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="541">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="263" />
-                <property name="caretXRelative" value="120" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/2098891715755463029" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -2633,18 +2371,729 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://basictests@transient56/basictests.syncs_stop@4_1/syncs_stop">
+    <entry file="mps://node://OriginalExamples/OriginalExamples.pi_parallel_no_sync/pi">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="397">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="35" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:47d30453-99a3-4282-9c0a-cd0ec711784b(OriginalExamples.pi_parallel_no_sync)/7341014709856461060" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_serial/BuildConfiguration (p.pi_serial)">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
           <memento viewPositionX="0" viewPositionY="0">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="91" />
-                <property name="caretXRelative" value="0" />
+                <property name="caretX" value="63" />
+                <property name="caretXRelative" value="16" />
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:9dc19994-3e29-4226-bda6-ac2cdbec2742(basictests.syncs_stop@4_1)/3227138667949890266" />
+                  <node node_reference="r:0bd964c1-3b2c-4cf8-8213-75ffc561224f(pi.pi_serial)/8001979070698676302" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_parallel_sync/BuildConfiguration (p.pi_parallel_sync)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="79" />
+                <property name="caretXRelative" value="64" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_h9lqgi_l0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0d071503-3c5c-48c2-a6ea-351ca3416ae4(pi.pi_parallel_sync)/8001979070741264910" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="15" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellNumber="0" isInList="false">
+                  <node node_reference="r:0d071503-3c5c-48c2-a6ea-351ca3416ae4(pi.pi_parallel_sync)/8001979070741264910" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_parallel_sync/queue">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="35" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:0d071503-3c5c-48c2-a6ea-351ca3416ae4(pi.pi_parallel_sync)/8001979070700644525" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_serial/pi">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="91">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="195" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:0bd964c1-3b2c-4cf8-8213-75ffc561224f(pi.pi_serial)/8001979070700598874" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_parallel_no_sync/BuildConfiguration (p.pi_parallel_no_sync)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_h9lqgi_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:72acb9d9-2a97-4fa7-8ec7-aa3ede187094(pi.pi_parallel_no_sync)/7341014709856383141" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="15" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellNumber="0" isInList="false">
+                  <node node_reference="r:72acb9d9-2a97-4fa7-8ec7-aa3ede187094(pi.pi_parallel_no_sync)/7341014709856383141" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_parallel_no_sync/pi">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="251" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:72acb9d9-2a97-4fa7-8ec7-aa3ede187094(pi.pi_parallel_no_sync)/8306718430232762772" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/pi.pi_parallel_sync/pi">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="540">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="481" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_u338ov_d0" cellNumber="0" isInList="false">
+                  <node node_reference="r:0d071503-3c5c-48c2-a6ea-351ca3416ae4(pi.pi_parallel_sync)/7341014709907556930" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://com.mbeddr.core.modules.gen#1758019824472882132/com.mbeddr.core.modules.gen.generator.template.main@generator/importReferencedElements">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_qlhzuh_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)/55677248263557371" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://OriginalExamples/OriginalExamples.simplesync/simplesync">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="107" />
+                <property name="caretXRelative" value="48" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:bc508df2-1dfa-4007-a8a9-6ccc337e915f(OriginalExamples.simplesync)/6244125718656389414" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_serial/quicksort">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="95" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:5a5a8f06-f4e1-4a84-b9dd-2480e4af1b6e(quicksort_generic.quicksort_serial)/5474646598322095533" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_serial/BuildConfiguration (q.quicksort_serial)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="95" />
+                <property name="caretXRelative" value="48" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:5a5a8f06-f4e1-4a84-b9dd-2480e4af1b6e(quicksort_generic.quicksort_serial)/4515964250002923360" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_serial/stdlib">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="523" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="ERDC_property_path" cellNumber="0" isInList="false">
+                  <node node_reference="r:5a5a8f06-f4e1-4a84-b9dd-2480e4af1b6e(quicksort_generic.quicksort_serial)/8306718430232924460" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_serial/stdio">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="15" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
+                  <node node_reference="r:5a5a8f06-f4e1-4a84-b9dd-2480e4af1b6e(quicksort_generic.quicksort_serial)/4515964249990614422" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_parallel_nosync/BuildConfiguration (q.quicksort_parallel_nosync)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="163" />
+                <property name="caretXRelative" value="64" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:dd620b5d-5e75-4571-91c3-dbd8bc5221c6(quicksort_generic.quicksort_parallel_nosync)/5474646598321667233" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_parallel_nosync/stdio">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_f8dgei_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:dd620b5d-5e75-4571-91c3-dbd8bc5221c6(quicksort_generic.quicksort_parallel_nosync)/8306718430232922058" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_parallel_nosync/quicksort">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="95" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:dd620b5d-5e75-4571-91c3-dbd8bc5221c6(quicksort_generic.quicksort_parallel_nosync)/5474646598322095533" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_parallel_sync/quicksort">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="1041">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="311" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:214adcea-3956-4dbc-a222-7b4976891366(quicksort_generic.quicksort_parallel_sync)/3601726794291734232" />
+                </cellInfo>
+              </stackElement>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.NodeRangeSelection">
+                <property name="role" value="statements" />
+                <property name="modelId" value="r:214adcea-3956-4dbc-a222-7b4976891366(quicksort_generic.quicksort_parallel_sync)" />
+                <property name="firstNodeId" value="3601726794291734232" />
+                <property name="parentNodeId" value="4433865063612903325" />
+                <property name="lastNodeId" value="3601726794291734232" />
+              </stackElement>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.NodeRangeSelection">
+                <property name="role" value="statements" />
+                <property name="modelId" value="r:214adcea-3956-4dbc-a222-7b4976891366(quicksort_generic.quicksort_parallel_sync)" />
+                <property name="firstNodeId" value="3601726794291734232" />
+                <property name="parentNodeId" value="4433865063612903325" />
+                <property name="lastNodeId" value="3601726794291599543" />
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/philosophers.philosophers/stdio">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_f8dgei_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/8306718430232922058" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/philosophers.philosophers/philosophers">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="251" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/4260631361688581169" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/importSharedDeclarations">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="464">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="255" />
+                <property name="caretXRelative" value="112" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/2098891715755463029" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SharedBuilder">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="16" viewPositionY="15904">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="765" />
+                <property name="caretXRelative" value="64" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_vgxjtu_a0" cellNumber="0" isInList="false">
+                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4260631361691950593" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/quicksort_generic.quicksort_parallel_sync/stdlib">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="35" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:214adcea-3956-4dbc-a222-7b4976891366(quicksort_generic.quicksort_parallel_sync)/8306718430232924459" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/philosophers.philosophers/stdlib">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-15" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_f8dgei_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/8306718430232924459" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="15" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellNumber="0" isInList="false">
+                  <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/8306718430232924459" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://scenarios/philosophers.philosophers/BuildConfiguration (p.philosophers)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="95" />
+                <property name="caretXRelative" value="48" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:84a66709-3445-4968-828d-05c50de4fad6(philosophers.philosophers)/4260631361692959217" />
                 </cellInfo>
               </stackElement>
             </selectionStack>

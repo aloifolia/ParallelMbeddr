@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="pi.pi_serial.Makefile" file="Makefile" />
+  <dependency className="pi.pi_serial.TypeSizeConfiguration (p.pi_serial)" file="TypeSizeConfiguration (p.pi_serial)" />
+  <dependency className="pi.pi_serial.pi" file="pi.c" />
+  <dependency className="pi.pi_serial.pi" file="pi.h" />
+</dependenciesRoot>
+

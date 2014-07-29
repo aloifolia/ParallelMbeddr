@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="quicksort_generic.quicksort_serial.Makefile" file="Makefile" />
+  <dependency className="quicksort_generic.quicksort_serial.TypeSizeConfiguration (q.quicksort_serial)" file="TypeSizeConfiguration (q.quicksort_serial)" />
+  <dependency className="quicksort_generic.quicksort_serial.quicksort" file="quicksort.c" />
+  <dependency className="quicksort_generic.quicksort_serial.quicksort" file="quicksort.h" />
+</dependenciesRoot>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="philosophers.philosophers.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="philosophers.philosophers.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="philosophers.philosophers.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="philosophers.philosophers.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="philosophers.philosophers.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="philosophers.philosophers.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="philosophers.philosophers.Makefile" file="Makefile" />
+  <dependency className="philosophers.philosophers.TypeSizeConfiguration (p.philosophers)" file="TypeSizeConfiguration (p.philosophers)" />
+  <dependency className="philosophers.philosophers.philosophers" file="philosophers.c" />
+  <dependency className="philosophers.philosophers.philosophers" file="philosophers.h" />
+  <dependency className="philosophers.philosophers.philosophers_SharedTypes_0" file="philosophers_SharedTypes_0.c" />
+  <dependency className="philosophers.philosophers.philosophers_SharedTypes_0" file="philosophers_SharedTypes_0.h" />
+</dependenciesRoot>
+

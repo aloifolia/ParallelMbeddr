@@ -380,12 +380,5 @@
       <property name="name" nameId="tpck.1169194664001" value="empty_1406298002982_5" />
     </node>
   </root>
-  <root type="vs0r.AssessmentContainer" typeId="vs0r.865293814733114043" id="4666093872055017964" nodeInfo="ng">
-    <property name="name" nameId="tpck.1169194664001" value="sdf" />
-    <node role="assessments" roleId="vs0r.865293814733114045" type="vs0r.Assessment" typeId="vs0r.865293814733114044" id="4666093872055017965" nodeInfo="ng">
-      <property name="name" nameId="tpck.1169194664001" value="ssdf" />
-      <node role="query" roleId="vs0r.865293814733115677" type="vs0r.CheckHashAssessmentQuery" typeId="vs0r.806361095877923648" id="4666093872055018096" nodeInfo="ng" />
-    </node>
-  </root>
 </model>
 

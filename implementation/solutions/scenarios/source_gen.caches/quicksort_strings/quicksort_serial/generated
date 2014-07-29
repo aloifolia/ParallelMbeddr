@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="-eq5miuwbnjc4mpzvh5rkmkii12brc6l">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
+  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
+  <common hash="-1qyyc9apf638xirvymeg30bxii9af1d" dependsOnNodes="true">
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (q.quicksort_serial)" />
+    <file name="quicksort.c" />
+    <file name="quicksort.h" />
+    <file name="stdio" />
+    <file name="stdlib" />
+  </common>
+  <source id="8306718430232919886" name="quicksort" hash="c8ftqtbeglyhw12vu9a0ap894w3erjp" />
+  <source id="8306718430232920021" name="TypeSizeConfiguration (q.quicksort_serial)" hash="-63ofgylhf2gkvdfftbddc88wxuxumpm" />
+  <source id="8306718430232920596" name="BuildConfiguration (q.quicksort_serial)" hash="-416ozd0f0i6ohxn1z60e7guj37pa7ko" />
+  <source id="8306718430232922058" name="stdio" hash="-cqojj8fs7uzcvx49ta11qtbu0p6upv9" />
+  <source id="8306718430232924459" name="stdlib" hash="-6obaqa99f7xypr732czk946eh7x1j0m" />
+</dependencies>
+

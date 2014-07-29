@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/GenerationExamples/GenerationExamples.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/TasksTest/TasksTest.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/basictests/basictests.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/scenarios/scenarios.msd" folder="" />
     </projectModules>
   </component>
 </project>

@@ -1790,6 +1790,11 @@ public class SharedBuilder {
           SNodeOperations.insertNextSiblingChild(ListSequence.fromList(SNodeOperations.getNextSiblings(declaration, false)).last(), mutexCalls.second);
         }
       } else if (SNodeOperations.isInstanceOf(declaration, "com.mbeddr.core.modules.structure.IArgumentLike")) {
+        // for array arguments nothing needs to be done as they are copied by address 
+        if (SNodeOperations.isInstanceOf(resolveType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), declaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.expressions.structure.Type")), "com.mbeddr.core.pointers.structure.ArrayType")) {
+          continue;
+        }
+
         Pair<SNode, SNode> mutexCalls = buildMutexCallsForVariable(new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             SNode node_2098891715754818062 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1918,7 +1923,7 @@ public class SharedBuilder {
 
 
   public Pair<SNode, SNode> buildMutexCallsForVariable(final SNode varRef, SNode declaration) {
-    SNode type = SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), declaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.expressions.structure.Type");
+    SNode type = resolveType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), declaration, "virtual_getType_704069370490430475", new Object[]{})), "com.mbeddr.core.expressions.structure.Type"));
     if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.PointerType")) {
       return null;
     }

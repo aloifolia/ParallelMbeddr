@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.Makefile" file="Makefile" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.TypeSizeConfiguration (q.quicksort_parallel_sync)" file="TypeSizeConfiguration (q.quicksort_parallel_sync)" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.quicksort" file="quicksort.c" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.quicksort" file="quicksort.h" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.quicksort_SharedTypes_0" file="quicksort_SharedTypes_0.c" />
+  <dependency className="quicksort_generic.quicksort_parallel_sync.quicksort_SharedTypes_0" file="quicksort_SharedTypes_0.h" />
+</dependenciesRoot>
+
