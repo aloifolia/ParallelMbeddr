@@ -205,14 +205,14 @@
       <property name="name" nameId="tpck.1169194664001" value="BLOCKSIZE" />
       <node role="value" roleId="x27k.3376775282622233992" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="8001979070700598874" nodeInfo="ng">
         <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-        <property name="value" nameId="mj1l.2212975673976043696" value="100000000" />
+        <property name="value" nameId="mj1l.2212975673976043696" value="30000000" />
       </node>
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.GlobalConstantDeclaration" typeId="x27k.3788988821851860886" id="8001979070725337628" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="BLOCKCOUNT" />
       <node role="value" roleId="x27k.3376775282622233992" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="8001979070725337629" nodeInfo="ng">
         <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-        <property name="value" nameId="mj1l.2212975673976043696" value="6" />
+        <property name="value" nameId="mj1l.2212975673976043696" value="4" />
       </node>
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.GlobalConstantDeclaration" typeId="x27k.3788988821851860886" id="8001979070700482072" nodeInfo="ng">

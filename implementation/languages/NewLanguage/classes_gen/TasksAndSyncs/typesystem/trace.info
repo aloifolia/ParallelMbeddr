@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <debugInfo>
-  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="134" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
+  <unitInfo fileName="TypesystemDescriptor.java" startLine="10" startPosition="0" endLine="138" endPosition="0" unitName="TasksAndSyncs.typesystem.TypesystemDescriptor" />
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/1304213873205167535">
     <nodeInfo nodeId="482600553438622806" fileName="typeof_Task_InferenceRule.java" startLine="22" startPosition="5" endLine="23" endPosition="211" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="482600553438926433" fileName="typeof_Task_InferenceRule.java" startLine="25" startPosition="27" endLine="26" endPosition="102" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -743,86 +743,86 @@
     <unitInfo nodeId="3271375101704733483" fileName="checkSharedTypeForVoid_NonTypesystemRule.java" startLine="17" startPosition="0" endLine="45" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedTypeForVoid_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3570654511858805942">
-    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="23" startPosition="7" endLine="24" endPosition="330" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="28" startPosition="15" endLine="29" endPosition="217" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="483189195560708329" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="37" endLine="32" endPosition="92" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
-    <nodeInfo nodeId="3570654511859825463" fileName="typeof_SharedSet_InferenceRule.java" startLine="32" startPosition="92" endLine="33" endPosition="200" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511859525175" fileName="typeof_SharedSet_InferenceRule.java" startLine="34" startPosition="21" endLine="35" endPosition="67" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511859525175" fileName="typeof_SharedSet_InferenceRule.java" startLine="35" startPosition="67" endLine="36" endPosition="425" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511859525175" fileName="typeof_SharedSet_InferenceRule.java" startLine="36" startPosition="425" endLine="37" endPosition="179" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="47" startPosition="5" endLine="48" endPosition="51" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="48" startPosition="51" endLine="49" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="49" startPosition="190" endLine="50" endPosition="319" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="54" startPosition="46" endLine="55" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="59" startPosition="5" endLine="60" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="60" startPosition="130" endLine="61" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="65" startPosition="30" endLine="66" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511859819956" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="64" endLine="70" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_SharedSet_InferenceRule#()V" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="54" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="65" startPosition="0" endLine="68" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
-    <nodeInfo nodeId="3570654511859819956" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="0" endLine="72" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="trim_go4jj6_a0a0c0a0a0a0a0b#(Ljava/lang/String;)Ljava/lang/String;" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="68" endLine="62" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="3570654511859525175" fileName="typeof_SharedSet_InferenceRule.java" startLine="33" startPosition="200" endLine="38" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="46" startPosition="5" endLine="51" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="0" endLine="64" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
-    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="0" endLine="40" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
-    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="29" startPosition="217" endLine="40" endPosition="124" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="27" startPosition="138" endLine="41" endPosition="15" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="3570654511859580586" fileName="typeof_SharedSet_InferenceRule.java" startLine="26" startPosition="29" endLine="42" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="26" startPosition="0" endLine="44" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
-    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="24" startPosition="330" endLine="44" endPosition="116" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
-    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="22" startPosition="139" endLine="45" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
-    <nodeInfo nodeId="3570654511859316605" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="122" endLine="46" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="0" endLine="53" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="18" startPosition="43" endLine="18" endPosition="43" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="54" startPosition="46" endLine="55" endPosition="47" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="65" startPosition="30" endLine="66" endPosition="17" />
-    <scopeInfo nodeId="3570654511859819956" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="64" endLine="70" endPosition="45" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="18" startPosition="0" endLine="20" endPosition="0" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="59" startPosition="5" endLine="61" endPosition="45">
+    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="22" startPosition="7" endLine="23" endPosition="330" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361699526600" fileName="typeof_SharedSet_InferenceRule.java" startLine="25" startPosition="29" endLine="26" endPosition="84" conceptFqName="jetbrains.mps.baseLanguage.structure.SingleLineComment" />
+    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="27" startPosition="13" endLine="28" endPosition="215" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361699535459" fileName="typeof_SharedSet_InferenceRule.java" startLine="32" startPosition="21" endLine="33" endPosition="67" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361699535459" fileName="typeof_SharedSet_InferenceRule.java" startLine="33" startPosition="67" endLine="34" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361699535459" fileName="typeof_SharedSet_InferenceRule.java" startLine="34" startPosition="206" endLine="35" endPosition="321" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="4260631361702989807" fileName="typeof_SharedSet_InferenceRule.java" startLine="38" startPosition="21" endLine="39" endPosition="67" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361702989807" fileName="typeof_SharedSet_InferenceRule.java" startLine="39" startPosition="67" endLine="40" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361702989807" fileName="typeof_SharedSet_InferenceRule.java" startLine="40" startPosition="206" endLine="41" endPosition="438" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="51" startPosition="5" endLine="52" endPosition="51" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="52" startPosition="51" endLine="53" endPosition="190" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="53" startPosition="190" endLine="54" endPosition="319" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="46" endLine="59" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="63" startPosition="5" endLine="64" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="64" startPosition="130" endLine="65" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="30" endLine="70" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="typeof_SharedSet_InferenceRule#()V" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="0" endLine="61" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="0" endLine="72" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="62" startPosition="68" endLine="66" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4260631361699535459" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="144" endLine="36" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4260631361702989807" fileName="typeof_SharedSet_InferenceRule.java" startLine="37" startPosition="403" endLine="42" endPosition="21" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="50" startPosition="5" endLine="55" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="62" startPosition="0" endLine="68" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="4260631361699508852" fileName="typeof_SharedSet_InferenceRule.java" startLine="30" startPosition="35" endLine="43" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="30" startPosition="0" endLine="45" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="28" startPosition="215" endLine="45" endPosition="122" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="26" startPosition="84" endLine="46" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="25" startPosition="0" endLine="48" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="run#()V" />
+    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="23" startPosition="330" endLine="48" endPosition="116" conceptFqName="jetbrains.mps.baseLanguage.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="139" endLine="49" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="3570654511859316605" fileName="typeof_SharedSet_InferenceRule.java" startLine="20" startPosition="122" endLine="50" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="20" startPosition="0" endLine="57" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="17" startPosition="43" endLine="17" endPosition="43" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="46" endLine="59" endPosition="47" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="30" endLine="70" endPosition="17" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="17" startPosition="0" endLine="19" endPosition="0" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="63" startPosition="5" endLine="65" endPosition="45">
       <varInfo nodeId="3570654511858805942" varName="b" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511859525175" fileName="typeof_SharedSet_InferenceRule.java" startLine="34" startPosition="21" endLine="37" endPosition="179">
-      <varInfo nodeId="3570654511859525175" varName="_info_12389875345" />
-      <varInfo nodeId="3570654511859525175" varName="_nodeToCheck_1029348928467" />
+    <scopeInfo nodeId="4260631361699535459" fileName="typeof_SharedSet_InferenceRule.java" startLine="32" startPosition="21" endLine="35" endPosition="321">
+      <varInfo nodeId="4260631361699535459" varName="_info_12389875345" />
+      <varInfo nodeId="4260631361699535459" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="47" startPosition="5" endLine="50" endPosition="319">
+    <scopeInfo nodeId="4260631361702989807" fileName="typeof_SharedSet_InferenceRule.java" startLine="38" startPosition="21" endLine="41" endPosition="438">
+      <varInfo nodeId="4260631361702989807" varName="_info_12389875345" />
+      <varInfo nodeId="4260631361702989807" varName="_nodeToCheck_1029348928467" />
+    </scopeInfo>
+    <scopeInfo nodeId="3570654511858807004" fileName="typeof_SharedSet_InferenceRule.java" startLine="51" startPosition="5" endLine="54" endPosition="319">
       <varInfo nodeId="3570654511858807004" varName="_info_12389875345" />
       <varInfo nodeId="3570654511858807004" varName="_nodeToCheck_1029348928467" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="54" startPosition="0" endLine="57" endPosition="0" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="65" startPosition="0" endLine="68" endPosition="0" />
-    <scopeInfo nodeId="3570654511859819956" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="0" endLine="72" endPosition="0">
-      <varInfo nodeId="3570654511859819956" varName="str" />
-    </scopeInfo>
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="68" endLine="62" endPosition="5" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="0" endLine="64" endPosition="0">
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="58" startPosition="0" endLine="61" endPosition="0" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="69" startPosition="0" endLine="72" endPosition="0" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="62" startPosition="68" endLine="66" endPosition="5" />
+    <scopeInfo nodeId="4260631361699508855" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="144" endLine="36" endPosition="21" />
+    <scopeInfo nodeId="4260631361699511331" fileName="typeof_SharedSet_InferenceRule.java" startLine="37" startPosition="403" endLine="42" endPosition="21" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="62" startPosition="0" endLine="68" endPosition="0">
       <varInfo nodeId="3570654511858805942" varName="argument" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511859521194" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="37" endLine="38" endPosition="21">
-      <varInfo nodeId="3570654511859825466" varName="sharedBaseType" />
-    </scopeInfo>
-    <scopeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="31" startPosition="0" endLine="40" endPosition="0" />
-    <scopeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="28" startPosition="15" endLine="40" endPosition="124">
+    <scopeInfo nodeId="3570654511859521194" fileName="typeof_SharedSet_InferenceRule.java" startLine="30" startPosition="35" endLine="43" endPosition="19" />
+    <scopeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="30" startPosition="0" endLine="45" endPosition="0" />
+    <scopeInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="27" startPosition="13" endLine="45" endPosition="122">
       <varInfo nodeId="3570654511859521192" varName="valueType" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511859580589" fileName="typeof_SharedSet_InferenceRule.java" startLine="27" startPosition="138" endLine="41" endPosition="15" />
-    <scopeInfo nodeId="3570654511859322100" fileName="typeof_SharedSet_InferenceRule.java" startLine="26" startPosition="29" endLine="42" endPosition="13" />
-    <scopeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="26" startPosition="0" endLine="44" endPosition="0" />
-    <scopeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="23" startPosition="7" endLine="44" endPosition="116">
+    <scopeInfo nodeId="3570654511859322100" fileName="typeof_SharedSet_InferenceRule.java" startLine="25" startPosition="29" endLine="46" endPosition="13" />
+    <scopeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="25" startPosition="0" endLine="48" endPosition="0" />
+    <scopeInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="22" startPosition="7" endLine="48" endPosition="116">
       <varInfo nodeId="3570654511859322099" varName="expressionType" />
     </scopeInfo>
-    <scopeInfo nodeId="3570654511859316608" fileName="typeof_SharedSet_InferenceRule.java" startLine="22" startPosition="139" endLine="45" endPosition="7" />
-    <scopeInfo nodeId="3570654511858805943" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="122" endLine="51" endPosition="5" />
-    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="0" endLine="53" endPosition="0">
+    <scopeInfo nodeId="3570654511859316608" fileName="typeof_SharedSet_InferenceRule.java" startLine="21" startPosition="139" endLine="49" endPosition="7" />
+    <scopeInfo nodeId="3570654511858805943" fileName="typeof_SharedSet_InferenceRule.java" startLine="20" startPosition="122" endLine="55" endPosition="5" />
+    <scopeInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="20" startPosition="0" endLine="57" endPosition="0">
       <varInfo nodeId="3570654511858805942" varName="sharedSet" />
       <varInfo nodeId="3570654511858805942" varName="status" />
       <varInfo nodeId="3570654511858805942" varName="typeCheckingContext" />
     </scopeInfo>
-    <unitInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="30" startPosition="64" endLine="40" endPosition="17" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule$2" />
-    <unitInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="25" startPosition="61" endLine="44" endPosition="9" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule$1" />
-    <unitInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="17" startPosition="0" endLine="73" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule" />
+    <unitInfo nodeId="3570654511859521192" fileName="typeof_SharedSet_InferenceRule.java" startLine="29" startPosition="62" endLine="45" endPosition="15" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule$2" />
+    <unitInfo nodeId="3570654511859322099" fileName="typeof_SharedSet_InferenceRule.java" startLine="24" startPosition="61" endLine="48" endPosition="9" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule$1" />
+    <unitInfo nodeId="3570654511858805942" fileName="typeof_SharedSet_InferenceRule.java" startLine="16" startPosition="0" endLine="73" endPosition="0" unitName="TasksAndSyncs.typesystem.typeof_SharedSet_InferenceRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/3735204333725438942">
     <nodeInfo nodeId="3735204333726480110" fileName="checkLocalVarRefForNamedRessource_NonTypesystemRule.java" startLine="24" startPosition="129" endLine="25" endPosition="108" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
@@ -885,6 +885,59 @@
     </scopeInfo>
     <unitInfo nodeId="3735204333725530183" fileName="checkLocalVarRefForNamedRessource_NonTypesystemRule.java" startLine="26" startPosition="169" endLine="30" endPosition="5" unitName="TasksAndSyncs.typesystem.checkLocalVarRefForNamedRessource_NonTypesystemRule$1" />
     <unitInfo nodeId="3735204333725438942" fileName="checkLocalVarRefForNamedRessource_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="60" endPosition="0" unitName="TasksAndSyncs.typesystem.checkLocalVarRefForNamedRessource_NonTypesystemRule" />
+  </root>
+  <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/4260631361698908943">
+    <nodeInfo nodeId="4260631361698918493" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="23" startPosition="122" endLine="24" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.Statement" />
+    <nodeInfo nodeId="4260631361698908945" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="24" startPosition="0" endLine="25" endPosition="232" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908958" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="27" startPosition="7" endLine="28" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908958" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="28" startPosition="60" endLine="29" endPosition="369" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908981" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="32" startPosition="7" endLine="33" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908981" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="33" startPosition="60" endLine="34" endPosition="369" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="39" startPosition="46" endLine="40" endPosition="47" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="44" startPosition="5" endLine="45" endPosition="130" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="45" startPosition="130" endLine="46" endPosition="45" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="50" startPosition="30" endLine="51" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="22" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="checkSharedSetForReceiverType_NonTypesystemRule#()V" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="getApplicableConceptFQName#()Ljava/lang/String;" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="50" startPosition="0" endLine="53" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="overrides#()Z" />
+    <nodeInfo nodeId="4260631361698908958" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="26" startPosition="294" endLine="30" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4260631361698908981" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="31" startPosition="633" endLine="35" endPosition="7" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="43" startPosition="68" endLine="47" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.BlockStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="43" startPosition="0" endLine="49" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="isApplicableAndPattern#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;" />
+    <nodeInfo nodeId="4260631361698908956" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="25" startPosition="232" endLine="36" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="38" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="applyRule#(Lorg/jetbrains/mps/openapi/model/SNode;Ljetbrains/mps/typesystem/inference/TypeCheckingContext;Ljetbrains/mps/lang/typesystem/runtime/IsApplicableStatus;)V" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="20" startPosition="60" endLine="20" endPosition="60" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="39" startPosition="46" endLine="40" endPosition="47" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="50" startPosition="30" endLine="51" endPosition="17" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="20" startPosition="0" endLine="22" endPosition="0" />
+    <scopeInfo nodeId="4260631361698908958" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="27" startPosition="7" endLine="29" endPosition="369">
+      <varInfo nodeId="4260631361698908958" varName="_reporter_2309309498" />
+      <varInfo nodeId="4260631361698908958" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="4260631361698908981" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="32" startPosition="7" endLine="34" endPosition="369">
+      <varInfo nodeId="4260631361698908981" varName="_reporter_2309309498" />
+      <varInfo nodeId="4260631361698908981" varName="errorTarget" />
+    </scopeInfo>
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="44" startPosition="5" endLine="46" endPosition="45">
+      <varInfo nodeId="4260631361698908943" varName="b" />
+    </scopeInfo>
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="39" startPosition="0" endLine="42" endPosition="0" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="50" startPosition="0" endLine="53" endPosition="0" />
+    <scopeInfo nodeId="4260631361698908957" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="26" startPosition="294" endLine="30" endPosition="7" />
+    <scopeInfo nodeId="4260631361698908980" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="31" startPosition="633" endLine="35" endPosition="7" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="43" startPosition="68" endLine="47" endPosition="5" />
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="43" startPosition="0" endLine="49" endPosition="0">
+      <varInfo nodeId="4260631361698908943" varName="argument" />
+    </scopeInfo>
+    <scopeInfo nodeId="4260631361698908944" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="23" startPosition="122" endLine="36" endPosition="5">
+      <varInfo nodeId="4260631361698908946" varName="expressionType" />
+    </scopeInfo>
+    <scopeInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="23" startPosition="0" endLine="38" endPosition="0">
+      <varInfo nodeId="4260631361698908943" varName="sharedSet" />
+      <varInfo nodeId="4260631361698908943" varName="status" />
+      <varInfo nodeId="4260631361698908943" varName="typeCheckingContext" />
+    </scopeInfo>
+    <unitInfo nodeId="4260631361698908943" fileName="checkSharedSetForReceiverType_NonTypesystemRule.java" startLine="19" startPosition="0" endLine="54" endPosition="0" unitName="TasksAndSyncs.typesystem.checkSharedSetForReceiverType_NonTypesystemRule" />
   </root>
   <root nodeRef="r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)/483189195558114215">
     <nodeInfo nodeId="483189195558179233" fileName="checkNamedRessourceForSharedPointerType_NonTypesystemRule.java" startLine="24" startPosition="7" endLine="25" endPosition="60" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
