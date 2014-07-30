@@ -39,7 +39,7 @@ static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32
 
 static void pi_reduce(uint32_t numberOfItems, GenericSharedDeclarations_SharedOf_long_double_0_t* result, queue_SharedTypes_0_SharedOf_Queue_0_t* resultQueue);
 
-static long double pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue);
+static long double pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue, uint32_t* mapCounter);
 
 static long double pi_calcPiItem(uint32_t index);
 
@@ -49,9 +49,9 @@ static void* pi_parFun_a0a1a1a0p0i(void* voidArgs);
 
 static void* pi_parFun_a0a22a8(void* voidArgs);
 
-static pi_MinMax_t pi_processPartialResults(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* partialResultQueues);
-
 static pi_MinMax_t pi_processPartialResult(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, GenericSharedDeclarations_SharedOf_boolean_0_t* isEmptyFlag);
+
+static pi_MinMax_t pi_processPartialResults(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* partialResultQueues);
 
 static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0b0b0a51a8(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* resultQueuePointer);
 
@@ -120,6 +120,8 @@ int32_t main(int32_t argc, char* argv[])
 
 static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32_0_t* counter, queue_SharedTypes_0_SharedOf_Queue_0_t* resultQueue, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultStore) 
 {
+  uint32_t mapCounter = 0;
+  
   pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t partialResultQueue;
   pi_SharedTypes_0_mutexInit_4(&partialResultQueue);
   pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueuePointer = &partialResultQueue;
@@ -148,22 +150,7 @@ static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32
     }
     GenericSyncDeclarations_stopSyncFor1Mutex(&counter->mutex);
     
-    while (true)
-    {
-      {
-        GenericSharedDeclarations_SharedOf_boolean_0_t* emptyFlag = &partialResultStore->value.isEmpty;
-        GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultStore->mutex, &emptyFlag->mutex);
-        {
-          if ( emptyFlag->value ) 
-          {
-            GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultStore->mutex, &emptyFlag->mutex);
-            break;
-          }
-        }
-        GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultStore->mutex, &emptyFlag->mutex);
-      }
-    }
-    queue_queueSafeAdd(resultQueue, pi_calcPiBlock(start, end, partialResultStore));
+    queue_queueSafeAdd(resultQueue, pi_calcPiBlock(start, end, partialResultStore, &mapCounter));
     {
       GenericSharedDeclarations_SharedOf_boolean_0_t* emptyFlag = &partialResultStore->value.isEmpty;
       GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultStore->mutex, &emptyFlag->mutex);
@@ -172,6 +159,8 @@ static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32
       }
       GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultStore->mutex, &emptyFlag->mutex);
     }
+    
+    ++mapCounter;
   }
   pi_SharedTypes_0_mutexDestroy_4(&partialResultQueue);
 }
@@ -191,11 +180,13 @@ static void pi_reduce(uint32_t numberOfItems, GenericSharedDeclarations_SharedOf
   GenericSyncDeclarations_stopSyncFor1Mutex(&result->mutex);
 }
 
-static long double pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue) 
+static long double pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue, uint32_t* mapCounter) 
 {
   long double result = 0;
   for ( uint32_t i = start; i < end; ++i )
   {
+    
+    
     {
       queue_SharedTypes_0_SharedOf_Queue_0_t* queue = &partialResultQueue->value.queue;
       GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultQueue->mutex, &queue->mutex);
@@ -213,14 +204,37 @@ static long double pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0
       }
       GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultQueue->mutex, &queue->mutex);
     }
-  }
-  {
-    GenericSharedDeclarations_SharedOf_boolean_0_t* emptyFlag = &partialResultQueue->value.isEmpty;
-    GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+    
+    *mapCounter += 1;
+    if ( *mapCounter == QUEUE_QUEUESIZE ) 
     {
-      emptyFlag->value = false;
+      {
+        GenericSharedDeclarations_SharedOf_boolean_0_t* emptyFlag = &partialResultQueue->value.isEmpty;
+        GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+        {
+          emptyFlag->value = false;
+        }
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+      }
+      *mapCounter = 0;
     }
-    GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+    while (true)
+    {
+      {
+        GenericSharedDeclarations_SharedOf_boolean_0_t* emptyFlag = &partialResultQueue->value.isEmpty;
+        GenericSyncDeclarations_startSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+        {
+          if ( emptyFlag->value ) 
+          {
+            GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+            break;
+          }
+        }
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&partialResultQueue->mutex, &emptyFlag->mutex);
+      }
+      struct timespec sleepingTime = (struct timespec){ .tv_nsec =PI_DELAY};
+      nanosleep(&sleepingTime,0);
+    }
   }
   return result;
 }
@@ -253,6 +267,47 @@ static void* pi_parFun_a0a22a8(void* voidArgs)
   pi_reduce(PI_BLOCKCOUNT, (args)->resultPointer, (args)->resultQueuePointer);
   free(voidArgs);
   return 0;
+}
+
+static pi_MinMax_t pi_processPartialResult(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, GenericSharedDeclarations_SharedOf_boolean_0_t* isEmptyFlag) 
+{
+  pi_MinMax_t result;
+  result.min = LDBL_MIN;
+  result.max = LDBL_MAX;
+  
+  /* the synchronization here is acutally not necessary since the corresponding mapper task will not
+proceed before the modification of isEmptyFlag below */
+  GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
+  {
+    for ( int32_t __i = 0; __i < PI_BLOCKSIZE; __i++ )
+    {
+      {
+        GenericSharedDeclarations_SharedOf_long_double_0_t* slotI = &queue->value.data[__i];
+        GenericSyncDeclarations_startSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
+        {
+          result.min = (result.min < slotI->value) ? (result.min) : (slotI->value);
+        }
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
+      }
+      {
+        GenericSharedDeclarations_SharedOf_long_double_0_t* slotI = &queue->value.data[__i];
+        GenericSyncDeclarations_startSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
+        {
+          result.max = (result.max < slotI->value) ? (result.max) : (slotI->value);
+        }
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
+      }
+    }
+  }
+  GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+  
+  GenericSyncDeclarations_startSyncFor1Mutex(&isEmptyFlag->mutex);
+  {
+    isEmptyFlag->value = true;
+  }
+  GenericSyncDeclarations_stopSyncFor1Mutex(&isEmptyFlag->mutex);
+  
+  return result;
 }
 
 static pi_MinMax_t pi_processPartialResults(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* partialResultQueues) 
@@ -329,39 +384,6 @@ static pi_MinMax_t pi_processPartialResults(pi_SharedTypes_0_SharedOf_ArrayOf_Sh
       result.max = (result.max < nextResult.max) ? (result.max) : (nextResult.max);
     }
   }
-}
-
-static pi_MinMax_t pi_processPartialResult(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, GenericSharedDeclarations_SharedOf_boolean_0_t* isEmptyFlag) 
-{
-  pi_MinMax_t result;
-  result.min = LDBL_MIN;
-  result.max = LDBL_MAX;
-  
-  GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
-  {
-    for ( int32_t __i = 0; __i < PI_BLOCKSIZE; __i++ )
-    {
-      {
-        GenericSharedDeclarations_SharedOf_long_double_0_t* slotI = &queue->value.data[__i];
-        GenericSyncDeclarations_startSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
-        {
-          result.min = (result.min < slotI->value) ? (result.min) : (slotI->value);
-        }
-        GenericSyncDeclarations_stopSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
-      }
-      {
-        GenericSharedDeclarations_SharedOf_long_double_0_t* slotI = &queue->value.data[__i];
-        GenericSyncDeclarations_startSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
-        {
-          result.max = (result.max < slotI->value) ? (result.max) : (slotI->value);
-        }
-        GenericSyncDeclarations_stopSyncFor2Mutexes(&queue->mutex, &slotI->mutex);
-      }
-    }
-  }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-  
-  return result;
 }
 
 static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0b0b0a51a8(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* partialResultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* resultQueuePointer) 

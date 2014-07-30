@@ -24,7 +24,7 @@
 extern "C" {
 #endif
 
-#define QUEUE_QUEUESIZE (10)
+#define QUEUE_QUEUESIZE (10000)
 #define QUEUE_DELAY (50)
 void queue_queueInit(queue_SharedTypes_0_SharedOf_Queue_0_t* queue);
 

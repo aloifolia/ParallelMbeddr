@@ -278,17 +278,23 @@ public class SharedBuilder {
 
 
 
-  public void addNewStructTypesToModules(Map<SNode, SNode> structToSharedModule) {
+  public static void addNewStructTypesToModules(Map<SNode, SNode> structToSharedModule) {
+    List<Pair<SNode, SNode>> addedStructsAndModules = ListSequence.fromList(new ArrayList<Pair<SNode, SNode>>());
     for (IMapping<SNode, SNode> structAndModule : MapSequence.fromMap(structToSharedModule)) {
-      addOrLiftStruct(structAndModule.key(), SNodeOperations.getAncestor(structAndModule.key(), "com.mbeddr.core.modules.structure.ImplementationModule", false, false), structAndModule.value());
+      if (addOrLiftStruct(structAndModule.key(), SNodeOperations.getAncestor(structAndModule.key(), "com.mbeddr.core.modules.structure.ImplementationModule", false, false), structAndModule.value())) {
+        ListSequence.fromList(addedStructsAndModules).addElement(new Pair(structAndModule.key(), structAndModule.value()));
+      }
+    }
+    for (Pair<SNode, SNode> structAndModule : ListSequence.fromList(addedStructsAndModules)) {
+      addOrLiftStructMembers(structAndModule.first, SNodeOperations.getAncestor(structAndModule.first, "com.mbeddr.core.modules.structure.ImplementationModule", false, false), structAndModule.second);
     }
   }
 
 
 
-  public void addOrLiftStruct(SNode struct, final SNode moduleToLiftFrom, final SNode targetModule) {
+  public static boolean addOrLiftStruct(SNode struct, SNode moduleToLiftFrom, SNode targetModule) {
     if (targetModule == null || targetModule == SNodeOperations.getAncestor(struct, "com.mbeddr.core.modules.structure.ImplementationModule", false, false)) {
-      return;
+      return false;
     }
 
     ListSequence.fromList(SLinkOperations.getTargets(targetModule, "contents", true)).addElement(struct);
@@ -298,6 +304,13 @@ public class SharedBuilder {
         resolveTypeInline(SLinkOperations.getTarget(member, "type", true));
       }
     });
+
+    return true;
+  }
+
+
+
+  public static void addOrLiftStructMembers(final SNode struct, final SNode moduleToLiftFrom, final SNode targetModule) {
     for (SNode member : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(struct))) {
       ListSequence.fromList(SNodeOperations.getDescendants(member, "com.mbeddr.core.udt.structure.StructType", false, new String[]{})).visitAll(new IVisitor<SNode>() {
         public void visit(SNode structType) {
@@ -305,8 +318,15 @@ public class SharedBuilder {
           if (declaringModule == targetModule) {
             return;
           }
-          if (declaringModule == moduleToLiftFrom) {
-            addOrLiftStruct(SLinkOperations.getTarget(structType, "struct", false), moduleToLiftFrom, targetModule);
+          if (declaringModule == moduleToLiftFrom && !(targetModule == SNodeOperations.getAncestor(SLinkOperations.getTarget(structType, "struct", false), "com.mbeddr.core.modules.structure.ImplementationModule", false, false))) {
+            ListSequence.fromList(SLinkOperations.getTargets(targetModule, "contents", true)).addElement(SLinkOperations.getTarget(structType, "struct", false));
+            SPropertyOperations.set(SLinkOperations.getTarget(structType, "struct", false), "exported", "" + (true));
+            ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(struct)).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode member) {
+                resolveTypeInline(SLinkOperations.getTarget(member, "type", true));
+              }
+            });
+            addOrLiftStructMembers(SLinkOperations.getTarget(structType, "struct", false), moduleToLiftFrom, targetModule);
           } else {
             ModuleBuilder.importModule(declaringModule, targetModule);
           }

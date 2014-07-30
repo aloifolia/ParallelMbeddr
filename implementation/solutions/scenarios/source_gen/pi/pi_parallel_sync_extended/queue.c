@@ -72,7 +72,7 @@ int32_t queue_queueGetDeleteAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue)
     GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
     return queue->value.deleteAt;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
 }
 
 void queue_queueSetDeleteAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, int32_t newDeleteAt) 
