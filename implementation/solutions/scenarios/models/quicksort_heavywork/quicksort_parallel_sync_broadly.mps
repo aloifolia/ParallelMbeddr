@@ -1087,7 +1087,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4260631361695103427" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4260631361695103428" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4260631361695103429" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="no noticeable sync overhead in this example since the sync overhead is dominated by\nthe not synchronized heavy work =&gt; if doHeavyWork() is moved into sync(generics) the\nprogram is basically serialized =&gt; in this case apply lock narrowing to achieve the\nfollowing code structure" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="no noticeable sync overhead in this example since the sync overhead is dominated by\nthe not synchronized heavy work =&gt; if doHeavyWork() is moved into sync(generics) the\nprogram is basically serialized =&gt; in this case apply lock narrowing to achieve the\nfollowing code structure\nAttention: Narrowing cannot " />
               </node>
             </node>
           </node>

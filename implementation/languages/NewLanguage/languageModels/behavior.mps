@@ -461,5 +461,11 @@
       <node role="visibility" roleId="tpee.1178549979242" type="tpee.PublicVisibility" typeId="tpee.1146644602865" id="8001979070750288911" nodeInfo="nn" />
     </node>
   </root>
+  <root type="1i04.ConceptBehavior" typeId="1i04.1225194240794" id="8946379077063199056" nodeInfo="ng">
+    <link role="concept" roleId="1i04.1225194240799" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+    <node role="constructor" roleId="1i04.1225194240801" type="1i04.ConceptConstructorDeclaration" typeId="1i04.1225194413805" id="8946379077063199057" nodeInfo="nn">
+      <node role="body" roleId="tpee.1137022507850" type="tpee.StatementList" typeId="tpee.1068580123136" id="8946379077063199058" nodeInfo="sn" />
+    </node>
+  </root>
 </model>
 

@@ -18,6 +18,12 @@
 extern "C" {
 #endif
 
+typedef struct GenericSharedDeclarations_SharedOf_int32_0 GenericSharedDeclarations_SharedOf_int32_0_t;
+struct GenericSharedDeclarations_SharedOf_int32_0 {
+  pthread_mutex_t mutex;
+  int32_t value;
+};
+
 typedef struct GenericSharedDeclarations_SharedOf_uint32_0 GenericSharedDeclarations_SharedOf_uint32_0_t;
 struct GenericSharedDeclarations_SharedOf_uint32_0 {
   pthread_mutex_t mutex;

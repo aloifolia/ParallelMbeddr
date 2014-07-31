@@ -8,6 +8,7 @@
 
 void queue_queueInit(queue_SharedTypes_0_SharedOf_Queue_0_t* queue) 
 {
+  /* sync in this scenario not necessary */
   GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
   {
     queue->value.insertAt = 0;
@@ -20,6 +21,8 @@ void queue_queueSafeAdd(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, long doub
 {
   while (true)
   {
+    /* sync not necessary since the usage of the 'isFull' already synchronizes the modifying access
+to 'queue' => lock ellision would be very beneficial, here */
     GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
     {
       /* clearly, this busy-waiting approach is only useful if the waiting time is small enough
@@ -46,14 +49,43 @@ void queue_queueSafeAdd(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, long doub
   }
 }
 
+void queue_queueSafeGet(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, long double* result) 
+{
+  while (true)
+  {
+    /* see above at queueSafeAdd() */
+    GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
+    {
+      /* see above at queueSafeAdd() */
+      if ( queue_queueGetDeleteAt(queue) == queue_queueGetInsertAt(queue) ) 
+      {
+        struct timespec sleepingTime = (struct timespec){ .tv_nsec =QUEUE_DELAY};
+        nanosleep(&sleepingTime,0);
+        GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+        continue;
+      }
+      /* lock unnecessary, here */
+      
+      *result = queue_queueGetItemAt(queue, queue_queueGetDeleteAt(queue));
+      int32_t newDeleteAt = (queue_queueGetDeleteAt(queue) + 1) % QUEUE_QUEUESIZE;
+      queue_queueSetDeleteAt(queue, newDeleteAt);
+      GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+      return ;
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+  }
+}
+
 int32_t queue_queueGetInsertAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue) 
 {
+  /* like in the following statements the syncs are never needed since they are always called in a 
+context where the queue is already synchronized => lock ellision! */
   GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
   {
     GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
     return queue->value.insertAt;
   }
-   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+  return GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
 }
 
 void queue_queueSetInsertAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, int32_t newInsertAt) 
@@ -72,7 +104,7 @@ int32_t queue_queueGetDeleteAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue)
     GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
     return queue->value.deleteAt;
   }
-   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+  return GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
 }
 
 void queue_queueSetDeleteAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, int32_t newDeleteAt) 
@@ -99,7 +131,7 @@ long double queue_queueGetItemAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, 
       GenericSyncDeclarations_stopSyncFor1Mutex(&wrappedItem->mutex);
     }
   }
-   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
+  return GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
 }
 
 void queue_queueSetItemAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, int32_t index, long double newItem) 
@@ -116,50 +148,5 @@ void queue_queueSetItemAt(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, int32_t
     }
   }
   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-}
-
-long double queue_queueGetLastAddedItem(queue_SharedTypes_0_SharedOf_Queue_0_t* queue) 
-{
-  GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
-  {
-    int32_t lastIndex = queue->value.insertAt - 1;
-    {
-      GenericSharedDeclarations_SharedOf_long_double_0_t* wrappedItem = &queue->value.data[(lastIndex >= 0) ? (lastIndex) : (0)];
-      GenericSyncDeclarations_startSyncFor1Mutex(&wrappedItem->mutex);
-      {
-        GenericSyncDeclarations_stopSyncFor1Mutex(&wrappedItem->mutex);
-        GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-        return wrappedItem->value;
-      }
-      GenericSyncDeclarations_stopSyncFor1Mutex(&wrappedItem->mutex);
-    }
-  }
-   GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-}
-
-void queue_queueSafeGet(queue_SharedTypes_0_SharedOf_Queue_0_t* queue, long double* result) 
-{
-  while (true)
-  {
-    GenericSyncDeclarations_startSyncFor1Mutex(&queue->mutex);
-    {
-      /* see above at queueSafeAdd() */
-      if ( queue_queueGetDeleteAt(queue) == queue_queueGetInsertAt(queue) ) 
-      {
-        struct timespec sleepingTime = (struct timespec){ .tv_nsec =QUEUE_DELAY};
-        nanosleep(&sleepingTime,0);
-        GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-        continue;
-      }
-      /* lock unnecessary, here */
-      
-      *result = queue_queueGetItemAt(queue, queue_queueGetDeleteAt(queue));
-      int32_t newDeleteAt = (queue_queueGetDeleteAt(queue) + 1) % QUEUE_QUEUESIZE;
-      queue_queueSetDeleteAt(queue, newDeleteAt);
-      GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-      return ;
-    }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&queue->mutex);
-  }
 }
 

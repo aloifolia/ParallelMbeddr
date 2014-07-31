@@ -8,6 +8,8 @@
 
 #include <stdbool.h>
 
+#include "second.h"
+
 
 
 #ifdef __cplusplus

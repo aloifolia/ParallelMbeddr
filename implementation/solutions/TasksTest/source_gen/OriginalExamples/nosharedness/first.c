@@ -1,17 +1,32 @@
 #include "first.h"
 
 
+#include "second.h"
 
-static ??? first_closure_a0a0(??? a);
+static double first_i;
+
+static int32_t first_foo(void);
+
+static void first_bar(void);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  &first_closure_a0a0;
   return 0;
 }
 
-static ??? first_closure_a0a0(??? a) 
+static int32_t first_foo(void) 
 {
-  4 + a;
+  if ( false ) 
+  {
+    return 0;
+  }
+}
+
+static void first_bar(void) 
+{
+  int32_t i;
+  second_i = 3;
+  first_i = 3.5;
+  i = 2;
 }
 
