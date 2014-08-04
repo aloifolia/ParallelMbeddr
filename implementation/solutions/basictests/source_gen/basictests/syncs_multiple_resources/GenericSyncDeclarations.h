@@ -10,19 +10,11 @@
 
 #include <time.h>
 
-#include <stdint.h>
-
-#include <pthread.h>
-
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2);
-
-void GenericSyncDeclarations_stopSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2);
 
 
 #ifdef __cplusplus

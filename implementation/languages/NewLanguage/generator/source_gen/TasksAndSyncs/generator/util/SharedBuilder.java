@@ -845,11 +845,6 @@ public class SharedBuilder {
 
 
 
-  /**
-   * find entry function (typically this is 'main') and the corresponding module
-   * TODO: might not be the right one
-   * TODO: What about C libraries? This is also relevant for global mutex destruction calls.
-   */
   private void findAndSetProgramEntries() {
     for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule"))) {
       SNode foundFunction = ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.Function", false, new String[]{})).findFirst(new IWhereFilter<SNode>() {
@@ -1109,6 +1104,7 @@ public class SharedBuilder {
     SNode destroyFunction = mutexInitToDestroyFunction(initFunction);
     ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(destroyFunction, "body", true), "statements", true)).clear();
     ListSequence.fromList(SLinkOperations.getTargets(SLinkOperations.getTarget(destroyFunction, "body", true), "statements", true)).addSequence(ListSequence.fromList(destroyStatements));
+
     ListSequence.fromList(typesToMutexFunctions).addElement(new Pair(type, new Pair(initFunction, destroyFunction)));
   }
 
@@ -1144,7 +1140,7 @@ public class SharedBuilder {
 
   public void buildAllMutexFunctions(Map<SNode, SNode> moduleToSharedModule, SNode genericSharedModule) {
     for (SNode resolvedDeclarationType : ListSequence.fromList(SharedBuilder.getAllVariableTypes(model))) {
-      buildMutexFunctionsForType(resolvedDeclarationType);
+      buildMutexFunctionsForType(resolvedDeclarationType, false);
     }
 
     for (Pair<SNode, Pair<SNode, SNode>> typeToMutexFunctions : ListSequence.fromList(typesToMutexFunctions)) {
@@ -1160,15 +1156,15 @@ public class SharedBuilder {
   /**
    * typedefs must already be resolved!
    */
-  private void buildMutexFunctionsForType(SNode type) {
-    if (getValueForType(typesToMutexFunctions, removeArraySizes(type)) != null) {
+  private void buildMutexFunctionsForType(SNode type, boolean keepArrays) {
+    if (getValueForType(typesToMutexFunctions, removeArraySizesShallowly(type)) != null) {
       return;
     }
 
     {
       SNode sharedType = type;
       if (SNodeOperations.isInstanceOf(sharedType, "TasksAndSyncs.structure.SharedType")) {
-        buildMutexFunctionsForType(SLinkOperations.getTarget(sharedType, "baseType", true));
+        buildMutexFunctionsForType(SLinkOperations.getTarget(sharedType, "baseType", true), keepArrays);
         buildMutexFunctionsForSharedType(sharedType);
         return;
       }
@@ -1180,8 +1176,8 @@ public class SharedBuilder {
         while (SNodeOperations.isInstanceOf(baseType, "com.mbeddr.core.pointers.structure.ArrayType")) {
           baseType = SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(baseType, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true), "com.mbeddr.core.expressions.structure.Type");
         }
-        buildMutexFunctionsForType(baseType);
-        buildMutexFunctionsForArrayType(arrayType);
+        buildMutexFunctionsForType(baseType, false);
+        buildMutexFunctionsForArrayType(arrayType, keepArrays);
         return;
       }
     }
@@ -1190,7 +1186,7 @@ public class SharedBuilder {
       if (SNodeOperations.isInstanceOf(structType, "com.mbeddr.core.udt.structure.StructType")) {
         ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false))).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
-            buildMutexFunctionsForType(SLinkOperations.getTarget(it, "type", true));
+            buildMutexFunctionsForType(resolveType(SLinkOperations.getTarget(it, "type", true)), false);
           }
         });
         buildMutexFunctionsForStructType(structType);
@@ -1371,7 +1367,7 @@ public class SharedBuilder {
   /**
    * typedefs must already be resolved!
    */
-  private void buildMutexFunctionsForArrayType(SNode arrayType) {
+  private void buildMutexFunctionsForArrayType(SNode arrayType, boolean keepArrays) {
     final SNode argumentType = SNodeFactoryOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
     final SNode varArgument = new _FunctionTypes._return_P0_E0<SNode>() {
       public SNode invoke() {
@@ -1479,7 +1475,7 @@ public class SharedBuilder {
     List<SNode> allArguments = new ArrayList<SNode>();
     ListSequence.fromList(allArguments).addElement(varArgument);
     ListSequence.fromList(allArguments).addSequence(ListSequence.fromList(sizeArguments));
-    buildMutexInitAndDestroyFunctions(removeArraySizes(arrayType), allArguments, initStatements, destroyStatements);
+    buildMutexInitAndDestroyFunctions(removeArraySizesShallowly(arrayType), allArguments, initStatements, destroyStatements);
   }
 
 
@@ -1596,7 +1592,7 @@ public class SharedBuilder {
     List<SNode> destroyStatements = new ArrayList<SNode>();
     for (final SNode member : ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(SLinkOperations.getTarget(structType, "struct", false)))) {
       SNode resolvedType = resolveType(SLinkOperations.getTarget(member, "type", true));
-      if (getValueForType(typesToMutexFunctions, removeArraySizes(resolvedType)) != null || SNodeOperations.isInstanceOf(resolvedType, "TasksAndSyncs.structure.SharedType")) {
+      if (getValueForType(typesToMutexFunctions, removeArraySizesShallowly(resolvedType)) != null || SNodeOperations.isInstanceOf(resolvedType, "TasksAndSyncs.structure.SharedType")) {
         Pair<SNode, SNode> initAndDestroyField = buildInitAndDestroyBase(resolvedType, new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
             final SNode node_5512582143345904219 = new _FunctionTypes._return_P0_E0<SNode>() {
@@ -1638,14 +1634,21 @@ public class SharedBuilder {
 
 
   public static SNode removeArraySizesShallowly(SNode type) {
-    if (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType")) {
-      return removeArraySizes(type);
+    SNode simplifiedType = SNodeOperations.copyNode(type);
+    SNode simplifiedBaseType = simplifiedType;
+    while (SNodeOperations.isInstanceOf(simplifiedBaseType, "com.mbeddr.core.pointers.structure.ArrayType")) {
+      SLinkOperations.setTarget(SNodeOperations.cast(simplifiedBaseType, "com.mbeddr.core.pointers.structure.ArrayType"), "sizeExpr", null, true);
+      simplifiedBaseType = SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(simplifiedBaseType, "com.mbeddr.core.pointers.structure.ArrayType"), "baseType", true), "com.mbeddr.core.expressions.structure.Type");
     }
-    return SNodeOperations.copyNode(type);
+    return simplifiedType;
   }
 
 
 
+
+  /**
+   * TODO: maybe remove
+   */
   public static SNode removeArraySizes(SNode type) {
     SNode simplifiedType = SNodeOperations.copyNode(type);
     {
@@ -1948,7 +1951,7 @@ public class SharedBuilder {
       return null;
     }
 
-    SNode baseTypeToSearchFor = (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType") ? removeArraySizes(type) : type);
+    SNode baseTypeToSearchFor = (SNodeOperations.isInstanceOf(type, "com.mbeddr.core.pointers.structure.ArrayType") ? removeArraySizesShallowly(type) : type);
     final Pair<SNode, SNode> mutexFunctions = getValueForType(typesToMutexFunctions, baseTypeToSearchFor);
 
     if (mutexFunctions == null) {

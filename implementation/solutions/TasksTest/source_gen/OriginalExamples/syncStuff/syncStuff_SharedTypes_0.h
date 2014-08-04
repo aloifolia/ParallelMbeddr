@@ -10,20 +10,24 @@
 
 #include "GenericSharedDeclarations.h"
 
+#include <pthread.h>
+
 
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct syncStuff_SharedTypes_0_A4 syncStuff_SharedTypes_0_A4_t;
-struct syncStuff_SharedTypes_0_A4 {
-  GenericSharedDeclarations_SharedOf_int32_0_t s;
+typedef struct syncStuff_SharedTypes_0_A syncStuff_SharedTypes_0_A_t;
+struct syncStuff_SharedTypes_0_A {
+  GenericSharedDeclarations_SharedOf_int32_0_t* val;
 };
 
-void syncStuff_SharedTypes_0_mutexDestroy_0(syncStuff_SharedTypes_0_A4_t* var);
-
-void syncStuff_SharedTypes_0_mutexInit_0(syncStuff_SharedTypes_0_A4_t* var);
+typedef struct syncStuff_SharedTypes_0_SharedOf_A_0 syncStuff_SharedTypes_0_SharedOf_A_0_t;
+struct syncStuff_SharedTypes_0_SharedOf_A_0 {
+  pthread_mutex_t mutex;
+  syncStuff_SharedTypes_0_A_t value;
+};
 
 
 #ifdef __cplusplus

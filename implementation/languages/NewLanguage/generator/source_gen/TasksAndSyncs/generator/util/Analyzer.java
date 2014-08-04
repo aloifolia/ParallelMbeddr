@@ -7,6 +7,7 @@ import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.IWhereFilter;
+import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 
 public class Analyzer {
 
@@ -55,4 +56,19 @@ public class Analyzer {
     }
     return SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
   }
+
+
+
+  public static boolean stmtContainsSyncRessExpr(SNode stmt, final SNode syncRessExpr) {
+    if (!(SNodeOperations.isInstanceOf(syncRessExpr, "com.mbeddr.core.statements.structure.IVariableReference"))) {
+      return false;
+    }
+    return ListSequence.fromList(SNodeOperations.getDescendants(stmt, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), it, "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(syncRessExpr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{});
+      }
+    });
+  }
+
+
 }

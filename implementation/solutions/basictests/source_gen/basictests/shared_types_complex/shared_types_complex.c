@@ -7,10 +7,8 @@
 #include "shared_types_complex_SharedTypes_0.h"
 #include <pthread.h>
 
-typedef GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t shared_types_complex_sharedInt5x;
-typedef GenericSharedDeclarations_SharedOf_ArrayOf_int32_1_t shared_types_complex_sharedInt1x;
-static void shared_types_complex_foo(GenericSharedDeclarations_SharedOf_double_0_t* x, GenericSharedDeclarations_SharedOf_boolean_0_t y);
-
+typedef GenericSharedDeclarations_SharedOf_ArrayOf_int32_1_t shared_types_complex_sharedInt5x;
+typedef GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t shared_types_complex_sharedInt1x;
 int32_t main(int32_t argc, char* argv[]) 
 {
   pthread_mutexattr_init(&GenericSharedDeclarations_mutexAttribute_0);
@@ -31,7 +29,7 @@ int32_t main(int32_t argc, char* argv[])
   
   shared_types_complex_sharedInt5x s1;
   pthread_mutex_init(&s1.mutex,&GenericSharedDeclarations_mutexAttribute_0);
-  GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* s1Pointer = &s1;
+  GenericSharedDeclarations_SharedOf_ArrayOf_int32_1_t* s1Pointer = &s1;
   shared_types_complex_SharedTypes_0_A3_t a7;
   shared_types_complex_SharedTypes_0_mutexInit_9(&a7);
   shared_types_complex_SharedTypes_0_SharedOf_SharedOf_A3_0_0_t a8;
@@ -40,17 +38,10 @@ int32_t main(int32_t argc, char* argv[])
   shared_types_complex_sharedInt1x a9;
   pthread_mutex_init(&a9.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   shared_types_complex_SharedTypes_0_A4_t a10;
-  shared_types_complex_SharedTypes_0_mutexInit_12(&a10);
+  shared_types_complex_SharedTypes_0_mutexInit_13(&a10);
   shared_types_complex_SharedTypes_0_SharedOf_A4_0_t a11;
-  shared_types_complex_SharedTypes_0_mutexInit_13(&a11);
+  shared_types_complex_SharedTypes_0_mutexInit_14(&a11);
   
   return 0;
-}
-
-static void shared_types_complex_foo(GenericSharedDeclarations_SharedOf_double_0_t* x, GenericSharedDeclarations_SharedOf_boolean_0_t y) 
-{
-  pthread_mutex_init(&y.mutex,&GenericSharedDeclarations_mutexAttribute_0);
-  
-  pthread_mutex_destroy(&y.mutex);
 }
 

@@ -59,6 +59,26 @@
     </scopeInfo>
     <unitInfo nodeId="1304213873205105885" fileName="FutureType_Behavior.java" startLine="9" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.FutureType_Behavior" />
   </root>
+  <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1469333039370134065">
+    <nodeInfo nodeId="1469333039370189816" fileName="SyncRessource_Behavior.java" startLine="15" startPosition="155" endLine="16" endPosition="282" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1469333039370217499" fileName="SyncRessource_Behavior.java" startLine="18" startPosition="417" endLine="19" endPosition="403" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1469333039370221462" fileName="SyncRessource_Behavior.java" startLine="20" startPosition="5" endLine="21" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="1469333039370134065" fileName="SyncRessource_Behavior.java" startLine="11" startPosition="0" endLine="13" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="1469333039370179909" fileName="SyncRessource_Behavior.java" startLine="14" startPosition="76" endLine="17" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="1469333039370144491" fileName="SyncRessource_Behavior.java" startLine="17" startPosition="5" endLine="20" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="1469333039370134065" fileName="SyncRessource_Behavior.java" startLine="14" startPosition="0" endLine="23" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="call_getVariable_1469333039370134366#(Lorg/jetbrains/mps/openapi/model/SNode;)Lorg/jetbrains/mps/openapi/model/SNode;" />
+    <scopeInfo nodeId="1469333039370134067" fileName="SyncRessource_Behavior.java" startLine="11" startPosition="43" endLine="11" endPosition="43" />
+    <scopeInfo nodeId="1469333039370179912" fileName="SyncRessource_Behavior.java" startLine="15" startPosition="155" endLine="16" endPosition="282" />
+    <scopeInfo nodeId="1469333039370144492" fileName="SyncRessource_Behavior.java" startLine="18" startPosition="417" endLine="19" endPosition="403" />
+    <scopeInfo nodeId="1469333039370134065" fileName="SyncRessource_Behavior.java" startLine="11" startPosition="0" endLine="13" endPosition="0">
+      <varInfo nodeId="1469333039370134065" varName="thisNode" />
+    </scopeInfo>
+    <scopeInfo nodeId="1469333039370134369" fileName="SyncRessource_Behavior.java" startLine="14" startPosition="76" endLine="21" endPosition="16" />
+    <scopeInfo nodeId="1469333039370134065" fileName="SyncRessource_Behavior.java" startLine="14" startPosition="0" endLine="23" endPosition="0">
+      <varInfo nodeId="1469333039370134065" varName="thisNode" />
+    </scopeInfo>
+    <unitInfo nodeId="1469333039370134065" fileName="SyncRessource_Behavior.java" startLine="10" startPosition="0" endLine="24" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessource_Behavior" />
+  </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/1924594752095363568">
     <nodeInfo nodeId="1924594752095479302" fileName="SharedType_Behavior.java" startLine="13" startPosition="78" endLine="14" endPosition="13" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1924594752097196106" fileName="SharedType_Behavior.java" startLine="17" startPosition="78" endLine="18" endPosition="221" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -214,6 +234,14 @@
       <varInfo nodeId="8001979070750286545" varName="thisNode" />
     </scopeInfo>
     <unitInfo nodeId="8001979070750286545" fileName="TaskClear_Behavior.java" startLine="7" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.behavior.TaskClear_Behavior" />
+  </root>
+  <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/8946379077063199056">
+    <nodeInfo nodeId="8946379077063199056" fileName="SyncRessourceNamed_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <scopeInfo nodeId="8946379077063199058" fileName="SyncRessourceNamed_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
+    <scopeInfo nodeId="8946379077063199056" fileName="SyncRessourceNamed_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0">
+      <varInfo nodeId="8946379077063199056" varName="thisNode" />
+    </scopeInfo>
+    <unitInfo nodeId="8946379077063199056" fileName="SyncRessourceNamed_Behavior.java" startLine="7" startPosition="0" endLine="11" endPosition="0" unitName="TasksAndSyncs.behavior.SyncRessourceNamed_Behavior" />
   </root>
 </debugInfo>
 

@@ -200,7 +200,10 @@ static void shared_types_destroy_foo5(GenericSharedDeclarations_SharedOf_boolean
 static void shared_types_destroy_foo6(GenericSharedDeclarations_SharedOf_boolean_0_t y) 
 {
   pthread_mutex_init(&y.mutex,&GenericSharedDeclarations_mutexAttribute_0);
-  /* TODO: auf Reparatur durch itemis warten */
+  /* 
+   * TODO: auf Reparatur durch itemis warten
+   */
+
   
   pthread_mutex_destroy(&y.mutex);
   return ;

@@ -1087,14 +1087,9 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4260631361695103427" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4260631361695103428" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4260631361695103429" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="no noticeable sync overhead in this example since the sync overhead is dominated by\nthe not synchronized heavy work =&gt; if doHeavyWork() is moved into sync(generics) the\nprogram is basically serialized =&gt; in this case apply lock narrowing to achieve the\nfollowing code structure\nAttention: Narrowing cannot " />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="no noticeable sync overhead in this example since the sync overhead is dominated by\nthe not synchronized heavy work =&gt; if doHeavyWork() is moved into sync(generics) the\nprogram is basically serialized =&gt; in this case apply lock narrowing to reduce the\nlock contention" />
               </node>
             </node>
-          </node>
-        </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5474646598322104434" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="5474646598322104433" nodeInfo="ng">
-            <link role="function" roleId="x27k.5950410542643524493" targetNodeId="5474646598322085765" resolveInfo="doHeavyWork" />
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="5474646598318396917" nodeInfo="ng">
@@ -1104,6 +1099,11 @@
             </node>
           </node>
           <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598318396919" nodeInfo="ng">
+            <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5474646598322104434" nodeInfo="ng">
+              <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="5474646598322104433" nodeInfo="ng">
+                <link role="function" roleId="x27k.5950410542643524493" targetNodeId="5474646598322085765" resolveInfo="doHeavyWork" />
+              </node>
+            </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="5474646598318419991" nodeInfo="ng">
               <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.GreaterExpression" typeId="mj1l.8860443239512147445" id="5474646598318504432" nodeInfo="ng">
                 <node role="left" roleId="mj1l.8860443239512128064" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="5474646598318480040" nodeInfo="ng">
@@ -1141,6 +1141,9 @@
               </node>
             </node>
           </node>
+        </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="4065868335589034118" nodeInfo="ng">
+          <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.FalseLiteral" typeId="mj1l.8860443239512128099" id="4065868335589054644" nodeInfo="ng" />
         </node>
       </node>
       <node role="type" roleId="mj1l.318113533128716676" type="mj1l.BooleanType" typeId="mj1l.8860443239512128058" id="4433865063612899337" nodeInfo="ng">
@@ -1183,27 +1186,6 @@
           <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
           <property name="const" nameId="mj1l.2941277002445651368" value="false" />
         </node>
-      </node>
-    </node>
-    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="4260631361694265520" nodeInfo="ng">
-      <property name="name" nameId="tpck.1169194664001" value="empty_1406623271049_13" />
-    </node>
-    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="4260631361694283732" nodeInfo="ng">
-      <property name="name" nameId="tpck.1169194664001" value="foo" />
-      <property name="exported" nameId="x27k.1317894735999272944" value="false" />
-      <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="4260631361694283734" nodeInfo="ng">
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.IfStatement" typeId="c4fa.6275792049641600983" id="4260631361694654054" nodeInfo="ng">
-          <node role="thenPart" roleId="c4fa.6275792049641600985" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="4260631361694654055" nodeInfo="ng">
-            <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="4260631361694654116" nodeInfo="ng">
-              <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.TrueLiteral" typeId="mj1l.8860443239512128094" id="4260631361694654128" nodeInfo="ng" />
-            </node>
-          </node>
-          <node role="condition" roleId="c4fa.6275792049641600984" type="mj1l.FalseLiteral" typeId="mj1l.8860443239512128099" id="4260631361694654081" nodeInfo="ng" />
-        </node>
-      </node>
-      <node role="type" roleId="mj1l.318113533128716676" type="mj1l.BooleanType" typeId="mj1l.8860443239512128058" id="4260631361694650535" nodeInfo="ng">
-        <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
-        <property name="const" nameId="mj1l.2941277002445651368" value="false" />
       </node>
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="4433865063612979581" nodeInfo="ng">

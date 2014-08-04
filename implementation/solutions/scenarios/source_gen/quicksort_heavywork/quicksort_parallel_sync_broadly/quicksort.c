@@ -33,8 +33,6 @@ static int32_t quicksort_partition(quicksort_SharedTypes_0_SharedOf_ArrayOf_Gene
 
 static bool quicksort_biggerThan(quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t index1, int32_t index2);
 
-static bool quicksort_foo(void);
-
 static void quicksort_swap(quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t i, int32_t j);
 
 static void quicksort_doHeavyWork(void);
@@ -45,7 +43,7 @@ static void* quicksort_parFun_a0c0c0a0g(void* voidArgs);
 
 static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t left);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t right);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a2a0a6(int32_t middle, int32_t right, quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -97,7 +95,7 @@ static void quicksort_quickSort(quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic
     {
       printf("multi!\n");
       GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a1a2a0a6(middle, generics, left);
-      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a2a2a0a6(middle, generics, right);
+      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a2a2a0a6(middle, right, generics);
       GenericTaskDeclarations_joinVoidFuture(&sorter1);
       GenericTaskDeclarations_joinVoidFuture(&sorter2);
     }    else 
@@ -143,25 +141,21 @@ static int32_t quicksort_partition(quicksort_SharedTypes_0_SharedOf_ArrayOf_Gene
 
 static bool quicksort_biggerThan(quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t index1, int32_t index2) 
 {
-  /* no noticeable sync overhead in this example since the sync overhead is dominated by
-the not synchronized heavy work => if doHeavyWork() is moved into sync(generics) the
-program is basically serialized => in this case apply lock narrowing to achieve the
-following code structure */
+  /* 
+   * no noticeable sync overhead in this example since the sync overhead is dominated by
+   * the not synchronized heavy work => if doHeavyWork() is moved into sync(generics) the
+   * program is basically serialized => in this case apply lock narrowing to reduce the
+   * lock contention
+   */
+
   quicksort_doHeavyWork();
   GenericSyncDeclarations_startSyncFor1Mutex(&generics->mutex);
   {
     GenericSyncDeclarations_stopSyncFor1Mutex(&generics->mutex);
     return generics->value[index1].value > generics->value[index2].value;
   }
-  return GenericSyncDeclarations_stopSyncFor1Mutex(&generics->mutex);
-}
-
-static bool quicksort_foo(void) 
-{
-  if ( false ) 
-  {
-    return true;
-  }
+  GenericSyncDeclarations_stopSyncFor1Mutex(&generics->mutex);
+  return false;
 }
 
 static void quicksort_swap(quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t i, int32_t j) 
@@ -213,7 +207,7 @@ static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics, int32_t right) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a2a0a6(int32_t middle, int32_t right, quicksort_SharedTypes_0_SharedOf_ArrayOf_Generic_0_t* generics) 
 {
   quicksort_Args_a0c0c0a0g_t* args_a2a2a0a6 = malloc(sizeof(quicksort_Args_a0c0c0a0g_t));
   args_a2a2a0a6->middle = middle;

@@ -11,8 +11,8 @@
 #include <math.h>
 #include <stdlib.h>
 
-typedef struct pi_Args_a0a5a1b0i0h pi_Args_a0a5a1b0i0h_t;
-struct pi_Args_a0a5a1b0i0h {
+typedef struct pi_Args_a0a4a2b0i0h pi_Args_a0a4a2b0i0h_t;
+struct pi_Args_a0a4a2b0i0h {
   GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer;
   pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue;
 };
@@ -33,13 +33,13 @@ static void pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_Shared
 
 static long double pi_calcPiItem(uint32_t index);
 
-static void* pi_parFun_a0a5a1b0i0h(void* voidArgs);
+static void* pi_parFun_a0a4a2b0i0h(void* voidArgs);
 
 static void* pi_parFun_a0a21a7(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a8a7(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue);
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0e0c1a8a7(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer);
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0m0h(GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer, pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer);
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0m0h(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -48,7 +48,10 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_uint32_0_t counter;
   pthread_mutex_init(&counter.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer = &counter;
-  /* obviously a useless synchronization */
+  /* 
+   * obviously a useless synchronization
+   */
+
   GenericSyncDeclarations_startSyncFor1Mutex(&counter.mutex);
   {
     counter.value = 0;
@@ -61,15 +64,21 @@ int32_t main(int32_t argc, char* argv[])
   GenericTaskDeclarations_VoidFuture_t mappers[PI_MAPPERCOUNT];
   for ( int8_t __i = 0; __i < PI_MAPPERCOUNT; __i++ )
   {
-    /* the following two syncs are unnecessary since 
-- 'resultQueues' is never changed, at all => lock ellision
-- each 'resultQueue' is fully processed before it is given to a corresponding task => lock ellision
-  by taking into account the array indices */
+    /* 
+     * the following two syncs are unnecessary since 
+     * - 'resultQueues' is never changed, at all => lock ellision
+     * - each 'resultQueue' is fully processed before it is given to a corresponding task => lock ellision
+     *   by taking into account the array indices
+     */
+
     {
       pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue = &resultQueues.value[__i];
+      /* 
+       * these syncs can actually be safely deleted => lock ellision
+       */
+
       GenericSyncDeclarations_startSyncFor2Mutexes(&resultQueues.mutex, &resultQueue->mutex);
       {
-        /* these syncs can actually be safely deleted => lock ellision */
         {
           GenericSharedDeclarations_SharedOf_int32_0_t* itemCount = &resultQueue->value.itemCount;
           GenericSyncDeclarations_startSyncFor1Mutex(&itemCount->mutex);
@@ -95,7 +104,7 @@ int32_t main(int32_t argc, char* argv[])
           GenericSyncDeclarations_stopSyncFor1Mutex(&isFinished->mutex);
         }
         queue_queueInit(&resultQueue->value.queue);
-        mappers[__i] = pi_futureInit_a0f0b1a8a7(counterPointer, resultQueue);
+        mappers[__i] = pi_futureInit_a0e0c1a8a7(resultQueue, counterPointer);
       }
       GenericSyncDeclarations_stopSyncFor2Mutexes(&resultQueues.mutex, &resultQueue->mutex);
     }
@@ -104,8 +113,11 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_long_double_0_t result;
   pthread_mutex_init(&result.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer = &result;
-  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0m0h(resultPointer, resultQueuesPointer));
-  /* another useless synchronization */
+  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0m0h(resultQueuesPointer, resultPointer));
+  /* 
+   * another useless synchronization
+   */
+
   GenericSyncDeclarations_startSyncFor1Mutex(&result.mutex);
   {
     printf("pi: %.50Lf\n", result.value);
@@ -166,7 +178,10 @@ static void pi_reduce(GenericSharedDeclarations_SharedOf_long_double_0_t* result
   
   while (true)
   {
-    /* try to read from one queue if any one is available */
+    /* 
+     * try to read from one queue if any one is available
+     */
+
     GenericSharedDeclarations_SharedOf_int32_0_t* itemCountToBeProcessed = 0;
     queue_SharedTypes_0_SharedOf_Queue_0_t* queueToBeProcessed = 0;
     GenericSharedDeclarations_SharedOf_boolean_0_t* flagToBeProcessed = 0;
@@ -177,17 +192,24 @@ static void pi_reduce(GenericSharedDeclarations_SharedOf_long_double_0_t* result
         continue;
       }
       
-      /* this is quite inefficient since only this thread will ever access the array;
-also, resultQueue need not be locked since it is never changed from anywhere (but lock ellision
-should not necessarily be done in case other, more costly locks could be avoided by keeping locks
-for 'resultQueue')
-=> lock ellsion for 'resultQueues' (and maybe 'resultQueue') */
+      /* 
+       * this is quite inefficient since only this thread will ever access the array;
+       * also, resultQueue need not be locked since it is never changed from anywhere (but lock ellision
+       * should not necessarily be done in case other, more costly locks could be avoided by keeping locks
+       * for 'resultQueue')
+       * => lock ellsion for 'resultQueues' (and maybe 'resultQueue')
+       */
+
       {
         pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue = &resultQueues->value[__i];
-        GenericSyncDeclarations_startSyncFor2Mutexes(&resultQueues->mutex, &resultQueue->mutex);
+        GenericSharedDeclarations_SharedOf_boolean_0_t* isFull2 = &resultQueue->value.isFull;
+        /* 
+         * isFull and isFinished actually need not be locked if resultQueue is always locked when they
+         * are locked
+         */
+
+        GenericSyncDeclarations_startSyncFor3Mutexes(&resultQueues->mutex, &resultQueue->mutex, &isFull2->mutex);
         {
-          /* isFull and isFinished actually need not be locked if resultQueue is always locked when they
-are locked */
           {
             GenericSharedDeclarations_SharedOf_boolean_0_t* isFull = &resultQueue->value.isFull;
             GenericSharedDeclarations_SharedOf_boolean_0_t* isFinished = &resultQueue->value.isFinished;
@@ -199,7 +221,7 @@ are locked */
                 queueToBeProcessed = &resultQueue->value.queue;
                 flagToBeProcessed = &resultQueue->value.isFull;
                 GenericSyncDeclarations_stopSyncFor2Mutexes(&isFull->mutex, &isFinished->mutex);
-                GenericSyncDeclarations_stopSyncFor2Mutexes(&resultQueues->mutex, &resultQueue->mutex);
+                GenericSyncDeclarations_stopSyncFor3Mutexes(&resultQueues->mutex, &resultQueue->mutex, &isFull2->mutex);
                 break;
               } else if (isFinished->value) {
                 areFinished[__i] = true;
@@ -207,7 +229,7 @@ are locked */
                 if ( isFinishedCount == PI_MAPPERCOUNT ) 
                 {
                   GenericSyncDeclarations_stopSyncFor2Mutexes(&isFull->mutex, &isFinished->mutex);
-                  GenericSyncDeclarations_stopSyncFor2Mutexes(&resultQueues->mutex, &resultQueue->mutex);
+                  GenericSyncDeclarations_stopSyncFor3Mutexes(&resultQueues->mutex, &resultQueue->mutex, &isFull2->mutex);
                   return ;
                 }
               }
@@ -215,11 +237,14 @@ are locked */
             GenericSyncDeclarations_stopSyncFor2Mutexes(&isFull->mutex, &isFinished->mutex);
           }
         }
-        GenericSyncDeclarations_stopSyncFor2Mutexes(&resultQueues->mutex, &resultQueue->mutex);
+        GenericSyncDeclarations_stopSyncFor3Mutexes(&resultQueues->mutex, &resultQueue->mutex, &isFull2->mutex);
       }
     }
     
-    /* in case no result was available it might be wise to delay the execution */
+    /* 
+     * in case no result was available it might be wise to delay the execution
+     */
+
     if ( queueToBeProcessed == 0 ) 
     {
       struct timespec sleepingTime = (struct timespec){ .tv_nsec =PI_DELAY};
@@ -235,19 +260,25 @@ are locked */
 static void pi_addPartialResults(GenericSharedDeclarations_SharedOf_long_double_0_t* result, GenericSharedDeclarations_SharedOf_int32_0_t* itemCount, queue_SharedTypes_0_SharedOf_Queue_0_t* queue, GenericSharedDeclarations_SharedOf_boolean_0_t* isFullFlag) 
 {
   
-  /* the synchronization here is acutally not necessary since the corresponding mapper task will not
-proceed before the modification of 'isFullFlag' below
-=> lock ellision would be helpful */
+  /* 
+   * the synchronization here is acutally not necessary since the corresponding mapper task will not
+   * proceed before the modification of 'isFullFlag' below
+   * => lock ellision would be helpful
+   */
+
   GenericSyncDeclarations_startSyncFor2Mutexes(&queue->mutex, &itemCount->mutex);
   {
     for ( int32_t __i = 0; __i < itemCount->value; __i++ )
     {
-      /* since 'result' is only used by the reducer thread the synchronization of it is basically useless
-=> apply lock ellision or at least lock coarsening */
+      /* 
+       * since 'result' is only used by the reducer thread the synchronization of it is basically useless
+       * => apply lock ellision or at least lock coarsening
+       */
+
+      long double tempResult;
+      queue_queueSafeGet(queue, &tempResult);
       GenericSyncDeclarations_startSyncFor1Mutex(&result->mutex);
       {
-        long double tempResult;
-        queue_queueSafeGet(queue, &tempResult);
         result->value = result->value + tempResult;
       }
       GenericSyncDeclarations_stopSyncFor1Mutex(&result->mutex);
@@ -267,7 +298,10 @@ static void pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_Shared
   int32_t mapCounter = 0;
   for ( uint32_t i = start; i < end; ++i )
   {
-    /* 'resultQueue' need not be synchronized since it is never changed => apply lock ellision */
+    /* 
+     * 'resultQueue' need not be synchronized since it is never changed => apply lock ellision
+     */
+
     GenericSyncDeclarations_startSyncFor1Mutex(&resultQueue->mutex);
     {
       queue_queueSafeAdd(&resultQueue->value.queue, pi_calcPiItem(i));
@@ -278,10 +312,13 @@ static void pi_calcPiBlock(uint32_t start, uint32_t end, pi_SharedTypes_0_Shared
     
     if ( mapCounter == QUEUE_QUEUESIZE - 1 || i == end - 1 ) 
     {
-      /* the two following syncs could be merged into one => coarsen!
-'itemCount' will not be accessed by the reducer before a change of 'isFull' => lock ellision
-actually both 'itemCount' and 'isFull' need not be locked since their container is always locked 
-first => lock ellision (either the two members or resultQueue itself) */
+      /* 
+       * the two following syncs could be merged into one => coarsen!
+       * 'itemCount' will not be accessed by the reducer before a change of 'isFull' => lock ellision
+       * actually both 'itemCount' and 'isFull' need not be locked since their container is always locked 
+       * first => lock ellision (either the two members or resultQueue itself)
+       */
+
       {
         GenericSharedDeclarations_SharedOf_int32_0_t* itemCount = &resultQueue->value.itemCount;
         GenericSyncDeclarations_startSyncFor2Mutexes(&resultQueue->mutex, &itemCount->mutex);
@@ -299,10 +336,16 @@ first => lock ellision (either the two members or resultQueue itself) */
         GenericSyncDeclarations_stopSyncFor2Mutexes(&resultQueue->mutex, &isFull->mutex);
       }
       mapCounter = 0;
-      /* busy wait until the queue is emptied by the reducer */
+      /* 
+       * busy wait until the queue is emptied by the reducer
+       */
+
       while (true)
       {
-        /* again, one unnecessary synchronization */
+        /* 
+         * again, one unnecessary synchronization
+         */
+
         {
           GenericSharedDeclarations_SharedOf_boolean_0_t* isFull = &resultQueue->value.isFull;
           GenericSyncDeclarations_startSyncFor2Mutexes(&resultQueue->mutex, &isFull->mutex);
@@ -327,9 +370,9 @@ static long double pi_calcPiItem(uint32_t index)
   return 4.0 * (pow(-1.0,index) / (2.0 * index + 1.0));
 }
 
-static void* pi_parFun_a0a5a1b0i0h(void* voidArgs) 
+static void* pi_parFun_a0a4a2b0i0h(void* voidArgs) 
 {
-  pi_Args_a0a5a1b0i0h_t* args = ((pi_Args_a0a5a1b0i0h_t*)(voidArgs));
+  pi_Args_a0a4a2b0i0h_t* args = ((pi_Args_a0a4a2b0i0h_t*)(voidArgs));
   pi_map(PI_THRESHOLD, (args)->counterPointer, (args)->resultQueue);
   free(voidArgs);
   return 0;
@@ -343,17 +386,17 @@ static void* pi_parFun_a0a21a7(void* voidArgs)
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a8a7(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue) 
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0e0c1a8a7(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer) 
 {
-  pi_Args_a0a5a1b0i0h_t* args_a0f0b1a8a7 = malloc(sizeof(pi_Args_a0a5a1b0i0h_t));
-  args_a0f0b1a8a7->counterPointer = counterPointer;
-  args_a0f0b1a8a7->resultQueue = resultQueue;
+  pi_Args_a0a4a2b0i0h_t* args_a0e0c1a8a7 = malloc(sizeof(pi_Args_a0a4a2b0i0h_t));
+  args_a0e0c1a8a7->counterPointer = counterPointer;
+  args_a0e0c1a8a7->resultQueue = resultQueue;
   pthread_t pth;
-  pthread_create(&pth,0,&pi_parFun_a0a5a1b0i0h,args_a0f0b1a8a7);
+  pthread_create(&pth,0,&pi_parFun_a0a4a2b0i0h,args_a0e0c1a8a7);
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0m0h(GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer, pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer) 
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0m0h(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer) 
 {
   pi_Args_a0a21a7_t* args_a0m0h = malloc(sizeof(pi_Args_a0a21a7_t));
   args_a0m0h->resultPointer = resultPointer;

@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="e5xoixx4cusm0pjgc93v5wmy5penhc8">
-  <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
-  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-1iswfhti0dcila50egm3irr5pl6asjb" />
-  <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" hash="-a828dtfiqwuu4h6v34pezz41awyprps" />
-  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-6uygpfq0qwicxxib0kssjbakxpey688" />
-  <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="-c4lbpj7ikytps1hsy8stpchpcudla77" />
+<dependencies version="2" modelHash="-ds4jwwbh606dz8y59938jqhg3c4zyln">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
   <common hash="-8l4en4c6tigng76usvayunwcbondpnt">
-    <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
-    <dep model="r:638e4431-d4fb-45ee-8ca9-e546a9462bf7(com.mbeddr.core.modules.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
-    <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="Makefile" />
     <file name="TypeSizeConfiguration (O.nosharedness)" />
     <file name="first.c" />
@@ -20,7 +14,7 @@
   </common>
   <source id="5402960089350644843" name="BuildConfiguration (O.nosharedness)" hash="-dz6dc30hyomnrxvyseobi3hsg6drwkb" />
   <source id="5402960089350644959" name="TypeSizeConfiguration (O.nosharedness)" hash="-5r9ox3604k4i0flndnsue50dhknipwr" />
-  <source id="5402960089350645229" name="first" hash="bgyf7hfje6892hc903w1meqpelxsfd7" />
+  <source id="5402960089350645229" name="first" hash="7w2abd6rsvql8l0hy09dz16wyxq33bl" />
   <source id="5402960089350649681" name="second" hash="-605r9stw9ahe27iha3c42giyrscdl1f" />
 </dependencies>
 

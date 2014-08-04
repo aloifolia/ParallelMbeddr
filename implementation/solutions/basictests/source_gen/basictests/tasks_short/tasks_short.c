@@ -46,28 +46,40 @@ static GenericTaskDeclarations_VoidFuture_t tasks_short_futureInit_a1a1(void);
 
 static GenericTaskDeclarations_Future_t tasks_short_futureInit_a5a1(void);
 
-static GenericTaskDeclarations_VoidFuture_t tasks_short_futureInit_a21a1(bool x1, tasks_short_A_t x2);
+static GenericTaskDeclarations_VoidFuture_t tasks_short_futureInit_a21a1(tasks_short_A_t x2, bool x1);
 
 static GenericTaskDeclarations_Future_t tasks_short_futureInit_a61a1(bool x1);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  /* () -> void */
+  /* 
+   * () -> void
+   */
+
   GenericTaskDeclarations_VoidFuture_t f1 = tasks_short_futureInit_a1a1();
   GenericTaskDeclarations_joinVoidFuture(&f1);
   
-  /* () -> int32* */
+  /* 
+   * () -> int32*
+   */
+
   GenericTaskDeclarations_Future_t f2 = tasks_short_futureInit_a5a1();
   int32_t* r2 = ((int32_t*)(GenericTaskDeclarations_getFutureResult(&f2)));
   
   bool x1;
   tasks_short_A_t x2;
   
-  /* (boolean, A) -> void */
-  GenericTaskDeclarations_VoidFuture_t f3 = tasks_short_futureInit_a21a1(x1, x2);
+  /* 
+   * (boolean, A) -> void
+   */
+
+  GenericTaskDeclarations_VoidFuture_t f3 = tasks_short_futureInit_a21a1(x2, x1);
   GenericTaskDeclarations_joinVoidFuture(&f3);
   
-  /* (boolean) -> boolean* */
+  /* 
+   * (boolean) -> boolean*
+   */
+
   GenericTaskDeclarations_Future_t f4 = tasks_short_futureInit_a61a1(x1);
   bool* r4 = ((bool*)(GenericTaskDeclarations_getFutureResult(&f4)));
   
@@ -128,7 +140,7 @@ static GenericTaskDeclarations_Future_t tasks_short_futureInit_a5a1(void)
   return (GenericTaskDeclarations_Future_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t tasks_short_futureInit_a21a1(bool x1, tasks_short_A_t x2) 
+static GenericTaskDeclarations_VoidFuture_t tasks_short_futureInit_a21a1(tasks_short_A_t x2, bool x1) 
 {
   tasks_short_Args_a0m0b_t* args_a21a1 = malloc(sizeof(tasks_short_Args_a0m0b_t));
   args_a21a1->x1 = x1;

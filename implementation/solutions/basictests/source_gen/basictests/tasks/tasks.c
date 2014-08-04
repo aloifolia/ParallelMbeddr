@@ -48,13 +48,19 @@ static inline GenericTaskDeclarations_Task_t tasks_taskInit_a22a1(bool x1);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
-  /* () -> void */
+  /* 
+   * () -> void
+   */
+
   GenericTaskDeclarations_Task_t t1 = (GenericTaskDeclarations_Task_t){0,&tasks_parFun_a1a1,0};
   GenericTaskDeclarations_VoidFuture_t f1 = GenericTaskDeclarations_runTaskAndGetVoidFuture(t1);
   free(t1.args);
   GenericTaskDeclarations_joinVoidFuture(&f1);
   
-  /* () -> int32* */
+  /* 
+   * () -> int32*
+   */
+
   GenericTaskDeclarations_Task_t t2 = (GenericTaskDeclarations_Task_t){0,&tasks_parFun_a7a1,0};
   GenericTaskDeclarations_Future_t f2 = GenericTaskDeclarations_runTaskAndGetFuture(t2);
   free(t2.args);
@@ -63,13 +69,19 @@ int32_t main(int32_t argc, char* argv[])
   bool x1;
   tasks_A_t x2;
   
-  /* (boolean, A) -> void */
+  /* 
+   * (boolean, A) -> void
+   */
+
   GenericTaskDeclarations_Task_t t3 = tasks_taskInit_a61a1(x1, x2);
   GenericTaskDeclarations_VoidFuture_t f3 = GenericTaskDeclarations_runTaskAndGetVoidFuture(t3);
   free(t3.args);
   GenericTaskDeclarations_joinVoidFuture(&f3);
   
-  /* (boolean) -> boolean* */
+  /* 
+   * (boolean) -> boolean*
+   */
+
   GenericTaskDeclarations_Task_t t4 = tasks_taskInit_a22a1(x1);
   GenericTaskDeclarations_Future_t f4 = GenericTaskDeclarations_runTaskAndGetFuture(t4);
   free(t4.args);

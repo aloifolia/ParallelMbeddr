@@ -6,14 +6,13 @@
 #include <stdlib.h>
 #include <string.h>
 
-void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
 {
   if ( !(future->finished) ) 
   {
-    pthread_join(future->pth,&(future->result));
+    pthread_join(future->pth,0);
     future->finished = true;
   }
-  return future->result;
 }
 
 GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task) 
@@ -36,18 +35,9 @@ void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidF
   GenericTaskDeclarations_joinVoidFuture(&future);
 }
 
-void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,0);
-    future->finished = true;
-  }
-}
-
 void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
 {
-  return GenericTaskDeclarations_getFutureResult(&future);
+  GenericTaskDeclarations_getFutureResult(&future);
 }
 
 GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
@@ -63,5 +53,15 @@ GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFu
     pthread_create(&pth,0,task.fun,args);
   }
   return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
+}
+
+void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,&(future->result));
+    future->finished = true;
+  }
+  return future->result;
 }
 

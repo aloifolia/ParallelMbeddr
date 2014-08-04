@@ -20,15 +20,10 @@ int32_t main(int32_t argc, char* argv[])
   syncs_multiple_resources_SharedTypes_0_SharedOf_A_0_t or;
   pthread_mutex_init(&or.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   
-  {
-    syncs_multiple_resources_SharedTypes_0_SharedOf_A_0_t* choice = syncs_multiple_resources_decide(&or, &either);
-    GenericSharedDeclarations_SharedOf_double_0_t* field = choice->value.field;
-    GenericSyncDeclarations_startSyncFor3Mutexes(&v->mutex, &choice->mutex, &field->mutex);
-    {
-      choice->value = v->value;
-    }
-    GenericSyncDeclarations_stopSyncFor3Mutexes(&v->mutex, &choice->mutex, &field->mutex);
-  }
+  /* 
+   * Not allowed!
+   */
+
   
   return 0;
 }
