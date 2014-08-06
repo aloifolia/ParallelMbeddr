@@ -167,15 +167,18 @@
   <dependency className="TasksAndSyncs.behavior.SyncRessource_Behavior" file="SyncRessource_Behavior.java">
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Object" />
+    <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations" />
     <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations" />
     <classNode dependClassName="jetbrains.mps.smodel.behaviour.BehaviorReflection" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncRessource_BehaviorDescriptor" file="SyncRessource_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncRessource_Behavior" />
     <classNode dependClassName="com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor" />
     <classNode dependClassName="java.lang.Override" />
     <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" file="SyncStart_BehaviorDescriptor.java">

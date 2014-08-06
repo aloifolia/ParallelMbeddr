@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="lockellision.simple_readonly_lock.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="25" endPosition="0" unitName="lockellision.simple_readonly_lock.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="lockellision.simple_readonly_lock.GenericTaskDeclarations" />
+  <root nodeRef="r:0aefc2db-be92-460b-ba1c-1a25a05df674(lockellision.simple_readonly_lock)/8220307879066122098">
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="11" startPosition="2" endLine="11" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="11" startPosition="2" endLine="11" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="11" startPosition="25" endLine="11" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="11" startPosition="26" endLine="11" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="12" startPosition="2" endLine="12" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="12" startPosition="2" endLine="12" endPosition="97" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="12" startPosition="28" endLine="12" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="12" startPosition="29" endLine="12" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="12" startPosition="72" endLine="12" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879066122101" fileName="readonly_lock.c" startLine="13" startPosition="2" endLine="13" endPosition="49" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="2" endLine="14" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="2" endLine="14" endPosition="75" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="21" endLine="14" endPosition="29" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="22" endLine="14" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="22" endLine="14" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="30" endLine="14" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="14" startPosition="31" endLine="14" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879066163796" fileName="readonly_lock.c" startLine="24" startPosition="4" endLine="24" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879066164132" fileName="readonly_lock.c" startLine="24" startPosition="4" endLine="24" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879066122113" fileName="readonly_lock.c" startLine="24" startPosition="4" endLine="24" endPosition="12" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879066122118" fileName="readonly_lock.c" startLine="26" startPosition="2" endLine="26" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8220307879066122119" fileName="readonly_lock.c" startLine="27" startPosition="2" endLine="27" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8220307879066122120" fileName="readonly_lock.c" startLine="28" startPosition="2" endLine="28" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="8220307879066122121" fileName="readonly_lock.c" startLine="28" startPosition="9" endLine="28" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8220307879066167119" fileName="readonly_lock.c" startLine="15" startPosition="2" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.CommentStatement" />
+    <nodeInfo nodeId="8220307879066166344" fileName="readonly_lock.c" startLine="20" startPosition="4" endLine="23" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.CommentStatement" />
+    <nodeInfo nodeId="8220307879066122108" fileName="readonly_lock.c" startLine="19" startPosition="2" endLine="25" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879066122100" fileName="readonly_lock.c" startLine="10" startPosition="0" endLine="29" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879066122099" fileName="readonly_lock.c" startLine="9" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="8220307879066122098" fileName="readonly_lock.h" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="lockellision.simple_readonly_lock.main" />
+    <unitInfo nodeId="8220307879066122098" fileName="readonly_lock.c" startLine="1" startPosition="0" endLine="31" endPosition="0" unitName="lockellision.simple_readonly_lock.readonly_lock" />
+  </root>
+</debugInfo>
+

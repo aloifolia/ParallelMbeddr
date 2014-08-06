@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="8" endPosition="0" unitName="locknarrowing.with_unrelated_references1.GenericSharedDeclarations" />
+  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="47" endPosition="0" unitName="locknarrowing.with_unrelated_references1.GenericSyncDeclarations" />
+  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="locknarrowing.with_unrelated_references1.GenericTaskDeclarations" />
+  <root nodeRef="r:00ae419e-31d7-40fe-908f-662bca5c899d(locknarrowing.with_unrelated_references1)/8220307879074842295">
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="13" startPosition="2" endLine="13" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="13" startPosition="2" endLine="13" endPosition="70" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="13" startPosition="25" endLine="13" endPosition="68" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="13" startPosition="26" endLine="13" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="14" startPosition="2" endLine="14" endPosition="96" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="14" startPosition="2" endLine="14" endPosition="97" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="14" startPosition="28" endLine="14" endPosition="71" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="14" startPosition="29" endLine="14" endPosition="71" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="14" startPosition="72" endLine="14" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879074842298" fileName="unrelated_references.c" startLine="15" startPosition="2" endLine="15" endPosition="49" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="2" endLine="16" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="2" endLine="16" endPosition="75" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="21" endLine="16" endPosition="29" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="22" endLine="16" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="22" endLine="16" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="30" endLine="16" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="16" startPosition="31" endLine="16" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879074852503" fileName="unrelated_references.c" startLine="17" startPosition="2" endLine="17" endPosition="49" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="2" endLine="18" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="2" endLine="18" endPosition="75" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="21" endLine="18" endPosition="29" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="22" endLine="18" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="22" endLine="18" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="30" endLine="18" endPosition="73" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="18" startPosition="31" endLine="18" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="8220307879074855510" fileName="unrelated_references.c" startLine="19" startPosition="2" endLine="19" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="20" startPosition="2" endLine="20" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="20" startPosition="2" endLine="20" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="20" startPosition="45" endLine="20" endPosition="53" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842303" fileName="unrelated_references.c" startLine="20" startPosition="46" endLine="20" endPosition="47" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="20" startPosition="46" endLine="20" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879074842306" fileName="unrelated_references.c" startLine="22" startPosition="4" endLine="22" endPosition="40" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8220307879074842305" fileName="unrelated_references.c" startLine="22" startPosition="4" endLine="22" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074865341" fileName="unrelated_references.c" startLine="22" startPosition="37" endLine="22" endPosition="39" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074865581" fileName="unrelated_references.c" startLine="22" startPosition="38" endLine="22" endPosition="39" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842311" fileName="unrelated_references.c" startLine="23" startPosition="4" endLine="23" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842308" fileName="unrelated_references.c" startLine="23" startPosition="4" endLine="23" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879074842308" fileName="unrelated_references.c" startLine="23" startPosition="4" endLine="23" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="8220307879074842307" fileName="unrelated_references.c" startLine="23" startPosition="4" endLine="23" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842310" fileName="unrelated_references.c" startLine="23" startPosition="14" endLine="23" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="25" startPosition="2" endLine="25" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="25" startPosition="2" endLine="25" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="25" startPosition="44" endLine="25" endPosition="52" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074842303" fileName="unrelated_references.c" startLine="25" startPosition="45" endLine="25" endPosition="46" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="25" startPosition="45" endLine="25" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8220307879074842313" fileName="unrelated_references.c" startLine="26" startPosition="2" endLine="26" endPosition="38" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8220307879074842312" fileName="unrelated_references.c" startLine="26" startPosition="2" endLine="26" endPosition="39" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8220307879074868985" fileName="unrelated_references.c" startLine="26" startPosition="35" endLine="26" endPosition="37" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8220307879074866363" fileName="unrelated_references.c" startLine="26" startPosition="36" endLine="26" endPosition="37" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8220307879074842314" fileName="unrelated_references.c" startLine="27" startPosition="2" endLine="27" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8220307879074842315" fileName="unrelated_references.c" startLine="28" startPosition="2" endLine="28" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="8220307879074842316" fileName="unrelated_references.c" startLine="28" startPosition="9" endLine="28" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8220307879074842326" fileName="unrelated_references.c" startLine="33" startPosition="2" endLine="33" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8220307879074842295" fileName="unrelated_references.c" startLine="9" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="locknarrowing.with_unrelated_references1.doHeavyWork" />
+    <nodeInfo nodeId="8220307879074842325" fileName="unrelated_references.c" startLine="32" startPosition="0" endLine="34" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879074842304" fileName="unrelated_references.c" startLine="21" startPosition="2" endLine="24" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879074842324" fileName="unrelated_references.c" startLine="31" startPosition="0" endLine="35" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="unrelated_references_doHeavyWork" />
+    <nodeInfo nodeId="8220307879074842297" fileName="unrelated_references.c" startLine="12" startPosition="0" endLine="29" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879074842296" fileName="unrelated_references.c" startLine="11" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="8220307879074842295" fileName="unrelated_references.h" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="locknarrowing.with_unrelated_references1.main" />
+    <unitInfo nodeId="8220307879074842295" fileName="unrelated_references.c" startLine="1" startPosition="0" endLine="36" endPosition="0" unitName="locknarrowing.with_unrelated_references1.unrelated_references" />
+  </root>
+</debugInfo>
+

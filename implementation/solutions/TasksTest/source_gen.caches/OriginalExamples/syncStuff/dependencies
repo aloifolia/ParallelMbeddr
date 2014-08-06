@@ -10,7 +10,5 @@
   <dependency className="OriginalExamples.syncStuff.TypeSizeConfiguration (O.syncStuff)" file="TypeSizeConfiguration (O.syncStuff)" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.c" />
   <dependency className="OriginalExamples.syncStuff.syncStuff" file="syncStuff.h" />
-  <dependency className="OriginalExamples.syncStuff.syncStuff_SharedTypes_0" file="syncStuff_SharedTypes_0.c" />
-  <dependency className="OriginalExamples.syncStuff.syncStuff_SharedTypes_0" file="syncStuff_SharedTypes_0.h" />
 </dependenciesRoot>
 

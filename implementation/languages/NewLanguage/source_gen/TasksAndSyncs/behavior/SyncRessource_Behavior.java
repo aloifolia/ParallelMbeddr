@@ -20,4 +20,8 @@ public class SyncRessource_Behavior {
     }
     return null;
   }
+
+  public static String virtual_getPresentation_1213877396640(SNode thisNode) {
+    return BehaviorReflection.invokeVirtual(String.class, SLinkOperations.getTarget(thisNode, "expression", true), "virtual_getPresentation_1213877396640", new Object[]{});
+  }
 }
