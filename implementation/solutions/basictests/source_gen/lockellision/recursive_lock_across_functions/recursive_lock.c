@@ -23,16 +23,16 @@ int32_t main(int32_t argc, char* argv[])
    * j and &i are aliases; therefore, their sync ressources are equal
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&j->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
   {
     recursive_lock_forward(j);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&j->mutex);
-  GenericSyncDeclarations_startSyncFor1Mutex(&&i->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(&i)->mutex);
   {
     recursive_lock_forward(&i);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&&i->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(&i)->mutex);
   return 0;
 }
 
@@ -48,7 +48,9 @@ static void recursive_lock_lock(GenericSharedDeclarations_SharedOf_int32_0_t* va
    * this sync is unnecessary and will be removed
    */
 
-  value2->value = 5;
+  {
+    value2->value = 5;
+  }
 }
 
 static void recursive_lock_lockCaller(void) 
@@ -60,16 +62,16 @@ static void recursive_lock_lockCaller(void)
    * same reasoning as in main()
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&&i->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(&i)->mutex);
   {
     recursive_lock_lock(j);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&&i->mutex);
-  GenericSyncDeclarations_startSyncFor1Mutex(&j->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(&i)->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
   {
     recursive_lock_forward(&i);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&j->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
   pthread_mutex_destroy(&i.mutex);
 }
 

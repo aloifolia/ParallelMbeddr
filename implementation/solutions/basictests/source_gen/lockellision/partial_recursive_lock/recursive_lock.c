@@ -17,11 +17,11 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_int32_0_t i;
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_int32_0_t* j = &i;
-  GenericSyncDeclarations_startSyncFor1Mutex(&j->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
   {
     recursive_lock_forward(j);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&j->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
   /* 
    * the following call will break the always-synchronized property of value1 in forward()
    * and value2 in lock()
@@ -39,13 +39,13 @@ static void recursive_lock_forward(GenericSharedDeclarations_SharedOf_int32_0_t*
 static void recursive_lock_lock(GenericSharedDeclarations_SharedOf_int32_0_t* value2) 
 {
   /* 
-   * lock cannot be removed, since the shared ressource is written but not always already synchronized
+   * lock cannot be removed, since the shared ressource is written but not always synchronized already
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&value2->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(value2)->mutex);
   {
     value2->value = 5;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&value2->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(value2)->mutex);
 }
 

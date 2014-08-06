@@ -15,23 +15,24 @@
     <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="12" startPosition="72" endLine="12" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
     <nodeInfo nodeId="3227138667937506777" fileName="syncs_no_resources.c" startLine="13" startPosition="2" endLine="13" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="3227138667937506779" fileName="syncs_no_resources.c" startLine="13" startPosition="14" endLine="13" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="3227138667937506782" fileName="syncs_no_resources.c" startLine="14" startPosition="2" endLine="14" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="2" endLine="15" endPosition="80" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="2" endLine="15" endPosition="81" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="21" endLine="15" endPosition="35" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="22" endLine="15" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="22" endLine="15" endPosition="35" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="36" endLine="15" endPosition="79" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="15" startPosition="37" endLine="15" endPosition="79" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
-    <nodeInfo nodeId="3227138667937506785" fileName="syncs_no_resources.c" startLine="16" startPosition="2" endLine="16" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="3227138667937506787" fileName="syncs_no_resources.c" startLine="16" startPosition="14" endLine="16" endPosition="15" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="3227138667935253662" fileName="syncs_no_resources.c" startLine="17" startPosition="2" endLine="17" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="3227138667935253663" fileName="syncs_no_resources.c" startLine="18" startPosition="2" endLine="18" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="3227138667935253664" fileName="syncs_no_resources.c" startLine="18" startPosition="9" endLine="18" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="10" startPosition="0" endLine="19" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="3227138667935253639" fileName="syncs_no_resources.c" startLine="9" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="3227138667937506782" fileName="syncs_no_resources.c" startLine="15" startPosition="4" endLine="15" endPosition="57" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="4" endLine="16" endPosition="82" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="4" endLine="16" endPosition="83" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="23" endLine="16" endPosition="37" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="24" endLine="16" endPosition="31" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="24" endLine="16" endPosition="37" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="38" endLine="16" endPosition="81" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="16" startPosition="39" endLine="16" endPosition="81" conceptFqName="com.mbeddr.core.modules.structure.GlobalVarRef" />
+    <nodeInfo nodeId="3227138667937506785" fileName="syncs_no_resources.c" startLine="17" startPosition="4" endLine="17" endPosition="18" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="3227138667937506787" fileName="syncs_no_resources.c" startLine="17" startPosition="16" endLine="17" endPosition="17" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3227138667935253662" fileName="syncs_no_resources.c" startLine="19" startPosition="2" endLine="19" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="3227138667935253663" fileName="syncs_no_resources.c" startLine="20" startPosition="2" endLine="20" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="3227138667935253664" fileName="syncs_no_resources.c" startLine="20" startPosition="9" endLine="20" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="14" startPosition="2" endLine="18" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3227138667935253640" fileName="syncs_no_resources.c" startLine="10" startPosition="0" endLine="21" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="3227138667935253639" fileName="syncs_no_resources.c" startLine="9" startPosition="0" endLine="22" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="3227138667935253638" fileName="syncs_no_resources.h" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.syncs_no_resources.main" />
-    <unitInfo nodeId="3227138667935253638" fileName="syncs_no_resources.c" startLine="1" startPosition="0" endLine="21" endPosition="0" unitName="basictests.syncs_no_resources.syncs_no_resources" />
+    <unitInfo nodeId="3227138667935253638" fileName="syncs_no_resources.c" startLine="1" startPosition="0" endLine="23" endPosition="0" unitName="basictests.syncs_no_resources.syncs_no_resources" />
   </root>
 </debugInfo>
 

@@ -6,6 +6,20 @@
 #include <stdlib.h>
 #include <string.h>
 
+void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
+{
+  GenericTaskDeclarations_getFutureResult(&future);
+}
+
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
+{
+  if ( !(future->finished) ) 
+  {
+    pthread_join(future->pth,0);
+    future->finished = true;
+  }
+}
+
 void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
 {
   GenericTaskDeclarations_joinVoidFuture(&future);
@@ -49,19 +63,5 @@ GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFu
     pthread_create(&pth,0,task.fun,args);
   }
   return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
-}
-
-void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future) 
-{
-  GenericTaskDeclarations_getFutureResult(&future);
-}
-
-void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
-{
-  if ( !(future->finished) ) 
-  {
-    pthread_join(future->pth,0);
-    future->finished = true;
-  }
 }
 

@@ -13,13 +13,19 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_int32_0_t i;
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_int32_0_t* j = &i;
-  GenericSyncDeclarations_startSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     {
-      j->value = 5;
+      /* 
+       * j is an alias for &i => its sync can be removed
+       */
+
+      {
+        j->value = 5;
+      }
     }
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
   
   return 0;
 }

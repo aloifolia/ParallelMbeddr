@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-6zy79lugwaz680h4p1plvf74h1gdxef">
+<dependencies version="2" modelHash="-1ybjbixixkknsumr4msan1w7wu49t5x">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-2tap4uh97vp60oxr50ln7kf305fh56y" />
-  <common hash="-dxks3ccy6462nisk13ar9fylz8tqd93">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="5slq8a2kwq438b0oame3bmcq6c0b4ze" />
+  <common hash="-8aq6xq44s5gvhjyh85o9q08q8dgdmp7">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
@@ -18,7 +18,7 @@
     <file name="recursive_lock.c" />
     <file name="recursive_lock.h" />
   </common>
-  <source id="8220307879047548972" name="recursive_lock" hash="blaqeb1d6rfevwojdtqsm3qshozjx6j" />
+  <source id="8220307879047548972" name="recursive_lock" hash="29ehojinpf4fgcdfdycr83if2fnpf02" />
   <source id="8220307879047549038" name="BuildConfiguration (l.recursive_lock_across_functions_complex)" hash="-8mp13id85zlaac314lvp7pc3nj27jkm" />
 </dependencies>
 

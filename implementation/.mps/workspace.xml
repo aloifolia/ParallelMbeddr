@@ -17,289 +17,49 @@
     </option>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa722af2-26f2-49c2-8670-07eea910cd96" name="Default" comment="code: added two optimizations (1 working), fixed a nasty generator error">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/TypeSizeConfiguration (l.partial_readonly_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/TypeSizeConfiguration (l.partial_recursive_always_readonly_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/TypeSizeConfiguration (l.partial_recursive_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/TypeSizeConfiguration (l.recursive_lock_across_functions)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/TypeSizeConfiguration (l.recursive_lock_across_functions_complex)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/TypeSizeConfiguration (l.recursive_lock_by_alias)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/TypeSizeConfiguration (l.simple)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/TypeSizeConfiguration (l.simple_readonly_and_recursive_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/TypeSizeConfiguration (l.simple_readonly_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/TypeSizeConfiguration (l.simple_recursive_lock)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/TypeSizeConfiguration (l.with_unrelated_references1)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/TypeSizeConfiguration (l.with_unrelated_references2)" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericSharedDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericSharedDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/Makefile" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_always_readonly_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions_complex/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_by_alias/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_and_recursive_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_recursive_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/simple/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references1/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references2/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_always_readonly_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions_complex/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_by_alias/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_and_recursive_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_recursive_lock/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/simple/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references1/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references2/generated" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/no_references.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/no_references.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/partial_readonly_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/partial_recursive_always_readonly_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/partial_recursive_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/readonly_and_recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/readonly_and_recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/readonly_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/readonly_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/recursive_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/recursive_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock_across_functions.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock_across_functions_complex.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock_by_alias.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/recursive_readonly_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/recursive_readonly_lock.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/locknarrowing/simple.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/simple_readonly_and_recursive_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/simple_readonly_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/simple_recursive_lock.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions_complex/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_by_alias/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/simple/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references1/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references2/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/unrelated_references.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/unrelated_references.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/unrelated_references.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/unrelated_references.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/locknarrowing/with_unrelated_references1.mps" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/locknarrowing/with_unrelated_references2.mps" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$28$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$28$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$28$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$28$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$30$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$30$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$30$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$30$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\classes_gen\OriginalExamples\pi\pi.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\classes_gen\OriginalExamples\syncStuff\syncStuff_SharedTypes_0.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\classes_gen\OriginalExamples\syncStuff\syncStuff_SharedTypes_0.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\source_gen\OriginalExamples\pi\pi.exe" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\source_gen\OriginalExamples\syncStuff\syncStuff_SharedTypes_0.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\TasksTest\source_gen\OriginalExamples\syncStuff\syncStuff_SharedTypes_0.h" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$1.class" />
+    <list default="true" id="fa722af2-26f2-49c2-8670-07eea910cd96" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$10.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$11.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$12.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$13.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$15.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$20.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$22.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$23.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$26.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$26.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$27.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$27.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$28.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$28.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$29.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$29.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$5.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$6.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$7.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$8.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$9.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/behavior/SyncRessource_BehaviorDescriptor.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/behavior/SyncRessource_BehaviorDescriptor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Analyzer.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Analyzer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericSharedDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericSharedDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericSharedDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericSharedDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/GenericSharedDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/GenericSharedDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_multiple_resources/GenericSharedDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/GenericSyncDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/GenericSyncDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/GenericSyncDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericTaskDeclarations.c" />
@@ -313,8 +73,18 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/GenericTaskDeclarations.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_destroy/GenericTaskDeclarations.h" />
@@ -328,23 +98,23 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/GenericTaskDeclarations.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/Makefile" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/Makefile" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/GenericTaskDeclarations.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Optimizer.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Optimizer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/SyncRessource_Behavior.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/SyncRessource_Behavior.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/SyncRessource_BehaviorDescriptor.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/SyncRessource_BehaviorDescriptor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/languageModels/behavior.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/languageModels/behavior.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/dependencies" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/dependencies" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/behavior/dependencies" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/behavior/dependencies" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/dependencies" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/dependencies" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/behavior/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen.caches/TasksAndSyncs/behavior/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/pi/generated" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types_complex/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types_complex/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types_destroy/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/shared_types_destroy/generated" />
@@ -358,40 +128,79 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks_short/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks_short/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks_shorter/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/basictests/tasks_shorter/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_always_readonly_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_always_readonly_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_recursive_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions_complex/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_across_functions_complex/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_by_alias/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock_by_alias/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_and_recursive_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_and_recursive_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_readonly_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_recursive_lock/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/simple_recursive_lock/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/simple/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/simple/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references1/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references1/generated" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references2/generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/locknarrowing/with_unrelated_references2/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/provider1_SharedTypes_0.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/provider1_SharedTypes_0.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/provider1_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/provider1_SharedTypes_0.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/no_references.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/no_references.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/readonly_and_recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/readonly_and_recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/readonly_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/readonly_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/recursive_lock.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/recursive_readonly_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/recursive_readonly_lock.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/shared_types_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/shared_types_SharedTypes_0.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex_SharedTypes_0.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex_SharedTypes_0.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/shared_types_complex_SharedTypes_0.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/shared_types_global_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/shared_types_global_SharedTypes_0.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/syncStuff.mps" afterPath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/syncStuff.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/syncs.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/syncs.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_no_resources/syncs_no_resources.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_no_resources/syncs_no_resources.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/syncs_stop.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/syncs_stop.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/tasks_shorter.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_shorter/tasks_shorter.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/behavior/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/classes_gen/TasksAndSyncs/behavior/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/tasks_short.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/tasks_short/tasks_short.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/trace.info" afterPath="$PROJECT_DIR$/languages/NewLanguage/source_gen/TasksAndSyncs/behavior/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/trace.info" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/trace.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/trace.info" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types_complex/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types_complex/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types_global/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/shared_types_global/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_no_resources/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_no_resources/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_stop/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/basictests/syncs_stop/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions_complex/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_across_functions_complex/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_by_alias/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock_by_alias/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/simple_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/simple/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/simple/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references1/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references1/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references2/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/locknarrowing/with_unrelated_references2/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_complex/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_global/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_no_resources/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_no_resources/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/syncs_stop/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_always_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_across_functions_complex/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock_by_alias/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_and_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_readonly_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/simple_recursive_lock/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/simple/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/trace.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/unrelated_references.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references1/unrelated_references.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/unrelated_references.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/locknarrowing/with_unrelated_references2/unrelated_references.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/user_SharedTypes_0.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/user_SharedTypes_0.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/user_SharedTypes_0.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/basictests/shared_types_lift/user_SharedTypes_0.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/template/TasksAndSyncs/generator/util.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/template/TasksAndSyncs/generator/util.mps" />
@@ -436,15 +245,15 @@
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/main">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="6417">
+              <memento viewPositionX="0" viewPositionY="6237">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="151" />
-                    <property name="caretXRelative" value="120" />
+                    <property name="caretX" value="555" />
+                    <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879066978572" />
+                    <cellInfo cellId="property_text" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879114600793" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -462,19 +271,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="optimizeByNarrowing" pinned="false" current="false" current-in-tab="false">
-        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByNarrowing">
+      <file leaf-file-name="recursive_lock" pinned="false" current="true" current-in-tab="true">
+        <entry file="mps://node://basictests/lockellision.recursive_lock_across_functions/recursive_lock">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
               <memento viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="627" />
-                    <property name="caretXRelative" value="16" />
+                    <property name="caretX" value="281" />
+                    <property name="caretXRelative" value="8" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="Constant_u338ov_d0" cellNumber="0" isInList="false">
+                      <node node_reference="r:d4d428fc-c4e1-427e-b200-9b5c2a7913ff(lockellision.recursive_lock_across_functions)/8220307879037024427" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </memento>
+              <inspectorMemento viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="replaceSyncDeclarations" pinned="false" current="false" current-in-tab="false">
+        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/replaceSyncDeclarations">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="0" viewPositionY="240">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="131" />
+                    <property name="caretXRelative" value="0" />
                     <property name="sideSelectDirection" value="NONE" />
                     <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879092325807" />
+                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/3348893923579063299" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -496,15 +335,15 @@
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Optimizer">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="3631">
+              <memento viewPositionX="0" viewPositionY="6234">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="71" />
-                    <property name="caretXRelative" value="8" />
+                    <property name="caretX" value="351" />
+                    <property name="caretXRelative" value="128" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_m61dlm_g0" cellNumber="0" isInList="false">
-                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879102679676" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879112504087" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -514,13 +353,13 @@
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776298587019" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776295345130" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039370438719" />
                   </foldedElement>
                   <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                     <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
                   </foldedElement>
                 </folded>
                 <enabledHints />
@@ -535,7 +374,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SyncRessource" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SyncRessource" pinned="false" current="false" current-in-tab="false">
         <entry file="mps://node://TasksAndSyncs/TasksAndSyncs.structure/SyncRessource">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
@@ -601,6 +440,7 @@
   <component name="NodeEditorSearchHistory">
     <option name="searches">
       <list>
+        <option value="SharedGe" />
         <option value="SyncStatesFor" />
         <option value="System." />
         <option value="baseType for" />
@@ -630,7 +470,6 @@
         <option value="_self" />
         <option value="taskIni" />
         <option value="parFun" />
-        <option value="&lt; thres" />
       </list>
     </option>
   </component>
@@ -880,56 +719,6 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests@transient193">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision.simple_recursive_lock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests@transient193">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests@transient193">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision.simple_recursive_lock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Empty">
@@ -996,13 +785,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Project">
+            <PATH_ELEMENT USER_OBJECT="TasksAndSyncs.generator.template.main">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1013,68 +796,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="Project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="locknarrowing">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision.simple_recursive_lock">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="lockellision">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Empty">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Project">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="basictests">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1284,7 +1005,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="786" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Visualization" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
@@ -1300,14 +1021,14 @@
       <window_info id="Verification (CBMC)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.6463512" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Tree" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20592593" sideWeight="0.5614887" order="21" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33925927" sideWeight="0.47087377" order="21" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24798061" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.6278317" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Type System Performance Data" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2874074" sideWeight="0.503231" order="22" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20592593" sideWeight="0.4385113" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33925927" sideWeight="0.5291262" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Node Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Workflow" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.60921365" order="2" side_tool="false" content_ui="tabs" />
@@ -1318,7 +1039,7 @@
       <window_info id="Supertypes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="mbeddr TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="25" side_tool="false" content_ui="tabs" />
       <window_info id="Typesystem Trace" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22815534" sideWeight="0.58197933" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22815534" sideWeight="0.58197933" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Classpath Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="27" side_tool="false" content_ui="tabs" />
       <window_info id="Cell Explorer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="29" side_tool="false" content_ui="tabs" />
       <window_info id="Dependencies Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.49960285" order="19" side_tool="false" content_ui="tabs" />
@@ -1367,7 +1088,7 @@
             <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
             <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
               <node>
-                <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039371921695" />
+                <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039377063073" />
               </node>
             </holder>
           </query>
@@ -1411,10 +1132,10 @@
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="false">
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraphContainsCycles(map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):boolean" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="false">
                                         <role name="target" />
                                         <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039371921695" />
+                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039377063073" />
                                         </node>
                                       </data>
                                       <children />
@@ -1445,94 +1166,27 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="true" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="true" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="true" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="true" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
+                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraphContainsCycles(map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):boolean" info="role: &lt;i&gt;operation&lt;/i&gt;; in: &lt;i&gt;DotExpression&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                        <role name="target" />
                                         <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
+                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039378352827" />
                                         </node>
                                       </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027696" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027698" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
-                                        <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
-                                        </node>
-                                      </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926654" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926656" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
+                                      <children />
                                     </child>
                                   </children>
                                 </child>
@@ -1553,94 +1207,27 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
+                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraphContainsCycles(map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):boolean" info="role: &lt;i&gt;operation&lt;/i&gt;; in: &lt;i&gt;DotExpression&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                        <role name="target" />
                                         <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
+                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039378352827" />
                                         </node>
                                       </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027696" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027698" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
-                                        <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
-                                        </node>
-                                      </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926654" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926656" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
+                                      <children />
                                     </child>
                                   </children>
                                 </child>
@@ -1661,94 +1248,27 @@
                           </data>
                           <children>
                             <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                 <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
+                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
                               </data>
                               <children>
                                 <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="false" isresult="false" results_section="true">
+                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="false" isresult="false" results_section="true">
                                     <role name="root" />
                                     <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
+                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
                                     </node>
                                   </data>
                                   <children>
                                     <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
+                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraphContainsCycles(map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):boolean" info="role: &lt;i&gt;operation&lt;/i&gt;; in: &lt;i&gt;DotExpression&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
+                                        <role name="target" />
                                         <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
+                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039378352827" />
                                         </node>
                                       </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027696" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039374027698" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.util" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                <role name="model" />
-                                <model uid="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="Optimizer" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039362654530" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getVariableAndSyncRessource(node&amp;lt;Expression&amp;gt;):Pair&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;SyncRessource&amp;gt;&amp;gt;" info="role: &lt;i&gt;member&lt;/i&gt;; in: &lt;i&gt;Optimizer&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
-                                        <node>
-                                          <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373787009" />
-                                        </node>
-                                      </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="initVariableSyncRessource" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                            <role name="root to target" />
-                                            <node>
-                                              <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926654" />
-                                            </node>
-                                          </data>
-                                          <children>
-                                            <child>
-                                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="getSyncForVariable(node&amp;lt;IVariableDeclaration&amp;gt;,node&amp;lt;&amp;gt;):node&amp;lt;SyncRessource&amp;gt;" info="role: &lt;i&gt;initializer&lt;/i&gt;; in: &lt;i&gt;initVariableSyncRessource&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                                <role name="target" />
-                                                <node>
-                                                  <node model="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)" id="1469333039373926656" />
-                                                </node>
-                                              </data>
-                                              <children />
-                                            </child>
-                                          </children>
-                                        </child>
-                                      </children>
+                                      <children />
                                     </child>
                                   </children>
                                 </child>
@@ -1786,7 +1306,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="generator improvements for syncs: goto support, better exponential backoff" />
     <MESSAGE value="generator correction for syncs&#10;" />
     <MESSAGE value="first step towards mutex functions based on types rather than variables" />
     <MESSAGE value="second step: mutex functions and calls for global variables based on types &#10;" />
@@ -1811,179 +1330,10 @@
     <MESSAGE value="code: probably fixed an import error of the generator" />
     <MESSAGE value="code: added extended (last) optimization example code" />
     <MESSAGE value="code: added two optimizations (1 working), fixed a nasty generator error" />
-    <option name="LAST_COMMIT_MESSAGE" value="code: added two optimizations (1 working), fixed a nasty generator error" />
+    <MESSAGE value="code: added another optimization and improved the existing ones" />
+    <option name="LAST_COMMIT_MESSAGE" value="code: added another optimization and improved the existing ones" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="mps://node://com.mbeddr.core.modules/com.mbeddr.core.modules.structure/FunctionSignature">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="147" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="TransactionalProperty_ueqr71_d0a" cellNumber="0" isInList="false">
-                  <node node_reference="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/6437088627575723997" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/6437088627575723997" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.modules/com.mbeddr.core.modules.structure/FunctionPrototype">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-15" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_ueqr71_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/6437088627575724000" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-15" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_ueqr71_a_0" cellNumber="0" isInList="false">
-                  <node node_reference="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/6437088627575724000" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/6437088627575724000" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.modules/com.mbeddr.core.modules.structure/IFunctionLike">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="163" />
-                <property name="caretXRelative" value="40" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/5708867820623310661" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-15" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_y1p9lm_a_0" cellNumber="0" isInList="false">
-                  <node node_reference="r:31661f2d-1478-4081-9682-d840624f0b7d(basictests.shared_types_complex@4_1)/1469333039385567236" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)/8105003328814797298" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://com.mbeddr.core.statements/com.mbeddr.core.statements.structure/IVariableDeclaration">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editorTabs.TabbedEditor$TabbedEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="267" />
-                <property name="caretXRelative" value="112" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="TransactionalProperty_7v1nzk_b0a" cellNumber="0" isInList="false">
-                  <node node_reference="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)/2486081302459814099" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
-                <property name="caretX" value="0" />
-                <property name="caretXRelative" value="-15" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Collection_y1p9lm_a_0" cellNumber="0" isInList="false">
-                  <node node_reference="r:31661f2d-1478-4081-9682-d840624f0b7d(basictests.shared_types_complex@4_1)/1469333039385567236" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-          <node node_ref="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)/2486081302459814099" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/SharedBuilder">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="13937">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="263" />
-                <property name="caretXRelative" value="8" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/7341014709902866833" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://basictests/basictests.shared_types_complex/shared_types_complex">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -2040,46 +1390,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByLockEllision">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="22" viewPositionY="421">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="191" />
-                <property name="caretXRelative" value="64" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879052194158" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Optimizer">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="3631">
+          <memento viewPositionX="0" viewPositionY="6234">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="71" />
-                <property name="caretXRelative" value="8" />
+                <property name="caretX" value="351" />
+                <property name="caretXRelative" value="128" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_m61dlm_g0" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879102679676" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879112504087" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -2089,13 +1411,13 @@
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776298587019" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776295345130" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039370438719" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
               </foldedElement>
             </folded>
             <enabledHints />
@@ -2415,15 +1737,15 @@
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/main">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="6417">
+          <memento viewPositionX="0" viewPositionY="6237">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="151" />
-                <property name="caretXRelative" value="120" />
+                <property name="caretX" value="555" />
+                <property name="caretXRelative" value="8" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879066978572" />
+                <cellInfo cellId="property_text" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879114600793" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -2431,7 +1753,7 @@
             <folded />
             <enabledHints />
           </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="-8">
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
             <selectionStack />
             <errorLabels />
             <folded />
@@ -2732,15 +2054,15 @@
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByNarrowing">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="263">
+          <memento viewPositionX="0" viewPositionY="219">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="627" />
-                <property name="caretXRelative" value="16" />
+                <property name="caretX" value="167" />
+                <property name="caretXRelative" value="56" />
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879092325807" />
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879070666783" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -3103,34 +2425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://basictests/lockellision.recursive_lock_across_functions/recursive_lock">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="14">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="415" />
-                <property name="caretXRelative" value="56" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_escapedValue_word21" cellNumber="0" isInList="false">
-                  <node node_reference="r:d4d428fc-c4e1-427e-b200-9b5c2a7913ff(lockellision.recursive_lock_across_functions)/8220307879106081753" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://basictests/lockellision.recursive_lock_across_functions_complex/recursive_lock">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -3271,7 +2565,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://basictests@transient193/lockellision.simple_recursive_lock@2_0/recursive_lock">
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByLockEllision">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="4" viewPositionY="60">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="31" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_7h2wce_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879108210097" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/basictests.shared_types_global/shared_types_global">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
           <memento viewPositionX="0" viewPositionY="0">
@@ -3282,7 +2604,119 @@
                 <property name="caretXRelative" value="0" />
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:9b43da71-6452-4250-9df2-8d4f0b1183ec(lockellision.simple_recursive_lock@2_0)/8220307879106330955" />
+                  <node node_reference="r:9cc09d1f-ddb8-4843-ab0a-b156d331152e(basictests.shared_types_global)/3271375101694395134" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/basictests.syncs_no_resources/syncs_no_resources">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="35" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:af37c2c6-8cc9-4e06-9995-c1b5414ea56a(basictests.syncs_no_resources)/3227138667935253638" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/basictests.syncs_stop/syncs_stop">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="300">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="99" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:352c7bcb-c05e-45ee-941d-32a6bfdf6639(basictests.syncs_stop)/3227138667949785205" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockellision.recursive_lock_across_functions/recursive_lock">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="85">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="281" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Constant_u338ov_d0" cellNumber="0" isInList="false">
+                  <node node_reference="r:d4d428fc-c4e1-427e-b200-9b5c2a7913ff(lockellision.recursive_lock_across_functions)/8220307879037024427" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/replaceSyncDeclarations">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="131" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/3348893923579063299" />
                 </cellInfo>
               </stackElement>
             </selectionStack>

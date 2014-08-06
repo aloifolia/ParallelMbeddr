@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-ekc8co4y3ghqa4g1ysm5v19jgdzytyh">
+<dependencies version="2" modelHash="cvw7t5ozrbjrqhhjovrbynluaut14du">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-2tap4uh97vp60oxr50ln7kf305fh56y" />
-  <common hash="dim7rszurvp6uc5v5oqsxasorzcd08a">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="5slq8a2kwq438b0oame3bmcq6c0b4ze" />
+  <common hash="-du28wn69fflzoghpynzpe2irbk3122o">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
@@ -18,7 +18,7 @@
     <file name="unrelated_references.c" />
     <file name="unrelated_references.h" />
   </common>
-  <source id="8220307879074842295" name="unrelated_references" hash="tc204smkb22nqw3hsmnn6ijzv90zs3" />
+  <source id="8220307879074842295" name="unrelated_references" hash="-75npil04wvlqgmghinyu1uzs22ffdvk" />
   <source id="8220307879074842328" name="BuildConfiguration (l.with_unrelated_references1)" hash="-erjo3ve9qcn3g9juru1mqbe2yrj1g2f" />
 </dependencies>
 

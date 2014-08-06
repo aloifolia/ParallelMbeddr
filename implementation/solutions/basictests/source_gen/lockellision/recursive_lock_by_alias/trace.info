@@ -24,30 +24,32 @@
     <nodeInfo nodeId="53264776286891458" fileName="recursive_lock.c" startLine="15" startPosition="2" endLine="15" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="53264776286897835" fileName="recursive_lock.c" startLine="15" startPosition="52" endLine="15" endPosition="54" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="53264776286899478" fileName="recursive_lock.c" startLine="15" startPosition="53" endLine="15" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="2" endLine="16" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="2" endLine="16" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="45" endLine="16" endPosition="53" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="53264776286869739" fileName="recursive_lock.c" startLine="16" startPosition="46" endLine="16" endPosition="47" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="46" endLine="16" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="53264776286904962" fileName="recursive_lock.c" startLine="19" startPosition="6" endLine="19" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="53264776286869747" fileName="recursive_lock.c" startLine="19" startPosition="6" endLine="19" endPosition="14" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="53264776286869747" fileName="recursive_lock.c" startLine="19" startPosition="6" endLine="19" endPosition="18" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="53264776286869746" fileName="recursive_lock.c" startLine="19" startPosition="6" endLine="19" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="53264776286869749" fileName="recursive_lock.c" startLine="19" startPosition="17" endLine="19" endPosition="18" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="22" startPosition="2" endLine="22" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="22" startPosition="2" endLine="22" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="22" startPosition="44" endLine="22" endPosition="52" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="53264776286869739" fileName="recursive_lock.c" startLine="22" startPosition="45" endLine="22" endPosition="46" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="22" startPosition="45" endLine="22" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="53264776286869752" fileName="recursive_lock.c" startLine="23" startPosition="2" endLine="23" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="53264776286869753" fileName="recursive_lock.c" startLine="24" startPosition="2" endLine="24" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="53264776286869754" fileName="recursive_lock.c" startLine="24" startPosition="9" endLine="24" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="53264776286869741" fileName="recursive_lock.c" startLine="18" startPosition="4" endLine="20" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="53264776286869740" fileName="recursive_lock.c" startLine="17" startPosition="2" endLine="21" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="10" startPosition="0" endLine="25" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="53264776286869732" fileName="recursive_lock.c" startLine="9" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="2" endLine="16" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="2" endLine="16" endPosition="57" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="45" endLine="16" endPosition="55" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="16" startPosition="46" endLine="16" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="53264776286869739" fileName="recursive_lock.c" startLine="16" startPosition="47" endLine="16" endPosition="48" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="53264776286904962" fileName="recursive_lock.c" startLine="24" startPosition="8" endLine="24" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="53264776286869747" fileName="recursive_lock.c" startLine="24" startPosition="8" endLine="24" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="53264776286869747" fileName="recursive_lock.c" startLine="24" startPosition="8" endLine="24" endPosition="20" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="53264776286869746" fileName="recursive_lock.c" startLine="24" startPosition="8" endLine="24" endPosition="21" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="53264776286869749" fileName="recursive_lock.c" startLine="24" startPosition="19" endLine="24" endPosition="20" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="28" startPosition="2" endLine="28" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="28" startPosition="2" endLine="28" endPosition="56" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="28" startPosition="44" endLine="28" endPosition="54" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="28" startPosition="45" endLine="28" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="53264776286869739" fileName="recursive_lock.c" startLine="28" startPosition="46" endLine="28" endPosition="47" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="53264776286869752" fileName="recursive_lock.c" startLine="29" startPosition="2" endLine="29" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="53264776286869753" fileName="recursive_lock.c" startLine="30" startPosition="2" endLine="30" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="53264776286869754" fileName="recursive_lock.c" startLine="30" startPosition="9" endLine="30" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="53264776286869741" fileName="recursive_lock.c" startLine="23" startPosition="6" endLine="25" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8220307879106289611" fileName="recursive_lock.c" startLine="19" startPosition="6" endLine="22" endPosition="0" conceptFqName="com.mbeddr.core.statements.structure.CommentStatement" />
+    <nodeInfo nodeId="53264776286869741" fileName="recursive_lock.c" startLine="18" startPosition="4" endLine="26" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="53264776286869740" fileName="recursive_lock.c" startLine="17" startPosition="2" endLine="27" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="53264776286869733" fileName="recursive_lock.c" startLine="10" startPosition="0" endLine="31" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="53264776286869732" fileName="recursive_lock.c" startLine="9" startPosition="0" endLine="32" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="53264776286869731" fileName="recursive_lock.h" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="lockellision.recursive_lock_by_alias.main" />
-    <unitInfo nodeId="53264776286869731" fileName="recursive_lock.c" startLine="1" startPosition="0" endLine="27" endPosition="0" unitName="lockellision.recursive_lock_by_alias.recursive_lock" />
+    <unitInfo nodeId="53264776286869731" fileName="recursive_lock.c" startLine="1" startPosition="0" endLine="33" endPosition="0" unitName="lockellision.recursive_lock_by_alias.recursive_lock" />
   </root>
 </debugInfo>
 

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dependencies version="2" modelHash="-ba4ra6dj68i8u3dfx0yvgzheu61w8ce">
-  <dep model="656d983a-8a9f-45fb-8a2a-717bfe58fde0/r:cf7904f1-ca42-4927-84fa-33e1d8fd9928(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+  <dep model="82124a89-4b50-4377-8a91-640b02fd3d66/r:98e76c5b-d0c4-44a9-961f-92e32364df52(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="2tjo7spoq0b9ubdn36bitwt5i0a2wds" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-c6u9c0062lyb8gr9m5qz8m1u0c697la" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="5slq8a2kwq438b0oame3bmcq6c0b4ze" />
   <common hash="-7d45it0xspex2hjbv279960a6zzn8k5">
-    <dep model="656d983a-8a9f-45fb-8a2a-717bfe58fde0/r:cf7904f1-ca42-4927-84fa-33e1d8fd9928(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+    <dep model="82124a89-4b50-4377-8a91-640b02fd3d66/r:98e76c5b-d0c4-44a9-961f-92e32364df52(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />

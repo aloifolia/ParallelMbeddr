@@ -17,13 +17,25 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_int32_0_t y;
   pthread_mutex_init(&y.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   
-  GenericSyncDeclarations_startSyncFor1Mutex(&x.mutex);
+  /* 
+   * y is never written => sync will be removed
+   */
+
   {
-    unrelated_references_doHeavyWork(&x);
-    x.value = 5;
+    {
+      GenericSyncDeclarations_startSyncFor1Mutex(&(x).mutex);
+      {
+        unrelated_references_doHeavyWork(&x);
+        x.value = 5;
+      }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(x).mutex);
+      /* 
+       * y is unrelated to x => the following line will be shifted outside sync(x){...}
+       */
+
+      unrelated_references_doHeavyWork(&y);
+    }
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&x.mutex);
-  unrelated_references_doHeavyWork(&y);
   
   return 0;
 }

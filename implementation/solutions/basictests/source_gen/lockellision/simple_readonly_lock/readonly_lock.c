@@ -17,11 +17,15 @@ int32_t main(int32_t argc, char* argv[])
    */
 
   {
-    /* 
-     * this lock is removed at first (due to: recursive lock)
-     */
+    {
+      /* 
+       * this lock is removed at first (due to: recursive lock)
+       */
 
-    i.value;
+      {
+        i.value;
+      }
+    }
   }
   
   

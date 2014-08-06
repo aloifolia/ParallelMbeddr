@@ -18,25 +18,25 @@ int32_t main(int32_t argc, char* argv[])
    * safely removed
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     i.value;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
   /* 
    * actually, also the write lock could be removed since only one task has access to it
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     i.value = 5;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&i.mutex);
-  GenericSyncDeclarations_startSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     i.value;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
   
   return 0;
 }

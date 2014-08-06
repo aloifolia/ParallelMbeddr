@@ -21,7 +21,9 @@ int32_t main(int32_t argc, char* argv[])
    * lock can be removed, since the shared ressource is never written
    */
 
-  recursive_readonly_lock_forward(j);
+  {
+    recursive_readonly_lock_forward(j);
+  }
   /* 
    * the following call will break the always-synchronized property of value1 in forward()
    * and value2 in lock()
@@ -42,6 +44,8 @@ static void recursive_readonly_lock_lock(GenericSharedDeclarations_SharedOf_int3
    * lock can be removed, since the shared ressource is never written
    */
 
-  value2->value;
+  {
+    value2->value;
+  }
 }
 

@@ -16,18 +16,20 @@ int32_t main(int32_t argc, char* argv[])
    * this lock cannot be removed because of .set
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     i.value;
     {
       /* 
-       * this lock can be removed
+       * this lock can be removed because of its recursiveness
        */
 
-      i.value = 5;
+      {
+        i.value = 5;
+      }
     }
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&i.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
   
   
   return 0;
