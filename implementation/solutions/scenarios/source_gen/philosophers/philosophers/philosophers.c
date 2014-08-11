@@ -48,13 +48,13 @@ static void philosophers_initPhilosophers(philosophers_SharedTypes_0_SharedOf_Ph
   {
     {
       philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* philosopher = &philosophers[__i];
-      GenericSyncDeclarations_startSyncFor1Mutex(&philosopher->mutex);
+      GenericSyncDeclarations_startSyncFor1Mutex(&(philosopher)->mutex);
       {
         philosopher->value.id = __i;
         philosopher->value.leftFork = &forks[__i];
         philosopher->value.rightFork = &forks[(__i + 1) % PHILOSOPHERS_philosopherCount];
       }
-      GenericSyncDeclarations_stopSyncFor1Mutex(&philosopher->mutex);
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(philosopher)->mutex);
     }
   }
 }
@@ -64,7 +64,10 @@ static void philosophers_letThemEat(philosophers_SharedTypes_0_SharedOf_Philosop
   GenericTaskDeclarations_VoidFuture_t eatingPhilosophers[PHILOSOPHERS_philosopherCount];
   for ( int8_t __i = 0; __i < PHILOSOPHERS_philosopherCount; __i++ )
   {
-    /* every task gets its own philosopher, alternative approach: every task gets all philosophers and an index */
+    /* 
+     * every task gets its own philosopher, alternative approach: every task gets all philosophers and an index
+     */
+
     philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* philosopher = &philosophers[__i];
     printf("let %d eat...\n", __i);
     eatingPhilosophers[__i] = philosophers_futureInit_a0d0b0j(philosopher);
@@ -80,18 +83,29 @@ static void philosophers_eat(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t
 {
   for ( int8_t __i = 0; __i < PHILOSOPHERS_mealCount; __i++ )
   {
+    GenericSyncDeclarations_startSyncFor1Mutex(&(philosopher)->mutex);
     {
-      GenericSharedDeclarations_SharedOf_int32_0_t* leftFork = philosopher->value.leftFork;
-      GenericSharedDeclarations_SharedOf_int32_0_t* rightFork = philosopher->value.rightFork;
-      GenericSyncDeclarations_startSyncFor3Mutexes(&philosopher->mutex, &leftFork->mutex, &rightFork->mutex);
       {
-        printf("(%d) starts eating\n", philosopher->value.id);
-        philosophers_wait(PHILOSOPHERS_eatingDurationInNs);
-        printf("(%d) stops eating\n", philosopher->value.id);
+        GenericSharedDeclarations_SharedOf_int32_0_t* leftFork = philosopher->value.leftFork;
+        GenericSharedDeclarations_SharedOf_int32_0_t* rightFork = philosopher->value.rightFork;
+        GenericSyncDeclarations_startSyncFor2Mutexes(&(leftFork)->mutex, &(rightFork)->mutex);
+        {
+          printf("(%d) starts eating\n", philosopher->value.id);
+          /* 
+           * TODO: make set work for typedefs!
+           */
+
+          philosophers_wait(PHILOSOPHERS_eatingDurationInNs);
+          printf("(%d) stops eating\n", philosopher->value.id);
+        }
+        GenericSyncDeclarations_stopSyncFor2Mutexes(&(leftFork)->mutex, &(rightFork)->mutex);
       }
-      GenericSyncDeclarations_stopSyncFor3Mutexes(&philosopher->mutex, &leftFork->mutex, &rightFork->mutex);
     }
-    /* think... */
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(philosopher)->mutex);
+    /* 
+     * think...
+     */
+
     philosophers_wait((rand() % (PHILOSOPHERS_thinkingDurationMaxInNs - PHILOSOPHERS_thinkingDurationMinInNs)) + PHILOSOPHERS_thinkingDurationMinInNs);
   }
 }

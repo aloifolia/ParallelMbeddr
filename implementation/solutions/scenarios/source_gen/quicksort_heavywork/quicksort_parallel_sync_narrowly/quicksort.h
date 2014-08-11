@@ -32,10 +32,6 @@ extern "C" {
 #define QUICKSORT_threshold (20)
 int32_t quicksort_main(int32_t argc, char* argv[]);
 
-void quicksort_initGlobalMutexesFor1Module_0(void);
-
-void quicksort_initAllGlobalMutexes_0(void);
-
 
 #ifdef __cplusplus
 } /* extern "C" */

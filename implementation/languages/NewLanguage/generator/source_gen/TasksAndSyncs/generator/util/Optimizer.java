@@ -19,11 +19,12 @@ import jetbrains.mps.internal.collections.runtime.IVisitor;
 import jetbrains.mps.internal.collections.runtime.IMapping;
 import java.util.List;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
+import jetbrains.mps.internal.collections.runtime.Sequence;
 import java.util.ArrayList;
+import jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations;
 import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
-import jetbrains.mps.internal.collections.runtime.Sequence;
 import TasksAndSyncs.behavior.SyncRessource_Behavior;
 
 public class Optimizer {
@@ -181,7 +182,139 @@ public class Optimizer {
 
 
 
-  public Map<SNode, Set<SNode>> createAliases(List<SNode> allNodes, Map<SNode, Set<SNode>> dataFlowGraph) {
+  public Map<SNode, Set<SNode>> removeRecursiveEdges(Map<SNode, Set<SNode>> dataflowGraph, final SNode entryFunction) {
+
+    final Map<SNode, Set<SNode>> nonRecursiveDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (final SNode node : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet())) {
+      MapSequence.fromMap(nonRecursiveDataflowGraph).put(node, SetSequence.fromSet(new HashSet<SNode>()));
+      SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).addElement(it);
+        }
+      });
+    }
+
+    Set<SNode> visitedFunctions = SetSequence.fromSet(new HashSet<SNode>());
+    // start in main() 
+    final Map<SNode, Set<SNode>> nodeToVisitedFunctions = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet()).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false) == entryFunction;
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).get(it)).addElement(entryFunction);
+      }
+    });
+
+    // now visit every successor non-recursively 
+    System.out.println();
+    boolean foundSomething = true;
+    while (foundSomething) {
+      while (MapSequence.fromMap(nodeToVisitedFunctions).isNotEmpty()) {
+        SNode node = SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).keySet()).first();
+        SNode nodeFunction = SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
+        // The order of visits may change the resulting sync removals in case of inconvenient recursive function calls 
+        for (SNode nextNode : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).get(node))) {
+          SNode nextNodeFunction = SNodeOperations.getAncestor(nextNode, "com.mbeddr.core.modules.structure.Function", false, false);
+          if (SNodeOperations.isInstanceOf(nextNode, "com.mbeddr.core.modules.structure.Argument")) {
+            System.out.println("> node " + node + " (" + nodeFunction + ") : " + SNodeOperations.getConceptDeclaration(node) + " -> " + nextNode + " (" + nextNodeFunction + ") : " + SNodeOperations.getConceptDeclaration(nextNode));
+          }
+          if (nodeFunction != nextNodeFunction && SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).get(node)).contains(nextNodeFunction) || nodeFunction == nextNodeFunction && SNodeOperations.isInstanceOf(nextNode, "com.mbeddr.core.modules.structure.Argument")) {
+            SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).removeElement(nextNode);
+            System.out.println("remove " + nextNode + " from " + node + " => " + SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).contains(nextNode));
+            continue;
+          }
+          if (!(MapSequence.fromMap(nodeToVisitedFunctions).containsKey(nextNode))) {
+            MapSequence.fromMap(nodeToVisitedFunctions).put(nextNode, SetSequence.fromSet(new HashSet<SNode>()));
+          }
+          SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).get(nextNode)).addSequence(SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).get(node)));
+          SetSequence.fromSet(MapSequence.fromMap(nodeToVisitedFunctions).get(nextNode)).addElement(nextNodeFunction);
+        }
+      }
+      for (SNode function : SetSequence.fromSet(visitedFunctions)) {
+      }
+    }
+
+    return nonRecursiveDataflowGraph;
+  }
+
+  public Map<SNode, Set<SNode>> removeRecursiveEdges2(Map<SNode, Set<SNode>> dataflowGraph, SNode entryFunction, Map<SNode, Set<SNode>> callGraph) {
+    System.out.println("-------remove recursive edges 2...");
+    final Map<SNode, Set<SNode>> nonRecursiveDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (final SNode node : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet())) {
+      MapSequence.fromMap(nonRecursiveDataflowGraph).put(node, SetSequence.fromSet(new HashSet<SNode>()));
+      SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).addElement(it);
+        }
+      });
+    }
+
+    Map<SNode, Set<SNode>> inverseCallAborescence = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    MapSequence.fromMap(inverseCallAborescence).put(entryFunction, SetSequence.fromSet(new HashSet<SNode>()));
+    Set<SNode> functionsToVisit = SetSequence.fromSet(new HashSet<SNode>());
+    SetSequence.fromSet(functionsToVisit).addElement(entryFunction);
+
+    while (SetSequence.fromSet(functionsToVisit).isNotEmpty()) {
+      final SNode function = SetSequence.fromSet(functionsToVisit).first();
+      SetSequence.fromSet(functionsToVisit).removeElement(function);
+      for (final SNode calledFunction : SetSequence.fromSet(MapSequence.fromMap(callGraph).get(function))) {
+        if (pathToMainContainsFunction(inverseCallAborescence, calledFunction, entryFunction)) {
+          System.out.println("...cyclic call!");
+          // suppress sync flows via cyclic function calls => remove edges in dataflow graph 
+          for (SNode node : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet()).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false) == function;
+            }
+          })) {
+            System.out.println("> for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+            Sequence.fromIterable(SNodeOperations.ofConcept(MapSequence.fromMap(dataflowGraph).get(node), "com.mbeddr.core.modules.structure.Argument")).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false) == calledFunction;
+              }
+            }).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it) {
+                System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+              }
+            });
+            SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).removeSequence(Sequence.fromIterable(SNodeOperations.ofConcept(MapSequence.fromMap(dataflowGraph).get(node), "com.mbeddr.core.modules.structure.Argument")).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false) == calledFunction;
+              }
+            }));
+          }
+        } else {
+          SetSequence.fromSet(functionsToVisit).addElement(calledFunction);
+          MapSequence.fromMap(inverseCallAborescence).put(calledFunction, SetSequence.fromSet(new HashSet<SNode>()));
+          SetSequence.fromSet(MapSequence.fromMap(inverseCallAborescence).get(calledFunction)).addSequence(SetSequence.fromSet(MapSequence.fromMap(inverseCallAborescence).get(function)));
+          SetSequence.fromSet(MapSequence.fromMap(inverseCallAborescence).get(calledFunction)).addElement(function);
+        }
+      }
+    }
+
+    return nonRecursiveDataflowGraph;
+  }
+
+
+
+  public boolean pathToMainContainsFunction(final Map<SNode, Set<SNode>> inverseCallAborescence, SNode currentFunction, final SNode functionToFind) {
+    if (currentFunction == functionToFind) {
+      return true;
+    }
+    if (SetSequence.fromSet(MapSequence.fromMap(inverseCallAborescence).get(currentFunction)).isEmpty()) {
+      return false;
+    }
+    return SetSequence.fromSet(MapSequence.fromMap(inverseCallAborescence).get(currentFunction)).any(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return pathToMainContainsFunction(inverseCallAborescence, it, functionToFind);
+      }
+    });
+  }
+
+
+
+  public Map<SNode, Set<SNode>> createAliases(List<SNode> allNodes, Map<SNode, Set<SNode>> dataFlowGraph, boolean recursivenessAllowed) {
     Map<SNode, Set<SNode>> functionToContainedNodes = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
     for (SNode node : ListSequence.fromList(allNodes)) {
       SNode function = SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
@@ -243,6 +376,133 @@ public class Optimizer {
     });
 
     return aliases;
+  }
+
+  public Map<SNode, Set<SNode>> createAliases2(List<SNode> allNodes, Map<SNode, Set<SNode>> dataFlowGraph, boolean recursivenessAllowed) {
+    Map<SNode, Set<SNode>> functionToContainedNodes = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (SNode node : ListSequence.fromList(allNodes)) {
+      SNode function = SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
+      if (!(MapSequence.fromMap(functionToContainedNodes).containsKey(function))) {
+        MapSequence.fromMap(functionToContainedNodes).put(function, SetSequence.fromSet(new HashSet<SNode>()));
+      }
+      SetSequence.fromSet(MapSequence.fromMap(functionToContainedNodes).get(function)).addElement(node);
+    }
+
+    final Map<SNode, Set<SNode>> aliases = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    final Map<SNode, Set<SNode>> forwardAliases = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    final Map<SNode, Map<SNode, List<SNode>>> aliasPaths = MapSequence.fromMap(new HashMap<SNode, Map<SNode, List<SNode>>>());
+
+    ListSequence.fromList(allNodes).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        MapSequence.fromMap(aliases).put(it, SetSequence.fromSet(new HashSet<SNode>()));
+        MapSequence.fromMap(forwardAliases).put(it, SetSequence.fromSet(new HashSet<SNode>()));
+      }
+    });
+
+    for (final SNode variable : Sequence.fromIterable(SNodeOperations.ofConcept(allNodes, "com.mbeddr.core.statements.structure.IVariableDeclaration"))) {
+      final List<SNode> backwardsAddings = new ArrayList<SNode>();
+      List<SNode> singletonPath = new ArrayList<SNode>();
+      ListSequence.fromList(singletonPath).addElement(SNodeOperations.getAncestor(variable, "com.mbeddr.core.modules.structure.Function", false, false));
+      addAliasToTargets(aliases, forwardAliases, aliasPaths, variable, singletonPath, MapSequence.fromMap(dataFlowGraph).get(variable), recursivenessAllowed);
+      if (SPropertyOperations.getString(variable, "name").equals("z")) {
+        System.out.println("found z");
+        for (SNode n : SetSequence.fromSet(MapSequence.fromMap(aliases).keySet())) {
+          System.out.println("> node " + n + " : " + SNodeOperations.getConceptDeclaration(n));
+          SetSequence.fromSet(MapSequence.fromMap(aliases).get(n)).visitAll(new IVisitor<SNode>() {
+            public void visit(SNode it) {
+              System.out.println("---> alias: " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+            }
+          });
+        }
+      }
+      boolean foundSomething = true;
+      while (foundSomething) {
+        foundSomething = false;
+        List<Pair<List<SNode>, SNode>> newEntries = ListSequence.fromList(new ArrayList<Pair<List<SNode>, SNode>>());
+        for (SNode node : ListSequence.fromList(allNodes).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SetSequence.fromSet(MapSequence.fromMap(aliases).get(it)).contains(variable);
+          }
+        })) {
+          List<SNode> nodePath = new ArrayList<SNode>();
+          ListSequence.fromList(nodePath).addSequence(ListSequence.fromList(MapSequence.fromMap(MapSequence.fromMap(aliasPaths).get(node)).get(variable)));
+          if (!(ListSequence.fromList(nodePath).contains(SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false)))) {
+            ListSequence.fromList(nodePath).addElement(SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false));
+          }
+          for (SNode nextNode : SetSequence.fromSet(MapSequence.fromMap(dataFlowGraph).get(node)).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return !(SetSequence.fromSet(MapSequence.fromMap(aliases).get(it)).contains(variable));
+            }
+          })) {
+            if (canAddAlias(variable, nodePath, nextNode, recursivenessAllowed)) {
+              if (SPropertyOperations.getString(variable, "name").equals("z.")) {
+                System.out.println("extend z: from " + node + " : " + SNodeOperations.getConceptDeclaration(node) + " to " + nextNode + " : " + SNodeOperations.getConceptDeclaration(nextNode));
+              }
+              ListSequence.fromList(newEntries).addElement(new Pair(nodePath, nextNode));
+            }
+          }
+        }
+        if (!(ListSequence.fromList(newEntries).isEmpty())) {
+          foundSomething = true;
+          ListSequence.fromList(newEntries).visitAll(new IVisitor<Pair<List<SNode>, SNode>>() {
+            public void visit(Pair<List<SNode>, SNode> it) {
+              ListSequence.fromList(backwardsAddings).addSequence(ListSequence.fromList(addAliasToTarget(aliases, forwardAliases, aliasPaths, variable, it.first, it.second)));
+            }
+          });
+        }
+      }
+      if (SPropertyOperations.getString(variable, "name").equals("z")) {
+        System.out.println("extended z");
+        SetSequence.fromSet(MapSequence.fromMap(aliases).get(variable)).visitAll(new IVisitor<SNode>() {
+          public void visit(SNode it) {
+            System.out.println("-> alias: " + it);
+          }
+        });
+      }
+    }
+
+    System.out.println("------allAliases:");
+    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(aliases).keySet())) {
+      System.out.println("> for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+      SetSequence.fromSet(MapSequence.fromMap(aliases).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+        }
+      });
+    }
+
+    return aliases;
+  }
+
+
+
+  public boolean canAddAlias(SNode alias, List<SNode> newPath, SNode target, boolean maybeRecursive) {
+    return maybeRecursive || !(SNodeOperations.isInstanceOf(target, "com.mbeddr.core.modules.structure.Argument")) || !(ListSequence.fromList(newPath).contains(SNodeOperations.getAncestor(target, "com.mbeddr.core.modules.structure.Function", false, false)));
+  }
+
+
+
+  public List<SNode> addAliasToTarget(Map<SNode, Set<SNode>> aliases, Map<SNode, Set<SNode>> forwardAliases, Map<SNode, Map<SNode, List<SNode>>> aliasPaths, SNode alias, List<SNode> newPath, SNode target) {
+    List<SNode> backwardsAddings = new ArrayList<SNode>();
+    SetSequence.fromSet(MapSequence.fromMap(aliases).get(target)).addElement(alias);
+    MapSequence.fromMap(aliasPaths).put(target, MapSequence.fromMap(new HashMap<SNode, List<SNode>>()));
+    MapSequence.fromMap(MapSequence.fromMap(aliasPaths).get(target)).put(alias, newPath);
+    if (SNodeOperations.isInstanceOf(target, "com.mbeddr.core.statements.structure.IVariableDeclaration")) {
+      SetSequence.fromSet(MapSequence.fromMap(forwardAliases).get(alias)).addElement(SNodeOperations.cast(target, "com.mbeddr.core.statements.structure.IVariableDeclaration"));
+    }
+    return backwardsAddings;
+  }
+
+
+
+  public List<SNode> addAliasToTargets(Map<SNode, Set<SNode>> aliases, Map<SNode, Set<SNode>> forwardAliases, Map<SNode, Map<SNode, List<SNode>>> aliasPaths, SNode alias, List<SNode> newPath, Set<SNode> targets, boolean maybeRecursive) {
+    List<SNode> backwardsAddings = new ArrayList<SNode>();
+    for (SNode target : SetSequence.fromSet(targets)) {
+      if (canAddAlias(alias, newPath, target, maybeRecursive)) {
+        addAliasToTarget(aliases, forwardAliases, aliasPaths, alias, newPath, target);
+      }
+    }
+    return backwardsAddings;
   }
 
 
@@ -329,6 +589,16 @@ public class Optimizer {
 
 
   public Map<SNode, Boolean> createSyncStates(final Map<SNode, Set<SNode>> dataFlowGraph, Map<SNode, Set<SNode>> aliases, List<SNode> syncRessources) {
+    Map<SNode, Set<SNode>> inverseDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (IMapping<SNode, Set<SNode>> nodeToOthers : MapSequence.fromMap(dataFlowGraph)) {
+      for (SNode other : SetSequence.fromSet(nodeToOthers.value())) {
+        if (!(MapSequence.fromMap(inverseDataflowGraph).containsKey(other))) {
+          MapSequence.fromMap(inverseDataflowGraph).put(other, SetSequence.fromSet(new HashSet<SNode>()));
+        }
+        SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(other)).addElement(nodeToOthers.key());
+      }
+    }
+
     final Map<SNode, Boolean> nodeToSyncState = MapSequence.fromMap(new HashMap<SNode, Boolean>());
     SetSequence.fromSet(MapSequence.fromMap(dataFlowGraph).keySet()).visitAll(new IVisitor<SNode>() {
       public void visit(SNode from) {
@@ -363,44 +633,36 @@ public class Optimizer {
           MapSequence.fromMap(nodeToSyncState).put(syncedVariableRef, true);
         }
       }
+
+      passSyncState(inverseDataflowGraph, nodeToSyncState, SNodeOperations.getAncestor(syncRessource, "com.mbeddr.core.modules.structure.Function", false, false));
     }
 
-    Map<SNode, Set<SNode>> inverseDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
-    for (IMapping<SNode, Set<SNode>> nodeToOthers : MapSequence.fromMap(dataFlowGraph)) {
-      for (SNode other : SetSequence.fromSet(nodeToOthers.value())) {
-        if (!(MapSequence.fromMap(inverseDataflowGraph).containsKey(other))) {
-          MapSequence.fromMap(inverseDataflowGraph).put(other, SetSequence.fromSet(new HashSet<SNode>()));
-        }
-        SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(other)).addElement(nodeToOthers.key());
-      }
+    System.out.println("-----first round");
+    for (IMapping<SNode, Boolean> nodeToSync : MapSequence.fromMap(nodeToSyncState)) {
+      System.out.println("> node " + nodeToSync.key() + " : " + SNodeOperations.getConceptDeclaration(nodeToSync.key()) + " -> " + nodeToSync.value());
     }
 
+    return nodeToSyncState;
+  }
+
+
+
+  public void passSyncState(Map<SNode, Set<SNode>> inverseDataflowGraph, final Map<SNode, Boolean> nodeToSyncState, SNode functionToAvoid) {
     // the sync states are propagated across function boundaries (only for calls, not returns) 
     boolean changedSomething = true;
     while (changedSomething) {
       changedSomething = false;
       for (SNode node : SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).keySet())) {
-        if ((boolean) MapSequence.fromMap(nodeToSyncState).get(node) == false) {
-          if (SNodeOperations.isInstanceOf(node, "com.mbeddr.core.modules.structure.Argument")) {
-            MapSequence.fromMap(nodeToSyncState).put(node, SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(node)).all(new IWhereFilter<SNode>() {
-              public boolean accept(SNode it) {
-                return MapSequence.fromMap(nodeToSyncState).get(it);
-              }
-            }));
-          } else {
-            // TODO: maybe unnecessary to distinguish 
-            MapSequence.fromMap(nodeToSyncState).put(node, SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(node)).any(new IWhereFilter<SNode>() {
-              public boolean accept(SNode it) {
-                return MapSequence.fromMap(nodeToSyncState).get(it);
-              }
-            }));
-          }
+        if ((boolean) MapSequence.fromMap(nodeToSyncState).get(node) == false && SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false) != functionToAvoid) {
+          MapSequence.fromMap(nodeToSyncState).put(node, SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(node)).all(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return MapSequence.fromMap(nodeToSyncState).get(it);
+            }
+          }));
           changedSomething |= MapSequence.fromMap(nodeToSyncState).get(node);
         }
       }
     }
-
-    return nodeToSyncState;
   }
 
 
@@ -410,22 +672,495 @@ public class Optimizer {
    * Remove sync ressources whose referred variables are already synchronized in the current context.
    */
   public void removeRecursiveLocks(Map<SNode, Boolean> nodeToSyncState, List<SNode> syncRessources) {
+    System.out.println("----node to sync states");
+    for (IMapping<SNode, Boolean> nodeToSync : MapSequence.fromMap(nodeToSyncState)) {
+      System.out.println("> node " + nodeToSync.key() + " : " + SNodeOperations.getConceptDeclaration(nodeToSync.key()) + " -> " + nodeToSync.value());
+    }
     for (SNode syncRessource : ListSequence.fromList(syncRessources)) {
-      System.out.println("superfluous?" + syncRessource);
       if (MapSequence.fromMap(nodeToSyncState).get(getVariableRef(SLinkOperations.getTarget(syncRessource, "expression", true)))) {
-        System.out.println("superfluous!" + syncRessource);
         SNodeOperations.deleteNode(syncRessource);
       }
+    }
+  }
+
+  /**
+   * Remove sync ressources whose referred variables are already synchronized in the current context.
+   * Disregard definite aliases as they should rarely occur (=> are of minor importance), e.g.:
+   *   shared(int32) x;
+   *   shared(int32)* y = &x;
+   *   sync(x) { sync(y) {
+   *       x.set(1); y.set(2);
+   *   }}
+   * Or: suppose, that definite aliases exist (but do not implement their construction).
+   */
+  public void removeRecursiveLocks2(Map<SNode, Set<SNode>> dataflowGraph, Map<SNode, Set<SNode>> aliases, List<SNode> syncResources) {
+    final Set<SNode> syncedNodes = SetSequence.fromSet(new HashSet<SNode>());
+    // only consider sync context flows between nodes of the same task 
+    Map<SNode, Set<SNode>> taskSeparatedDataflowGraph = separateDataflowGraphByTasks(dataflowGraph);
+    Map<SNode, Set<SNode>> inverseDataflowGraph = invertDataflowGraph(taskSeparatedDataflowGraph);
+
+    for (SNode syncResource : ListSequence.fromList(syncResources)) {
+      if (SNodeOperations.getParent(syncResource) == null) {
+        continue;
+      }
+      // gather all aliases for the referred variable (including the variable itself) 
+      SNode variable = getVariable(SLinkOperations.getTarget(syncResource, "expression", true));
+      final List<SNode> aliasesAndSelf = new ArrayList<SNode>();
+      ListSequence.fromList(aliasesAndSelf).addElement(variable);
+
+      SNode varReference = getVariableRef(SLinkOperations.getTarget(syncResource, "expression", true));
+      SetSequence.fromSet(MapSequence.fromMap(aliases).get(varReference)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          ListSequence.fromList(aliasesAndSelf).addElement(it);
+        }
+      });
+      System.out.println("here1: " + syncResource);
+      // mark every reference to one of the aliased variables in the current sync context as synced 
+      SNode sync = SNodeOperations.getAncestor(syncResource, "TasksAndSyncs.structure.SyncStatement", false, false);
+      for (SNode aliasReference : ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(sync, "body", true), "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode ref) {
+          System.out.println("ref: " + ref + " -> " + BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), ref, "virtual_getVariable_2486081302460156153", new Object[]{}) + " sync? " + SetSequence.fromSet(syncedNodes).contains(ref));
+          return ListSequence.fromList(aliasesAndSelf).contains(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), ref, "virtual_getVariable_2486081302460156153", new Object[]{})) && !(SetSequence.fromSet(syncedNodes).contains(ref));
+        }
+      })) {
+        SetSequence.fromSet(syncedNodes).addElement(aliasReference);
+      }
+      System.out.println("here2: " + syncResource);
+
+    }
+    // let the sync context of the current variable flow as far as possible through the graph 
+    // ...disregard more complex expressions and structures 
+    // ...disregard cycles 
+    activateSyncForNodesNonRecursively(syncedNodes, taskSeparatedDataflowGraph, inverseDataflowGraph);
+
+    System.out.println("first stage:");
+    SetSequence.fromSet(syncedNodes).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+    // try to activate nodes inside cycles 
+    final Pair<Set<SNode>, Set<SNode>> optimisticallyAddedAndAllSyncNodes = activateRemainingNodes(syncedNodes, taskSeparatedDataflowGraph, inverseDataflowGraph);
+    System.out.println("second(added) stage:");
+    SetSequence.fromSet(optimisticallyAddedAndAllSyncNodes.first).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+    System.out.println("second(all) stage:");
+    SetSequence.fromSet(optimisticallyAddedAndAllSyncNodes.second).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+    deactivateNonCyclicRemainingNodes(optimisticallyAddedAndAllSyncNodes.first, optimisticallyAddedAndAllSyncNodes.second, taskSeparatedDataflowGraph, inverseDataflowGraph);
+    System.out.println("third(all) stage:");
+    SetSequence.fromSet(optimisticallyAddedAndAllSyncNodes.second).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+
+    for (SNode syncResource : ListSequence.fromList(syncResources).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SetSequence.fromSet(optimisticallyAddedAndAllSyncNodes.second).contains(SLinkOperations.getTarget(it, "expression", true));
+      }
+    })) {
+      SNodeOperations.deleteNode(syncResource);
+    }
+  }
+
+  /**
+   * Remove sync ressources whose referred variables are already synchronized in the current context.
+   * Disregard definite aliases as they should rarely occur (=> are of minor importance), e.g.:
+   *   shared(int32) x;
+   *   shared(int32)* y = &x;
+   *   sync(x) { sync(y) {
+   *       x.set(1); y.set(2);
+   *   }}
+   * Or: suppose, that definite aliases exist (but do not implement their construction).
+   */
+  public void removeRecursiveLocks3(Map<SNode, Set<SNode>> dataflowGraph, Map<SNode, Set<SNode>> aliases, List<SNode> syncResources, SNode entryFunction, Map<SNode, Set<SNode>> callGraph) {
+    final Set<SNode> syncedNodes = SetSequence.fromSet(new HashSet<SNode>());
+    System.out.println("---- original dataflow:");
+    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet())) {
+      System.out.println("for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+      SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+        }
+      });
+    }
+    // only consider sync context flows between nodes of the same task 
+    Map<SNode, Set<SNode>> nonRecursiveDataflowGraph = removeRecursiveEdges2(dataflowGraph, entryFunction, callGraph);
+    System.out.println("---- non-recursive dataflow:");
+    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).keySet())) {
+      System.out.println("for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+      SetSequence.fromSet(MapSequence.fromMap(nonRecursiveDataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+        }
+      });
+    }
+    Map<SNode, Set<SNode>> taskSeparatedDataflowGraph = separateDataflowGraphByTasks(nonRecursiveDataflowGraph);
+    System.out.println("---- separated dataflow:");
+    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).keySet())) {
+      System.out.println("for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+      SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+        }
+      });
+    }
+    Map<SNode, Set<SNode>> inverseDataflowGraph = invertDataflowGraph(taskSeparatedDataflowGraph);
+    System.out.println("---- inverse dataflow:");
+    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).keySet())) {
+      System.out.println("for " + node + " : " + SNodeOperations.getConceptDeclaration(node));
+      SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(node)).visitAll(new IVisitor<SNode>() {
+        public void visit(SNode it) {
+          System.out.println("<-- " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+        }
+      });
+    }
+
+    for (SNode syncResource : ListSequence.fromList(syncResources)) {
+      if (SNodeOperations.getParent(syncResource) == null) {
+        continue;
+      }
+      // gather all aliases for the referred variable (including the variable itself) 
+      SNode variable = getVariable(SLinkOperations.getTarget(syncResource, "expression", true));
+      final List<SNode> aliasesAndSelf = new ArrayList<SNode>();
+      ListSequence.fromList(aliasesAndSelf).addElement(variable);
+      ListSequence.fromList(aliasesAndSelf).addSequence(SetSequence.fromSet(MapSequence.fromMap(aliases).get(getVariableRef(SLinkOperations.getTarget(syncResource, "expression", true)))));
+
+      // mark every reference to one of the aliased variables in the current sync context as synced 
+      SNode sync = SNodeOperations.getAncestor(syncResource, "TasksAndSyncs.structure.SyncStatement", false, false);
+      for (SNode aliasReference : ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(sync, "body", true), "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode ref) {
+          return ListSequence.fromList(aliasesAndSelf).contains(BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), ref, "virtual_getVariable_2486081302460156153", new Object[]{}));
+        }
+      })) {
+        SetSequence.fromSet(syncedNodes).addElement(aliasReference);
+      }
+    }
+
+    // let the sync context of the current variable flow as far as possible through the graph 
+    // ...disregard cycles 
+    activateSyncForNodes(syncedNodes, taskSeparatedDataflowGraph, inverseDataflowGraph);
+
+    // remove sync resources whose references have a sync context 
+    ListSequence.fromList(syncResources).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return SetSequence.fromSet(syncedNodes).contains(SLinkOperations.getTarget(it, "expression", true));
+      }
+    }).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        SNodeOperations.deleteNode(it);
+      }
+    });
+  }
+
+
+
+  public boolean activateSyncForNodes(final Set<SNode> syncedNodes, Map<SNode, Set<SNode>> taskSeparatedDataflowGraph, Map<SNode, Set<SNode>> inverseDataflowGraph) {
+    boolean foundAnything = false;
+    boolean foundSomething = true;
+    while (foundSomething) {
+      foundSomething = false;
+      List<SNode> activatedNodes = new ArrayList<SNode>();
+      for (SNode node : SetSequence.fromSet(syncedNodes)) {
+        for (SNode nextNode : SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).get(node)).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return !(SetSequence.fromSet(syncedNodes).contains(it));
+          }
+        })) {
+          // this does not work for cycles but for every other structure: 
+          // if every incoming value/node (relevant for function arguments (and returns, in the future)) is 
+          // synced, then so must be the current node 
+          if (SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).all(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return SetSequence.fromSet(syncedNodes).contains(it);
+            }
+          })) {
+            foundSomething = foundAnything = true;
+            ListSequence.fromList(activatedNodes).addElement(nextNode);
+          }
+        }
+      }
+      SetSequence.fromSet(syncedNodes).addSequence(ListSequence.fromList(activatedNodes));
+    }
+    return foundAnything;
+  }
+
+
+
+  public static   enum FlowChangeMode {
+    activate(),
+    deactivate();
+
+  }
+
+
+
+  public Set<SNode> flowSyncForNodes(final Set<SNode> syncedNodes, Map<SNode, Set<SNode>> taskSeparatedDataflowGraph, Map<SNode, Set<SNode>> inverseDataflowGraph, final Optimizer.FlowChangeMode mode) {
+    Set<SNode> allChangedNodes = SetSequence.fromSet(new HashSet<SNode>());
+    boolean foundSomething = true;
+    while (foundSomething) {
+      foundSomething = false;
+      List<SNode> changedNodes = new ArrayList<SNode>();
+      for (SNode node : SetSequence.fromSet(syncedNodes)) {
+        for (SNode nextNode : SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).get(node)).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return (mode == Optimizer.FlowChangeMode.activate) != SetSequence.fromSet(syncedNodes).contains(it);
+          }
+        })) {
+          if (mode == Optimizer.FlowChangeMode.activate && SNodeOperations.isInstanceOf(nextNode, "com.mbeddr.core.modules.structure.Argument")) {
+            System.out.println("(active) check argument " + SPropertyOperations.getString(SNodeOperations.cast(nextNode, "com.mbeddr.core.modules.structure.Argument"), "name"));
+            SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it) {
+                System.out.println("--> in: " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+              }
+            });
+          }
+          // this does not work for cycles but for every other structure: 
+          // if every incoming value/node (relevant for function arguments (and returns, in the future)) is 
+          // synced, then so must be the current node 
+          if (mode == Optimizer.FlowChangeMode.activate) {
+            if (SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).all(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return SetSequence.fromSet(syncedNodes).contains(it);
+              }
+            })) {
+              foundSomething = true;
+              ListSequence.fromList(changedNodes).addElement(nextNode);
+            }
+          } else {
+            if (SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).any(new IWhereFilter<SNode>() {
+              public boolean accept(SNode it) {
+                return !(SetSequence.fromSet(syncedNodes).contains(it));
+              }
+            })) {
+              foundSomething = true;
+              ListSequence.fromList(changedNodes).addElement(nextNode);
+            }
+          }
+        }
+      }
+      if (mode == Optimizer.FlowChangeMode.activate) {
+        SetSequence.fromSet(syncedNodes).addSequence(ListSequence.fromList(changedNodes));
+      } else {
+        SetSequence.fromSet(syncedNodes).removeSequence(ListSequence.fromList(changedNodes));
+      }
+      SetSequence.fromSet(allChangedNodes).addSequence(ListSequence.fromList(changedNodes));
+    }
+    return allChangedNodes;
+  }
+
+  public void activateSyncForNodesNonRecursively(final Set<SNode> syncedNodes, Map<SNode, Set<SNode>> taskSeparatedDataflowGraph, Map<SNode, Set<SNode>> inverseDataflowGraph) {
+    final Map<SNode, Set<SNode>> syncNodeToInNodeFunctions = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    // At this point, the synced nodes are exactly variable references which are explicitly synchronized in the  
+    // same function. 
+    SetSequence.fromSet(syncedNodes).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        MapSequence.fromMap(syncNodeToInNodeFunctions).put(it, SetSequence.fromSet(new HashSet<SNode>()));
+        SetSequence.fromSet(MapSequence.fromMap(syncNodeToInNodeFunctions).get(it)).addElement(SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false));
+      }
+    });
+    boolean foundSomething = true;
+    while (foundSomething) {
+      foundSomething = false;
+      Map<SNode, Set<SNode>> newSyncNodeToInNodeFunctions = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+      for (SNode node : SetSequence.fromSet(syncedNodes)) {
+        SNode nodeFunction = SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
+        for (SNode nextNode : SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).get(node)).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return SetSequence.fromSet(syncedNodes).contains(it);
+          }
+        })) {
+          SNode nextNodeFunction = SNodeOperations.getAncestor(nextNode, "com.mbeddr.core.modules.structure.Function", false, false);
+          if (SNodeOperations.isInstanceOf(nextNode, "com.mbeddr.core.modules.structure.Argument")) {
+            System.out.println("(active) check argument " + SPropertyOperations.getString(SNodeOperations.cast(nextNode, "com.mbeddr.core.modules.structure.Argument"), "name"));
+            SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).visitAll(new IVisitor<SNode>() {
+              public void visit(SNode it) {
+                System.out.println("--> in: " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+              }
+            });
+          }
+          // this does not work for cycles but for every other structure: 
+          // if every incoming value/node (relevant for function arguments (and returns, in the future)) is 
+          // synced, then so must be the current node 
+          if (SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(nextNode)).all(new IWhereFilter<SNode>() {
+            public boolean accept(SNode it) {
+              return SetSequence.fromSet(syncedNodes).contains(it);
+            }
+          }) && (nodeFunction == nextNodeFunction || !(SetSequence.fromSet(MapSequence.fromMap(syncNodeToInNodeFunctions).get(node)).contains(nextNodeFunction)))) {
+            foundSomething = true;
+            Set<SNode> inNodeFunctions = SetSequence.fromSet(new HashSet<SNode>());
+            SetSequence.fromSet(inNodeFunctions).addSequence(SetSequence.fromSet(MapSequence.fromMap(syncNodeToInNodeFunctions).get(node)));
+            SetSequence.fromSet(inNodeFunctions).addElement(nodeFunction);
+            MapSequence.fromMap(newSyncNodeToInNodeFunctions).put(nextNode, inNodeFunctions);
+          }
+        }
+      }
+      SetSequence.fromSet(syncedNodes).addSequence(SetSequence.fromSet(MapSequence.fromMap(newSyncNodeToInNodeFunctions).keySet()));
     }
   }
 
 
 
 
+  public void deactivateNonCyclicRemainingNodes(Set<SNode> newOptimisticNodeToSyncStates, Set<SNode> allOptimisticallySyncedNodes, Map<SNode, Set<SNode>> taskSeparatedDataflowGraph, Map<SNode, Set<SNode>> inverseDataflowGraph) {
+    boolean foundSomething = true;
+
+    while (foundSomething) {
+      foundSomething = false;
+      System.out.println("is false...");
+
+      for (final SNode node : SetSequence.fromSet(newOptimisticNodeToSyncStates)) {
+        final Set<SNode> allOptimisticallySyncedNodesCopy = SetSequence.fromSet(new HashSet<SNode>());
+        SetSequence.fromSet(allOptimisticallySyncedNodesCopy).addSequence(SetSequence.fromSet(allOptimisticallySyncedNodes));
+        if (!(SetSequence.fromSet(allOptimisticallySyncedNodesCopy).contains(node))) {
+          continue;
+        }
+        // at this point 'node' and its parents are still activated => check whether the deactivation of 'node' 
+        // will cause one of its parents to be deactivated => if not, there is no cyclic structure so that 'node' 
+        // can actually safely be deactivated 
+        SetSequence.fromSet(allOptimisticallySyncedNodesCopy).removeElement(node);
+        flowSyncForNodes(allOptimisticallySyncedNodesCopy, taskSeparatedDataflowGraph, inverseDataflowGraph, Optimizer.FlowChangeMode.deactivate);
+        if (SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(node)).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return !(SetSequence.fromSet(allOptimisticallySyncedNodesCopy).contains(node));
+          }
+        })) {
+          allOptimisticallySyncedNodes = allOptimisticallySyncedNodesCopy;
+          foundSomething = true;
+          System.out.println("...true now");
+        }
+      }
+      System.out.println("is false?..." + foundSomething);
+    }
+  }
+
+
+
+  public Map<SNode, Boolean> activateSyncByChance(Map<SNode, Boolean> nodeToSyncState, SNode luckyNode) {
+    final Map<SNode, Boolean> nodeToSyncStateByChance = MapSequence.fromMap(new HashMap<SNode, Boolean>());
+    MapSequence.fromMap(nodeToSyncState).visitAll(new IVisitor<IMapping<SNode, Boolean>>() {
+      public void visit(IMapping<SNode, Boolean> it) {
+        MapSequence.fromMap(nodeToSyncStateByChance).put(it.key(), it.value());
+      }
+    });
+    MapSequence.fromMap(nodeToSyncStateByChance).put(luckyNode, true);
+    return nodeToSyncStateByChance;
+  }
+
+
+
+  public Pair<Set<SNode>, Set<SNode>> activateRemainingNodes(final Set<SNode> syncedNodes, Map<SNode, Set<SNode>> taskSeparatedDataflowGraph, final Map<SNode, Set<SNode>> inverseDataflowGraph) {
+    final Set<SNode> optimisticallyAddedSyncNodes = SetSequence.fromSet(new HashSet<SNode>());
+    // Activate only the arguments whose parents are not completely deactivated since for such nodes only a 
+    // cyclic call graph structure would exist (or simply no proper sync inside a function outside any cycle 
+    // => sync activation could both be unsafe for libraries (although not relevant, here) 
+    //    and unnecessary (since either no path from main to the current function exists or a false activation 
+    //    would be performed (at later on undone on detection)) 
+
+    // TODO: change to: at least one incoming 
+    for (SNode node : Sequence.fromIterable(SNodeOperations.ofConcept(MapSequence.fromMap(taskSeparatedDataflowGraph).keySet(), "com.mbeddr.core.modules.structure.Argument")).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        return !(SetSequence.fromSet(syncedNodes).contains(it)) && SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(it)).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode inNode) {
+            return SetSequence.fromSet(syncedNodes).contains(inNode);
+          }
+        });
+      }
+    })) {
+      SetSequence.fromSet(optimisticallyAddedSyncNodes).addElement(node);
+    }
+
+    // Merge new mappings and old mappings (and prefer the optimistic ones), then augment the mappings by flowing 
+    // the new sync states forward. 
+    Set<SNode> allOptimisticSyncNodes = SetSequence.fromSet(new HashSet<SNode>());
+    SetSequence.fromSet(allOptimisticSyncNodes).addSequence(SetSequence.fromSet(syncedNodes));
+    SetSequence.fromSet(allOptimisticSyncNodes).addSequence(SetSequence.fromSet(optimisticallyAddedSyncNodes));
+    flowSyncForNodes(allOptimisticSyncNodes, taskSeparatedDataflowGraph, inverseDataflowGraph, Optimizer.FlowChangeMode.activate);
+
+    System.out.println("first->second (added):");
+    SetSequence.fromSet(optimisticallyAddedSyncNodes).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+    System.out.println("first->second (all):");
+    SetSequence.fromSet(allOptimisticSyncNodes).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
+      }
+    });
+
+    // Due to the optimistic activation some inconstitencies between the sync states of parents (partially  
+    // deactivated) and children (activated) might have been created => resolve them! 
+    SetSequence.fromSet(flowSyncForNodes(allOptimisticSyncNodes, taskSeparatedDataflowGraph, inverseDataflowGraph, Optimizer.FlowChangeMode.deactivate)).visitAll(new IVisitor<SNode>() {
+      public void visit(SNode it) {
+        if (SetSequence.fromSet(optimisticallyAddedSyncNodes).contains(it)) {
+          SetSequence.fromSet(optimisticallyAddedSyncNodes).removeElement(it);
+        }
+      }
+    });
+
+    return new Pair(optimisticallyAddedSyncNodes, allOptimisticSyncNodes);
+  }
+
+
+
+  public Map<SNode, Set<SNode>> invertDataflowGraph(Map<SNode, Set<SNode>> dataflowGraph) {
+    Map<SNode, Set<SNode>> inverseDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (IMapping<SNode, Set<SNode>> nodeToOthers : MapSequence.fromMap(dataflowGraph)) {
+      for (SNode other : SetSequence.fromSet(nodeToOthers.value())) {
+        if (!(MapSequence.fromMap(inverseDataflowGraph).containsKey(other))) {
+          MapSequence.fromMap(inverseDataflowGraph).put(other, SetSequence.fromSet(new HashSet<SNode>()));
+        }
+        SetSequence.fromSet(MapSequence.fromMap(inverseDataflowGraph).get(other)).addElement(nodeToOthers.key());
+      }
+    }
+    return inverseDataflowGraph;
+  }
+
+
+
+  public Map<SNode, Set<SNode>> separateDataflowGraphByTasks(Map<SNode, Set<SNode>> dataflowGraph) {
+    Map<SNode, Set<SNode>> taskSeparatedDataflowGraph = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
+    for (final SNode fromNode : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet())) {
+      MapSequence.fromMap(taskSeparatedDataflowGraph).put(fromNode, SetSequence.fromSet(new HashSet<SNode>()));
+      for (SNode toNode : SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).get(fromNode)).where(new IWhereFilter<SNode>() {
+        public boolean accept(SNode toNode) {
+          SNode fromContext = getNearestContext(fromNode);
+          SNode toContext = getNearestContext(toNode);
+          return fromContext == toContext || SNodeOperations.isInstanceOf(fromContext, "com.mbeddr.core.modules.structure.Function") && SNodeOperations.isInstanceOf(toContext, "com.mbeddr.core.modules.structure.Function");
+        }
+      })) {
+        SetSequence.fromSet(MapSequence.fromMap(taskSeparatedDataflowGraph).get(fromNode)).addElement(toNode);
+      }
+    }
+    return taskSeparatedDataflowGraph;
+  }
+
+
+
+  public SNode getNearestContext(SNode node) {
+    SNode surroundingTask = SNodeOperations.getAncestor(node, "TasksAndSyncs.structure.Task", false, false);
+    if ((surroundingTask != null)) {
+      return surroundingTask;
+    }
+    return SNodeOperations.getAncestor(node, "com.mbeddr.core.modules.structure.Function", false, false);
+  }
+
+
+
   /**
    * Remove sync ressources for variables that are only read (directly or via some alias).
    */
-  public void removeReadonlyLocks(Map<SNode, Set<SNode>> aliases, List<SNode> syncRessources, List<SNode> variables, final List<SNode> sharedSets) {
+  public void removeReadonlyLocks(Map<SNode, Set<SNode>> aliases, List<SNode> syncRessources, List<SNode> variables, final List<SNode> sharedSets, final List<SNode> sharedGets) {
+    System.out.println("hae?" + variables);
     for (SNode variable : ListSequence.fromList(variables)) {
       final List<SNode> aliasesAndSelf = new ArrayList<SNode>();
       ListSequence.fromList(aliasesAndSelf).addElement(variable);
@@ -436,13 +1171,22 @@ public class Optimizer {
           }
         });
       }
-      // if no .set expression exists for any alias of the current variable v every synchronization  
-      // for v is redundant 
+      // if no .set expression exists for any alias of the current variable v and also no .get... = ... 
+      // every synchronization for v is redundant 
+      System.out.println("-----" + variable);
       if (ListSequence.fromList(aliasesAndSelf).all(new IWhereFilter<SNode>() {
         public boolean accept(final SNode alias) {
           return ListSequence.fromList(sharedSets).where(new IWhereFilter<SNode>() {
             public boolean accept(SNode sharedSet) {
+              System.out.println("shared set? " + (getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) == alias));
               return getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) == alias;
+            }
+          }).isEmpty() && ListSequence.fromList(sharedGets).where(new IWhereFilter<SNode>() {
+            public boolean accept(SNode sharedGet) {
+              System.out.println("shared get? " + (getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) == alias));
+              System.out.println("assignment? " + ((SNodeOperations.getAncestor(sharedGet, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false) != null)));
+              System.out.println("left? " + (ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(SNodeOperations.getAncestor(sharedGet, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false), "left", true), "TasksAndSyncs.structure.SharedGet", false, new String[]{})).contains(sharedGet)));
+              return getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) == alias && (SNodeOperations.getAncestor(sharedGet, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false) != null) && ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(SNodeOperations.getAncestor(sharedGet, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false), "left", true), "TasksAndSyncs.structure.SharedGet", false, new String[]{})).contains(sharedGet);
             }
           }).isEmpty();
         }
@@ -468,20 +1212,22 @@ public class Optimizer {
   public void narrowSyncs(Map<SNode, Set<SNode>> aliases, List<SNode> syncs) {
     for (SNode sync : ListSequence.fromList(syncs)) {
       // gather all variables whose shared ressources are synchronized by the current sync 
-      final Set<SNode> syncRessourceAliases = SetSequence.fromSet(new HashSet<SNode>());
+      // TODO: should be able to simplify by just checking references to the actual variable (not aliases) 
+      final Set<SNode> syncResourceAliases = SetSequence.fromSet(new HashSet<SNode>());
       for (SNode syncRessource : ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true))) {
         SNode variable = getVariable(SLinkOperations.getTarget(syncRessource, "expression", true));
-        SetSequence.fromSet(syncRessourceAliases).addElement(variable);
+        SetSequence.fromSet(syncResourceAliases).addElement(variable);
+        // TODO: change to aliases[getReferences(syncResource.expression)]... 
         SetSequence.fromSet(MapSequence.fromMap(aliases).get(variable)).visitAll(new IVisitor<SNode>() {
           public void visit(SNode it) {
-            SetSequence.fromSet(syncRessourceAliases).addElement(SNodeOperations.cast(it, "com.mbeddr.core.statements.structure.IVariableDeclaration"));
+            SetSequence.fromSet(syncResourceAliases).addElement(SNodeOperations.cast(it, "com.mbeddr.core.statements.structure.IVariableDeclaration"));
           }
         });
       }
 
       // in order to keep the scopes and 'shadows' of variables all shifted statements and the  
       // sync itself are wrapped inside another block 
-      SNode surroundingBlock = null;
+      SNode surroundingBlock;
       List<SNode> firstStatements = new ArrayList<SNode>();
       List<SNode> lastStatements = new ArrayList<SNode>();
 
@@ -494,10 +1240,10 @@ public class Optimizer {
           }
         }).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode reference) {
-            return SetSequence.fromSet(syncRessourceAliases).contains(getVariable(SNodeOperations.cast(reference, "com.mbeddr.core.expressions.structure.Expression")));
+            return SetSequence.fromSet(syncResourceAliases).contains(getVariable(SNodeOperations.cast(reference, "com.mbeddr.core.expressions.structure.Expression")));
           }
         });
-        if (shiftIsUnsafe) {
+        if (shiftIsUnsafe || isControlFlowBreak(firstStatement)) {
           break;
         }
         ListSequence.fromList(firstStatements).addElement(firstStatement);
@@ -511,7 +1257,7 @@ public class Optimizer {
           }
         }).any(new IWhereFilter<SNode>() {
           public boolean accept(SNode reference) {
-            return SetSequence.fromSet(syncRessourceAliases).contains(getVariable(SNodeOperations.cast(reference, "com.mbeddr.core.expressions.structure.Expression")));
+            return SetSequence.fromSet(syncResourceAliases).contains(getVariable(SNodeOperations.cast(reference, "com.mbeddr.core.expressions.structure.Expression")));
           }
         });
         if (shiftIsUnsafe) {
@@ -538,6 +1284,12 @@ public class Optimizer {
         ListSequence.fromList(SLinkOperations.getTargets(surroundingBlock, "statements", true)).addSequence(ListSequence.fromList(lastStatements));
       }
     }
+  }
+
+
+
+  private boolean isControlFlowBreak(SNode statement) {
+    return SNodeOperations.isInstanceOf(statement, "com.mbeddr.core.statements.structure.BreakStatement") || SNodeOperations.isInstanceOf(statement, "com.mbeddr.core.statements.structure.ContinueStatement") || SNodeOperations.isInstanceOf(statement, "com.mbeddr.core.modules.structure.GotoStatement") || SNodeOperations.isInstanceOf(statement, "com.mbeddr.core.modules.structure.ReturnStatement") || SNodeOperations.isInstanceOf(statement, "com.mbeddr.core.statements.structure.BreakStatement");
   }
 
 
@@ -604,29 +1356,5 @@ public class Optimizer {
       return SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(expr, "com.mbeddr.core.pointers.structure.ReferenceExpr"), "expression", true), "com.mbeddr.core.statements.structure.IVariableReference");
     }
     return null;
-  }
-
-
-
-  public void removeRecursiveSyncs(final Map<SNode, Map<SNode, Boolean>> nodeToReferencedNodes, Set<SNode> nodesWithUnknownStates) {
-    SetSequence.fromSet(nodesWithUnknownStates).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        MapSequence.fromMap(nodeToReferencedNodes).removeKey(it);
-      }
-    });
-    for (IMapping<SNode, Map<SNode, Boolean>> syncResourceAndRefedNodes : MapSequence.fromMap(nodeToReferencedNodes).where(new IWhereFilter<IMapping<SNode, Map<SNode, Boolean>>>() {
-      public boolean accept(IMapping<SNode, Map<SNode, Boolean>> it) {
-        return SNodeOperations.isInstanceOf(it.key(), "TasksAndSyncs.structure.SyncRessource");
-      }
-    })) {
-      boolean isSynced = MapSequence.fromMap(syncResourceAndRefedNodes.value()).all(new IWhereFilter<IMapping<SNode, Boolean>>() {
-        public boolean accept(IMapping<SNode, Boolean> it) {
-          return it.value();
-        }
-      });
-      if (isSynced) {
-        SNodeOperations.deleteNode(syncResourceAndRefedNodes.key());
-      }
-    }
   }
 }

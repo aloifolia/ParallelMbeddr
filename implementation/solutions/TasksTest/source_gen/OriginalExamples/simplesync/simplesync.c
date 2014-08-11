@@ -9,7 +9,7 @@
 
 static GenericSharedDeclarations_SharedOf_int32_0_t simplesync_value;
 
-static int32_t simplesync_counter;
+static int32_t simplesync_counter = 0;
 
 typedef struct simplesync_Args_a0i0c simplesync_Args_a0i0c_t;
 struct simplesync_Args_a0i0c {
@@ -40,11 +40,11 @@ int32_t main(int32_t argc, char* argv[])
   
   simplesync_counter++;
   assert(simplesync_counter == 0);
-  GenericSyncDeclarations_startSyncFor1Mutex(&simplesync_value.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(simplesync_value).mutex);
   {
     simplesync_value.value = 5;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&simplesync_value.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(simplesync_value).mutex);
   simplesync_counter--;
   assert(simplesync_counter == 1);
   

@@ -20,9 +20,11 @@ int32_t main(int32_t argc, char* argv[])
        * j is an alias for &i => its sync can be removed
        */
 
+      GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
       {
         j->value = 5;
       }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
     }
   }
   GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);

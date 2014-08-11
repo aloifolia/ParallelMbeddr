@@ -49,11 +49,11 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_uint32_0_t counter;
   pthread_mutex_init(&counter.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer = &counter;
-  GenericSyncDeclarations_startSyncFor1Mutex(&counter.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(counter).mutex);
   {
     counter.value = 0;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&counter.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(counter).mutex);
   
   GenericTaskDeclarations_Task_t mapperTask = pi_taskInit_a8a5(queuePointer, counterPointer);
   GenericTaskDeclarations_VoidFuture_t mappers[PI_MAPPERCOUNT];
@@ -69,11 +69,11 @@ int32_t main(int32_t argc, char* argv[])
   
   GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0q0f(queuePointer, resultPointer));
   
-  GenericSyncDeclarations_startSyncFor1Mutex(&result.mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(result).mutex);
   {
     printf("pi: %.50Lf",result.value);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&result.mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(result).mutex);
   
   return 0;
 }
@@ -85,19 +85,19 @@ static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32
     uint32_t start;
     uint32_t end;
     
-    GenericSyncDeclarations_startSyncFor1Mutex(&counter->mutex);
+    GenericSyncDeclarations_startSyncFor1Mutex(&(counter)->mutex);
     {
       start = counter->value;
       if ( start == threshold ) 
       {
-        GenericSyncDeclarations_stopSyncFor1Mutex(&counter->mutex);
+        GenericSyncDeclarations_stopSyncFor1Mutex(&(counter)->mutex);
         break;
       }
       uint32_t possibleEnd = start + PI_BLOCKSIZE;
       end = (possibleEnd <= threshold) ? (possibleEnd) : (threshold);
       counter->value = end;
     }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&counter->mutex);
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(counter)->mutex);
     
     queue_queueSafeAdd(resultQueue, pi_calcPiBlock(start, end));
   }
@@ -106,7 +106,7 @@ static void pi_map(uint32_t threshold, GenericSharedDeclarations_SharedOf_uint32
 static void pi_reduce(uint32_t numberOfItems, GenericSharedDeclarations_SharedOf_long_double_0_t* result, queue_SharedTypes_0_SharedOf_Queue_0_t* resultQueue) 
 {
   
-  GenericSyncDeclarations_startSyncFor1Mutex(&result->mutex);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(result)->mutex);
   {
     result->value = 0;
     for ( uint32_t i = 0; i < numberOfItems; ++i )
@@ -116,7 +116,7 @@ static void pi_reduce(uint32_t numberOfItems, GenericSharedDeclarations_SharedOf
       result->value = item + result->value;
     }
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&result->mutex);
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(result)->mutex);
   
 }
 

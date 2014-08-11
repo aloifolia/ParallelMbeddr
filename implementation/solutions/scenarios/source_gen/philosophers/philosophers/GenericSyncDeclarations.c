@@ -39,7 +39,7 @@ void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0)
   }
 }
 
-void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2) 
+void GenericSyncDeclarations_startSyncFor2Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1) 
 {
   uint8_t waitingCounter = 0;
   uint16_t mask = 16;
@@ -50,10 +50,6 @@ void GenericSyncDeclarations_startSyncFor3Mutexes(pthread_mutex_t* mutex_0, pthr
     {
       GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
     } else if (pthread_mutex_trylock(mutex_1) != 0) {
-      pthread_mutex_unlock(mutex_0);
-      GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
-    } else if (pthread_mutex_trylock(mutex_2) != 0) {
-      pthread_mutex_unlock(mutex_1);
       pthread_mutex_unlock(mutex_0);
       GenericSyncDeclarations_backoffExponentially(&waitingCounter, &mask, &seed);
     }    else 
@@ -68,10 +64,9 @@ void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0)
   pthread_mutex_unlock(mutex_0);
 }
 
-void GenericSyncDeclarations_stopSyncFor3Mutexes(pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2, pthread_mutex_t* mutex_3) 
+void GenericSyncDeclarations_stopSyncFor2Mutexes(pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2) 
 {
   pthread_mutex_unlock(mutex_1);
   pthread_mutex_unlock(mutex_2);
-  pthread_mutex_unlock(mutex_3);
 }
 

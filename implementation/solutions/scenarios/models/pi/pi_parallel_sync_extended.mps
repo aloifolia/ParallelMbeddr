@@ -170,7 +170,7 @@
               <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="9107941546575777430" nodeInfo="ng">
                 <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="9107941546575777431" nodeInfo="ng">
                   <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="9107941546575777432" nodeInfo="ng">
-                    <property name="escapedValue" nameId="87nw.2557074442922438158" value="sync not necessary since the usage of the 'isFull' already synchronizes the modifying access\nto 'queue' =&gt; lock ellision would be very beneficial, here" />
+                    <property name="escapedValue" nameId="87nw.2557074442922438158" value="sync not necessary since the usage of 'isFull' already synchronizes the modifying access\nto 'queue' =&gt; lock ellision would be very beneficial, here" />
                   </node>
                 </node>
               </node>
@@ -625,6 +625,12 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="3631258592966176856" nodeInfo="ng">
+          <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="3631258592966186369" nodeInfo="ng">
+            <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+            <property name="value" nameId="mj1l.2212975673976043696" value="-1" />
+          </node>
+        </node>
       </node>
       <node role="type" roleId="mj1l.318113533128716676" type="mj1l.Int32tType" typeId="mj1l.8463282783691618440" id="9107941546541180008" nodeInfo="ng">
         <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
@@ -646,6 +652,9 @@
           </node>
         </node>
       </node>
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="3631258592966272117" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1407342023398_2" />
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="9107941546541499096" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="queueSetInsertAt" />
@@ -736,6 +745,12 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="3631258592966196015" nodeInfo="ng">
+          <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="3631258592966196016" nodeInfo="ng">
+            <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+            <property name="value" nameId="mj1l.2212975673976043696" value="-1" />
+          </node>
+        </node>
       </node>
       <node role="type" roleId="mj1l.318113533128716676" type="mj1l.Int32tType" typeId="mj1l.8463282783691618440" id="9107941546541171105" nodeInfo="ng">
         <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
@@ -757,6 +772,9 @@
           </node>
         </node>
       </node>
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="3631258592966260619" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1407342019800_1" />
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="9107941546541619770" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="queueSetDeleteAt" />
@@ -867,6 +885,12 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="3631258592966301230" nodeInfo="ng">
+          <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="3631258592966301231" nodeInfo="ng">
+            <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+            <property name="value" nameId="mj1l.2212975673976043696" value="-1" />
+          </node>
+        </node>
       </node>
       <node role="type" roleId="mj1l.318113533128716676" type="mj1l.LongDoubleType" typeId="mj1l.9149785691754701072" id="9107941546541208346" nodeInfo="ng">
         <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
@@ -895,6 +919,9 @@
           <property name="const" nameId="mj1l.2941277002445651368" value="false" />
         </node>
       </node>
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="3631258592966283617" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1407342026902_3" />
     </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="9107941546541292892" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="queueSetItemAt" />
@@ -1964,7 +1991,7 @@
                   <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="9107941546567958966" nodeInfo="ng">
                     <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="9107941546567958967" nodeInfo="ng">
                       <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="9107941546567958968" nodeInfo="ng">
-                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="this is quite inefficient since only this thread will ever access the array;\nalso, resultQueue need not be locked since it is never changed from anywhere (but lock ellision\nshould not necessarily be done in case other, more costly locks could be avoided by keeping locks\nfor 'resultQueue')\n=&gt; lock ellsion for 'resultQueues' (and maybe 'resultQueue')" />
+                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="this is quite inefficient since only this thread will ever access the array;\nalso, resultQueue need not be locked since it is never changed from anywhere (but lock ellision\nshould not necessarily be done, in case other, more costly, locks could be avoided by keeping locks\nfor 'resultQueue')\n=&gt; lock ellsion for 'resultQueues' (and maybe 'resultQueue')" />
                       </node>
                     </node>
                   </node>
@@ -2288,7 +2315,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="9107941546556352706" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="9107941546556352707" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="9107941546556352708" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="the synchronization here is acutally not necessary since the corresponding mapper task will not\nproceed before the modification of 'isFullFlag' below\n=&gt; lock ellision would be helpful" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="the synchronization here is actually not necessary since the corresponding mapper task will not\nproceed before the modification of 'isFullFlag' below\n=&gt; lock ellision would be helpful" />
               </node>
             </node>
           </node>

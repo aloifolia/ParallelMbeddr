@@ -21,6 +21,7 @@ int32_t main(int32_t argc, char* argv[])
    * y is never written => sync will be removed
    */
 
+  GenericSyncDeclarations_startSyncFor1Mutex(&(y).mutex);
   {
     {
       GenericSyncDeclarations_startSyncFor1Mutex(&(x).mutex);
@@ -36,6 +37,7 @@ int32_t main(int32_t argc, char* argv[])
       unrelated_references_doHeavyWork(&y);
     }
   }
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(y).mutex);
   
   return 0;
 }
