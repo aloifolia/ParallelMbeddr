@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.Makefile" file="Makefile" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.TypeSizeConfiguration (l.r.across_multiple_functions)" file="TypeSizeConfiguration (l.r.across_multiple_functions)" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.recursive_lock" file="recursive_lock.c" />
+  <dependency className="lockellision.recursive_lock.across_multiple_functions.recursive_lock" file="recursive_lock.h" />
+</dependenciesRoot>
+

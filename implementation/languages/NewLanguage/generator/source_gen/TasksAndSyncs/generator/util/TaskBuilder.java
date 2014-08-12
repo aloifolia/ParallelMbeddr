@@ -1545,11 +1545,6 @@ public class TaskBuilder {
         }
       }
     });
-    System.out.println("descendant refs:" + varRefs);
-    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(node, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference")) {
-      ListSequence.fromList(varRefs).addElement(SNodeOperations.cast(SNodeOperations.copyNode(SLinkOperations.getTarget(node, "expression", true)), "com.mbeddr.core.statements.structure.IVariableReference"));
-    }
-    System.out.println("-> with node refs:" + varRefs);
     return varRefs;
   }
 }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="el7j5hkw5dd7kf5u3f68v6ibxfp7zkl">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="7vhtkhegamex0u1fn09y7c4n8vgrkvd" />
+  <common hash="-e50t9nmsq90ble1zdbjix8i8bhbmitv">
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
+    <file name="GenericSharedDeclarations.c" />
+    <file name="GenericSharedDeclarations.h" />
+    <file name="GenericSyncDeclarations.c" />
+    <file name="GenericSyncDeclarations.h" />
+    <file name="GenericTaskDeclarations.c" />
+    <file name="GenericTaskDeclarations.h" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (l.r.simple)" />
+    <file name="recursive_lock.c" />
+    <file name="recursive_lock.h" />
+  </common>
+  <source id="53264776286833241" name="recursive_lock" hash="8jojad7q6exnt5u03hv66xprpwb8tt8" />
+  <source id="53264776286834426" name="BuildConfiguration (l.r.simple)" hash="5le2lw9mlah5s5ah4lorxw2cu7dcfaa" />
+</dependencies>
+

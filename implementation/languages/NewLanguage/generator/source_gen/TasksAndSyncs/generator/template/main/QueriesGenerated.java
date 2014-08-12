@@ -477,20 +477,20 @@ public class QueriesGenerated {
       typeOfArg = SNodeOperations.cast(SLinkOperations.getTarget(typeOfArg, "baseType", true), "com.mbeddr.core.pointers.structure.ArrayType");
       outerPointerType.value = new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
-          final SNode node_487461275046056265 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066761677 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = outerPointerType.value;
               return res;
             }
           }.invoke();
-          SNode node_487461275046056264 = new _FunctionTypes._return_P0_E0<SNode>() {
+          SNode node_4503193035066761676 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.pointers.structure.PointerType", null);
-              SLinkOperations.setTarget(res, "baseType", node_487461275046056265, true);
+              SLinkOperations.setTarget(res, "baseType", node_4503193035066761677, true);
               return res;
             }
           }.invoke();
-          return node_487461275046056264;
+          return node_4503193035066761676;
         }
       }.invoke();
     }
@@ -751,14 +751,14 @@ public class QueriesGenerated {
       for (final SNode syncStart : ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SyncStart", false, new String[]{}))) {
         SNode syncStartCall = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode node_487461275046057100 = new _FunctionTypes._return_P0_E0<SNode>() {
+            SNode node_4503193035066762512 = new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
                 SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.FunctionCall", null);
                 SLinkOperations.setTarget(res, "function", MapSequence.fromMap(argCountToStartSyncFunc).get(ListSequence.fromList(SLinkOperations.getTargets(syncStart, "exprs", true)).count()), false);
                 return res;
               }
             }.invoke();
-            return node_487461275046057100;
+            return node_4503193035066762512;
           }
         }.invoke();
         ListSequence.fromList(SLinkOperations.getTargets(syncStartCall, "actuals", true)).addSequence(ListSequence.fromList(SLinkOperations.getTargets(syncStart, "exprs", true)));
@@ -767,14 +767,14 @@ public class QueriesGenerated {
       for (final SNode syncStop : ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SyncStop", false, new String[]{}))) {
         SNode syncStopCall = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode node_487461275046057136 = new _FunctionTypes._return_P0_E0<SNode>() {
+            SNode node_4503193035066762548 = new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
                 SNode res = SConceptOperations.createNewNode("com.mbeddr.core.modules.structure.FunctionCall", null);
                 SLinkOperations.setTarget(res, "function", MapSequence.fromMap(argCountToStopSyncFunc).get(ListSequence.fromList(SLinkOperations.getTargets(syncStop, "exprs", true)).count()), false);
                 return res;
               }
             }.invoke();
-            return node_487461275046057136;
+            return node_4503193035066762548;
           }
         }.invoke();
         ListSequence.fromList(SLinkOperations.getTargets(syncStopCall, "actuals", true)).addSequence(ListSequence.fromList(SLinkOperations.getTargets(syncStop, "exprs", true)));
@@ -829,13 +829,13 @@ public class QueriesGenerated {
 
         SNode syncWrapper = new _FunctionTypes._return_P0_E0<SNode>() {
           public SNode invoke() {
-            SNode node_487461275046057303 = new _FunctionTypes._return_P0_E0<SNode>() {
+            SNode node_4503193035066762715 = new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
                 SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.StatementList", null);
                 return res;
               }
             }.invoke();
-            return node_487461275046057303;
+            return node_4503193035066762715;
           }
         }.invoke();
         SNodeOperations.replaceWithAnother(sync, syncWrapper);
@@ -844,23 +844,23 @@ public class QueriesGenerated {
         for (final SNode namedRessource : Sequence.fromIterable(SNodeOperations.ofConcept(SLinkOperations.getTargets(sync, "ressources", true), "TasksAndSyncs.structure.SyncRessourceNamed"))) {
           final SNode namedRessourceDeclaration = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
-              final SNode node_487461275046057332 = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(namedRessource, "expression", true));
-              final SNode node_487461275046057343 = new _FunctionTypes._return_P0_E0<SNode>() {
+              final SNode node_4503193035066762744 = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(namedRessource, "expression", true));
+              final SNode node_4503193035066762755 = new _FunctionTypes._return_P0_E0<SNode>() {
                 public SNode invoke() {
                   SNode res = SLinkOperations.getTarget(namedRessource, "expression", true);
                   return res;
                 }
               }.invoke();
-              SNode node_487461275046057331 = new _FunctionTypes._return_P0_E0<SNode>() {
+              SNode node_4503193035066762743 = new _FunctionTypes._return_P0_E0<SNode>() {
                 public SNode invoke() {
                   SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.LocalVariableDeclaration", null);
                   SPropertyOperations.set(res, "name", (SPropertyOperations.getString(namedRessource, "name")));
-                  SLinkOperations.setTarget(res, "type", node_487461275046057332, true);
-                  SLinkOperations.setTarget(res, "init", node_487461275046057343, true);
+                  SLinkOperations.setTarget(res, "type", node_4503193035066762744, true);
+                  SLinkOperations.setTarget(res, "init", node_4503193035066762755, true);
                   return res;
                 }
               }.invoke();
-              return node_487461275046057331;
+              return node_4503193035066762743;
             }
           }.invoke();
 
@@ -879,35 +879,35 @@ public class QueriesGenerated {
             System.out.println("......should replace.....");
             SNodeOperations.replaceWithAnother(syncRessourceRef, new _FunctionTypes._return_P0_E0<SNode>() {
               public SNode invoke() {
-                SNode node_487461275046057411 = new _FunctionTypes._return_P0_E0<SNode>() {
+                SNode node_4503193035066762823 = new _FunctionTypes._return_P0_E0<SNode>() {
                   public SNode invoke() {
                     SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.LocalVarRef", null);
                     SLinkOperations.setTarget(res, "var", namedRessourceDeclaration, false);
                     return res;
                   }
                 }.invoke();
-                return node_487461275046057411;
+                return node_4503193035066762823;
               }
             }.invoke());
           }
 
           SNodeOperations.replaceWithAnother(namedRessource, new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
-              final SNode node_487461275046057422 = new _FunctionTypes._return_P0_E0<SNode>() {
+              final SNode node_4503193035066762834 = new _FunctionTypes._return_P0_E0<SNode>() {
                 public SNode invoke() {
                   SNode res = SConceptOperations.createNewNode("com.mbeddr.core.statements.structure.LocalVarRef", null);
                   SLinkOperations.setTarget(res, "var", namedRessourceDeclaration, false);
                   return res;
                 }
               }.invoke();
-              SNode node_487461275046057421 = new _FunctionTypes._return_P0_E0<SNode>() {
+              SNode node_4503193035066762833 = new _FunctionTypes._return_P0_E0<SNode>() {
                 public SNode invoke() {
                   SNode res = SConceptOperations.createNewNode("TasksAndSyncs.structure.SyncRessource", null);
-                  SLinkOperations.setTarget(res, "expression", node_487461275046057422, true);
+                  SLinkOperations.setTarget(res, "expression", node_4503193035066762834, true);
                   return res;
                 }
               }.invoke();
-              return node_487461275046057421;
+              return node_4503193035066762833;
             }
           }.invoke());
 
@@ -921,7 +921,7 @@ public class QueriesGenerated {
     // narrowing => lock contention reduction 
 
     final Optimizer optimizer = new Optimizer();
-    optimizer.init(_context.getModel());
+    optimizer.init(_context.getModel(), _context);
 
     List<SNode> localVariables = new ArrayList<SNode>();
     List<SNode> arguments = new ArrayList<SNode>();
@@ -962,7 +962,8 @@ public class QueriesGenerated {
         }
       });
     }
-    Map<SNode, Set<SNode>> aliases = optimizer.createAliases2(allNodes, dataflowGraph, true);
+    Map<SNode, Set<SNode>> inverseDataflowGraph = optimizer.invertDataflowGraph(dataflowGraph);
+    Map<SNode, Set<SNode>> aliases = optimizer.createAliases2(allNodes, dataflowGraph, inverseDataflowGraph, false);
 
     optimizer.narrowSyncs(aliases, syncs);
   }
@@ -971,10 +972,7 @@ public class QueriesGenerated {
     // lock ellision for recursively repeated locks 
 
     final Optimizer optimizer = new Optimizer();
-    optimizer.init(_context.getModel());
-
-    Map<SNode, Set<SNode>> functionToDeeplyCalledFunctions = optimizer.createDeepCallGraph();
-    // TODO: check if cycles are dangerous 
+    optimizer.init(_context.getModel(), _context);
 
     List<SNode> localVariables = new ArrayList<SNode>();
     List<SNode> arguments = new ArrayList<SNode>();
@@ -982,6 +980,7 @@ public class QueriesGenerated {
     List<SNode> syncResources = new ArrayList<SNode>();
     List<SNode> sharedSets = new ArrayList<SNode>();
     List<SNode> sharedGets = new ArrayList<SNode>();
+    List<SNode> functionCalls = new ArrayList<SNode>();
     List<SNode> allVariables = new ArrayList<SNode>();
     List<SNode> allNodes = new ArrayList<SNode>();
 
@@ -1016,6 +1015,7 @@ public class QueriesGenerated {
           return (optimizer.getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) != null);
         }
       }));
+      ListSequence.fromList(functionCalls).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.FunctionCall", false, new String[]{})));
     }
 
     ListSequence.fromList(allVariables).addSequence(ListSequence.fromList(localVariables));
@@ -1023,43 +1023,49 @@ public class QueriesGenerated {
     ListSequence.fromList(allNodes).addSequence(ListSequence.fromList(allVariables));
     ListSequence.fromList(allNodes).addSequence(ListSequence.fromList(variableRefs));
 
-    Map<SNode, Set<SNode>> dataflowGraph = optimizer.createSimpleDataflowGraph(localVariables, arguments, variableRefs);
-    Map<SNode, Set<SNode>> aliasesForRecursiveLocks = optimizer.createAliases2(allNodes, dataflowGraph, true);
-    System.out.println("-----aliases for locks");
-    for (SNode node : SetSequence.fromSet(MapSequence.fromMap(aliasesForRecursiveLocks).keySet())) {
-      System.out.println("> node " + node + " : " + SNodeOperations.getConceptDeclaration(node));
-      SetSequence.fromSet(MapSequence.fromMap(aliasesForRecursiveLocks).get(node)).visitAll(new IVisitor<SNode>() {
-        public void visit(SNode it) {
-          System.out.println("--> " + it + " : " + SNodeOperations.getConceptDeclaration(it));
-        }
-      });
+    if (1 < 0) {
+    }
+    {
+      Map<SNode, Set<SNode>> dataflowGraph = optimizer.createSimpleDataflowGraph(localVariables, arguments, variableRefs);
+      Map<SNode, Set<SNode>> inverseDataflowGraph = optimizer.invertDataflowGraph(dataflowGraph);
+      Map<SNode, Set<SNode>> aliases = optimizer.createAliases2(allNodes, dataflowGraph, inverseDataflowGraph, false);
+      optimizer.removeSingleTaskLocks(aliases, dataflowGraph, syncResources, allVariables, variableRefs, functionCalls);
+    }
+
+    if (1 < 0) {
+      Map<SNode, Set<SNode>> dataflowGraph = optimizer.createSimpleDataflowGraph(localVariables, arguments, variableRefs);
+      Map<SNode, Set<SNode>> inverseDataflowGraph = optimizer.invertDataflowGraph(dataflowGraph);
+      Map<SNode, Set<SNode>> aliases = optimizer.createAliases2(allNodes, dataflowGraph, inverseDataflowGraph, false);
+      optimizer.removeReadonlyLocks(aliases, syncResources, allVariables, sharedSets, sharedGets);
     }
 
 
     if (1 < 0) {
-      Map<SNode, Boolean> nodeToSyncState = optimizer.createSyncStates(dataflowGraph, aliasesForRecursiveLocks, syncResources);
-      optimizer.removeReadonlyLocks(aliasesForRecursiveLocks, syncResources, allVariables, sharedSets, sharedGets);
-    }
-
-    // find main() 
-    SNode entryFunction = null;
-    for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(_context.getModel(), "com.mbeddr.core.modules.structure.ImplementationModule"))) {
-      SNode foundFunction = ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.Function", false, new String[]{})).findFirst(new IWhereFilter<SNode>() {
-        public boolean accept(SNode it) {
-          return BehaviorReflection.invokeVirtual(Boolean.TYPE, it, "virtual_actsAsMainFunction_3209727427932102770", new Object[]{});
+      // find main() 
+      SNode entryFunction = null;
+      for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(_context.getModel(), "com.mbeddr.core.modules.structure.ImplementationModule"))) {
+        SNode foundFunction = ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.Function", false, new String[]{})).findFirst(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return BehaviorReflection.invokeVirtual(Boolean.TYPE, it, "virtual_actsAsMainFunction_3209727427932102770", new Object[]{});
+          }
+        });
+        if (foundFunction != null) {
+          entryFunction = foundFunction;
+          break;
         }
-      });
-      if (foundFunction != null) {
-        entryFunction = foundFunction;
-        break;
       }
+      System.out.println("-------create call graph...");
+
+      Map<SNode, Set<SNode>> callGraph = optimizer.createCallGraph();
+      System.out.println("-------remove recursive locks 3...");
+      Map<SNode, Set<SNode>> dataflowGraph = optimizer.createSimpleDataflowGraph(localVariables, arguments, variableRefs);
+      Map<SNode, Set<SNode>> nonRecursiveDataflowGraph = optimizer.removeRecursiveEdges2(dataflowGraph, entryFunction, callGraph);
+      // only consider sync context flows between nodes of the same task 
+      Map<SNode, Set<SNode>> taskSeparatedDataflowGraph = optimizer.separateDataflowGraphByTasks(nonRecursiveDataflowGraph);
+      Map<SNode, Set<SNode>> inverseDataflowGraph = optimizer.invertDataflowGraph(taskSeparatedDataflowGraph);
+      Map<SNode, Set<SNode>> aliases = optimizer.createAliases2(allNodes, taskSeparatedDataflowGraph, inverseDataflowGraph, false);
+      optimizer.removeRecursiveLocks3(dataflowGraph, inverseDataflowGraph, aliases, syncResources, entryFunction, callGraph);
     }
-    System.out.println("-------create call graph...");
-
-    Map<SNode, Set<SNode>> callGraph = optimizer.createCallGraph();
-    System.out.println("-------remove recursive locks 3...");
-
-    optimizer.removeRecursiveLocks3(dataflowGraph, MapSequence.fromMap(new HashMap<SNode, Set<SNode>>()), syncResources, entryFunction, callGraph);
   }
 
   public static SNode insertMacro_Query_3074299910025853496(final TemplateQueryContextWithMacro _context) {
@@ -1080,20 +1086,20 @@ public class QueriesGenerated {
       // if the complete expression expr is a reference it must instantly be mapped to struct.expr 
       return new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
-          final SNode node_487461275046058162 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763657 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = structExpression;
               return res;
             }
           }.invoke();
-          final SNode node_487461275046058161 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763656 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.ParensExpression", null);
-              SLinkOperations.setTarget(res, "expression", node_487461275046058162, true);
+              SLinkOperations.setTarget(res, "expression", node_4503193035066763657, true);
               return res;
             }
           }.invoke();
-          final SNode node_487461275046058166 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763661 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.GenericMemberRef", null);
               SLinkOperations.setTarget(res, "member", (ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(structDeclaration.value)).findFirst(new IWhereFilter<SNode>() {
@@ -1104,15 +1110,15 @@ public class QueriesGenerated {
               return res;
             }
           }.invoke();
-          SNode node_487461275046058160 = new _FunctionTypes._return_P0_E0<SNode>() {
+          SNode node_4503193035066763655 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.GenericDotExpression", null);
-              SLinkOperations.setTarget(res, "expression", node_487461275046058161, true);
-              SLinkOperations.setTarget(res, "target", node_487461275046058166, true);
+              SLinkOperations.setTarget(res, "expression", node_4503193035066763656, true);
+              SLinkOperations.setTarget(res, "target", node_4503193035066763661, true);
               return res;
             }
           }.invoke();
-          return node_487461275046058160;
+          return node_4503193035066763655;
         }
       }.invoke();
     }
@@ -1127,20 +1133,20 @@ public class QueriesGenerated {
     for (final SNode varRef : ListSequence.fromList(bindableVarRefs)) {
       SNodeOperations.replaceWithAnother(varRef, new _FunctionTypes._return_P0_E0<SNode>() {
         public SNode invoke() {
-          final SNode node_487461275046058240 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763735 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SNodeOperations.copyNode(structExpression);
               return res;
             }
           }.invoke();
-          final SNode node_487461275046058238 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763733 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.ParensExpression", null);
-              SLinkOperations.setTarget(res, "expression", node_487461275046058240, true);
+              SLinkOperations.setTarget(res, "expression", node_4503193035066763735, true);
               return res;
             }
           }.invoke();
-          final SNode node_487461275046058245 = new _FunctionTypes._return_P0_E0<SNode>() {
+          final SNode node_4503193035066763740 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.udt.structure.GenericMemberRef", null);
               SLinkOperations.setTarget(res, "member", ListSequence.fromList(SUDeclaration_Behavior.call_members_9101132143318613823(structDeclaration.value)).findFirst(new IWhereFilter<SNode>() {
@@ -1151,15 +1157,15 @@ public class QueriesGenerated {
               return res;
             }
           }.invoke();
-          SNode node_487461275046058236 = new _FunctionTypes._return_P0_E0<SNode>() {
+          SNode node_4503193035066763731 = new _FunctionTypes._return_P0_E0<SNode>() {
             public SNode invoke() {
               SNode res = SConceptOperations.createNewNode("com.mbeddr.core.expressions.structure.GenericDotExpression", null);
-              SLinkOperations.setTarget(res, "expression", node_487461275046058238, true);
-              SLinkOperations.setTarget(res, "target", node_487461275046058245, true);
+              SLinkOperations.setTarget(res, "expression", node_4503193035066763733, true);
+              SLinkOperations.setTarget(res, "target", node_4503193035066763740, true);
               return res;
             }
           }.invoke();
-          return node_487461275046058236;
+          return node_4503193035066763731;
         }
       }.invoke());
     }
