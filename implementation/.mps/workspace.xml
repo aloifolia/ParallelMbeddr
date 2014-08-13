@@ -18,139 +18,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fa722af2-26f2-49c2-8670-07eea910cd96" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSyncDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSyncDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericTaskDeclarations.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericTaskDeclarations.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/across_functions/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/across_multiple_functions/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/by_alias/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/partial/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/simple/dependencies" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.c" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/partial_readonly_lock/trace.info" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/trace.info" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$32$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$32$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$32$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$32$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$33$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$33$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$33$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$33$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$35$1.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$35$2.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$35$3.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\languages\NewLanguage\generator\classes_gen\TasksAndSyncs\generator\template\main\QueriesGenerated$35$4.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\simple_readonly_and_recursive_lock\trace.info" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\simple_readonly_lock\trace.info" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\partial_recursive_lock\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_across_functions\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_across_functions_complex\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_by_alias\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_readonly_and_recursive_lock\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_readonly_and_recursive_lock\generated" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_readonly_lock\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_recursive_lock\dependencies" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericTaskDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericTaskDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\Makefile" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\readonly_and_recursive_lock.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\readonly_and_recursive_lock.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\trace.info" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericSyncDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericSyncDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericTaskDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericTaskDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\readonly_lock.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\trace.info" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericSharedDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericSharedDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericSyncDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericSyncDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericTaskDeclarations.c" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\GenericTaskDeclarations.h" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\TypeSizeConfiguration (l.simple_recursive_lock)" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\partial_recursive_lock\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\recursive_lock_across_functions\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock/across_multiple_functions/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\recursive_lock_across_functions_complex\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\recursive_lock_by_alias\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\classes_gen\lockellision\simple_recursive_lock\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock/simple/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\broken_readonly_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/readonly_lock/broken.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\partial_recursive_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock/partial.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\recursive_lock_across_functions.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock/across_multiple_functions.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\recursive_lock_across_functions_complex.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock/across_functions.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\recursive_lock_by_alias.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock/by_alias.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\simple_readonly_and_recursive_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/mixed/both_partial.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\simple_readonly_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockelision/readonly_lock/simple.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\models\lockellision\simple_recursive_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/recursive_lock/simple.mps" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\partial_recursive_lock\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/partial/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_across_functions\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/across_multiple_functions/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_across_functions_complex\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/across_functions/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\recursive_lock_by_alias\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/by_alias/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_readonly_lock\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/partial_readonly_lock/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen.caches\lockellision\simple_recursive_lock\generated" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockellision/recursive_lock/simple/generated" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericSyncDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericSyncDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericTaskDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericTaskDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\TypeSizeConfiguration (l.partial_recursive_lock)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/TypeSizeConfiguration (l.partial_readonly_lock)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/recursive_lock.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\recursive_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/recursive_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\partial_recursive_lock\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock/partial/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericSyncDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericSyncDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericTaskDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\TypeSizeConfiguration (l.recursive_lock_across_functions)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/TypeSizeConfiguration (l.r.across_functions)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/recursive_lock.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\recursive_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/recursive_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericSyncDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericSyncDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/GenericTaskDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/GenericTaskDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\TypeSizeConfiguration (l.recursive_lock_across_functions_complex)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/TypeSizeConfiguration (l.r.across_multiple_functions)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_functions/recursive_lock.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\recursive_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/recursive_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_across_functions_complex\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock/across_functions/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericSyncDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericSyncDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericTaskDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/GenericTaskDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/across_multiple_functions/GenericTaskDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\TypeSizeConfiguration (l.recursive_lock_by_alias)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/TypeSizeConfiguration (l.r.by_alias)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/by_alias/recursive_lock.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\recursive_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/recursive_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\recursive_lock_by_alias\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockellision/recursive_lock/by_alias/trace.info" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericSyncDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericSyncDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_and_recursive_lock\TypeSizeConfiguration (l.simple_readonly_and_recursive_lock)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/partial/TypeSizeConfiguration (l.r.partial)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericSharedDeclarations.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericSharedDeclarations.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\GenericSharedDeclarations.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/GenericSharedDeclarations.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\TypeSizeConfiguration (l.simple_readonly_lock)" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/TypeSizeConfiguration (l.r.simple)" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_readonly_lock\readonly_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/partial_readonly_lock/readonly_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\Makefile" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/Makefile" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\recursive_lock.c" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/recursive_lock.c" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\recursive_lock.h" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/recursive_lock.h" />
-      <change type="MOVED" beforePath="C:\Users\Bastian\Desktop\github-master\implementation\solutions\basictests\source_gen\lockellision\simple_recursive_lock\trace.info" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockellision/recursive_lock/simple/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/TypeSizeConfiguration (l.n.partial)" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericSharedDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericSharedDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericSyncDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericSyncDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericTaskDeclarations.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/GenericTaskDeclarations.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockelision/notshared/complex.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockelision/notshared/partial/dependencies" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen.caches/lockelision/notshared/partial/generated" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/lock_ellision.c" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/lock_ellision.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockelision/notshared/partial.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockelision/notshared/recursive.mps" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/classes_gen/lockelision/notshared/partial/trace.info" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/solutions/basictests/source_gen/lockelision/notshared/partial/trace.info" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$16.class" />
@@ -161,26 +45,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$24.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$30.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$31.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$32.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$33.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$34.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$35.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$36.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$4.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$37.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$2.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$3.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$38.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39$1.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated$39.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/TaskBuilder.class" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/classes_gen/TasksAndSyncs/generator/util/TaskBuilder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/GenericSyncDeclarations.h" />
@@ -191,13 +59,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/GenericTaskDeclarations.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Optimizer.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Optimizer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/template/main/QueriesGenerated.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/TaskBuilder.java" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/TaskBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/dependencies" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/template/main/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/source_gen.caches/TasksAndSyncs/generator/util/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/generated" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen.caches/OriginalExamples/syncStuff/generated" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" afterPath="$PROJECT_DIR$/languages/NewLanguage/generator/template/main@generator.mps" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/basictests/models/lockellision/partial_readonly_lock.mps" afterPath="$PROJECT_DIR$/solutions/basictests/models/lockellision/partial_readonly_lock.mps" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/classes_gen/OriginalExamples/syncStuff/syncStuff.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.c" afterPath="$PROJECT_DIR$/solutions/TasksTest/source_gen/OriginalExamples/syncStuff/syncStuff.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/syncStuff.mps" afterPath="$PROJECT_DIR$/solutions/TasksTest/models/OriginalExamples/syncStuff.mps" />
@@ -249,7 +115,7 @@
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/main">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="6458">
+              <memento viewPositionX="0" viewPositionY="6423">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
@@ -275,133 +141,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="syncStuff" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="syncStuff" pinned="false" current="false" current-in-tab="false">
         <entry file="mps://node://OriginalExamples/OriginalExamples.syncStuff/syncStuff">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="300">
+              <memento viewPositionX="0" viewPositionY="0">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="127" />
-                    <property name="caretXRelative" value="32" />
+                    <property name="caretX" value="187" />
+                    <property name="caretXRelative" value="8" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/4503193035088147361" />
+                    <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
+                      <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/153799086835671062" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
                 <errorLabels />
                 <folded />
-                <enabledHints />
-              </memento>
-              <inspectorMemento viewPositionX="0" viewPositionY="0">
-                <selectionStack />
-                <errorLabels />
-                <folded />
-                <enabledHints />
-              </inspectorMemento>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Optimizer" pinned="false" current="false" current-in-tab="false">
-        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Optimizer">
-          <provider selected="true" editor-type-id="MPSFileEditor">
-            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="6" viewPositionY="7986">
-                <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="739" />
-                    <property name="caretXRelative" value="32" />
-                    <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="Constant_ttt6c2_a" cellNumber="0" isInList="false">
-                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035086554180" />
-                    </cellInfo>
-                  </stackElement>
-                </selectionStack>
-                <errorLabels />
-                <folded>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205131784833" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039362805704" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776298587019" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408254" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408599" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039377063073" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879092693882" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205105785368" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776295345130" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3631258592966567423" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205152364419" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879082043671" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205107991342" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205131784891" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205139037175" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086836105669" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776294053287" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776291753772" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776289845396" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879083070972" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086816770236" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039370438719" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776300257374" />
-                  </foldedElement>
-                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086838017394" />
-                  </foldedElement>
-                </folded>
                 <enabledHints />
               </memento>
               <inspectorMemento viewPositionX="0" viewPositionY="0">
@@ -418,15 +175,14 @@
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByLockEllision">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="686">
+              <memento viewPositionX="0" viewPositionY="1252">
                 <selectionStack>
-                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                    <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="255" />
-                    <property name="caretXRelative" value="128" />
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                    <property name="caretX" value="0" />
+                    <property name="caretXRelative" value="-159" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4503193035060112181" />
+                    <cellInfo cellId="Collection_jyer24_a" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/5532564937949344338" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -444,19 +200,128 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Optimizer" pinned="false" current="true" current-in-tab="true">
+        <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Optimizer">
+          <provider selected="true" editor-type-id="MPSFileEditor">
+            <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+              <memento viewPositionX="4" viewPositionY="90">
+                <selectionStack>
+                  <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                    <property name="hasNonTrivialSelection" value="false" />
+                    <property name="caretX" value="311" />
+                    <property name="caretXRelative" value="24" />
+                    <property name="sideSelectDirection" value="NONE" />
+                    <cellInfo cellId="BMDNCC_property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205135900307" />
+                    </cellInfo>
+                  </stackElement>
+                </selectionStack>
+                <errorLabels />
+                <folded>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408254" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039362805704" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776299461025" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035039527980" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879067913803" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035159336323" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776289845396" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205135900307" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035055475885" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205134222424" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039370438719" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086838017394" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035041499318" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408599" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205152364419" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3631258592966567423" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205137010344" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776291753772" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205107991342" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035039528153" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086836105669" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205139037175" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776300050916" />
+                  </foldedElement>
+                  <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                    <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035044223866" />
+                  </foldedElement>
+                </folded>
+                <enabledHints />
+              </memento>
+              <inspectorMemento viewPositionX="0" viewPositionY="0">
+                <selectionStack />
+                <errorLabels />
+                <folded />
+                <enabledHints />
+              </inspectorMemento>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="optimizeByNarrowing" pinned="false" current="false" current-in-tab="false">
         <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByNarrowing">
           <provider selected="true" editor-type-id="MPSFileEditor">
             <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-              <memento viewPositionX="0" viewPositionY="357">
+              <memento viewPositionX="0" viewPositionY="337">
                 <selectionStack>
                   <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                     <property name="hasNonTrivialSelection" value="false" />
-                    <property name="caretX" value="283" />
-                    <property name="caretXRelative" value="80" />
+                    <property name="caretX" value="159" />
+                    <property name="caretXRelative" value="48" />
                     <property name="sideSelectDirection" value="NONE" />
-                    <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4503193035063499291" />
+                    <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                      <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879070666783" />
                     </cellInfo>
                   </stackElement>
                 </selectionStack>
@@ -837,6 +702,10 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="TasksAndSyncs.generator.util">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT USER_OBJECT="Empty">
@@ -887,11 +756,99 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="OriginalExamples">
+            <PATH_ELEMENT USER_OBJECT="basictests">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="OriginalExamples">
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="basictests">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="basictests">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="notshared">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision.notshared.recursive">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="basictests">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="notshared">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision.notshared.partial">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Empty">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Project">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="basictests">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="lockelision">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="notshared">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -910,10 +867,6 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="OriginalExamples">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="OriginalExamples.syncStuff">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -1126,14 +1079,14 @@
       <window_info id="Verification (CBMC)" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.6463512" order="20" side_tool="false" content_ui="tabs" />
       <window_info id="Tree" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28444445" sideWeight="0.4189406" order="21" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspector" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20296296" sideWeight="0.4189406" order="21" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24798061" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2548148" sideWeight="0.58346707" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Usages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2548148" sideWeight="0.56902087" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Type System Performance Data" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2874074" sideWeight="0.503231" order="22" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28444445" sideWeight="0.5810594" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20296296" sideWeight="0.5810594" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Node Info" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Workflow" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.60921365" order="2" side_tool="false" content_ui="tabs" />
@@ -1169,175 +1122,7 @@
   </component>
   <component name="UsagesViewTool">
     <version id="0.9997" />
-    <tabs>
-      <tab>
-        <usage_view>
-          <buttons rerun="true" rebuild="true" close="true" />
-          <result_provider class_name="jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.UnionNode">
-            <children>
-              <jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode>
-                <children />
-                <generated_finder class_name="jetbrains.mps.lang.structure.findUsages.NodeUsages_Finder" />
-              </jetbrains.mps.ide.findusages.findalgorithm.resultproviders.treenodes.FinderNode>
-            </children>
-          </result_provider>
-          <query>
-            <scope scope_class="jetbrains.mps.ide.findusages.model.scopes.ProjectScope" />
-            <holder holder_class="jetbrains.mps.ide.findusages.model.holders.NodeHolder">
-              <node>
-                <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="153799086843192910" />
-              </node>
-            </holder>
-          </query>
-          <tree_wrapper>
-            <node_representator />
-            <view_options>
-              <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
-            </view_options>
-            <contents>
-              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.MainNodeData" caption="" info="" excluded="false" expanded="true" isresult="false" results_section="false">
-                <role name="main root" />
-              </data>
-              <children>
-                <child>
-                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.SearchedNodesNodeData" caption="Searched nodes" info="" excluded="false" expanded="true" isresult="false" results_section="false">
-                    <role name="searched nodes" />
-                  </data>
-                  <children>
-                    <child>
-                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" caption="&lt;b&gt;Searched nodes&lt;/b&gt;" info="" excluded="false" expanded="true" isresult="false" results_section="false" category="Searched nodes" category_kind="Category">
-                        <role name="category:Category" />
-                      </data>
-                      <children>
-                        <child>
-                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" caption="TasksAndSyncs (generator/no name)" info="" excluded="false" expanded="true" isresult="false" results_section="false" module_ref="84418a78-a9ec-4582-8382-f6f7cc8a4d32(TasksAndSyncs#1304213873204338636)">
-                            <role name="module" />
-                          </data>
-                          <children>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="false">
-                                <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="true" isresult="false" results_section="false">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraph" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="false">
-                                        <role name="target" />
-                                        <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="153799086843192910" />
-                                        </node>
-                                      </data>
-                                      <children />
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                          </children>
-                        </child>
-                      </children>
-                    </child>
-                  </children>
-                </child>
-                <child>
-                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ResultsNodeData" caption="results" info="" excluded="false" expanded="true" isresult="false" results_section="false">
-                    <role name="results" />
-                  </data>
-                  <children>
-                    <child>
-                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.CategoryNodeData" caption="&lt;b&gt;Node Usages&lt;/b&gt;" info="" excluded="false" expanded="true" isresult="false" results_section="true" category="Node Usages" category_kind="Category">
-                        <role name="category:Category" />
-                      </data>
-                      <children>
-                        <child>
-                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModuleNodeData" caption="TasksAndSyncs (generator/no name)" info="" excluded="false" expanded="true" isresult="false" results_section="true" module_ref="84418a78-a9ec-4582-8382-f6f7cc8a4d32(TasksAndSyncs#1304213873204338636)">
-                            <role name="module" />
-                          </data>
-                          <children>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="true" isresult="false" results_section="true">
-                                <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="true" isresult="false" results_section="true">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraph" info="role: &lt;i&gt;actualArgument&lt;/i&gt;; in: &lt;i&gt;removeRecursiveLocks3(map&amp;lt;node&amp;lt;&amp;gt;,set&amp;lt;node&amp;lt;&amp;gt;&amp;gt;&amp;gt;,map&amp;lt;node&amp;lt;&amp;gt;,set&amp;lt;node&amp;lt;&amp;gt;&amp;gt;&amp;gt;,map&amp;lt;node&amp;lt;&amp;gt;,set&amp;lt;node&amp;lt;IVariableDeclaration&amp;gt;&amp;gt;&amp;gt;,nlist&amp;lt;SyncRessource&amp;gt;,node&amp;lt;Function&amp;gt;,map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):void&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                        <role name="target" />
-                                        <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="153799086843221106" />
-                                        </node>
-                                      </data>
-                                      <children />
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                            <child>
-                              <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.ModelNodeData" caption="TasksAndSyncs.generator.template.main@generator" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                <role name="model" />
-                                <model uid="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
-                              </data>
-                              <children>
-                                <child>
-                                  <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="optimizeByLockEllision" info="" excluded="false" expanded="false" isresult="false" results_section="true">
-                                    <role name="root" />
-                                    <node>
-                                      <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="1469333039385111201" />
-                                    </node>
-                                  </data>
-                                  <children>
-                                    <child>
-                                      <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="nonRecursiveDataflowGraph" info="role: &lt;i&gt;localVariableDeclaration&lt;/i&gt;; in: &lt;i&gt;&amp;lt;type&amp;gt; &amp;lt;var&amp;gt;;&lt;/i&gt;" excluded="false" expanded="false" isresult="false" results_section="true">
-                                        <role name="root to target" />
-                                        <node>
-                                          <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="153799086821229898" />
-                                        </node>
-                                      </data>
-                                      <children>
-                                        <child>
-                                          <data data_class="jetbrains.mps.ide.findusages.view.treeholder.tree.nodedatatypes.NodeNodeData" caption="callGraph" info="role: &lt;i&gt;actualArgument&lt;/i&gt;; in: &lt;i&gt;removeRecursiveEdges2(map&amp;lt;node&amp;lt;&amp;gt;,set&amp;lt;node&amp;lt;&amp;gt;&amp;gt;&amp;gt;,node&amp;lt;Function&amp;gt;,map&amp;lt;node&amp;lt;Function&amp;gt;,set&amp;lt;node&amp;lt;Function&amp;gt;&amp;gt;&amp;gt;):map&amp;lt;node&amp;lt;&amp;gt;,set&amp;lt;node&amp;lt;&amp;gt;&amp;gt;&amp;gt;&lt;/i&gt;" excluded="false" expanded="false" isresult="true" results_section="true">
-                                            <role name="target" />
-                                            <node>
-                                              <node model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" id="153799086842763319" />
-                                            </node>
-                                          </data>
-                                          <children />
-                                        </child>
-                                      </children>
-                                    </child>
-                                  </children>
-                                </child>
-                              </children>
-                            </child>
-                          </children>
-                        </child>
-                      </children>
-                    </child>
-                  </children>
-                </child>
-              </children>
-            </contents>
-          </tree_wrapper>
-        </usage_view>
-      </tab>
-    </tabs>
+    <tabs />
     <default_view_options>
       <options category_option="false" module_option="true" model_option="true" root_option="true" path_option="false" count_option="true" info_option="true" view_searched_nodes_option="true" group_searched_nodes_option="true" autoscroll_option="false" />
     </default_view_options>
@@ -1358,7 +1143,6 @@
       <TodoPanelSettings />
     </option>
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="false" />
-    <MESSAGE value="second step: mutex functions and calls for global variables based on types &#10;" />
     <MESSAGE value="final step: mutex functions and calls for local variables (and function args) based on types&#10;" />
     <MESSAGE value="progress on thesis" />
     <MESSAGE value="fixes for mutex functions generation" />
@@ -1383,156 +1167,10 @@
     <MESSAGE value="code: added another optimization and improved the existing ones" />
     <MESSAGE value="code: some cleanup and fixes" />
     <MESSAGE value="code: re-coded lock ellision for recursive locks (not done, yet)&#10;thesis: some corrections" />
-    <option name="LAST_COMMIT_MESSAGE" value="code: re-coded lock ellision for recursive locks (not done, yet)&#10;thesis: some corrections" />
+    <MESSAGE value="code: some fixes (generator and optimizer)&#10;code: improved optimization with function duplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="code: some fixes (generator and optimizer)&#10;code: improved optimization with function duplication" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/languages/NewLanguage/generator/source_gen/TasksAndSyncs/generator/util/Optimizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35381356" vertical-offset="5341" max-vertical-offset="11798">
-          <caret line="324" column="17" selection-start-line="324" selection-start-column="17" selection-end-line="324" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/locknarrowing.with_unrelated_references2/BuildConfiguration (l.with_unrelated_references2)">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="207" />
-                <property name="caretXRelative" value="160" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:a4fec6f7-7e9b-4c09-b0de-fdd77788244e(locknarrowing.with_unrelated_references2)/8220307879105634655" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.shared_types_global/shared_types_global">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="35" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:9cc09d1f-ddb8-4843-ab0a-b156d331152e(basictests.shared_types_global)/3271375101694395134" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.syncs_no_resources/syncs_no_resources">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="0">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="35" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:af37c2c6-8cc9-4e06-9995-c1b5414ea56a(basictests.syncs_no_resources)/3227138667935253638" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://basictests/basictests.syncs_stop/syncs_stop">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="300">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="99" />
-                <property name="caretXRelative" value="0" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
-                  <node node_reference="r:352c7bcb-c05e-45ee-941d-32a6bfdf6639(basictests.syncs_stop)/3227138667949785205" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/replaceSyncDeclarations">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="240">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="419" />
-                <property name="caretXRelative" value="336" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_text" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8001979070718518203" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://scenarios/philosophers.philosophers/philosophers">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -1825,34 +1463,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByLockEllision">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="686">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="255" />
-                <property name="caretXRelative" value="128" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4503193035060112181" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://test.ex.core/test.ex.core.pointers/ClosureTests">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -1996,15 +1606,15 @@
     <entry file="mps://node://OriginalExamples/OriginalExamples.syncStuff/syncStuff">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="300">
+          <memento viewPositionX="0" viewPositionY="0">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="127" />
-                <property name="caretXRelative" value="32" />
+                <property name="caretX" value="187" />
+                <property name="caretXRelative" value="8" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
-                  <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/4503193035088147361" />
+                <cellInfo cellId="Constant_zedcwq_b0" cellNumber="0" isInList="false">
+                  <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/153799086835671062" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
@@ -2507,34 +2117,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByNarrowing">
-      <provider selected="true" editor-type-id="MPSFileEditor">
-        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="357">
-            <selectionStack>
-              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
-                <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="283" />
-                <property name="caretXRelative" value="80" />
-                <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="ALIAS_EDITOR_COMPONENT" cellNumber="0" isInList="false">
-                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4503193035063499291" />
-                </cellInfo>
-              </stackElement>
-            </selectionStack>
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </memento>
-          <inspectorMemento viewPositionX="0" viewPositionY="0">
-            <selectionStack />
-            <errorLabels />
-            <folded />
-            <enabledHints />
-          </inspectorMemento>
-        </state>
-      </provider>
-    </entry>
     <entry file="mps://node://basictests/lockellision.partial_readonly_lock/readonly_lock">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
@@ -2677,97 +2259,97 @@
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.util/Optimizer">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="6" viewPositionY="7986">
+          <memento viewPositionX="4" viewPositionY="90">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
-                <property name="caretX" value="739" />
-                <property name="caretXRelative" value="32" />
+                <property name="caretX" value="311" />
+                <property name="caretXRelative" value="24" />
                 <property name="sideSelectDirection" value="NONE" />
-                <cellInfo cellId="Constant_ttt6c2_a" cellNumber="0" isInList="false">
-                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035086554180" />
+                <cellInfo cellId="BMDNCC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205135900307" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
             <errorLabels />
             <folded>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205131784833" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408254" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039362805704" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776298587019" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776299461025" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408254" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035039527980" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879067913803" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
-              </foldedElement>
-              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408599" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039377063073" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879092693882" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205105785368" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776295345130" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3631258592966567423" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205152364419" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879082043671" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205107991342" />
-              </foldedElement>
-              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205131784891" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205139037175" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086836105669" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776294053287" />
-              </foldedElement>
-              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776291753772" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035159336323" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776289845396" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/8220307879083070972" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205135900307" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086816770236" />
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035055475885" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205134222424" />
               </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039370438719" />
               </foldedElement>
-              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
-                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776300257374" />
-              </foldedElement>
               <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
                 <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086838017394" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035041499318" />
+              </foldedElement>
+              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086819408599" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039371921695" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205152364419" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/3631258592966567423" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205137010344" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776291753772" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205107991342" />
+              </foldedElement>
+              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035039528153" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/1469333039367973603" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/153799086836105669" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/2585702205139037175" />
+              </foldedElement>
+              <foldedElement cellId="Collection_ls0i5e_a0" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/53264776300050916" />
+              </foldedElement>
+              <foldedElement cellId="Collection_fao2ea_a" cellNumber="0" isInList="false">
+                <node node_reference="r:20ef2229-3f5d-4588-9872-c9b31539ef30(TasksAndSyncs.generator.util)/4503193035044223866" />
               </foldedElement>
             </folded>
             <enabledHints />
@@ -2784,7 +2366,7 @@
     <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/main">
       <provider selected="true" editor-type-id="MPSFileEditor">
         <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
-          <memento viewPositionX="0" viewPositionY="6458">
+          <memento viewPositionX="0" viewPositionY="6423">
             <selectionStack>
               <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
                 <property name="hasNonTrivialSelection" value="false" />
@@ -2793,6 +2375,257 @@
                 <property name="sideSelectDirection" value="NONE" />
                 <cellInfo cellId="property_name" cellNumber="0" isInList="false">
                   <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/4644263955273516453" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://OriginalExamples/OriginalExamples.syncStuff/BuildConfiguration (O.syncStuff)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="35" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="IANC_property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:7fb31161-45a8-45b0-9170-6eb05358badc(OriginalExamples.syncStuff)/5867266020201107465" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.overlapping/lock_ellision">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="120">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="575" />
+                <property name="caretXRelative" value="64" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_escapedValue_word26" cellNumber="0" isInList="false">
+                  <node node_reference="r:59363225-a5e3-45fd-8819-864b16f415cf(lockelision.notshared.overlapping)/4503193035152226383" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.overlapping/BuildConfiguration (l.n.overlapping)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="151" />
+                <property name="caretXRelative" value="104" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:59363225-a5e3-45fd-8819-864b16f415cf(lockelision.notshared.overlapping)/4503193035151708513" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.partial/BuildConfiguration (l.n.partial)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="151" />
+                <property name="caretXRelative" value="104" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:e84b982d-54fc-4122-b95d-7af38a57e832(lockelision.notshared.partial)/4503193035152415284" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.recursive/BuildConfiguration (l.n.recursive)">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="151" />
+                <property name="caretXRelative" value="104" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:1690940b-0fb6-461f-9016-a455cc6b8919(lockelision.notshared.recursive)/4503193035157857149" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.recursive/lock_ellision">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="161">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="167" />
+                <property name="caretXRelative" value="8" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_value" cellNumber="0" isInList="false">
+                  <node node_reference="r:1690940b-0fb6-461f-9016-a455cc6b8919(lockelision.notshared.recursive)/4503193035158088479" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://basictests/lockelision.notshared.partial/lock_ellision">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="0">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="87" />
+                <property name="caretXRelative" value="0" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="ReadOnlyModelAccessor_2b0q7v_a2a" cellNumber="0" isInList="false">
+                  <node node_reference="r:e84b982d-54fc-4122-b95d-7af38a57e832(lockelision.notshared.partial)/4503193035152517289" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByNarrowing">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="337">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellLabelSelection">
+                <property name="hasNonTrivialSelection" value="false" />
+                <property name="caretX" value="159" />
+                <property name="caretXRelative" value="48" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="property_name" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/8220307879070666783" />
+                </cellInfo>
+              </stackElement>
+            </selectionStack>
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </memento>
+          <inspectorMemento viewPositionX="0" viewPositionY="0">
+            <selectionStack />
+            <errorLabels />
+            <folded />
+            <enabledHints />
+          </inspectorMemento>
+        </state>
+      </provider>
+    </entry>
+    <entry file="mps://node://TasksAndSyncs#1304213873204338636/TasksAndSyncs.generator.template.main@generator/optimizeByLockEllision">
+      <provider selected="true" editor-type-id="MPSFileEditor">
+        <state class="jetbrains.mps.ide.editor.BaseNodeEditor$BaseEditorState">
+          <memento viewPositionX="0" viewPositionY="1252">
+            <selectionStack>
+              <stackElement className="jetbrains.mps.nodeEditor.selection.EditorCellSelection">
+                <property name="caretX" value="0" />
+                <property name="caretXRelative" value="-159" />
+                <property name="sideSelectDirection" value="NONE" />
+                <cellInfo cellId="Collection_jyer24_a" cellNumber="0" isInList="false">
+                  <node node_reference="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)/5532564937949344338" />
                 </cellInfo>
               </stackElement>
             </selectionStack>
