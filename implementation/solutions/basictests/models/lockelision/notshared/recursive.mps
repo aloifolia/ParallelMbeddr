@@ -118,7 +118,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035152629016" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035152629017" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035152629018" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="since var2 is never shared, an optimized teste2 variant will be called" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="since var2 is never shared, an optimized callee variant will be called" />
               </node>
             </node>
           </node>
@@ -234,7 +234,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035152597501" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035152597502" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035152597503" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z is shared (see below), x is shared for the calls teste2(&amp;var1) and teste2(zPointer), y is not shared" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z is shared (see below), x is shared for the calls callee(&amp;var1) and callee(zPointer), y is not shared" />
               </node>
             </node>
           </node>

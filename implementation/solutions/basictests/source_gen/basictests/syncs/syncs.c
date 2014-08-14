@@ -14,12 +14,10 @@ int32_t main(int32_t argc, char* argv[])
   GenericSharedDeclarations_SharedOf_int32_0_t vShared;
   pthread_mutex_init(&vShared.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   
-  GenericSyncDeclarations_startSyncFor1Mutex(&(vShared).mutex);
   {
     vShared.value = 5;
     v = vShared.value;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(vShared).mutex);
   
   return 0;
 }

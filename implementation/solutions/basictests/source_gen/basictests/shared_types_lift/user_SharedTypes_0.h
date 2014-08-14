@@ -10,7 +10,7 @@
 
 #include "GenericSharedDeclarations.h"
 
-#include "provider1_SharedTypes_0.h"
+#include "provider1.h"
 
 #include <pthread.h>
 
@@ -43,11 +43,11 @@ void user_SharedTypes_0_mutexInit_1(user_SharedTypes_0_B2_t* var);
 
 void user_SharedTypes_0_mutexInit_3(user_SharedTypes_0_SharedOf_B1_0_t* var);
 
+void user_SharedTypes_0_mutexDestroy_2(user_SharedTypes_0_B1_t* var);
+
 void user_SharedTypes_0_mutexDestroy_3(user_SharedTypes_0_SharedOf_B1_0_t* var);
 
 void user_SharedTypes_0_mutexDestroy_1(user_SharedTypes_0_B2_t* var);
-
-void user_SharedTypes_0_mutexDestroy_2(user_SharedTypes_0_B1_t* var);
 
 
 #ifdef __cplusplus

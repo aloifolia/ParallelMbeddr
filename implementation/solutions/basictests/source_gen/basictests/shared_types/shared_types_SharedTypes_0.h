@@ -29,16 +29,16 @@ struct shared_types_SharedTypes_0_SharedOf_ArrayOf_ArrayOf_A_0 {
   shared_types_SharedTypes_0_A_t value[5][10];
 };
 
-typedef struct shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0 shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0_t;
-struct shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0 {
-  pthread_mutex_t mutex;
-  shared_types_SharedTypes_0_A_t value[5];
-};
-
 typedef struct shared_types_SharedTypes_0_SharedOf_A_0 shared_types_SharedTypes_0_SharedOf_A_0_t;
 struct shared_types_SharedTypes_0_SharedOf_A_0 {
   pthread_mutex_t mutex;
   shared_types_SharedTypes_0_A_t value;
+};
+
+typedef struct shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0 shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0_t;
+struct shared_types_SharedTypes_0_SharedOf_ArrayOf_A_0 {
+  pthread_mutex_t mutex;
+  shared_types_SharedTypes_0_A_t value[5];
 };
 
 
