@@ -20,11 +20,6 @@ void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Fut
   GenericTaskDeclarations_getFutureResult(&future);
 }
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
-{
-  GenericTaskDeclarations_joinVoidFuture(&future);
-}
-
 void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
 {
   if ( !(future->finished) ) 
@@ -63,5 +58,10 @@ GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(Gen
     pthread_create(&pth,0,task.fun,args);
   }
   return (GenericTaskDeclarations_Future_t){ .pth = pth };
+}
+
+void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
+{
+  GenericTaskDeclarations_joinVoidFuture(&future);
 }
 

@@ -37,9 +37,9 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
       case 12:
         return new SyncStatement_BehaviorDescriptor();
       case 9:
-        return new SyncRessourceNamed_BehaviorDescriptor();
+        return new SyncResourceNamed_BehaviorDescriptor();
       case 10:
-        return new SyncRessourceRef_BehaviorDescriptor();
+        return new SyncResourceRef_BehaviorDescriptor();
       case 11:
         return new SyncStart_BehaviorDescriptor();
       case 13:
@@ -51,5 +51,5 @@ public class BehaviorAspectDescriptor implements jetbrains.mps.smodel.runtime.Be
     }
   }
 
-  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskClear", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_846f5o_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncResourceNamed", "TasksAndSyncs.structure.SyncResourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskClear", "TasksAndSyncs.structure.TaskType"};
 }

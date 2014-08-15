@@ -23,10 +23,10 @@ import jetbrains.mps.smodel.action.SideTransformPreconditionContext;
 public class QueriesGenerated {
   public static List<SubstituteAction> sideTransform_ActionsFactory_Expression_6288388922744240693(final IOperationContext operationContext, final SideTransformActionsBuilderContext _context) {
     List<SubstituteAction> result = ListSequence.fromList(new ArrayList<SubstituteAction>());
-    ListSequence.fromList(result).addElement(new AbstractSideTransformHintSubstituteAction(SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncRessourceNamed"), _context.getSourceNode()) {
+    ListSequence.fromList(result).addElement(new AbstractSideTransformHintSubstituteAction(SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncResourceNamed"), _context.getSourceNode()) {
       public SNode doSubstitute(@Nullable final EditorContext editorContext, String pattern) {
 
-        SNode ressourceNamed = SNodeFactoryOperations.createNewNode("TasksAndSyncs.structure.SyncRessourceNamed", null);
+        SNode ressourceNamed = SNodeFactoryOperations.createNewNode("TasksAndSyncs.structure.SyncResourceNamed", null);
         if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(_context.getSourceNode()), "TasksAndSyncs.structure.SyncResource")) {
           SLinkOperations.setTarget(ressourceNamed, "expression", SLinkOperations.getTarget(SNodeOperations.cast(_context.getSourceNode(), "TasksAndSyncs.structure.SyncResource"), "expression", true), true);
           SNodeOperations.replaceWithAnother(_context.getSourceNode(), ressourceNamed);
@@ -50,7 +50,7 @@ public class QueriesGenerated {
         SNode sourceNode = getSourceNode();
         SNode parent = SNodeOperations.getParent(sourceNode);
         SNode containingLink = SNodeOperations.getContainingLinkDeclaration(sourceNode);
-        return parent == null || containingLink == null || (ModelConstraints.canBeParent(parent, SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncRessourceNamed"), containingLink, null, null) && ModelConstraints.canBeAncestor(parent, null, SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncRessourceNamed"), null));
+        return parent == null || containingLink == null || (ModelConstraints.canBeParent(parent, SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncResourceNamed"), containingLink, null, null) && ModelConstraints.canBeAncestor(parent, null, SConceptOperations.findConceptDeclaration("TasksAndSyncs.structure.SyncResourceNamed"), null));
       }
     });
     return result;

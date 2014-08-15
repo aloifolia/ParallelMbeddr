@@ -35,7 +35,7 @@ static void* main_parFun_a0a0a1a3d0c(void* voidArgs);
 
 static void* main_parFun_a0a0c1a3d0c(void* voidArgs);
 
-static inline GenericTaskDeclarations_Task_t main_taskInit_a0a0c1a3d0c(int16_t lastBlockSize, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* inputBlock, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* resultBlock);
+static inline GenericTaskDeclarations_Task_t main_taskInit_a0a0c1a3d0c(GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* resultBlock, int16_t lastBlockSize, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* inputBlock);
 
 static GenericTaskDeclarations_Future_t main_futureInit_a0a0b0d3a2(readerData_SharedTypes_0_SharedOf_Data_0_t inputData);
 
@@ -63,7 +63,7 @@ int32_t main(int32_t argc, char* argv[])
         {
           GenericSyncDeclarations_startSyncFor1Mutex(&(resultBlock)->mutex);
           {
-            GenericTaskDeclarations_Task_t calcTask = main_taskInit_a0a0c1a3d0c(lastBlockSize, inputBlock, resultBlock);
+            GenericTaskDeclarations_Task_t calcTask = main_taskInit_a0a0c1a3d0c(resultBlock, lastBlockSize, inputBlock);
           }
           GenericSyncDeclarations_stopSyncFor1Mutex(&(resultBlock)->mutex);
           GenericTaskDeclarations_runTaskAndGetVoidFuture(calcTask);
@@ -222,7 +222,7 @@ void main_initAllGlobalMutexes_0(void)
   main_initGlobalMutexesFor1Module_0();
 }
 
-static inline GenericTaskDeclarations_Task_t main_taskInit_a0a0c1a3d0c(int16_t lastBlockSize, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* inputBlock, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* resultBlock) 
+static inline GenericTaskDeclarations_Task_t main_taskInit_a0a0c1a3d0c(GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* resultBlock, int16_t lastBlockSize, GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* inputBlock) 
 {
   main_Args_a0a0c1a3d0c_t* args_a0a0c1a3d0c = malloc(sizeof(main_Args_a0a0c1a3d0c_t));
   args_a0a0c1a3d0c->inputBlock = inputBlock;

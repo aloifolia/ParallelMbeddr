@@ -37,7 +37,7 @@ static void* pi_parFun_a0a21a7(void* voidArgs);
 
 static void* pi_parFun_a0a6b1a8a7(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0g1b0i0h(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer);
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0g1b0i0h(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue);
 
 static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0m0h(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer);
 
@@ -97,7 +97,7 @@ int32_t main(int32_t argc, char* argv[])
           }
         }
         queue_queueInit(&resultQueue->value.queue);
-        mappers[__i] = pi_futureInit_a0g1b0i0h(resultQueue, counterPointer);
+        mappers[__i] = pi_futureInit_a0g1b0i0h(counterPointer, resultQueue);
       }
     }
   }
@@ -357,7 +357,7 @@ static void* pi_parFun_a0a6b1a8a7(void* voidArgs)
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0g1b0i0h(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer) 
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0g1b0i0h(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue) 
 {
   pi_Args_a0a6b1a8a7_t* args_a0g1b0i0h = malloc(sizeof(pi_Args_a0a6b1a8a7_t));
   args_a0g1b0i0h->counterPointer = counterPointer;

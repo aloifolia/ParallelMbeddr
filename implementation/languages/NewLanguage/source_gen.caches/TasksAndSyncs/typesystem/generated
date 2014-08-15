@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-4pu4wsfuw5wjyczwuauwka2xmylv9az">
+<dependencies version="2" modelHash="7d1jizau8835ak9inm407qxtiky05vw">
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
   <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang.reflect(JDK/java.lang.reflect@java_stub)" />
@@ -28,7 +28,7 @@
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="cgpgmijn6x8fev4b6vybch2ypcq4m2d" />
   <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
-  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="-56bago0eddiykjr3kimcxdwyobzg4ss" />
+  <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" hash="78j6r92phqwrt2tnjcglovlajth0z1u" />
   <dep model="r:b4d7d620-6723-4aa2-856b-118497e84e9e(jetbrains.mps.baseLanguage.generator.java.strings@generator)" hash="b4ewbuz42qcbg1awca5bacgi0vopxqt" />
   <dep model="r:c3548bac-30eb-4a2a-937c-0111d5697309(jetbrains.mps.lang.smodel.generator.smodelAdapter)" hash="e5zswcvgdspmt039m3gg97emcadi0ez" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="2tjo7spoq0b9ubdn36bitwt5i0a2wds" />
@@ -38,7 +38,7 @@
   <dep model="r:f04c1476-2f91-4f59-be13-c8e009abebee(jetbrains.mps.baseLanguageInternal.generator.template.main@generator)" hash="a8elw7fctzg6sg8fe36u9gzu42axhdb" />
   <dep model="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" hash="-aq8mkdu5ad0u5w30yhjws5ava2glc2u" />
   <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" hash="-8chtguhcvj45cjy0bx3xiqekte2lox7" />
-  <common hash="-4ce9zjxd8vp9rp5dq8ubehl99h8al6f" dependsOnNodes="true">
+  <common hash="6kag840e7n1xcdayd3vn7jcyxx99li2" dependsOnNodes="true">
     <dep root="1304213873205167535" />
     <dep root="1304213873206867468" />
     <dep root="1304213873209671652" />
@@ -132,12 +132,12 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="typeof_TaskResult_InferenceRule.java" />
   </source>
-  <source id="1924594752095479513" name="typeof_SharedRessource" hash="21m78qe1bm1fbkovas4b13hgn9bbh99">
+  <source id="1924594752095479513" name="typeof_SharedResource" hash="-cinb9bsrgj0ozgub2uyukwfmsxb7idc">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="typeof_SharedRessource_InferenceRule.java" />
+    <file name="typeof_SharedResource_InferenceRule.java" />
   </source>
   <source id="1924594752096004417" name="typeof_SharedGet" hash="7k1lmtgu1k23iszel3ld9ndq1cp5w2p">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -150,18 +150,18 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="typeof_SharedGet_InferenceRule.java" />
   </source>
-  <source id="1924594752097252672" name="SharedRessourceType_subTypeOf_SharedRessourceType" hash="-7v1qoig17nuphmn8x9y28tmm9g4ikrk">
+  <source id="1924594752097252672" name="SharedResourceType_subTypeOf_SharedResourceType" hash="4ordkbkydmx5tj3vw3navqzta7yrkku">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="SharedRessourceType_subTypeOf_SharedRessourceType_InequationReplacementRule.java" />
+    <file name="SharedResourceType_subTypeOf_SharedResourceType_InequationReplacementRule.java" />
   </source>
-  <source id="1924594752097258569" name="IType_subTypeOf_SharedRessourceType" hash="-bxqrmv0y66u1hyu5oicnpjlpqw6puyk">
+  <source id="1924594752097258569" name="IType_subTypeOf_SharedResourceType" hash="8tm5lz2y2rlq59hev6bbkl8vfeyrldh">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="IType_subTypeOf_SharedRessourceType_InequationReplacementRule.java" />
+    <file name="IType_subTypeOf_SharedResourceType_InequationReplacementRule.java" />
   </source>
   <source id="3570654511858805942" name="typeof_SharedSet" hash="alqdzi9dtoqpqudfjs2koevbqrb1sj4">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -227,7 +227,7 @@
     <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" />
     <file name="Checker.java" />
   </source>
-  <source id="6553204290892862144" name="checkSyncRessourceForSharedness" hash="9ajhzg9og45jq77cmdvd5jaz3kpjqvw">
+  <source id="6553204290892862144" name="checkSyncRessourceForSharedness" hash="cyjqzp3yuffgs6ycxarwc81409dztsn">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
@@ -236,7 +236,7 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="checkSyncRessourceForSharedness_NonTypesystemRule.java" />
   </source>
-  <source id="6553204290893368798" name="checkSharedGetSetForSyncContext" hash="-667v6cik4a7w3lkm9d4p1pz6durov4l">
+  <source id="6553204290893368798" name="checkSharedGetSetForSyncContext" hash="egh2vrubj0udr7bug1xbgvt2rtakzgn">
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.util(JDK/java.util@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -254,7 +254,7 @@
     <dep model="r:fc76aa36-3cff-41c7-b94b-eee0e8341932(jetbrains.mps.internal.collections.runtime)" />
     <file name="checkSharedGetSetForSyncContext_NonTypesystemRule.java" />
   </source>
-  <source id="6553204290898691871" name="checkAdressOperatorForSharedSubPath" hash="-7fvj3n7zurpv5cbz2aubkny8j3wxhv8">
+  <source id="6553204290898691871" name="checkAdressOperatorForSharedSubPath" hash="b1w9t1ibdzxf1kkpqhfpm2lqwci99oy">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
@@ -263,12 +263,12 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="checkAdressOperatorForSharedSubPath_NonTypesystemRule.java" />
   </source>
-  <source id="6553204290899510625" name="checkAssignmentForNestedSharedRessource" hash="6ug59j1q5ylci7weut20gj6qd18e0mw">
+  <source id="6553204290899510625" name="checkAssignmentForNestedSharedResource" hash="69vxi3fky85xmvo2y90a1x1mcz054w9">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
-    <file name="checkAssignmentForNestedSharedRessource_NonTypesystemRule.java" />
+    <file name="checkAssignmentForNestedSharedResource_NonTypesystemRule.java" />
   </source>
   <source id="6553204290899988300" name="checkSharedSetForArrayType" hash="-elffsblrv49qk50mpv4dmfb8a594vq7">
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
@@ -284,21 +284,21 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="checkSharedSetForArrayType_NonTypesystemRule.java" />
   </source>
-  <source id="6288388922743510677" name="typeof_SyncRessRef" hash="8z2pzb3531jic278foy3x3e6uqzmfrf">
+  <source id="6288388922743510677" name="typeof_SyncResRef" hash="-4y7w6lph5fo3e0y6iztpnktq7m74boq">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="typeof_SyncRessRef_InferenceRule.java" />
+    <file name="typeof_SyncResRef_InferenceRule.java" />
   </source>
-  <source id="6288388922743520136" name="typeof_SyncRessNamed" hash="4meqx17jyra57654x32sbade4blcq2f">
+  <source id="6288388922743520136" name="typeof_SyncResNamed" hash="4cmkxqysez7h8gzzm4hbzhqn041c8kl">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
-    <file name="typeof_SyncRessNamed_InferenceRule.java" />
+    <file name="typeof_SyncResNamed_InferenceRule.java" />
   </source>
-  <source id="483189195558114215" name="checkNamedRessourceForSharedPointerType" hash="-dm6kln0psjrvnjnrpf2kstrtfguw55p">
+  <source id="483189195558114215" name="checkNamedRessourceForSharedPointerType" hash="bm2mtg5f6vfv65s4hyy007hmqvvskjd">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
@@ -306,7 +306,7 @@
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <file name="checkNamedRessourceForSharedPointerType_NonTypesystemRule.java" />
   </source>
-  <source id="483189195558656379" name="checkSharedSetForNestedSharedRessource" hash="az1zv5rg5xersnh79xvna3kp9crvlcl">
+  <source id="483189195558656379" name="checkSharedSetForNestedSharedResource" hash="mgg2oeaoz3uywbyslkbffhqgmeg8k8">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
@@ -315,7 +315,7 @@
     <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
     <dep model="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
-    <file name="checkSharedSetForNestedSharedRessource_NonTypesystemRule.java" />
+    <file name="checkSharedSetForNestedSharedResource_NonTypesystemRule.java" />
   </source>
   <source id="483189195561396263" name="checkArrayExprForSharedSubPath" hash="a3tkec2yboph4hhmt6revpmqvxw3rc1">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -382,7 +382,7 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="typeof_TaskClear_InferenceRule.java" />
   </source>
-  <source id="3735204333725438942" name="checkLocalVarRefForNamedRessource" hash="2zdpu18fygvb8w87e6xd20mv7ilwsht">
+  <source id="3735204333725438942" name="checkLocalVarRefForNamedRessource" hash="-avnkwkqr5ozy3pi93bn11f7lstb2z0n">
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.util(JDK/java.util@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
@@ -404,7 +404,7 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="checkSharedTypeForVoid_NonTypesystemRule.java" />
   </source>
-  <source id="3227138667937815917" name="checkSyncRessourceForBinding" hash="9hf1nzjdd7ekkpe3nxbmsddc10tjdyj">
+  <source id="3227138667937815917" name="checkSyncRessourceForBinding" hash="b7vh8w1h9ldtbsmvc2wztgqz5ofm9qv">
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.lang.typesystem.runtime(MPS.Core/jetbrains.mps.lang.typesystem.runtime@java_stub)" />
     <dep model="f:java_stub#6ed54515-acc8-4d1e-a16c-9fd6cfe951ea#jetbrains.mps.typesystem.inference(MPS.Core/jetbrains.mps.typesystem.inference@java_stub)" />
     <dep model="r:00000000-0000-4000-0000-011c895902b7(jetbrains.mps.lang.typesystem.generator.baseLanguage.template.main@generator)" />
@@ -428,7 +428,7 @@
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <file name="checkSharedSetForReceiverType_NonTypesystemRule.java" />
   </source>
-  <source id="4065868335594573280" name="checkNamedResourceForResourceRefSiblings" hash="-2foflt5ub8au35fj1t44w4ysfe64i6x">
+  <source id="4065868335594573280" name="checkNamedResourceForResourceRefSiblings" hash="-d8gb906bc8hfkijsl4gxpy6c5vkif7u">
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" />
     <dep model="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang.reflect(JDK/java.lang.reflect@java_stub)" />

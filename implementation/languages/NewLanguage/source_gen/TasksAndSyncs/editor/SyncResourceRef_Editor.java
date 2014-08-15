@@ -18,33 +18,33 @@ import jetbrains.mps.editor.runtime.style.StyleImpl;
 import jetbrains.mps.editor.runtime.style.StyleAttributes;
 import jetbrains.mps.editor.runtime.cells.BigCellUtil;
 
-public class SyncRessourceRef_Editor extends DefaultNodeEditor {
+public class SyncResourceRef_Editor extends DefaultNodeEditor {
   public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-    return this.createCollection_z5vc0c_a(editorContext, node);
+    return this.createCollection_473c8x_a(editorContext, node);
   }
 
   public EditorCell createInspectedCell(EditorContext editorContext, SNode node) {
-    return this.createComponent_z5vc0c_a(editorContext, node);
+    return this.createComponent_473c8x_a(editorContext, node);
   }
 
-  private EditorCell createCollection_z5vc0c_a(EditorContext editorContext, SNode node) {
+  private EditorCell createCollection_473c8x_a(EditorContext editorContext, SNode node) {
     EditorCell_Collection editorCell = EditorCell_Collection.createIndent2(editorContext, node);
-    editorCell.setCellId("Collection_z5vc0c_a");
+    editorCell.setCellId("Collection_473c8x_a");
     editorCell.setBig(true);
-    editorCell.addEditorCell(this.createRefCell_z5vc0c_a0(editorContext, node));
+    editorCell.addEditorCell(this.createRefCell_473c8x_a0(editorContext, node));
     return editorCell;
   }
 
-  private EditorCell createRefCell_z5vc0c_a0(EditorContext editorContext, SNode node) {
+  private EditorCell createRefCell_473c8x_a0(EditorContext editorContext, SNode node) {
     CellProviderWithRole provider = new RefCellCellProvider(node, editorContext);
-    provider.setRole("syncRessource");
-    provider.setNoTargetText("<no syncRessource>");
+    provider.setRole("syncResource");
+    provider.setNoTargetText("<no syncResource>");
     EditorCell editorCell;
-    provider.setAuxiliaryCellProvider(new SyncRessourceRef_Editor._Inline_z5vc0c_a0a());
+    provider.setAuxiliaryCellProvider(new SyncResourceRef_Editor._Inline_473c8x_a0a());
     editorCell = provider.createEditorCell(editorContext);
     if (editorCell.getRole() == null) {
       editorCell.setReferenceCell(true);
-      editorCell.setRole("syncRessource");
+      editorCell.setRole("syncResource");
     }
     editorCell.setSubstituteInfo(provider.createDefaultSubstituteInfo());
     SNode attributeConcept = provider.getRoleAttribute();
@@ -57,8 +57,8 @@ public class SyncRessourceRef_Editor extends DefaultNodeEditor {
     return editorCell;
   }
 
-  public static class _Inline_z5vc0c_a0a extends InlineCellProvider {
-    public _Inline_z5vc0c_a0a() {
+  public static class _Inline_473c8x_a0a extends InlineCellProvider {
+    public _Inline_473c8x_a0a() {
       super();
     }
 
@@ -67,10 +67,10 @@ public class SyncRessourceRef_Editor extends DefaultNodeEditor {
     }
 
     public EditorCell createEditorCell(EditorContext editorContext, SNode node) {
-      return this.createProperty_z5vc0c_a0a0(editorContext, node);
+      return this.createProperty_473c8x_a0a0(editorContext, node);
     }
 
-    private EditorCell createProperty_z5vc0c_a0a0(EditorContext editorContext, SNode node) {
+    private EditorCell createProperty_473c8x_a0a0(EditorContext editorContext, SNode node) {
       CellProviderWithRole provider = new PropertyCellProvider(node, editorContext);
       provider.setRole("name");
       provider.setNoTargetText("<no name>");
@@ -93,7 +93,7 @@ public class SyncRessourceRef_Editor extends DefaultNodeEditor {
     }
   }
 
-  private EditorCell createComponent_z5vc0c_a(EditorContext editorContext, SNode node) {
+  private EditorCell createComponent_473c8x_a(EditorContext editorContext, SNode node) {
     EditorCell editorCell = editorContext.getCellFactory().createEditorComponentCell(node, "com.mbeddr.core.expressions.editor.staticValueComponent");
     EditorCell bigCell = BigCellUtil.findBigCell(editorCell, node);
     if (bigCell != null) {

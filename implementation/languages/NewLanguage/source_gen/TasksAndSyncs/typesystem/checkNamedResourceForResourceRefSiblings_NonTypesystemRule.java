@@ -21,13 +21,13 @@ public class checkNamedResourceForResourceRefSiblings_NonTypesystemRule extends 
   public checkNamedResourceForResourceRefSiblings_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode namedRessource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(namedRessource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr")) {
+  public void applyRule(final SNode namedResource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(namedResource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr")) {
       return;
     }
 
-    for (SNode syncResourceRef : ListSequence.fromList(SNodeOperations.getDescendants(namedRessource, "TasksAndSyncs.structure.SyncRessourceRef", false, new String[]{}))) {
-      if (ListSequence.fromList(SNodeOperations.getPrevSiblings(namedRessource, false)).contains(SLinkOperations.getTarget(syncResourceRef, "syncRessource", false))) {
+    for (SNode syncResourceRef : ListSequence.fromList(SNodeOperations.getDescendants(namedResource, "TasksAndSyncs.structure.SyncResourceRef", false, new String[]{}))) {
+      if (ListSequence.fromList(SNodeOperations.getPrevSiblings(namedResource, false)).contains(SLinkOperations.getTarget(syncResourceRef, "syncResource", false))) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
           IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncResourceRef, "may not refer to a named resource that is declared in the same context due to the pointer type of the whole expression", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4065868335594694841", null, errorTarget);
@@ -35,8 +35,8 @@ public class checkNamedResourceForResourceRefSiblings_NonTypesystemRule extends 
       }
     }
 
-    for (final SNode varRef : ListSequence.fromList(SNodeOperations.getDescendants(namedRessource, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{}))) {
-      if (ListSequence.fromList(SNodeOperations.getPrevSiblings(namedRessource, false)).any(new IWhereFilter<SNode>() {
+    for (final SNode varRef : ListSequence.fromList(SNodeOperations.getDescendants(namedResource, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{}))) {
+      if (ListSequence.fromList(SNodeOperations.getPrevSiblings(namedResource, false)).any(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncResource"), "expression", true), "com.mbeddr.core.statements.structure.IVariableReference") && BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(it, "TasksAndSyncs.structure.SyncResource"), "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), varRef, "virtual_getVariable_2486081302460156153", new Object[]{});
         }
@@ -50,7 +50,7 @@ public class checkNamedResourceForResourceRefSiblings_NonTypesystemRule extends 
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessourceNamed";
+    return "TasksAndSyncs.structure.SyncResourceNamed";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

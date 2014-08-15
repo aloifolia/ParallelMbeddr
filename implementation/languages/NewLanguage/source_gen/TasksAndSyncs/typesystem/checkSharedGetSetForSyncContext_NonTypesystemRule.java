@@ -28,32 +28,32 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
       SNode sharedExpr = SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGetOrSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
       SNode possibleTaskContext = SNodeOperations.getAncestor(sharedExpr, "TasksAndSyncs.structure.Task", false, false);
 
-      if (SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncRessourceRef")) {
-        if ((possibleTaskContext != null) && !(ListSequence.fromList(SNodeOperations.getAncestors(SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "TasksAndSyncs.structure.SyncRessourceRef"), "syncRessource", false), null, false)).contains(possibleTaskContext))) {
+      if (SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncResourceRef")) {
+        if ((possibleTaskContext != null) && !(ListSequence.fromList(SNodeOperations.getAncestors(SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "TasksAndSyncs.structure.SyncResourceRef"), "syncResource", false), null, false)).contains(possibleTaskContext))) {
           {
             MessageTarget errorTarget = new NodeMessageTarget();
-            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referenced sync ressource not synchronized in surrounding task context", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4335879941194289101", null, errorTarget);
+            IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referenced sync resource not synchronized in surrounding task context", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4335879941194289101", null, errorTarget);
           }
         }
       } else if (SNodeOperations.isInstanceOf(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference")) {
-        SNode matchedSyncRessource = null;
+        SNode matchedSyncResource = null;
         for (SNode sync : Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(sharedExpr, null, false), "TasksAndSyncs.structure.SyncStatement"))) {
-          if ((matchedSyncRessource != null)) {
+          if ((matchedSyncResource != null)) {
             break;
           }
-          for (SNode syncRessource : ListSequence.fromList(SLinkOperations.getTargets(sync, "resources", true))) {
-            if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference") && BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{})) {
-              matchedSyncRessource = syncRessource;
+          for (SNode syncResource : ListSequence.fromList(SLinkOperations.getTargets(sync, "resources", true))) {
+            if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncResource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference") && BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(SLinkOperations.getTarget(syncResource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{})) {
+              matchedSyncResource = syncResource;
               break;
             }
           }
         }
-        if ((matchedSyncRessource == null)) {
+        if ((matchedSyncResource == null)) {
           {
             MessageTarget errorTarget = new NodeMessageTarget();
             IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred variable is not synchronized", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4335879941194458996", null, errorTarget);
           }
-        } else if ((possibleTaskContext != null) && !(ListSequence.fromList(SNodeOperations.getAncestors(matchedSyncRessource, null, false)).contains(possibleTaskContext))) {
+        } else if ((possibleTaskContext != null) && !(ListSequence.fromList(SNodeOperations.getAncestors(matchedSyncResource, null, false)).contains(possibleTaskContext))) {
           {
             MessageTarget errorTarget = new NodeMessageTarget();
             IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "referred variable is not synchronized in surrounding task context", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4335879941194483198", null, errorTarget);

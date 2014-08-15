@@ -15,7 +15,7 @@
   <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="9" implicit="yes" />
   <import index="vs0r" modelUID="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" version="25" implicit="yes" />
   <import index="k146" modelUID="r:5209fc71-bade-45c9-9079-f2d474f0d6ca(com.mbeddr.core.util.structure)" version="21" implicit="yes" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" implicit="yes" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="34" implicit="yes" />
   <import index="87nw" modelUID="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" version="5" implicit="yes" />
   <root type="51wr.BuildConfiguration" typeId="51wr.7717755763392524104" id="5867266020201107465" nodeInfo="ng">
     <node role="binaries" roleId="51wr.5046689135694070731" type="51wr.Executable" typeId="51wr.5046689135693761554" id="5867266020201780542" nodeInfo="ng">
@@ -511,7 +511,7 @@
           </node>
           <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentedStatement" typeId="c4fa.7024921229556134722" id="153799086791781081" nodeInfo="ng">
             <node role="commentedCode" roleId="vs0r.7024921229556133804" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="2585702205138807284" nodeInfo="ng">
-              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncRessourceNamed" typeId="6i3o.6288388922742659454" id="2585702205138808265" nodeInfo="ng">
+              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="2585702205138808265" nodeInfo="ng">
                 <property name="name" nameId="tpck.1169194664001" value="i3" />
                 <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="2585702205138808267" nodeInfo="ng">
                   <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="2585702205138792782" resolveInfo="i" />
@@ -526,8 +526,8 @@
                         <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                       </node>
                     </node>
-                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncRessourceRef" typeId="6i3o.6288388922743435028" id="2585702205138812790" nodeInfo="ng">
-                      <link role="syncRessource" roleId="6i3o.6288388922743435132" targetNodeId="2585702205138808265" resolveInfo="i3" />
+                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="2585702205138812790" nodeInfo="ng">
+                      <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="2585702205138808265" resolveInfo="i3" />
                     </node>
                   </node>
                 </node>

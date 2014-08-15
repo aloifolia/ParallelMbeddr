@@ -19,17 +19,17 @@ public class checkNamedRessourceForSharedPointerType_NonTypesystemRule extends A
   public checkNamedRessourceForSharedPointerType_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode namedRessource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(namedRessource, "expression", true)), "com.mbeddr.core.pointers.structure.PointerType"))) {
+  public void applyRule(final SNode namedResource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(namedResource, "expression", true)), "com.mbeddr.core.pointers.structure.PointerType"))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(namedRessource, "pointer to shared ressource expected here", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195558179233", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(namedResource, "pointer to shared resource expected here", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195558179233", null, errorTarget);
       }
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessourceNamed";
+    return "TasksAndSyncs.structure.SyncResourceNamed";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

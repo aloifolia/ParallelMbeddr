@@ -5,11 +5,11 @@ package TasksAndSyncs.behavior;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 
-public class SyncRessourceRef_Behavior {
+public class SyncResourceRef_Behavior {
   public static void init(SNode thisNode) {
   }
 
   public static SNode virtual_target_8076351743304603874(SNode thisNode) {
-    return SLinkOperations.getTarget(thisNode, "syncRessource", false);
+    return SLinkOperations.getTarget(thisNode, "syncResource", false);
   }
 }

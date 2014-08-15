@@ -5,7 +5,7 @@
   <language namespace="7a5dda62-9140-4668-ab76-d5ed1746f2b2(jetbrains.mps.lang.typesystem)" />
   <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   <import index="mj1l" modelUID="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" version="33" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="34" />
   <import index="fxg7" modelUID="f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.io(JDK/java.io@java_stub)" version="-1" />
   <import index="tpcu" modelUID="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" version="-1" />
   <import index="tpdg" modelUID="r:00000000-0000-4000-0000-011c895902a8(jetbrains.mps.lang.actions.structure)" version="23" implicit="yes" />
@@ -18,7 +18,7 @@
     <node role="actionsBuilder" roleId="tpdg.1138079416599" type="tpdg.SideTransformHintSubstituteActionsBuilder" typeId="tpdg.1138079221458" id="6288388922744240693" nodeInfo="ng">
       <link role="applicableConcept" roleId="tpdg.1138079221462" targetNodeId="mj1l.8860443239512128050" resolveInfo="Expression" />
       <node role="part" roleId="tpdg.1177442283389" type="tpdg.AddMenuPart" typeId="tpdg.1177323996388" id="6288388922744240793" nodeInfo="ng">
-        <link role="concept" roleId="tpdg.1177333551023" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+        <link role="concept" roleId="tpdg.1177333551023" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
         <node role="part" roleId="tpdg.1177333559040" type="tpdg.SimpleSideTransformMenuPart" typeId="tpdg.1177498013932" id="6288388922744246872" nodeInfo="ng">
           <node role="handler" roleId="tpdg.1177498207384" type="tpdg.QueryFunction_SideTransform_Handler" typeId="tpdg.1177498227294" id="6288388922744246873" nodeInfo="nn">
             <node role="body" roleId="tpee.1137022507850" type="tpee.StatementList" typeId="tpee.1068580123136" id="6288388922744246874" nodeInfo="sn">
@@ -27,12 +27,12 @@
                 <node role="localVariableDeclaration" roleId="tpee.1068581242865" type="tpee.LocalVariableDeclaration" typeId="tpee.1068581242863" id="6288388922744247007" nodeInfo="nr">
                   <property name="name" nameId="tpck.1169194664001" value="ressourceNamed" />
                   <node role="type" roleId="tpee.5680397130376446158" type="tp25.SNodeType" typeId="tp25.1138055754698" id="6288388922744247003" nodeInfo="in">
-                    <link role="concept" roleId="tp25.1138405853777" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+                    <link role="concept" roleId="tp25.1138405853777" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
                   </node>
                   <node role="initializer" roleId="tpee.1068431790190" type="tpee.GenericNewExpression" typeId="tpee.1145552977093" id="6288388922744247577" nodeInfo="nn">
                     <node role="creator" roleId="tpee.1145553007750" type="tpdg.SNodeCreatorAndInitializer" typeId="tpdg.5979988948250981289" id="6288388922744256163" nodeInfo="nn">
                       <node role="createdType" roleId="tp25.1180636770616" type="tp25.SNodeType" typeId="tp25.1138055754698" id="6288388922744256165" nodeInfo="in">
-                        <link role="concept" roleId="tp25.1138405853777" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+                        <link role="concept" roleId="tp25.1138405853777" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
                       </node>
                     </node>
                   </node>

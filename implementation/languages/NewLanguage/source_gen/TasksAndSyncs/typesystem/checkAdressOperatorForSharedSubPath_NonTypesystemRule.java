@@ -23,7 +23,7 @@ public class checkAdressOperatorForSharedSubPath_NonTypesystemRule extends Abstr
     if (!(SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(referenceExpr, "expression", true)), "TasksAndSyncs.structure.SharedType")) && Checker.pathContainsSharedGet(SLinkOperations.getTarget(referenceExpr, "expression", true))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(referenceExpr, "address of shared ressource (sub) value may not be requested", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559367289", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(referenceExpr, "address of shared resource (sub) value may not be requested", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559367289", null, errorTarget);
       }
     }
   }

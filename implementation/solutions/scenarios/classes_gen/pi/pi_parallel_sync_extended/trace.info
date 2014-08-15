@@ -109,8 +109,8 @@
     <nodeInfo nodeId="9107941546545098115" fileName="pi.c" startLine="100" startPosition="8" endLine="100" endPosition="76" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="9107941546545098118" fileName="pi.c" startLine="100" startPosition="16" endLine="100" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9107941546545192725" fileName="pi.c" startLine="100" startPosition="23" endLine="100" endPosition="75" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="9107941546545192725" fileName="pi.c" startLine="100" startPosition="47" endLine="100" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="9107941546545192725" fileName="pi.c" startLine="100" startPosition="60" endLine="100" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9107941546545192725" fileName="pi.c" startLine="100" startPosition="47" endLine="100" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="9107941546545192725" fileName="pi.c" startLine="100" startPosition="63" endLine="100" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="9107941546551603938" fileName="pi.c" startLine="104" startPosition="2" endLine="104" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="8001979070701845601" fileName="pi.c" startLine="105" startPosition="2" endLine="105" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="106" startPosition="2" endLine="106" endPosition="79" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
@@ -675,8 +675,8 @@
     <nodeInfo nodeId="9107941546546068936" fileName="pi.h" startLine="40" startPosition="0" endLine="40" endPosition="21" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" />
     <nodeInfo nodeId="9107941546546088794" fileName="pi.h" startLine="40" startPosition="18" endLine="40" endPosition="20" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700482069" fileName="pi.h" startLine="41" startPosition="0" endLine="42" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_sync_extended.main" />
-    <nodeInfo nodeId="8001979070701621050" fileName="pi_SharedTypes_0.c" startLine="18" startPosition="95" endLine="18" endPosition="96" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070701621050" fileName="pi_SharedTypes_0.c" startLine="38" startPosition="92" endLine="38" endPosition="93" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070701621050" fileName="pi_SharedTypes_0.c" startLine="32" startPosition="95" endLine="32" endPosition="96" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070701621050" fileName="pi_SharedTypes_0.c" startLine="52" startPosition="92" endLine="52" endPosition="93" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070701621050" fileName="pi_SharedTypes_0.h" startLine="40" startPosition="51" endLine="40" endPosition="52" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="9107941546542353157" fileName="pi_SharedTypes_0.h" startLine="24" startPosition="0" endLine="30" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <unitInfo nodeId="8001979070700482069" fileName="pi.c" startLine="1" startPosition="0" endLine="380" endPosition="0" unitName="pi.pi_parallel_sync_extended.pi" />
@@ -874,8 +874,8 @@
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="41" startPosition="0" endLine="42" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_sync_extended.queueSetDeleteAt" />
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="43" startPosition="0" endLine="44" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_sync_extended.queueGetItemAt" />
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="45" startPosition="0" endLine="46" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_sync_extended.queueSetItemAt" />
-    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="8" startPosition="108" endLine="8" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="25" startPosition="111" endLine="25" endPosition="116" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="20" startPosition="111" endLine="20" endPosition="116" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="25" startPosition="108" endLine="25" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.h" startLine="25" startPosition="58" endLine="25" endPosition="63" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700644980" fileName="queue_SharedTypes_0.h" startLine="22" startPosition="0" endLine="27" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <unitInfo nodeId="8001979070700644525" fileName="queue.c" startLine="1" startPosition="0" endLine="150" endPosition="0" unitName="pi.pi_parallel_sync_extended.queue" />

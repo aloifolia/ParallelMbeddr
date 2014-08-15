@@ -11,8 +11,8 @@ import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class typeof_SharedRessource_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  public typeof_SharedRessource_InferenceRule() {
+public class typeof_SharedResource_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
+  public typeof_SharedResource_InferenceRule() {
   }
 
   public void applyRule(final SNode sharedType, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {

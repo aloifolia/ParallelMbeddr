@@ -19,15 +19,15 @@ public class checkSyncRessourceForSharedness_NonTypesystemRule extends AbstractN
   public checkSyncRessourceForSharedness_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode syncRessource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    SNode ressourceType = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(syncRessource, "expression", true));
+  public void applyRule(final SNode syncResource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    SNode ressourceType = TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(syncResource, "expression", true));
     if (SNodeOperations.isInstanceOf(ressourceType, "TasksAndSyncs.structure.SharedType")) {
       return;
     }
     if (!(SNodeOperations.isInstanceOf(ressourceType, "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(ressourceType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType"))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncRessource, "only shared ressource or pointer to shared ressource allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3227138667937870384", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncResource, "only shared ressource or pointer to shared resource allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3227138667937870384", null, errorTarget);
       }
     }
   }

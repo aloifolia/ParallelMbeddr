@@ -18,14 +18,14 @@ public class checkSyncRessourceForBinding_NonTypesystemRule extends AbstractNonT
   public checkSyncRessourceForBinding_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode syncRessource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    if (SNodeOperations.isInstanceOf(syncRessource, "TasksAndSyncs.structure.SyncRessourceNamed")) {
+  public void applyRule(final SNode syncResource, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    if (SNodeOperations.isInstanceOf(syncResource, "TasksAndSyncs.structure.SyncResourceNamed")) {
       return;
     }
-    if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference")) && !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr"), "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"))) {
+    if (!(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncResource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference")) && !(SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncResource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(syncResource, "expression", true), "com.mbeddr.core.pointers.structure.ReferenceExpr"), "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncRessource, "sync ressource must be bound with 'as'", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3227138667937815921", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncResource, "sync resource must be bound with 'as'", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3227138667937815921", null, errorTarget);
       }
     }
   }

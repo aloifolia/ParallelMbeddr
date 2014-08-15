@@ -15,8 +15,8 @@ import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class checkSharedSetForNestedSharedRessource_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public checkSharedSetForNestedSharedRessource_NonTypesystemRule() {
+public class checkSharedSetForNestedSharedResource_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public checkSharedSetForNestedSharedResource_NonTypesystemRule() {
   }
 
   public void applyRule(final SNode sharedSet, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
@@ -25,14 +25,14 @@ public class checkSharedSetForNestedSharedRessource_NonTypesystemRule extends Ab
       if (Checker.typeContainsSharedElements(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "TasksAndSyncs.structure.SharedType"), "baseType", true))) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedSet, "nested shared ressource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559030275", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedSet, "nested shared resource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559030275", null, errorTarget);
         }
       }
     } else if (SNodeOperations.isInstanceOf(expressionType, "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType")) {
       if (Checker.typeContainsSharedElements(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType"), "baseType", true))) {
         {
           MessageTarget errorTarget = new NodeMessageTarget();
-          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedSet, "nested shared ressource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559038405", null, errorTarget);
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedSet, "nested shared resource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195559038405", null, errorTarget);
         }
       }
     }

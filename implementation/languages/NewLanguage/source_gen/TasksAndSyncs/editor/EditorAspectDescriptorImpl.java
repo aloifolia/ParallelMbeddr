@@ -26,9 +26,9 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 4:
         return Collections.<ConceptEditor>singletonList(new SyncResource_Editor());
       case 5:
-        return Collections.<ConceptEditor>singletonList(new SyncRessourceNamed_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncResourceNamed_Editor());
       case 6:
-        return Collections.<ConceptEditor>singletonList(new SyncRessourceRef_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncResourceRef_Editor());
       case 7:
         return Collections.<ConceptEditor>singletonList(new SyncStart_Editor());
       case 8:
@@ -50,5 +50,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
 
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncResourceNamed", "TasksAndSyncs.structure.SyncResourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

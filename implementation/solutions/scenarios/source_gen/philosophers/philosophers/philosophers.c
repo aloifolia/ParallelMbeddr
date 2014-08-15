@@ -38,11 +38,6 @@ int32_t main(int32_t argc, char* argv[])
   
   philosophers_initPhilosophers(philosophers, forks);
   philosophers_letThemEat(philosophers);
-  for ( int8_t __i = 1; __i < 2; __i++ )
-  {
-    __i = 5;
-  }
-  
   return 0;
 }
 

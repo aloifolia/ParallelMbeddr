@@ -6,16 +6,16 @@ import com.mbeddr.core.expressions.behavior.Expression_BehaviorDescriptor;
 import com.mbeddr.core.base.behavior.IReference_BehaviorDescriptor;
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class SyncRessourceRef_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IReference_BehaviorDescriptor {
-  public SyncRessourceRef_BehaviorDescriptor() {
+public class SyncResourceRef_BehaviorDescriptor extends Expression_BehaviorDescriptor implements IReference_BehaviorDescriptor {
+  public SyncResourceRef_BehaviorDescriptor() {
   }
 
   public SNode virtual_target_8076351743304603874(SNode thisNode) {
-    return SyncRessourceRef_Behavior.virtual_target_8076351743304603874(thisNode);
+    return SyncResourceRef_Behavior.virtual_target_8076351743304603874(thisNode);
   }
 
   @Override
   public String getConceptFqName() {
-    return "TasksAndSyncs.structure.SyncRessourceRef";
+    return "TasksAndSyncs.structure.SyncResourceRef";
   }
 }

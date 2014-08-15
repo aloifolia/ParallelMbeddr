@@ -3,7 +3,7 @@
   <persistence version="8" />
   <language namespace="023e30f7-586d-416b-97aa-7d26dae53e75(TasksAndSyncs)" />
   <devkit namespace="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" implicit="yes" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="34" implicit="yes" />
   <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="9" implicit="yes" />
   <import index="yq40" modelUID="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" version="5" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
@@ -219,7 +219,7 @@
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="5402960089354405434" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncRessourceNamed" typeId="6i3o.6288388922742659454" id="5402960089354405850" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5402960089354405850" nodeInfo="ng">
             <property name="name" nameId="tpck.1169194664001" value="iPointer" />
             <node role="expression" roleId="6i3o.6553204290896504666" type="yq40.ReferenceExpr" typeId="yq40.1595838349830846141" id="5402960089354405852" nodeInfo="ng">
               <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5402960089354405853" nodeInfo="ng">
@@ -232,8 +232,8 @@
               <node role="expr" roleId="c4fa.7254843406768833939" type="6i3o.Task" typeId="6i3o.1304213873204721600" id="5402960089354407057" nodeInfo="ng">
                 <node role="expression" roleId="6i3o.2744793885328637740" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="5402960089354503712" nodeInfo="ng">
                   <link role="function" roleId="x27k.5950410542643524493" targetNodeId="5402960089354503082" resolveInfo="foo" />
-                  <node role="actuals" roleId="x27k.5950410542643524495" type="6i3o.SyncRessourceRef" typeId="6i3o.6288388922743435028" id="5402960089354504028" nodeInfo="ng">
-                    <link role="syncRessource" roleId="6i3o.6288388922743435132" targetNodeId="5402960089354405850" resolveInfo="iPointer" />
+                  <node role="actuals" roleId="x27k.5950410542643524495" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5402960089354504028" nodeInfo="ng">
+                    <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5402960089354405850" resolveInfo="iPointer" />
                   </node>
                 </node>
               </node>

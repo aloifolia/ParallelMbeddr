@@ -14,8 +14,8 @@ import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class checkAssignmentForNestedSharedRessource_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
-  public checkAssignmentForNestedSharedRessource_NonTypesystemRule() {
+public class checkAssignmentForNestedSharedResource_NonTypesystemRule extends AbstractNonTypesystemRule_Runtime implements NonTypesystemRule_Runtime {
+  public checkAssignmentForNestedSharedResource_NonTypesystemRule() {
   }
 
   public void applyRule(final SNode assignmentExpr, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
@@ -23,7 +23,7 @@ public class checkAssignmentForNestedSharedRessource_NonTypesystemRule extends A
     if (Checker.typeContainsSharedElements(TypeChecker.getInstance().getTypeOf(target))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(target, "(nested) shared ressource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195558648037", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(target, "(nested) shared resource overwriting not allowed", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "483189195558648037", null, errorTarget);
       }
     }
   }

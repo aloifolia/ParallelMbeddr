@@ -21,29 +21,29 @@ public class checkLocalVarRefForNamedRessource_NonTypesystemRule extends Abstrac
   public checkLocalVarRefForNamedRessource_NonTypesystemRule() {
   }
 
-  public void applyRule(final SNode syncRessourceRef, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
-    final SNode referedNamedRessource = SLinkOperations.getTarget(syncRessourceRef, "syncRessource", false);
-    if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(syncRessourceRef, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
+  public void applyRule(final SNode syncResourceRef, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+    final SNode referedNamedResource = SLinkOperations.getTarget(syncResourceRef, "syncResource", false);
+    if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(syncResourceRef, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return ListSequence.fromList(SLinkOperations.getTargets(it, "resources", true)).contains(referedNamedRessource);
+        return ListSequence.fromList(SLinkOperations.getTargets(it, "resources", true)).contains(referedNamedResource);
       }
     }))) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncRessourceRef, "referred named ressource not in scope", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3735204333725573884", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncResourceRef, "referred named ressource not in scope", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3735204333725573884", null, errorTarget);
       }
     }
-    SNode ressourceRefContext = SNodeOperations.getAncestor(syncRessourceRef, "TasksAndSyncs.structure.SyncResource", false, false);
-    if (ressourceRefContext != null && ListSequence.fromList(SNodeOperations.getNextSiblings(ressourceRefContext, false)).contains(referedNamedRessource)) {
+    SNode resourceRefContext = SNodeOperations.getAncestor(syncResourceRef, "TasksAndSyncs.structure.SyncResource", false, false);
+    if (resourceRefContext != null && ListSequence.fromList(SNodeOperations.getNextSiblings(resourceRefContext, false)).contains(referedNamedResource)) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();
-        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncRessourceRef, "referred named ressource must be declared first", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3735204333726549512", null, errorTarget);
+        IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncResourceRef, "referred named ressource must be declared first", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3735204333726549512", null, errorTarget);
       }
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessourceRef";
+    return "TasksAndSyncs.structure.SyncResourceRef";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

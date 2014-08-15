@@ -192,5 +192,23 @@
     </dependencies>
     <rename id="6i3o.6553204290893807643" type="CONCEPT" from="SyncRessource" to="SyncResource" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" />
+    </dependencies>
+    <rename id="6i3o.6288388922742659454" type="CONCEPT" from="SyncRessourceNamed" to="SyncResourceNamed" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="32" />
+    </dependencies>
+    <rename id="6i3o.6288388922743435028" type="CONCEPT" from="SyncRessourceRef" to="SyncResourceRef" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="33" />
+    </dependencies>
+    <rename id="6i3o.6288388922743435132" type="REFERENCE" from="syncRessource" to="syncResource" />
+  </StructureModification>
 </history>
 

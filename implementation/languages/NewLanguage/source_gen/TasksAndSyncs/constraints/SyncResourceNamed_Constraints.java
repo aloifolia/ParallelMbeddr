@@ -10,9 +10,9 @@ import jetbrains.mps.smodel.runtime.CheckingNodeContext;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SNodePointer;
 
-public class SyncRessourceNamed_Constraints extends BaseConstraintsDescriptor {
-  public SyncRessourceNamed_Constraints() {
-    super("TasksAndSyncs.structure.SyncRessourceNamed");
+public class SyncResourceNamed_Constraints extends BaseConstraintsDescriptor {
+  public SyncResourceNamed_Constraints() {
+    super("TasksAndSyncs.structure.SyncResourceNamed");
   }
 
   @Override

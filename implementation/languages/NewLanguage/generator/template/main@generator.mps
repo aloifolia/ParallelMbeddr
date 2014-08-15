@@ -19,7 +19,7 @@
   <import index="tpee" modelUID="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" version="5" />
   <import index="mj1l" modelUID="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" version="33" />
   <import index="x27k" modelUID="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" version="9" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="34" />
   <import index="clbe" modelUID="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" version="13" />
   <import index="yq40" modelUID="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" version="5" />
   <import index="2rho" modelUID="r:4e770e63-2ef5-4a0d-b2e8-c5c1a1565703(com.mbeddr.core.udt.behavior)" version="2" />
@@ -73,7 +73,7 @@
     </node>
     <node role="mappingLabel" roleId="tpf8.1200911492601" type="tpf8.MappingLabelDeclaration" typeId="tpf8.1200911316486" id="5853110027221067077" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="syncRefNamed" />
-      <link role="sourceConcept" roleId="tpf8.1200911342686" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+      <link role="sourceConcept" roleId="tpf8.1200911342686" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
       <link role="targetConcept" roleId="tpf8.1200913004646" targetNodeId="c4fa.4185783222026475238" resolveInfo="LocalVariableDeclaration" />
     </node>
     <node role="weavingMappingRule" roleId="tpf8.1167172143858" type="tpf8.Weaving_MappingRule" typeId="tpf8.1167171569011" id="4644263955273501384" nodeInfo="ng">
@@ -144,7 +144,7 @@
                 <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="7341014709916845657" nodeInfo="nn">
                   <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="7341014709916845658" nodeInfo="ng">
                     <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="7341014709916845659" nodeInfo="nn">
-                      <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                      <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                     </node>
                   </node>
                 </node>
@@ -212,7 +212,7 @@
                   <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="4335879941149926093" nodeInfo="nn">
                     <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="4335879941149926094" nodeInfo="ng">
                       <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="4335879941149926095" nodeInfo="nn">
-                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                       </node>
                     </node>
                   </node>
@@ -279,7 +279,7 @@
                   <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="4335879941149962660" nodeInfo="nn">
                     <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="4335879941149962661" nodeInfo="ng">
                       <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="4335879941149962662" nodeInfo="nn">
-                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                       </node>
                     </node>
                   </node>
@@ -926,7 +926,7 @@
                   <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="4335879941150846849" nodeInfo="nn">
                     <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="4335879941150846850" nodeInfo="ng">
                       <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="4335879941150846851" nodeInfo="nn">
-                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                       </node>
                     </node>
                   </node>
@@ -1104,7 +1104,7 @@
                   <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="4335879941149180938" nodeInfo="nn">
                     <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="4335879941149180940" nodeInfo="ng">
                       <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="4335879941150840825" nodeInfo="nn">
-                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                       </node>
                     </node>
                   </node>
@@ -1394,7 +1394,7 @@
                     <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="7341014709910266884" nodeInfo="nn">
                       <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="7341014709910266885" nodeInfo="ng">
                         <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="7341014709910266886" nodeInfo="nn">
-                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                         </node>
                       </node>
                     </node>
@@ -2023,7 +2023,7 @@
                     <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="7341014709914872688" nodeInfo="nn">
                       <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="7341014709914872689" nodeInfo="ng">
                         <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="7341014709914872690" nodeInfo="nn">
-                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                         </node>
                       </node>
                     </node>
@@ -2817,7 +2817,7 @@
                     <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="8001979070750347232" nodeInfo="nn">
                       <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="8001979070750347233" nodeInfo="ng">
                         <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="3227138667949015069" nodeInfo="nn">
-                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                         </node>
                       </node>
                     </node>
@@ -7906,7 +7906,7 @@
                       </node>
                       <node role="operation" roleId="tpee.1197027833540" type="tp25.OfConceptOperation" typeId="tp25.4693937538533521280" id="3227138667944404358" nodeInfo="ng">
                         <node role="requestedConcept" roleId="tp25.4693937538533538124" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="3227138667944404359" nodeInfo="nn">
-                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+                          <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
                         </node>
                       </node>
                     </node>
@@ -7975,7 +7975,7 @@
                     </node>
                     <node role="operation" roleId="tpee.1197027833540" type="tp25.OfConceptOperation" typeId="tp25.4693937538533521280" id="3227138667944361939" nodeInfo="ng">
                       <node role="requestedConcept" roleId="tp25.4693937538533538124" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="3227138667944362055" nodeInfo="nn">
-                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncRessourceNamed" />
+                        <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922742659454" resolveInfo="SyncResourceNamed" />
                       </node>
                     </node>
                   </node>
@@ -8065,7 +8065,7 @@
                           <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="3227138667946469287" nodeInfo="nn">
                             <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="3227138667946469288" nodeInfo="ng">
                               <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="3227138667946469289" nodeInfo="nn">
-                                <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                                <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                               </node>
                             </node>
                           </node>
@@ -8124,7 +8124,7 @@
                           <node role="operation" roleId="tpee.1197027833540" type="tp25.Node_GetDescendantsOperation" typeId="tp25.1171305280644" id="3227138667944576154" nodeInfo="nn">
                             <node role="parameter" roleId="tp25.1144104376918" type="tp25.OperationParm_Concept" typeId="tp25.1144101972840" id="3227138667944576156" nodeInfo="ng">
                               <node role="conceptArgument" roleId="tp25.1207343664468" type="tp25.RefConcept_Reference" typeId="tp25.1177026924588" id="3227138667944576225" nodeInfo="nn">
-                                <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncRessourceRef" />
+                                <link role="conceptDeclaration" roleId="tp25.1177026940964" targetNodeId="6i3o.6288388922743435028" resolveInfo="SyncResourceRef" />
                               </node>
                             </node>
                           </node>

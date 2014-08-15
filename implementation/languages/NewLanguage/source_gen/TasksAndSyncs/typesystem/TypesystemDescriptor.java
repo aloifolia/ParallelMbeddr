@@ -22,7 +22,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_SharedRessource_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_SharedResource_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -30,11 +30,11 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_SyncRessNamed_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_SyncResNamed_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
-      InferenceRule_Runtime inferenceRule = new typeof_SyncRessRef_InferenceRule();
+      InferenceRule_Runtime inferenceRule = new typeof_SyncResRef_InferenceRule();
       this.myInferenceRules.add(inferenceRule);
     }
     {
@@ -58,7 +58,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
-      NonTypesystemRule_Runtime nonTypesystemRule = new checkAssignmentForNestedSharedRessource_NonTypesystemRule();
+      NonTypesystemRule_Runtime nonTypesystemRule = new checkAssignmentForNestedSharedResource_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
@@ -90,7 +90,7 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
-      NonTypesystemRule_Runtime nonTypesystemRule = new checkSharedSetForNestedSharedRessource_NonTypesystemRule();
+      NonTypesystemRule_Runtime nonTypesystemRule = new checkSharedSetForNestedSharedResource_NonTypesystemRule();
       this.myNonTypesystemRules.add(nonTypesystemRule);
     }
     {
@@ -126,11 +126,11 @@ public class TypesystemDescriptor extends BaseHelginsDescriptor {
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new IType_subTypeOf_SharedRessourceType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new IType_subTypeOf_SharedResourceType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {
-      InequationReplacementRule_Runtime eliminationRule = new SharedRessourceType_subTypeOf_SharedRessourceType_InequationReplacementRule();
+      InequationReplacementRule_Runtime eliminationRule = new SharedResourceType_subTypeOf_SharedResourceType_InequationReplacementRule();
       this.myInequationReplacementRules.add(eliminationRule);
     }
     {

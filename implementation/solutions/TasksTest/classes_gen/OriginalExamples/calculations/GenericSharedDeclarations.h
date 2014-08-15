@@ -32,11 +32,11 @@ struct GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_ArrayOf_int32_0_0 {
 
 extern pthread_mutexattr_t GenericSharedDeclarations_mutexAttribute_0;
 
-void GenericSharedDeclarations_mutexDestroy_1(GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_ArrayOf_int32_0_0_t* var);
-
 void GenericSharedDeclarations_mutexInit_0(GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* var, int32_t size_0);
 
 void GenericSharedDeclarations_mutexDestroy_0(GenericSharedDeclarations_SharedOf_ArrayOf_int32_0_t* var, int32_t size_0);
+
+void GenericSharedDeclarations_mutexDestroy_1(GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_ArrayOf_int32_0_0_t* var);
 
 void GenericSharedDeclarations_mutexInit_1(GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_ArrayOf_int32_0_0_t* var);
 

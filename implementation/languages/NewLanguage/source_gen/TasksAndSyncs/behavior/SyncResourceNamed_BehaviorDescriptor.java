@@ -8,8 +8,8 @@ import com.mbeddr.core.base.behavior.IIdentifierNamedConcept_Behavior;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.core.behavior.INamedConcept_Behavior;
 
-public class SyncRessourceNamed_BehaviorDescriptor extends SyncResource_BehaviorDescriptor implements IIdentifierNamedConcept_BehaviorDescriptor {
-  public SyncRessourceNamed_BehaviorDescriptor() {
+public class SyncResourceNamed_BehaviorDescriptor extends SyncResource_BehaviorDescriptor implements IIdentifierNamedConcept_BehaviorDescriptor {
+  public SyncResourceNamed_BehaviorDescriptor() {
   }
 
   public boolean virtual_allowNonIdentifierNames_6584628407655574550(SConcept thisConcept) {
@@ -34,6 +34,6 @@ public class SyncRessourceNamed_BehaviorDescriptor extends SyncResource_Behavior
 
   @Override
   public String getConceptFqName() {
-    return "TasksAndSyncs.structure.SyncRessourceNamed";
+    return "TasksAndSyncs.structure.SyncResourceNamed";
   }
 }

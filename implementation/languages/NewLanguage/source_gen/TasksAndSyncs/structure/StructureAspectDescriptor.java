@@ -32,9 +32,9 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
       case 8:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncResource").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"expression"}, new boolean[]{false}).create();
       case 9:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceNamed").super_("TasksAndSyncs.structure.SyncResource").parents("TasksAndSyncs.structure.SyncResource", "com.mbeddr.core.base.structure.IIdentifierNamedConcept").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncResourceNamed").super_("TasksAndSyncs.structure.SyncResource").parents("TasksAndSyncs.structure.SyncResource", "com.mbeddr.core.base.structure.IIdentifierNamedConcept").create();
       case 10:
-        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncRessourceRef").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.base.structure.IReference").references("syncRessource").create();
+        return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncResourceRef").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression", "com.mbeddr.core.base.structure.IReference").references("syncResource").create();
       case 11:
         return new ConceptDescriptorBuilder("TasksAndSyncs.structure.SyncStart").super_("com.mbeddr.core.expressions.structure.Expression").parents("com.mbeddr.core.expressions.structure.Expression").children(new String[]{"exprs"}, new boolean[]{true}).create();
       case 12:
@@ -52,5 +52,5 @@ public class StructureAspectDescriptor implements jetbrains.mps.smodel.runtime.S
     }
   }
 
-  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncRessourceNamed", "TasksAndSyncs.structure.SyncRessourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskClear", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_1htk8d_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.Future", "TasksAndSyncs.structure.FutureJoin", "TasksAndSyncs.structure.FutureResult", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedGet", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncResourceNamed", "TasksAndSyncs.structure.SyncResourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskClear", "TasksAndSyncs.structure.TaskType"};
 }

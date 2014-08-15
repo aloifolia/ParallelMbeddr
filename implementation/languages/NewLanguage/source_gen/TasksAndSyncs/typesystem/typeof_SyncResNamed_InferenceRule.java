@@ -11,20 +11,20 @@ import jetbrains.mps.typesystem.inference.EquationInfo;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.smodel.SModelUtil_new;
 
-public class typeof_SyncRessNamed_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
-  public typeof_SyncRessNamed_InferenceRule() {
+public class typeof_SyncResNamed_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
+  public typeof_SyncResNamed_InferenceRule() {
   }
 
-  public void applyRule(final SNode syncRessNamed, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
+  public void applyRule(final SNode syncResNamed, final TypeCheckingContext typeCheckingContext, IsApplicableStatus status) {
     {
-      SNode _nodeToCheck_1029348928467 = syncRessNamed;
+      SNode _nodeToCheck_1029348928467 = syncResNamed;
       EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6288388922743520276", 0, null);
-      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6288388922743520146", true), (SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(syncRessNamed, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6288388922743520295", true), _info_12389875345);
+      typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6288388922743520146", true), (SNode) typeCheckingContext.typeOf(SLinkOperations.getTarget(syncResNamed, "expression", true), "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "6288388922743520295", true), _info_12389875345);
     }
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessourceNamed";
+    return "TasksAndSyncs.structure.SyncResourceNamed";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

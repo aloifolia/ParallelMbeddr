@@ -4,7 +4,7 @@
   <language namespace="023e30f7-586d-416b-97aa-7d26dae53e75(TasksAndSyncs)" />
   <language namespace="92d2ea16-5a42-4fdf-a676-c7604efe3504(de.slisson.mps.richtext)" />
   <devkit namespace="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
-  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="31" implicit="yes" />
+  <import index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="34" implicit="yes" />
   <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="9" implicit="yes" />
   <import index="yq40" modelUID="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" version="5" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
@@ -717,7 +717,7 @@
           </node>
           <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="9107941546541214367" nodeInfo="ng">
             <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="9107941546541225732" nodeInfo="ng">
-              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncRessourceNamed" typeId="6i3o.6288388922742659454" id="9107941546541226276" nodeInfo="ng">
+              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="9107941546541226276" nodeInfo="ng">
                 <property name="name" nameId="tpck.1169194664001" value="wrappedItem" />
                 <node role="expression" roleId="6i3o.6553204290896504666" type="yq40.ReferenceExpr" typeId="yq40.1595838349830846141" id="9107941546541226278" nodeInfo="ng">
                   <node role="expression" roleId="mj1l.7254843406768839760" type="yq40.ArrayAccessExpr" typeId="yq40.6282313788306893057" id="9107941546541226279" nodeInfo="ng">
@@ -742,8 +742,8 @@
                 <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="9107941546541269599" nodeInfo="ng">
                   <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="9107941546541269886" nodeInfo="ng">
                     <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedGet" typeId="6i3o.1924594752095502558" id="9107941546541275545" nodeInfo="ng" />
-                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncRessourceRef" typeId="6i3o.6288388922743435028" id="9107941546541269612" nodeInfo="ng">
-                      <link role="syncRessource" roleId="6i3o.6288388922743435132" targetNodeId="9107941546541226276" resolveInfo="wrappedItem" />
+                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="9107941546541269612" nodeInfo="ng">
+                      <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="9107941546541226276" resolveInfo="wrappedItem" />
                     </node>
                   </node>
                 </node>
@@ -792,7 +792,7 @@
           </node>
           <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="9107941546541292897" nodeInfo="ng">
             <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="9107941546541292898" nodeInfo="ng">
-              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncRessourceNamed" typeId="6i3o.6288388922742659454" id="9107941546541292899" nodeInfo="ng">
+              <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="9107941546541292899" nodeInfo="ng">
                 <property name="name" nameId="tpck.1169194664001" value="wrappedItem" />
                 <node role="expression" roleId="6i3o.6553204290896504666" type="yq40.ReferenceExpr" typeId="yq40.1595838349830846141" id="9107941546541292900" nodeInfo="ng">
                   <node role="expression" roleId="mj1l.7254843406768839760" type="yq40.ArrayAccessExpr" typeId="yq40.6282313788306893057" id="9107941546541292901" nodeInfo="ng">
@@ -821,8 +821,8 @@
                         <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="9107941546541323140" resolveInfo="newItem" />
                       </node>
                     </node>
-                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncRessourceRef" typeId="6i3o.6288388922743435028" id="9107941546541340745" nodeInfo="ng">
-                      <link role="syncRessource" roleId="6i3o.6288388922743435132" targetNodeId="9107941546541292899" resolveInfo="wrappedItem" />
+                    <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="9107941546541340745" nodeInfo="ng">
+                      <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="9107941546541292899" resolveInfo="wrappedItem" />
                     </node>
                   </node>
                 </node>

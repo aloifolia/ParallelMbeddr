@@ -20,7 +20,7 @@ static long double pi_calcPiItem(uint32_t index);
 
 static void* pi_parFun_a0c0f0e(void* voidArgs);
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0f0e(uint32_t start, uint32_t end);
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0f0e(uint32_t end, uint32_t start);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -33,7 +33,7 @@ int32_t main(int32_t argc, char* argv[])
   {
     uint32_t start = ((uint32_t)(__i)) * PI_RANGESIZE;
     uint32_t end = start + PI_RANGESIZE;
-    calculators[__i] = pi_taskInit_a0c0f0e(start, end);
+    calculators[__i] = pi_taskInit_a0c0f0e(end, start);
   }
   
   for ( int8_t __i = 0; __i < PI_RANGECOUNT; __i++ )
@@ -77,7 +77,7 @@ static void* pi_parFun_a0c0f0e(void* voidArgs)
   return result;
 }
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0f0e(uint32_t start, uint32_t end) 
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0f0e(uint32_t end, uint32_t start) 
 {
   pi_Args_a0c0f0e_t* args_a0c0f0e = malloc(sizeof(pi_Args_a0c0f0e_t));
   args_a0c0f0e->start = start;

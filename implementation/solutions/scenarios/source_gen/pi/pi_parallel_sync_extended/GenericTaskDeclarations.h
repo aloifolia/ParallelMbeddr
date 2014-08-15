@@ -42,15 +42,15 @@ struct GenericTaskDeclarations_Task {
 
 void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future);
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future);
-
-void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future);
-
-void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future);
-
 GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task);
 
 GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task);
+
+void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future);
+
+void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future);
+
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future);
 
 
 #ifdef __cplusplus

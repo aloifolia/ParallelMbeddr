@@ -40,7 +40,7 @@ static void otherStuff_bar(int32_t** x)
 
 static void otherStuff_foo(otherStuff_SharedTypes_0_SharedOf_A_0_t hiThere[6][6][6]) 
 {
-  GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_int32_0_0_t five;
+  GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_int32_0_1_t five;
   GenericSharedDeclarations_mutexInit_3(&five);
   GenericSharedDeclarations_SharedOf_SharedOf_int32_0_0_t v;
   GenericSharedDeclarations_mutexInit_0(&v);
@@ -49,7 +49,7 @@ static void otherStuff_foo(otherStuff_SharedTypes_0_SharedOf_A_0_t hiThere[6][6]
   }
   GenericSharedDeclarations_SharedOf_int32_0_t val[1][2];
   GenericSharedDeclarations_mutexInit_4(((GenericSharedDeclarations_SharedOf_int32_0_t**)(val)), 1, 2);
-  GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_int32_0_1_t three;
+  GenericSharedDeclarations_SharedOf_ArrayOf_SharedOf_int32_0_0_t three;
   GenericSharedDeclarations_mutexInit_5(&three);
   otherStuff_SharedTypes_0_A_t val3;
   otherStuff_SharedTypes_0_mutexInit_6(&val3);

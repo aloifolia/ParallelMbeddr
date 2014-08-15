@@ -4,7 +4,7 @@ package TasksAndSyncs.behavior;
 
 import org.jetbrains.mps.openapi.model.SNode;
 
-public class SyncRessourceNamed_Behavior {
+public class SyncResourceNamed_Behavior {
   public static void init(SNode thisNode) {
   }
 }

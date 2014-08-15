@@ -5,9 +5,9 @@
     <classNode dependClassName="TasksAndSyncs.editor.FutureType_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SharedSet_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SharedType_Editor" />
+    <classNode dependClassName="TasksAndSyncs.editor.SyncResourceNamed_Editor" />
+    <classNode dependClassName="TasksAndSyncs.editor.SyncResourceRef_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SyncResource_Editor" />
-    <classNode dependClassName="TasksAndSyncs.editor.SyncRessourceNamed_Editor" />
-    <classNode dependClassName="TasksAndSyncs.editor.SyncRessourceRef_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SyncStart_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SyncStatement_Editor" />
     <classNode dependClassName="TasksAndSyncs.editor.SyncStop_Editor" />
@@ -83,22 +83,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="TasksAndSyncs.editor.SyncResource_Editor" file="SyncResource_Editor.java">
-    <classNode dependClassName="java.lang.Class" />
-    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
-    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
-    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider" />
-    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
-    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
-    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
-    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
-    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
-    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
-    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
-    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
-    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
-  </dependency>
-  <dependency className="TasksAndSyncs.editor.SyncRessourceNamed_Editor" file="SyncRessourceNamed_Editor.java">
+  <dependency className="TasksAndSyncs.editor.SyncResourceNamed_Editor" file="SyncResourceNamed_Editor.java">
     <classNode dependClassName="TasksAndSyncs.editor.unnameRessource" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.PropertyCellProvider" />
@@ -113,7 +98,7 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
-  <dependency className="TasksAndSyncs.editor.SyncRessourceRef_Editor" file="SyncRessourceRef_Editor.java">
+  <dependency className="TasksAndSyncs.editor.SyncResourceRef_Editor" file="SyncResourceRef_Editor.java">
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.cells.BigCellUtil" />
     <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
@@ -130,6 +115,21 @@
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
     <classNode extendsClassName="jetbrains.mps.nodeEditor.InlineCellProvider" />
+  </dependency>
+  <dependency className="TasksAndSyncs.editor.SyncResource_Editor" file="SyncResource_Editor.java">
+    <classNode dependClassName="java.lang.Class" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleAttributes" />
+    <classNode dependClassName="jetbrains.mps.editor.runtime.style.StyleImpl" />
+    <classNode dependClassName="jetbrains.mps.lang.editor.cellProviders.RefNodeCellProvider" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.EditorManager" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cellProviders.CellProviderWithRole" />
+    <classNode dependClassName="jetbrains.mps.nodeEditor.cells.EditorCell_Collection" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.EditorContext" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.cells.EditorCell" />
+    <classNode dependClassName="jetbrains.mps.openapi.editor.style.Style" />
+    <classNode dependClassName="jetbrains.mps.smodel.IOperationContext" />
+    <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
+    <classNode extendsClassName="jetbrains.mps.nodeEditor.DefaultNodeEditor" />
   </dependency>
   <dependency className="TasksAndSyncs.editor.SyncStart_Editor" file="SyncStart_Editor.java">
     <classNode dependClassName="java.lang.String" />
