@@ -46,7 +46,7 @@ static GenericTaskDeclarations_VoidFuture_t tasks_shorter_futureInit_a0b0b(void)
 
 static GenericTaskDeclarations_Future_t tasks_shorter_futureInit_a0e0b(void);
 
-static GenericTaskDeclarations_VoidFuture_t tasks_shorter_futureInit_a0k0b(bool x1, tasks_shorter_A_t x2);
+static GenericTaskDeclarations_VoidFuture_t tasks_shorter_futureInit_a0k0b(tasks_shorter_A_t x2, bool x1);
 
 static GenericTaskDeclarations_Future_t tasks_shorter_futureInit_a0n0b(bool x1);
 
@@ -71,7 +71,7 @@ int32_t main(int32_t argc, char* argv[])
    * (boolean, A) -> void
    */
 
-  GenericTaskDeclarations_saveAndJoinVoidFuture(tasks_shorter_futureInit_a0k0b(x1, x2));
+  GenericTaskDeclarations_saveAndJoinVoidFuture(tasks_shorter_futureInit_a0k0b(x2, x1));
   
   /* 
    * (boolean) -> boolean*
@@ -136,7 +136,7 @@ static GenericTaskDeclarations_Future_t tasks_shorter_futureInit_a0e0b(void)
   return (GenericTaskDeclarations_Future_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t tasks_shorter_futureInit_a0k0b(bool x1, tasks_shorter_A_t x2) 
+static GenericTaskDeclarations_VoidFuture_t tasks_shorter_futureInit_a0k0b(tasks_shorter_A_t x2, bool x1) 
 {
   tasks_shorter_Args_a0a01a1_t* args_a0k0b = malloc(sizeof(tasks_shorter_Args_a0a01a1_t));
   args_a0k0b->x1 = x1;

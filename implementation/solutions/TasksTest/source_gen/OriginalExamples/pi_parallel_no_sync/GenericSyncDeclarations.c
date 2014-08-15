@@ -4,7 +4,7 @@
 
 static void GenericSyncDeclarations_randomWithXorShift(uint32_t* seed);
 
-static inline void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter,uint16_t* mask,uint32_t* seed);
+static inline void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter, uint16_t* mask, uint32_t* seed);
 
 static void GenericSyncDeclarations_randomWithXorShift(uint32_t* seed) 
 {
@@ -12,7 +12,6 @@ static void GenericSyncDeclarations_randomWithXorShift(uint32_t* seed)
   *seed ^= *seed >> 17;
   *seed ^= *seed << 5;
 }
-
 
 static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounter, uint16_t* mask, uint32_t* seed) 
 {
@@ -22,5 +21,4 @@ static  void GenericSyncDeclarations_backoffExponentially(uint8_t* waitingCounte
   nanosleep(&sleepingTime,0);
   *waitingCounter = (*waitingCounter + 1) % 13;
 }
-
 

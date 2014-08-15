@@ -180,5 +180,17 @@
     </dependencies>
     <rename id="6i3o.8001979070750286289" type="CONCEPT" from="TaskFree" to="TaskClear" />
   </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="29" />
+    </dependencies>
+    <rename id="6i3o.6553204290894227497" type="CHILD" from="ressources" to="resources" />
+  </StructureModification>
+  <StructureModification>
+    <dependencies>
+      <model index="6i3o" modelUID="r:af54e311-659f-4265-b558-862058cfed70(TasksAndSyncs.structure)" version="30" />
+    </dependencies>
+    <rename id="6i3o.6553204290893807643" type="CONCEPT" from="SyncRessource" to="SyncResource" />
+  </StructureModification>
 </history>
 

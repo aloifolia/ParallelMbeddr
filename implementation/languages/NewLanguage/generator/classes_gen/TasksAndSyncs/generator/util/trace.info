@@ -296,7 +296,7 @@
     <nodeInfo nodeId="1469333039371312834" fileName="Optimizer.java" startLine="825" startPosition="39" endLine="826" endPosition="110" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1469333039372576529" fileName="Optimizer.java" startLine="833" startPosition="72" endLine="834" endPosition="70" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="1469333039372632072" fileName="Optimizer.java" startLine="835" startPosition="60" endLine="836" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="1469333039372881024" fileName="Optimizer.java" startLine="839" startPosition="133" endLine="840" endPosition="116" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
+    <nodeInfo nodeId="1469333039372881024" fileName="Optimizer.java" startLine="839" startPosition="132" endLine="840" endPosition="115" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="1469333039372804464" fileName="Optimizer.java" startLine="841" startPosition="65" endLine="842" endPosition="42" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1469333039373125598" fileName="Optimizer.java" startLine="845" startPosition="5" endLine="846" endPosition="16" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1469333039374274147" fileName="Optimizer.java" startLine="852" startPosition="184" endLine="853" endPosition="231" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
@@ -381,7 +381,7 @@
     <nodeInfo nodeId="1469333039370914930" fileName="Optimizer.java" startLine="820" startPosition="114" endLine="823" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="1469333039371312417" fileName="Optimizer.java" startLine="825" startPosition="0" endLine="828" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.InstanceMethodDeclaration" propertyString="accept#(Lorg/jetbrains/mps/openapi/model/SNode;)Z" />
     <nodeInfo nodeId="1469333039372585824" fileName="Optimizer.java" startLine="834" startPosition="70" endLine="837" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
-    <nodeInfo nodeId="1469333039372790425" fileName="Optimizer.java" startLine="840" startPosition="116" endLine="843" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
+    <nodeInfo nodeId="1469333039372790425" fileName="Optimizer.java" startLine="840" startPosition="115" endLine="843" endPosition="9" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="1469333039373995445" fileName="Optimizer.java" startLine="851" startPosition="40" endLine="854" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="1469333039373926639" fileName="Optimizer.java" startLine="854" startPosition="5" endLine="857" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
     <nodeInfo nodeId="53264776288579056" fileName="Optimizer.java" startLine="863" startPosition="43" endLine="866" endPosition="5" conceptFqName="jetbrains.mps.baseLanguage.structure.IfStatement" />
@@ -806,7 +806,7 @@
     <scopeInfo nodeId="4065868335589168801" fileName="Optimizer.java" startLine="715" startPosition="153" endLine="719" endPosition="74" />
     <scopeInfo nodeId="8220307879070379888" fileName="Optimizer.java" startLine="724" startPosition="167" endLine="728" endPosition="78" />
     <scopeInfo nodeId="8220307879112385602" fileName="Optimizer.java" startLine="735" startPosition="0" endLine="739" endPosition="0" />
-    <scopeInfo nodeId="1469333039372776943" fileName="Optimizer.java" startLine="839" startPosition="133" endLine="843" endPosition="9">
+    <scopeInfo nodeId="1469333039372776943" fileName="Optimizer.java" startLine="839" startPosition="132" endLine="843" endPosition="9">
       <varInfo nodeId="1469333039372881027" varName="otherVariable" />
     </scopeInfo>
     <scopeInfo nodeId="153799086819408378" fileName="Optimizer.java" startLine="332" startPosition="0" endLine="337" endPosition="0">
@@ -1254,7 +1254,7 @@
     <unitInfo nodeId="4503193035049164575" fileName="Optimizer.java" startLine="608" startPosition="80" endLine="612" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$34" />
     <unitInfo nodeId="4503193035109030644" fileName="Optimizer.java" startLine="638" startPosition="151" endLine="642" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$36" />
     <unitInfo nodeId="4503193035109151581" fileName="Optimizer.java" startLine="642" startPosition="20" endLine="646" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$37" />
-    <unitInfo nodeId="4503193035058479808" fileName="Optimizer.java" startLine="650" startPosition="148" endLine="654" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$38" />
+    <unitInfo nodeId="4503193035058479808" fileName="Optimizer.java" startLine="650" startPosition="147" endLine="654" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$38" />
     <unitInfo nodeId="4503193035058528215" fileName="Optimizer.java" startLine="654" startPosition="20" endLine="658" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$39" />
     <unitInfo nodeId="4503193035057070529" fileName="Optimizer.java" startLine="661" startPosition="44" endLine="665" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$40" />
     <unitInfo nodeId="4503193035058659761" fileName="Optimizer.java" startLine="666" startPosition="157" endLine="670" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$41" />
@@ -1262,7 +1262,7 @@
     <unitInfo nodeId="4503193035109186490" fileName="Optimizer.java" startLine="675" startPosition="151" endLine="679" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$43" />
     <unitInfo nodeId="4503193035109186501" fileName="Optimizer.java" startLine="679" startPosition="20" endLine="683" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$44" />
     <unitInfo nodeId="4503193035086523579" fileName="Optimizer.java" startLine="684" startPosition="57" endLine="688" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$45" />
-    <unitInfo nodeId="4503193035194226459" fileName="Optimizer.java" startLine="701" startPosition="178" endLine="705" endPosition="7" unitName="TasksAndSyncs.generator.util.Optimizer$46" />
+    <unitInfo nodeId="4503193035194226459" fileName="Optimizer.java" startLine="701" startPosition="177" endLine="705" endPosition="7" unitName="TasksAndSyncs.generator.util.Optimizer$46" />
     <unitInfo nodeId="4503193035200653371" fileName="Optimizer.java" startLine="754" startPosition="227" endLine="758" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$48" />
     <unitInfo nodeId="4503193035200653371" fileName="Optimizer.java" startLine="758" startPosition="18" endLine="762" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$49" />
     <unitInfo nodeId="4503193035200653384" fileName="Optimizer.java" startLine="762" startPosition="258" endLine="766" endPosition="5" unitName="TasksAndSyncs.generator.util.Optimizer$50" />
@@ -9184,7 +9184,7 @@
     <unitInfo nodeId="4503193035181136327" fileName="OptimizerData.java" startLine="47" startPosition="235" endLine="51" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$1" />
     <unitInfo nodeId="4503193035181443423" fileName="OptimizerData.java" startLine="52" startPosition="211" endLine="56" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$2" />
     <unitInfo nodeId="4503193035181515773" fileName="OptimizerData.java" startLine="57" startPosition="227" endLine="61" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$3" />
-    <unitInfo nodeId="4503193035181631923" fileName="OptimizerData.java" startLine="62" startPosition="210" endLine="66" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$4" />
+    <unitInfo nodeId="4503193035181631923" fileName="OptimizerData.java" startLine="62" startPosition="209" endLine="66" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$4" />
     <unitInfo nodeId="4503193035181716372" fileName="OptimizerData.java" startLine="67" startPosition="203" endLine="71" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$5" />
     <unitInfo nodeId="4503193035181802214" fileName="OptimizerData.java" startLine="72" startPosition="203" endLine="76" endPosition="7" unitName="TasksAndSyncs.generator.util.OptimizerData$6" />
     <unitInfo nodeId="4503193035179519789" fileName="OptimizerData.java" startLine="16" startPosition="0" endLine="88" endPosition="0" unitName="TasksAndSyncs.generator.util.OptimizerData" />

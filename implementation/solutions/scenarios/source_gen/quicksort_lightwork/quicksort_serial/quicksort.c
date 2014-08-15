@@ -25,7 +25,10 @@ int32_t main(int32_t argc, char* argv[])
   quicksort_initNumbers(originalNumbers);
   
   
-  /* simulate a very long array (since we can only work on the limited stack, not on the heap) */
+  /* 
+   * simulate a very long array (since we can only work on the limited stack, not on the heap)
+   */
+
   for ( int16_t __i = 0; __i < 200; __i++ )
   {
     quicksort_copyNumbers(originalNumbers, sortableNumbers);

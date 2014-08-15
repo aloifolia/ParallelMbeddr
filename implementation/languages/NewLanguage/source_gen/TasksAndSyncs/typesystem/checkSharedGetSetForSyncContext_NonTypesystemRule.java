@@ -41,7 +41,7 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
           if ((matchedSyncRessource != null)) {
             break;
           }
-          for (SNode syncRessource : ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true))) {
+          for (SNode syncRessource : ListSequence.fromList(SLinkOperations.getTargets(sync, "resources", true))) {
             if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference") && BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(SLinkOperations.getTarget(syncRessource, "expression", true), "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{}) == BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(sharedExpr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{})) {
               matchedSyncRessource = syncRessource;
               break;

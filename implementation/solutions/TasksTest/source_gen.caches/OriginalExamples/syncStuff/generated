@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="171mjdzxk631dd42qqyftbh04shlqob">
-  <dep model="fe273f85-279c-4b0b-bd2d-866677d93294/r:3cd8bb29-f0d3-4ab5-92cc-777a051e169b(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="-dafq2wuks7u3eeg8aue4os27ri62rim">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
-  <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="8hsoiuhfb6ykpwx22jy9lhpw28d59y1" />
-  <common hash="8an8saad49sms4ne28vj25yzdfefc8p">
-    <dep model="fe273f85-279c-4b0b-bd2d-866677d93294/r:3cd8bb29-f0d3-4ab5-92cc-777a051e169b(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="qz7kztt4svb6dhl8xo0y575oqbjfnr" />
+  <common hash="eyty8okkdzx6kezvamjn4a4sxvgl9h">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
-    <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
     <file name="GenericSharedDeclarations.c" />
@@ -24,6 +20,6 @@
   </common>
   <source id="5867266020201107465" name="BuildConfiguration (O.syncStuff)" hash="-8ci40aqffjc0px38ehzf9ntu32otzse" />
   <source id="5867266020201107581" name="TypeSizeConfiguration (O.syncStuff)" hash="6797dl3ypxmsofyg9i1bbmh2eik3gn" />
-  <source id="5867266020201109512" name="syncStuff" hash="-6cl2xc3o15n5ccgqmr9qtallsli2ucm" />
+  <source id="5867266020201109512" name="syncStuff" hash="23osv9hri9v38hw0wbtj7wi5v3s36t9" />
 </dependencies>
 

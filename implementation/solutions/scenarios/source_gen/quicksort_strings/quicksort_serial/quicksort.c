@@ -110,7 +110,10 @@ static int32_t quicksort_partition(char** strings, int32_t left, int32_t right)
 
 static bool quicksort_biggerThan(char* string1, char* string2, int32_t start, int32_t end) 
 {
-  /* not made efficient on purpose */
+  /* 
+   * not made efficient on purpose
+   */
+
   if ( start >= end ) 
   {
     return false;

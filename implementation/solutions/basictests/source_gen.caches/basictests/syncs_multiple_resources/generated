@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-2isw8df9dlu0di1n4wurixnn2hp2cys">
+<dependencies version="2" modelHash="-egii4x678v1hpabssm5dtpqmkurn6dm">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="djqzvub5ozzmmwdon26q3cohux8im1t" />
-  <common hash="-6snnjltlziw1pvbuzvmo830hc7dmjiq">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="qz7kztt4svb6dhl8xo0y575oqbjfnr" />
+  <common hash="c0xadin5lblzgdmtocmtudp6tikje6a">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
@@ -20,7 +20,7 @@
     <file name="syncs_multiple_resources_SharedTypes_0.c" />
     <file name="syncs_multiple_resources_SharedTypes_0.h" />
   </common>
-  <source id="3227138667937541238" name="syncs_multiple_resources" hash="4np525a6rx444cug5t2jk76izvg6cp2" />
+  <source id="3227138667937541238" name="syncs_multiple_resources" hash="-dhgo6h8u3est2gmt8mdfi4tr95fy777" />
   <source id="3227138667937541272" name="TypeSizeConfiguration (b.syncs_multiple_resources)" hash="bazo66mp896ygzdjm9ouc3mh43rufok" />
   <source id="3227138667937541319" name="BuildConfiguration (b.syncs_multiple_resources)" hash="8jfkgc8h6hhewlgzen3s797oac3irlb" />
 </dependencies>

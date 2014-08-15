@@ -27,12 +27,12 @@ public class QueriesGenerated {
       public SNode doSubstitute(@Nullable final EditorContext editorContext, String pattern) {
 
         SNode ressourceNamed = SNodeFactoryOperations.createNewNode("TasksAndSyncs.structure.SyncRessourceNamed", null);
-        if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(_context.getSourceNode()), "TasksAndSyncs.structure.SyncRessource")) {
-          SLinkOperations.setTarget(ressourceNamed, "expression", SLinkOperations.getTarget(SNodeOperations.cast(_context.getSourceNode(), "TasksAndSyncs.structure.SyncRessource"), "expression", true), true);
+        if (SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(_context.getSourceNode()), "TasksAndSyncs.structure.SyncResource")) {
+          SLinkOperations.setTarget(ressourceNamed, "expression", SLinkOperations.getTarget(SNodeOperations.cast(_context.getSourceNode(), "TasksAndSyncs.structure.SyncResource"), "expression", true), true);
           SNodeOperations.replaceWithAnother(_context.getSourceNode(), ressourceNamed);
         } else {
-          SLinkOperations.setTarget(ressourceNamed, "expression", SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncRessource", false, false), "expression", true)), true);
-          SNodeOperations.replaceWithAnother(SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncRessource", false, false), ressourceNamed);
+          SLinkOperations.setTarget(ressourceNamed, "expression", SNodeOperations.copyNode(SLinkOperations.getTarget(SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncResource", false, false), "expression", true)), true);
+          SNodeOperations.replaceWithAnother(SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncResource", false, false), ressourceNamed);
         }
         return ressourceNamed;
       }
@@ -57,6 +57,6 @@ public class QueriesGenerated {
   }
 
   public static boolean sideTransformHintSubstituteActionsBuilder_Precondition_Expression_6288388922745017488(final IOperationContext operationContext, final SideTransformPreconditionContext _context) {
-    return SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncRessource", false, false) != null;
+    return SNodeOperations.getAncestor(_context.getSourceNode(), "TasksAndSyncs.structure.SyncResource", false, false) != null;
   }
 }

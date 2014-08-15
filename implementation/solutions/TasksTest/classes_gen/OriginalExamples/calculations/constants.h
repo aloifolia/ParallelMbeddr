@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"

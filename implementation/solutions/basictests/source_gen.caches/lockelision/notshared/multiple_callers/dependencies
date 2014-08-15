@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="lockelision.notshared.multiple_callers.GenericSharedDeclarations" file="GenericSharedDeclarations.c" />
+  <dependency className="lockelision.notshared.multiple_callers.GenericSharedDeclarations" file="GenericSharedDeclarations.h" />
+  <dependency className="lockelision.notshared.multiple_callers.GenericSyncDeclarations" file="GenericSyncDeclarations.c" />
+  <dependency className="lockelision.notshared.multiple_callers.GenericSyncDeclarations" file="GenericSyncDeclarations.h" />
+  <dependency className="lockelision.notshared.multiple_callers.GenericTaskDeclarations" file="GenericTaskDeclarations.c" />
+  <dependency className="lockelision.notshared.multiple_callers.GenericTaskDeclarations" file="GenericTaskDeclarations.h" />
+  <dependency className="lockelision.notshared.multiple_callers.Makefile" file="Makefile" />
+  <dependency className="lockelision.notshared.multiple_callers.TypeSizeConfiguration (l.n.multiple_callers)" file="TypeSizeConfiguration (l.n.multiple_callers)" />
+  <dependency className="lockelision.notshared.multiple_callers.lock_ellision" file="lock_ellision.c" />
+  <dependency className="lockelision.notshared.multiple_callers.lock_ellision" file="lock_ellision.h" />
+</dependenciesRoot>
+

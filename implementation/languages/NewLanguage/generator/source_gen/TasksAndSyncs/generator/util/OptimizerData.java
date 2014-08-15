@@ -59,7 +59,7 @@ public class OptimizerData {
           return optimizer.isSharedType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(it), "com.mbeddr.core.expressions.structure.Type"));
         }
       }));
-      ListSequence.fromList(data.syncResources).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SyncRessource", false, new String[]{})).where(new IWhereFilter<SNode>() {
+      ListSequence.fromList(data.syncResources).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SyncResource", false, new String[]{})).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return optimizer.isSharedType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(it, "expression", true)), "com.mbeddr.core.expressions.structure.Type")) && (optimizer.getVariable(SLinkOperations.getTarget(it, "expression", true)) != null);
         }

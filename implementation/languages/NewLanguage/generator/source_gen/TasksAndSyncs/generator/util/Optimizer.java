@@ -29,7 +29,7 @@ import jetbrains.mps.internal.collections.runtime.ISelector;
 import jetbrains.mps.baseLanguage.closures.runtime._FunctionTypes;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SConceptOperations;
 import jetbrains.mps.internal.collections.runtime.ITranslator2;
-import TasksAndSyncs.behavior.SyncRessource_Behavior;
+import TasksAndSyncs.behavior.SyncResource_Behavior;
 
 public class Optimizer {
 
@@ -647,7 +647,7 @@ public class Optimizer {
 
     final SNode copiedFunction = SNodeOperations.copyNode(function);
     SPropertyOperations.set(copiedFunction, "name", genContext.createUniqueName(SPropertyOperations.getString(function, "name"), null));
-    ListSequence.fromList(SNodeOperations.getDescendants(copiedFunction, "TasksAndSyncs.structure.SyncRessource", false, new String[]{})).where(new IWhereFilter<SNode>() {
+    ListSequence.fromList(SNodeOperations.getDescendants(copiedFunction, "TasksAndSyncs.structure.SyncResource", false, new String[]{})).where(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
         return SLinkOperations.getTarget(it, "expression", true) == null;
       }
@@ -698,7 +698,7 @@ public class Optimizer {
   public void narrowSyncs(Map<SNode, Set<SNode>> aliases, List<SNode> syncs, Map<SNode, Set<SNode>> deepCallGraph) {
     for (SNode sync : ListSequence.fromList(syncs)) {
       // gather all variables whose shared ressources are synchronized by the current sync 
-      Set<SNode> syncResourceAliases = SetSequence.fromSetWithValues(new HashSet<SNode>(), ListSequence.fromList(SLinkOperations.getTargets(sync, "ressources", true)).select(new ISelector<SNode, SNode>() {
+      Set<SNode> syncResourceAliases = SetSequence.fromSetWithValues(new HashSet<SNode>(), ListSequence.fromList(SLinkOperations.getTargets(sync, "resources", true)).select(new ISelector<SNode, SNode>() {
         public SNode select(SNode it) {
           return getVariable(SLinkOperations.getTarget(it, "expression", true));
         }
@@ -836,8 +836,8 @@ public class Optimizer {
       return null;
     }
     for (SNode surroundingSync : ListSequence.fromList(surroundingSyncs)) {
-      for (SNode surroundingSyncRessource : ListSequence.fromList(SLinkOperations.getTargets(surroundingSync, "ressources", true))) {
-        SNode otherVariable = SyncRessource_Behavior.call_getVariable_1469333039370134366(surroundingSyncRessource);
+      for (SNode surroundingSyncRessource : ListSequence.fromList(SLinkOperations.getTargets(surroundingSync, "resources", true))) {
+        SNode otherVariable = SyncResource_Behavior.call_getVariable_1469333039370134366(surroundingSyncRessource);
         if (otherVariable != null && otherVariable == variable) {
           return surroundingSyncRessource;
         }

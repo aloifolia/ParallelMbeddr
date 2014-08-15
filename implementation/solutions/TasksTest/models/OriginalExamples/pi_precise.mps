@@ -90,17 +90,17 @@
             <node role="actuals" roleId="x27k.5950410542643524495" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="8001979070700243206" nodeInfo="ng">
               <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="8001979070700133480" resolveInfo="pi160" />
             </node>
-            <node role="actuals" roleId="x27k.5950410542643524495" type="mj1l.UnsafeCastExpression" typeId="mj1l.7664133259366168728" id="8001979070700312166" nodeInfo="ng">
-              <node role="expr" roleId="mj1l.7664133259366168729" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8001979070700302619" nodeInfo="ng">
-                <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8001979070700122480" resolveInfo="PI160" />
-              </node>
-              <node role="targetType" roleId="mj1l.7664133259366168730" type="yq40.PointerType" typeId="yq40.279446265608459824" id="8001979070700318248" nodeInfo="ng">
+            <node role="actuals" roleId="x27k.5950410542643524495" type="mj1l.CastExpression" typeId="mj1l.6610873504380029780" id="4470518958264921396" nodeInfo="ng">
+              <node role="targetType" roleId="mj1l.6610873504380029790" type="yq40.PointerType" typeId="yq40.279446265608459824" id="8001979070700318248" nodeInfo="ng">
                 <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
                 <property name="const" nameId="mj1l.2941277002445651368" value="false" />
                 <node role="baseType" roleId="c4fa.7763322639126652758" type="mj1l.CharType" typeId="mj1l.1664480272136207708" id="8001979070700315196" nodeInfo="ng">
                   <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
                   <property name="const" nameId="mj1l.2941277002445651368" value="false" />
                 </node>
+              </node>
+              <node role="expr" roleId="mj1l.6610873504380029782" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8001979070700302619" nodeInfo="ng">
+                <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8001979070700122480" resolveInfo="PI160" />
               </node>
             </node>
             <node role="actuals" roleId="x27k.5950410542643524495" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8001979070700260992" nodeInfo="ng">

@@ -4,15 +4,13 @@
 #include "GenericSharedDeclarations.h"
 #include "readerData_SharedTypes_0.h"
 
-void main_SharedTypes_0_mutexInit_5(struct main_SharedTypes_0_Args_a0a0a1a2a3a2* var) 
+void main_SharedTypes_0_mutexInit_4(main_SharedTypes_0_Args_a0a0a1a3d0c_t* var) 
 {
-  readerData_SharedTypes_0_mutexInit_4(&var->inputData);
+  readerData_SharedTypes_0_mutexInit_3(&var->inputData);
 }
 
-
-void main_SharedTypes_0_mutexDestroy_5(struct main_SharedTypes_0_Args_a0a0a1a2a3a2* var) 
+void main_SharedTypes_0_mutexDestroy_4(main_SharedTypes_0_Args_a0a0a1a3d0c_t* var) 
 {
-  readerData_SharedTypes_0_mutexDestroy_4(&var->inputData);
+  readerData_SharedTypes_0_mutexDestroy_3(&var->inputData);
 }
-
 

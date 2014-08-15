@@ -56,15 +56,15 @@ public class SyncStatement_Editor extends DefaultNodeEditor {
   }
 
   private EditorCell createRefNodeList_6a0nmk_b0(EditorContext editorContext, SNode node) {
-    AbstractCellListHandler handler = new SyncStatement_Editor.ressourcesListHandler_6a0nmk_b0(node, "ressources", editorContext);
+    AbstractCellListHandler handler = new SyncStatement_Editor.resourcesListHandler_6a0nmk_b0(node, "resources", editorContext);
     EditorCell_Collection editorCell = handler.createCells(editorContext, new CellLayout_Indent(), false);
-    editorCell.setCellId("refNodeList_ressources");
+    editorCell.setCellId("refNodeList_resources");
     editorCell.setRole(handler.getElementRole());
     return editorCell;
   }
 
-  private static class ressourcesListHandler_6a0nmk_b0 extends RefNodeListHandler {
-    public ressourcesListHandler_6a0nmk_b0(SNode ownerNode, String childRole, EditorContext context) {
+  private static class resourcesListHandler_6a0nmk_b0 extends RefNodeListHandler {
+    public resourcesListHandler_6a0nmk_b0(SNode ownerNode, String childRole, EditorContext context) {
       super(ownerNode, childRole, context, false);
     }
 

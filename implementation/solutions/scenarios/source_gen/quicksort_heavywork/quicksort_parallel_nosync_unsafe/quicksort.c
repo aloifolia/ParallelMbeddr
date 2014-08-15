@@ -13,18 +13,18 @@ struct quicksort_Generic {
   int32_t value;
 };
 
-typedef struct quicksort_Args_a0c0c0a0g quicksort_Args_a0c0c0a0g_t;
-struct quicksort_Args_a0c0c0a0g {
-  quicksort_Generic_t* generics;
-  int32_t middle;
-  int32_t right;
-};
-
 typedef struct quicksort_Args_a0b0c0a0g quicksort_Args_a0b0c0a0g_t;
 struct quicksort_Args_a0b0c0a0g {
   quicksort_Generic_t* generics;
   int32_t left;
   int32_t middle;
+};
+
+typedef struct quicksort_Args_a0c0c0a0g quicksort_Args_a0c0c0a0g_t;
+struct quicksort_Args_a0c0c0a0g {
+  quicksort_Generic_t* generics;
+  int32_t middle;
+  int32_t right;
 };
 
 static void quicksort_doHeavyWork(void);
@@ -33,15 +33,15 @@ static void* quicksort_parFun_a0b0c0a0g(void* voidArgs);
 
 static void* quicksort_parFun_a0c0c0a0g(void* voidArgs);
 
-static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]);
-
-static int32_t quicksort_partition(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
+static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2);
 
 static void quicksort_printGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t start, int32_t end);
 
-static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2);
+static int32_t quicksort_partition(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
 
 static void quicksort_swap(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t i, int32_t j);
+
+static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]);
 
 static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
 
@@ -88,11 +88,17 @@ static void* quicksort_parFun_a0c0c0a0g(void* voidArgs)
   return 0;
 }
 
-static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]) 
+static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2) 
 {
-  for ( int16_t __i = 0; __i < QUICKSORT_numberOfGenerics; __i++ )
+  quicksort_doHeavyWork();
+  return generic1.value > generic2.value;
+}
+
+static void quicksort_printGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t start, int32_t end) 
+{
+  for ( int32_t __i = start; __i < end; __i++ )
   {
-    generics[__i].value = rand();
+    printf("%d |  %d\n", __i, generics[__i].value);
   }
 }
 
@@ -124,25 +130,19 @@ static int32_t quicksort_partition(quicksort_Generic_t generics[QUICKSORT_number
   return j;
 }
 
-static void quicksort_printGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t start, int32_t end) 
-{
-  for ( int32_t __i = start; __i < end; __i++ )
-  {
-    printf("%d |  %d\n", __i, generics[__i].value);
-  }
-}
-
-static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2) 
-{
-  quicksort_doHeavyWork();
-  return generic1.value > generic2.value;
-}
-
 static void quicksort_swap(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t i, int32_t j) 
 {
   quicksort_Generic_t temp = generics[i];
   generics[i] = generics[j];
   generics[j] = temp;
+}
+
+static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]) 
+{
+  for ( int16_t __i = 0; __i < QUICKSORT_numberOfGenerics; __i++ )
+  {
+    generics[__i].value = rand();
+  }
 }
 
 static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right) 

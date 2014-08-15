@@ -8,7 +8,7 @@ import com.mbeddr.core.base.behavior.IIdentifierNamedConcept_Behavior;
 import org.jetbrains.mps.openapi.model.SNode;
 import jetbrains.mps.lang.core.behavior.INamedConcept_Behavior;
 
-public class SyncRessourceNamed_BehaviorDescriptor extends SyncRessource_BehaviorDescriptor implements IIdentifierNamedConcept_BehaviorDescriptor {
+public class SyncRessourceNamed_BehaviorDescriptor extends SyncResource_BehaviorDescriptor implements IIdentifierNamedConcept_BehaviorDescriptor {
   public SyncRessourceNamed_BehaviorDescriptor() {
   }
 

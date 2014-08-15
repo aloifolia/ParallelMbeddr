@@ -20,13 +20,6 @@
 extern "C" {
 #endif
 
-typedef struct GenericTaskDeclarations_Future GenericTaskDeclarations_Future_t;
-struct GenericTaskDeclarations_Future {
-  pthread_t pth;
-  bool finished;
-  void* result;
-};
-
 typedef struct GenericTaskDeclarations_VoidFuture GenericTaskDeclarations_VoidFuture_t;
 struct GenericTaskDeclarations_VoidFuture {
   pthread_t pth;
@@ -40,17 +33,24 @@ struct GenericTaskDeclarations_Task {
   size_t argsSize;
 };
 
+typedef struct GenericTaskDeclarations_Future GenericTaskDeclarations_Future_t;
+struct GenericTaskDeclarations_Future {
+  pthread_t pth;
+  bool finished;
+  void* result;
+};
+
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future);
+
+GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task);
+
 void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Future_t future);
 
 void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future);
 
-void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future);
-
 void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future);
 
 GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task);
-
-GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task);
 
 
 #ifdef __cplusplus

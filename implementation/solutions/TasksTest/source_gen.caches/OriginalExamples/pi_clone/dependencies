@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="OriginalExamples.pi_clone.Makefile" file="Makefile" />
+  <dependency className="OriginalExamples.pi_clone.TypeSizeConfiguration (O.pi_clone)" file="TypeSizeConfiguration (O.pi_clone)" />
+  <dependency className="OriginalExamples.pi_clone.pi" file="pi.c" />
+  <dependency className="OriginalExamples.pi_clone.pi" file="pi.h" />
+</dependenciesRoot>
+

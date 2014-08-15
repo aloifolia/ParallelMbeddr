@@ -11,15 +11,15 @@ struct quicksort_Generic {
 
 static void quicksort_doHeavyWork(void);
 
+static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
+
 static void quicksort_swap(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t i, int32_t j);
+
+static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]);
 
 static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2);
 
 static int32_t quicksort_partition(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
-
-static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]);
-
-static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right);
 
 static void quicksort_printGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t start, int32_t end);
 
@@ -46,11 +46,31 @@ static void quicksort_doHeavyWork(void)
   }
 }
 
+static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right) 
+{
+  if ( left < right ) 
+  {
+    int32_t middle = quicksort_partition(generics, left, right);
+    
+    quicksort_quickSort(generics, left, middle - 1);
+    quicksort_quickSort(generics, middle + 1, right);
+  }
+  
+}
+
 static void quicksort_swap(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t i, int32_t j) 
 {
   quicksort_Generic_t temp = generics[i];
   generics[i] = generics[j];
   generics[j] = temp;
+}
+
+static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]) 
+{
+  for ( int16_t __i = 0; __i < QUICKSORT_numberOfGenerics; __i++ )
+  {
+    generics[__i].value = rand();
+  }
 }
 
 static bool quicksort_biggerThan(quicksort_Generic_t generic1, quicksort_Generic_t generic2) 
@@ -85,26 +105,6 @@ static int32_t quicksort_partition(quicksort_Generic_t generics[QUICKSORT_number
     quicksort_swap(generics, left, j);
   }
   return j;
-}
-
-static void quicksort_initGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics]) 
-{
-  for ( int16_t __i = 0; __i < QUICKSORT_numberOfGenerics; __i++ )
-  {
-    generics[__i].value = rand();
-  }
-}
-
-static void quicksort_quickSort(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t left, int32_t right) 
-{
-  if ( left < right ) 
-  {
-    int32_t middle = quicksort_partition(generics, left, right);
-    
-    quicksort_quickSort(generics, left, middle - 1);
-    quicksort_quickSort(generics, middle + 1, right);
-  }
-  
 }
 
 static void quicksort_printGenerics(quicksort_Generic_t generics[QUICKSORT_numberOfGenerics], int32_t start, int32_t end) 

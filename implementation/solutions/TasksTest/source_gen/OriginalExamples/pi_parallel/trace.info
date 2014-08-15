@@ -40,21 +40,21 @@
     <nodeInfo nodeId="8001979070717050202" fileName="pi.c" startLine="51" startPosition="2" endLine="51" endPosition="75" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="8001979070717430844" fileName="pi.c" startLine="51" startPosition="66" endLine="51" endPosition="74" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
     <nodeInfo nodeId="8001979070717449443" fileName="pi.c" startLine="51" startPosition="67" endLine="51" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="2" endLine="52" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="2" endLine="52" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="45" endLine="52" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070701454577" fileName="pi.c" startLine="52" startPosition="46" endLine="52" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="46" endLine="52" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="2" endLine="52" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="2" endLine="52" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="45" endLine="52" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="52" startPosition="46" endLine="52" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701454577" fileName="pi.c" startLine="52" startPosition="47" endLine="52" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070701454591" fileName="pi.c" startLine="54" startPosition="4" endLine="54" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070701454616" fileName="pi.c" startLine="54" startPosition="4" endLine="54" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
     <nodeInfo nodeId="8001979070701454616" fileName="pi.c" startLine="54" startPosition="4" endLine="54" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
     <nodeInfo nodeId="8001979070701454592" fileName="pi.c" startLine="54" startPosition="4" endLine="54" endPosition="22" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="8001979070701466537" fileName="pi.c" startLine="54" startPosition="20" endLine="54" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="2" endLine="56" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="2" endLine="56" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="44" endLine="56" endPosition="58" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070701454577" fileName="pi.c" startLine="56" startPosition="45" endLine="56" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="45" endLine="56" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="2" endLine="56" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="2" endLine="56" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="44" endLine="56" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="56" startPosition="45" endLine="56" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701454577" fileName="pi.c" startLine="56" startPosition="46" endLine="56" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070701474542" fileName="pi.c" startLine="57" startPosition="2" endLine="57" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="7341014709895702766" fileName="pi.c" startLine="58" startPosition="2" endLine="58" endPosition="93" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="7341014709895702769" fileName="pi.c" startLine="58" startPosition="46" endLine="58" endPosition="92" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
@@ -96,25 +96,25 @@
     <nodeInfo nodeId="7341014709919561965" fileName="pi.c" startLine="70" startPosition="2" endLine="70" endPosition="97" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="7341014709919541893" fileName="pi.c" startLine="70" startPosition="2" endLine="70" endPosition="98" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="7341014709919541894" fileName="pi.c" startLine="70" startPosition="48" endLine="70" endPosition="96" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="7341014709919541894" fileName="pi.c" startLine="70" startPosition="68" endLine="70" endPosition="81" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709919541894" fileName="pi.c" startLine="70" startPosition="83" endLine="70" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709919541894" fileName="pi.c" startLine="70" startPosition="68" endLine="70" endPosition="80" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709919541894" fileName="pi.c" startLine="70" startPosition="82" endLine="70" endPosition="95" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709919968467" fileName="pi.c" startLine="71" startPosition="2" endLine="71" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="7341014709919453538" fileName="pi.c" startLine="72" startPosition="2" endLine="72" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="2" endLine="73" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="2" endLine="73" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="45" endLine="73" endPosition="58" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="7341014709907568343" fileName="pi.c" startLine="73" startPosition="46" endLine="73" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="46" endLine="73" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="2" endLine="73" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="2" endLine="73" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="45" endLine="73" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="73" startPosition="46" endLine="73" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="7341014709907568343" fileName="pi.c" startLine="73" startPosition="47" endLine="73" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709907493365" fileName="pi.c" startLine="75" startPosition="4" endLine="75" endPosition="37" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
     <nodeInfo nodeId="7341014709907493367" fileName="pi.c" startLine="75" startPosition="4" endLine="75" endPosition="38" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="7341014709907533256" fileName="pi.c" startLine="75" startPosition="11" endLine="75" endPosition="23" conceptFqName="com.mbeddr.core.pointers.structure.StringLiteral" />
     <nodeInfo nodeId="7341014709907544827" fileName="pi.c" startLine="75" startPosition="24" endLine="75" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709907579584" fileName="pi.c" startLine="75" startPosition="24" endLine="75" endPosition="36" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="2" endLine="77" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="2" endLine="77" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="44" endLine="77" endPosition="57" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="7341014709907568343" fileName="pi.c" startLine="77" startPosition="45" endLine="77" endPosition="51" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="45" endLine="77" endPosition="57" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="2" endLine="77" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="2" endLine="77" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="44" endLine="77" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700482083" fileName="pi.c" startLine="77" startPosition="45" endLine="77" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="7341014709907568343" fileName="pi.c" startLine="77" startPosition="46" endLine="77" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709911611724" fileName="pi.c" startLine="78" startPosition="2" endLine="78" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="8001979070700482129" fileName="pi.c" startLine="79" startPosition="2" endLine="79" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
     <nodeInfo nodeId="8001979070700482130" fileName="pi.c" startLine="79" startPosition="9" endLine="79" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
@@ -122,11 +122,11 @@
     <nodeInfo nodeId="8001979070700594378" fileName="pi.c" startLine="86" startPosition="4" endLine="86" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="8001979070700594424" fileName="pi.c" startLine="87" startPosition="4" endLine="87" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="8001979070700894186" fileName="pi.c" startLine="88" startPosition="4" endLine="88" endPosition="4" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="4" endLine="89" endPosition="63" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="4" endLine="89" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="47" endLine="89" endPosition="62" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="89" startPosition="48" endLine="89" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="48" endLine="89" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="4" endLine="89" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="4" endLine="89" endPosition="66" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="47" endLine="89" endPosition="64" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="89" startPosition="48" endLine="89" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="89" startPosition="49" endLine="89" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070700595393" fileName="pi.c" startLine="91" startPosition="6" endLine="91" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070700599390" fileName="pi.c" startLine="91" startPosition="6" endLine="91" endPosition="28" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
     <nodeInfo nodeId="8001979070700595394" fileName="pi.c" startLine="91" startPosition="6" endLine="91" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
@@ -135,11 +135,11 @@
     <nodeInfo nodeId="8001979070716934838" fileName="pi.c" startLine="92" startPosition="11" endLine="92" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070716934864" fileName="pi.c" startLine="92" startPosition="11" endLine="92" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
     <nodeInfo nodeId="8001979070716953814" fileName="pi.c" startLine="92" startPosition="20" endLine="92" endPosition="29" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="8" endLine="94" endPosition="66" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="8" endLine="94" endPosition="67" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="50" endLine="94" endPosition="65" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="94" startPosition="51" endLine="94" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="51" endLine="94" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="8" endLine="94" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="8" endLine="94" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="50" endLine="94" endPosition="67" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070716934801" fileName="pi.c" startLine="94" startPosition="51" endLine="94" endPosition="67" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="94" startPosition="52" endLine="94" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070716972763" fileName="pi.c" startLine="95" startPosition="8" endLine="95" endPosition="14" conceptFqName="com.mbeddr.core.statements.structure.BreakStatement" />
     <nodeInfo nodeId="8001979070700602100" fileName="pi.c" startLine="97" startPosition="6" endLine="97" endPosition="50" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="8001979070700602444" fileName="pi.c" startLine="97" startPosition="29" endLine="97" endPosition="34" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
@@ -159,11 +159,11 @@
     <nodeInfo nodeId="8001979070700615708" fileName="pi.c" startLine="99" startPosition="6" endLine="99" endPosition="26" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
     <nodeInfo nodeId="8001979070700615301" fileName="pi.c" startLine="99" startPosition="6" endLine="99" endPosition="27" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="8001979070700617310" fileName="pi.c" startLine="99" startPosition="23" endLine="99" endPosition="26" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="4" endLine="101" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="4" endLine="101" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="46" endLine="101" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="101" startPosition="47" endLine="101" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="47" endLine="101" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="4" endLine="101" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="4" endLine="101" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="46" endLine="101" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700594341" fileName="pi.c" startLine="101" startPosition="47" endLine="101" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700594958" fileName="pi.c" startLine="101" startPosition="48" endLine="101" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070737820404" fileName="pi.c" startLine="102" startPosition="4" endLine="102" endPosition="4" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="8001979070701136697" fileName="pi.c" startLine="103" startPosition="4" endLine="103" endPosition="63" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="8001979070701136698" fileName="pi.c" startLine="103" startPosition="4" endLine="103" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
@@ -172,11 +172,11 @@
     <nodeInfo nodeId="7341014709895977135" fileName="pi.c" startLine="103" startPosition="51" endLine="103" endPosition="56" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709895977136" fileName="pi.c" startLine="103" startPosition="58" endLine="103" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="8001979070728070907" fileName="pi.c" startLine="109" startPosition="2" endLine="109" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="2" endLine="110" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="2" endLine="110" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="45" endLine="110" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070716035091" fileName="pi.c" startLine="110" startPosition="46" endLine="110" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="46" endLine="110" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="2" endLine="110" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="2" endLine="110" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="45" endLine="110" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="110" startPosition="46" endLine="110" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070716035091" fileName="pi.c" startLine="110" startPosition="47" endLine="110" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="7341014709920263767" fileName="pi.c" startLine="112" startPosition="4" endLine="112" endPosition="10" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="7341014709920269505" fileName="pi.c" startLine="112" startPosition="4" endLine="112" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
     <nodeInfo nodeId="7341014709920269505" fileName="pi.c" startLine="112" startPosition="4" endLine="112" endPosition="21" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
@@ -203,11 +203,11 @@
     <nodeInfo nodeId="8001979070743745905" fileName="pi.c" startLine="117" startPosition="22" endLine="117" endPosition="42" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
     <nodeInfo nodeId="8001979070743675756" fileName="pi.c" startLine="117" startPosition="29" endLine="117" endPosition="35" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070743692272" fileName="pi.c" startLine="117" startPosition="29" endLine="117" endPosition="42" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="2" endLine="120" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="2" endLine="120" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="44" endLine="120" endPosition="58" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070716035091" fileName="pi.c" startLine="120" startPosition="45" endLine="120" endPosition="51" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="45" endLine="120" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="2" endLine="120" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="2" endLine="120" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="44" endLine="120" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070701196001" fileName="pi.c" startLine="120" startPosition="45" endLine="120" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070716035091" fileName="pi.c" startLine="120" startPosition="46" endLine="120" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070732410826" fileName="pi.c" startLine="121" startPosition="2" endLine="121" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="7341014709895605889" fileName="pi.c" startLine="126" startPosition="2" endLine="126" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="7341014709895627245" fileName="pi.c" startLine="126" startPosition="23" endLine="126" endPosition="24" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
@@ -378,11 +378,11 @@
     <unitInfo nodeId="8001979070700482069" fileName="pi.c" startLine="1" startPosition="0" endLine="173" endPosition="0" unitName="OriginalExamples.pi_parallel.pi" />
   </root>
   <root nodeRef="r:ded946d6-2c37-47d1-8685-df39cbf13ba9(OriginalExamples.pi_parallel)/8001979070700644525">
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="2" endLine="11" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="2" endLine="11" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="45" endLine="11" endPosition="58" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070701259953" fileName="queue.c" startLine="11" startPosition="46" endLine="11" endPosition="51" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="46" endLine="11" endPosition="58" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="2" endLine="11" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="2" endLine="11" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="45" endLine="11" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="11" startPosition="46" endLine="11" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701259953" fileName="queue.c" startLine="11" startPosition="47" endLine="11" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070701252839" fileName="queue.c" startLine="13" startPosition="4" endLine="13" endPosition="9" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070701252884" fileName="queue.c" startLine="13" startPosition="4" endLine="13" endPosition="16" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
     <nodeInfo nodeId="8001979070701253610" fileName="queue.c" startLine="13" startPosition="4" endLine="13" endPosition="25" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
@@ -395,180 +395,154 @@
     <nodeInfo nodeId="8001979070701263154" fileName="queue.c" startLine="14" startPosition="4" endLine="14" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
     <nodeInfo nodeId="8001979070701263153" fileName="queue.c" startLine="14" startPosition="4" endLine="14" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="8001979070701263155" fileName="queue.c" startLine="14" startPosition="28" endLine="14" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="2" endLine="16" endPosition="58" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="2" endLine="16" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="44" endLine="16" endPosition="57" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070701259953" fileName="queue.c" startLine="16" startPosition="45" endLine="16" endPosition="50" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="45" endLine="16" endPosition="57" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="2" endLine="16" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="2" endLine="16" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="44" endLine="16" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="16" startPosition="45" endLine="16" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701259953" fileName="queue.c" startLine="16" startPosition="46" endLine="16" endPosition="51" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="8001979070700929115" fileName="queue.c" startLine="21" startPosition="9" endLine="21" endPosition="13" conceptFqName="com.mbeddr.core.expressions.structure.TrueLiteral" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="23" startPosition="4" endLine="23" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="23" startPosition="4" endLine="23" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="23" startPosition="47" endLine="23" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="23" startPosition="48" endLine="23" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="23" startPosition="48" endLine="23" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700936676" fileName="queue.c" startLine="25" startPosition="6" endLine="25" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="8001979070700936832" fileName="queue.c" startLine="25" startPosition="28" endLine="25" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="8001979070700936830" fileName="queue.c" startLine="25" startPosition="28" endLine="25" endPosition="73" conceptFqName="com.mbeddr.core.expressions.structure.ModuloExpression" />
-    <nodeInfo nodeId="8001979070700936839" fileName="queue.c" startLine="25" startPosition="29" endLine="25" endPosition="34" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700936837" fileName="queue.c" startLine="25" startPosition="29" endLine="25" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700936835" fileName="queue.c" startLine="25" startPosition="29" endLine="25" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700936833" fileName="queue.c" startLine="25" startPosition="29" endLine="25" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
-    <nodeInfo nodeId="8001979070700936834" fileName="queue.c" startLine="25" startPosition="53" endLine="25" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700936831" fileName="queue.c" startLine="25" startPosition="58" endLine="25" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
-    <nodeInfo nodeId="8001979070700913746" fileName="queue.c" startLine="26" startPosition="11" endLine="26" endPosition="16" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700913988" fileName="queue.c" startLine="26" startPosition="11" endLine="26" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700914642" fileName="queue.c" startLine="26" startPosition="11" endLine="26" endPosition="32" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700918765" fileName="queue.c" startLine="26" startPosition="11" endLine="26" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
-    <nodeInfo nodeId="8001979070700942402" fileName="queue.c" startLine="26" startPosition="36" endLine="26" endPosition="47" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="28" startPosition="8" endLine="28" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="28" startPosition="8" endLine="28" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="28" startPosition="50" endLine="28" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="28" startPosition="51" endLine="28" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="28" startPosition="51" endLine="28" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700931458" fileName="queue.c" startLine="29" startPosition="8" endLine="29" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.ContinueStatement" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="31" startPosition="6" endLine="31" endPosition="110" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="8001979070710706415" fileName="queue.c" startLine="31" startPosition="66" endLine="31" endPosition="109" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070710706416" fileName="queue.c" startLine="31" startPosition="67" endLine="31" endPosition="109" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="8001979070710706422" fileName="queue.c" startLine="31" startPosition="68" endLine="31" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070710706420" fileName="queue.c" startLine="31" startPosition="68" endLine="31" endPosition="80" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070710706418" fileName="queue.c" startLine="31" startPosition="68" endLine="31" endPosition="85" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070710706417" fileName="queue.c" startLine="31" startPosition="68" endLine="31" endPosition="108" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="8001979070726547783" fileName="queue.c" startLine="31" startPosition="86" endLine="31" endPosition="91" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070726562658" fileName="queue.c" startLine="31" startPosition="86" endLine="31" endPosition="98" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070726591702" fileName="queue.c" startLine="31" startPosition="86" endLine="31" endPosition="107" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="6" endLine="32" endPosition="63" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="6" endLine="32" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="49" endLine="32" endPosition="62" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="50" endLine="32" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="50" endLine="32" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="34" startPosition="8" endLine="34" endPosition="13" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="34" startPosition="8" endLine="34" endPosition="20" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="34" startPosition="8" endLine="34" endPosition="27" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="8001979070743112288" fileName="queue.c" startLine="34" startPosition="8" endLine="34" endPosition="28" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070743121742" fileName="queue.c" startLine="34" startPosition="23" endLine="34" endPosition="27" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="36" startPosition="6" endLine="36" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="36" startPosition="6" endLine="36" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="36" startPosition="48" endLine="36" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="36" startPosition="49" endLine="36" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="36" startPosition="49" endLine="36" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700959500" fileName="queue.c" startLine="37" startPosition="6" endLine="37" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700959578" fileName="queue.c" startLine="37" startPosition="6" endLine="37" endPosition="18" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700962344" fileName="queue.c" startLine="37" startPosition="6" endLine="37" endPosition="27" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700965789" fileName="queue.c" startLine="37" startPosition="6" endLine="37" endPosition="41" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="8001979070700959501" fileName="queue.c" startLine="37" startPosition="6" endLine="37" endPosition="42" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700967086" fileName="queue.c" startLine="37" startPosition="30" endLine="37" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="38" startPosition="6" endLine="38" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="38" startPosition="6" endLine="38" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="38" startPosition="48" endLine="38" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="38" startPosition="49" endLine="38" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="38" startPosition="49" endLine="38" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969191" fileName="queue.c" startLine="39" startPosition="6" endLine="39" endPosition="12" conceptFqName="com.mbeddr.core.statements.structure.BreakStatement" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="41" startPosition="4" endLine="41" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="41" startPosition="4" endLine="41" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="41" startPosition="46" endLine="41" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="41" startPosition="47" endLine="41" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="41" startPosition="47" endLine="41" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969862" fileName="queue.c" startLine="47" startPosition="9" endLine="47" endPosition="13" conceptFqName="com.mbeddr.core.expressions.structure.TrueLiteral" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="49" startPosition="4" endLine="49" endPosition="61" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="49" startPosition="4" endLine="49" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="49" startPosition="47" endLine="49" endPosition="60" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="49" startPosition="48" endLine="49" endPosition="53" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="49" startPosition="48" endLine="49" endPosition="60" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969841" fileName="queue.c" startLine="51" startPosition="11" endLine="51" endPosition="16" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969839" fileName="queue.c" startLine="51" startPosition="11" endLine="51" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969837" fileName="queue.c" startLine="51" startPosition="11" endLine="51" endPosition="32" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700969835" fileName="queue.c" startLine="51" startPosition="11" endLine="51" endPosition="57" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
-    <nodeInfo nodeId="8001979070701039228" fileName="queue.c" startLine="51" startPosition="36" endLine="51" endPosition="41" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070701041606" fileName="queue.c" startLine="51" startPosition="36" endLine="51" endPosition="48" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070701046450" fileName="queue.c" startLine="51" startPosition="36" endLine="51" endPosition="57" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="53" startPosition="8" endLine="53" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="53" startPosition="8" endLine="53" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="53" startPosition="50" endLine="53" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="53" startPosition="51" endLine="53" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="53" startPosition="51" endLine="53" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969834" fileName="queue.c" startLine="54" startPosition="8" endLine="54" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.ContinueStatement" />
-    <nodeInfo nodeId="8001979070710769429" fileName="queue.c" startLine="56" startPosition="6" endLine="56" endPosition="6" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="57" startPosition="6" endLine="57" endPosition="110" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="8001979070710762675" fileName="queue.c" startLine="57" startPosition="66" endLine="57" endPosition="109" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070710762676" fileName="queue.c" startLine="57" startPosition="67" endLine="57" endPosition="109" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="8001979070710762682" fileName="queue.c" startLine="57" startPosition="68" endLine="57" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070710762680" fileName="queue.c" startLine="57" startPosition="68" endLine="57" endPosition="80" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070710762678" fileName="queue.c" startLine="57" startPosition="68" endLine="57" endPosition="85" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070710762677" fileName="queue.c" startLine="57" startPosition="68" endLine="57" endPosition="108" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
-    <nodeInfo nodeId="8001979070710792702" fileName="queue.c" startLine="57" startPosition="86" endLine="57" endPosition="91" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070710792700" fileName="queue.c" startLine="57" startPosition="86" endLine="57" endPosition="98" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070710792698" fileName="queue.c" startLine="57" startPosition="86" endLine="57" endPosition="107" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="58" startPosition="6" endLine="58" endPosition="63" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="58" startPosition="6" endLine="58" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="58" startPosition="49" endLine="58" endPosition="62" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="58" startPosition="50" endLine="58" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="58" startPosition="50" endLine="58" endPosition="62" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070743135991" fileName="queue.c" startLine="60" startPosition="8" endLine="60" endPosition="15" conceptFqName="com.mbeddr.core.pointers.structure.DerefExpr" />
-    <nodeInfo nodeId="8001979070743143991" fileName="queue.c" startLine="60" startPosition="8" endLine="60" endPosition="30" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="8001979070743135995" fileName="queue.c" startLine="60" startPosition="8" endLine="60" endPosition="31" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070743137774" fileName="queue.c" startLine="60" startPosition="9" endLine="60" endPosition="15" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070710762687" fileName="queue.c" startLine="60" startPosition="18" endLine="60" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070710762687" fileName="queue.c" startLine="60" startPosition="18" endLine="60" endPosition="30" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="62" startPosition="6" endLine="62" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="62" startPosition="6" endLine="62" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="62" startPosition="48" endLine="62" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="62" startPosition="49" endLine="62" endPosition="54" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="62" startPosition="49" endLine="62" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969820" fileName="queue.c" startLine="63" startPosition="6" endLine="63" endPosition="74" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="8001979070700969824" fileName="queue.c" startLine="63" startPosition="28" endLine="63" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="8001979070700969822" fileName="queue.c" startLine="63" startPosition="28" endLine="63" endPosition="73" conceptFqName="com.mbeddr.core.expressions.structure.ModuloExpression" />
-    <nodeInfo nodeId="8001979070700969831" fileName="queue.c" startLine="63" startPosition="29" endLine="63" endPosition="34" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969829" fileName="queue.c" startLine="63" startPosition="29" endLine="63" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969827" fileName="queue.c" startLine="63" startPosition="29" endLine="63" endPosition="50" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700969825" fileName="queue.c" startLine="63" startPosition="29" endLine="63" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
-    <nodeInfo nodeId="8001979070700969826" fileName="queue.c" startLine="63" startPosition="53" endLine="63" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700969823" fileName="queue.c" startLine="63" startPosition="58" endLine="63" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
-    <nodeInfo nodeId="8001979070700969860" fileName="queue.c" startLine="64" startPosition="6" endLine="64" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969858" fileName="queue.c" startLine="64" startPosition="6" endLine="64" endPosition="18" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700969856" fileName="queue.c" startLine="64" startPosition="6" endLine="64" endPosition="27" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
-    <nodeInfo nodeId="8001979070700969854" fileName="queue.c" startLine="64" startPosition="6" endLine="64" endPosition="41" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
-    <nodeInfo nodeId="8001979070700969853" fileName="queue.c" startLine="64" startPosition="6" endLine="64" endPosition="42" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969855" fileName="queue.c" startLine="64" startPosition="30" endLine="64" endPosition="41" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="65" startPosition="6" endLine="65" endPosition="62" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="65" startPosition="6" endLine="65" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="65" startPosition="48" endLine="65" endPosition="61" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="65" startPosition="49" endLine="65" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="65" startPosition="49" endLine="65" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070701117173" fileName="queue.c" startLine="66" startPosition="6" endLine="66" endPosition="14" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="4" endLine="68" endPosition="60" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="4" endLine="68" endPosition="61" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="46" endLine="68" endPosition="59" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
-    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="68" startPosition="47" endLine="68" endPosition="52" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="47" endLine="68" endPosition="59" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="33" startPosition="6" endLine="35" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="59" startPosition="6" endLine="61" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="24" startPosition="6" endLine="24" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="24" startPosition="6" endLine="24" endPosition="66" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="24" startPosition="49" endLine="24" endPosition="64" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="24" startPosition="50" endLine="24" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="24" startPosition="51" endLine="24" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700936676" fileName="queue.c" startLine="26" startPosition="8" endLine="26" endPosition="76" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8001979070700936832" fileName="queue.c" startLine="26" startPosition="30" endLine="26" endPosition="57" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8001979070700936830" fileName="queue.c" startLine="26" startPosition="30" endLine="26" endPosition="75" conceptFqName="com.mbeddr.core.expressions.structure.ModuloExpression" />
+    <nodeInfo nodeId="8001979070700936839" fileName="queue.c" startLine="26" startPosition="31" endLine="26" endPosition="36" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700936837" fileName="queue.c" startLine="26" startPosition="31" endLine="26" endPosition="43" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700936835" fileName="queue.c" startLine="26" startPosition="31" endLine="26" endPosition="52" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700936833" fileName="queue.c" startLine="26" startPosition="31" endLine="26" endPosition="56" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
+    <nodeInfo nodeId="8001979070700936834" fileName="queue.c" startLine="26" startPosition="55" endLine="26" endPosition="56" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700936831" fileName="queue.c" startLine="26" startPosition="60" endLine="26" endPosition="75" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
+    <nodeInfo nodeId="8001979070700913746" fileName="queue.c" startLine="27" startPosition="13" endLine="27" endPosition="18" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700913988" fileName="queue.c" startLine="27" startPosition="13" endLine="27" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700914642" fileName="queue.c" startLine="27" startPosition="13" endLine="27" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700918765" fileName="queue.c" startLine="27" startPosition="13" endLine="27" endPosition="49" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
+    <nodeInfo nodeId="8001979070700942402" fileName="queue.c" startLine="27" startPosition="38" endLine="27" endPosition="49" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="29" startPosition="10" endLine="29" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="29" startPosition="10" endLine="29" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="29" startPosition="52" endLine="29" endPosition="67" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="29" startPosition="53" endLine="29" endPosition="67" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="29" startPosition="54" endLine="29" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700931458" fileName="queue.c" startLine="30" startPosition="10" endLine="30" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.ContinueStatement" />
+    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="33" startPosition="10" endLine="33" endPosition="114" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8001979070710706415" fileName="queue.c" startLine="33" startPosition="70" endLine="33" endPosition="113" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070710706416" fileName="queue.c" startLine="33" startPosition="71" endLine="33" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8001979070710706422" fileName="queue.c" startLine="33" startPosition="72" endLine="33" endPosition="77" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070710706420" fileName="queue.c" startLine="33" startPosition="72" endLine="33" endPosition="84" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070710706418" fileName="queue.c" startLine="33" startPosition="72" endLine="33" endPosition="89" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070710706417" fileName="queue.c" startLine="33" startPosition="72" endLine="33" endPosition="112" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="8001979070726547783" fileName="queue.c" startLine="33" startPosition="90" endLine="33" endPosition="95" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070726562658" fileName="queue.c" startLine="33" startPosition="90" endLine="33" endPosition="102" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070726591702" fileName="queue.c" startLine="33" startPosition="90" endLine="33" endPosition="111" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="35" startPosition="12" endLine="35" endPosition="17" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="35" startPosition="12" endLine="35" endPosition="24" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070743114404" fileName="queue.c" startLine="35" startPosition="12" endLine="35" endPosition="31" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="8001979070743112288" fileName="queue.c" startLine="35" startPosition="12" endLine="35" endPosition="32" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070743121742" fileName="queue.c" startLine="35" startPosition="27" endLine="35" endPosition="31" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700959500" fileName="queue.c" startLine="38" startPosition="8" endLine="38" endPosition="13" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700959578" fileName="queue.c" startLine="38" startPosition="8" endLine="38" endPosition="20" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700962344" fileName="queue.c" startLine="38" startPosition="8" endLine="38" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700965789" fileName="queue.c" startLine="38" startPosition="8" endLine="38" endPosition="43" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="8001979070700959501" fileName="queue.c" startLine="38" startPosition="8" endLine="38" endPosition="44" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700967086" fileName="queue.c" startLine="38" startPosition="32" endLine="38" endPosition="43" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="40" startPosition="6" endLine="40" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="40" startPosition="6" endLine="40" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="40" startPosition="48" endLine="40" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="40" startPosition="49" endLine="40" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700912644" fileName="queue.c" startLine="40" startPosition="50" endLine="40" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969191" fileName="queue.c" startLine="41" startPosition="6" endLine="41" endPosition="12" conceptFqName="com.mbeddr.core.statements.structure.BreakStatement" />
+    <nodeInfo nodeId="8001979070700969862" fileName="queue.c" startLine="48" startPosition="9" endLine="48" endPosition="13" conceptFqName="com.mbeddr.core.expressions.structure.TrueLiteral" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="51" startPosition="6" endLine="51" endPosition="65" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="51" startPosition="6" endLine="51" endPosition="66" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="51" startPosition="49" endLine="51" endPosition="64" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="51" startPosition="50" endLine="51" endPosition="64" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="51" startPosition="51" endLine="51" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969841" fileName="queue.c" startLine="53" startPosition="13" endLine="53" endPosition="18" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969839" fileName="queue.c" startLine="53" startPosition="13" endLine="53" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969837" fileName="queue.c" startLine="53" startPosition="13" endLine="53" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700969835" fileName="queue.c" startLine="53" startPosition="13" endLine="53" endPosition="59" conceptFqName="com.mbeddr.core.expressions.structure.EqualsExpression" />
+    <nodeInfo nodeId="8001979070701039228" fileName="queue.c" startLine="53" startPosition="38" endLine="53" endPosition="43" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070701041606" fileName="queue.c" startLine="53" startPosition="38" endLine="53" endPosition="50" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070701046450" fileName="queue.c" startLine="53" startPosition="38" endLine="53" endPosition="59" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="55" startPosition="10" endLine="55" endPosition="68" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="55" startPosition="10" endLine="55" endPosition="69" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="55" startPosition="52" endLine="55" endPosition="67" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="55" startPosition="53" endLine="55" endPosition="67" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="55" startPosition="54" endLine="55" endPosition="59" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969834" fileName="queue.c" startLine="56" startPosition="10" endLine="56" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.ContinueStatement" />
+    <nodeInfo nodeId="8001979070710769429" fileName="queue.c" startLine="58" startPosition="8" endLine="58" endPosition="8" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="60" startPosition="10" endLine="60" endPosition="114" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8001979070710762675" fileName="queue.c" startLine="60" startPosition="70" endLine="60" endPosition="113" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070710762676" fileName="queue.c" startLine="60" startPosition="71" endLine="60" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8001979070710762682" fileName="queue.c" startLine="60" startPosition="72" endLine="60" endPosition="77" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070710762680" fileName="queue.c" startLine="60" startPosition="72" endLine="60" endPosition="84" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070710762678" fileName="queue.c" startLine="60" startPosition="72" endLine="60" endPosition="89" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070710762677" fileName="queue.c" startLine="60" startPosition="72" endLine="60" endPosition="112" conceptFqName="com.mbeddr.core.pointers.structure.ArrayAccessExpr" />
+    <nodeInfo nodeId="8001979070710792702" fileName="queue.c" startLine="60" startPosition="90" endLine="60" endPosition="95" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070710792700" fileName="queue.c" startLine="60" startPosition="90" endLine="60" endPosition="102" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070710792698" fileName="queue.c" startLine="60" startPosition="90" endLine="60" endPosition="111" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070743135991" fileName="queue.c" startLine="62" startPosition="12" endLine="62" endPosition="19" conceptFqName="com.mbeddr.core.pointers.structure.DerefExpr" />
+    <nodeInfo nodeId="8001979070743143991" fileName="queue.c" startLine="62" startPosition="12" endLine="62" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="8001979070743135995" fileName="queue.c" startLine="62" startPosition="12" endLine="62" endPosition="35" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070743137774" fileName="queue.c" startLine="62" startPosition="13" endLine="62" endPosition="19" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070710762687" fileName="queue.c" startLine="62" startPosition="22" endLine="62" endPosition="27" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8001979070710762687" fileName="queue.c" startLine="62" startPosition="22" endLine="62" endPosition="34" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969820" fileName="queue.c" startLine="65" startPosition="8" endLine="65" endPosition="76" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="8001979070700969824" fileName="queue.c" startLine="65" startPosition="30" endLine="65" endPosition="57" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8001979070700969822" fileName="queue.c" startLine="65" startPosition="30" endLine="65" endPosition="75" conceptFqName="com.mbeddr.core.expressions.structure.ModuloExpression" />
+    <nodeInfo nodeId="8001979070700969831" fileName="queue.c" startLine="65" startPosition="31" endLine="65" endPosition="36" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969829" fileName="queue.c" startLine="65" startPosition="31" endLine="65" endPosition="43" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969827" fileName="queue.c" startLine="65" startPosition="31" endLine="65" endPosition="52" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700969825" fileName="queue.c" startLine="65" startPosition="31" endLine="65" endPosition="56" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
+    <nodeInfo nodeId="8001979070700969826" fileName="queue.c" startLine="65" startPosition="55" endLine="65" endPosition="56" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700969823" fileName="queue.c" startLine="65" startPosition="60" endLine="65" endPosition="75" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantRef" />
+    <nodeInfo nodeId="8001979070700969860" fileName="queue.c" startLine="66" startPosition="8" endLine="66" endPosition="13" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070700969858" fileName="queue.c" startLine="66" startPosition="8" endLine="66" endPosition="20" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969856" fileName="queue.c" startLine="66" startPosition="8" endLine="66" endPosition="29" conceptFqName="com.mbeddr.core.expressions.structure.GenericDotExpression" />
+    <nodeInfo nodeId="8001979070700969854" fileName="queue.c" startLine="66" startPosition="8" endLine="66" endPosition="43" conceptFqName="com.mbeddr.core.expressions.structure.AssignmentExpr" />
+    <nodeInfo nodeId="8001979070700969853" fileName="queue.c" startLine="66" startPosition="8" endLine="66" endPosition="44" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700969855" fileName="queue.c" startLine="66" startPosition="32" endLine="66" endPosition="43" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="6" endLine="68" endPosition="64" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="6" endLine="68" endPosition="65" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="48" endLine="68" endPosition="63" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="68" startPosition="49" endLine="68" endPosition="63" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
+    <nodeInfo nodeId="8001979070700969818" fileName="queue.c" startLine="68" startPosition="50" endLine="68" endPosition="55" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8001979070701117173" fileName="queue.c" startLine="69" startPosition="6" endLine="69" endPosition="14" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="34" startPosition="10" endLine="36" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="61" startPosition="10" endLine="63" endPosition="11" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="8001979070701259937" fileName="queue.c" startLine="12" startPosition="2" endLine="15" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="27" startPosition="6" endLine="30" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="52" startPosition="6" endLine="55" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700913733" fileName="queue.c" startLine="26" startPosition="6" endLine="30" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.IfStatement" />
-    <nodeInfo nodeId="8001979070700969832" fileName="queue.c" startLine="51" startPosition="6" endLine="55" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.IfStatement" />
+    <nodeInfo nodeId="8001979070700913734" fileName="queue.c" startLine="28" startPosition="8" endLine="31" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969833" fileName="queue.c" startLine="54" startPosition="8" endLine="57" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700913733" fileName="queue.c" startLine="27" startPosition="8" endLine="31" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.IfStatement" />
+    <nodeInfo nodeId="8001979070700969832" fileName="queue.c" startLine="53" startPosition="8" endLine="57" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.IfStatement" />
+    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="32" startPosition="8" endLine="37" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="59" startPosition="8" endLine="64" endPosition="9" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="8001979070701248803" fileName="queue.c" startLine="10" startPosition="0" endLine="17" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="8001979070701248801" fileName="queue.c" startLine="9" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="queue_queueInit" />
-    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="24" startPosition="4" endLine="40" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="50" startPosition="4" endLine="67" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="22" startPosition="2" endLine="42" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700928251" fileName="queue.c" startLine="21" startPosition="2" endLine="42" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.WhileStatement" />
-    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="48" startPosition="2" endLine="69" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700969814" fileName="queue.c" startLine="47" startPosition="2" endLine="69" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.WhileStatement" />
-    <nodeInfo nodeId="8001979070700909078" fileName="queue.c" startLine="20" startPosition="0" endLine="43" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700969813" fileName="queue.c" startLine="46" startPosition="0" endLine="70" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700909076" fileName="queue.c" startLine="19" startPosition="0" endLine="44" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="queue_queueSafeAdd" />
-    <nodeInfo nodeId="8001979070700969812" fileName="queue.c" startLine="45" startPosition="0" endLine="71" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="queue_queueSafeGet" />
+    <nodeInfo nodeId="8001979070700912636" fileName="queue.c" startLine="25" startPosition="6" endLine="39" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969819" fileName="queue.c" startLine="52" startPosition="6" endLine="67" endPosition="7" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="23" startPosition="4" endLine="42" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="50" startPosition="4" endLine="70" endPosition="5" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700928252" fileName="queue.c" startLine="22" startPosition="2" endLine="43" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700928251" fileName="queue.c" startLine="21" startPosition="2" endLine="43" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.WhileStatement" />
+    <nodeInfo nodeId="8001979070700969815" fileName="queue.c" startLine="49" startPosition="2" endLine="71" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969814" fileName="queue.c" startLine="48" startPosition="2" endLine="71" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.WhileStatement" />
+    <nodeInfo nodeId="8001979070700909078" fileName="queue.c" startLine="20" startPosition="0" endLine="44" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700969813" fileName="queue.c" startLine="47" startPosition="0" endLine="72" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8001979070700909076" fileName="queue.c" startLine="19" startPosition="0" endLine="45" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="queue_queueSafeAdd" />
+    <nodeInfo nodeId="8001979070700969812" fileName="queue.c" startLine="46" startPosition="0" endLine="73" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="queue_queueSafeGet" />
     <nodeInfo nodeId="8001979070700646123" fileName="queue.h" startLine="25" startPosition="0" endLine="25" endPosition="28" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" />
     <nodeInfo nodeId="8001979070700646210" fileName="queue.h" startLine="25" startPosition="25" endLine="25" endPosition="27" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="26" startPosition="0" endLine="27" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.pi_parallel.queueInit" />
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="28" startPosition="0" endLine="29" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.pi_parallel.queueSafeAdd" />
     <nodeInfo nodeId="8001979070700644525" fileName="queue.h" startLine="30" startPosition="0" endLine="31" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="OriginalExamples.pi_parallel.queueSafeGet" />
-    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="8" startPosition="108" endLine="8" endPosition="110" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="19" startPosition="111" endLine="19" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="14" startPosition="108" endLine="14" endPosition="110" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.c" startLine="25" startPosition="111" endLine="25" endPosition="113" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700646210" fileName="queue_SharedTypes_0.h" startLine="25" startPosition="58" endLine="25" endPosition="60" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="8001979070700644980" fileName="queue_SharedTypes_0.h" startLine="22" startPosition="0" endLine="27" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
-    <unitInfo nodeId="8001979070700644525" fileName="queue.c" startLine="1" startPosition="0" endLine="72" endPosition="0" unitName="OriginalExamples.pi_parallel.queue" />
+    <unitInfo nodeId="8001979070700644525" fileName="queue.c" startLine="1" startPosition="0" endLine="74" endPosition="0" unitName="OriginalExamples.pi_parallel.queue" />
   </root>
 </debugInfo>
 

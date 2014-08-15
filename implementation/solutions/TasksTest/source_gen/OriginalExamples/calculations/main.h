@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "readerData.h"
 
 #include "constants.h"
@@ -28,7 +30,7 @@
 extern "C" {
 #endif
 
-int32_t main_main(int32_t argc,char* argv[]);
+int32_t main_main(int32_t argc, char* argv[]);
 
 void main_initGlobalMutexesFor1Module_0(void);
 

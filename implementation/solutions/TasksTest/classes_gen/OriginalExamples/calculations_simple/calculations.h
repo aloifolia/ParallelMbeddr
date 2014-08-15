@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -19,7 +21,7 @@ extern "C" {
 #endif
 
 #define CALCULATIONS_threshold (40)
-int32_t calculations_main(int32_t argc,char* argv[]);
+int32_t calculations_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus

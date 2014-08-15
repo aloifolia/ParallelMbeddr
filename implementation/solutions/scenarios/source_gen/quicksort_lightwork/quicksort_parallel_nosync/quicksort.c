@@ -42,7 +42,7 @@ static void* quicksort_parFun_a0b0c0a0g(void* voidArgs);
 
 static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, int32_t numbers[QUICKSORT_numberCount], int32_t left);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t right, int32_t numbers[QUICKSORT_numberCount]);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t numbers[QUICKSORT_numberCount], int32_t right);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -51,7 +51,10 @@ int32_t main(int32_t argc, char* argv[])
   quicksort_initNumbers(originalNumbers);
   
   
-  /* simulate a very long array (since we can only work on the limited stack, not on the heap) */
+  /* 
+   * simulate a very long array (since we can only work on the limited stack, not on the heap)
+   */
+
   for ( int16_t __i = 0; __i < 200; __i++ )
   {
     quicksort_copyNumbers(originalNumbers, sortableNumbers);
@@ -97,7 +100,7 @@ static void quicksort_quickSort(int32_t numbers[QUICKSORT_numberCount], int32_t 
     if ( middle - left > QUICKSORT_threshold && right - middle > QUICKSORT_threshold ) 
     {
       GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a0a2a0a6(middle, numbers, left);
-      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a6(middle, right, numbers);
+      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a6(middle, numbers, right);
       GenericTaskDeclarations_joinVoidFuture(&sorter1);
       GenericTaskDeclarations_joinVoidFuture(&sorter2);
     }    else 
@@ -176,7 +179,7 @@ static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t right, int32_t numbers[QUICKSORT_numberCount]) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t numbers[QUICKSORT_numberCount], int32_t right) 
 {
   quicksort_Args_a0b0c0a0g_t* args_a1a2a0a6 = malloc(sizeof(quicksort_Args_a0b0c0a0g_t));
   args_a1a2a0a6->middle = middle;

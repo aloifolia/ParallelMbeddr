@@ -40,9 +40,9 @@ static void* quicksort_parFun_a0b0d0a0h(void* voidArgs);
 
 static void* quicksort_parFun_a0c0d0a0h(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a3a0a7(int32_t middle, char** strings, int32_t left);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a3a0a7(int32_t middle, int32_t left, char** strings);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a3a0a7(int32_t middle, char** strings, int32_t right);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a3a0a7(int32_t middle, int32_t right, char** strings);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -104,8 +104,8 @@ static void quicksort_quickSort(char** strings, int32_t left, int32_t right)
     if ( middle - left > QUICKSORT_threshold && right - middle > QUICKSORT_threshold ) 
     {
       printf("multithread! (%d|%d|%d)\n", left, middle, right);
-      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a1a3a0a7(middle, strings, left);
-      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a2a3a0a7(middle, strings, right);
+      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a1a3a0a7(middle, left, strings);
+      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a2a3a0a7(middle, right, strings);
       GenericTaskDeclarations_joinVoidFuture(&sorter1);
       GenericTaskDeclarations_joinVoidFuture(&sorter2);
     }    else 
@@ -147,7 +147,10 @@ static int32_t quicksort_partition(char** strings, int32_t left, int32_t right)
 
 static bool quicksort_biggerThan(char* string1, char* string2, int32_t start, int32_t end) 
 {
-  /* not made efficient on purpose */
+  /* 
+   * not made efficient on purpose
+   */
+
   if ( start >= end ) 
   {
     return false;
@@ -178,7 +181,7 @@ static void* quicksort_parFun_a0c0d0a0h(void* voidArgs)
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a3a0a7(int32_t middle, char** strings, int32_t left) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a3a0a7(int32_t middle, int32_t left, char** strings) 
 {
   quicksort_Args_a0b0d0a0h_t* args_a1a3a0a7 = malloc(sizeof(quicksort_Args_a0b0d0a0h_t));
   args_a1a3a0a7->middle = middle;
@@ -189,7 +192,7 @@ static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a3a0a7(int32_
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a3a0a7(int32_t middle, char** strings, int32_t right) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a2a3a0a7(int32_t middle, int32_t right, char** strings) 
 {
   quicksort_Args_a0c0d0a0h_t* args_a2a3a0a7 = malloc(sizeof(quicksort_Args_a0c0d0a0h_t));
   args_a2a3a0a7->middle = middle;

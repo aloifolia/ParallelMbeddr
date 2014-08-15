@@ -6,11 +6,15 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
 
 #include "GenericSyncDeclarations.h"
+
+#include <pthread.h>
 
 
 
@@ -19,7 +23,7 @@ extern "C" {
 #endif
 
 #define FIBONACCI_fiboCount (40)
-int32_t fibonacci_main(int32_t argc,char* argv[]);
+int32_t fibonacci_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus

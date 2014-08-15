@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="-b53yr9ygrlbxty3s3cc5rpsfhfd3ocr">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
+  <common hash="9gwksgmt08338kypv4vgxqxrj2ok2l9">
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (O.pi_clone)" />
+    <file name="pi.c" />
+    <file name="pi.h" />
+  </common>
+  <source id="8306718430232268899" name="BuildConfiguration (O.pi_clone)" hash="-emwme5f7s9hcnodxsryg07f39r8cizn" />
+  <source id="8306718430232269065" name="TypeSizeConfiguration (O.pi_clone)" hash="-cwoiotl2wp6fwwejcxvihjm1u9t9aj1" />
+  <source id="8306718430232269112" name="pi" hash="-a62i2bhleqdiftq92y9mo3dlajzlxvr" />
+</dependencies>
+

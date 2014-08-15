@@ -31,7 +31,7 @@ public class checkSyncRessourceForBinding_NonTypesystemRule extends AbstractNonT
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessource";
+    return "TasksAndSyncs.structure.SyncResource";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {

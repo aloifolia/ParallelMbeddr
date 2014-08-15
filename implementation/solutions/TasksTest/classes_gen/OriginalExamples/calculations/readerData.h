@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "constants.h"
 
 #include "GenericTaskDeclarations.h"
@@ -22,7 +24,7 @@
 extern "C" {
 #endif
 
-typedef int32_t Block[CONSTANTS_blockSize];
+typedef int32_t readerData_Block[CONSTANTS_blockSize];
 
 #ifdef __cplusplus
 } /* extern "C" */

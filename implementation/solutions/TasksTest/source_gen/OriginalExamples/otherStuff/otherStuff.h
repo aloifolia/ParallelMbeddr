@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "second.h"
 
 #include "GenericTaskDeclarations.h"
@@ -23,7 +25,7 @@ extern "C" {
 #endif
 
 #define OTHERSTUFF_x ("sd")
-int32_t otherStuff_main(int32_t argc,char* argv[]);
+int32_t otherStuff_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus

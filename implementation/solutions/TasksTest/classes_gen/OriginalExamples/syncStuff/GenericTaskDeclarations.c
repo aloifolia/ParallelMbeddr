@@ -11,13 +11,24 @@ void* GenericTaskDeclarations_saveFutureAndGetResult(GenericTaskDeclarations_Fut
   GenericTaskDeclarations_getFutureResult(&future);
 }
 
-void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
+void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
 {
-  if ( !(future->finished) ) 
+  GenericTaskDeclarations_joinVoidFuture(&future);
+}
+
+GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
+{
+  pthread_t pth;
+  if ( task.argsSize == 0 ) 
   {
-    pthread_join(future->pth,0);
-    future->finished = true;
+    pthread_create(&pth,0,task.fun,0);
+  }  else 
+  {
+    void* args = malloc(task.argsSize);
+    memcpy(args,task.args,task.argsSize);
+    pthread_create(&pth,0,task.fun,args);
   }
+  return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
 }
 
 GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(GenericTaskDeclarations_Task_t task) 
@@ -35,11 +46,6 @@ GenericTaskDeclarations_Future_t GenericTaskDeclarations_runTaskAndGetFuture(Gen
   return (GenericTaskDeclarations_Future_t){ .pth = pth };
 }
 
-void GenericTaskDeclarations_saveAndJoinVoidFuture(GenericTaskDeclarations_VoidFuture_t future) 
-{
-  GenericTaskDeclarations_joinVoidFuture(&future);
-}
-
 void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* future) 
 {
   if ( !(future->finished) ) 
@@ -50,18 +56,12 @@ void* GenericTaskDeclarations_getFutureResult(GenericTaskDeclarations_Future_t* 
   return future->result;
 }
 
-GenericTaskDeclarations_VoidFuture_t GenericTaskDeclarations_runTaskAndGetVoidFuture(GenericTaskDeclarations_Task_t task) 
+void GenericTaskDeclarations_joinVoidFuture(GenericTaskDeclarations_VoidFuture_t* future) 
 {
-  pthread_t pth;
-  if ( task.argsSize == 0 ) 
+  if ( !(future->finished) ) 
   {
-    pthread_create(&pth,0,task.fun,0);
-  }  else 
-  {
-    void* args = malloc(task.argsSize);
-    memcpy(args,task.args,task.argsSize);
-    pthread_create(&pth,0,task.fun,args);
+    pthread_join(future->pth,0);
+    future->finished = true;
   }
-  return (GenericTaskDeclarations_VoidFuture_t){ .pth = pth };
 }
 

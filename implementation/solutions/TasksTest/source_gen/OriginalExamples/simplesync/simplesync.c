@@ -40,11 +40,9 @@ int32_t main(int32_t argc, char* argv[])
   
   simplesync_counter++;
   assert(simplesync_counter == 0);
-  GenericSyncDeclarations_startSyncFor1Mutex(&(simplesync_value).mutex);
   {
     simplesync_value.value = 5;
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(simplesync_value).mutex);
   simplesync_counter--;
   assert(simplesync_counter == 1);
   

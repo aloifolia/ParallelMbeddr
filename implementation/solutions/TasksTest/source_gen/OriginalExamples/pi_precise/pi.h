@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include <stdio.h>
 #include <gmp.h>
 
@@ -21,7 +23,7 @@ extern "C" {
 #define PI_PRECISION (64)
 #define PI_BASE (10)
 #define PI_PI160 ("3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679821480865132823066470938446095505822317253594081284811174502")
-int32_t pi_main(int32_t argc,char* argv[]);
+int32_t pi_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus

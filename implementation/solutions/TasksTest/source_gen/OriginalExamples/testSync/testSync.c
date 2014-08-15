@@ -58,16 +58,13 @@ int32_t main(int32_t argc, char* argv[])
   testSync_initAllGlobalMutexes_0();
   GenericSharedDeclarations_SharedOf_int32_0_t myShared;
   pthread_mutex_init(&myShared.mutex,&GenericSharedDeclarations_mutexAttribute_0);
-  GenericSyncDeclarations_startSyncFor1Mutex(&myShared.mutex);
   {
     myShared.value = 5;
     if ( true ) 
     {
-      GenericSyncDeclarations_stopSyncFor1Mutex(&myShared.mutex);
       return 1;
     }
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&myShared.mutex);
   return 0;
 }
 

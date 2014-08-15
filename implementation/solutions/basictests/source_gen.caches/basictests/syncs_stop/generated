@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-49qbudrk1wohq5hyypnmxslwyz6p78a">
+<dependencies version="2" modelHash="4zsqlj6nlhozeq9px67f215mifizcl9">
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="djqzvub5ozzmmwdon26q3cohux8im1t" />
-  <common hash="e7bsuy73ed9a5y2guzecnc8tajnonyp">
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="qz7kztt4svb6dhl8xo0y575oqbjfnr" />
+  <common hash="-89vl8py8bsxsm27sht581dn5ivrd7qm">
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
@@ -18,7 +18,7 @@
     <file name="syncs_stop.c" />
     <file name="syncs_stop.h" />
   </common>
-  <source id="3227138667949597815" name="syncs_stop" hash="-9u1vxhwdukz2dbs8ervoi5x9jk0reja" />
+  <source id="3227138667949597815" name="syncs_stop" hash="-24gviknwzmp1ff78igg0rrcps4bcr08" />
   <source id="3227138667949597849" name="TypeSizeConfiguration (b.syncs_stop)" hash="6w63x8lzvjg95mkqhern1wedt5u7l3j" />
   <source id="3227138667949597896" name="BuildConfiguration (b.syncs_stop)" hash="-w8hh9h5k0e8it6op8pufrorj2nwix7" />
 </dependencies>

@@ -6,6 +6,8 @@
 
 #include <stddef.h>
 
+#include <stdbool.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -22,7 +24,7 @@ extern "C" {
 #define PI_RANGECOUNT (4)
 #define PI_THRESHOLD (PI_RANGESIZE * PI_RANGECOUNT)
 #define PI_PI (3.1415926535897932384626)
-int32_t pi_main(int32_t argc,char* argv[]);
+int32_t pi_main(int32_t argc, char* argv[]);
 
 
 #ifdef __cplusplus

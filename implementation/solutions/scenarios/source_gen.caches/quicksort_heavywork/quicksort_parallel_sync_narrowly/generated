@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-dh894n0w9vlhxsiv4jwfs4tbrjg27r0">
-  <dep model="db9b8d55-dc89-4623-952e-ed8bd646cb3c/r:e8e37e4e-8523-4e2b-8c72-06d59fe4d837(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="-cx3o8yx7hqmgnhb4bdkpg4pkphipm95">
+  <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
-  <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" hash="cgpgmijn6x8fev4b6vybch2ypcq4m2d" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" hash="5e8lljkw5ehhpiu7gisblzybnn4nrxu" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="2tjo7spoq0b9ubdn36bitwt5i0a2wds" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-dr8j37293z41zpiruc30qase1i6i0yr" />
-  <common hash="91n6r1xyjyqp87mydrfyup2onehqmp1">
-    <dep model="db9b8d55-dc89-4623-952e-ed8bd646cb3c/r:e8e37e4e-8523-4e2b-8c72-06d59fe4d837(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="qz7kztt4svb6dhl8xo0y575oqbjfnr" />
+  <common hash="-dgi09alogs61qwyy7jd513qojnh7v2e">
+    <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
-    <dep model="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
-    <dep model="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
     <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
     <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" />
     <file name="GenericSharedDeclarations.c" />
@@ -36,7 +32,7 @@
   </common>
   <source id="4260631361696689393" name="BuildConfiguration (q.quicksort_parallel_sync_narrowly)" hash="-738x2rrh1j3yl8gl77cp3wsl8sdgjx7" />
   <source id="4260631361696671499" name="TypeSizeConfiguration (q.quicksort_parallel_sync_narrowly)" hash="-4v8c4finyksvkaajs7uxmqj8oe2zmnj" />
-  <source id="5474646598317520717" name="quicksort" hash="2cuaqe1ob85y33hab3cuw0lv075yqz0" />
+  <source id="5474646598317520717" name="quicksort" hash="3ijd716wavc0y72i5qo3q7n4jfxmj9b" />
   <source id="8306718430232924459" name="stdlib" hash="-6obaqa99f7xypr732czk946eh7x1j0m" />
   <source id="8306718430232922058" name="stdio" hash="4owfmcovfysjvtj76klpo0wnmga5cja" />
 </dependencies>

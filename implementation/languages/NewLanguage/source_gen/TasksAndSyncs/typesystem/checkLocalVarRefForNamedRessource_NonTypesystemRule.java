@@ -25,7 +25,7 @@ public class checkLocalVarRefForNamedRessource_NonTypesystemRule extends Abstrac
     final SNode referedNamedRessource = SLinkOperations.getTarget(syncRessourceRef, "syncRessource", false);
     if (!(Sequence.fromIterable(SNodeOperations.ofConcept(SNodeOperations.getAncestors(syncRessourceRef, null, false), "TasksAndSyncs.structure.SyncStatement")).any(new IWhereFilter<SNode>() {
       public boolean accept(SNode it) {
-        return ListSequence.fromList(SLinkOperations.getTargets(it, "ressources", true)).contains(referedNamedRessource);
+        return ListSequence.fromList(SLinkOperations.getTargets(it, "resources", true)).contains(referedNamedRessource);
       }
     }))) {
       {
@@ -33,7 +33,7 @@ public class checkLocalVarRefForNamedRessource_NonTypesystemRule extends Abstrac
         IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(syncRessourceRef, "referred named ressource not in scope", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "3735204333725573884", null, errorTarget);
       }
     }
-    SNode ressourceRefContext = SNodeOperations.getAncestor(syncRessourceRef, "TasksAndSyncs.structure.SyncRessource", false, false);
+    SNode ressourceRefContext = SNodeOperations.getAncestor(syncRessourceRef, "TasksAndSyncs.structure.SyncResource", false, false);
     if (ressourceRefContext != null && ListSequence.fromList(SNodeOperations.getNextSiblings(ressourceRefContext, false)).contains(referedNamedRessource)) {
       {
         MessageTarget errorTarget = new NodeMessageTarget();

@@ -33,7 +33,7 @@ public class checkSyncRessourceForSharedness_NonTypesystemRule extends AbstractN
   }
 
   public String getApplicableConceptFQName() {
-    return "TasksAndSyncs.structure.SyncRessource";
+    return "TasksAndSyncs.structure.SyncResource";
   }
 
   public IsApplicableStatus isApplicableAndPattern(SNode argument) {
