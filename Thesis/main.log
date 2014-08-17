@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  17 AUG 2014 13:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  17 AUG 2014 19:21
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1424,7 +1424,7 @@ LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <10> not available
 (Font)              Font shape `T1/5fp/m/sl' tried instead on input line 159.
 [18]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
 [19] [20] [21]
-<pics/ParallelExecutionAttempt.pdf, id=633, 224.33812pt x 168.63pt>
+<pics/ParallelExecutionAttempt.pdf, id=634, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1436,7 +1436,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 56--57
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=634, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=635, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1452,7 +1452,7 @@ Overfull \hbox (28.4835pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pics/ParallelExecution.pdf, id=636, 224.33812pt x 168.63pt>
+<pics/ParallelExecution.pdf, id=637, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1463,18 +1463,18 @@ Overfull \hbox (27.62627pt too wide) in paragraph at lines 93--94
 [][] 
  []
 
-[22 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecutionAttemp
-t.pdf> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/SerialExecution.pdf
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecutionAttem
+pt.pdf> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/SerialExecution.pdf
+
 
 pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
 s/pics/SerialExecution.pdf): PDF inclusion: multiple pdfs with page group inclu
 ded in a single page
-> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pdf
-
-pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
-s/pics/ParallelExecution.pdf): PDF inclusion: multiple pdfs with page group inc
-luded in a single page
->] [23] <pics/AstForBaseTypes.pdf, id=737, 114.30634pt x 315.33504pt>
+>] [23 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pd
+f>] <pics/AstForBaseTypes.pdf, id=739, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
@@ -1485,55 +1485,56 @@ Overfull \hbox (54.43733pt too wide) in paragraph at lines 116--132
 []$[]$ $[]$ $[]$ 
  []
 
-[24 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/AstForBaseTypes.pdf>]
-[25]
-Overfull \hbox (3.86574pt too wide) in paragraph at lines 196--197
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+Underfull \vbox (badness 4699) has occurred while \output is active []
+
+ [25 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/AstForBaseTypes.pdf>]
+Overfull \hbox (37.77568pt too wide) in paragraph at lines 200--201
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][] 
+][][][][][][][][][][] 
  []
 
-[26] [27]
-Overfull \hbox (24.26323pt too wide) in paragraph at lines 266--268
+[26] [27] [28]
+Overfull \hbox (24.26323pt too wide) in paragraph at lines 270--272
 [][][][][][][][][][][][][][] 
  []
 
-[28]
-Overfull \hbox (32.55328pt too wide) in paragraph at lines 324--325
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (31.0133pt too wide) in paragraph at lines 326--327
-[][][][][][][][][][][][][][][][][][] 
- []
-
 [29]
-Overfull \hbox (29.0557pt too wide) in paragraph at lines 355--356
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+Overfull \hbox (32.55328pt too wide) in paragraph at lines 328--329
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (31.0133pt too wide) in paragraph at lines 330--331
+[][][][][][][][][][][][][][][][][][] 
  []
 
 [30]
-Overfull \hbox (6.00818pt too wide) in paragraph at lines 391--392
+Overfull \hbox (29.0557pt too wide) in paragraph at lines 359--360
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[31]
+Overfull \hbox (6.00818pt too wide) in paragraph at lines 395--396
 \T1/5ch/m/n/11 It has to be no-ted that \T1/txtt/bx/n/11 backoffExponentially()
  \T1/5ch/m/n/11 keeps its main state in-si-de the \T1/txtt/bx/n/11 startSyncFor
 NMutexes()
  []
 
-[31] [32] [33]
-Underfull \vbox (badness 2884) has occurred while \output is active []
-
- [34]
-[35] [36] [37])
+[32] [33] [34] [35] [36] [37])
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/safety-enhancements.tex
-[38] [39]
+Underfull \vbox (badness 6445) has occurred while \output is active []
+
+ [38]
+[39] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 65--67
 
  []
 
-[40])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-Underfull \vbox (badness 1062) has occurred while \output is active []
-
- [41]
+[41])) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
 [42]
 Kapitel 4.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
@@ -1565,13 +1566,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
  ) 
 Here is how much of TeX's memory you used:
- 16446 strings out of 493921
- 253188 string characters out of 3144870
- 397081 words of memory out of 3000000
- 18544 multiletter control sequences out of 15000+200000
+ 16448 strings out of 493921
+ 253238 string characters out of 3144870
+ 395081 words of memory out of 3000000
+ 18540 multiletter control sequences out of 15000+200000
  186273 words of font info for 170 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,15n,95p,2542b,2008s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,15n,95p,2542b,1958s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/devel/latex/
 tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
@@ -1588,9 +1589,9 @@ athdesign/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts
 /type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiK
 TeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (48 pages, 997021 bytes).
+Output written on main.pdf (48 pages, 999550 bytes).
 PDF statistics:
- 1455 PDF objects out of 1728 (max. 8388607)
- 765 named destinations out of 1000 (max. 500000)
+ 1466 PDF objects out of 1728 (max. 8388607)
+ 771 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
