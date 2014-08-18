@@ -23,5 +23,11 @@
 \BOOKMARK [2][-]{subsection.3.4.4}{Address leakage of shared resource values}{section.3.4}% 23
 \BOOKMARK [2][-]{subsection.3.4.5}{Overwriting shared resources}{section.3.4}% 24
 \BOOKMARK [2][-]{subsection.3.4.6}{Overwriting pointers to shared resources}{section.3.4}% 25
-\BOOKMARK [0][-]{chapter.4}{Evaluation}{}% 26
-\BOOKMARK [0][-]{section*.17}{Literaturverzeichnis}{}% 27
+\BOOKMARK [0][-]{chapter.4}{Optimization}{}% 26
+\BOOKMARK [1][-]{section.4.1}{Space Optimization}{chapter.4}% 27
+\BOOKMARK [1][-]{section.4.2}{Time Optimizations}{chapter.4}% 28
+\BOOKMARK [2][-]{subsection.4.2.1}{Basics}{section.4.2}% 29
+\BOOKMARK [2][-]{subsection.4.2.2}{Opportunities}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.3}{Performed Analyses}{section.4.2}% 31
+\BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 32
+\BOOKMARK [0][-]{section*.17}{Literaturverzeichnis}{}% 33

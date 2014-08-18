@@ -73,6 +73,11 @@ Martin Fowler.
 \newblock \url{http://www.martinfowler.com/articles/languageWorkbench.html}.
 \newblock Published: 2005-06-12.
 
+\bibitem{MemoryAsAProgrammingConcept}
+F.~Franek and F.~Fran{\v{e}}k.
+\newblock {\em Memory as a Programming Concept in C and C++}.
+\newblock Cambridge University Press, 2004.
+
 \bibitem{ConcurrentAndDistributedComputingInJava}
 V.K. Garg.
 \newblock {\em Concurrent and Distributed Computing in Java}.
@@ -195,6 +200,13 @@ S.~Prata.
 J.~Protic, M.~Tomasevic, and V.~Milutinovi{\'c}.
 \newblock {\em Distributed Shared Memory: Concepts and Systems}.
 \newblock Systems Series. Wiley, 1998.
+
+\bibitem{SpeculativeLockElision}
+Ravi Rajwar and James~R Goodman.
+\newblock Speculative lock elision: Enabling highly concurrent multithreaded
+  execution.
+\newblock In {\em Proceedings of the 34th annual ACM/IEEE international
+  symposium on Microarchitecture}, pages 294--305. IEEE Computer Society, 2001.
 
 \bibitem{UnderstandingAndUsingCPointers}
 R.~Reese.

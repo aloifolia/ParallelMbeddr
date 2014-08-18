@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  18 AUG 2014 14:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  18 AUG 2014 19:24
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1180,7 +1180,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.48601pt on input line 7.
 \@TUD@titlelines=\count149
- <tud_logo.pdf, id=111, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=135, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1421,7 +1421,7 @@ LaTeX Font Info:    Font shape `T1/5fp/m/it' in size <10> not available
 (Font)              Font shape `T1/5fp/m/sl' tried instead on input line 159.
 [18]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
 [19] [20] [21]
-<pics/ParallelExecutionAttempt.pdf, id=639, 224.33812pt x 168.63pt>
+<pics/ParallelExecutionAttempt.pdf, id=670, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1433,7 +1433,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 56--57
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=640, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=671, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1449,7 +1449,7 @@ Overfull \hbox (28.4835pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pics/ParallelExecution.pdf, id=642, 224.33812pt x 168.63pt>
+<pics/ParallelExecution.pdf, id=673, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1467,7 +1467,7 @@ pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
 s/pics/SerialExecution.pdf): PDF inclusion: multiple pdfs with page group inclu
 ded in a single page
 >] [23 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pd
-f>] <pics/AstForBaseTypes.pdf, id=744, 114.30634pt x 315.33504pt>
+f>] <pics/AstForBaseTypes.pdf, id=775, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
@@ -1525,11 +1525,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 65--67
  []
 
 [41] [42]))
-(C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex [43]
-[44]
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/optimisation.tex
+[43] [44]
 Kapitel 4.
+[45
+
+]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[46]
+Kapitel 5.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [45
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [47
 
 ]
 Underfull \hbox (badness 3815) in paragraph at lines 4--9
@@ -1543,24 +1548,24 @@ Underfull \hbox (badness 7888) in paragraph at lines 4--9
 onlinepubs / 009695399 / functions / pthread _ mutex _$
  []
 
-[46
+[48
 
-] [47])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
- [48]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
+] [49])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
+ [50]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
  (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 935132DCA35B1E430AD8DC9C26C818FB;1900.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 45.
+(rerunfilecheck)             Checksum: 3B566FBF1979AC364738FA4CCCF0245F;2283.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
  ) 
 Here is how much of TeX's memory you used:
- 16480 strings out of 493921
- 253400 string characters out of 3144870
- 377615 words of memory out of 3000000
- 18549 multiletter control sequences out of 15000+200000
+ 16505 strings out of 493921
+ 253942 string characters out of 3144870
+ 377710 words of memory out of 3000000
+ 18560 multiletter control sequences out of 15000+200000
  190691 words of font info for 172 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,15n,95p,2542b,1960s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1580,9 +1585,9 @@ athdesign/mdbch/md-chr7y.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/2.9/fonts
 /type1/mathdesign/mdbch/md-chri7m.pfb><C:/Users/Bastian/AppData/Roaming/MiKTeX/
 2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming/MiK
 TeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (50 pages, 1010519 bytes).
+Output written on main.pdf (52 pages, 1019538 bytes).
 PDF statistics:
- 1511 PDF objects out of 1728 (max. 8388607)
- 798 named destinations out of 1000 (max. 500000)
- 254 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1559 PDF objects out of 1728 (max. 8388607)
+ 809 named destinations out of 1000 (max. 500000)
+ 302 words of extra memory for PDF output out of 10000 (max. 10000000)
 

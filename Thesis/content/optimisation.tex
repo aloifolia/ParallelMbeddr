@@ -1,0 +1,18 @@
+\chapter{Optimization}
+The previous chapter introduced the means to enable parallel execution of code via tasks and establish communication between tasks via shared resources. In order to make the communication thread-safe synchronization statements were introduced which provide synchronization contexts of atomic thread-safe blocks for the shared resources that they synchronize. For the purpose of both simplicity of the design and thread-safety of the user-code conservative restrictions were made: in the variability of the code and the scopes of synchronization contexts. While this strategy simplifies the construction of correct programs it may induce unnecessary serialization during program execution if potential data hazards will actually never manifest at runtime\cite{SpeculativeLockElision}. While the synchronization overhead reflects the optimization potential in the time-wise dimension there is also a space-dimension which originates from the way mutexes are used in the implementation. 
+
+\section{Space Optimization}
+As was briefly addressed the runtime memory consumption of the translated code is extended by the amount of memory that is occupied by the mutex maintenance. In addition to the obvious memory consumption of the handle and some internal management data the choice to make mutexes robust against recursive locks requires a counter field to be maintained throughout the lifetime of each mutex. This property impairs both the space and computation time overhead of the implementation unnecessarily in case shared resources are never recursively synchronized. If such cases can be detected (which they are, as will be shown in the next section) the generator could decide to declare the according mutexes as non-recursive. This optimization is left for future extensions of ParallelMbeddr. Another starting point would be the reduction of padding, i.e. unused data, that is automatically introduced by the compiler into the struct instances of shared resources. Padding is added into structs in order to retrieve data from memory more efficiently by aligning it along proper addresses \cite[p.~27]{MemoryAsAProgrammingConcept}. The amount of padding that is inserted depends on the difference of the byte sizes of the individual fields and the order of these fields \cite{MemoryAsAProgrammingConcept}. Since the ``art of C structure packing''\footnote{See http://www.catb.org/esr/structure-packing/ for details.} is no trivial task and space optimization is no primary concern of this paper, according work is left open for future research.
+
+
+
+\section{Time Optimizations}
+\subsection{Basics}
+\begin{itemize}
+\item space and computation time optimization
+\item pointer analysis, kinds of: inter/intra, may/must
+\item speculative vs conservative
+\item 
+\end{itemize}
+\subsection{Opportunities}
+\subsection{Performed Analyses}

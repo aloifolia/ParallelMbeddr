@@ -34,6 +34,12 @@
 \contentsline {subsection}{\numberline {3.4.4}Address leakage of shared resource values}{41}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Overwriting shared resources}{42}{subsection.3.4.5}
 \contentsline {subsection}{\numberline {3.4.6}Overwriting pointers to shared resources}{42}{subsection.3.4.6}
-\contentsline {chapter}{\numberline {4}Evaluation}{45}{chapter.4}
-\contentsline {chapter}{Literaturverzeichnis}{46}{section*.17}
+\contentsline {chapter}{\numberline {4}Optimization}{45}{chapter.4}
+\contentsline {section}{\numberline {4.1}Space Optimization}{45}{section.4.1}
+\contentsline {section}{\numberline {4.2}Time Optimizations}{45}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Basics}{45}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Opportunities}{46}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Performed Analyses}{46}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Evaluation}{47}{chapter.5}
+\contentsline {chapter}{Literaturverzeichnis}{48}{section*.17}
 \contentsfinish 
