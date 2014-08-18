@@ -22,9 +22,6 @@ public class checkGlobalVariableForSharedness_NonTypesystemRule extends Abstract
     if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(globalVariableDeclaration, "type", true), "TasksAndSyncs.structure.SharedType")) {
       return;
     }
-    if (SNodeOperations.isInstanceOf(SLinkOperations.getTarget(globalVariableDeclaration, "type", true), "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(globalVariableDeclaration, "type", true), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType")) {
-      return;
-    }
     {
       MessageTarget errorTarget = new NodeMessageTarget();
       IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(globalVariableDeclaration, "global variable must be of type shared<> or shared<>*", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "8001979070747668580", null, errorTarget);

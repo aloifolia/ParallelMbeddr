@@ -11,6 +11,7 @@
     <classNode dependClassName="TasksAndSyncs.behavior.SharedType_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncResourceNamed_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncResourceRef_BehaviorDescriptor" />
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncResourceTest_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncResource_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStart_BehaviorDescriptor" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncStatement_BehaviorDescriptor" />
@@ -162,6 +163,12 @@
     <classNode dependClassName="java.lang.String" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
     <classNode extendsClassName="java.lang.Cloneable" />
+    <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
+  </dependency>
+  <dependency className="TasksAndSyncs.behavior.SyncResourceTest_BehaviorDescriptor" file="SyncResourceTest_BehaviorDescriptor.java">
+    <classNode dependClassName="com.mbeddr.core.statements.behavior.LocalVariableDeclaration_BehaviorDescriptor" />
+    <classNode dependClassName="java.lang.Override" />
+    <classNode dependClassName="java.lang.String" />
     <classNode extendsClassName="jetbrains.mps.smodel.runtime.impl.CompiledBehaviorDescriptor" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncResource_Behavior" file="SyncResource_Behavior.java">

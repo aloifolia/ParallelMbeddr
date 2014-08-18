@@ -328,19 +328,20 @@ public class Optimizer {
       // in the current sync context mark every reference which refers to equal variables as the sync ressource's 
       // reference does as synced 
       SNode sync = SNodeOperations.getAncestor(syncResource, "TasksAndSyncs.structure.SyncStatement", false, false);
+      final SNode syncContext = getNearestContext(sync);
       for (SNode equalReference : ListSequence.fromList(SNodeOperations.getDescendants(sync, "com.mbeddr.core.statements.structure.IVariableReference", false, new String[]{})).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode otherRef) {
           SNode otherRefVariable = getVariable(SNodeOperations.cast(otherRef, "com.mbeddr.core.expressions.structure.Expression"));
           Set<SNode> otherRefAliases = MapSequence.fromMap(aliases).get(getVariableRef(SNodeOperations.cast(otherRef, "com.mbeddr.core.expressions.structure.Expression")));
-          return syncResourceRef != otherRef && (syncResourceVariable == otherRefVariable || SetSequence.fromSet(syncResourceAliases).containsSequence(SetSequence.fromSet(otherRefAliases)) && SetSequence.fromSet(otherRefAliases).containsSequence(SetSequence.fromSet(syncResourceAliases)));
+          SNode otherRefContext = getNearestContext(otherRef);
+          return syncResourceRef != otherRef && syncContext == otherRefContext && (syncResourceVariable == otherRefVariable || SetSequence.fromSet(syncResourceAliases).containsSequence(SetSequence.fromSet(otherRefAliases)) && SetSequence.fromSet(otherRefAliases).containsSequence(SetSequence.fromSet(syncResourceAliases)));
         }
       })) {
         SetSequence.fromSet(syncedNodes).addElement(equalReference);
       }
     }
 
-    // let the sync context of the current variable flow as far as possible through the graph 
-    // ...disregard cycles 
+    // let the sync contexts flow as far as possible through the graph 
     activateSyncForNodes(syncedNodes, dataflowGraph, inverseDataflowGraph);
     // remove sync resources whose references have a sync context 
     ListSequence.fromList(syncResources).where(new IWhereFilter<SNode>() {
@@ -435,19 +436,19 @@ public class Optimizer {
   /**
    * Remove sync resources for variables that are only read (directly or via some alias).
    */
-  public boolean removeReadonlyLocks(final Map<SNode, Set<SNode>> aliases, List<SNode> syncResources, List<SNode> variables, List<SNode> sharedSets, List<SNode> sharedGets, List<SNode> allFunctionCalls) {
-
+  public boolean removeReadonlyLocks(final Map<SNode, Set<SNode>> aliases, OptimizerData data) {
+    System.out.println("-----remove readonly locks, taboos: " + data.tabooVariables);
     Set<SNode> readOnlyVariables = SetSequence.fromSet(new HashSet<SNode>());
 
-    for (final SNode variable : ListSequence.fromList(variables)) {
+    for (final SNode variable : ListSequence.fromList(data.allVariables)) {
       // if no modifying expression exists for the current variable v (v.set or v.get... = ...) 
       // every synchronization for v is redundant 
-      boolean modifiesViaSet = ListSequence.fromList(sharedSets).any(new IWhereFilter<SNode>() {
+      boolean modifiesViaSet = ListSequence.fromList(data.sharedSets).any(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SetSequence.fromSet(MapSequence.fromMap(aliases).get(getVariableRef(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)))).contains(variable);
         }
       });
-      boolean modifiesViaGet = ListSequence.fromList(sharedGets).any(new IWhereFilter<SNode>() {
+      boolean modifiesViaGet = ListSequence.fromList(data.sharedGets).any(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
           return SetSequence.fromSet(MapSequence.fromMap(aliases).get(getVariableRef(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)))).contains(variable) && (SNodeOperations.getAncestor(it, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false) != null) && ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(SNodeOperations.getAncestor(it, "com.mbeddr.core.expressions.structure.AssignmentExpr", false, false), "left", true), "TasksAndSyncs.structure.SharedGet", false, new String[]{})).contains(it);
         }
@@ -458,14 +459,8 @@ public class Optimizer {
 
       SetSequence.fromSet(readOnlyVariables).addElement(variable);
     }
-    System.out.println("-------readonly vars: ");
-    SetSequence.fromSet(readOnlyVariables).visitAll(new IVisitor<SNode>() {
-      public void visit(SNode it) {
-        System.out.println("> " + it + " in " + SNodeOperations.getAncestor(it, "com.mbeddr.core.modules.structure.Function", false, false));
-      }
-    });
 
-    return removeSyncResourceLocks(aliases, syncResources, readOnlyVariables, allFunctionCalls);
+    return removeSyncResourceLocks(aliases, readOnlyVariables, data);
   }
 
 
@@ -474,11 +469,11 @@ public class Optimizer {
    * Remove sync resources for variables that are never shared with other tasks, e.g. due to reuse of library
    * functions.
    */
-  public boolean removeSingleTaskLocks(final Map<SNode, Set<SNode>> aliases, final Map<SNode, Set<SNode>> dataflowGraph, List<SNode> syncResources, List<SNode> variables, List<SNode> variableReferences, List<SNode> allFunctionCalls) {
+  public boolean removeSingleTaskLocks(final Map<SNode, Set<SNode>> aliases, final Map<SNode, Set<SNode>> dataflowGraph, OptimizerData data) {
 
     Set<SNode> singleTaskVariables = SetSequence.fromSet(new HashSet<SNode>());
 
-    for (final SNode variable : ListSequence.fromList(variables)) {
+    for (final SNode variable : ListSequence.fromList(data.allVariables)) {
       // if the current variable v is never shared with any task every synchronization for v is redundant 
       // => skip the variable if it is shared with another task 
       if (SetSequence.fromSet(MapSequence.fromMap(dataflowGraph).keySet()).any(new IWhereFilter<SNode>() {
@@ -498,18 +493,26 @@ public class Optimizer {
       SetSequence.fromSet(singleTaskVariables).addElement(variable);
     }
 
-    return removeSyncResourceLocks(aliases, syncResources, singleTaskVariables, allFunctionCalls);
+    return removeSyncResourceLocks(aliases, singleTaskVariables, data);
   }
 
 
 
-  public boolean removeSyncResourceLocks(Map<SNode, Set<SNode>> aliases, List<SNode> syncResources, Set<SNode> cleanVariables, List<SNode> allFunctionCalls) {
+  public boolean removeSyncResourceLocks(final Map<SNode, Set<SNode>> aliases, Set<SNode> cleanVariables, final OptimizerData data) {
     boolean changedSomething = false;
     Map<SNode, Set<SNode>> functionToConflictingSyncResources = MapSequence.fromMap(new HashMap<SNode, Set<SNode>>());
 
-    for (SNode syncResource : ListSequence.fromList(syncResources)) {
+    for (SNode syncResource : ListSequence.fromList(data.syncResources).where(new IWhereFilter<SNode>() {
+      public boolean accept(SNode it) {
+        SNode reference = getVariableRef(SLinkOperations.getTarget(it, "expression", true));
+        return !(MapSequence.fromMap(aliases).containsKey(reference) && SetSequence.fromSet(MapSequence.fromMap(aliases).get(reference)).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode it) {
+            return ListSequence.fromList(data.tabooVariables).contains(it);
+          }
+        }));
+      }
+    })) {
       if (SetSequence.fromSet(cleanVariables).containsSequence(SetSequence.fromSet(MapSequence.fromMap(aliases).get(getVariableRef(SLinkOperations.getTarget(syncResource, "expression", true)))))) {
-        System.out.println("delete sync res: " + syncResource + " -> " + MapSequence.fromMap(aliases).get(getVariableRef(SLinkOperations.getTarget(syncResource, "expression", true))));
         SNodeOperations.deleteNode(syncResource);
         changedSomething = true;
       } else {
@@ -522,7 +525,7 @@ public class Optimizer {
     }
 
     for (SNode function : SetSequence.fromSet(MapSequence.fromMap(functionToConflictingSyncResources).keySet())) {
-      changedSomething |= tryToInline(aliases, syncResources, cleanVariables, MapSequence.fromMap(functionToConflictingSyncResources).get(function), allFunctionCalls);
+      changedSomething |= tryToInline(aliases, data.syncResources, cleanVariables, MapSequence.fromMap(functionToConflictingSyncResources).get(function), data.functionCalls);
     }
 
     return changedSomething;
@@ -848,7 +851,7 @@ public class Optimizer {
 
 
 
-  public SNode getVariable(SNode expr) {
+  public static SNode getVariable(SNode expr) {
     if (SNodeOperations.isInstanceOf(expr, "com.mbeddr.core.statements.structure.LocalVarRef") || SNodeOperations.isInstanceOf(expr, "com.mbeddr.core.modules.structure.ArgumentRef")) {
       return BehaviorReflection.invokeVirtual((Class<SNode>) ((Class) Object.class), SNodeOperations.cast(expr, "com.mbeddr.core.statements.structure.IVariableReference"), "virtual_getVariable_2486081302460156153", new Object[]{});
     }
@@ -860,7 +863,7 @@ public class Optimizer {
 
 
 
-  public SNode getVariableRef(SNode expr) {
+  public static SNode getVariableRef(SNode expr) {
     if (SNodeOperations.isInstanceOf(expr, "com.mbeddr.core.statements.structure.LocalVarRef") || SNodeOperations.isInstanceOf(expr, "com.mbeddr.core.modules.structure.ArgumentRef")) {
       return SNodeOperations.cast(expr, "com.mbeddr.core.statements.structure.IVariableReference");
     }

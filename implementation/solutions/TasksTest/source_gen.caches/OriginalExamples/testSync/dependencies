@@ -12,5 +12,7 @@
   <dependency className="OriginalExamples.testSync.testSync" file="testSync.h" />
   <dependency className="OriginalExamples.testSync.testSync2" file="testSync2.c" />
   <dependency className="OriginalExamples.testSync.testSync2" file="testSync2.h" />
+  <dependency className="OriginalExamples.testSync.testSync_SharedTypes_0" file="testSync_SharedTypes_0.c" />
+  <dependency className="OriginalExamples.testSync.testSync_SharedTypes_0" file="testSync_SharedTypes_0.h" />
 </dependenciesRoot>
 

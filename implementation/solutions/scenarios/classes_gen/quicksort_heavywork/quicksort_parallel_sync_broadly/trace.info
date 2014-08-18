@@ -115,8 +115,8 @@
     <nodeInfo nodeId="5474646598317697917" fileName="quicksort.c" startLine="96" startPosition="6" endLine="96" endPosition="108" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="53" endLine="96" endPosition="107" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="83" endLine="96" endPosition="89" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="91" endLine="96" endPosition="99" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="101" endLine="96" endPosition="106" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="91" endLine="96" endPosition="96" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="5474646598317715035" fileName="quicksort.c" startLine="96" startPosition="98" endLine="96" endPosition="106" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
     <nodeInfo nodeId="5474646598317698049" fileName="quicksort.c" startLine="97" startPosition="6" endLine="97" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
     <nodeInfo nodeId="5474646598317698015" fileName="quicksort.c" startLine="97" startPosition="6" endLine="97" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="5474646598317698049" fileName="quicksort.c" startLine="97" startPosition="45" endLine="97" endPosition="53" conceptFqName="com.mbeddr.core.pointers.structure.ReferenceExpr" />

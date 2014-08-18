@@ -38,9 +38,9 @@ void pi_SharedTypes_0_mutexInit_4(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* va
 
 void pi_SharedTypes_0_mutexDestroy_4(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* var);
 
-void pi_SharedTypes_0_mutexDestroy_3(pi_SharedTypes_0_FlaggedQueue_t* var);
-
 void pi_SharedTypes_0_mutexInit_3(pi_SharedTypes_0_FlaggedQueue_t* var);
+
+void pi_SharedTypes_0_mutexDestroy_3(pi_SharedTypes_0_FlaggedQueue_t* var);
 
 
 #ifdef __cplusplus

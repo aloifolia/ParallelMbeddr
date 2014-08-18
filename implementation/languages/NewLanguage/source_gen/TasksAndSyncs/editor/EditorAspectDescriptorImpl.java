@@ -30,14 +30,16 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
       case 6:
         return Collections.<ConceptEditor>singletonList(new SyncResourceRef_Editor());
       case 7:
-        return Collections.<ConceptEditor>singletonList(new SyncStart_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncResourceTest_Editor());
       case 8:
-        return Collections.<ConceptEditor>singletonList(new SyncStatement_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncStart_Editor());
       case 9:
-        return Collections.<ConceptEditor>singletonList(new SyncStop_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncStatement_Editor());
       case 10:
-        return Collections.<ConceptEditor>singletonList(new Task_Editor());
+        return Collections.<ConceptEditor>singletonList(new SyncStop_Editor());
       case 11:
+        return Collections.<ConceptEditor>singletonList(new Task_Editor());
+      case 12:
         return Collections.<ConceptEditor>singletonList(new TaskType_Editor());
       default:
     }
@@ -50,5 +52,5 @@ public class EditorAspectDescriptorImpl implements EditorAspectDescriptor {
 
 
 
-  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncResourceNamed", "TasksAndSyncs.structure.SyncResourceRef", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
+  private static String[] stringSwitchCases_xbvbvu_a0a0b = new String[]{"TasksAndSyncs.structure.ExprBoundToStruct", "TasksAndSyncs.structure.FutureType", "TasksAndSyncs.structure.SharedSet", "TasksAndSyncs.structure.SharedType", "TasksAndSyncs.structure.SyncResource", "TasksAndSyncs.structure.SyncResourceNamed", "TasksAndSyncs.structure.SyncResourceRef", "TasksAndSyncs.structure.SyncResourceTest", "TasksAndSyncs.structure.SyncStart", "TasksAndSyncs.structure.SyncStatement", "TasksAndSyncs.structure.SyncStop", "TasksAndSyncs.structure.Task", "TasksAndSyncs.structure.TaskType"};
 }

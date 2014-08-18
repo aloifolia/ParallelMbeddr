@@ -30,13 +30,13 @@ struct testSync_SharedTypes_0_SharedOf_AB_0 {
   testSync_SharedTypes_0_AB_t value;
 };
 
+void testSync_SharedTypes_0_mutexInit_1(testSync_SharedTypes_0_SharedOf_AB_0_t* var);
+
 void testSync_SharedTypes_0_mutexDestroy_1(testSync_SharedTypes_0_SharedOf_AB_0_t* var);
 
 void testSync_SharedTypes_0_mutexDestroy_0(testSync_SharedTypes_0_AB_t* var);
 
 void testSync_SharedTypes_0_mutexInit_0(testSync_SharedTypes_0_AB_t* var);
-
-void testSync_SharedTypes_0_mutexInit_1(testSync_SharedTypes_0_SharedOf_AB_0_t* var);
 
 
 #ifdef __cplusplus

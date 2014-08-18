@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<debugInfo>
-  <unitInfo fileName="GenericSharedDeclarations.c" startLine="1" startPosition="0" endLine="6" endPosition="0" unitName="quicksort.quicksort_parallel.GenericSharedDeclarations" />
-  <unitInfo fileName="GenericSyncDeclarations.c" startLine="1" startPosition="0" endLine="25" endPosition="0" unitName="quicksort.quicksort_parallel.GenericSyncDeclarations" />
-  <unitInfo fileName="GenericTaskDeclarations.c" startLine="1" startPosition="0" endLine="68" endPosition="0" unitName="quicksort.quicksort_parallel.GenericTaskDeclarations" />
-</debugInfo>
-

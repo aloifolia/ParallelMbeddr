@@ -16,7 +16,7 @@
 
 #include "GenericSyncDeclarations.h"
 
-#include <pthread.h>
+#include "testSync_SharedTypes_0.h"
 
 
 
@@ -25,10 +25,6 @@ extern "C" {
 #endif
 
 int32_t testSync_main(int32_t argc, char* argv[]);
-
-void testSync_initGlobalMutexesFor1Module_0(void);
-
-void testSync_initAllGlobalMutexes_0(void);
 
 
 #ifdef __cplusplus

@@ -37,11 +37,11 @@ struct quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Generic_0_0 {
 
 void quicksort_SharedTypes_0_mutexInit_1(quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Generic_0_0_t* var);
 
-void quicksort_SharedTypes_0_mutexDestroy_1(quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Generic_0_0_t* var);
-
 void quicksort_SharedTypes_0_mutexInit_0(quicksort_SharedTypes_0_SharedOf_Generic_0_t* var, int32_t size_0);
 
 void quicksort_SharedTypes_0_mutexDestroy_0(quicksort_SharedTypes_0_SharedOf_Generic_0_t* var, int32_t size_0);
+
+void quicksort_SharedTypes_0_mutexDestroy_1(quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Generic_0_0_t* var);
 
 
 #ifdef __cplusplus

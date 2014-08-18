@@ -9,7 +9,6 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
 import jetbrains.mps.typesystem.inference.EquationInfo;
-import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.smodel.SModelUtil_new;
 
 public class typeof_SyncResourceTest_InferenceRule extends AbstractInferenceRule_Runtime implements InferenceRule_Runtime {
@@ -25,9 +24,6 @@ public class typeof_SyncResourceTest_InferenceRule extends AbstractInferenceRule
             SNode _nodeToCheck_1029348928467 = syncResourceTest;
             EquationInfo _info_12389875345 = new EquationInfo(_nodeToCheck_1029348928467, null, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4470518958275912351", 0, null);
             typeCheckingContext.createEquation((SNode) typeCheckingContext.typeOf(_nodeToCheck_1029348928467, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4470518958275912235", true), (SNode) typeCheckingContext.getExpandedNode(initType), _info_12389875345);
-          }
-          if (SNodeOperations.isInstanceOf(typeCheckingContext.getExpandedNode(initType), "com.mbeddr.core.expressions.structure.Type")) {
-            SLinkOperations.setTarget(syncResourceTest, "type", SNodeOperations.cast(typeCheckingContext.getExpandedNode(initType), "com.mbeddr.core.expressions.structure.Type"), true);
           }
         }
       }, "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "4470518958275831388", false, false);

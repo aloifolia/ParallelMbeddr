@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="78j6r92phqwrt2tnjcglovlajth0z1u">
+<dependencies version="2" modelHash="-9vbbehbqp3kfv2betkpeipqm17vhpg8">
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:00000000-0000-4000-0000-011c89590293(jetbrains.mps.lang.structure.generator_new.baseLanguage@generator)" hash="-5mgxduek28h3ywdzzsk4capaz4hgjm0" />
   <dep model="r:00000000-0000-4000-0000-011c895902cd(jetbrains.mps.baseLanguage.generator.java.main@generator)" hash="303xz1b2lyseld0axia86q3lpvucmq6" />
@@ -21,6 +21,7 @@
     <dep root="3570654511858570918" />
     <dep root="4335879941138580937" />
     <dep root="4335879941138597391" />
+    <dep root="4470518958272728754" />
     <dep root="6288388922742659454" />
     <dep root="6288388922743435028" />
     <dep root="6553204290893807643" />
@@ -53,5 +54,6 @@
   <source id="4335879941138580937" name="SyncStart" hash="9phw2mljqdligobnmwx8z9i2rsxlzrv" />
   <source id="4335879941138597391" name="SyncStop" hash="7yyq7k0st78xknliscj3u75ved7cw15" />
   <source id="8001979070750286289" name="TaskClear" hash="59i27y0hxotqthwkaljqm1dfjgxdgdn" />
+  <source id="4470518958272728754" name="SyncResourceTest" hash="-5rcjmr0qhb7l9uxa8wxhwwf40ip4peb" />
 </dependencies>
 

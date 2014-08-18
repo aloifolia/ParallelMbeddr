@@ -23,6 +23,7 @@ public class OptimizerData {
   public List<SNode> sharedGets;
   public List<SNode> functionCalls;
   public List<SNode> allVariables;
+  public List<SNode> tabooVariables;
   public List<SNode> allNodes;
 
 
@@ -35,13 +36,14 @@ public class OptimizerData {
     sharedGets = new ArrayList<SNode>();
     functionCalls = new ArrayList<SNode>();
     allVariables = new ArrayList<SNode>();
+    tabooVariables = new ArrayList<SNode>();
     allNodes = new ArrayList<SNode>();
   }
 
 
 
   public static OptimizerData getDataFromModel(SModel model, final Optimizer optimizer) {
-    OptimizerData data = new OptimizerData();
+    final OptimizerData data = new OptimizerData();
 
     for (SNode implementationModule : ListSequence.fromList(SModelOperations.getRoots(model, "com.mbeddr.core.modules.structure.ImplementationModule"))) {
       ListSequence.fromList(data.localVariables).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.statements.structure.LocalVariableDeclaration", false, new String[]{})).where(new IWhereFilter<SNode>() {
@@ -61,17 +63,17 @@ public class OptimizerData {
       }));
       ListSequence.fromList(data.syncResources).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SyncResource", false, new String[]{})).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
-          return optimizer.isSharedType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(it, "expression", true)), "com.mbeddr.core.expressions.structure.Type")) && (optimizer.getVariable(SLinkOperations.getTarget(it, "expression", true)) != null);
+          return optimizer.isSharedType(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(SLinkOperations.getTarget(it, "expression", true)), "com.mbeddr.core.expressions.structure.Type")) && (Optimizer.getVariable(SLinkOperations.getTarget(it, "expression", true)) != null);
         }
       }));
       ListSequence.fromList(data.sharedSets).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SharedSet", false, new String[]{})).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
-          return (optimizer.getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) != null);
+          return (Optimizer.getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) != null);
         }
       }));
       ListSequence.fromList(data.sharedGets).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "TasksAndSyncs.structure.SharedGet", false, new String[]{})).where(new IWhereFilter<SNode>() {
         public boolean accept(SNode it) {
-          return (optimizer.getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) != null);
+          return (Optimizer.getVariable(SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(it), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true)) != null);
         }
       }));
       ListSequence.fromList(data.functionCalls).addSequence(ListSequence.fromList(SNodeOperations.getDescendants(implementationModule, "com.mbeddr.core.modules.structure.FunctionCall", false, new String[]{})));
@@ -81,6 +83,30 @@ public class OptimizerData {
     ListSequence.fromList(data.allVariables).addSequence(ListSequence.fromList(data.arguments));
     ListSequence.fromList(data.allNodes).addSequence(ListSequence.fromList(data.allVariables));
     ListSequence.fromList(data.allNodes).addSequence(ListSequence.fromList(data.variableRefs));
+    ListSequence.fromList(data.tabooVariables).addSequence(ListSequence.fromList(data.localVariables).where(new IWhereFilter<SNode>() {
+      public boolean accept(final SNode var) {
+        return ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(var, "init", true), "com.mbeddr.core.pointers.structure.ArrayAccessExpr", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(var, "init", true), "com.mbeddr.core.expressions.structure.GenericDotExpression", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(SNodeOperations.getAncestor(var, "com.mbeddr.core.modules.structure.Function", false, false), "com.mbeddr.core.expressions.structure.AssignmentExpr", false, new String[]{})).where(new IWhereFilter<SNode>() {
+          public boolean accept(SNode assign) {
+            return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(assign, "left", true), "com.mbeddr.core.statements.structure.LocalVarRef") && SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(assign, "left", true), "com.mbeddr.core.statements.structure.LocalVarRef"), "var", false) == var && ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(assign, "right", true), "com.mbeddr.core.pointers.structure.ArrayAccessExpr", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(assign, "right", true), "com.mbeddr.core.expressions.structure.GenericDotExpression", false, new String[]{})).count() > 0;
+          }
+        }).count() > 0;
+      }
+    }));
+    ListSequence.fromList(data.tabooVariables).addSequence(ListSequence.fromList(data.arguments).where(new IWhereFilter<SNode>() {
+      public boolean accept(final SNode argument) {
+        final SNode function = SNodeOperations.getAncestor(argument, "com.mbeddr.core.modules.structure.Function", false, false);
+        final int argumentIndex = ListSequence.fromList(SLinkOperations.getTargets(function, "arguments", true)).indexOf(argument);
+        return ListSequence.fromList(data.functionCalls).any(new IWhereFilter<SNode>() {
+          public boolean accept(SNode call) {
+            return SLinkOperations.getTarget(call, "function", false) == function && (ListSequence.fromList(SNodeOperations.getDescendants(ListSequence.fromList(SLinkOperations.getTargets(call, "actuals", true)).getElement(argumentIndex), "com.mbeddr.core.pointers.structure.ArrayAccessExpr", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(ListSequence.fromList(SLinkOperations.getTargets(call, "actuals", true)).getElement(argumentIndex), "com.mbeddr.core.expressions.structure.GenericDotExpression", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(SNodeOperations.getAncestor(call, "com.mbeddr.core.modules.structure.Function", false, false), "com.mbeddr.core.expressions.structure.AssignmentExpr", false, new String[]{})).where(new IWhereFilter<SNode>() {
+              public boolean accept(SNode assign) {
+                return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(assign, "left", true), "com.mbeddr.core.modules.structure.ArgumentRef") && SLinkOperations.getTarget(SNodeOperations.cast(SLinkOperations.getTarget(assign, "left", true), "com.mbeddr.core.modules.structure.ArgumentRef"), "arg", false) == argument && ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(assign, "right", true), "com.mbeddr.core.pointers.structure.ArrayAccessExpr", false, new String[]{})).count() > 0 || ListSequence.fromList(SNodeOperations.getDescendants(SLinkOperations.getTarget(assign, "right", true), "com.mbeddr.core.expressions.structure.GenericDotExpression", false, new String[]{})).count() > 0;
+              }
+            }).count() > 0);
+          }
+        });
+      }
+    }));
 
     return data;
   }

@@ -204,5 +204,10 @@
       <link role="intfc" roleId="tpce.1169127628841" targetNodeId="mj1l.4620120465980511009" resolveInfo="IGenericDotTarget" />
     </node>
   </root>
+  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="4470518958272728754" nodeInfo="ig">
+    <property name="name" nameId="tpck.1169194664001" value="SyncResourceTest" />
+    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="syncres" />
+    <link role="extends" roleId="tpce.1071489389519" targetNodeId="c4fa.4185783222026475238" resolveInfo="LocalVariableDeclaration" />
+  </root>
 </model>
 

@@ -32,6 +32,7 @@
   </dependency>
   <dependency className="TasksAndSyncs.generator.util.Optimizer" file="Optimizer.java">
     <classNode dependClassName="TasksAndSyncs.behavior.SyncResource_Behavior" />
+    <classNode dependClassName="TasksAndSyncs.generator.util.OptimizerData" />
     <classNode dependClassName="java.lang.Boolean" />
     <classNode dependClassName="java.lang.Class" />
     <classNode dependClassName="java.lang.Iterable" />
