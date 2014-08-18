@@ -79,3 +79,39 @@ sync(v) { pointer = v.get[0]; }
 Shared resources may never be overwritten. The reason for this regulation results from the following consideration. If a shared resource \CODE{r} shall be overwritten, e.g. by a direct assignment or by a \CODE{set} if \CODE{r} is nested inside another shared resource, it must be synchronized first since the overwriting could overlap with another access to \CODE{r} from within another task. Before the resource is rewritten, the mutex of \CODE{r} must be destroyed in order to prevent memory leaks. Furthermore, after the rewriting is done, the newly created mutex for \CODE{r} must be initialized prior to any usage. Hence, in the time between the destruction and the re-initialization, the mutex of \CODE{r} (respectively, \CODE{r'} after the rewrite is done, because the variable will refer to a new value) cannot be accessed in the synchronization attempt of any other simultaneously executed synchronization statement. Any such task would thus have to be blocked, which would complicate the compiler and decrease the performance of the executed code without offering any worthy advantage. In addition to this problem, the overwriting of a shared resource of a struct instance that itself contains a shared resource field \CODE{f} would invalidate any pointer \CODE{p} to \CODE{f}. \CODE{p} could therefore not be used anymore afterwards, which on the hand complies with the usual C semantics, but does not fit the safety-first approach of ParallelMbeddr.
 Nevertheless, it is safe to copy a shared resource into the memory of a local variable declaration or of a function argument, i.e. a pass of a shared resource to a function or an initialization of a newly created local variable with a shared resource is valid. In these cases, the shared resources can only be used after their initializations with shared resource copies.
 The safety enforcing rules are as follows: A variable that refers to a shared resource or to a value that contains a nested shared resource may not be assigned a new value (the initialization of a declaration is not a classical assignment). Additionally an expression \CODE{e.set(e')} is not allowed if \CODE{e'} is a shared resource or contains a shared resource, because \CODE{e.set(e')} is translated into an assignment (see section \ref{sharedTypesTranslation}).
+
+\subsection{Overwriting pointers to shared resources}
+Not only references to variables of shared resources can be used for the definition of synchronization references, but also expressions that evaluate to pointers of shared resources. While providing more flexibility this approach facilitates the introduction of data races via the following two techniques. For the first problem the following example is given:
+\begin{ccode}
+struct Container {
+  shared<int32> value;
+  shared<int32>* pointer;
+}
+// somewhere in the code
+shared<Container> c;
+// somewhere else
+sync(c, &c.get.value as valueP, c.get.pointer as pointerP) {
+  // make use of valueP and pointerP
+}
+\end{ccode}
+Generally, the semantics of the synchronization statement would be that \CODE{c}, \CODE{valueP} and \CODE{pointerP} would be synchronized altogether by repeatedly trying to lock their mutexes. The translation of the named resources would introduce local variables which bind the values of the expressions \CODE{\&c.get.value} and \CODE{c.get.pointer}:
+\begin{ccode}
+shared<int32>* valueP = &c.get.value;
+shared<int32>* pointerP = c.get.pointer;
+sync(c, valueP, pointerP) {...}
+\end{ccode}
+The intermediary translated code reveals the problem: The initialization values of the pointers to the shared resources are, due to eager evaluation, evaluated as soon as they are declared. In the case of \CODE{valueP} this does not matter, since the \CODE{value} field may never be overwritten. \CODE{pointerP} on the other hand is a copy of the field \CODE{pointer} which may be overwritten by any task that has access to \CODE{c}. This means that between the declaration of \CODE{pointer} and its use in the synchronization statement its value may become out of date. Hence, the atomicity semantics of the synchronization of \CODE{sync} would be violated. The translation could be fixed to safely support such cases. Yet, due to the possibility to make use of control-flow-breaking statements inside synchronization statements, the translated code would become considerably more complicated. For this reason the opposite path was chosen: Cases like the depicted one are forbidden by the following rule. If inside the synchronization list \CODE{l} of a synchronization statement the expression of a well-typed named resource \CODE{n} -- which must have the type \CODE{shared<t>*} -- is no address reference expression \CODE{\&e} but contains either a reference to a previous named resource in \CODE{l} or a reference to a variable that is synchronized by a previous synchronization resource in \CODE{l}, then \CODE{n} is invalid.
+
+The second problem is illustrated by the following example:
+\begin{ccode}
+shared<int32> value1;
+shared<int32> value2;
+shared<int32>* p = &value1;
+shared<int32>* q = &value2;
+// somewhere else
+sync(p) {
+  p = q;
+  p.set(42);
+}
+\end{ccode}
+Since both \CODE{p} and \CODE{q} are pointers to shared resources they can be used for synchronization resources. Furthermore, according to the previous rules of this chapter, they may be arbitrarily assigned new values. Thus, the line \CODE{p = q} should be fine. Nevertheless this assignment introduces the potential for data races, since \CODE{q}'s target \CODE{value2} and thus its modification via \CODE{p.set(42)} is not synchronized. In addtion, at the end of the synchronization statement the program will try to release the lock of \CODE{value2}'s mutex although only \CODE{value1}'s mutex was previously locked. To solve this problem, pointers to shared resources should never be overwritten if they are simultaneously used for synchronization purposes. The first according rule states that an assignment is invalid, if its left side's expression evaluates to a pointer to a shared resource and is  a path either to a named resource or to a synchronization resource that references the same variable (or function argument). Currently, ParallelMbeddr limits its according analysis to variable references; struct field accesses and array accesses are not checked. The first rule restricts assignments inside the task \textit{t} that also performs the synchronization. However, if the address of a pointer \CODE{p} to a shared resource is leaked to another task \textit{u}, then \textit{u} is still able to overwrite \CODE{p} while it is used for synchronization purposes inside \CODE{t}. In order to prevent such behavior one could forbid to use the address operator \CODE{\&} for pointers to shared resources. This would, however, not suffice because such pointers could still be shared, for instance via a global variable of type \CODE{shared<shared<int32>*>}. To conclude, the last problem remains partly open and is left to future research.

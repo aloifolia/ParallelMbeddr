@@ -9,9 +9,9 @@ The resources to be shared are typed with the shared resource type:
 
 $ t ::= ...|\;\mathit{shared{<}u{>}}\;|\;\mathit{shared{<}shared{<}u{>}{*}{>}}\;$
 
-$ u ::= t \qquad u \neq t*$
+$ u ::= t \qquad \textit{void} \neq u \neq t*$
 
-The type parameterization denotes the base type of a shared type, i.e. the type of the data that is wrapped by a shared resource. Due to reasons that will be explained in the SAFETY CHAPTER, a shared resource may have an arbitrary base type that does not denote a pointer to a value that is not shared.\footnote{Differently said: A pointer wrapped in a shared resource must point to a shared resource itself. Due to the comprehensive type system that mbeddr is equipped with and that is only partially existent in C99, the compatibility of base types of shared types was mainly tested with the primitive types of C99 as well as pointer types, array types, struct types and type definitions (typedefs). Future work will have to be done to demonstrate and establish full compatibility with the rest of mbeddr's types.} Further restrictions apply to shared types, which are also discussed in the aforementioned section. The same applies to the \CODE{.set} expression by which the value of a shared resource can be modified; the value can be retrieved via \CODE{.get}:
+The type parameterization denotes the base type of a shared type, i.e. the type of the data that is wrapped by a shared resource. The base type of a shared resource can be either of mbeddr's C-types, with two exceptions. It must not be \CODE{void} because a shared resource has to wrap an actual value. Furthermore due to reasons that will be explained in the SAFETY CHAPTER, the base type may not denote a pointer to a value that is not shared.\footnote{Differently said: A pointer wrapped in a shared resource must point to a shared resource itself. Due to the comprehensive type system that mbeddr is equipped with and that is only partially existent in C99, the compatibility of base types of shared types was mainly tested with the primitive types of C99 as well as pointer types, array types, struct types and type definitions (typedefs). Future work will have to be done to demonstrate and establish full compatibility with the rest of mbeddr's types.} Further restrictions apply to shared types, which are also discussed in the aforementioned section. The same applies to the \CODE{.set} expression by which the value of a shared resource can be modified; the value can be retrieved via \CODE{.get}:
 
 $ e ::= e.\mathit{get}\;|\;e.\mathit{set(e)} $
 \begin{align*}
@@ -20,7 +20,7 @@ $ e ::= e.\mathit{get}\;|\;e.\mathit{set(e)} $
 \inference*[SharedSet]{e |- \mathit{shared{<}t{>}} \quad e' |- t' \quad t' <: t} {\qquad\quad e.\mathit{set}(e') |- \mathit{void} \quad\qquad} 
 \end{align*}
 
-The syntax \texttt{stmts} of statements in mbeddr is extended by the synchronization statement \CODE{sync}. \CODE{sync} contains a \textit{synchronization list} of shared resources to synchronize and a block of statements whose referenced shared resources may be synchronized by a surrounding synchronization statement:
+In order to access (read or write) the value via \CODE{.get} or \CODE{.set} it must be synchronized first. For this purpose the syntax \texttt{stmts} of statements in mbeddr is extended by the synchronization statement \CODE{sync}. \CODE{sync} contains a \textit{synchronization list} of shared resources to synchronize and a block of statements whose referenced shared resources may be synchronized by a surrounding synchronization statement:
 
 $ \mathit{stmt} ::= ...
         |\;\mathit{sync}(res, ..., res) \{\;\mathit{stmt} ... \mathit{stmt}\;\}$
@@ -29,18 +29,18 @@ $ \mathit{stmt} ::= ...
 
 $ res ::= e\;|\;e\;\mathit{as}\;[\mathit{resName}] $
 
-The latter allows the programmer inside the \CODE{sync} statement to refer to the result of an arbitrary complex expression, which evaluates to a shared resource, inside the synchronization statement. Hence, a \textit{named resource} (i.e. a synchronization resource with a name) can be seen as syntactic sugar for a local variable declaration, initialized with a shared resource, and a synchronization resource with a reference thereof.\footnote{Actually, due to eager evaluation a named resource provides different semantics than a local variable as will become clear later on.} Due to the copy semantics of C the type of a named resource \CODE{e} is restricted to \CODE{shared<t*>}. This enforcement ensures that the synchronized resource is actually the original shared resource and not a copy thereof, of which a synchronization would be useless. The scope of a named resource is restricted to the according synchronization statement. More precisely, a named resource \textit{n} of a synchronization statement \textit{s} can be referenced from anywhere inside the abstract syntax tree (AST) of the statement list of \textit{s}. Furthermore it can be referenced from within the expression of any synchronization reference that follows \textit{n} in the synchronization list of \textit{s}, e.g.:
+The latter allows the programmer inside the \CODE{sync} statement to refer to the result of an arbitrary complex expression, which evaluates to a shared resource, inside the synchronization statement. Hence, a \textit{named resource} (i.e. a synchronization resource with a name) can be seen as syntactic sugar for a local variable declaration, initialized with a shared resource, and a synchronization resource with a reference thereof.\footnote{Actually, due to eager evaluation a named resource provides different semantics than a local variable as will become clear later on.} The type of such a reference is given by the shared resource that the expression of the named resource evaluates to. Due to the copy semantics this type is restricted to \CODE{shared<t>*}. This enforcement ensures that the named resource actually synchronizes the original shared resource and not a copy thereof, of which a synchronization would be useless. The scope of a named resource is restricted to the according synchronization statement. More precisely, a named resource \textit{n} of a synchronization statement \textit{s} can be referenced from anywhere inside the abstract syntax tree (AST) of the statement list of \textit{s}. Furthermore it can be referenced from within the expression of any synchronization resource that follows \textit{n} in the synchronization list of \textit{s}, e.g.:
 \begin{ccode}
 shared<shared<int32>> v;
 // vContent is declared before it is used in the list => valid
-sync(v, &(v.get) as vContent, vContent->get as vContentContent) {
-  vContentContent.set(0);
+sync(v, &(v.get) as vContent, &vContent->get as vContentContent) {
+  vContentContent->set(0);
 }
 // vContentContent is not in scope, here => invalid
-vContentContent.set(1);
+vContentContent->set(1);
 \end{ccode}
 
-The type of a reference to a named ressource is given by the corresponding shared ressource that is bound by the  synchronization reference.
+This restrictions results from the lexical scoping of synchronization resources: In order to determine whether the target of \CODE{.get} or \CODE{.set} is synchronized ParallelMbeddr checks whether the target is a reference to a visible and synchronized variable or to a named resource. This implies that shared resource expressions other than variable references (e.g. paths and function calls) must be bound by named resources, in order to be able to access their wrapped values via \CODE{.get} or \CODE{.set}. 
 
 In contrast to Java's synchronization blocks and methods \cite[p.~279]{JavaPerformanceTuning}, the synchronization of tasks is not computation oriented, but data oriented. The crucial difference is that a synchronized block \CODE{A} in Java is only protected against simultaneous executions by multiple threads. Thus, it is valid to access the data that is involved in \CODE{A} by some other computation whose protecting block (if any) is completely unrelated to \CODE{A}. Since low-level data races can obviously not be guaranteed to be excluded with this scheme, ParallelMbeddr ties the protection to the data that is to be shared. Every shared resource, i.e. block of shareable data, is therefore protected separately and application-wide. ParallelMbeddr does not yet face higher-level data races, which involve multiple shared resources. Dependencies between shared resources must be resolved by the programmer who as to wrap the dependent data inside a single shared resource, e.g. as fields of a struct. Concluding, if two synchronization blocks, which are about to be executed in parallel, contain synchronization references that overlap in terms of their referenced shared resources, their executions will be serialized. For instance let \textit{t1} and \textit{t2} be two tasks that have access to the same shared resource which is referenced by a global variable \CODE{value}. \textit{t1} wants to synchronize \CODE{value}, simultaneously \textit{t2} wants to synchronize \CODE{valuePointer} which points to \CODE{value}'s shared resource and some other shared ressource that is available via the variable \CODE{other}:
 
@@ -179,14 +179,10 @@ The mutex of the struct \CODE{SharedOf\_t} in the equally named struct field \CO
 For example, a type \CODE{shared<int32>[42][24]} would enforce the generation of one mutex initialization and one mutex destruction function. \CODE{shared<int32>*} on the other hand would not. Any variable \CODE{v} of the latter type would point to a shared ressource which must be referenced directly by another variable \CODE{v'} of type \CODE{shared<int32>} or be contained in the memory-addressable value of some variable \CODE{v''} of a more complex type. The declaration of \CODE{v'}, respectively \CODE{v''}, would then trigger the initialization of the mutex of the shared resource that \CODE{v} points to. The resulting mutex initialization functions for types of the aforementioned kind are declared as follows:
 
 \begin{ccode}
-''
-//hi there
-\end{ccode}
-\begin{ccode}
 // for a proper shared type shared<t> and the type t' that t is reduced to
 void mutexInit_X(SharedOf_t'* var) { 
   pthread_mutex_init(&var->mutex, &mutexAttribute);
-  \''
+  
   // either if t is a shared type or a struct type:
   mutexInit_X'(&var->value); 
   
@@ -248,7 +244,7 @@ Mutexes for global variables need not be destroyed at all in order to avoid memo
 \item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{l} or
 \item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{l} or
 \item \textit{c} is a \textit{continue} statement and refers to a loop whose AST contains \textit{l} or
-\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of any statement that follows \textit{l},
+\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of any statement that follows \textit{l},\footnote{Since \textit{goto} statements can considerably disorganize the program flow they should be only used with great care in ParallelMbeddr. Specifically the initialization of mutexes is not protected against misuse of these statements.}
 \end{itemize}
 \textit{c} must be preceded with a destruction call of the mutex of the shared resource of \textit{l} (compare with the synchronization stopping rules below). Allocated memory that is not freed at the end of the program is automatically released by the operating system. Hence, a \textit{return} statement that refers to the entry function of the program need not be preceded with destruction calls of its local shared resources. The proper destruction of a mutex of an argument of function \textit{f} just requires according function calls at the end of \textit{f} and before any return statement that refers to \textit{f}. 
 
@@ -337,7 +333,7 @@ The statements are kept inside their statement list block in order to preserve t
 \item \textit{c} is a \textit{return} statement and refers to a function or a closure whose AST contains \textit{s};
 \item \textit{c} is a \textit{break} statement and refers to a loop or a \textit{switch} statement case whose AST contains \textit{s};
 \item \textit{c} is a \textit{continue} statement and refers to a loop whose AST contains \textit{s};
-\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of \textit{s}.
+\item \textit{c} is a \textit{goto} statement and refers to a label outside the AST of \textit{s}.\footnote{Similarly to the aforementioned problem with mutex management functions, \textit{goto} statements can impair synchronization states and should therefore be used with great care. This holds particularly for \textit{goto} statements which cause jumps into synchronization statements from outside.}
 \end{itemize}
 
 In this manner, inconsistent synchronization states of shared resources due to a control flow break by the aforementioned statements are omitted. Since the occurrence of such a statement may also force ParallelMbeddr to insert \CODE{mutexDestroy\_X()} calls, a careless mixture of mutex unlocking and destruction calls can cause runtime errors \cite{Mutexes}. The generator therefore ensures that any destruction calls are put behind the generated unlocking calls.
