@@ -28,14 +28,12 @@ int32_t main(int32_t argc, char* argv[])
   pthread_mutex_init(&i.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_int32_0_t* j1 = &i;
   recursive_lock_taskInit_a2a0(j1);
+  GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
   {
     GenericSharedDeclarations_SharedOf_int32_0_t* j2 = j1;
-    GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);
-    {
-      recursive_lock_forward(j2);
-    }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
+    recursive_lock_forward(j2);
   }
+  GenericSyncDeclarations_stopSyncFor1Mutex(&(i).mutex);
   return 0;
 }
 
@@ -53,7 +51,10 @@ static void recursive_lock_lock(GenericSharedDeclarations_SharedOf_int32_0_t* va
    */
 
   {
-    value2->value = 5;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myValue2 = value2;
+    {
+      myValue2->value = 5;
+    }
   }
 }
 

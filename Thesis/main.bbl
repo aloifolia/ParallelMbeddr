@@ -12,6 +12,12 @@ A.~Alexandrescu.
 \newblock {\em The D Programming Language}.
 \newblock Pearson Education, 2010.
 
+\bibitem{ProgramAnalysisAndSpecialization}
+Lars~Ole Andersen.
+\newblock {\em Program analysis and specialization for the C programming
+  language}.
+\newblock PhD thesis, University of Cophenhagen, 1994.
+
 \bibitem{ObstructionFreeAuthorizationEnforcement}
 David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
 \newblock Obstruction-free authorization enforcement: Aligning security with
@@ -212,6 +218,23 @@ Ravi Rajwar and James~R Goodman.
 R.~Reese.
 \newblock {\em Understanding and Using C Pointers}.
 \newblock O'Reilly Media, 2013.
+
+\bibitem{ARuntimeSystem}
+Amitabha Roy, Steven Hand, and Tim Harris.
+\newblock A runtime system for software lock elision.
+\newblock In {\em Proceedings of the 4th ACM European conference on Computer
+  systems}, pages 261--274. ACM, 2009.
+
+\bibitem{ContextInsensitiveAliasAnalysis}
+Erik Ruf.
+\newblock Context-insensitive alias analysis reconsidered.
+\newblock {\em ACM SIGPLAN Notices}, 30(6):13--22, 1995.
+
+\bibitem{PointerAnalysisForStructuredParallelPrograms}
+Radu Rugina and Martin~C Rinard.
+\newblock Pointer analysis for structured parallel programs.
+\newblock {\em ACM Transactions on Programming Languages and Systems (TOPLAS)},
+  25(1):70--116, 2003.
 
 \bibitem{AdvancedContentionManagement}
 William~N Scherer~III and Michael~L Scott.

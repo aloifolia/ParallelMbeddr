@@ -10,7 +10,11 @@ Warning--entry type for "GenericTools_SpecificLanguages" isn't style-file define
 --line 187 of file content/literature.bib
 Warning--I'm ignoring LanguageWorkbenches's extra "note" field
 --line 198 of file content/literature.bib
+Repeated entry---line 423 of file content/literature.bib
+ : @inproceedings{SpeculativeLockElision
+ :                                      ,
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in Mutexes
 Warning--empty publisher in IntroductionToOperatingSystems
 Warning--empty year in IntroductionToOperatingSystems
-(There was 1 error message)
+(There were 2 error messages)

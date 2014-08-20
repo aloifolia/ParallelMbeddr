@@ -1,4 +1,4 @@
-\documentclass[type=msc,11pt,accentcolor=tud1b,bibtotoc,colorback,linedtoc,liststotoc,bigchapter,noresetcounter]{tudthesis}
+\documentclass[type=msc,11pt,accentcolor=tud1b,bibtotoc,colorbacktitle,linedtoc,liststotoc,bigchapter,noresetcounter]{tudthesis}
 
 
 % Packages
@@ -10,6 +10,8 @@
 
 
 \begin{document}
+\renewcommand{\baselinestretch}{1.25}\normalsize
+\setlength{\parindent}{0em}
  
 
 \input{content/header}
@@ -17,6 +19,9 @@
 %% ----------------------------------
 %% Content, Figures, Tables, Listings
 %% ----------------------------------
+\pagenumbering{roman}
+
+\input{content/abstract}
 \tableofcontents
 %\listoffigures
 %\listoftables
@@ -28,15 +33,14 @@
 %%\chead{}
 %%\rhead{\nouppercase{\leftmark}
 %
-
-\renewcommand{\baselinestretch}{1.25}\normalsize
-\setlength{\parindent}{0em}
+\clearpage
+\pagenumbering{arabic}
 
 \input{content/introduction_motivation}
 \input{content/basics}
-%\input{content/analysis_existing_work}
 \input{content/implementation}
 \input{content/optimisation}
+\input{content/evaluation}
 \input{content/evaluation}
 \input{content/summary_prospect}
 %

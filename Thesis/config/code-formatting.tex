@@ -7,7 +7,7 @@
 
 \lstdefinestyle{c}{
 language=C,
-basicstyle=\small\sffamily,
+basicstyle=\small\ttfamily,
 numbers=left,
 numberstyle=\tiny,
 frame=L,
@@ -19,7 +19,7 @@ showstringspaces=false
   {morekeywords={auto,break,case,char,const,continue,default,do,double,%
       else,enum,extern,float,for,goto,if,int,long,register,return,%
       short,signed,sizeof,static,struct,switch,typedef,union,unsigned,%
-      void,volatile,while},%
+      void,volatile,while,sync,shared,int32,int16,int8,int64},%
   sensitive,%
   morecomment=[s]{/*}{*/},%
   morecomment=[l]//,% nonstandard
@@ -32,7 +32,7 @@ showstringspaces=false
 
 \lstdefinestyle{pseudoc}{
 language=pseudoC,
-basicstyle=\small\sffamily,
+basicstyle=\small\ttfamily,
 numbers=left,
 numberstyle=\tiny,
 frame=L,
@@ -41,4 +41,4 @@ showstringspaces=false,
 }
 
 \lstnewenvironment{ccode}{
-\mathligsoff\lstset{style=pseudoC}\lstset{literate={'}{{'}}1}}{}
+\mathligsoff\lstset{style=pseudoC}\lstset{literate={'}{{'}}1}\lstset{literate={\ }{{ }}1}}{}

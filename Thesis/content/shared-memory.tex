@@ -1,4 +1,4 @@
-\section{Shared memory}
+\section{Shared Memory}
 \label{sharedMemory}
 The previous chapters introduced the means to enable parallel execution of code in terms of tasks and futures. Still missing from a discussion of ParallelMbeddr's building blocks is the communication between tasks. The communication model of choice for ParallelMbeddr is shared memory. The reason for this choice follows from the objectives for a communication model: it should offer a reasonable performance, considering that it is supposed to be used in embedded systems; it should be reasonably safe by design in order to avoid the trip hazards that are involved with low-level synchronization approaches like mutexes. For performance reasons, transactional memory seems not to be ready for the embedded domain for performance reasons. By following argumentation, message passing does not offer profound advantages in comparison to shared memory if the access to the shared memory is controlled in a sound way. Usually message passing forbids shared memory between two parallel units of execution. Instead, communication is realized via message sends. A strict separation of memory does not fit the usual C work-flow concerning pointer arithmetic. Therefore, in order to reduce performance loss, some form of memory sharing would have to be introduced into a message passing model. As this would lead to the same problems that already arise with the general shared memory model, the opposite way is chosen: Instead of introducing shared memory in a message passing model, a shared memory model is designed, on top of which message passing can be attached in order to simplify the communication between tasks.\footnote{Such an extension would be a future concern and is not implemented in this work.}
 
@@ -95,7 +95,7 @@ sync(sharedA) { sharedB = &(sharedA.get.b); }
 
 The translation of shared resources is currently only supported for executable programs. Therefore, it is not safe to use shared types and synchronization statements in libraries that are written with mbeddr. The explanations of the following section are thus limited to according scenarios, although the translation for library code would only change in details.
 
-\subsection{Translation of shared types}
+\subsection{Translation of Shared Types}
 \label{sharedTypesTranslation}
 In order to fully understand the translation of synchronization statements, the translation of shared types is given first. For the implementation of shared types in C, two main solutions are conceivable, which differ in the coupling that they exhibit between the data that is to be shared and the additional data required for access restriction, i.e. synchronization. In any case, a solution must make use of additional data that can be used to synchronize two threads which try to read or write the shared data. To this end, the most basic synchronization primitive was chosen: each protected data item is assigned exactly one mutex. 
 
@@ -291,7 +291,7 @@ pthread_mutexattr_init(&mutexAttribute);
 pthread_mutexattr_settype(&mutexAttribute, PTHREAD_MUTEX_RECURSIVE);
 \end{ccode}
 
-\subsection{Translation of synchronization statements}
+\subsection{Translation of Synchronization Statements}
 Every synchronization statement is reduced to its statement list -- as a block --, surrounded with calls to functions that control the synchronization of the mutexes. The reduction of such a statement is given either by
 
 \begin{center}
@@ -398,7 +398,7 @@ void randomWithXorShift(uint32* seed) {
 \end{ccode}
 The generator was chosen for its high performance, low memory consumption, and thread safety due to the utilization of the stack-managed \CODE{seed} parameter as opposed to the global state usage of the standard C random generator \CODE{rand()}. The fact that after a certain number -- which may be smaller than in other generators -- of repeated calls with the same seed value (i.e. the same memory address of a seed) repetitions of the sequence of calculated numbers will occur is not of relevance for the purpose of this work.
 
-\subsection{Example code}
+\subsection{Example Code}
 \label{sharedMemoryExample}
 In the previous sections \ref{taskExample} and \ref{futuresExample} the running example approximated the number $\pi$ by using tasks which calculate exactly one fraction of the result each and by retrieving their results via futures. The amount of work was therefore partitioned in advance. In this section, a more dynamic approach is chosen instead: The work of every task comprises major and minor rounds. A minor round is equivalent to the full calculation loop in the previous $\pi$ solution. In every step of a major round, a minor round is initiated by first coordinating with the other tasks which range of $\pi$ the current task should calculate. After having calculated the sum in a minor round, the task then uses a queue to store its next partial result. A dedicated task is used to collect these partial results from the queue and accumulate them to a complete sum, which eventually becomes the result of the over-all approximated $\pi$. The communication-based solution can be seen as a map-reduce implementation where partial results are mapped onto the queue by a certain number of tasks and from there reduced to a final result by a separate task (compare with \cite{MapReduce}).
 In order to understand the new implementation, the following example is given: A thread-safe queue of a certain size and slots of type \CODE{long double} is to be viewed as a black box. Further, it has to be supposed that functions for the initialization, for adding a value and getting the next value (or wait for the next value), exist:

@@ -1,45 +1,56 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Parallel programming}{3}{section.2.1}
-\contentsline {subsubsection}{Processes and threads}{3}{subsubsection*.4}
-\contentsline {subsubsection}{Parallelism and concurrency}{3}{subsubsection*.5}
-\contentsline {subsubsection}{Data races}{4}{subsubsection*.6}
-\contentsline {subsubsection}{Communication model: shared memory}{4}{subsubsection*.7}
-\contentsline {subsubsection}{Communication model: message passing}{5}{subsubsection*.8}
-\contentsline {subsubsection}{Communication model: transactional memory}{5}{subsubsection*.9}
-\contentsline {subsubsection}{Coarse- and fine-grained synchronization}{5}{subsubsection*.10}
-\contentsline {section}{\numberline {2.2}Embedded programming with mbeddr}{5}{section.2.2}
-\contentsline {subsubsection}{Embedded programming}{6}{subsubsection*.11}
-\contentsline {subsubsection}{MPS and mbeddr}{6}{subsubsection*.12}
-\contentsline {subsubsection}{C}{7}{subsubsection*.13}
-\contentsline {chapter}{\numberline {3}Design and Translation}{8}{chapter.3}
-\contentsline {subsubsection}{Notation}{8}{subsubsection*.14}
-\contentsline {section}{\numberline {3.1}Tasks}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Design}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Translation}{9}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Example code}{12}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Futures}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Design}{14}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Translation}{15}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Example code}{18}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Shared memory}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Design}{20}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Translation of shared types}{23}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Translation of synchronization statements}{30}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Example code}{33}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Safety measures}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Avoidance of implicitly shared unprotected data}{39}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Copying pointers to unshared data into tasks}{40}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Unsynchronized access to synchronizable data}{40}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Address leakage of shared resource values}{41}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Overwriting shared resources}{42}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Overwriting pointers to shared resources}{42}{subsection.3.4.6}
-\contentsline {chapter}{\numberline {4}Optimization}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Space Optimization}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Time Optimizations}{45}{section.4.2}
+\select@language {english}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {chapter}{\numberline {2}Background}{2}{chapter.2}
+\contentsline {section}{\numberline {2.1}Parallel Programming}{2}{section.2.1}
+\contentsline {subsubsection}{Processes and Threads}{2}{subsubsection*.7}
+\contentsline {subsubsection}{Parallelism and Concurrency}{2}{subsubsection*.8}
+\contentsline {subsubsection}{Data Races}{3}{subsubsection*.9}
+\contentsline {subsubsection}{Communication Model: Shared Memory}{3}{subsubsection*.10}
+\contentsline {subsubsection}{Communication Model: Message Passing}{4}{subsubsection*.11}
+\contentsline {subsubsection}{Communication Model: Transactional Memory}{4}{subsubsection*.12}
+\contentsline {subsubsection}{Coarse- and Fine-grained Synchronization}{4}{subsubsection*.13}
+\contentsline {section}{\numberline {2.2}Embedded Programming with Mbeddr}{4}{section.2.2}
+\contentsline {subsubsection}{Embedded Programming}{5}{subsubsection*.14}
+\contentsline {subsubsection}{MPS and Mbeddr}{5}{subsubsection*.15}
+\contentsline {subsubsection}{C}{6}{subsubsection*.16}
+\contentsline {chapter}{\numberline {3}Design and Translation}{7}{chapter.3}
+\contentsline {subsubsection}{Notation}{7}{subsubsection*.17}
+\contentsline {section}{\numberline {3.1}Tasks}{8}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Design}{8}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Translation}{8}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Example Code}{11}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Futures}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Design}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Translation}{14}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Example Code}{17}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Shared Memory}{18}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Design}{19}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Translation of Shared Types}{22}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Translation of Synchronization Statements}{29}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Example Code}{32}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Safety Measures}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Avoidance of Implicitly Shared Unprotected Data}{38}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Copying Pointers to Unshared Data into Tasks}{39}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Unsynchronized Access to Synchronizable Data}{39}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Address Leakage of Shared Resource Values}{40}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Overwriting Shared Resources}{41}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{41}{subsection.3.4.6}
+\contentsline {chapter}{\numberline {4}Optimization}{44}{chapter.4}
+\contentsline {section}{\numberline {4.1}Space Optimization}{44}{section.4.1}
+\contentsline {section}{\numberline {4.2}Time Optimizations}{44}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Basics}{45}{subsection.4.2.1}
+\contentsline {subsubsection}{Pointer Analysis}{45}{subsubsection*.18}
+\contentsline {subsubsection}{Data-flow Graph}{46}{subsubsection*.19}
 \contentsline {subsection}{\numberline {4.2.2}Opportunities}{46}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Performed Analyses}{46}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Evaluation}{47}{chapter.5}
-\contentsline {chapter}{Literaturverzeichnis}{48}{section*.17}
+\contentsline {subsubsection}{Single-Task Locks}{46}{subsubsection*.20}
+\contentsline {subsubsection}{Read-only Locks}{47}{subsubsection*.21}
+\contentsline {subsubsection}{Recursive Locks}{48}{subsubsection*.22}
+\contentsline {subsubsection}{Lock Contention}{48}{subsubsection*.23}
+\contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{49}{subsection.4.2.3}
+\contentsline {subsubsection}{Removal of Single-task Locks}{51}{subsubsection*.24}
+\contentsline {subsubsection}{Removal of Read-only Locks}{53}{subsubsection*.25}
+\contentsline {subsubsection}{Removal of Recursive Locks}{53}{subsubsection*.26}
+\contentsline {chapter}{\numberline {5}Evaluation}{57}{chapter.5}
+\contentsline {chapter}{\numberline {6}Evaluation}{58}{chapter.6}
+\contentsline {chapter}{Bibliography}{59}{section*.29}
 \contentsfinish 
