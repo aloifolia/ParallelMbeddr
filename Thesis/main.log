@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  21 AUG 2014 13:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  21 AUG 2014 15:00
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1333,6 +1333,14 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 [2
 
 ] [3] [4] [5]
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 43.
+
+(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
+File: t1txtt.fd 2000/12/15 v3.1
+)
+LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <11> not available
+(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 43.
+
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
@@ -1345,13 +1353,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 47--1
 [6]
 Chapter 3.
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/notation.tex
-LaTeX Font Info:    Try loading font information for T1+txtt on input line 3.
-
-(C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\txfonts\t1txtt.fd
-File: t1txtt.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `T1/txtt/b/n' in size <11> not available
-(Font)              Font shape `T1/txtt/bx/n' tried instead on input line 6.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
 (Font)              scaled to size 11.04007pt on input line 9.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
@@ -1417,7 +1418,7 @@ LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
 (Font)              Font shape `T1/txtt/m/sl' tried instead on input line 159.
 [17]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
 [18] [19] [20]
-<pics/ParallelExecutionAttempt.pdf, id=687, 224.33812pt x 168.63pt>
+<pics/ParallelExecutionAttempt.pdf, id=692, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1429,7 +1430,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 56--57
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=688, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=693, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1440,12 +1441,18 @@ Overfull \hbox (13.8084pt too wide) in paragraph at lines 58--71
 [][] $[]$ [] 
  []
 
+[21 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecutionAttemp
+t.pdf> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/SerialExecution.pdf
 
+pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
+s/pics/SerialExecution.pdf): PDF inclusion: multiple pdfs with page group inclu
+ded in a single page
+>]
 Overfull \hbox (61.97314pt too wide) in paragraph at lines 85--86
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<pics/ParallelExecution.pdf, id=690, 224.33812pt x 168.63pt>
+<pics/ParallelExecution.pdf, id=751, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1456,14 +1463,12 @@ Overfull \hbox (27.62627pt too wide) in paragraph at lines 93--94
 [][] 
  []
 
-[21 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecutionAttemp
-t.pdf> <C:/Users/Bastian/Desktop/github-master/Thesis/pics/SerialExecution.pdf
 
-pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
-s/pics/SerialExecution.pdf): PDF inclusion: multiple pdfs with page group inclu
-ded in a single page
->] [22 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pd
-f>] <pics/AstForBaseTypes.pdf, id=791, 114.30634pt x 315.33504pt>
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [22 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/ParallelExecution.pdf>
+]
+<pics/AstForBaseTypes.pdf, id=795, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
@@ -1624,9 +1629,9 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 17457 strings out of 493921
- 267819 string characters out of 3144870
- 388795 words of memory out of 3000000
+ 17459 strings out of 493921
+ 267843 string characters out of 3144870
+ 389795 words of memory out of 3000000
  19260 multiletter control sequences out of 15000+200000
  163273 words of font info for 148 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -1648,9 +1653,9 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (70 pages, 1116177 bytes).
+Output written on main.pdf (70 pages, 1117608 bytes).
 PDF statistics:
- 1920 PDF objects out of 2073 (max. 8388607)
- 1043 named destinations out of 1200 (max. 500000)
+ 1927 PDF objects out of 2073 (max. 8388607)
+ 1045 named destinations out of 1200 (max. 500000)
  310 words of extra memory for PDF output out of 10000 (max. 10000000)
 
