@@ -20,7 +20,7 @@ if (condition)  p = &v;
 else            p = &w; 
 int32* q = p;
 \end{ccode}
-The quality of a pointer analysis is reflected by its precision. Two properties -- that are relevant for this work -- influence the precision: whether the analysis is \textit{flow-sensitive} or \textit{-insensitive} and whether it is \textit{inter-procedural} or \textit{intra-procedural} \cite{ProgramAnalysisAndSpecialization}. The first property distinguishes, whether the particular flow of data and with it the order of statements is taken account of the analysis. For an illustration the previous code listing is reconsidered. In a flow-insensitive analysis the set of locations for \CODE{p} would contain the locations of both \CODE{v} and \CODE{w} in either branch. A flow-sensitive analysis, on the other hand, would precisely assign \CODE{v} or \CODE{w} to the points-to set of \CODE{p}. The second property distinguishes how precisely the calculation of points-to sets regards effects across functions, i.e. the context flow across function calls. The following example shall illustrate the difference between the two shapes. According to Andersen, an intra-procedural analysis would merge the calls of \CODE{bar()} so that the points-to set of \CODE{p} would contain both \CODE{v} and \CODE{w}. Likewise the sets of \CODE{vP} and \CODE{wP} would contain the same elements. On the hand, an inter-procedural analysis would distinguish the calls so that, in the end, the sets of \CODE{vP} and \CODE{wP} would contain exactly \CODE{v}, respectively \CODE{w}.
+The quality of a pointer analysis is reflected by its precision. Two properties -- that are relevant for this work -- influence the precision: whether the analysis is \textit{flow-sensitive} or \textit{-insensitive} and whether it is \textit{inter-procedural} or \textit{intra-procedural}\footnote{The latter property is also called context-sensitivity \cite{CloningBasedContextSensitive}.} \cite{ProgramAnalysisAndSpecialization}. The first property distinguishes, whether the particular flow of data and with it the order of statements is taken account of the analysis. For an illustration the previous code listing is reconsidered. In a flow-insensitive analysis the set of locations for \CODE{p} would contain the locations of both \CODE{v} and \CODE{w} in either branch. A flow-sensitive analysis, on the other hand, would precisely assign \CODE{v} or \CODE{w} to the points-to set of \CODE{p}. The second property distinguishes how precisely the calculation of points-to sets regards effects across functions, i.e. the context flow across function calls. The following example shall illustrate the difference between the two shapes. According to Andersen, an intra-procedural analysis would merge the calls of \CODE{bar()} so that the points-to set of \CODE{p} would contain both \CODE{v} and \CODE{w}. Likewise the sets of \CODE{vP} and \CODE{wP} would contain the same elements. On the hand, an inter-procedural analysis would distinguish the calls so that, in the end, the sets of \CODE{vP} and \CODE{wP} would contain exactly \CODE{v}, respectively \CODE{w}.
 \begin{ccode}
 void foo() {
   int32 v, w;
@@ -164,7 +164,7 @@ void increment(shared<int32>* c) {
 Yet with such an aggressive strategy, the optimizer might split the code across data dependencies which were formerly reflected in the code by the scope of a synchronization statement. For instance, in the previous example the split does not take into consideration the data dependencies between \CODE{current}, \CODE{next} and \CODE{myC}. Therefore, when another call of \CODE{increment()} is executed in an interleaved fashion, the resulting code introduces data races for the shared resource that \CODE{c} points to.
 
 \subsection{Performed Optimizations}
-The optimizations that were performed in this work are direct realizations of the aforementioned leverage points. For the lack of supporting analyses in mbeddr when this thesis was written, the optimizations assume that all threads are executed simultaneously, in order to fit into the scope of this work. Thus, since mbeddr was missing a pointer-analysis, at first a simplified pointer analysis for the application in the optimization algorithms was conceived. In this analysis, differing from the usual approach, alias sets are computed for local variables, arguments and references of both. Additionally, divergent from the usual terminology, an alias in this context is a variable or argument of type \textit{shared<t>}. These differences result from the following facts
+The optimizations that were performed in this work are direct realizations of the aforementioned leverage points. For the lack of supporting analyses in mbeddr when this thesis was written, the optimizations assume that all threads are executed simultaneously, in order to fit into the scope of this work. Thus, since mbeddr was missing a pointer-analysis, at first a simplified pointer analysis for the application in the optimization algorithms was conceived. In this analysis, differing from the usual approach, a separate alias set is computed for each local variable, argument and reference of both kinds.\footnote{The analysis is therefore \textit{inclusion-based}, i.e. alias sets may overlap \cite{CloningBasedContextSensitive}.} Additionally, divergent from the usual terminology, an alias in this context is a variable or argument of type \textit{shared<t>}. These differences result from the following facts
 \begin{itemize}
 \item only shared resources are considered;
 \item shared resources are bound to memory locations as they may not be rewritten;
@@ -176,7 +176,6 @@ Also, it is assumed that everything which has a type \CODE{shared<t>} or \CODE{s
 \subsubsection*{Pointer analysis}
 As was mentioned, the analysis that was implemented in the course of this thesis makes several simplifications in order to fit into the scope of this work. The analysis is intra-procedural but flow-sensitive for the regarded language concepts. It can either compute \textit{must point-to} or \textit{may point-to} alias sets.
 As a starting point, a simplified directed data-flow graph is constructed. The nodes of this graph consist of local variable declarations, arguments\footnote{Although generally arguments are the values that are passed to function parameters, in the course of this work no such distinction is made. Instead, the formal function parameters are called arguments and the values, which are passed to functions, are called argument values. This terminology is closer to the one established in mbeddr.} and references to either kind. For each reference $r$ to a local variable or an argument $x$ an arc $(x, r)$ is added to the graph. Furthermore, for each local variable $v$ of type \CODE{shared<u>} or \CODE{shared<u>*}, whose initialization expression is a reference $r'$ to a local variable or argument of the same type, an arc $(r', v)$ is added. The same is done for local variables of type \CODE{shared<u>*} whose initialization expressions reference local variables or arguments of type \CODE{shared<u>} by address. Equivalently to local variables and initialization expressions, arcs $(r, a)$ are added to the graph for according pairs of argument values $r$ and arguments $a$.
-%\TODO{Beschreiben, dass keine Kanten ueber Taskgrenzen hinweg eingefuegt werden => Nein! Code ändern, dass Kanten nicht mehr entfernt werden, und testen!}
 \TODO{Visualize}
 The data-flow graph is used to perform a pointer analysis. The output of the analysis is a directed alias graph whose nodes comprise the nodes of the data-flow graph. Each arc $(u, v)$ of the alias graph connects a variable, argument or reference $u$ with a variable or argument $v$. In doing so, either $v$ is an alias for $u$ or $u$ refers to a variable $v2$ for which $v$ is an alias.\footnote{Thus, due to the inclusion of references, the alias graph is not one in the classical sense.} Trivially, loops $(u, u)$ for a variable or argument $u$ are contained, since every node is an alias for itself. With this initial setting the algorithm works as follows:
 \begin{algorithmic}
@@ -249,7 +248,7 @@ void syncXOrY(shared<int32>* xOrY) {
 }
 \end{ccode}
 
-In this example, \CODE{x} is shared, but \CODE{y} is not. Therefore, the set of clean variables $c$ in \CODE{Remove Clean Locks} would only contain \CODE{y}. On the other hand, the set of aliases $a[$\CODE{xOrY}$]$ would contain both variables, as they would be forwarded to \CODE{xOrY} via the calls \CODE{syncXOrY(\&x)} and \CODE{syncXOrY(\&y)} in the aliasing analysis.\footnote{This merge is caused by the inter-procedural property of the current alias analysis. In case of an intra-procedural pointer analysis the following work would be facilitated.} In this case the function \textit{Try To Inline} would distinguish the respective calls and learn that for \CODE{syncXOrY(\&y)} no synchronization is needed for \CODE{xOrY}. In such a case, the function could be inlined for the safe call and the clean synchronization resource could be removed. Alternatively, as it is done by \textit{Try To Inline}, the function can be copied and accordingly optimized:
+In this example, \CODE{x} is shared, but \CODE{y} is not. Therefore, the set of clean variables $c$ in \CODE{Remove Clean Locks} would only contain \CODE{y}. On the other hand, the set of aliases $a[$\CODE{xOrY}$]$ would contain both variables, as they would be forwarded to \CODE{xOrY} via the calls \CODE{syncXOrY(\&x)} and \CODE{syncXOrY(\&y)} in the aliasing analysis.\footnote{This merge is caused by the inter-procedural property of the current alias analysis. In case of an intra-procedural pointer analysis the following work would be facilitated.} In this case the function \textit{Try To Inline} would distinguish the respective calls and learn that for \CODE{syncXOrY(\&y)} no synchronization is needed for \CODE{xOrY}. In such a case, the function could be inlined for the safe call and the clean synchronization resource could be removed. Alternatively, as it is done by \textit{Try To Inline}, the function can be copied and accordingly optimized:\footnote{Function copying instead of inlining is done since this approach also works for recursive functions.}
 \begin{ccode}
   //...
   syncXOrY(&x);
@@ -292,7 +291,7 @@ Read-only locks are removed equivalently to single-task locks. It differs in the
 \ForAll{$v \gets d.\mathit{variables}$}
   \If{$\exists\ e.\mathit{set(\_)}$ in $d.\mathit{sharedSets}$ where $a[e]$ contains $v$}
     \State skip $v$
-  \ElsIf{$\exists\ \mathit{e.get}$ in $d.\mathit{sharedGets}$ where $a[e]$ contains $v$ and $\exists\ f = \_$ where $f$ contains $e$}
+  \ElsIf{$\exists\ \mathit{e.get}$ in $d.\mathit{sharedGets}$ where $a[e]$ contains $v$ and $\exists\ e' = \_$ where $e'$ contains $e$}
     \State skip $v$
   \EndIf
   \State $\overline{c}$.\Call{add}{$v$} \Comment{$\overline{c}$ = readonly (clean) task variables}
@@ -300,6 +299,29 @@ Read-only locks are removed equivalently to single-task locks. It differs in the
 \State \Call{remove clean locks}{c, a, d}
 \EndFunction
 \end{algorithmic}
+A few things should be noted for the last two optimizations. First, in the actual implementation, the gathering of `clean variables' is separated from the actual call of \textit{Remove Clean Locks}. Instead, variants of the two algorithms, called \textit{Get Singles} and \textit{Get Readonlys}, are used to first gather all variables for which locks can be removed. Only then \textit{Remove Clean Locks} is applied to the union of both variable sets. This way, a function may be copied only once, if it is called multiple times with (a) shared resources that are actually shared and written, (b) read-only shared resources and (c) single-task shared resources. The second thing to consider is that these removal functions are actually called as often as some optimization by their application is possible. Otherwise, optimizations might not be possible if an argument value is itself `partially clean' like \CODE{var} in the following example:
+\begin{ccode}
+void send() {
+  shared<int32> a;
+  shared<int32> b;          // b is never shared or written
+  shared<int32>* aP = &a;
+  |aP|;
+  sync(a) { a.set(0); }
+  
+  forward(&a);
+  forward(&b);
+}
+
+void forward(shared<int32>* var) {
+  sync(var as myVar) { myVar.get; }
+  receive(var);
+}
+
+void receive(shared<int32>* var) {
+  sync(var as myVar) { myVar.get; }
+}
+\end{ccode} 
+Since \CODE{b} is never shared or written, its synchronizations inside \CODE{forward()} and \CODE{receive()} are useless. \CODE{a} on the other hand must always be synchronized. In the first optimization round the values of the calls of \CODE{forward} can strictly be separated into `clean' values (\CODE{b}) and `dirty' values (\CODE{a}). Therefore, an optimized variant for \CODE{forward(\&b)} can be generated. On the other hand, there is only one call for \CODE{receive()} and the aliases of its value are currently merged, because the pointer-analysis is intra-procedural. Thus, another round of optimizations has to be applied where the two calls of the now separated functions \CODE{forward()} (for \CODE{a}) and \CODE{forward\_0()} (for \CODE{b}) can be distinguished. An intra-procedural pointer-analysis could directly deliver this information. The third point to consider is that function duplication does not work across functions which do not split the aliases of their arguments themselves, as it was done by \CODE{forward()}. If the synchronization statement was removed in this function, the algorithm would not detect that a duplication of \CODE{forward()} might help. In consequence, \CODE{receive()} would not be duplicated as well. For this reason, in the future cross-function duplications should also be made available. On the other hand, like inlining function duplication can lead to a `code explosion' if it is used too aggressively. Thus, it should be controllable by the programmer.
 
 \subsubsection{Removal of Recursive Locks}
 In contrast to the previous optimization techniques, in this section the property, which must be proven in order to be able to remove a lock, does not hold for entire variables. Instead, the recursiveness of a lock has to be shown separately for every synchronization resource. For the basic idea of a recursive-lock removal algorithm an arbitrary synchronization resource $r$ of an expression $e$ is considered. If can be shown that for all aliases of the pointer or shared resource, which $e$ evaluates to, $e$ must already be synchronized, then $r$ can be removed. In order to facilitate the analysis, the data-flow graph, which is necessarily used in such an algorithm, should be preprocessed in the following way. First, edges due to recursive function calls should be removed. The rationale behind this constraint is that recursive functions should not be able to synchronize their arguments on their own. In the following code listing an analysis \CODE{recursive()} could otherwise  detect that \CODE{value1} \CODE{value2} are already synchronized at the beginning of the function.
@@ -315,7 +337,7 @@ void recursive(shared<int32>* value1, shared<int32>* value2) {
 }
 \end{ccode}
 
-Additionally, if there is another call to \CODE{recursive()} from outside the cyclic call structure the algorithm need not first check whether any of the calls to \CODE{recursive()} originate from a recursive call path, in order to treat it differently. Furthermore, while in the previous example recursions would be easy to detect indirect recursions across multiple functions are more complicated to handle. For these reasons, the directed data-flow graph should be created by starting in the main function and avoiding edges that close cycles in the corresponding call graph. Secondly, edges between nodes of different task context should be removed (or not added in the first place). This way, false recursive locks across tasks are omitted:
+Additionally, if there is another call to \CODE{recursive()} from outside the cyclic call structure the algorithm need not first check whether any of the calls to \CODE{recursive()} originate from a recursive call path, in order to treat it differently. Furthermore, while in the previous example recursions would be easy to detect indirect recursions across multiple functions are more complicated to handle. For these reasons, the directed data-flow graph should be created by starting in the main function and avoiding edges that close cycles in the corresponding call graph. Secondly, the algorithm checks whether the expression of a synchronization resource is already synchronized edges between nodes of different task contexts in the data-flow graph should be ignored. This way, false recursive locks across tasks are omitted:
 \begin{ccode}
 void task1(shared<int32>* value) {
   sync(value as myValue) { value.set(1); 
@@ -335,10 +357,10 @@ void task1(shared<int32>* var, shared<shared<int32>*>* container) {
   }
 }
 \end{ccode}
-With a data-flow graph that was created by following these conditions, the alias graph can be calculated. In the following course of the work two algorithms for the recursive-lock removal are presented.\footnote{The former algorithm was implemented for its simplicity in the light of the simplified scenarios. The second one on the other hand avoids the incremental flow of synchronization contexts through the data flow graph and might be better suited for more complicated scenarios with concepts like assignments, shared resources nested in structures and arrays and multidimensional pointers (e.g. shared<int32>**).} The first algorithm uses the alias graph to locally mark variable references inside synchronization statements whose aliases are all synchronized. It uses the data-flow graph to push the synchronization states forward across function contexts:
+The construction of the alias graph should, however, only omit cyclic edges since aliases across tasks are completely valid. In the following course of the work two algorithms for the recursive-lock removal are presented.\footnote{The former algorithm was implemented for its simplicity in the light of the simplified scenarios. The second one on the other hand avoids the incremental flow of synchronization contexts through the data flow graph and might be better suited for more complicated scenarios with concepts like assignments, shared resources nested in structures and arrays and multidimensional pointers (e.g. shared<int32>**).} The first algorithm uses the alias graph to locally mark variable references inside synchronization statements whose aliases are all synchronized. It uses the data-flow graph to push the synchronization states forward across function contexts:
 
 \begin{algorithmic}
-\State \Comment{$g$ = data-flow graph (dfg), $i$ = inverse dfg, $a$ = aliases, $d$ = add. data}
+\State \Comment{$g$ = data-flow graph (dfg) w/o recursions or task-crossings, $i$ = inv. dfg, $a$ = aliases, $d$ = add. data}
 \Function{Remove Recursive Locks 1}{$g$, $i$, $a$, $d$}
 \ForAll{$s \gets d.\mathit{syncResources}$} \Comment{spread the sync contexts locally}
   \ForAll{$r \gets$ \Call{References In}{$s$}}
@@ -484,12 +506,12 @@ The crucial aspect of the narrowing algorithm is how to decide whether a stateme
 \EndFor
 \EndFunction
 \end{algorithmic}
-The helper function \textit{Can Be Shifted} gathers all expressions \CODE{e.get} and \CODE{e.set(\_)} that may be evaluated for a specific statement $t$. For this purpose it searches for such expressions: first in the AST of $t$ itself and then in the ASTs of all functions that might be called for the evaluation of $t$. For this purpose the complete function call branching of $t$\footnote{This branching comprises all directed subtrees (= aborescences) -- of called functions -- whose roots lie in the AST of $t$.} is investigated. A shift is declared as safe if it is safe for every $e$ in the found expressions \CODE{e.get} and \CODE{e.set(\_)}. In turn, for $e$ the shift is unsafe if its alias set is contained in one of the alias sets of the synchronization resources of the synchronization statement $s$. For this check only the aliases need to be considered that are not read-only or single-task shared resources. Again, an intra-procedural analysis should be preferred in order to be able to optimize more aggressively. In the current implementation, however, the optimization does not use such precise information and instead optimizes quite conservatively. The pseudo-code for 
+The helper function \textit{Can Be Shifted} gathers all expressions \CODE{e.get} and \CODE{e.set(\_)} that may be evaluated for a specific statement $t$. For this purpose it searches for such expressions: first in the AST of $t$ itself and then in the ASTs of all functions that might be called for the evaluation of $t$. For this purpose the complete function call branching of $t$\footnote{This branching comprises all directed subtrees (= aborescences) -- of called functions -- whose roots lie in the AST of $t$.} is investigated. A shift is declared as safe if it is safe for every $e$ in the found expressions \CODE{e.get} and \CODE{e.set(\_)}. In turn, for $e$ the shift is unsafe if its alias set is contained in one of the alias sets of the synchronization resources of the synchronization statement $s$. For this check only the aliases need to be considered that are not read-only or single-task shared resources.  The pseudo-code for 
 \textit{Can Be Shifted} is:
 \begin{algorithmic}
 \State \Comment{$t$ = statement, $s$ = sync statement, $a$ = aliases, $\mathit{\overline{ro}}$ = read-only aliases, $\mathit{\overline{st}}$ = single-task aliases}
 \Function{Can Be Shifted}{$t$, $s$, $a$ , $\mathit{\overline{ro}}$, $\mathit{\overline{st}}$} 
-\ForAll{$e.set(\_)$ and $e.get$ in AST of $t$ or AST of either function of \Call{Call Branching}{$t$}}
+\ForAll{$e.set(\_)$ and $e.get$ in the AST of $t$ or in the AST of every function of \Call{Call Branching}{$t$}}
   \If{there is sync resource $r$ in $s$ with $a[r.\mathit{expr}]$.\Call{Contains All}{$a[e] \backslash (\mathit{\overline{ro}} \cup \mathit{\overline{st}})$}}
     \State \Return false
   \EndIf
@@ -497,6 +519,7 @@ The helper function \textit{Can Be Shifted} gathers all expressions \CODE{e.get}
 \State \Return true
 \EndFunction
 \end{algorithmic}
+Again, an intra-procedural analysis should be preferred in order to be able to optimize more aggressively. In the current implementation, however, the optimization does not use such precise information and instead optimizes quite conservatively. Therefore, it must instead check whether any alias of the variable reference $e$ is contained in the alias set of a synchronization resource $r$.
 %mehr möglich unter Bezugnahme der Threadabläufe (wann läuft welcher thread?), aktuell: Jeder gleichzeitig; => erfordert komplexe analysen (dataflow/pointer)
 
 %lock prediction (für vergleich): https://www.usenix.org/legacy/event/hotpar10/tech/full_papers/Lucia.pdf

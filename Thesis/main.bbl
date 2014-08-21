@@ -275,6 +275,12 @@ C.~Steven~Hernandez.
 Markus V{\"o}lter.
 \newblock Generic tools, specific languages.
 
+\bibitem{CloningBasedContextSensitive}
+John Whaley and Monica~S Lam.
+\newblock Cloning-based context-sensitive pointer alias analysis using binary
+  decision diagrams.
+\newblock In {\em ACM SIGPLAN Notices}, volume~39, pages 131--144. ACM, 2004.
+
 \bibitem{MakingEmbeddedSystems}
 E.~White.
 \newblock {\em Making Embedded Systems: Design Patterns for Great Software}.

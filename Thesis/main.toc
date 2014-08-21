@@ -47,9 +47,8 @@
 \contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{49}{subsection.4.2.3}
 \contentsline {subsubsection}{Removal of Single-task Locks}{51}{subsubsection*.22}
 \contentsline {subsubsection}{Removal of Read-only Locks}{53}{subsubsection*.23}
-\contentsline {subsubsection}{Removal of Recursive Locks}{54}{subsubsection*.24}
-\contentsline {subsubsection}{Narrowing Synchronization Statements}{58}{subsubsection*.25}
-\contentsline {chapter}{\numberline {5}Evaluation}{60}{chapter.5}
-\contentsline {chapter}{\numberline {6}Evaluation}{61}{chapter.6}
+\contentsline {subsubsection}{Removal of Recursive Locks}{55}{subsubsection*.24}
+\contentsline {subsubsection}{Narrowing Synchronization Statements}{59}{subsubsection*.25}
+\contentsline {chapter}{\numberline {5}Evaluation}{61}{chapter.5}
 \contentsline {chapter}{Bibliography}{62}{section*.28}
 \contentsfinish 
