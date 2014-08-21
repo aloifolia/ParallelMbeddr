@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  20 AUG 2014 22:31
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  21 AUG 2014 13:31
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1559,37 +1559,50 @@ Chapter 4.
 [44
 
 ] [45] [46] [47] [48]
-Overfull \hbox (4.22331pt too wide) in paragraph at lines 137--138
+Overfull \hbox (4.22331pt too wide) in paragraph at lines 134--135
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (10.83313pt too wide) in paragraph at lines 158--160
+Overfull \hbox (10.83313pt too wide) in paragraph at lines 155--157
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [49]
-Underfull \hbox (badness 10000) in paragraph at lines 213--216
+Underfull \vbox (badness 2837) has occurred while \output is active []
 
+ [50]
+Underfull \vbox (badness 2735) has occurred while \output is active []
+
+ [51]
+[52] [53] [54] [55] [56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Overfull \hbox (8.12106pt too wide) in paragraph at lines 442--443
+[][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (8.12106pt too wide) in paragraph at lines 460--461
+[][][][][][][][][][][][][][][][][] 
+ []
 
- [50]
-[51] [52] [53] [54]
-Underfull \vbox (badness 5908) has occurred while \output is active []
 
- [55])
-(C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex [56]
+Overfull \hbox (65.8709pt too wide) in paragraph at lines 464--465
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[58]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
+[59]
 Chapter 5.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/evaluation.tex
-[57
+[60
 
 ]
 Chapter 6.
 ) (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [58
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [61
 
 ]
 Underfull \hbox (badness 7631) in paragraph at lines 4--9
@@ -1597,27 +1610,27 @@ Underfull \hbox (badness 7631) in paragraph at lines 4--9
 stroy and ini-tial-ize
  []
 
-[59
+[62
 
-] [60])
+] [63] [64])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 50.
- [61]
+ [65]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 50.
  (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 50.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 50.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B169FDC932ACE120ED878B53C3DCC314;2327.
+(rerunfilecheck)             Checksum: CF7F4FA779971CB29E6F9DC2719451E1;2337.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 50.
  ) 
 Here is how much of TeX's memory you used:
- 17379 strings out of 493921
- 266768 string characters out of 3144870
- 389713 words of memory out of 3000000
- 19235 multiletter control sequences out of 15000+200000
- 162569 words of font info for 146 fonts, out of 3000000 for 9000
+ 17457 strings out of 493921
+ 267819 string characters out of 3144870
+ 388795 words of memory out of 3000000
+ 19260 multiletter control sequences out of 15000+200000
+ 163273 words of font info for 148 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,15n,95p,2542b,1966s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,15n,95p,2542b,1964s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}{C:/
 Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/devel/latex/
 tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
@@ -1635,9 +1648,9 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (66 pages, 1095587 bytes).
+Output written on main.pdf (70 pages, 1116177 bytes).
 PDF statistics:
- 1841 PDF objects out of 2073 (max. 8388607)
- 992 named destinations out of 1000 (max. 500000)
+ 1920 PDF objects out of 2073 (max. 8388607)
+ 1043 named destinations out of 1200 (max. 500000)
  310 words of extra memory for PDF output out of 10000 (max. 10000000)
 

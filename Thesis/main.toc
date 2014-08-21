@@ -38,19 +38,18 @@
 \contentsline {chapter}{\numberline {4}Optimization}{44}{chapter.4}
 \contentsline {section}{\numberline {4.1}Space Optimization}{44}{section.4.1}
 \contentsline {section}{\numberline {4.2}Time Optimizations}{44}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Basics}{45}{subsection.4.2.1}
-\contentsline {subsubsection}{Pointer Analysis}{45}{subsubsection*.18}
-\contentsline {subsubsection}{Data-flow Graph}{46}{subsubsection*.19}
+\contentsline {subsection}{\numberline {4.2.1}Pointer Analysis}{45}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Opportunities}{46}{subsection.4.2.2}
-\contentsline {subsubsection}{Single-Task Locks}{46}{subsubsection*.20}
-\contentsline {subsubsection}{Read-only Locks}{47}{subsubsection*.21}
-\contentsline {subsubsection}{Recursive Locks}{48}{subsubsection*.22}
-\contentsline {subsubsection}{Lock Contention}{48}{subsubsection*.23}
+\contentsline {subsubsection}{Single-Task Locks}{46}{subsubsection*.18}
+\contentsline {subsubsection}{Read-only Locks}{47}{subsubsection*.19}
+\contentsline {subsubsection}{Recursive Locks}{48}{subsubsection*.20}
+\contentsline {subsubsection}{Lock Contention}{48}{subsubsection*.21}
 \contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{49}{subsection.4.2.3}
-\contentsline {subsubsection}{Removal of Single-task Locks}{51}{subsubsection*.24}
-\contentsline {subsubsection}{Removal of Read-only Locks}{53}{subsubsection*.25}
-\contentsline {subsubsection}{Removal of Recursive Locks}{53}{subsubsection*.26}
-\contentsline {chapter}{\numberline {5}Evaluation}{57}{chapter.5}
-\contentsline {chapter}{\numberline {6}Evaluation}{58}{chapter.6}
-\contentsline {chapter}{Bibliography}{59}{section*.29}
+\contentsline {subsubsection}{Removal of Single-task Locks}{51}{subsubsection*.22}
+\contentsline {subsubsection}{Removal of Read-only Locks}{53}{subsubsection*.23}
+\contentsline {subsubsection}{Removal of Recursive Locks}{54}{subsubsection*.24}
+\contentsline {subsubsection}{Narrowing Synchronization Statements}{58}{subsubsection*.25}
+\contentsline {chapter}{\numberline {5}Evaluation}{60}{chapter.5}
+\contentsline {chapter}{\numberline {6}Evaluation}{61}{chapter.6}
+\contentsline {chapter}{Bibliography}{62}{section*.28}
 \contentsfinish 

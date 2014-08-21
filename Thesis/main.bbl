@@ -7,6 +7,12 @@
   \url{http://pubs.opengroup.org/onlinepubs/009695399/functions/pthread\_mutex_destroy.html}.
 \newblock Accessed: 2014-07-15.
 
+\bibitem{StaticAnalysesForJava}
+Jonathan Aldrich, Craig Chambers, Emin~Gun Sirer, and Susan Eggers.
+\newblock Static analyses for eliminating unnecessary synchronization from java
+  programs.
+\newblock In {\em Static Analysis}, pages 19--38. Springer, 1999.
+
 \bibitem{TheDProgrammingLanguage}
 A.~Alexandrescu.
 \newblock {\em The D Programming Language}.
@@ -29,6 +35,11 @@ David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
 L.W. Baugh and University of~Illinois~at Urbana-Champaign.
 \newblock {\em Transactional Programmability and Performance}.
 \newblock University of Illinois at Urbana-Champaign, 2008.
+
+\bibitem{DoJava6Threading}
+Jeroen Borgers.
+\newblock {\em Do Java 6 threading optimizations actually work?}
+\newblock Published: 2008-06-18.
 
 \bibitem{CForBASICProgrammers}
 T.D. Brown.
@@ -93,6 +104,12 @@ V.K. Garg.
 J.M. Garrido, R.~Schlesinger, and K.~Hoganson.
 \newblock {\em Principles of Modern Operating Systems}.
 \newblock Jones \& Bartlett Learning, 2011.
+
+\bibitem{JavaTheoryAndPractice}
+Brian Goetz.
+\newblock {\em Java theory and practice: Synchronization optimizations in
+  Mustang}.
+\newblock Published: 2005-10-18.
 
 \bibitem{PrinciplesOfTransactionalMemory}
 R.~Guerraoui, M.~Kapa{\l}ka, and N.~Lynch.
@@ -224,11 +241,6 @@ Amitabha Roy, Steven Hand, and Tim Harris.
 \newblock A runtime system for software lock elision.
 \newblock In {\em Proceedings of the 4th ACM European conference on Computer
   systems}, pages 261--274. ACM, 2009.
-
-\bibitem{ContextInsensitiveAliasAnalysis}
-Erik Ruf.
-\newblock Context-insensitive alias analysis reconsidered.
-\newblock {\em ACM SIGPLAN Notices}, 30(6):13--22, 1995.
 
 \bibitem{PointerAnalysisForStructuredParallelPrograms}
 Radu Rugina and Martin~C Rinard.

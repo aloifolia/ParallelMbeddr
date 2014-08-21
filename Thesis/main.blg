@@ -14,7 +14,15 @@ Repeated entry---line 423 of file content/literature.bib
  : @inproceedings{SpeculativeLockElision
  :                                      ,
 I'm skipping whatever remains of this entry
+Warning--I'm ignoring JavaTheoryAndPractice's extra "note" field
+--line 469 of file content/literature.bib
+Warning--I'm ignoring DoJava6Threading's extra "note" field
+--line 476 of file content/literature.bib
 Warning--to sort, need author or key in Mutexes
+Warning--empty publisher in DoJava6Threading
+Warning--empty year in DoJava6Threading
+Warning--empty publisher in JavaTheoryAndPractice
+Warning--empty year in JavaTheoryAndPractice
 Warning--empty publisher in IntroductionToOperatingSystems
 Warning--empty year in IntroductionToOperatingSystems
 (There were 2 error messages)
