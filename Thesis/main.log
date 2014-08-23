@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  23 AUG 2014 18:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  23 AUG 2014 18:58
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1599,23 +1599,20 @@ Overfull \hbox (65.8709pt too wide) in paragraph at lines 504--505
 [61]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 [][][]\T1/5ch/m/n/9.2 http://parasail-programming-language.blogspot.de/2012/08/
 a-pointer-free-path-to-object-oriented.html, ac-cessed:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 17--17
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
 [][][]\T1/5ch/m/n/9.2 http://www.embedded.com/design/programming-languages-and-
 tools/4375616/1/ParaSail--Less-is-more-with-
  []
 
 [62
 
-] [63]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [64])
+] [63] [64])
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex)
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [65]
 Underfull \hbox (badness 7631) in paragraph at lines 7--12
@@ -1637,8 +1634,8 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 49.
  ) 
 Here is how much of TeX's memory you used:
- 17542 strings out of 493921
- 268976 string characters out of 3144870
+ 17543 strings out of 493921
+ 268988 string characters out of 3144870
  390063 words of memory out of 3000000
  19282 multiletter control sequences out of 15000+200000
  163273 words of font info for 148 fonts, out of 3000000 for 9000
@@ -1661,9 +1658,9 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (74 pages, 1153646 bytes).
+Output written on main.pdf (74 pages, 1154441 bytes).
 PDF statistics:
- 2064 PDF objects out of 2073 (max. 8388607)
- 1108 named destinations out of 1200 (max. 500000)
+ 2066 PDF objects out of 2073 (max. 8388607)
+ 1109 named destinations out of 1200 (max. 500000)
  366 words of extra memory for PDF output out of 10000 (max. 10000000)
 
