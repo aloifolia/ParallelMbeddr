@@ -1,5 +1,8 @@
 \begin{thebibliography}{10}
 
+\bibitem{OpenMP}
+{\em OpenMP Application Program Interface,}, version 4.0 edition.
+
 \bibitem{Mutexes}
 {The Open Group} pthread\_mutex\_destroy, pthread\_mutex\_init - destroy and
   initialize a mutex.
@@ -18,6 +21,14 @@ A.~Alexandrescu.
 \newblock {\em The D Programming Language}.
 \newblock Pearson Education, 2010.
 
+\bibitem{Amdahl}
+Gene~M. Amdahl.
+\newblock Validity of the single processor approach to achieving large scale
+  computing capabilities.
+\newblock In {\em Proceedings of the April 18-20, 1967, Spring Joint Computer
+  Conference}, AFIPS '67 (Spring), pages 483--485, New York, NY, USA, 1967.
+  ACM.
+
 \bibitem{ProgramAnalysisAndSpecialization}
 Lars~Ole Andersen.
 \newblock {\em Program analysis and specialization for the C programming
@@ -35,6 +46,11 @@ David Basin, Samuel~J Burri, and G{\"u}nter Karjoth.
 L.W. Baugh and University of~Illinois~at Urbana-Champaign.
 \newblock {\em Transactional Programmability and Performance}.
 \newblock University of Illinois at Urbana-Champaign, 2008.
+
+\bibitem{ModularTypestateChecking}
+Kevin Bierhoff and Jonathan Aldrich.
+\newblock {\em Modular typestate checking of aliased objects}, volume~42.
+\newblock ACM, 2007.
 
 \bibitem{DoJava6Threading}
 Jeroen Borgers.
@@ -157,6 +173,11 @@ Kun Huang, Gaogang Xie, Rui Li, and Shuai Xiong.
 \newblock {\em Journal of Network and Computer Applications}, 36(2):657--666,
   2013.
 
+\bibitem{LockReservation}
+Kiyokuni Kawachiya, Akira Koseki, and Tamiya Onodera.
+\newblock Lock reservation: Java locks can mostly do without atomic operations.
+\newblock In {\em ACM SIGPLAN Notices}, volume~37, pages 130--141. ACM, 2002.
+
 \bibitem{MultiProgWithJavaTech}
 B.~Lewis and D.J. Berg.
 \newblock {\em Multithreaded Programming with Java Technology}.
@@ -166,6 +187,12 @@ B.~Lewis and D.J. Berg.
 C.S. LLC, M.L. Mitchell, A.~Samuel, and J.~Oldham.
 \newblock {\em Advanced Linux Programming}.
 \newblock Pearson Education, 2001.
+
+\bibitem{MathematicalLimits}
+Jason Loew, Jesse Elwell, Dmitry Ponomarev, and Patrick~H Madden.
+\newblock Mathematical limits of parallel computation for embedded systems.
+\newblock In {\em Proceedings of the 16th Asia and South Pacific Design
+  Automation Conference}, pages 653--660. IEEE Press, 2011.
 
 \bibitem{LinuxSystemProgramming}
 R.~Love.
@@ -193,11 +220,6 @@ Robert H.~B. Netzer, Timothy~W. Brennan, and Suresh~K. Damodaran-Kamal.
 \newblock Debugging race conditions in message-passing programs.
 \newblock In {\em Proceedings of the SIGMETRICS Symposium on Parallel and
   Distributed Tools}, SPDT '96, pages 31--40, New York, NY, USA, 1996. ACM.
-
-\bibitem{IntroductionToParallelProgramming}
-P.~Pacheco.
-\newblock {\em An Introduction to Parallel Programming}.
-\newblock An Introduction to Parallel Programming. Elsevier Science, 2011.
 
 \bibitem{AnIntroductionToParallelProgramming}
 P.~Pacheco.
@@ -270,6 +292,18 @@ Konstantin Solomatov and Vaclav Pech.
 C.~Steven~Hernandez.
 \newblock {\em Official (ISC)2 Guide to the CISSP CBK, Second Edition}.
 \newblock (ISC)2 Press. Taylor \& Francis, 2009.
+
+\bibitem{ConcurrencyByDefault}
+Sven Stork, Paulo Marques, and Jonathan Aldrich.
+\newblock Concurrency by default: using permissions to express dataflow in
+  stateful programs.
+\newblock In {\em Proceedings of the 24th ACM SIGPLAN conference companion on
+  Object oriented programming systems languages and applications}, pages
+  933--940. ACM, 2009.
+
+\bibitem{ParaSailReferenceManual}
+S.~Tucker Taft.
+\newblock {\em ParaSail Reference Manual - Draft}.
 
 \bibitem{GenericTools_SpecificLanguages}
 Markus V{\"o}lter.

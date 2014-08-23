@@ -48,7 +48,15 @@
 \contentsline {subsubsection}{Removal of Single-task Locks}{51}{subsubsection*.22}
 \contentsline {subsubsection}{Removal of Read-only Locks}{53}{subsubsection*.23}
 \contentsline {subsubsection}{Removal of Recursive Locks}{55}{subsubsection*.24}
-\contentsline {subsubsection}{Narrowing Synchronization Statements}{59}{subsubsection*.25}
-\contentsline {chapter}{\numberline {5}Evaluation}{61}{chapter.5}
-\contentsline {chapter}{Bibliography}{62}{section*.28}
+\contentsline {subsubsection}{Narrowing Synchronization Statements}{60}{subsubsection*.25}
+\contentsline {chapter}{\numberline {5}Evaluation}{62}{chapter.5}
+\contentsline {section}{\numberline {5.1}Optimization}{62}{section.5.1}
+\contentsline {section}{\numberline {5.2}Comparison}{62}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}OpenMP}{62}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}ParaSail}{62}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}\AE minium}{63}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}D}{63}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Java}{64}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Rust}{65}{subsection.5.2.6}
+\contentsline {chapter}{Bibliography}{66}{section*.28}
 \contentsfinish 

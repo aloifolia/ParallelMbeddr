@@ -18,12 +18,24 @@ Warning--I'm ignoring JavaTheoryAndPractice's extra "note" field
 --line 469 of file content/literature.bib
 Warning--I'm ignoring DoJava6Threading's extra "note" field
 --line 476 of file content/literature.bib
+I was expecting a `,' or a `}'---line 515 of file content/literature.bib
+ :   
+ :   month={July},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 522 of file content/literature.bib
+ :   edition
+ :          {February 16, 2014},
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in Mutexes
+Warning--to sort, need author, organization, or key in OpenMP
+Warning--can't use both volume and number fields in ModularTypestateChecking
 Warning--empty publisher in DoJava6Threading
 Warning--empty year in DoJava6Threading
 Warning--empty publisher in JavaTheoryAndPractice
 Warning--empty year in JavaTheoryAndPractice
+Warning--can't use both volume and number fields in LockReservation
 Warning--empty publisher in IntroductionToOperatingSystems
 Warning--empty year in IntroductionToOperatingSystems
 Warning--can't use both volume and number fields in CloningBasedContextSensitive
-(There were 2 error messages)
+(There were 4 error messages)

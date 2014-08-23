@@ -30,4 +30,12 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Opportunities}{section.4.2}% 30
 \BOOKMARK [2][-]{subsection.4.2.3}{Performed Optimizations}{section.4.2}% 31
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 32
-\BOOKMARK [0][-]{section*.28}{Bibliography}{}% 33
+\BOOKMARK [1][-]{section.5.1}{Optimization}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.2}{Comparison}{chapter.5}% 34
+\BOOKMARK [2][-]{subsection.5.2.1}{OpenMP}{section.5.2}% 35
+\BOOKMARK [2][-]{subsection.5.2.2}{ParaSail}{section.5.2}% 36
+\BOOKMARK [2][-]{subsection.5.2.3}{\306minium}{section.5.2}% 37
+\BOOKMARK [2][-]{subsection.5.2.4}{D}{section.5.2}% 38
+\BOOKMARK [2][-]{subsection.5.2.5}{Java}{section.5.2}% 39
+\BOOKMARK [2][-]{subsection.5.2.6}{Rust}{section.5.2}% 40
+\BOOKMARK [0][-]{section*.28}{Bibliography}{}% 41
