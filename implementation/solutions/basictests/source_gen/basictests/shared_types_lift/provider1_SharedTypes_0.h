@@ -21,9 +21,9 @@ struct provider1_SharedTypes_0_A {
   GenericSharedDeclarations_SharedOf_int32_0_t a;
 };
 
-void provider1_SharedTypes_0_mutexDestroy_0(provider1_SharedTypes_0_A_t* var);
-
 void provider1_SharedTypes_0_mutexInit_0(provider1_SharedTypes_0_A_t* var);
+
+void provider1_SharedTypes_0_mutexDestroy_0(provider1_SharedTypes_0_A_t* var);
 
 
 #ifdef __cplusplus

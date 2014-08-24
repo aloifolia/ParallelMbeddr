@@ -78,13 +78,18 @@ static void lock_ellision_callee(GenericSharedDeclarations_SharedOf_int32_0_t* x
    * z is shared (see below), x is shared for the calls callee(&var1) and callee(zPointer), y is not shared
    */
 
-  GenericSyncDeclarations_startSyncFor2Mutexes(&(xPointer)->mutex, &(zPointer)->mutex);
   {
-    xPointer->value = 1;
-    yPointer->value = 2;
-    zPointer->value = 3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myXPointer = xPointer;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myYPointer = yPointer;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myZPointer = zPointer;
+    GenericSyncDeclarations_startSyncFor2Mutexes(&(myXPointer)->mutex, &(myZPointer)->mutex);
+    {
+      myXPointer->value = 1;
+      myYPointer->value = 2;
+      myZPointer->value = 3;
+    }
+    GenericSyncDeclarations_stopSyncFor2Mutexes(&(myXPointer)->mutex, &(myZPointer)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor2Mutexes(&(xPointer)->mutex, &(zPointer)->mutex);
   /* 
    * z, and with it x in the follwing calls, is shared with another task => z must be synced, but x only for the second following call
    */
@@ -109,13 +114,18 @@ static void lock_ellision_callee_0(GenericSharedDeclarations_SharedOf_int32_0_t*
    */
 
   {
-    xPointer->value = 1;
-    yPointer->value = 2;
-    GenericSyncDeclarations_startSyncFor1Mutex(&(zPointer)->mutex);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myXPointer = xPointer;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myYPointer = yPointer;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myZPointer = zPointer;
     {
-      zPointer->value = 3;
+      myXPointer->value = 1;
+      myYPointer->value = 2;
+      GenericSyncDeclarations_startSyncFor1Mutex(&(myZPointer)->mutex);
+      {
+        myZPointer->value = 3;
+      }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(myZPointer)->mutex);
     }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(zPointer)->mutex);
   }
   /* 
    * z, and with it x in the follwing calls, is shared with another task => z must be synced, but x only for the second following call

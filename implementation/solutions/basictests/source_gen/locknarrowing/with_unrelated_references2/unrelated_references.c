@@ -48,21 +48,20 @@ int32_t main(int32_t argc, char* argv[])
     GenericSyncDeclarations_startSyncFor1Mutex(&(y).mutex);
     {
       y.value = 5;
-    }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(y).mutex);
-    {
-      unrelated_references_doHeavyWork(&x);
       GenericSyncDeclarations_startSyncFor1Mutex(&(x).mutex);
       {
+        unrelated_references_doHeavyWork(&x);
         x.value = 5;
+        /* 
+         * The following statement could be shifted one level upwards, since it does not contain a reference to x.
+         * However, due to the intra-procedural pointer analysis, the optimizer cannot distinguish the aliases of the following call from those of the other call.
+         */
+
+        unrelated_references_doHeavyWork(&y);
       }
       GenericSyncDeclarations_stopSyncFor1Mutex(&(x).mutex);
-      /* 
-       * The following statement can be shifted one level upwards, since it does not contain a reference to x
-       */
-
-      unrelated_references_doHeavyWork(&y);
     }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(y).mutex);
   }
   
   return 0;
@@ -70,7 +69,12 @@ int32_t main(int32_t argc, char* argv[])
 
 static void unrelated_references_doHeavyWork(GenericSharedDeclarations_SharedOf_int32_0_t* value) 
 {
-  
+  {
+    GenericSharedDeclarations_SharedOf_int32_0_t* myValue = value;
+    {
+      myValue->value = 5;
+    }
+  }
 }
 
 static void* unrelated_references_parFun_a4a0(void* voidArgs) 

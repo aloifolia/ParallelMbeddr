@@ -8,6 +8,12 @@
 
 #include <stdbool.h>
 
+#include <stdio.h>
+
+#include <sys/time.h>
+
+#include <math.h>
+
 
 
 #ifdef __cplusplus

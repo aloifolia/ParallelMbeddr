@@ -48,15 +48,19 @@ int32_t main(int32_t argc, char* argv[])
 static void readonly_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* x, GenericSharedDeclarations_SharedOf_int32_0_t* y) 
 {
   /* 
-   * Although only y is set, x's sync cannot be removed, because it's shared resource is written in a subsequent call of foo() via y. Therefore it must generally be synchronized.
-   * => Improvement is possible: Only synchronize x if x is written in one task and accessed in another. Prove this by making use of the task seperated dataflow graph.
+   * Although only y is set at first sight, x's sync cannot be removed, because its shared resource is written in a subsequent call of foo() via y. Therefore it must generally be synchronized.
+   * => Improvement would be possible: Only synchronize x if x is written in one task and accessed in another. Prove      this by making use of the task separated dataflow graph.
    */
 
-  GenericSyncDeclarations_startSyncFor2Mutexes(&(x)->mutex, &(y)->mutex);
   {
-    y->value = 5;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myX = x;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myY = y;
+    GenericSyncDeclarations_startSyncFor2Mutexes(&(myX)->mutex, &(myY)->mutex);
+    {
+      myY->value = 5;
+    }
+    GenericSyncDeclarations_stopSyncFor2Mutexes(&(myX)->mutex, &(myY)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor2Mutexes(&(x)->mutex, &(y)->mutex);
   readonly_lock_foo(y, x);
 }
 

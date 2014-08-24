@@ -137,9 +137,12 @@
     <classNode dependClassName="java.lang.String" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncResourceNamed_Behavior" file="SyncResourceNamed_Behavior.java">
+    <classNode dependClassName="java.lang.String" />
+    <classNode dependClassName="jetbrains.mps.lang.smodel.generator.smodelAdapter.SPropertyOperations" />
     <classNode dependClassName="org.jetbrains.mps.openapi.model.SNode" />
   </dependency>
   <dependency className="TasksAndSyncs.behavior.SyncResourceNamed_BehaviorDescriptor" file="SyncResourceNamed_BehaviorDescriptor.java">
+    <classNode dependClassName="TasksAndSyncs.behavior.SyncResourceNamed_Behavior" />
     <classNode dependClassName="TasksAndSyncs.behavior.SyncResource_BehaviorDescriptor" />
     <classNode dependClassName="com.mbeddr.core.base.behavior.IIdentifierNamedConcept_Behavior" />
     <classNode dependClassName="com.mbeddr.core.base.behavior.IIdentifierNamedConcept_BehaviorDescriptor" />

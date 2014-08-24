@@ -169,19 +169,21 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="2585702205164515869" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="2585702205164515870" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="2585702205164515871" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Although only y is set, x's sync cannot be removed, since there is a path in the program where also the value of x's shared resource is modified (due to the alternating roles of argument values a and b in foo() above)." />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Although only y is set, x's sync cannot be removed, since there is a path in the program where also the value of x's shared resource is modified (due to the alternating roles of argument values a and b in main() above)." />
               </node>
             </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="2585702205162603445" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="2585702205162603451" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205162603455" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581386459382" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myX" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581386459384" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205162601184" resolveInfo="x" />
             </node>
           </node>
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="2585702205162603667" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205162603673" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581386472559" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myY" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581386472561" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205162602133" resolveInfo="y" />
             </node>
           </node>
@@ -194,8 +196,8 @@
                     <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                   </node>
                 </node>
-                <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205162604911" nodeInfo="ng">
-                  <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205162602133" resolveInfo="y" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581386483646" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581386472559" resolveInfo="myY" />
                 </node>
               </node>
             </node>

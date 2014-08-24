@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="-bax4zhxqvd97l59vktpd3aflvketak4">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
+  <common hash="84jpkzlbfyxr6tlfvli9to95fagj4fs">
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (q.quicksort_serial)" />
+    <file name="quicksort.c" />
+    <file name="quicksort.h" />
+    <file name="stdio" />
+    <file name="stdlib" />
+    <file name="time" />
+  </common>
+  <source id="8306718430232924459" name="stdlib" hash="-6obaqa99f7xypr732czk946eh7x1j0m" />
+  <source id="8306718430232922058" name="stdio" hash="4owfmcovfysjvtj76klpo0wnmga5cja" />
+  <source id="4515964250002377479" name="TypeSizeConfiguration (q.quicksort_serial)" hash="-5ohi5olvipie7os2gd50b7rl8km70te" />
+  <source id="4515964250002377344" name="quicksort" hash="-77bt8z9zoq04ta32kdbdojnk7m70dcs" />
+  <source id="4515964250002377622" name="BuildConfiguration (q.quicksort_serial)" hash="b27qhstfekq25q4huvgqbx1dg6xgfgt" />
+  <source id="5721544581392359185" name="time" hash="82b0w7b7s48z9iup46s80lc833ruka2" />
+</dependencies>
+

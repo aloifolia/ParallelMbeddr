@@ -3,10 +3,9 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/NewLanguage/TasksAndSyncs.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/GenerationExamples/GenerationExamples.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/TasksTest/TasksTest.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/basictests/basictests.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/scenarios/scenarios.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/tryouts/tryouts.msd" folder="" />
     </projectModules>
   </component>
 </project>

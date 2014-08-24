@@ -43,16 +43,22 @@ int32_t main(int32_t argc, char* argv[])
    * since j points to i their sync ressources are equal
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
   {
-    recursive_lock_forward(j);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myJ = j;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(myJ)->mutex);
+    {
+      recursive_lock_forward(myJ);
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(myJ)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
-  GenericSyncDeclarations_startSyncFor1Mutex(&(&i)->mutex);
   {
-    recursive_lock_forward(&i);
+    GenericSharedDeclarations_SharedOf_int32_0_t* andI = &i;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(andI)->mutex);
+    {
+      recursive_lock_forward(&i);
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(andI)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(&i)->mutex);
   return 0;
 }
 
@@ -69,7 +75,10 @@ static void recursive_lock_lock(GenericSharedDeclarations_SharedOf_int32_0_t* va
    */
 
   {
-    value2->value = 5;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myValue2 = value2;
+    {
+      myValue2->value = 5;
+    }
   }
 }
 
@@ -83,16 +92,22 @@ static void recursive_lock_lockCaller(void)
    * same reasoning as in main()
    */
 
-  GenericSyncDeclarations_startSyncFor1Mutex(&(&i)->mutex);
   {
-    recursive_lock_lock(j);
+    GenericSharedDeclarations_SharedOf_int32_0_t* andI = &i;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(andI)->mutex);
+    {
+      recursive_lock_lock(j);
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(andI)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(&i)->mutex);
-  GenericSyncDeclarations_startSyncFor1Mutex(&(j)->mutex);
   {
-    recursive_lock_forward(&i);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myJ = j;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(myJ)->mutex);
+    {
+      recursive_lock_forward(&i);
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(myJ)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(j)->mutex);
   pthread_mutex_destroy(&i.mutex);
 }
 

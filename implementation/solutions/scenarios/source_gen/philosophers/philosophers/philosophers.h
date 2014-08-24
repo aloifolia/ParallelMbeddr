@@ -12,6 +12,8 @@
 
 #include <stdlib.h>
 
+#include <sys/time.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -21,8 +23,6 @@
 #include "philosophers_SharedTypes_0.h"
 
 #include <pthread.h>
-
-#include <time.h>
 
 
 

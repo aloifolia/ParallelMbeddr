@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-85da4zm7jrtlppy792kryc4jpx3zbqg">
-  <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="-3qmy7cun3wnoai302eea1tk9slwfi35">
+  <dep model="5a80169e-0871-4433-9030-1139cb1fc047/r:5280339e-b2ce-41ff-b50b-a9a7a4d8937c(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-43msb93gvlxy6w6ghdy79rnyp7a5bpm" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="a093abvs75rxhxzum221ov4yjozkaco" />
   <common hash="-7nvzka2lcabh1lvsod42yboztw172pe">
-    <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+    <dep model="5a80169e-0871-4433-9030-1139cb1fc047/r:5280339e-b2ce-41ff-b50b-a9a7a4d8937c(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
     <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
@@ -22,7 +22,7 @@
     <file name="readonly_lock.c" />
     <file name="readonly_lock.h" />
   </common>
-  <source id="2585702205164556735" name="readonly_lock" hash="-5cz38ygoxz23n35rrpk4n9207xyvbwc" />
+  <source id="2585702205164556735" name="readonly_lock" hash="-6hdkiu79z1x5dole43urve1ohcl3zyg" />
   <source id="2585702205164556796" name="BuildConfiguration (l.r.partial2)" hash="-eaupkjp39t1e5lqh7n1aqm08xs8jfqg" />
 </dependencies>
 

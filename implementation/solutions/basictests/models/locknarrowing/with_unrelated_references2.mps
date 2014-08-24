@@ -160,7 +160,7 @@
                   <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="8220307879105787820" nodeInfo="ng">
                     <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="8220307879105787821" nodeInfo="ng">
                       <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="8220307879105787822" nodeInfo="ng">
-                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="The following statement can be shifted one level upwards, since it does not contain a reference to x" />
+                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="The following statement could be shifted one level upwards, since it does not contain a reference to x.\nHowever, due to the intra-procedural pointer analysis, the optimizer cannot distinguish the aliases of the following call from those of the other call." />
                       </node>
                     </node>
                   </node>
@@ -217,7 +217,29 @@
       <property name="name" nameId="tpck.1169194664001" value="doHeavyWork" />
       <property name="exported" nameId="x27k.1317894735999272944" value="false" />
       <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="8220307879105633086" nodeInfo="ng">
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="8220307879105633087" nodeInfo="ng" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="5721544581361336582" nodeInfo="ng">
+          <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5721544581361336584" nodeInfo="ng">
+            <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5721544581361343873" nodeInfo="ng">
+              <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="5721544581361343917" nodeInfo="ng">
+                <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedSet" typeId="6i3o.3570654511858570918" id="5721544581361345277" nodeInfo="ng">
+                  <node role="value" roleId="6i3o.3570654511858679851" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="5721544581361349973" nodeInfo="ng">
+                    <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+                    <property name="value" nameId="mj1l.2212975673976043696" value="5" />
+                  </node>
+                </node>
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581361343872" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581361336674" resolveInfo="myValue" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581361336674" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myValue" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581361336686" nodeInfo="ng">
+              <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="8220307879105633089" resolveInfo="value" />
+            </node>
+          </node>
+        </node>
       </node>
       <node role="type" roleId="mj1l.318113533128716676" type="mj1l.VoidType" typeId="mj1l.7892328519581699353" id="8220307879105633088" nodeInfo="ng">
         <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />

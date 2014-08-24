@@ -104,7 +104,6 @@ public class ModuleBuilder {
 
 
   public static void importModule(final SNode moduleToImport, final SNode target) {
-    System.out.println("import " + moduleToImport + " into " + target);
     if (moduleToImport == target) {
       return;
     }
@@ -122,7 +121,6 @@ public class ModuleBuilder {
     })) {
       return;
     }
-    System.out.println("imports of moduleToImport: " + SNodeOperations.ofConcept(SLinkOperations.getTargets(moduleToImport, "imports", true), "com.mbeddr.core.base.structure.DefaultGenericChunkDependency"));
 
     SNode newImport = SConceptOperations.createNewNode("com.mbeddr.core.base.structure.DefaultGenericChunkDependency", null);
     SLinkOperations.setTarget(newImport, "chunk", moduleToImport, false);

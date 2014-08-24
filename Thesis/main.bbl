@@ -1,7 +1,17 @@
 \begin{thebibliography}{10}
 
+\bibitem{mbeddr}
+mbeddr, engineering the future of embedded software.
+\newblock \url{http://mbeddr.com/}.
+\newblock Accessed: 2014-08-24.
+
 \bibitem{OpenMP}
 {\em OpenMP Application Program Interface,}, version 4.0 edition.
+
+\bibitem{RustDocumentation}
+Rust documentation: Struct sync::mutex.
+\newblock \url{http://doc.rust-lang.org/sync/struct.Mutex.html}.
+\newblock Accessed: 2014-08-24.
 
 \bibitem{Mutexes}
 {The Open Group} pthread\_mutex\_destroy, pthread\_mutex\_init - destroy and
@@ -9,6 +19,10 @@
 \newblock
   \url{http://pubs.opengroup.org/onlinepubs/009695399/functions/pthread\_mutex_destroy.html}.
 \newblock Accessed: 2014-07-15.
+
+\bibitem{LeveragingTheBenefits}
+Leveraging the benefits of symmetric multiprocessing (smp) in mobile devices.
+\newblock Texas Instruments, 2009.
 
 \bibitem{StaticAnalysesForJava}
 Jonathan Aldrich, Craig Chambers, Emin~Gun Sirer, and Susan Eggers.
@@ -20,6 +34,13 @@ Jonathan Aldrich, Craig Chambers, Emin~Gun Sirer, and Susan Eggers.
 A.~Alexandrescu.
 \newblock {\em The D Programming Language}.
 \newblock Pearson Education, 2010.
+
+\bibitem{ConcurrencyInTheDProgrammingLanguage}
+Andrei Alexandrescu.
+\newblock Concurrency in the d programming language.
+\newblock
+  \url{http://www.informit.com/articles/article.aspx?p=1609144&seqNum=15}.
+\newblock Published: 2010-07-06.
 
 \bibitem{Amdahl}
 Gene~M. Amdahl.
@@ -100,6 +121,14 @@ I.A. Dhotre.
 \newblock {\em Operating Systems}.
 \newblock Technical Publications, 2007.
 
+\bibitem{MulticoreChallenges}
+Tomas Evensen.
+\newblock Multicore challenges and choices: Deciding which solution is right
+  for you.
+\newblock
+  \url{http://leadwise.mediadroit.com/files/8537WP\_Deciding\_which\_multicore\_solution\_is\_right\_June2009.pdf}.
+\newblock Published: 2009.
+
 \bibitem{LanguageWorkbenches}
 Martin Fowler.
 \newblock Language workbenches: The killer-app for domain specific languages?
@@ -161,10 +190,26 @@ C.~A.~R. Hoare.
 \newblock Communicating sequential processes.
 \newblock {\em Commun. ACM}, 21(8):666--677, August 1978.
 
+\bibitem{ParallelProgrammerProductivity}
+Lorin Hochstein, Jeffrey Carver, Forrest Shull, Sima Asgari, Victor Basili,
+  Jeffrey~K Hollingsworth, and Marvin~V Zelkowitz.
+\newblock Parallel programmer productivity: A case study of novice parallel
+  programmers.
+\newblock In {\em Supercomputing, 2005. Proceedings of the ACM/IEEE SC 2005
+  Conference}, pages 35--35. IEEE, 2005.
+
 \bibitem{TamingJavaThreads}
 A.~Holub.
 \newblock {\em Taming Java Threads}.
 \newblock Apresspod Series. Apress, 2000.
+
+\bibitem{CPUScaling}
+Joel Hruska.
+\newblock The death of cpu scaling: From one core to many - and why we're still
+  stuck.
+\newblock
+  \url{http://www.extremetech.com/computing/116561-the-death-of-cpu-scaling-from-one-core-to-many-and-why-were-still-stuck}.
+\newblock Published: 2012-02-01.
 
 \bibitem{FastAndDeterministicHashTable}
 Kun Huang, Gaogang Xie, Rui Li, and Shuai Xiong.
@@ -282,6 +327,13 @@ J.~Shirazi.
 \newblock {\em Java Performance Tuning}.
 \newblock Java Series. O'Reilly Media, Incorporated, 2003.
 
+\bibitem{LocalizingGlobalsAndStatics}
+Adam~R Smith and Prasad~A Kulkarni.
+\newblock Localizing globals and statics to make c programs thread-safe.
+\newblock In {\em Proceedings of the 14th international conference on
+  Compilers, architectures and synthesis for embedded systems}, pages 205--214.
+  ACM, 2011.
+
 \bibitem{GeneratorUserGuide}
 Konstantin Solomatov and Vaclav Pech.
 \newblock {JetBRAINS} generator user guide.
@@ -304,6 +356,20 @@ Sven Stork, Paulo Marques, and Jonathan Aldrich.
 \bibitem{ParaSailReferenceManual}
 S.~Tucker Taft.
 \newblock {\em ParaSail Reference Manual - Draft}.
+
+\bibitem{ParaSailLessIsMore}
+Tucker Taft.
+\newblock Parasail: Less is more with multicore.
+\newblock
+  \url{http://www.embedded.com/design/programming-languages-and-tools/4375616/1/ParaSail--Less-is-more-with-multicore}.
+\newblock Published: 2012-06-19.
+
+\bibitem{APointerFreePath}
+Tucker Taft.
+\newblock A pointer-free path to object-oriented parallel programming.
+\newblock
+  \url{http://parasail-programming-language.blogspot.de/2012/08/a-pointer-free-path-to-object-oriented.html}.
+\newblock Published: 2012-08-01.
 
 \bibitem{GenericTools_SpecificLanguages}
 Markus V{\"o}lter.

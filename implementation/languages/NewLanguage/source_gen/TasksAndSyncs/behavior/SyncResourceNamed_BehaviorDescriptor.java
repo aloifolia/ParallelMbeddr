@@ -24,6 +24,10 @@ public class SyncResourceNamed_BehaviorDescriptor extends SyncResource_BehaviorD
     return INamedConcept_Behavior.virtual_getFqName_1213877404258(thisNode);
   }
 
+  public String virtual_getPresentation_1213877396640(SNode thisNode) {
+    return SyncResourceNamed_Behavior.virtual_getPresentation_1213877396640(thisNode);
+  }
+
   public String virtual_qualifiedName_5470497459578244269(SNode thisNode) {
     return IIdentifierNamedConcept_Behavior.virtual_qualifiedName_5470497459578244269(thisNode);
   }

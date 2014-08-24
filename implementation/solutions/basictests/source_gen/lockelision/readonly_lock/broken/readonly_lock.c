@@ -26,8 +26,7 @@ int32_t main(int32_t argc, char* argv[])
   readonly_lock_taskInit_a2a0(iPointer);
   
   /* 
-   * the pointer analysis is not context-sensitive which is why the safe read-only locks cannot be
-   * safely removed
+   * The optimization algorithm does not differentiate among the different states of a single shared resource why the safe read-only locks cannot be removed.
    */
 
   GenericSyncDeclarations_startSyncFor1Mutex(&(i).mutex);

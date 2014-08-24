@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependencies version="2" modelHash="226786wquxb3erat8qarbqem1o7gmo1">
+  <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
+  <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
+  <common hash="-c2pt1xpflm4xqgsqzkarhwq0zqr91lu">
+    <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
+    <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" />
+    <file name="Makefile" />
+    <file name="TypeSizeConfiguration (t.use_me)" />
+    <file name="use_me.c" />
+    <file name="use_me.h" />
+  </common>
+  <source id="1459238251334582430" name="BuildConfiguration (t.use_me)" hash="-5izpj4ko0us1mpai1rhah7kiwyy9t6s" />
+  <source id="1459238251334582577" name="use_me" hash="-d7w1923hyvznt1gvctlkcoxc0q01w5n" />
+</dependencies>
+

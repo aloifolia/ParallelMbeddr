@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dependenciesRoot>
+  <dependency className="tryouts.use_me.Makefile" file="Makefile" />
+  <dependency className="tryouts.use_me.TypeSizeConfiguration (t.use_me)" file="TypeSizeConfiguration (t.use_me)" />
+  <dependency className="tryouts.use_me.use_me" file="use_me.c" />
+  <dependency className="tryouts.use_me.use_me" file="use_me.h" />
+</dependenciesRoot>
+

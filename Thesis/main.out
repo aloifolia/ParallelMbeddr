@@ -25,9 +25,9 @@
 \BOOKMARK [2][-]{subsection.3.4.6}{Overwriting Pointers to Shared Resources}{section.3.4}% 25
 \BOOKMARK [0][-]{chapter.4}{Optimization}{}% 26
 \BOOKMARK [1][-]{section.4.1}{Space Optimization}{chapter.4}% 27
-\BOOKMARK [1][-]{section.4.2}{Time Optimizations}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Time Optimization}{chapter.4}% 28
 \BOOKMARK [2][-]{subsection.4.2.1}{Pointer Analysis}{section.4.2}% 29
-\BOOKMARK [2][-]{subsection.4.2.2}{Opportunities}{section.4.2}% 30
+\BOOKMARK [2][-]{subsection.4.2.2}{Optimization Opportunities}{section.4.2}% 30
 \BOOKMARK [2][-]{subsection.4.2.3}{Performed Optimizations}{section.4.2}% 31
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 32
 \BOOKMARK [1][-]{section.5.1}{Optimization}{chapter.5}% 33
@@ -38,4 +38,5 @@
 \BOOKMARK [2][-]{subsection.5.2.4}{D}{section.5.2}% 38
 \BOOKMARK [2][-]{subsection.5.2.5}{Java}{section.5.2}% 39
 \BOOKMARK [2][-]{subsection.5.2.6}{Rust}{section.5.2}% 40
-\BOOKMARK [0][-]{section*.28}{Bibliography}{}% 41
+\BOOKMARK [0][-]{chapter.6}{Summary}{}% 41
+\BOOKMARK [0][-]{section*.28}{Bibliography}{}% 42

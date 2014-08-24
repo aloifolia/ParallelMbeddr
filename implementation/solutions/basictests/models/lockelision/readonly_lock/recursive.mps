@@ -176,7 +176,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035169609958" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035169609959" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035169609960" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Since var2 is never shared, an optimized callee variant will be called." />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Since var2 is never written, an optimized callee variant will be called." />
               </node>
             </node>
           </node>
@@ -285,24 +285,27 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035169609995" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035169609996" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035169609997" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z is written (see below), x is written for the calls callee(&amp;var1) and callee(zPointer), y is readonly" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z is written (see below)\nx -&gt; callee(&amp;var1):    written + shared\n  -&gt; callee(&amp;var2):              shared (read-only)              =&gt; use modified callee_0 for this call\n  -&gt; callee(yPointer):                  (read-only, single-task) =&gt; use modified callee_0 for this call\n  -&gt; callee(zPointer): written + shared\ny is single-task =&gt; can directly be removed" />
               </node>
             </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="4503193035169609998" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035169609999" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035169610000" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581368431816" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myXPointer" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581368431818" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035169609971" resolveInfo="xPointer" />
             </node>
           </node>
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035169610001" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169610002" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581368448371" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myYPointer" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5721544581368448373" nodeInfo="ng">
               <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609979" resolveInfo="yPointer" />
             </node>
           </node>
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035169610003" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169610004" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581368468198" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myZPointer" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5721544581368468200" nodeInfo="ng">
               <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609988" resolveInfo="zPointer" />
             </node>
           </node>
@@ -310,24 +313,24 @@
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035169610006" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="4503193035169610007" nodeInfo="ng">
                 <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedGet" typeId="6i3o.1924594752095502558" id="4503193035169710573" nodeInfo="ng" />
-                <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035169610010" nodeInfo="ng">
-                  <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035169609971" resolveInfo="xPointer" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581368488433" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581368431816" resolveInfo="myXPointer" />
                 </node>
               </node>
             </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035169610011" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="4503193035169610012" nodeInfo="ng">
                 <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedGet" typeId="6i3o.1924594752095502558" id="4503193035169716304" nodeInfo="ng" />
-                <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169610015" nodeInfo="ng">
-                  <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609979" resolveInfo="yPointer" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581368495089" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581368448371" resolveInfo="myYPointer" />
                 </node>
               </node>
             </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035169610016" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="4503193035169610017" nodeInfo="ng">
                 <node role="target" roleId="mj1l.7034214596252529803" type="6i3o.SharedGet" typeId="6i3o.1924594752095502558" id="4503193035169721793" nodeInfo="ng" />
-                <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169610020" nodeInfo="ng">
-                  <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609988" resolveInfo="zPointer" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581368502491" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581368468198" resolveInfo="myZPointer" />
                 </node>
               </node>
             </node>
@@ -337,14 +340,15 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035169610022" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035169610023" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035169610024" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z, and with it x in the follwing calls, is shared with another task =&gt; z must be synced, but x only for the second following call" />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="z, and with it x in the following calls, is shared with another task =&gt; z must be synced" />
               </node>
             </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="4503193035169766211" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035169767130" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169767240" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581368509325" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myZPointer" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5721544581368509327" nodeInfo="ng">
               <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609988" resolveInfo="zPointer" />
             </node>
           </node>
@@ -357,8 +361,8 @@
                     <property name="value" nameId="mj1l.2212975673976043696" value="1" />
                   </node>
                 </node>
-                <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035169783701" nodeInfo="ng">
-                  <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035169609988" resolveInfo="zPointer" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581368529428" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581368509325" resolveInfo="myZPointer" />
                 </node>
               </node>
             </node>
@@ -368,7 +372,7 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="4503193035169941878" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="4503193035169941879" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="4503193035169941880" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="The removal of the following line would cause a deletion of zPointer's locks, hence both following calls would be mapped to calls of the variant of callee which does not synchronize anything." />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="The removal of the following line would cause a deletion of zPointer's locks, hence both following calls would be mapped to calls of a variant of callee which does not synchronize anything." />
               </node>
             </node>
           </node>

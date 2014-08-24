@@ -1,4 +1,5 @@
 \chapter{Design and Translation}
+\label{design_translation}
 In this chapter, the extension of mbeddr for parallel programming, called ParallelMbeddr, is introduced. To this end, the new language features for C are explained, each in terms of their design and the translation to plain mbeddr C code.\footnote{For the sake of legibility, the syntax of the generated mbeddr code is depicted in a simplified manner where deemed necessary.} In order to illustrate the presented features, a running example is incrementally built. Further examples are depicted whenever the running example does not provide the right structure to clarify a feature. At the end of this chapter, the measures implemented to make the extension sufficiently thread-safe\footnote{Data-races should be prevented, as well as it possible. However, the user always has the opportunity to introduce data races if his requested synchronizations for the modifications of data, which is used by multiple units of execution, do not take account of the implicit data dependencies of variables.} are explained.
 
 \input{content/notation}

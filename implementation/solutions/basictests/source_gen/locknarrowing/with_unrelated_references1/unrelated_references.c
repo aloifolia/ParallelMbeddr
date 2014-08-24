@@ -39,6 +39,10 @@ int32_t main(int32_t argc, char* argv[])
 
   {
     {
+      /* 
+       * x is not accessed in doHeavyWork => shift outside sync(x){...}
+       */
+
       unrelated_references_doHeavyWork(&x);
       GenericSyncDeclarations_startSyncFor1Mutex(&(x).mutex);
       {
@@ -46,7 +50,7 @@ int32_t main(int32_t argc, char* argv[])
       }
       GenericSyncDeclarations_stopSyncFor1Mutex(&(x).mutex);
       /* 
-       * y is unrelated to x => the following line will be shifted outside sync(x){...}.
+       * y is not accessed in doHeavyWork => the following line will be shifted outside sync(x){...}.
        */
 
       unrelated_references_doHeavyWork(&y);

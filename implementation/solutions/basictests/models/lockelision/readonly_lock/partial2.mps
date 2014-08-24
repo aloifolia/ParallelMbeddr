@@ -154,19 +154,21 @@
           <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="2585702205164556769" nodeInfo="ng">
             <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="2585702205164556770" nodeInfo="ng">
               <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="2585702205164556771" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Although only y is set, x's sync cannot be removed, because it's shared resource is written in a subsequent call of foo() via y. Therefore it must generally be synchronized.\n=&gt; Improvement is possible: Only synchronize x if x is written in one task and accessed in another. Prove this by making use of the task seperated dataflow graph." />
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Although only y is set at first sight, x's sync cannot be removed, because its shared resource is written in a subsequent call of foo() via y. Therefore it must generally be synchronized.\n=&gt; Improvement would be possible: Only synchronize x if x is written in one task and accessed in another. Prove      this by making use of the task separated dataflow graph." />
               </node>
             </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="2585702205164556772" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="2585702205164556773" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205164556774" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581386358861" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myX" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581386358863" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205164556788" resolveInfo="x" />
             </node>
           </node>
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="2585702205164556775" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205164556776" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581386370958" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myY" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581386370960" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205164556792" resolveInfo="y" />
             </node>
           </node>
@@ -179,8 +181,8 @@
                     <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                   </node>
                 </node>
-                <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="2585702205164556782" nodeInfo="ng">
-                  <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="2585702205164556792" resolveInfo="y" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581386393122" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581386370958" resolveInfo="myY" />
                 </node>
               </node>
             </node>

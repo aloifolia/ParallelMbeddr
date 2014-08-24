@@ -102,6 +102,15 @@
                 </node>
               </node>
               <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="8220307879074842304" nodeInfo="ng">
+                <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581361325898" nodeInfo="ng">
+                  <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581361325900" nodeInfo="ng">
+                    <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581361325901" nodeInfo="ng">
+                      <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581361325902" nodeInfo="ng">
+                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="x is not accessed in doHeavyWork =&gt; shift outside sync(x){...}" />
+                      </node>
+                    </node>
+                  </node>
+                </node>
                 <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="8220307879074842305" nodeInfo="ng">
                   <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="8220307879074842306" nodeInfo="ng">
                     <link role="function" roleId="x27k.5950410542643524493" targetNodeId="8220307879074842324" resolveInfo="doHeavyWork" />
@@ -129,7 +138,7 @@
                   <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="8220307879105779038" nodeInfo="ng">
                     <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="8220307879105779039" nodeInfo="ng">
                       <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="8220307879105779040" nodeInfo="ng">
-                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="y is unrelated to x =&gt; the following line will be shifted outside sync(x){...}." />
+                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="y is not accessed in doHeavyWork =&gt; the following line will be shifted outside sync(x){...}." />
                       </node>
                     </node>
                   </node>

@@ -3,10 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <sys/time.h>
 #include "GenericTaskDeclarations.h"
 #include "GenericSharedDeclarations.h"
 #include "GenericSyncDeclarations.h"
 #include "philosophers_SharedTypes_0.h"
+#include <time.h>
 #include <stdlib.h>
 
 typedef int32_t philosophers_Fork;
@@ -47,11 +49,13 @@ static void philosophers_initPhilosophers(philosophers_SharedTypes_0_SharedOf_Ph
   {
     {
       philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* philosopher = &philosophers[__i];
+      GenericSyncDeclarations_startSyncFor1Mutex(&(philosopher)->mutex);
       {
         philosopher->value.id = __i;
         philosopher->value.leftFork = &forks[__i];
         philosopher->value.rightFork = &forks[(__i + 1) % PHILOSOPHERS_philosopherCount];
       }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(philosopher)->mutex);
     }
   }
 }
@@ -81,19 +85,22 @@ static void philosophers_eat(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t
   for ( int8_t __i = 0; __i < PHILOSOPHERS_mealCount; __i++ )
   {
     {
+      philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* myPhilosopher = philosopher;
+      GenericSyncDeclarations_startSyncFor1Mutex(&(myPhilosopher)->mutex);
       {
-        GenericSharedDeclarations_SharedOf_int32_0_t* leftFork = philosopher->value.leftFork;
-        GenericSharedDeclarations_SharedOf_int32_0_t* rightFork = philosopher->value.rightFork;
         {
-          printf("(%d) starts eating\n", philosopher->value.id);
-          /* 
-           * TODO: make set work for typedefs!
-           */
-
-          philosophers_wait(PHILOSOPHERS_eatingDurationInNs);
-          printf("(%d) stops eating\n", philosopher->value.id);
+          GenericSharedDeclarations_SharedOf_int32_0_t* leftFork = myPhilosopher->value.leftFork;
+          GenericSharedDeclarations_SharedOf_int32_0_t* rightFork = myPhilosopher->value.rightFork;
+          GenericSyncDeclarations_startSyncFor2Mutexes(&(leftFork)->mutex, &(rightFork)->mutex);
+          {
+            printf("(%d) starts eating\n", myPhilosopher->value.id);
+            philosophers_wait(PHILOSOPHERS_eatingDurationInNs);
+            printf("(%d) stops eating\n", myPhilosopher->value.id);
+          }
+          GenericSyncDeclarations_stopSyncFor2Mutexes(&(leftFork)->mutex, &(rightFork)->mutex);
         }
       }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(myPhilosopher)->mutex);
     }
     /* 
      * think...
@@ -105,8 +112,8 @@ static void philosophers_eat(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t
 
 static void philosophers_wait(int32_t durationInNs) 
 {
-  struct timespec eatingDuration = (struct timespec) { .tv_nsec =durationInNs};
-  nanosleep(&eatingDuration,0);
+  struct timespec sleepingTime = (struct timespec){ .tv_nsec =durationInNs};
+  nanosleep(&sleepingTime, 0);
 }
 
 static void* philosophers_parFun_a0a3a1a9(void* voidArgs) 

@@ -42,9 +42,13 @@ static void lock_ellision_writer3(GenericSharedDeclarations_SharedOf_int32_0_t* 
 
 static void lock_ellision_synchronizer(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4);
 
+static void lock_ellision_synchronizer_0(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4);
+
 static void lock_ellision_writer1_0(GenericSharedDeclarations_SharedOf_int32_0_t* varA1, GenericSharedDeclarations_SharedOf_int32_0_t* varA2, GenericSharedDeclarations_SharedOf_int32_0_t* varA3, GenericSharedDeclarations_SharedOf_int32_0_t* varA4);
 
-static void lock_ellision_synchronizer_0(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4);
+static void lock_ellision_synchronizer_1(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4);
+
+static void lock_ellision_synchronizer_2(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4);
 
 static void* lock_ellision_parFun_a9a1(void* voidArgs);
 
@@ -96,6 +100,21 @@ static void lock_ellision_init(void)
   
   lock_ellision_writer1(&var1, &var2, &var3, &var4);
   lock_ellision_writer2(&var1, &var2, &var3, &var4);
+  
+  GenericSharedDeclarations_SharedOf_int32_0_t var11;
+  pthread_mutex_init(&var11.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t* var11Pointer = &var11;
+  GenericSharedDeclarations_SharedOf_int32_0_t var12;
+  pthread_mutex_init(&var12.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t* var12Pointer = &var12;
+  GenericSharedDeclarations_SharedOf_int32_0_t var13;
+  pthread_mutex_init(&var13.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t* var13Pointer = &var13;
+  GenericSharedDeclarations_SharedOf_int32_0_t var14;
+  pthread_mutex_init(&var14.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t* var14Pointer = &var14;
+  
+  lock_ellision_writer3(&var11, &var12, &var13, &var14);
   /* 
    * The following statement will change the performed optimizations...
    */
@@ -104,48 +123,62 @@ static void lock_ellision_init(void)
   pthread_mutex_destroy(&var2.mutex);
   pthread_mutex_destroy(&var3.mutex);
   pthread_mutex_destroy(&var4.mutex);
+  pthread_mutex_destroy(&var11.mutex);
+  pthread_mutex_destroy(&var12.mutex);
+  pthread_mutex_destroy(&var13.mutex);
+  pthread_mutex_destroy(&var14.mutex);
 }
 
 static void lock_ellision_writer1(GenericSharedDeclarations_SharedOf_int32_0_t* varA1, GenericSharedDeclarations_SharedOf_int32_0_t* varA2, GenericSharedDeclarations_SharedOf_int32_0_t* varA3, GenericSharedDeclarations_SharedOf_int32_0_t* varA4) 
 {
-  GenericSyncDeclarations_startSyncFor2Mutexes(&(varA1)->mutex, &(varA3)->mutex);
   {
-    varA1->value = 1;
-    varA3->value = 3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarA1 = varA1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarA3 = varA3;
+    GenericSyncDeclarations_startSyncFor2Mutexes(&(myVarA1)->mutex, &(myVarA3)->mutex);
+    {
+      myVarA1->value = 1;
+      myVarA3->value = 3;
+    }
+    GenericSyncDeclarations_stopSyncFor2Mutexes(&(myVarA1)->mutex, &(myVarA3)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor2Mutexes(&(varA1)->mutex, &(varA3)->mutex);
   /* 
    * varA1 and varA3 are obviously written, furthermore varA2 via varB2 in writer2(); varA4 is not written
    * => see conclusion in writer2()
    */
 
-  lock_ellision_synchronizer(varA1, varA2, varA3, varA4);
+  lock_ellision_synchronizer_2(varA1, varA2, varA3, varA4);
 }
 
 static void lock_ellision_writer2(GenericSharedDeclarations_SharedOf_int32_0_t* varB1, GenericSharedDeclarations_SharedOf_int32_0_t* varB2, GenericSharedDeclarations_SharedOf_int32_0_t* varB3, GenericSharedDeclarations_SharedOf_int32_0_t* varB4) 
 {
-  GenericSyncDeclarations_startSyncFor1Mutex(&(varB2)->mutex);
   {
-    varB2->value = 1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarB2 = varB2;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(myVarB2)->mutex);
+    {
+      myVarB2->value = 1;
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(myVarB2)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(varB2)->mutex);
   /* 
    * varB2 is shared; varB1 and varB3 are shared via varA1 and varA3 in writer1(); varB4 is not written.
    * => remove the lock for varC4 inside synchronizer() because no remaining call of synchronizer writes the shared resource of varC4.
    */
 
-  lock_ellision_synchronizer(varB1, varB2, varB3, varB4);
+  lock_ellision_synchronizer_0(varB1, varB2, varB3, varB4);
 }
 
 static void lock_ellision_writer3(GenericSharedDeclarations_SharedOf_int32_0_t* varD1, GenericSharedDeclarations_SharedOf_int32_0_t* varD2, GenericSharedDeclarations_SharedOf_int32_0_t* varD3, GenericSharedDeclarations_SharedOf_int32_0_t* varD4) 
 {
-  GenericSyncDeclarations_startSyncFor1Mutex(&(varD4)->mutex);
   {
-    varD4->value = 4;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarD4 = varD4;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(myVarD4)->mutex);
+    {
+      myVarD4->value = 4;
+    }
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(myVarD4)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor1Mutex(&(varD4)->mutex);
   /* 
-   * As varD4 is the only pointer to a shared and written shared resource a variant of writer1() is called which does not synchronize varA1 and varA3. This variant, in return will call a variant of synchronizer() which synchronizes
+   * As varD4 is the only pointer to a shared and written shared resource, a variant of writer1() is called which does not synchronize varA1 and varA3. This variant, in return will call a variant of synchronizer() which synchronizes
    * only varC4 as no other argument points to an actually shared(!) resource for the call inside the variant of writer1().
    */
 
@@ -156,42 +189,94 @@ static void lock_ellision_writer3(GenericSharedDeclarations_SharedOf_int32_0_t* 
 static void lock_ellision_synchronizer(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
 {
   {
-    GenericSyncDeclarations_startSyncFor3Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
     {
-      varC1->value;
-      varC2->value;
-      varC3->value;
+      myVarC1->value;
+      myVarC2->value;
+      myVarC3->value;
+      myVarC4->value;
     }
-    GenericSyncDeclarations_stopSyncFor3Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex);
-    varC4->value;
+  }
+}
+
+static void lock_ellision_synchronizer_0(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
+{
+  {
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
+    {
+      GenericSyncDeclarations_startSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      {
+        myVarC1->value;
+        myVarC2->value;
+        myVarC3->value;
+      }
+      GenericSyncDeclarations_stopSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      myVarC4->value;
+    }
   }
 }
 
 static void lock_ellision_writer1_0(GenericSharedDeclarations_SharedOf_int32_0_t* varA1, GenericSharedDeclarations_SharedOf_int32_0_t* varA2, GenericSharedDeclarations_SharedOf_int32_0_t* varA3, GenericSharedDeclarations_SharedOf_int32_0_t* varA4) 
 {
   {
-    varA1->value = 1;
-    varA3->value = 3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarA1 = varA1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarA3 = varA3;
+    {
+      myVarA1->value = 1;
+      myVarA3->value = 3;
+    }
   }
   /* 
    * varA1 and varA3 are obviously written, furthermore varA2 via varB2 in writer2(); varA4 is not written
    * => see conclusion in writer2()
    */
 
-  lock_ellision_synchronizer_0(varA1, varA2, varA3, varA4);
+  lock_ellision_synchronizer_1(varA1, varA2, varA3, varA4);
 }
 
-static void lock_ellision_synchronizer_0(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
+static void lock_ellision_synchronizer_1(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
 {
   {
-    varC1->value;
-    varC2->value;
-    varC3->value;
-    GenericSyncDeclarations_startSyncFor1Mutex(&(varC4)->mutex);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
     {
-      varC4->value;
+      myVarC1->value;
+      myVarC2->value;
+      myVarC3->value;
+      GenericSyncDeclarations_startSyncFor1Mutex(&(myVarC4)->mutex);
+      {
+        myVarC4->value;
+      }
+      GenericSyncDeclarations_stopSyncFor1Mutex(&(myVarC4)->mutex);
     }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(varC4)->mutex);
+  }
+}
+
+static void lock_ellision_synchronizer_2(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
+{
+  {
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
+    {
+      GenericSyncDeclarations_startSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      {
+        myVarC1->value;
+        myVarC2->value;
+        myVarC3->value;
+      }
+      GenericSyncDeclarations_stopSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      myVarC4->value;
+    }
   }
 }
 

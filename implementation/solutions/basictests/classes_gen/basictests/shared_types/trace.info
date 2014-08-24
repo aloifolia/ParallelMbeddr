@@ -76,9 +76,9 @@
     <nodeInfo nodeId="3271375101694360536" fileName="shared_types.c" startLine="13" startPosition="0" endLine="28" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="3271375101694360535" fileName="shared_types.c" startLine="12" startPosition="0" endLine="29" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="3271375101694360530" fileName="shared_types.h" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="basictests.shared_types.main" />
+    <nodeInfo nodeId="3271375101694370991" fileName="shared_types_SharedTypes_0.h" startLine="29" startPosition="39" endLine="29" endPosition="40" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="3271375101694372147" fileName="shared_types_SharedTypes_0.h" startLine="29" startPosition="42" endLine="29" endPosition="44" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="3271375101694370417" fileName="shared_types_SharedTypes_0.h" startLine="35" startPosition="39" endLine="35" endPosition="40" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="3271375101694370991" fileName="shared_types_SharedTypes_0.h" startLine="41" startPosition="39" endLine="41" endPosition="40" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="3271375101694372147" fileName="shared_types_SharedTypes_0.h" startLine="41" startPosition="42" endLine="41" endPosition="44" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="3271375101694360531" fileName="shared_types_SharedTypes_0.h" startLine="22" startPosition="0" endLine="25" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <unitInfo nodeId="3271375101694360530" fileName="shared_types.c" startLine="1" startPosition="0" endLine="37" endPosition="0" unitName="basictests.shared_types.shared_types" />
   </root>

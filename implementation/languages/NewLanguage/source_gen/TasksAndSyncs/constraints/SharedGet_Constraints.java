@@ -42,7 +42,7 @@ public class SharedGet_Constraints extends BaseConstraintsDescriptor {
       return true;
     }
     if (SNodeOperations.isInstanceOf(expressionType, "com.mbeddr.core.pointers.structure.PointerType")) {
-      return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(expressionType, "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType");
+      return SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(parentNode, "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true), "TasksAndSyncs.structure.SyncResourceRef");
     }
     return false;
   }

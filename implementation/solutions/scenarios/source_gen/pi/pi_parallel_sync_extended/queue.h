@@ -8,6 +8,8 @@
 
 #include <stdbool.h>
 
+#include <sys/time.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -15,8 +17,6 @@
 #include "GenericSyncDeclarations.h"
 
 #include "queue_SharedTypes_0.h"
-
-#include <time.h>
 
 
 

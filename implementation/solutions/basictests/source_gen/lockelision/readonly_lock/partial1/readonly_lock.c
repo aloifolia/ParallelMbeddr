@@ -49,14 +49,18 @@ int32_t main(int32_t argc, char* argv[])
 static void readonly_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* x, GenericSharedDeclarations_SharedOf_int32_0_t* y) 
 {
   /* 
-   * Although only y is set, x's sync cannot be removed, since there is a path in the program where also the value of x's shared resource is modified (due to the alternating roles of argument values a and b in foo() above).
+   * Although only y is set, x's sync cannot be removed, since there is a path in the program where also the value of x's shared resource is modified (due to the alternating roles of argument values a and b in main() above).
    */
 
-  GenericSyncDeclarations_startSyncFor2Mutexes(&(x)->mutex, &(y)->mutex);
   {
-    y->value = 5;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myX = x;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myY = y;
+    GenericSyncDeclarations_startSyncFor2Mutexes(&(myX)->mutex, &(myY)->mutex);
+    {
+      myY->value = 5;
+    }
+    GenericSyncDeclarations_stopSyncFor2Mutexes(&(myX)->mutex, &(myY)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor2Mutexes(&(x)->mutex, &(y)->mutex);
   readonly_lock_foo(x, y);
 }
 

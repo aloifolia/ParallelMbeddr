@@ -12,7 +12,7 @@
     <nodeInfo nodeId="5853110027233290263" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="5853110027233290270" fileName="SharedGet_Constraints.java" startLine="39" startPosition="5" endLine="40" endPosition="206" conceptFqName="jetbrains.mps.baseLanguage.structure.LocalVariableDeclarationStatement" />
     <nodeInfo nodeId="5853110027233290281" fileName="SharedGet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
-    <nodeInfo nodeId="5853110027233290289" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="5721544581328795625" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="228" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="5853110027233290301" fileName="SharedGet_Constraints.java" startLine="46" startPosition="5" endLine="47" endPosition="17" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="50" startPosition="0" endLine="51" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticFieldDeclaration" propertyString="canBeChildBreakingPoint" />
     <nodeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.ConstructorDeclaration" propertyString="SharedGet_Constraints#()V" />
@@ -28,7 +28,7 @@
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="29" startPosition="51" endLine="30" endPosition="67" />
     <scopeInfo nodeId="5853110027233290262" fileName="SharedGet_Constraints.java" startLine="37" startPosition="116" endLine="38" endPosition="19" />
     <scopeInfo nodeId="5853110027233290280" fileName="SharedGet_Constraints.java" startLine="41" startPosition="93" endLine="42" endPosition="18" />
-    <scopeInfo nodeId="5853110027233290288" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="213" />
+    <scopeInfo nodeId="5853110027233290288" fileName="SharedGet_Constraints.java" startLine="44" startPosition="105" endLine="45" endPosition="228" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="16" startPosition="0" endLine="19" endPosition="0" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="20" startPosition="0" endLine="24" endPosition="0" />
     <scopeInfo nodeId="1924594752095549307" fileName="SharedGet_Constraints.java" startLine="26" startPosition="200" endLine="33" endPosition="18">

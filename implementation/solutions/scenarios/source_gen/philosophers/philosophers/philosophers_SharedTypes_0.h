@@ -31,9 +31,9 @@ struct philosophers_SharedTypes_0_SharedOf_Philosopher_0 {
   philosophers_SharedTypes_0_Philosopher_t value;
 };
 
-void philosophers_SharedTypes_0_mutexInit_0(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* var, int32_t size_0);
-
 void philosophers_SharedTypes_0_mutexDestroy_0(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* var, int32_t size_0);
+
+void philosophers_SharedTypes_0_mutexInit_0(philosophers_SharedTypes_0_SharedOf_Philosopher_0_t* var, int32_t size_0);
 
 
 #ifdef __cplusplus

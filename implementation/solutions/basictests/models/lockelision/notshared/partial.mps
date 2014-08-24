@@ -13,6 +13,7 @@
   <import index="51wr" modelUID="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" version="1" implicit="yes" />
   <import index="vs0r" modelUID="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" version="25" implicit="yes" />
   <import index="k146" modelUID="r:5209fc71-bade-45c9-9079-f2d474f0d6ca(com.mbeddr.core.util.structure)" version="21" implicit="yes" />
+  <import index="87nw" modelUID="r:ca2ab6bb-f6e7-4c0f-a88c-b78b9b31fff3(de.slisson.mps.richtext.structure)" version="5" implicit="yes" />
   <root type="x27k.ImplementationModule" typeId="x27k.6437088627575722830" id="4503193035152414335" nodeInfo="ng">
     <property name="name" nameId="tpck.1169194664001" value="lock_ellision" />
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="4503193035152414336" nodeInfo="ng">
@@ -92,6 +93,14 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035064086243" nodeInfo="ng">
+          <node role="expr" roleId="c4fa.7254843406768833939" type="6i3o.Task" typeId="6i3o.1304213873204721600" id="4503193035064086239" nodeInfo="ng">
+            <node role="expression" roleId="6i3o.2744793885328637740" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035072659420" nodeInfo="ng">
+              <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035070965839" resolveInfo="aPointer" />
+            </node>
+          </node>
+        </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="5721544581367754922" nodeInfo="ng" />
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.LocalVariableDeclaration" typeId="c4fa.4185783222026475238" id="4503193035064083978" nodeInfo="ng">
           <property name="name" nameId="tpck.1169194664001" value="b" />
           <node role="type" roleId="mj1l.318113533128716676" type="6i3o.SharedType" typeId="6i3o.1924594752095321661" id="4503193035064083979" nodeInfo="ng">
@@ -103,10 +112,13 @@
             </node>
           </node>
         </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035064086243" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="6i3o.Task" typeId="6i3o.1304213873204721600" id="4503193035064086239" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.2744793885328637740" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035072659420" nodeInfo="ng">
-              <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035070965839" resolveInfo="aPointer" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="5721544581367755572" nodeInfo="ng" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581367999851" nodeInfo="ng">
+          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581367999853" nodeInfo="ng">
+            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581367999854" nodeInfo="ng">
+              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581367999855" nodeInfo="ng">
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="a shared =&gt; no optimization possible" />
+              </node>
             </node>
           </node>
         </node>
@@ -120,12 +132,30 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581368001223" nodeInfo="ng">
+          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581368001225" nodeInfo="ng">
+            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581368001226" nodeInfo="ng">
+              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581368001227" nodeInfo="ng">
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="b not shared =&gt; call optimized variant of synchronizer1()" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="4503193035072590512" nodeInfo="ng">
           <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="4503193035072590513" nodeInfo="ng">
             <link role="function" roleId="x27k.5950410542643524493" targetNodeId="4503193035064097689" resolveInfo="synchronizer1" />
             <node role="actuals" roleId="x27k.5950410542643524495" type="yq40.ReferenceExpr" typeId="yq40.1595838349830846141" id="4503193035072590514" nodeInfo="ng">
               <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="4503193035072594228" nodeInfo="ng">
                 <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="4503193035064083978" resolveInfo="b" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581368001937" nodeInfo="ng">
+          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581368001938" nodeInfo="ng">
+            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581368001939" nodeInfo="ng">
+              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581368001940" nodeInfo="ng">
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="b not shared and only argument =&gt; remove sync in synchronizer2()" />
               </node>
             </node>
           </node>
@@ -151,8 +181,9 @@
       <property name="exported" nameId="x27k.1317894735999272944" value="false" />
       <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="4503193035064097691" nodeInfo="ng">
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="4503193035064104218" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035064104224" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035064104228" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581367682375" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myVal" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581367682377" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035064102477" resolveInfo="val" />
             </node>
           </node>
@@ -165,8 +196,8 @@
                     <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                   </node>
                 </node>
-                <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035064104440" nodeInfo="ng">
-                  <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035064102477" resolveInfo="val" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581367715930" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581367682375" resolveInfo="myVal" />
                 </node>
               </node>
             </node>
@@ -213,8 +244,9 @@
       </node>
       <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="4503193035152332328" nodeInfo="ng">
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="4503193035152343201" nodeInfo="ng">
-          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="4503193035152343202" nodeInfo="ng">
-            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035152343203" nodeInfo="ng">
+          <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581367702966" nodeInfo="ng">
+            <property name="name" nameId="tpck.1169194664001" value="myVal" />
+            <node role="expression" roleId="6i3o.6553204290896504666" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="5721544581367702968" nodeInfo="ng">
               <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035152342911" resolveInfo="val" />
             </node>
           </node>
@@ -227,8 +259,8 @@
                     <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                   </node>
                 </node>
-                <node role="expression" roleId="mj1l.7254843406768839760" type="x27k.ArgumentRef" typeId="x27k.2093108837558505658" id="4503193035152343209" nodeInfo="ng">
-                  <link role="arg" roleId="x27k.2093108837558505659" targetNodeId="4503193035152342911" resolveInfo="val" />
+                <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581367712339" nodeInfo="ng">
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581367702966" resolveInfo="myVal" />
                 </node>
               </node>
             </node>

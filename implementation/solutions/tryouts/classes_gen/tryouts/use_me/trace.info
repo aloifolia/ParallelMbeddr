@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<debugInfo>
+  <root nodeRef="r:dc1bd21f-323a-4872-b9f3-e286ca056347(tryouts.use_me)/1459238251334582577">
+    <nodeInfo nodeId="1459238251334582581" fileName="use_me.c" startLine="7" startPosition="2" endLine="7" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
+    <nodeInfo nodeId="1459238251334582588" fileName="use_me.c" startLine="8" startPosition="2" endLine="8" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="1459238251334582589" fileName="use_me.c" startLine="8" startPosition="9" endLine="8" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="1459238251334582580" fileName="use_me.c" startLine="6" startPosition="0" endLine="9" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="1459238251334582578" fileName="use_me.c" startLine="5" startPosition="0" endLine="10" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
+    <nodeInfo nodeId="1459238251334582577" fileName="use_me.h" startLine="17" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="tryouts.use_me.main" />
+    <unitInfo nodeId="1459238251334582577" fileName="use_me.c" startLine="1" startPosition="0" endLine="11" endPosition="0" unitName="tryouts.use_me.use_me" />
+  </root>
+</debugInfo>
+

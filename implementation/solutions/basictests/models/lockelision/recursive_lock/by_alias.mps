@@ -76,8 +76,9 @@
                 </node>
               </node>
               <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="53264776286869742" nodeInfo="ng">
-                <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResource" typeId="6i3o.6553204290893807643" id="53264776286869743" nodeInfo="ng">
-                  <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="53264776286902625" nodeInfo="ng">
+                <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581328707787" nodeInfo="ng">
+                  <property name="name" nameId="tpck.1169194664001" value="myJ" />
+                  <node role="expression" roleId="6i3o.6553204290896504666" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5721544581328707789" nodeInfo="ng">
                     <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="53264776286891458" resolveInfo="j" />
                   </node>
                 </node>
@@ -90,8 +91,8 @@
                           <property name="value" nameId="mj1l.2212975673976043696" value="5" />
                         </node>
                       </node>
-                      <node role="expression" roleId="mj1l.7254843406768839760" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="53264776286904962" nodeInfo="ng">
-                        <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="53264776286891458" resolveInfo="j" />
+                      <node role="expression" roleId="mj1l.7254843406768839760" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="5721544581330460592" nodeInfo="ng">
+                        <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="5721544581328707787" resolveInfo="myJ" />
                       </node>
                     </node>
                   </node>

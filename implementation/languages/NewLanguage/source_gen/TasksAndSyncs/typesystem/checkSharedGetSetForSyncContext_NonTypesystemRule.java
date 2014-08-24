@@ -9,10 +9,11 @@ import jetbrains.mps.typesystem.inference.TypeCheckingContext;
 import jetbrains.mps.lang.typesystem.runtime.IsApplicableStatus;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SNodeOperations;
 import jetbrains.mps.lang.smodel.generator.smodelAdapter.SLinkOperations;
-import jetbrains.mps.internal.collections.runtime.ListSequence;
+import jetbrains.mps.typesystem.inference.TypeChecker;
 import jetbrains.mps.errors.messageTargets.MessageTarget;
 import jetbrains.mps.errors.messageTargets.NodeMessageTarget;
 import jetbrains.mps.errors.IErrorReporter;
+import jetbrains.mps.internal.collections.runtime.ListSequence;
 import jetbrains.mps.internal.collections.runtime.Sequence;
 import jetbrains.mps.smodel.behaviour.BehaviorReflection;
 import jetbrains.mps.smodel.SModelUtil_new;
@@ -27,6 +28,13 @@ public class checkSharedGetSetForSyncContext_NonTypesystemRule extends AbstractN
     if (SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedGet") || SNodeOperations.isInstanceOf(sharedGetOrSet, "TasksAndSyncs.structure.SharedSet")) {
       SNode sharedExpr = SLinkOperations.getTarget(SNodeOperations.cast(SNodeOperations.getParent(sharedGetOrSet), "com.mbeddr.core.expressions.structure.GenericDotExpression"), "expression", true);
       SNode possibleTaskContext = SNodeOperations.getAncestor(sharedExpr, "TasksAndSyncs.structure.Task", false, false);
+
+      if (!(SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncResourceRef")) && SNodeOperations.isInstanceOf(TypeChecker.getInstance().getTypeOf(sharedExpr), "com.mbeddr.core.pointers.structure.PointerType") && SNodeOperations.isInstanceOf(SLinkOperations.getTarget(SNodeOperations.cast(TypeChecker.getInstance().getTypeOf(sharedExpr), "com.mbeddr.core.pointers.structure.PointerType"), "baseType", true), "TasksAndSyncs.structure.SharedType")) {
+        {
+          MessageTarget errorTarget = new NodeMessageTarget();
+          IErrorReporter _reporter_2309309498 = typeCheckingContext.reportTypeError(sharedGetOrSet, "pointer to sync resource may not be set or get directly, use named resource via 'as'", "r:daf934de-3466-4fa8-a227-270fedb7e2f2(TasksAndSyncs.typesystem)", "5721544581328907905", null, errorTarget);
+        }
+      }
 
       if (SNodeOperations.isInstanceOf(sharedExpr, "TasksAndSyncs.structure.SyncResourceRef")) {
         if ((possibleTaskContext != null) && !(ListSequence.fromList(SNodeOperations.getAncestors(SLinkOperations.getTarget(SNodeOperations.cast(sharedExpr, "TasksAndSyncs.structure.SyncResourceRef"), "syncResource", false), null, false)).contains(possibleTaskContext))) {

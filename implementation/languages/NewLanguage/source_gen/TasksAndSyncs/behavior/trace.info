@@ -10,7 +10,7 @@
   <unitInfo fileName="SharedSet_BehaviorDescriptor.java" startLine="10" startPosition="0" endLine="31" endPosition="0" unitName="TasksAndSyncs.behavior.SharedSet_BehaviorDescriptor" />
   <unitInfo fileName="SharedType_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="25" endPosition="0" unitName="TasksAndSyncs.behavior.SharedType_BehaviorDescriptor" />
   <unitInfo fileName="StringUtils.java" startLine="6" startPosition="0" endLine="18" endPosition="0" unitName="TasksAndSyncs.behavior.StringUtils" />
-  <unitInfo fileName="SyncResourceNamed_BehaviorDescriptor.java" startLine="11" startPosition="0" endLine="40" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceNamed_BehaviorDescriptor" />
+  <unitInfo fileName="SyncResourceNamed_BehaviorDescriptor.java" startLine="11" startPosition="0" endLine="44" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceNamed_BehaviorDescriptor" />
   <unitInfo fileName="SyncResourceRef_BehaviorDescriptor.java" startLine="9" startPosition="0" endLine="22" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceRef_BehaviorDescriptor" />
   <unitInfo fileName="SyncResourceTest_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceTest_BehaviorDescriptor" />
   <unitInfo fileName="SyncResource_BehaviorDescriptor.java" startLine="8" startPosition="0" endLine="21" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResource_BehaviorDescriptor" />
@@ -243,12 +243,18 @@
     <unitInfo nodeId="8001979070750286545" fileName="TaskClear_Behavior.java" startLine="7" startPosition="0" endLine="15" endPosition="0" unitName="TasksAndSyncs.behavior.TaskClear_Behavior" />
   </root>
   <root nodeRef="r:4b8e59bc-9936-4691-b822-e0d380f2aa11(TasksAndSyncs.behavior)/8946379077063199056">
-    <nodeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
-    <scopeInfo nodeId="8946379077063199058" fileName="SyncResourceNamed_Behavior.java" startLine="8" startPosition="43" endLine="8" endPosition="43" />
-    <scopeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="8" startPosition="0" endLine="10" endPosition="0">
+    <nodeInfo nodeId="5721544581367160139" fileName="SyncResourceNamed_Behavior.java" startLine="12" startPosition="78" endLine="13" endPosition="59" conceptFqName="jetbrains.mps.baseLanguage.structure.ReturnStatement" />
+    <nodeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="9" startPosition="0" endLine="11" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="init#(Lorg/jetbrains/mps/openapi/model/SNode;)V" />
+    <nodeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="12" startPosition="0" endLine="15" endPosition="0" conceptFqName="jetbrains.mps.baseLanguage.structure.StaticMethodDeclaration" propertyString="virtual_getPresentation_1213877396640#(Lorg/jetbrains/mps/openapi/model/SNode;)Ljava/lang/String;" />
+    <scopeInfo nodeId="8946379077063199058" fileName="SyncResourceNamed_Behavior.java" startLine="9" startPosition="43" endLine="9" endPosition="43" />
+    <scopeInfo nodeId="5721544581367160138" fileName="SyncResourceNamed_Behavior.java" startLine="12" startPosition="78" endLine="13" endPosition="59" />
+    <scopeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="9" startPosition="0" endLine="11" endPosition="0">
       <varInfo nodeId="8946379077063199056" varName="thisNode" />
     </scopeInfo>
-    <unitInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="7" startPosition="0" endLine="11" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceNamed_Behavior" />
+    <scopeInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="12" startPosition="0" endLine="15" endPosition="0">
+      <varInfo nodeId="8946379077063199056" varName="thisNode" />
+    </scopeInfo>
+    <unitInfo nodeId="8946379077063199056" fileName="SyncResourceNamed_Behavior.java" startLine="8" startPosition="0" endLine="16" endPosition="0" unitName="TasksAndSyncs.behavior.SyncResourceNamed_Behavior" />
   </root>
 </debugInfo>
 

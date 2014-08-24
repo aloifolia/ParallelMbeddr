@@ -16,8 +16,6 @@
 
 #include "GenericSyncDeclarations.h"
 
-#include "testSync_SharedTypes_0.h"
-
 
 
 #ifdef __cplusplus

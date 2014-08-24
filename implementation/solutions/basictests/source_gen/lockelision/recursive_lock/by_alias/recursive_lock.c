@@ -32,7 +32,10 @@ int32_t main(int32_t argc, char* argv[])
        */
 
       {
-        j->value = 5;
+        GenericSharedDeclarations_SharedOf_int32_0_t* myJ = j;
+        {
+          myJ->value = 5;
+        }
       }
     }
   }

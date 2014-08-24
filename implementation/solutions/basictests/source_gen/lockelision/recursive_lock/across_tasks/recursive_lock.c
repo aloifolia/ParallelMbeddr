@@ -12,7 +12,9 @@ struct recursive_lock_Args_a0a1e0a {
   GenericSharedDeclarations_SharedOf_int32_0_t* myPointer;
 };
 
-static void recursive_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* value);
+static void recursive_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* value1);
+
+static void recursive_lock_bar(GenericSharedDeclarations_SharedOf_int32_0_t* value2);
 
 static void* recursive_lock_parFun_a0a1e0a(void* voidArgs);
 
@@ -43,7 +45,7 @@ int32_t main(int32_t argc, char* argv[])
   return 0;
 }
 
-static void recursive_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* value) 
+static void recursive_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* value1) 
 {
   /* 
    * Due to above argumentation, value is not synchronized at this point
@@ -51,12 +53,29 @@ static void recursive_lock_foo(GenericSharedDeclarations_SharedOf_int32_0_t* val
    */
 
   {
-    GenericSharedDeclarations_SharedOf_int32_0_t* myValue = value;
-    GenericSyncDeclarations_startSyncFor1Mutex(&(myValue)->mutex);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myValue1 = value1;
+    GenericSyncDeclarations_startSyncFor1Mutex(&(myValue1)->mutex);
     {
-      myValue->value = 5;
+      myValue1->value = 5;
+      recursive_lock_bar(value1);
+      recursive_lock_bar(myValue1);
     }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(myValue)->mutex);
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(myValue1)->mutex);
+  }
+}
+
+static void recursive_lock_bar(GenericSharedDeclarations_SharedOf_int32_0_t* value2) 
+{
+  /* 
+   * value is already synchronized because of the sync statement in foo()
+   * => sync resource will be removed
+   */
+
+  {
+    GenericSharedDeclarations_SharedOf_int32_0_t* myValue2 = value2;
+    {
+      myValue2->value = 5;
+    }
   }
 }
 

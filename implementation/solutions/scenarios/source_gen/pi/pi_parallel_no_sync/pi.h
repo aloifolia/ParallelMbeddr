@@ -8,6 +8,14 @@
 
 #include <stdbool.h>
 
+#include <sys/time.h>
+
+#include <stdio.h>
+
+#include <math.h>
+
+#include <stdlib.h>
+
 #include "GenericTaskDeclarations.h"
 
 #include "GenericSharedDeclarations.h"
@@ -20,9 +28,9 @@
 extern "C" {
 #endif
 
-#define PI_RANGESIZE (30000000)
-#define PI_RANGECOUNT (4)
-#define PI_THRESHOLD (PI_RANGESIZE * PI_RANGECOUNT)
+#define PI_BLOCKSIZE (30000000)
+#define PI_BLOCKCOUNT (4)
+#define PI_THRESHOLD (PI_BLOCKSIZE * PI_BLOCKCOUNT)
 #define PI_PI (3.1415926535897932384626)
 int32_t pi_main(int32_t argc, char* argv[]);
 

@@ -75,6 +75,16 @@ static void lock_ellision_init(void)
   pthread_mutex_init(&var4.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   lock_ellision_sharer1(&var1, &var2, &var3, &var4);
   lock_ellision_sharer2(&var1, &var2, &var3, &var4);
+  
+  GenericSharedDeclarations_SharedOf_int32_0_t var31;
+  pthread_mutex_init(&var31.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t var32;
+  pthread_mutex_init(&var32.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t var33;
+  pthread_mutex_init(&var33.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  GenericSharedDeclarations_SharedOf_int32_0_t var34;
+  pthread_mutex_init(&var34.mutex,&GenericSharedDeclarations_mutexAttribute_0);
+  lock_ellision_sharer3(&var31, &var32, &var33, &var34);
   /* 
    * The following statement will eliminate the possibility to copy synchronizer for sharer2
    * Reason: var4 will get shared in sharer3, and thus also the value that varB4 in sharer2 points to.
@@ -84,6 +94,10 @@ static void lock_ellision_init(void)
   pthread_mutex_destroy(&var2.mutex);
   pthread_mutex_destroy(&var3.mutex);
   pthread_mutex_destroy(&var4.mutex);
+  pthread_mutex_destroy(&var31.mutex);
+  pthread_mutex_destroy(&var32.mutex);
+  pthread_mutex_destroy(&var33.mutex);
+  pthread_mutex_destroy(&var34.mutex);
 }
 
 static void lock_ellision_sharer1(GenericSharedDeclarations_SharedOf_int32_0_t* varA1, GenericSharedDeclarations_SharedOf_int32_0_t* varA2, GenericSharedDeclarations_SharedOf_int32_0_t* varA3, GenericSharedDeclarations_SharedOf_int32_0_t* varA4) 
@@ -117,27 +131,39 @@ static void lock_ellision_sharer3(GenericSharedDeclarations_SharedOf_int32_0_t* 
 
 static void lock_ellision_synchronizer(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
 {
-  GenericSyncDeclarations_startSyncFor4Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex, &(varC4)->mutex);
   {
-    varC1->value = 1;
-    varC2->value = 2;
-    varC3->value = 3;
-    varC4->value = 4;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
+    GenericSyncDeclarations_startSyncFor4Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex, &(myVarC4)->mutex);
+    {
+      myVarC1->value = 1;
+      myVarC2->value = 2;
+      myVarC3->value = 3;
+      myVarC4->value = 4;
+    }
+    GenericSyncDeclarations_stopSyncFor4Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex, &(myVarC4)->mutex);
   }
-  GenericSyncDeclarations_stopSyncFor4Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex, &(varC4)->mutex);
 }
 
 static void lock_ellision_synchronizer_0(GenericSharedDeclarations_SharedOf_int32_0_t* varC1, GenericSharedDeclarations_SharedOf_int32_0_t* varC2, GenericSharedDeclarations_SharedOf_int32_0_t* varC3, GenericSharedDeclarations_SharedOf_int32_0_t* varC4) 
 {
   {
-    GenericSyncDeclarations_startSyncFor3Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex);
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC1 = varC1;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC2 = varC2;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC3 = varC3;
+    GenericSharedDeclarations_SharedOf_int32_0_t* myVarC4 = varC4;
     {
-      varC1->value = 1;
-      varC2->value = 2;
-      varC3->value = 3;
+      GenericSyncDeclarations_startSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      {
+        myVarC1->value = 1;
+        myVarC2->value = 2;
+        myVarC3->value = 3;
+      }
+      GenericSyncDeclarations_stopSyncFor3Mutexes(&(myVarC1)->mutex, &(myVarC2)->mutex, &(myVarC3)->mutex);
+      myVarC4->value = 4;
     }
-    GenericSyncDeclarations_stopSyncFor3Mutexes(&(varC1)->mutex, &(varC2)->mutex, &(varC3)->mutex);
-    varC4->value = 4;
   }
 }
 

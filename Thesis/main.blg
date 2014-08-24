@@ -27,8 +27,23 @@ I'm skipping whatever remains of this entry
  :   edition
  :          {February 16, 2014},
 I'm skipping whatever remains of this entry
+Warning--I'm ignoring CPUScaling's extra "note" field
+--line 557 of file content/literature.bib
+Warning--I'm ignoring MulticoreChallenges's extra "note" field
+--line 564 of file content/literature.bib
+Warning--I'm ignoring APointerFreePath's extra "note" field
+--line 599 of file content/literature.bib
+Warning--I'm ignoring ParaSailLessIsMore's extra "note" field
+--line 606 of file content/literature.bib
+Warning--I'm ignoring ConcurrencyInTheDProgrammingLanguage's extra "note" field
+--line 613 of file content/literature.bib
+Warning--to sort, need author or key in LeveragingTheBenefits
+Warning--to sort, need author or key in mbeddr
 Warning--to sort, need author or key in Mutexes
 Warning--to sort, need author, organization, or key in OpenMP
+Warning--to sort, need author or key in RustDocumentation
+Warning--empty author in LeveragingTheBenefits
+Warning--empty booktitle in LeveragingTheBenefits
 Warning--can't use both volume and number fields in ModularTypestateChecking
 Warning--empty publisher in DoJava6Threading
 Warning--empty year in DoJava6Threading

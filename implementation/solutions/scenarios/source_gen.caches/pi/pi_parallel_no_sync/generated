@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="-b2h2t306dl5l36xyt2fk75px9vtrzmu">
-  <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="2l1d71k90d9h3hgqgxv4vdhu7qgocou">
+  <dep model="550e6e6d-ad33-4962-b17a-d7dd2df6f532/r:0c3504d8-8664-4320-abef-a67d82b3134f(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
   <dep model="r:7db67fb8-d2c9-4e02-89e5-cbea9152661c(com.mbeddr.core.util.generator.template.main@generator)" hash="-2el814z2ug6opuxyox8bin040iaolsd" />
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="2tjo7spoq0b9ubdn36bitwt5i0a2wds" />
-  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-43msb93gvlxy6w6ghdy79rnyp7a5bpm" />
-  <common hash="-1j73z4e2qsj5i09sbbvoiz4q5nmzvwi">
-    <dep model="8773292d-be6a-4458-9a64-2ee7ccdbb4c0/r:a1d3dcd2-cf2b-4877-a608-2512e6850c89(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+  <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-6kn35up2ryuw13nqgoorn9t5z5hi0t1" />
+  <common hash="-7dns61lubni0jelcta5oznsb1egxq54">
+    <dep model="550e6e6d-ad33-4962-b17a-d7dd2df6f532/r:0c3504d8-8664-4320-abef-a67d82b3134f(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
@@ -23,11 +23,19 @@
     <file name="GenericTaskDeclarations.h" />
     <file name="Makefile" />
     <file name="TypeSizeConfiguration (p.pi_parallel_no_sync)" />
+    <file name="math" />
     <file name="pi.c" />
     <file name="pi.h" />
+    <file name="stdio" />
+    <file name="stdlib" />
+    <file name="time" />
   </common>
-  <source id="7341014709856383141" name="BuildConfiguration (p.pi_parallel_no_sync)" hash="-a72v1p68imnm1fbl7khg4uh3fvy8veh" />
+  <source id="7341014709856383141" name="BuildConfiguration (p.pi_parallel_no_sync)" hash="-dbw5s8bcf2sljvtky09mt0gnks0v4yt" />
   <source id="7341014709856383257" name="TypeSizeConfiguration (p.pi_parallel_no_sync)" hash="-3an9xj1l9slojxt2tq5jgqz37h7lw3a" />
-  <source id="7341014709856461060" name="pi" hash="blftzxjl8wuvcbcvr49xumqyss82myg" />
+  <source id="7341014709856461060" name="pi" hash="-6ooj3c41r2eb88frqukih3y5uufgmex" />
+  <source id="4470518958313861026" name="stdio" hash="1g9rq90pzmkkytckqi0sjz76zyg647l" />
+  <source id="5721544581392359185" name="time" hash="96hv6duub4smg6ggpeth1w1853wny34" />
+  <source id="5721544581403151914" name="math" hash="-1ule4mkw14t2lnbyyqjzgtr62z0xf4i" />
+  <source id="8306718430232924459" name="stdlib" hash="-6obaqa99f7xypr732czk946eh7x1j0m" />
 </dependencies>
 
