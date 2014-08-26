@@ -2082,7 +2082,7 @@
                   <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="9107941546567958966" nodeInfo="ng">
                     <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="9107941546567958967" nodeInfo="ng">
                       <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="9107941546567958968" nodeInfo="ng">
-                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="this is quite inefficient since only this thread will ever access the array;\nalso, resultQueue need not be locked since it is never changed from anywhere (but lock ellision\nshould not necessarily be done, in case other, more costly, locks could be avoided by keeping locks\nfor 'resultQueue')\n=&gt; lock ellsion for 'resultQueues' (and maybe 'resultQueue')" />
+                        <property name="escapedValue" nameId="87nw.2557074442922438158" value="this is quite inefficient since only this thread will ever access the array;\nalso, 'resultQueue' need not be locked since it is never changed from anywhere (but lock ellision\nshould not necessarily be done, in case other, more costly, locks could be avoided by keeping locks\nfor 'resultQueue')\n=&gt; lock ellsion for 'resultQueues' (and maybe 'resultQueue')" />
                       </node>
                     </node>
                   </node>

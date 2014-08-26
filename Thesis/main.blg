@@ -42,6 +42,7 @@ Warning--to sort, need author or key in mbeddr
 Warning--to sort, need author or key in Mutexes
 Warning--to sort, need author, organization, or key in OpenMP
 Warning--to sort, need author or key in RustDocumentation
+Warning--to sort, need author or key in CBMCTutorial
 Warning--empty author in LeveragingTheBenefits
 Warning--empty booktitle in LeveragingTheBenefits
 Warning--can't use both volume and number fields in ModularTypestateChecking

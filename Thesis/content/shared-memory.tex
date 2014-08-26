@@ -101,7 +101,7 @@ In order to fully understand the translation of synchronization statements, the 
 
 In the first solution, the data to be shared is stored as if no protection scheme existed at all. Additionally, all mutexes that are created by the application are stored in one global map, which indexes each mutex by the memory address of its corresponding shared datum. This approach offers the advantage that access to the data itself is not influenced by the mutex protection: Every reference to the value of a shared resource \CODE{e.get} can directly be translated into a reference to the wrapped value. Additionally, since the mutexes are globally managed, all data that is returned by a library can be easily made (pseudo-) synchronization safe. For instance, if a pointer to an arbitrary memory location \texttt{loc} is returned, the pointed-to address can be used to create a new mutex and add a mapping to the global mutex map. However, this on-the-fly protection of memory locations can incur synchronization leaks: The compiler cannot guarantee that addresses returning functions with unknown implementation will not leak their returned values to some other computation which accesses the according memory unsynchronized. This implies that such protection would only be safe if any reference to \texttt{loc} was wrapped in some shared resource which, in this scenario, is not feasible. Hence, a design was chosen that does not allow for such protection. Consequently, a global map would not be beneficial in this regard. A map solution would entail a space-time trade-off. For instance, Google's C++ \textit{dense\_hash\_map}, \footnote{http://goog-sparsehash.sourceforge.net/doc/dense\_hash\_map.html} provides comparatively fast access to its members but imposes additional memory requirements in comparison to slower hash map implementations\footnote{See http://incise.org/hash-table-benchmarks.html for details. This examplary library should be considered as an illustrative example for the general space-time trade-off that is inherent with maps.}. A disadvantage of hash maps is the non-deterministic performance\footnote{Although real-time applications with their time-wise constraints are not a primary concern of this work, it should nevertheless be kept in mind that they are part of the embedded domain. Therefore, a solution that considers the characteristics of this domain is at least regarded advantageous.} and increased access time that may be induced by hash collisions \cite{FastAndDeterministicHashTable}.
 
-The second solution for the implementation of shared types keeps each shareable datum and its mutex together. An instance of a struct with member fields for both components is used in place of the bare datum to be shared. In contrast to the aforementioned solution, a reference to the value \CODE{e.get} needs one level of indirection via the struct instance. However, the access to a mutex is simplified. As with the value, it can be retrieved by a member access to the corresponding struct field, whereas the map solution requires a map lookup to get the mutex (plus additional delay to make any modifying access to the map thread-safe). The computational overhead imposed by a struct member lookup is deemed negligible in the overall application performance. On the other hand, the space required for the struct equals that of the individual fields plus additional padding \cite[pp.~303 ff.]{LinuxSystemProgramming} that is required to arrange the struct fields along valid memory addresses. The latter depends on the size of the data to be stored. In order to keep the padding as small as possible, smart member ordering should be applied. 
+The second solution for the implementation of shared types keeps each shareable datum and its mutex together. An instance of a struct with member fields for both components is used in place of the bare datum to be shared. In contrast to the aforementioned solution, a reference to the value \CODE{e.get} needs one level of indirection via the struct instance. However, the access to a mutex is simplified. As with the value, it can be retrieved by a member access to the corresponding struct field, whereas the map solution requires a map lookup to get the mutex (plus additional delay to make any modifying access to the map thread-safe). The computational overhead imposed by a struct member lookup is deemed negligible in the overall application performance. On the other hand, the space required for the struct equals that of the individual fields (value and mutex) plus additional padding \cite[pp.~303 ff.]{LinuxSystemProgramming} that is required to arrange the struct fields along valid memory addresses. The latter depends on the size of the data to be stored. In order to keep the padding as small as possible, smart member ordering should be applied. 
 
 For this work, the struct solution was chosen in order to keep the access time of mutex lookups small and deterministic while not imposing too much space and computation overhead for datum lookups. For each kind of shared type \CODE{shared<t>} with the translated base type \CODE{t'} a separate struct is generated:
 \begin{ccode}
@@ -410,9 +410,9 @@ void queueSafeGet(shared<Queue>* queue, long double* result);
 \end{ccode}
 As in the previous approach, the amount of work to be done is defined by a range size (number of minor task rounds) and the number of ranges altogether. Additionally, the number of mapper tasks is set to a certain value that should be in the order of the number of processors:
 \begin{ccode}
-#constant RANGESIZE = 300000000; 
-#constant RANGECOUNT = 4; 
-#constant THRESHOLD = RANGESIZE * RANGECOUNT; 
+#constant BLOCKSIZE = 300000000; 
+#constant BLOCKCOUNT = 4; 
+#constant THRESHOLD = BLOCKSIZE * BLOCKCOUNT; 
 #constant MAPPERCOUNT = 2;
 \end{ccode}
 These constants are used to initialize the mappers and the reducer in the main function appropriately:
@@ -455,7 +455,7 @@ void map(uint32 threshold, shared<uint32>* counter, shared<Queue>* resultQueue) 
       if (start == threshold) { 
         break; 
       } 
-      uint32 possibleEnd = start + RANGESIZE; 
+      uint32 possibleEnd = start + BLOCKSIZE; 
       end = (possibleEnd <= threshold)?(possibleEnd):(threshold); 
       counter->set(end); 
     } 
@@ -575,7 +575,7 @@ while (true) {
       stopSyncFor1Mutex(&counter->mutex); 
       break; 
     }
-    uint32 possibleEnd = start + RANGESIZE; 
+    uint32 possibleEnd = start + BLOCKSIZE; 
     end = (possibleEnd <= threshold)?(possibleEnd):(threshold); 
     counter->value = end; 
   } 

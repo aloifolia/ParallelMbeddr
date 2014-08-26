@@ -81,6 +81,7 @@ Nevertheless, it is safe to copy a shared resource into the memory of a local va
 The safety enforcing rules are as follows: A variable that refers to a shared resource or to a value that contains a nested shared resource may not be assigned a new value (the initialization of a declaration is not a classical assignment). Additionally an expression \CODE{e.set(e')} is not allowed if \CODE{e'} is a shared resource or contains a shared resource, because \CODE{e.set(e')} is translated into an assignment (see section \ref{sharedTypesTranslation}).
 
 \subsection{Overwriting Pointers to Shared Resources}
+\label{overwriting_shared_pointers}
 Not only references to variables of shared resources can be used for the definition of synchronization references, but also expressions that evaluate to pointers of shared resources. While providing more flexibility this approach facilitates the introduction of data races via the following two techniques. For the first problem the following example is given:
 \begin{ccode}
 struct Container {

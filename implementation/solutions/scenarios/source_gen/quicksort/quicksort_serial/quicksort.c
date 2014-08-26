@@ -12,17 +12,17 @@ struct quicksort_Item {
 
 static void quicksort_doHeavyWork(void);
 
-static void quicksort_initGenerics(quicksort_Item_t items[QUICKSORT_numberOfItems]);
+static bool quicksort_biggerThan(quicksort_Item_t item1, quicksort_Item_t item2);
 
 static int32_t quicksort_partition(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t left, int32_t right);
 
-static void quicksort_quickSort(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t left, int32_t right);
-
-static bool quicksort_biggerThan(quicksort_Item_t item1, quicksort_Item_t item2);
-
-static void quicksort_printGenerics(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t start, int32_t end);
-
 static void quicksort_swap(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t i, int32_t j);
+
+static void quicksort_printItems(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t start, int32_t end);
+
+static void quicksort_initItems(quicksort_Item_t items[QUICKSORT_numberOfItems]);
+
+static void quicksort_quickSort(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t left, int32_t right);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -32,11 +32,11 @@ int32_t main(int32_t argc, char* argv[])
    * Scenario: A list of arbitrary items shall be sorted. Due to the lack of heap support and the limited stack size, the workload is artifically increased. This is accomplished by simulating complex item comparisons (see doHeavyWork()).
    */
 
-  quicksort_Item_t generics[QUICKSORT_numberOfItems];
-  quicksort_initGenerics(generics);
+  quicksort_Item_t items[QUICKSORT_numberOfItems];
+  quicksort_initItems(items);
   
   
-  quicksort_quickSort(generics, 0, QUICKSORT_numberOfItems - 1);
+  quicksort_quickSort(items, 0, QUICKSORT_numberOfItems - 1);
   
   struct timeval end;
   gettimeofday(&end, 0);
@@ -58,12 +58,10 @@ static void quicksort_doHeavyWork(void)
   }
 }
 
-static void quicksort_initGenerics(quicksort_Item_t items[QUICKSORT_numberOfItems]) 
+static bool quicksort_biggerThan(quicksort_Item_t item1, quicksort_Item_t item2) 
 {
-  for ( int16_t __i = 0; __i < QUICKSORT_numberOfItems; __i++ )
-  {
-    items[__i].value = rand();
-  }
+  quicksort_doHeavyWork();
+  return item1.value > item2.value;
 }
 
 static int32_t quicksort_partition(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t left, int32_t right) 
@@ -94,6 +92,29 @@ static int32_t quicksort_partition(quicksort_Item_t items[QUICKSORT_numberOfItem
   return j;
 }
 
+static void quicksort_swap(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t i, int32_t j) 
+{
+  quicksort_Item_t temp = items[i];
+  items[i] = items[j];
+  items[j] = temp;
+}
+
+static void quicksort_printItems(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t start, int32_t end) 
+{
+  for ( int32_t __i = start; __i < end; __i++ )
+  {
+    printf("%d |  %d\n", __i, items[__i].value);
+  }
+}
+
+static void quicksort_initItems(quicksort_Item_t items[QUICKSORT_numberOfItems]) 
+{
+  for ( int16_t __i = 0; __i < QUICKSORT_numberOfItems; __i++ )
+  {
+    items[__i].value = rand();
+  }
+}
+
 static void quicksort_quickSort(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t left, int32_t right) 
 {
   if ( left < right ) 
@@ -103,27 +124,5 @@ static void quicksort_quickSort(quicksort_Item_t items[QUICKSORT_numberOfItems],
     quicksort_quickSort(items, left, middle - 1);
     quicksort_quickSort(items, middle + 1, right);
   }
-  
-}
-
-static bool quicksort_biggerThan(quicksort_Item_t item1, quicksort_Item_t item2) 
-{
-  quicksort_doHeavyWork();
-  return item1.value > item2.value;
-}
-
-static void quicksort_printGenerics(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t start, int32_t end) 
-{
-  for ( int32_t __i = start; __i < end; __i++ )
-  {
-    printf("%d |  %d\n", __i, items[__i].value);
-  }
-}
-
-static void quicksort_swap(quicksort_Item_t items[QUICKSORT_numberOfItems], int32_t i, int32_t j) 
-{
-  quicksort_Item_t temp = items[i];
-  items[i] = items[j];
-  items[j] = temp;
 }
 

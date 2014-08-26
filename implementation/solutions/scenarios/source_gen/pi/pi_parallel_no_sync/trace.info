@@ -42,8 +42,8 @@
     <nodeInfo nodeId="7341014709856637458" fileName="pi.c" startLine="41" startPosition="4" endLine="41" endPosition="55" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
     <nodeInfo nodeId="7341014709856638092" fileName="pi.c" startLine="41" startPosition="16" endLine="41" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="41" startPosition="23" endLine="41" endPosition="54" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="41" startPosition="43" endLine="41" endPosition="46" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="41" startPosition="48" endLine="41" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="41" startPosition="43" endLine="41" endPosition="48" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="41" startPosition="50" endLine="41" endPosition="53" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
     <nodeInfo nodeId="7341014709857507881" fileName="pi.c" startLine="43" startPosition="2" endLine="43" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="7341014709857494289" fileName="pi.c" startLine="44" startPosition="8" endLine="44" endPosition="23" conceptFqName="com.mbeddr.core.statements.structure.ForVarDecl" propertyString="__i" />
     <nodeInfo nodeId="7341014709857494291" fileName="pi.c" startLine="44" startPosition="21" endLine="44" endPosition="22" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
@@ -143,36 +143,36 @@
     <nodeInfo nodeId="7341014709856579946" fileName="pi.c" startLine="65" startPosition="2" endLine="65" endPosition="2" conceptFqName="com.mbeddr.core.statements.structure.Statement" />
     <nodeInfo nodeId="7341014709856489023" fileName="pi.c" startLine="66" startPosition="2" endLine="66" endPosition="11" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
     <nodeInfo nodeId="7341014709856489024" fileName="pi.c" startLine="66" startPosition="9" endLine="66" endPosition="10" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="7341014709856611264" fileName="pi.c" startLine="71" startPosition="2" endLine="71" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
-    <nodeInfo nodeId="7341014709856614477" fileName="pi.c" startLine="71" startPosition="27" endLine="71" endPosition="28" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070700482205" fileName="pi.c" startLine="72" startPosition="8" endLine="72" endPosition="27" conceptFqName="com.mbeddr.core.statements.structure.ForVarDecl" propertyString="i" />
-    <nodeInfo nodeId="8001979070700482207" fileName="pi.c" startLine="72" startPosition="21" endLine="72" endPosition="26" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700482225" fileName="pi.c" startLine="72" startPosition="28" endLine="72" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="8001979070700482223" fileName="pi.c" startLine="72" startPosition="28" endLine="72" endPosition="35" conceptFqName="com.mbeddr.core.expressions.structure.LessExpression" />
-    <nodeInfo nodeId="8001979070700482224" fileName="pi.c" startLine="72" startPosition="32" endLine="72" endPosition="35" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070700482226" fileName="pi.c" startLine="72" startPosition="37" endLine="72" endPosition="40" conceptFqName="com.mbeddr.core.expressions.structure.PreIncrementExpression" />
-    <nodeInfo nodeId="8001979070700482227" fileName="pi.c" startLine="72" startPosition="39" endLine="72" endPosition="40" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709856612641" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="14" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709856611761" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="34" conceptFqName="com.mbeddr.core.expressions.structure.DirectPlusAssignmentExpression" />
-    <nodeInfo nodeId="8001979070700482214" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="35" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
-    <nodeInfo nodeId="8001979070700482215" fileName="pi.c" startLine="74" startPosition="18" endLine="74" endPosition="34" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070700482217" fileName="pi.c" startLine="74" startPosition="32" endLine="74" endPosition="33" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709856617394" fileName="pi.c" startLine="76" startPosition="2" endLine="76" endPosition="20" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="7341014709856617457" fileName="pi.c" startLine="76" startPosition="9" endLine="76" endPosition="19" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
-    <nodeInfo nodeId="7341014709856605617" fileName="pi.c" startLine="81" startPosition="2" endLine="81" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
-    <nodeInfo nodeId="8001979070698680106" fileName="pi.c" startLine="81" startPosition="9" endLine="81" endPosition="12" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070698680735" fileName="pi.c" startLine="81" startPosition="9" endLine="81" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.MultiExpression" />
-    <nodeInfo nodeId="8001979070698685373" fileName="pi.c" startLine="81" startPosition="15" endLine="81" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="5721544581403847483" fileName="pi.c" startLine="81" startPosition="16" endLine="81" endPosition="32" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
-    <nodeInfo nodeId="8001979070698886431" fileName="pi.c" startLine="81" startPosition="16" endLine="81" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.DivExpression" />
-    <nodeInfo nodeId="5721544581403855580" fileName="pi.c" startLine="81" startPosition="20" endLine="81" endPosition="24" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="5721544581403855918" fileName="pi.c" startLine="81" startPosition="26" endLine="81" endPosition="31" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070698886433" fileName="pi.c" startLine="81" startPosition="35" endLine="81" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
-    <nodeInfo nodeId="8001979070698886438" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="39" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
-    <nodeInfo nodeId="8001979070698886436" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.MultiExpression" />
-    <nodeInfo nodeId="8001979070698886434" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="53" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
-    <nodeInfo nodeId="8001979070698886437" fileName="pi.c" startLine="81" startPosition="42" endLine="81" endPosition="47" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
-    <nodeInfo nodeId="8001979070698886435" fileName="pi.c" startLine="81" startPosition="50" endLine="81" endPosition="53" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="7341014709895605889" fileName="pi.c" startLine="71" startPosition="2" endLine="71" endPosition="25" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
+    <nodeInfo nodeId="7341014709895627245" fileName="pi.c" startLine="71" startPosition="23" endLine="71" endPosition="24" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8296660565124904552" fileName="pi.c" startLine="72" startPosition="8" endLine="72" endPosition="27" conceptFqName="com.mbeddr.core.statements.structure.ForVarDecl" propertyString="i" />
+    <nodeInfo nodeId="8296660565124904554" fileName="pi.c" startLine="72" startPosition="21" endLine="72" endPosition="26" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8296660565124904558" fileName="pi.c" startLine="72" startPosition="28" endLine="72" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="8296660565124904556" fileName="pi.c" startLine="72" startPosition="28" endLine="72" endPosition="35" conceptFqName="com.mbeddr.core.expressions.structure.LessExpression" />
+    <nodeInfo nodeId="8296660565124904557" fileName="pi.c" startLine="72" startPosition="32" endLine="72" endPosition="35" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8296660565124904559" fileName="pi.c" startLine="72" startPosition="37" endLine="72" endPosition="40" conceptFqName="com.mbeddr.core.expressions.structure.PreIncrementExpression" />
+    <nodeInfo nodeId="8296660565124904560" fileName="pi.c" startLine="72" startPosition="39" endLine="72" endPosition="40" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709895649439" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="10" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709857891819" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="30" conceptFqName="com.mbeddr.core.expressions.structure.DirectPlusAssignmentExpression" />
+    <nodeInfo nodeId="8001979070744833090" fileName="pi.c" startLine="74" startPosition="4" endLine="74" endPosition="31" conceptFqName="com.mbeddr.core.statements.structure.ExpressionStatement" />
+    <nodeInfo nodeId="7341014709857903963" fileName="pi.c" startLine="74" startPosition="14" endLine="74" endPosition="30" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="7341014709857903966" fileName="pi.c" startLine="74" startPosition="28" endLine="74" endPosition="29" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709895671916" fileName="pi.c" startLine="76" startPosition="2" endLine="76" endPosition="16" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="7341014709895683259" fileName="pi.c" startLine="76" startPosition="9" endLine="76" endPosition="15" conceptFqName="com.mbeddr.core.statements.structure.LocalVarRef" />
+    <nodeInfo nodeId="7341014709857798739" fileName="pi.c" startLine="81" startPosition="2" endLine="81" endPosition="56" conceptFqName="com.mbeddr.core.modules.structure.ReturnStatement" />
+    <nodeInfo nodeId="8296660565124904580" fileName="pi.c" startLine="81" startPosition="9" endLine="81" endPosition="12" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8296660565124904568" fileName="pi.c" startLine="81" startPosition="9" endLine="81" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.MultiExpression" />
+    <nodeInfo nodeId="8296660565124904569" fileName="pi.c" startLine="81" startPosition="15" endLine="81" endPosition="55" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8296660565124904577" fileName="pi.c" startLine="81" startPosition="16" endLine="81" endPosition="32" conceptFqName="com.mbeddr.core.modules.structure.FunctionCall" />
+    <nodeInfo nodeId="8296660565124904570" fileName="pi.c" startLine="81" startPosition="16" endLine="81" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.DivExpression" />
+    <nodeInfo nodeId="8296660565124904578" fileName="pi.c" startLine="81" startPosition="20" endLine="81" endPosition="24" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8296660565124904579" fileName="pi.c" startLine="81" startPosition="26" endLine="81" endPosition="31" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8296660565124904571" fileName="pi.c" startLine="81" startPosition="35" endLine="81" endPosition="54" conceptFqName="com.mbeddr.core.expressions.structure.ParensExpression" />
+    <nodeInfo nodeId="8296660565124904576" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="39" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
+    <nodeInfo nodeId="8296660565124904574" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="47" conceptFqName="com.mbeddr.core.expressions.structure.MultiExpression" />
+    <nodeInfo nodeId="8296660565124904572" fileName="pi.c" startLine="81" startPosition="36" endLine="81" endPosition="53" conceptFqName="com.mbeddr.core.expressions.structure.PlusExpression" />
+    <nodeInfo nodeId="8296660565124904575" fileName="pi.c" startLine="81" startPosition="42" endLine="81" endPosition="47" conceptFqName="com.mbeddr.core.modules.structure.ArgumentRef" />
+    <nodeInfo nodeId="8296660565124904573" fileName="pi.c" startLine="81" startPosition="50" endLine="81" endPosition="53" conceptFqName="com.mbeddr.core.expressions.structure.NumberLiteral" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="86" startPosition="2" endLine="86" endPosition="52" conceptFqName="com.mbeddr.core.statements.structure.LocalVariableDeclaration" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="86" startPosition="24" endLine="86" endPosition="51" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="86" startPosition="31" endLine="86" endPosition="50" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
@@ -217,27 +217,27 @@
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="98" startPosition="55" endLine="98" endPosition="73" conceptFqName="com.mbeddr.core.modules.structure.FunctionRefExpr" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="98" startPosition="74" endLine="98" endPosition="99" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryFunctionCall" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="98" startPosition="81" endLine="98" endPosition="98" conceptFqName="com.mbeddr.core.statements.structure.ArbitraryTextExpression" />
-    <nodeInfo nodeId="7341014709856461060" fileName="pi.c" startLine="19" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_no_sync.calcPiRange" />
+    <nodeInfo nodeId="7341014709856461060" fileName="pi.c" startLine="19" startPosition="0" endLine="20" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_no_sync.calcPiBlock" />
     <nodeInfo nodeId="7341014709856461060" fileName="pi.c" startLine="21" startPosition="0" endLine="22" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_no_sync.calcPiItem" />
     <nodeInfo nodeId="7341014709856461060" fileName="pi.c" startLine="23" startPosition="0" endLine="24" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_no_sync.parFun_a0c0i0e" />
     <nodeInfo nodeId="7341014709856461060" fileName="pi.c" startLine="25" startPosition="0" endLine="26" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.FunctionPrototype" propertyString="pi.pi_parallel_no_sync.taskInit_a0c0i0e" />
-    <nodeInfo nodeId="8001979070700482208" fileName="pi.c" startLine="73" startPosition="2" endLine="75" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700482237" fileName="pi.c" startLine="80" startPosition="0" endLine="82" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8296660565124904555" fileName="pi.c" startLine="73" startPosition="2" endLine="75" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8296660565124904567" fileName="pi.c" startLine="80" startPosition="0" endLine="82" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709857494289" fileName="pi.c" startLine="45" startPosition="2" endLine="48" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709856823864" fileName="pi.c" startLine="51" startPosition="2" endLine="54" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700482204" fileName="pi.c" startLine="72" startPosition="2" endLine="75" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
+    <nodeInfo nodeId="8296660565124904551" fileName="pi.c" startLine="72" startPosition="2" endLine="75" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="14" startPosition="0" endLine="18" endPosition="0" conceptFqName="com.mbeddr.core.udt.structure.StructDeclaration" />
     <nodeInfo nodeId="7341014709856636627" fileName="pi.c" startLine="38" startPosition="2" endLine="42" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709857494289" fileName="pi.c" startLine="44" startPosition="2" endLine="48" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
     <nodeInfo nodeId="7341014709856823864" fileName="pi.c" startLine="50" startPosition="2" endLine="54" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
-    <nodeInfo nodeId="8001979070700482236" fileName="pi.c" startLine="79" startPosition="0" endLine="83" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_calcPiItem" />
+    <nodeInfo nodeId="8296660565124904566" fileName="pi.c" startLine="79" startPosition="0" endLine="83" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_calcPiItem" />
     <nodeInfo nodeId="7341014709856636627" fileName="pi.c" startLine="37" startPosition="2" endLine="42" endPosition="3" conceptFqName="com.mbeddr.core.statements.structure.ForStatement" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="94" startPosition="0" endLine="99" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="85" startPosition="0" endLine="91" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
-    <nodeInfo nodeId="8001979070700482203" fileName="pi.c" startLine="70" startPosition="0" endLine="77" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
+    <nodeInfo nodeId="8296660565124904550" fileName="pi.c" startLine="70" startPosition="0" endLine="77" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="93" startPosition="0" endLine="100" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_taskInit_a0c0i0e" />
     <nodeInfo nodeId="7341014709856659046" fileName="pi.c" startLine="84" startPosition="0" endLine="92" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_parFun_a0c0i0e" />
-    <nodeInfo nodeId="8001979070700482202" fileName="pi.c" startLine="69" startPosition="0" endLine="78" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_calcPiRange" />
+    <nodeInfo nodeId="8296660565124904549" fileName="pi.c" startLine="69" startPosition="0" endLine="78" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="pi_calcPiBlock" />
     <nodeInfo nodeId="7341014709856489015" fileName="pi.c" startLine="28" startPosition="0" endLine="67" endPosition="1" conceptFqName="com.mbeddr.core.statements.structure.StatementList" />
     <nodeInfo nodeId="7341014709856489013" fileName="pi.c" startLine="27" startPosition="0" endLine="68" endPosition="0" conceptFqName="com.mbeddr.core.modules.structure.Function" propertyString="main" />
     <nodeInfo nodeId="8001979070700595406" fileName="pi.h" startLine="31" startPosition="0" endLine="31" endPosition="31" conceptFqName="com.mbeddr.core.modules.structure.GlobalConstantDeclaration" />

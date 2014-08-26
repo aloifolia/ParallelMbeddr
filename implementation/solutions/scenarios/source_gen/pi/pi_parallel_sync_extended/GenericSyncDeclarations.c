@@ -39,6 +39,11 @@ void GenericSyncDeclarations_startSyncFor1Mutex(pthread_mutex_t* mutex_0)
   }
 }
 
+void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
+{
+  pthread_mutex_unlock(mutex_0);
+}
+
 void GenericSyncDeclarations_startSyncFor2Mutexes(pthread_mutex_t* mutex_0, pthread_mutex_t* mutex_1) 
 {
   uint8_t waitingCounter = 0;
@@ -57,11 +62,6 @@ void GenericSyncDeclarations_startSyncFor2Mutexes(pthread_mutex_t* mutex_0, pthr
       break;
     }
   }
-}
-
-void GenericSyncDeclarations_stopSyncFor1Mutex(pthread_mutex_t* mutex_0) 
-{
-  pthread_mutex_unlock(mutex_0);
 }
 
 void GenericSyncDeclarations_stopSyncFor2Mutexes(pthread_mutex_t* mutex_1, pthread_mutex_t* mutex_2) 

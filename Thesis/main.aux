@@ -135,6 +135,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.5}Overwriting Shared Resources}{42}{subsection.3.4.5}}
 \newlabel{overwritingSharedResources}{{3.4.5}{42}{Overwriting Shared Resources}{subsection.3.4.5}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{42}{subsection.3.4.6}}
+\newlabel{overwriting_shared_pointers}{{3.4.6}{42}{Overwriting Pointers to Shared Resources}{subsection.3.4.6}{}}
 \citation{SpeculativeLockElision}
 \citation{MemoryAsAProgrammingConcept}
 \citation{MemoryAsAProgrammingConcept}
@@ -162,110 +163,135 @@
 \@writefile{toc}{\contentsline {subsubsection}{Lock Contention}{49}{subsubsection*.21}}
 \citation{CloningBasedContextSensitive}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{50}{subsection.4.2.3}}
-\@writefile{toc}{\contentsline {subsubsection}{Removal of Single-task Locks}{52}{subsubsection*.22}}
+\@writefile{toc}{\contentsline {subsubsection}{Removal of Single-Task Locks}{52}{subsubsection*.22}}
+\newlabel{single-task-locks}{{4.2.3}{52}{Removal of Single-Task Locks}{subsubsection*.22}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Removal of Read-only Locks}{54}{subsubsection*.23}}
 \@writefile{toc}{\contentsline {subsubsection}{Removal of Recursive Locks}{56}{subsubsection*.24}}
 \@writefile{toc}{\contentsline {subsubsection}{Narrowing Synchronization Statements}{61}{subsubsection*.25}}
-\citation{OpenMP}
-\citation{APointerFreePath}
-\citation{ParaSailLessIsMore}
-\citation{ParaSailReferenceManual}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Evaluation}{63}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
 \newlabel{evaluation}{{5}{63}{Evaluation}{chapter.5}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Optimization}{63}{section.5.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Comparison}{63}{section.5.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}OpenMP}{63}{subsection.5.2.1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}ParaSail}{63}{subsection.5.2.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Code and Measurements}{63}{section.5.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Quicksort}{63}{subsection.5.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{Serial variant}{63}{subsubsection*.26}}
+\@writefile{toc}{\contentsline {subsubsection}{Unsafe parallelism}{65}{subsubsection*.27}}
+\@writefile{toc}{\contentsline {subsubsection}{Coarse-Grained Protection}{65}{subsubsection*.28}}
+\@writefile{toc}{\contentsline {subsubsection}{Fine-Grained Protection}{68}{subsubsection*.29}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurements}{69}{subsubsection*.30}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run-times for serial Quicksort}}{70}{table.5.1}}
+\newlabel{table:serial_quicksort}{{1}{70}{Run-times for serial Quicksort}{table.5.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Results for coarse-grained Quicksort}}{70}{table.5.2}}
+\newlabel{table:coarse_quicksort}{{2}{70}{Results for coarse-grained Quicksort}{table.5.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Results for fine-grained Quicksort with $h = 1000$}}{70}{table.5.3}}
+\newlabel{table:fine_quicksort}{{3}{70}{Results for fine-grained Quicksort with $h = 1000$}{table.5.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Results for fine-grained Quicksort with $n = 20000$}}{71}{table.5.4}}
+\newlabel{table:fine_quicksort2}{{4}{71}{Results for fine-grained Quicksort with $n = 20000$}{table.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}$\pi $}{71}{subsection.5.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{Serial Variant}{71}{subsubsection*.31}}
+\@writefile{toc}{\contentsline {subsubsection}{Parallel Variant without Synchronization}{72}{subsubsection*.32}}
+\@writefile{toc}{\contentsline {subsubsection}{Simple Map-Reduce Approach}{73}{subsubsection*.33}}
+\@writefile{toc}{\contentsline {subsubsection}{Extended Map-Reduce Approach}{77}{subsubsection*.34}}
+\@writefile{toc}{\contentsline {subsubsection}{Measurements}{80}{subsubsection*.35}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Optimization}{80}{section.5.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Comparison}{80}{section.5.3}}
+\citation{OpenMP}
+\citation{APointerFreePath}
+\citation{ParaSailLessIsMore}
+\citation{ParaSailReferenceManual}
 \citation{ModularTypestateChecking}
 \citation{ConcurrencyByDefault}
 \citation{ConcurrencyByDefault}
 \citation{ConcurrencyByDefault}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}OpenMP}{81}{subsection.5.3.1}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}ParaSail}{81}{subsection.5.3.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}\AE minium}{81}{subsection.5.3.3}}
 \citation{ConcurrencyInTheDProgrammingLanguage}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}\AE minium}{64}{subsection.5.2.3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}D}{64}{subsection.5.2.4}}
 \citation{StaticAnalysesForJava}
 \citation{JavaTheoryAndPractice}
 \citation{LockReservation}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.4}D}{82}{subsection.5.3.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.5}Java}{82}{subsection.5.3.5}}
+\newlabel{java}{{5.3.5}{82}{Java}{subsection.5.3.5}{}}
 \citation{RustDocumentation}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.5}Java}{65}{subsection.5.2.5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.6}Rust}{66}{subsection.5.2.6}}
-\bibdata{content/literature}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Summary}{67}{chapter.6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.6}Rust}{83}{subsection.5.3.6}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Conclusion}{84}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{lol}{\addvspace {10\p@ }}
-\newlabel{summary}{{6}{67}{Summary}{chapter.6}{}}
-\bibcite{mbeddr}{1}
-\bibcite{OpenMP}{2}
-\bibcite{RustDocumentation}{3}
-\bibcite{Mutexes}{4}
-\bibcite{LeveragingTheBenefits}{5}
-\bibcite{StaticAnalysesForJava}{6}
-\bibcite{TheDProgrammingLanguage}{7}
-\bibcite{ConcurrencyInTheDProgrammingLanguage}{8}
-\bibcite{Amdahl}{9}
-\bibcite{ProgramAnalysisAndSpecialization}{10}
-\bibcite{ObstructionFreeAuthorizationEnforcement}{11}
-\bibcite{TransactionalProgrammabilityAndPerformance}{12}
-\bibcite{ModularTypestateChecking}{13}
-\bibcite{DoJava6Threading}{14}
-\bibcite{CForBASICProgrammers}{15}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{68}{section*.28}}
-\bibcite{ProgrammingWithPOSIXThreads}{16}
-\bibcite{SoftReal-TimeSystems}{17}
-\bibcite{ParCompArchitecture_HW/SW_Approach}{18}
-\bibcite{MapReduce}{19}
-\bibcite{OSs_AConceptBasedApproach}{20}
-\bibcite{ParallelComputing}{21}
-\bibcite{OperatingSystems_by_Dhotre}{22}
-\bibcite{MulticoreChallenges}{23}
-\bibcite{LanguageWorkbenches}{24}
-\bibcite{MemoryAsAProgrammingConcept}{25}
-\bibcite{ConcurrentAndDistributedComputingInJava}{26}
-\bibcite{PrinciplesOfModernOSs}{27}
-\bibcite{JavaTheoryAndPractice}{28}
-\bibcite{PrinciplesOfTransactionalMemory}{29}
-\bibcite{OperatingSystems_by_Haldar}{30}
-\bibcite{Halstead_Multilisp}{31}
-\bibcite{TransactionalMemory}{32}
-\bibcite{UniversalModularACTORFormalism}{33}
-\bibcite{CommunicatingSequentialProcesses}{34}
-\bibcite{ParallelProgrammerProductivity}{35}
-\bibcite{TamingJavaThreads}{36}
-\bibcite{CPUScaling}{37}
-\bibcite{FastAndDeterministicHashTable}{38}
-\bibcite{LockReservation}{39}
-\bibcite{MultiProgWithJavaTech}{40}
-\bibcite{AdvancedLinuxProgramming}{41}
-\bibcite{MathematicalLimits}{42}
-\bibcite{LinuxSystemProgramming}{43}
-\bibcite{XorshiftRngs}{44}
-\bibcite{ThePolyadicPi-Calculus}{45}
-\bibcite{ProgrammingInC}{46}
-\bibcite{DebuggingRaceConditions}{47}
-\bibcite{AnIntroductionToParallelProgramming}{48}
-\bibcite{IntroductionToOperatingSystems}{49}
-\bibcite{TypesAndProgrammingLanguages}{50}
-\bibcite{CPrimerPlus}{51}
-\bibcite{DistributedSharedMemory}{52}
-\bibcite{SpeculativeLockElision}{53}
-\bibcite{UnderstandingAndUsingCPointers}{54}
-\bibcite{ARuntimeSystem}{55}
-\bibcite{PointerAnalysisForStructuredParallelPrograms}{56}
-\bibcite{AdvancedContentionManagement}{57}
-\bibcite{JavaPerformanceTuning}{58}
-\bibcite{LocalizingGlobalsAndStatics}{59}
-\bibcite{GeneratorUserGuide}{60}
-\bibcite{OfficialISC2Guide}{61}
-\bibcite{ConcurrencyByDefault}{62}
-\bibcite{ParaSailReferenceManual}{63}
-\bibcite{ParaSailLessIsMore}{64}
-\bibcite{APointerFreePath}{65}
-\bibcite{GenericTools_SpecificLanguages}{66}
-\bibcite{CloningBasedContextSensitive}{67}
-\bibcite{MakingEmbeddedSystems}{68}
+\newlabel{summary}{{6}{84}{Conclusion}{chapter.6}{}}
+\citation{CBMCTutorial}
+\bibdata{content/literature}
+\bibcite{CBMCTutorial}{1}
+\bibcite{mbeddr}{2}
+\bibcite{OpenMP}{3}
+\bibcite{RustDocumentation}{4}
+\bibcite{Mutexes}{5}
+\bibcite{LeveragingTheBenefits}{6}
+\bibcite{StaticAnalysesForJava}{7}
+\bibcite{TheDProgrammingLanguage}{8}
+\bibcite{ConcurrencyInTheDProgrammingLanguage}{9}
+\bibcite{Amdahl}{10}
+\bibcite{ProgramAnalysisAndSpecialization}{11}
+\bibcite{ObstructionFreeAuthorizationEnforcement}{12}
+\bibcite{TransactionalProgrammabilityAndPerformance}{13}
+\bibcite{ModularTypestateChecking}{14}
+\bibcite{DoJava6Threading}{15}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{87}{section*.38}}
+\bibcite{CForBASICProgrammers}{16}
+\bibcite{ProgrammingWithPOSIXThreads}{17}
+\bibcite{SoftReal-TimeSystems}{18}
+\bibcite{ParCompArchitecture_HW/SW_Approach}{19}
+\bibcite{MapReduce}{20}
+\bibcite{OSs_AConceptBasedApproach}{21}
+\bibcite{ParallelComputing}{22}
+\bibcite{OperatingSystems_by_Dhotre}{23}
+\bibcite{MulticoreChallenges}{24}
+\bibcite{LanguageWorkbenches}{25}
+\bibcite{MemoryAsAProgrammingConcept}{26}
+\bibcite{ConcurrentAndDistributedComputingInJava}{27}
+\bibcite{PrinciplesOfModernOSs}{28}
+\bibcite{JavaTheoryAndPractice}{29}
+\bibcite{PrinciplesOfTransactionalMemory}{30}
+\bibcite{OperatingSystems_by_Haldar}{31}
+\bibcite{Halstead_Multilisp}{32}
+\bibcite{TransactionalMemory}{33}
+\bibcite{UniversalModularACTORFormalism}{34}
+\bibcite{CommunicatingSequentialProcesses}{35}
+\bibcite{ParallelProgrammerProductivity}{36}
+\bibcite{TamingJavaThreads}{37}
+\bibcite{CPUScaling}{38}
+\bibcite{FastAndDeterministicHashTable}{39}
+\bibcite{LockReservation}{40}
+\bibcite{MultiProgWithJavaTech}{41}
+\bibcite{AdvancedLinuxProgramming}{42}
+\bibcite{MathematicalLimits}{43}
+\bibcite{LinuxSystemProgramming}{44}
+\bibcite{XorshiftRngs}{45}
+\bibcite{ThePolyadicPi-Calculus}{46}
+\bibcite{ProgrammingInC}{47}
+\bibcite{DebuggingRaceConditions}{48}
+\bibcite{AnIntroductionToParallelProgramming}{49}
+\bibcite{IntroductionToOperatingSystems}{50}
+\bibcite{TypesAndProgrammingLanguages}{51}
+\bibcite{CPrimerPlus}{52}
+\bibcite{DistributedSharedMemory}{53}
+\bibcite{SpeculativeLockElision}{54}
+\bibcite{UnderstandingAndUsingCPointers}{55}
+\bibcite{ARuntimeSystem}{56}
+\bibcite{PointerAnalysisForStructuredParallelPrograms}{57}
+\bibcite{AdvancedContentionManagement}{58}
+\bibcite{JavaPerformanceTuning}{59}
+\bibcite{LocalizingGlobalsAndStatics}{60}
+\bibcite{GeneratorUserGuide}{61}
+\bibcite{OfficialISC2Guide}{62}
+\bibcite{ConcurrencyByDefault}{63}
+\bibcite{ParaSailReferenceManual}{64}
+\bibcite{ParaSailLessIsMore}{65}
+\bibcite{APointerFreePath}{66}
+\bibcite{GenericTools_SpecificLanguages}{67}
+\bibcite{CloningBasedContextSensitive}{68}
+\bibcite{MakingEmbeddedSystems}{69}
 \bibstyle{plain}
 \ttl@finishall

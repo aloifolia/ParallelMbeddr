@@ -230,6 +230,13 @@
         <property name="value" nameId="mj1l.2212975673976043696" value="20" />
       </node>
     </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.GlobalConstantDeclaration" typeId="x27k.3788988821851860886" id="8296660565124319591" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="heavyWorkSize" />
+      <node role="value" roleId="x27k.3376775282622233992" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="8296660565124319592" nodeInfo="ng">
+        <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+        <property name="value" nameId="mj1l.2212975673976043696" value="1000" />
+      </node>
+    </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="4515964250002400294" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="empty_1406553054325_10" />
     </node>
@@ -267,15 +274,6 @@
               </node>
             </node>
             <node role="actuals" roleId="x27k.5950410542643524495" type="yq40.NullExpression" typeId="yq40.5308710777891643206" id="5721544581393112177" nodeInfo="ng" />
-          </node>
-        </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581482804251" nodeInfo="ng">
-          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581482804253" nodeInfo="ng">
-            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581482804254" nodeInfo="ng">
-              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581482804255" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Scenario change: The work is split if after the division of the sub ranges of items to sort are long enough. After a recursive split the task that initiated it waits for its sub task to finish." />
-              </node>
-            </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="5721544581487591381" nodeInfo="ng" />
@@ -1248,6 +1246,15 @@
             </node>
           </node>
         </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="7217414023106128773" nodeInfo="ng">
+          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="7217414023106128775" nodeInfo="ng">
+            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="7217414023106128776" nodeInfo="ng">
+              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="7217414023106128777" nodeInfo="ng">
+                <property name="escapedValue" nameId="87nw.2557074442922438158" value="satisfy mbeddr's incomplete dataflow analysis..." />
+              </node>
+            </node>
+          </node>
+        </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="4065868335589034118" nodeInfo="ng">
           <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.FalseLiteral" typeId="mj1l.8860443239512128099" id="4065868335589054644" nodeInfo="ng" />
         </node>
@@ -1432,9 +1439,8 @@
               <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
               <property name="value" nameId="mj1l.2212975673976043696" value="0" />
             </node>
-            <node role="right" roleId="k146.6307143892175911068" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="5474646598322143850" nodeInfo="ng">
-              <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-              <property name="value" nameId="mj1l.2212975673976043696" value="1000" />
+            <node role="right" roleId="k146.6307143892175911068" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8296660565124374533" nodeInfo="ng">
+              <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8296660565124319591" resolveInfo="heavyWorkSize" />
             </node>
           </node>
           <node role="body" roleId="k146.8729447926330241139" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598322143772" nodeInfo="ng">
@@ -1446,9 +1452,8 @@
                   <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
                   <property name="value" nameId="mj1l.2212975673976043696" value="0" />
                 </node>
-                <node role="right" roleId="k146.6307143892175911068" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="5474646598322096223" nodeInfo="ng">
-                  <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-                  <property name="value" nameId="mj1l.2212975673976043696" value="1000" />
+                <node role="right" roleId="k146.6307143892175911068" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8296660565124376016" nodeInfo="ng">
+                  <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8296660565124319591" resolveInfo="heavyWorkSize" />
                 </node>
               </node>
               <node role="body" roleId="k146.8729447926330241139" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598322095541" nodeInfo="ng">
@@ -1488,6 +1493,15 @@
     </node>
     <node role="imports" roleId="x27k.1317894735999304826" type="vs0r.DefaultGenericChunkDependency" typeId="vs0r.747084250476811597" id="5721544581482881059" nodeInfo="ng">
       <link role="chunk" roleId="vs0r.747084250476878887" targetNodeId="5721544581392359185" resolveInfo="time" />
+    </node>
+    <node role="smodelAttribute" roleId="tpck.5169995583184591170" type="vs0r.ElementDocumentation" typeId="vs0r.3857533489766146428" id="8296660565124593307" nodeInfo="ng">
+      <node role="text" roleId="vs0r.4052432714772608243" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="8296660565124593308" nodeInfo="ng">
+        <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="8296660565124593309" nodeInfo="ng">
+          <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="8296660565124593310" nodeInfo="ng">
+            <property name="escapedValue" nameId="87nw.2557074442922438158" value="Scenario change: The work is split if after the division of the sub ranges of items to sort are long enough. After a recursive split the task that initiated it waits for its sub task to finish." />
+          </node>
+        </node>
+      </node>
     </node>
   </root>
   <root type="x27k.ExternalModule" typeId="x27k.6116558314501417921" id="8306718430232922058" nodeInfo="ng">

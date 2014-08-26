@@ -16,13 +16,13 @@ struct pi_Args_a0c0i0e {
   uint32_t end;
 };
 
-static long double pi_calcPiRange(uint32_t start, uint32_t end);
+static long double pi_calcPiBlock(uint32_t start, uint32_t end);
 
 static long double pi_calcPiItem(uint32_t index);
 
 static void* pi_parFun_a0c0i0e(void* voidArgs);
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0i0e(uint32_t end, uint32_t start);
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0i0e(uint32_t start, uint32_t end);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -38,7 +38,7 @@ int32_t main(int32_t argc, char* argv[])
   {
     uint32_t start = ((uint32_t)(__i)) * PI_BLOCKSIZE;
     uint32_t end = start + PI_BLOCKSIZE;
-    calculators[__i] = pi_taskInit_a0c0i0e(end, start);
+    calculators[__i] = pi_taskInit_a0c0i0e(start, end);
   }
   
   for ( int8_t __i = 0; __i < PI_BLOCKCOUNT; __i++ )
@@ -66,14 +66,14 @@ int32_t main(int32_t argc, char* argv[])
   return 0;
 }
 
-static long double pi_calcPiRange(uint32_t start, uint32_t end) 
+static long double pi_calcPiBlock(uint32_t start, uint32_t end) 
 {
-  long double partialSum = 0;
+  long double result = 0;
   for ( uint32_t i = start; i < end; ++i )
   {
-    partialSum += pi_calcPiItem(i);
+    result += pi_calcPiItem(i);
   }
-  return partialSum;
+  return result;
 }
 
 static long double pi_calcPiItem(uint32_t index) 
@@ -85,12 +85,12 @@ static void* pi_parFun_a0c0i0e(void* voidArgs)
 {
   long double* result = malloc(sizeof(long double));
   pi_Args_a0c0i0e_t* args = ((pi_Args_a0c0i0e_t*)(voidArgs));
-  *result = pi_calcPiRange((args)->start, (args)->end);
+  *result = pi_calcPiBlock((args)->start, (args)->end);
   free(voidArgs);
   return result;
 }
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0i0e(uint32_t end, uint32_t start) 
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a0c0i0e(uint32_t start, uint32_t end) 
 {
   pi_Args_a0c0i0e_t* args_a0c0i0e = malloc(sizeof(pi_Args_a0c0i0e_t));
   args_a0c0i0e->start = start;

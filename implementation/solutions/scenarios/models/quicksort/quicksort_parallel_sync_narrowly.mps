@@ -230,6 +230,13 @@
         <property name="value" nameId="mj1l.2212975673976043696" value="20" />
       </node>
     </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.GlobalConstantDeclaration" typeId="x27k.3788988821851860886" id="8296660565124101108" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="heavyWorkSize" />
+      <node role="value" roleId="x27k.3376775282622233992" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="8296660565124129916" nodeInfo="ng">
+        <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
+        <property name="value" nameId="mj1l.2212975673976043696" value="100" />
+      </node>
+    </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="4515964250002400294" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="empty_1406553054325_10" />
     </node>
@@ -267,15 +274,6 @@
               </node>
             </node>
             <node role="actuals" roleId="x27k.5950410542643524495" type="yq40.NullExpression" typeId="yq40.5308710777891643206" id="5721544581393112177" nodeInfo="ng" />
-          </node>
-        </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.CommentStatement" typeId="c4fa.1679452829930336984" id="5721544581487290601" nodeInfo="ng">
-          <node role="textblock" roleId="c4fa.8624890525768479139" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="5721544581487290603" nodeInfo="ng">
-            <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="5721544581487290604" nodeInfo="ng">
-              <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="5721544581487290605" nodeInfo="ng">
-                <property name="escapedValue" nameId="87nw.2557074442922438158" value="Scenario change: As in the 'broad' variant, the work is divided if enough items to sort are left. The crucial change to 'broad' is that here every item is additionally protected separately. With this modification the compiler can guarantee that no item of the overall array in the items container can be overwritten (as is implied by the semantics of nested shared resources). Thus, items itself need not be protected." />
-              </node>
-            </node>
           </node>
         </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="5721544581486209853" nodeInfo="ng" />
@@ -1031,7 +1029,7 @@
             </node>
           </node>
           <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="4260631361697659797" nodeInfo="ng">
-            <property name="name" nameId="tpck.1169194664001" value="itemsLeft" />
+            <property name="name" nameId="tpck.1169194664001" value="itemLeft" />
             <node role="expression" roleId="6i3o.6553204290896504666" type="yq40.ReferenceExpr" typeId="yq40.1595838349830846141" id="4260631361697679364" nodeInfo="ng">
               <node role="expression" roleId="mj1l.7254843406768839760" type="yq40.ArrayAccessExpr" typeId="yq40.6282313788306893057" id="4260631361697659799" nodeInfo="ng">
                 <node role="expression" roleId="mj1l.7254843406768839760" type="mj1l.GenericDotExpression" typeId="mj1l.4620120465980402700" id="4260631361697659800" nodeInfo="ng">
@@ -1050,7 +1048,7 @@
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5474646598318144762" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="5474646598318144774" nodeInfo="ng">
                 <node role="right" roleId="mj1l.8860443239512128065" type="6i3o.SyncResourceRef" typeId="6i3o.6288388922743435028" id="4260631361697798677" nodeInfo="ng">
-                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="4260631361697659797" resolveInfo="itemsLeft" />
+                  <link role="syncResource" roleId="6i3o.6288388922743435132" targetNodeId="4260631361697659797" resolveInfo="itemLeft" />
                 </node>
                 <node role="left" roleId="mj1l.8860443239512128064" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="5474646598318144761" nodeInfo="ng">
                   <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="5474646598318084752" resolveInfo="pivot" />
@@ -1271,11 +1269,6 @@
             </node>
           </node>
         </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5474646598322104434" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="5474646598322104433" nodeInfo="ng">
-            <link role="function" roleId="x27k.5950410542643524493" targetNodeId="5474646598322085765" resolveInfo="doHeavyWork" />
-          </node>
-        </node>
         <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="5474646598318396917" nodeInfo="ng">
           <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="5721544581485908237" nodeInfo="ng">
             <property name="name" nameId="tpck.1169194664001" value="myItems" />
@@ -1284,6 +1277,11 @@
             </node>
           </node>
           <node role="body" roleId="6i3o.6553204290894227498" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598318396919" nodeInfo="ng">
+            <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="5474646598322104434" nodeInfo="ng">
+              <node role="expr" roleId="c4fa.7254843406768833939" type="x27k.FunctionCall" typeId="x27k.5950410542643524492" id="5474646598322104433" nodeInfo="ng">
+                <link role="function" roleId="x27k.5950410542643524493" targetNodeId="5474646598322085765" resolveInfo="doHeavyWork" />
+              </node>
+            </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="6i3o.SyncStatement" typeId="6i3o.6553204290894227496" id="4260631361697997261" nodeInfo="ng">
               <node role="resources" roleId="6i3o.6553204290894227497" type="6i3o.SyncResourceNamed" typeId="6i3o.6288388922742659454" id="4260631361698042961" nodeInfo="ng">
                 <property name="name" nameId="tpck.1169194664001" value="item1" />
@@ -1570,9 +1568,8 @@
               <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
               <property name="value" nameId="mj1l.2212975673976043696" value="0" />
             </node>
-            <node role="right" roleId="k146.6307143892175911068" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="5474646598322143850" nodeInfo="ng">
-              <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-              <property name="value" nameId="mj1l.2212975673976043696" value="100" />
+            <node role="right" roleId="k146.6307143892175911068" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8296660565124132020" nodeInfo="ng">
+              <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8296660565124101108" resolveInfo="heavyWorkSize" />
             </node>
           </node>
           <node role="body" roleId="k146.8729447926330241139" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598322143772" nodeInfo="ng">
@@ -1584,9 +1581,8 @@
                   <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
                   <property name="value" nameId="mj1l.2212975673976043696" value="0" />
                 </node>
-                <node role="right" roleId="k146.6307143892175911068" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="5474646598322096223" nodeInfo="ng">
-                  <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
-                  <property name="value" nameId="mj1l.2212975673976043696" value="100" />
+                <node role="right" roleId="k146.6307143892175911068" type="x27k.GlobalConstantRef" typeId="x27k.3788988821852026523" id="8296660565124133322" nodeInfo="ng">
+                  <link role="constant" roleId="x27k.3376775282622611130" targetNodeId="8296660565124101108" resolveInfo="heavyWorkSize" />
                 </node>
               </node>
               <node role="body" roleId="k146.8729447926330241139" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="5474646598322095541" nodeInfo="ng">
@@ -1626,6 +1622,15 @@
     </node>
     <node role="imports" roleId="x27k.1317894735999304826" type="vs0r.DefaultGenericChunkDependency" typeId="vs0r.747084250476811597" id="5721544581484980618" nodeInfo="ng">
       <link role="chunk" roleId="vs0r.747084250476878887" targetNodeId="5721544581392359185" resolveInfo="time" />
+    </node>
+    <node role="smodelAttribute" roleId="tpck.5169995583184591170" type="vs0r.ElementDocumentation" typeId="vs0r.3857533489766146428" id="8296660565124658259" nodeInfo="ng">
+      <node role="text" roleId="vs0r.4052432714772608243" type="vs0r.TextBlock" typeId="vs0r.8375407818529178006" id="8296660565124658260" nodeInfo="ng">
+        <node role="text" roleId="vs0r.8375407818529178007" type="87nw.Text" typeId="87nw.2557074442922380897" id="8296660565124658261" nodeInfo="ng">
+          <node role="words" roleId="87nw.2557074442922392302" type="87nw.Word" typeId="87nw.2557074442922438156" id="8296660565124658262" nodeInfo="ng">
+            <property name="escapedValue" nameId="87nw.2557074442922438158" value="Scenario change: As in the 'broad' variant, the work is divided if enough items to sort are left. The crucial change to 'broad' is that here every item is additionally protected separately. With this modification the compiler can guarantee that no item of the overall array in the items container can be overwritten (as is implied by the semantics of nested shared resources). Thus, items itself need not be protected." />
+          </node>
+        </node>
+      </node>
     </node>
   </root>
   <root type="x27k.ExternalModule" typeId="x27k.6116558314501417921" id="8306718430232924459" nodeInfo="ng">

@@ -35,7 +35,7 @@ static void* pi_parFun_a21a5(void* voidArgs);
 
 static void* pi_parFun_a0a02a5(void* voidArgs);
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer);
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer);
 
 static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0u0f(queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer);
 
@@ -64,7 +64,7 @@ int32_t main(int32_t argc, char* argv[])
   }
   GenericSyncDeclarations_stopSyncFor1Mutex(&(counter).mutex);
   
-  GenericTaskDeclarations_Task_t mapperTask = pi_taskInit_a21a5(queuePointer, counterPointer);
+  GenericTaskDeclarations_Task_t mapperTask = pi_taskInit_a21a5(counterPointer, queuePointer);
   GenericTaskDeclarations_VoidFuture_t mappers[PI_MAPPERCOUNT];
   for ( int8_t __i = 0; __i < PI_MAPPERCOUNT; __i++ )
   {
@@ -172,7 +172,7 @@ static void* pi_parFun_a0a02a5(void* voidArgs)
   return 0;
 }
 
-static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer) 
+static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer) 
 {
   pi_Args_a21a5_t* args_a21a5 = malloc(sizeof(pi_Args_a21a5_t));
   args_a21a5->counterPointer = counterPointer;

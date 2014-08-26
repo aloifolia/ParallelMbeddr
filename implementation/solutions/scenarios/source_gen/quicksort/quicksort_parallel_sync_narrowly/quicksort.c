@@ -42,9 +42,9 @@ static void* quicksort_parFun_a0a0c0a0g(void* voidArgs);
 
 static void* quicksort_parFun_a0b0c0a0g(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items, int32_t left);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, int32_t left, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items, int32_t right);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t right, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -136,8 +136,8 @@ static void quicksort_quickSort(quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedO
     
     if ( middle - left > QUICKSORT_threshold && right - middle > QUICKSORT_threshold ) 
     {
-      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a0a2a0a6(middle, items, left);
-      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a6(middle, items, right);
+      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a0a2a0a6(middle, left, items);
+      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a6(middle, right, items);
       GenericTaskDeclarations_joinVoidFuture(&sorter1);
       GenericTaskDeclarations_joinVoidFuture(&sorter2);
     }    else 
@@ -153,12 +153,12 @@ static int32_t quicksort_partition(quicksort_SharedTypes_0_SharedOf_ArrayOf_Shar
   quicksort_SharedTypes_0_SharedOf_Item_0_t* pivot;
   {
     quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* myItems = items;
-    quicksort_SharedTypes_0_SharedOf_Item_0_t* itemsLeft = &myItems->value[left];
-    GenericSyncDeclarations_startSyncFor1Mutex(&(itemsLeft)->mutex);
+    quicksort_SharedTypes_0_SharedOf_Item_0_t* itemLeft = &myItems->value[left];
+    GenericSyncDeclarations_startSyncFor1Mutex(&(itemLeft)->mutex);
     {
-      pivot = itemsLeft;
+      pivot = itemLeft;
     }
-    GenericSyncDeclarations_stopSyncFor1Mutex(&(itemsLeft)->mutex);
+    GenericSyncDeclarations_stopSyncFor1Mutex(&(itemLeft)->mutex);
   }
   int32_t i = left;
   int32_t j = right + 1;
@@ -193,10 +193,10 @@ static bool quicksort_biggerThan(quicksort_SharedTypes_0_SharedOf_ArrayOf_Shared
    * serial one.
    */
 
-  quicksort_doHeavyWork();
   {
     quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* myItems = items;
     {
+      quicksort_doHeavyWork();
       {
         quicksort_SharedTypes_0_SharedOf_Item_0_t* item1 = &myItems->value[index1];
         quicksort_SharedTypes_0_SharedOf_Item_0_t* item2 = &myItems->value[index2];
@@ -260,7 +260,7 @@ static void* quicksort_parFun_a0b0c0a0g(void* voidArgs)
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items, int32_t left) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, int32_t left, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items) 
 {
   quicksort_Args_a0a0c0a0g_t* args_a0a2a0a6 = malloc(sizeof(quicksort_Args_a0a0c0a0g_t));
   args_a0a2a0a6->middle = middle;
@@ -271,7 +271,7 @@ static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items, int32_t right) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, int32_t right, quicksort_SharedTypes_0_SharedOf_ArrayOf_SharedOf_Item_0_0_t* items) 
 {
   quicksort_Args_a0b0c0a0g_t* args_a1a2a0a6 = malloc(sizeof(quicksort_Args_a0b0c0a0g_t));
   args_a1a2a0a6->middle = middle;

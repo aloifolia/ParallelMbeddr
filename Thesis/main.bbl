@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{CBMCTutorial}
+Cbmc: Bounded model checking for c/c++ and java.
+\newblock \url{http://www.cprover.org/cprover-manual/cbmc.shtml}.
+\newblock Accessed: 2014-08-24.
+
 \bibitem{mbeddr}
 mbeddr, engineering the future of embedded software.
 \newblock \url{http://mbeddr.com/}.

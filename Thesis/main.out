@@ -30,13 +30,16 @@
 \BOOKMARK [2][-]{subsection.4.2.2}{Optimization Opportunities}{section.4.2}% 30
 \BOOKMARK [2][-]{subsection.4.2.3}{Performed Optimizations}{section.4.2}% 31
 \BOOKMARK [0][-]{chapter.5}{Evaluation}{}% 32
-\BOOKMARK [1][-]{section.5.1}{Optimization}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.2}{Comparison}{chapter.5}% 34
-\BOOKMARK [2][-]{subsection.5.2.1}{OpenMP}{section.5.2}% 35
-\BOOKMARK [2][-]{subsection.5.2.2}{ParaSail}{section.5.2}% 36
-\BOOKMARK [2][-]{subsection.5.2.3}{\306minium}{section.5.2}% 37
-\BOOKMARK [2][-]{subsection.5.2.4}{D}{section.5.2}% 38
-\BOOKMARK [2][-]{subsection.5.2.5}{Java}{section.5.2}% 39
-\BOOKMARK [2][-]{subsection.5.2.6}{Rust}{section.5.2}% 40
-\BOOKMARK [0][-]{chapter.6}{Summary}{}% 41
-\BOOKMARK [0][-]{section*.28}{Bibliography}{}% 42
+\BOOKMARK [1][-]{section.5.1}{Code and Measurements}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.1.1}{Quicksort}{section.5.1}% 34
+\BOOKMARK [2][-]{subsection.5.1.2}{}{section.5.1}% 35
+\BOOKMARK [1][-]{section.5.2}{Optimization}{chapter.5}% 36
+\BOOKMARK [1][-]{section.5.3}{Comparison}{chapter.5}% 37
+\BOOKMARK [2][-]{subsection.5.3.1}{OpenMP}{section.5.3}% 38
+\BOOKMARK [2][-]{subsection.5.3.2}{ParaSail}{section.5.3}% 39
+\BOOKMARK [2][-]{subsection.5.3.3}{\306minium}{section.5.3}% 40
+\BOOKMARK [2][-]{subsection.5.3.4}{D}{section.5.3}% 41
+\BOOKMARK [2][-]{subsection.5.3.5}{Java}{section.5.3}% 42
+\BOOKMARK [2][-]{subsection.5.3.6}{Rust}{section.5.3}% 43
+\BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 44
+\BOOKMARK [0][-]{section*.38}{Bibliography}{}% 45

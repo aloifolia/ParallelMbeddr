@@ -164,19 +164,19 @@ long double calcPiItem(uint32 index) {
 \end{ccode}
 The work can be distributed among e.g. 4 tasks, where each task calculates a partial sum for an equally long range, which is given by:
 \begin{ccode}
-#constant RANGESIZE = 300000000;
-#constant RANGECOUNT = 4; 
-#constant THRESHOLD = RANGESIZE * RANGECOUNT;
+#constant BLOCKSIZE = 300000000;
+#constant BLOCKCOUNT = 4; 
+#constant THRESHOLD = BLOCKSIZE * BLOCKCOUNT;
 \end{ccode}
 These values are then used to initialize an array of tasks:
 \begin{ccode}
 int32 main(int32 argc, string[] argv) {
 ...
-  Task<long double*>[RANGECOUNT] calculators;
-  for (i ++ in [0..RANGECOUNT[) { 
-    uint32 start = i * RANGESIZE; 
-    uint32 end = start + RANGESIZE; 
-    calculators[i] = |calcPiRange(start, end)|; 
+  Task<long double*>[BLOCKCOUNT] calculators;
+  for (i ++ in [0..BLOCKCOUNT[) { 
+    uint32 start = i * BLOCKSIZE; 
+    uint32 end = start + BLOCKSIZE; 
+    calculators[i] = |calcPiBlock(start, end)|; 
   }
 ...
 }
@@ -186,10 +186,10 @@ The final reduction of the calculated values will be shown after the presentatio
 
 int32 main(int32 argc, string[] argv) {
 ...
-  Task[RANGECOUNT] calculators;
-  for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
-    uint32 start = __i * RANGESIZE; 
-    uint32 end = start + RANGESIZE; 
+  Task[BLOCKCOUNT] calculators;
+  for (int8 __i = 0; __i < BLOCKCOUNT; __i++) { 
+    uint32 start = __i * BLOCKSIZE; 
+    uint32 end = start + BLOCKSIZE; 
     calculators[__i] = taskInit_0(start, end); 
   }
 ...
@@ -210,9 +210,9 @@ inline Task taskInit_0(uint32 start, uint32 end) {
 void* parFun_0(void* voidArgs) { 
   long double* result = malloc(sizeof(long double)); 
   Args_0* args = ((Args_0*) voidArgs); 
-  *result = calcPiRange((args)->start, (args)->end); 
+  *result = calcPiBlock((args)->start, (args)->end); 
   free(voidArgs); 
   return result; 
 }
 \end{ccode}
-The type of \CODE{calculators} is translated into an array type of the generic \CODE{Task} struct type such that the type specification \CODE{long double*}, which is not needed in the translated code, gets lost in this process. The task expression \CODE{|calcPiRange(start, end)|} is translated into a function call of the generated inline function \CODE{taskInit\_0}. This function stores the values of the referenced local variables \CODE{start} and \CODE{end} in a structure which will later be used as the input for the parallel executed function \CODE{parFun\_0}. This function, the wrapped arguments and their size are stored in a generic \CODE{Task} structure instance which is the handle that will later be used to initiate the task. \CODE{parFun\_0} takes its arguments generically (as is required by the POSIX threads standard) and also returns its result generically via the heap. As the arguments reside on the heap and are uniquely allocated, for this function they must be freed before \CODE{parFun\_0} returns. The calculation of the result is straightforwardly given by the execution of the expression of the original task sub-expression \CODE{calcPiRange(start, end)} except that the two variable references are substituted by references to the according fields in the argument struct instance \CODE{voidArgs} which is cast to the appropriate type \CODE{Args\_0}.
+The type of \CODE{calculators} is translated into an array type of the generic \CODE{Task} struct type such that the type specification \CODE{long double*}, which is not needed in the translated code, gets lost in this process. The task expression \CODE{|calcPiBlock(start, end)|} is translated into a function call of the generated inline function \CODE{taskInit\_0}. This function stores the values of the referenced local variables \CODE{start} and \CODE{end} in a structure which will later be used as the input for the parallel executed function \CODE{parFun\_0}. This function, the wrapped arguments and their size are stored in a generic \CODE{Task} structure instance which is the handle that will later be used to initiate the task. \CODE{parFun\_0} takes its arguments generically (as is required by the POSIX threads standard) and also returns its result generically via the heap. As the arguments reside on the heap and are uniquely allocated, for this function they must be freed before \CODE{parFun\_0} returns. The calculation of the result is straightforwardly given by the execution of the expression of the original task sub-expression \CODE{calcPiBlock(start, end)} except that the two variable references are substituted by references to the according fields in the argument struct instance \CODE{voidArgs} which is cast to the appropriate type \CODE{Args\_0}.

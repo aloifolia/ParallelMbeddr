@@ -41,7 +41,7 @@ static void* pi_parFun_a0a5a1b0m0h(void* voidArgs);
 
 static void* pi_parFun_a0a61a7(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a21a7(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue);
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a21a7(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer);
 
 static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0q0h(pi_SharedTypes_0_SharedOf_ArrayOf_SharedOf_FlaggedQueue_0_0_t* resultQueuesPointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer);
 
@@ -115,7 +115,7 @@ int32_t main(int32_t argc, char* argv[])
           GenericSyncDeclarations_stopSyncFor1Mutex(&(isFinished)->mutex);
         }
         queue_queueInit(&resultQueue->value.queue);
-        mappers[__i] = pi_futureInit_a0f0b1a21a7(counterPointer, resultQueue);
+        mappers[__i] = pi_futureInit_a0f0b1a21a7(resultQueue, counterPointer);
       }
       GenericSyncDeclarations_stopSyncFor1Mutex(&(resultQueue)->mutex);
     }
@@ -218,7 +218,7 @@ static void pi_reduce(GenericSharedDeclarations_SharedOf_long_double_0_t* result
       
       /* 
        * this is quite inefficient since only this thread will ever access the array;
-       * also, resultQueue need not be locked since it is never changed from anywhere (but lock ellision
+       * also, 'resultQueue' need not be locked since it is never changed from anywhere (but lock ellision
        * should not necessarily be done, in case other, more costly, locks could be avoided by keeping locks
        * for 'resultQueue')
        * => lock ellsion for 'resultQueues' (and maybe 'resultQueue')
@@ -417,7 +417,7 @@ static void* pi_parFun_a0a61a7(void* voidArgs)
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a21a7(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue) 
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0f0b1a21a7(pi_SharedTypes_0_SharedOf_FlaggedQueue_0_t* resultQueue, GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer) 
 {
   pi_Args_a0a5a1b0m0h_t* args_a0f0b1a21a7 = malloc(sizeof(pi_Args_a0a5a1b0m0h_t));
   args_a0f0b1a21a7->counterPointer = counterPointer;

@@ -1,10 +1,593 @@
 \chapter{Evaluation}
 \label{evaluation}
+\section{Code and Measurements}
+In order to show the advantages and disadvantages of the language design, the generator and the optimizer of ParallelMbeddr, two scenarios are investigated: The calculation of $\pi$ and the sorting algorithm Quicksort. For both scenarios different solutions are presented. This is done to demonstrate the different aspects of the implemented optimization and depict further optimization potential for future enhancements of ParallelMbeddr.
 
+\subsection{Quicksort}
+The Quicksort scenario concerns itself with the sorting of an array of items. In order to get noticeable execution times for the program runs, the length of arrays usually has to be quite large. Since general support for the heap is currently missing in mbeddr and ParallelMbeddr, the items need to saved on the stack. Due to the limited usable memory on the stack, the arrays were chosen rather small. To create noticeable execution times nevertheless, the comparison of two items was artificially complicated by a function \CODE{doHeavyWork()} that simulates complex comparisons. At the beginning, the arrays are initiated with random values in each example. Afterwards, the usual divide-and-conquer approach of Quicksort is recursively applied.
+\subsubsection{Serial variant}
+For comparison reasons, first the serial variant is given. As was mentioned, initially a certain number of randomized items, in this case 200 is added to an array. The items are instances of the \CODE{struct Item}, which has an Integer-typed value field. Again, \CODE{Item} should be regarded as an element of an arbitrary type.
+\begin{ccode}
+#constant numberOfItems = 200;
+struct Item { int32 value; }; 
+ 
+int32 main(int32 argc, string[] argv) { 
+  Item[numberOfItems] items; 
+  // initialize the array with randomized items
+  initItems(items); 
+  quickSort(items, 0, numberOfItems - 1); 
+  /* maybe print the result here */
+  return 0; 
+}
+\end{ccode}
+Not surprisingly, the \CODE{quickSort()} function divides the provided interval. As usual with Quicksort, the division is accomplished by sorting the provided interval of the array into two sub-intervals that contain items which are smaller, respectively bigger, than a chosen pivot element:
+\begin{ccode}
+void quickSort(Item[numberOfItems] items, int32 left, int32 right) { 
+  if (left < right) { 
+    int32 middle = partition(items, left, right); 
+    quickSort(items, left, middle - 1); 
+    quickSort(items, middle + 1, right); 
+  }
+}
+int32 partition(Item[numberOfItems] items, int32 left, int32 right) { 
+  Item pivot = items[left]; 
+  int32 i = left; 
+  int32 j = right + 1; 
+   
+  while (true) { 
+    do { ++i; } while ( !(biggerThan(items[i], pivot)) && i < right ); 
+    do { --j; } while ( biggerThan(items[j], pivot) ); 
+    if (i >= j) { break; }
+    swap(items, i, j); 
+  }
+   
+  if (left != j) { swap(items, left, j); }
+  return j; 
+}
+\end{ccode}
+The comparison function \CODE{biggerThan()} compares the two items and simulates computationally complex work by calling \CODE{doHeavyWork()}:
+\begin{ccode}
+boolean biggerThan(Item item1, Item item2) { 
+  doHeavyWork(); 
+  return item1.value > item2.value; 
+}
+void doHeavyWork() { 
+  for (i ++ in [0..heavyWorkSize[) { 
+    for (j ++ in [0..heavyWorkSize[) { 
+      j * j * j; 
+    } for 
+  } for 
+}
+\end{ccode}
+
+\subsubsection{Unsafe parallelism}
+A trivial approach to parallelize the Quicksort algorithm would make use of the parallelization concepts, i.e. tasks and futures, while omitting safe communication via shared resources:
+\begin{ccode}
+void quickSort(Item[numberOfItems] items, int32 left, int32 right) { 
+  if (left < right) { 
+    int32 middle = partition(items, left, right); 
+     
+    if (middle - left > threshold && right - middle > threshold) { 
+      // This is unsafe and should generally be avoided. In the current example, however, 
+      // the sync leak is harmless. 
+      Future<void> sorter1 = |quickSort(items, left, middle - 1)|.run; 
+      Future<void> sorter2 = |quickSort(items, middle + 1, right)|.run; 
+      sorter1.join; 
+      sorter2.join; 
+    } else { 
+      quickSort(items, left, middle - 1); 
+      quickSort(items, middle + 1, right); 
+    }
+  } 
+}
+\end{ccode}
+The function now decides whether two sub-intervals (slices) of the given interval of the array shall be recursively sorted like in the original example. If the intervals are long enough -- have at least 20 items -- the calls of \CODE{quickSort()} are handed to new tasks, which are immediately run. Future handles are then used to wait for the ending of the sub-tasks. This fork-join pattern is used so that in the end the first call to \CODE{quickSort()} does not return before the array is actually sorted. The futures cannot be directly joined, because otherwise line 8 would not be executed before the finish of \CODE{sorter1}, which ultimately would serialize the program. In the IDE, the code is marked with an error message at lines 7 and 8. Although every slice of the array is only processed by exactly one task, the type checker of the IDE recognizes a potential shared data leak: the pointer \CODE{items} is given to another task which makes every access to the pointed-to data potentially thread-unsafe. ParallelMbeddr is thus currently not able to determine if the elements of shared arrays are actually accessed by multiple tasks. For this reason, arrays must be wrapped in shared resources.
+
+\subsubsection{Coarse-Grained Protection}
+The first solution to the aforementioned problem is to wrap the whole array of items inside a shared resource \CODE{shared<Item[numberOfItems]> items}. By doing so, the distribution of pointers thereof becomes safe. The example code is changed to show the optimization potential for synchronization narrowing:
+\begin{ccode}
+boolean biggerThan(shared<Item[numberOfItems]>* items, int32 index1, int32 index2) { 
+  // There is no noticeable synchronization management overhead in this example since the sync 
+  // overhead is dominated by the not synchronized heavy work. With doHeavyWork() inside 
+  // sync(...) the program is basically serialized. Therefore, apply lock narrowing to reduce 
+  // the amount of lock contention. 
+  sync(items as myItems) { 
+    doHeavyWork(); 
+    return myItems->get[index1].value > myItems->get[index2].value; 
+  }
+}
+\end{ccode}
+As can be seen, \CODE{doHeavyWork()} does not make use of the \CODE{items} pointers so that it should actually not reside inside the synchronization context. In the given code, this structure would cause unnecessary lock contention.\footnote{Again, in spite of this artificial structure, like every following code listing, the example is only meant to demonstrate the optimization potential for ParallelMbeddr.} The items pointer is used for the synchronization of the array. The IDE demands that items must be named, to prevent the user from writing code which causes unsafe changes of the pointer that is used for accessing the array, as was explained in \ref{overwriting_shared_pointers}. For many synchronizations via pointers this naming necessity can become quite tedious, yet it is currently the only way to guarantee thread-safe access via pointers. Synchronization is now also necessary inside the initialization function and the swap funtion:
+\begin{ccode}
+void initItems(shared<Item[numberOfItems]>* items) { 
+  for (i ++ in [0..numberOfItems[) {
+    // Such fine-grained synchronization is a bad choice, ParallelMbeddr is, however,
+    // currently not able to optimize this code.
+    sync(items as myItems) { myItems->get[i].value = rand(); } 
+  }
+}
+int32 partition(shared<Item[numberOfItems]>* items, int32 left, int32 right) { 
+  Item pivot;
+  // Items may not be taken by address since they are not shared resources themselves.
+  // Since the elements of the considered array interval are not changed by another task,
+  // in terms of data dependencies, however, it is safe to just copy the element to pivot.
+  sync(items as myItems) { pivot = myItems->get[left]; } 
+  //...
+}
+void swap(shared<Item[numberOfItems]>* items, int32 i, int32 j) { 
+  sync(items as myItems) { 
+    Item temp = myItems->get[i]; 
+    myItems->get[i] = myItems->get[j]; 
+    myItems->get[j] = temp; 
+  } 
+}
+\end{ccode}
+
+As the code for of the \CODE{quickSort()} function in the user code, which was shown in listing (TODO: unsafe par.) is only changed in terms of the type of the \CODE{items} argument and therefore skipped in this discussion. The generator translates the type \CODE{shared<Item[numberOfItems]>} to the type of the generated struct \CODE{SharedOf\_ArrayOf\_Item\_0\_t} that stores the array and a mutex which is used for synchronization purposes. The future type \CODE{Future<void>} is reduced to the void future type \CODE{VoidFuture\_t}. The task and future initialization expressions in lines 7 and 8 of XXX are reduced to calls of \CODE{futureInit\_X()} functions. The following listing shows the generated code for the line 7:
+\begin{ccode}
+  // line 7...
+  VoidFuture_t sorter1 = futureInit_0(middle, items, left);
+
+
+VoidFuture_t futureInit_0(int32 middle, SharedOf_ArrayOf_Item_0_t* items, int32 right) {
+  // the type and variable names are simplified for better legibility
+  Args_0_t* args_0 = malloc(sizeof(Args_0_t)); 
+  args_0->middle = middle; 
+  args_0->items = items; 
+  args_0->right = right; 
+  pthread_t pth; 
+  pthread_create(&pth, null, :parFun_0, args_0); 
+  return ( VoidFuture_t ){ .pth = node: pth }; 
+}
+\end{ccode}
+The generated code for line 8 is equivalent to the one for line 7 except for names of the arguments and struct fields of \CODE{Args\_1}. This shows that, if many tasks are defined, the generated code may grow substantially by the definition of \CODE{futureInit\_X()} functions and argument structure declarations. In the current example, actually a single structure and initialization function would suffice as the types of arguments are equal. However, ParallelMbeddr does not optimize the code in this regard yet. In the future, equivalency checks of task expressions should therefore be implemented to reduce the amount of generated code.
+
+Every synchronization statement is translated to a statement block like the one in the function \CODE{biggerThan()}:
+\begin{ccode}
+boolean biggerThan(SharedOf_ArrayOf_Item_0_t* items, int32 index1, int32 index2) {
+  { 
+    SharedOf_ArrayOf_Item_0_t* myItems = items; 
+    { 
+      doHeavyWork(); 
+      startSyncFor1Mutex(&(myItems)->mutex); 
+      { 
+        stopSyncFor1Mutex(&(myItems)->mutex); 
+        return myItems->value[index1].value > myItems->value[index2].value; 
+      } 
+      stopSyncFor1Mutex(&(myItems)->mutex); 
+    } 
+  }
+}
+\end{ccode}
+As expected, the synchronization statement is translated to mutex synchronization functions. An additional call for \CODE{stopSyncFor1Mutex()} is added before the return statement in order to prevent inconsistent synchronization states. The next according call is therefore useless and could generally be avoided. ParallelMbeddr does not yet apply a data-flow analysis to prevent the insertion of unreachable `stop' calls. An according analysis should therefore be added in the future, when the built-in data-flow analysis of mbeddr reaches a reliable state. The statement block indicated by the braces in lines 7 and 10 are added to keep a clear distinction between the scopes of local variables inside the synchronization statement and the scopes of named resources. An alternative to this approach would be to prohibit name equalities of inner local variables and named resources. Line 5 shows that the call of \CODE{doHeavyWork()} was moved out of the synchronization context, which was accomplished by synchronization narrowing. For this reason, another statement block (lines 4 and 12) was added, again for the separation of local variable scopes. The outer-most block does the same for outer local variables and local variables resulting from the reduction of named resources. Since in this example code, no conflicting variables exist, these scopes are completely unnecessary and should only be generated on demand in the future.
+
+\subsubsection{Fine-Grained Protection}
+In the former approach, for every access to the array, the whole array had to be synchronized. Alternatively, every element can be separately protected by a shared resource. The type of the \CODE{items} variable is then changed to \CODE{shared<shared<Item>[numberOfItems]>}. Although the whole array still needs to be protected and synchronized in the user code, the compiler will find that all synchronizations of the complete array can be removed, since none of its members are ever overwritten:\footnote{Actually, non of the items can ever be overwritten, since the IDE would otherwise detect an unsafe, thus not allowed, overwrite of a shared resource and trigger an error message.} Neither the array itself nor any of its items. The user's code must be changed to take into account the element-wise synchronizations:
+\begin{ccode}
+void initItems(shared<shared<Item>[numberOfItems]>* items) { 
+  for (i ++ in [0..numberOfItems[) { 
+    sync(items as myItems) { 
+      sync(&myItems->get[i] as itemI) { itemI->get.value = rand(); } 
+    } 
+  }
+}
+int32 partition(shared<shared<Item>[numberOfItems]>* items, int32 left, int32 right) { 
+  shared<Item>* pivot; 
+  sync(items as myItems, &myItems->get[left] as itemLeft) { pivot = itemLeft; } 
+  // ...
+}
+boolean biggerThan(shared<shared<Item>[numberOfItems]>* items, int32 index1, int32 index2) { 
+  sync(items as myItems) {
+    doHeavyWork();  
+    sync(&myItems->get[index1] as item1, &myItems->get[index2] as item2) { 
+      return item1->get.value > item2->get.value; 
+    } 
+  } 
+  return false; 
+}
+void swap(shared<shared<Item>[numberOfItems]>* items, int32 i, int32 j) { 
+  sync(items as myItems) { 
+    sync(&myItems->get[i] as itemI, &myItems->get[j] as itemJ) { 
+      Item temp = itemI->get; 
+      temp = itemI->get; 
+      itemI->set(itemJ->get); 
+      itemJ->set(itemI->get); 
+    } 
+  } 
+}
+\end{ccode}
+Again, the reduction of \CODE{biggerThan()} shows the performed optimizations:
+\begin{ccode}
+boolean biggerThan(SharedOf_ArrayOf_SharedOf_Item_0_0_t* items, int32 index1, int32 index2) {
+  { 
+    SharedOf_ArrayOf_SharedOf_Item_0_0_t* myItems = items; 
+    { 
+      doHeavyWork(); 
+      { 
+        SharedOf_Item_0_t* item1 = &myItems->value[index1]; 
+        SharedOf_Item_0_t* item2 = &myItems->value[index2]; 
+        startSyncFor2Mutexes(&(item1)->mutex, &(item2)->mutex); 
+        { 
+          stopSyncFor2Mutexes(&(item1)->mutex, &(item2)->mutex);  
+          return item1->value.value > item2->value.value; 
+        } 
+        stopSyncFor2Mutexes(&(item1)->mutex, &(item2)->mutex); 
+      } 
+    } 
+  }
+}
+\end{ccode}
+The call \CODE{doHeavyWork()} is again shifted outside the synchronization context. Furthermore, the lock of \CODE{myItems} is dropped. In consequence, only the single array elements need to be locked. Thus, the lock contention of the previous approach was replaced by a synchronization management overhead for the individual elements.
+
+\subsubsection{Measurements}
+The presented approaches -- except for the unsafe variant of the Quicksort algorithm -- were timed for their execution times. The synchronization based programs were both tested with and without applied optimizations. The constants \CODE{numberOfItems} and \CODE{heavyWorkSize} ($n$ and $h$ in the following text) were adjusted to provide different constellations:
 \begin{itemize}
-\item show if and how objectives mentioned in the introduction are met by the implementation
-\item use ilustrating examples
+\item for all approaches: $h = 1000$ with $n = 50$, $n = 100$ and $n = 200$
+\item for the fine-grained approach: $n = 20000$ with $h = 100$, $h = 50$ and $h = 0$
 \end{itemize}
+Every timing-test was executed 10 times in order to account for measuring errors.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ c| r|r|r|}
+\cline{2-4} $n$ & 50 & 100 & 200 \\ 
+\cline{2-4} \textbf{average mean} & 0.721 & 1.693 & 3.920 \\ 
+\cline{2-4} \textbf{standard deviation} & 0.006 & 0.005 & 0.015 \\ 
+\cline{2-4}
+\end{tabular} 
+\caption{Run-times for serial Quicksort}
+\label{table:serial_quicksort}
+\end{center}
+\end{table}
+
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c |c|c|c||c|c|c|}
+  \multicolumn{1}{c}{} & \multicolumn{3}{c}{non-optimized} & \multicolumn{3}{c}{optimized}\\ \cline{2-7}
+  $n$ & 50 & 100 & 200 & 50 & 100 & 200\\ \cline{2-7}
+  \textbf{average mean} & 0.718 & 1.707 & 3.944 & 0.723 & 1.117 & 2.135	\\ \cline{2-7}
+  \textbf{standard deviation} & 0.001 & 0.006 & 0.009 & 0.004 & 0.005 & 0.011\\ \cline{2-7}
+\end{tabular}
+\caption{Results for coarse-grained Quicksort}
+\label{table:coarse_quicksort}
+\end{center}
+\end{table}
+
+The timings in tables \ref{table:serial_quicksort} and \ref{table:coarse_quicksort} show that the non-optimized version of the coarse-grained implementation of Quicksort shows basically the same performance as the serialized one (which is obviously not optimized). This is no surprise as the code serializes most of the work that is performed by the algorithm. The optimized version shows the potential of lock narrowing: The speed-up of the optimized version converges to 2, which is also the maximum speed-up that can be achieved by the two processor cores on the test-system. This indicates, that the synchronization overhead in the optimized variant is dominated by the work of \CODE{doHeavyWork()}. For $n = 50$ no speed-up can be determined (the additional $5$ ms can be attributed to measuring errors) which indicates that the number of items is too small too allow for parallel execution. Thus, no further tasks are initiated. 
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c |c|c|c||c|c|c|}
+  \multicolumn{1}{c}{} & \multicolumn{3}{c}{non-optimized} & \multicolumn{3}{c}{optimized}\\ \cline{2-7}
+  $n$ & 50 & 100 & 200 & 50 & 100 & 200\\ \cline{2-7}
+  \textbf{average mean} & 0.756 & 1.832 & 4.364 & 0.743 & 1.365 & 2.488	\\ \cline{2-7}
+  \textbf{standard deviation} & 0.007 & 0.014 & 0.012 & 0.005 & 0.007 & 0.012\\ \cline{2-7}
+\end{tabular}
+\caption{Results for fine-grained Quicksort with $h = 1000$}
+\label{table:fine_quicksort}
+\end{center}
+\end{table}
+
+For the according configuration of the fine-grained implementation of Quicksort, table \ref{table:fine_quicksort} indicates only a small performance overhead when compared to the serial variant. The times result from the fact that the main work is again serialized, while additional synchronization for the single items is performed. The overhead increases with the number of items that are sorted. This overhead is also reflected in the optimized version, which is thus slower than the coarse-grained implementation. Due to the dominance of \CODE{doHeavyWork()} the synchronization of the whole array seems to be negligible (when optimized) while the synchronization of the single elements noticeably decelerates the algorithm. Thus, the numbers suggest that such fine-grained synchronization can generally cause a significant performance loss, even if no actual lock clashes happen (since every element is only accessed by one task at a time). However, the timings in table \ref{table:fine_quicksort2} reveal that due to reduction contention also coarse-grained synchronization can cause severe performance losses. In this setting, the impact of \CODE{doHeavyWork()} is mitigated by adjusting $h$ to 0, 50 and 100. In exchange, the number of items is set to 20000, in order to register a noticeable synchronization overhead. The numbers of the optimized version suggest that the main part of the execution time results from the amount of additional comparison work of \CODE{doHeavyWork()}. For $h = 0$, the execution time converges to 0. On the other hand, the execution times of the non-optimized version are significantly worse than those of the former runs. Even with no additional comparison overhead ($h = 0$), the program is slowed down to twice the worst execution time of the optimized variant. 
+
+These numbers show that the removal of read-only locks can at times lead to a significant performance boost, which is true also for the narrowing of synchronization statements.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c |c|c|c||c|c|c|}
+  \multicolumn{1}{c}{} & \multicolumn{3}{c}{non-optimized} & \multicolumn{3}{c}{optimized}\\ \cline{2-7}
+  $h$ & 0 & 50 & 100 & 0 & 50 & 100\\ \cline{2-7}
+  \textbf{average mean} & 6.587 & 8.609 & 13.354 & 0.132 & 0.809 & 3.129	\\ \cline{2-7}
+  \textbf{standard deviation} & 0.116 & 0.085 & \multicolumn{1}{r||}{0.101} & 0.001 & 0.006 & 0.025\\ \cline{2-7}
+\end{tabular}
+\caption{Results for fine-grained Quicksort with $n = 20000$}
+\label{table:fine_quicksort2}
+\end{center}
+\end{table}
+
+\subsection{$\pi$}
+The $\pi$ scenario is a continuation of the running example from chapter \ref{design_translation}. To recap the idea: The number $pi$ is calculated by iteratively adding numbers which are given by a function on the natural numbers. The precision of the resulting $pi$ approximation correlates to the numbers that are added. 
+
+\subsubsection{Serial Variant}
+The serial variant of this algorithm just adds the mapped values of $0$ up to a certain threshold $n$ to the result. The following code listing already indicates the block approach which is used by the parallel variants of this algorithm:
+
+\begin{ccode}
+#constant BLOCKSIZE = 30000000; 
+#constant BLOCKCOUNT = 4; 
+#constant THRESHOLD = BLOCKSIZE * BLOCKCOUNT;
+
+exported int32 main(int32 argc, string[] argv) { 
+  double result;   
+  for (int32 i = 0; i < THRESHOLD; i += BLOCKSIZE) { 
+    calcPiBlock(&result, i, i + BLOCKSIZE); 
+  }   
+  return 0; 
+}
+
+long double calcPiBlock(uint32 start, uint32 end) { 
+  long double result = 0; 
+  for (uint32 i = start; i < end; ++i) { 
+    result += calcPiItem(i); 
+  }
+  return result; 
+}
+ 
+long double calcPiItem(uint32 index) { 
+  return 4.0 * (pow(-1.0, index) / (2.0 * index + 1.0)); 
+}
+\end{ccode}
+
+\subsubsection{Parallel Variant without Synchronization}
+The first parallel variant that is evaluated is the future-based algorithm whose translation was shown in \ref{taskExample}:
+\begin{ccode}
+exported int32 main(int32 argc, string[] argv) { 
+  long double result = 0; 
+  Task<long double*>[BLOCKCOUNT] calculators; 
+  Future<long double*>[BLOCKCOUNT] partialResults; 
+   
+  for (i ++ in [0..BLOCKCOUNT[) { 
+    uint32 start = ((uint32) i) * BLOCKSIZE; 
+    uint32 end = start + BLOCKSIZE; 
+    calculators[i] = |calcPiBlock(start, end)|; 
+  }
+   
+  for (i ++ in [0..BLOCKCOUNT[) { 
+    partialResults[i] = calculators[i].run; 
+    calculators[i].clear; 
+  }
+   
+  for (i ++ in [0..BLOCKCOUNT[) { 
+    result += *(partialResults[i].result); 
+    free(partialResults[i].result); 
+  }
+   
+  return 0; 
+}
+\end{ccode}
+
+The algorithm divides the interval of numbers, which shall be mapped to the terms that ultimately add up to the result, into blocks. Each block is assigned to a task that calculates partial sum according to the numbers of its block. The partial sums are then accessed in line 19 via the future handles of the running tasks. The memory of the results, which reside in the heap, are then freed, although at the end of the program this is usually not necessary. No synchronization is used in the given code as all communication happens implicitly and goes uni-directional from the calculator tasks to the main task via the result values. The translation of the code is skipped, as it was already shown in \ref{taskExample} and, for the lack of applied optimization, would not enrich the discussion of this chapter. 
+
+\subsubsection{Simple Map-Reduce Approach}
+The second variant of the $\pi$ algorithm equals the one presented in \ref{sharedMemoryExample}: The blocks are now not assigned at the definition of the tasks but via communication among the tasks. The \textit{mapper} tasks use a \CODE{counter} to communicate the current progress of processed blocks. Furthermore, their partial sums are no longer received by the result values of their future handles. Instead, a shared queue is used to communicate the partial sum of each block to a reducer task:
+
+\begin{ccode}
+exported int32 main(int32 argc, string[] argv) { 
+  shared<Queue> queue; 
+  queueInit(&queue);  // set all slots to 0
+  shared<Queue>* queuePointer = &queue; 
+   
+  shared<uint32> counter; 
+  shared<uint32>* counterPointer = &counter; 
+  sync(counter) { counter.set(0); } 
+   
+  Task<void> mapperTask = |map(THRESHOLD, counterPointer, queuePointer)|; 
+  Future<void>[MAPPERCOUNT] mappers; 
+  for (i ++ in [0..MAPPERCOUNT[) { mappers[i] = mapperTask.run; }
+  mapperTask.clear; 
+   
+  shared<long double> result; 
+  shared<long double>* resultPointer = &result;  
+  |reduce(BLOCKCOUNT, resultPointer, queuePointer)|.run.join; 
+  
+  return 0; 
+}
+ 
+void map(uint32 threshold, shared<uint32>* counter, shared<Queue>* resultQueue) { 
+  while (true) { 
+    uint32 start, end; 
+     
+    sync(counter as myCounter) { 
+      start = myCounter->get; 
+      if (start == threshold) { break; }
+      uint32 possibleEnd = start + BLOCKSIZE; 
+      end = (possibleEnd <= threshold)?(possibleEnd):(threshold); 
+      myCounter->set(end); 
+    } 
+     
+    queueSafeAdd(resultQueue, calcPiBlock(start, end)); 
+  }
+}
+ 
+void reduce(uint32 numberOfItems, shared<long double>* result, shared<Queue>* resultQueue) { 
+  sync(result as myResult) { 
+    myResult->set(0); 
+    for (uint32 i = 0; i < numberOfItems; ++i) { 
+      long double item; 
+      queueSafeGet(resultQueue, &item); 
+      myResult->set(item + myResult->get); 
+    }
+  } 
+}
+\end{ccode}
+
+The reducer task knows in advance how many blocks it is going to receive. It can therefore count the received elements to in line 41 to determine when it is finished. For simplicity reasons, the reducer synchronizes the shared resource of result variable during its whole lifetime. While such patterns can generally lead to deadlocks, it is safe in the current example as no other task acquires the result before the finish of the reducer. The mapper tasks do not know in advance the number of blocks that they will process which is why they use an unconditional loop in line 23. They can, however identify the last block via \CODE{threshold} and stop as soon as the \CODE{counter} variable has reached this value. It is crucial for the mappers to synchronize the counter variable from line 26 to line 32 and not apply fine-grained synchronization in order to avoid race conditions. It is the responsibility of the programmer to identify the according data dependencies and synchronize appropriately. For the current atomicity pattern (read a shared resource, process its value and overwrite its value) it might be possible to give first-class support in mbeddr in the future. However, the programmer would still have to identify shared resources whose usage match this pattern.
+
+The queue whose functions are called in lines 3, 34 and 43, manages two fields \CODE{insertAt} and \CODE{deleteAt} which keep the indexes of the next free, respectively occupied slot of the queue. Every item of the queue is separately shared:
+\begin{ccode}
+exported struct Queue { 
+  int32 insertAt; 
+  int32 deleteAt; 
+  shared<long double>[QUEUESIZE] data; 
+};
+\end{ccode}
+The queue works like a ring buffer: Items are always added at the front and removed at the back while the according indices \CODE{insertAt} and \CODE{deleteAt} are managed as if the last and the first slot of the array were connected. The implementation of the queue functions are not optimized for best performance in the user code. Instead, they are written in a way that shows how the optimizations of the compiler may take place. The called functions are defined as follows:
+
+\begin{ccode}
+void queueInit(shared<Queue>* queue) { 
+  sync(queue as myQueue) { myQueue->get.insertAt = myQueue->get.deleteAt = 0; } 
+}
+ 
+void queueSafeAdd(shared<Queue>* queue, long double item) { 
+  while (true) { 
+    sync(queue as myQueue) {
+      int32 newInsertAt = (queueGetInsertAt(queue) + 1) % QUEUESIZE; 
+      int32 deleteAt = queueGetDeleteAt(queue); 
+      if (deleteAt == newInsertAt) { continue; }
+      queueSetItemAt(queue, queueGetInsertAt(queue), item); 
+      queueSetInsertAt(queue, newInsertAt); 
+      break; 
+    } 
+  }
+}
+
+void queueSafeGet(shared<Queue>* queue, long double* result) { 
+  while (true) { 
+    sync(queue as myQueue) { 
+      // see above at queueSafeAdd() 
+      if (queueGetDeleteAt(queue) == queueGetInsertAt(queue)) { continue; }
+      *result = queueGetItemAt(queue, queueGetDeleteAt(queue)); 
+      int32 newDeleteAt = (queueGetDeleteAt(queue) + 1) % QUEUESIZE; 
+      queueSetDeleteAt(queue, newDeleteAt); 
+      return; 
+    } 
+  } 
+}
+\end{ccode}
+
+\CODE{queueSafeAdd()} and \CODE{queueSafeGet()} repeatedly check the indices of the queue for free, respectively occupied slots. If none is available, the check is repeated in a busy-wait manner. As the repetitions do not perform a wait after an unsuccessful check, the code will ultimately cause unnecessary workload for the CPUs. The user should therefore force the tasks to sleep for a certain amount of time in between. Yet, it may be difficult to balance the waiting time for acceptable responding times and CPU occupancy. For this reason it might be helpful in the future to offer conditional variables which, in the current example, would allow to wait for a free or occupied slot without having to worry about the implementation of a performant busy-wait approach. Such condition variables could either suspend a thread until the declared conditions are fulfilled or realize a busy-wait protocal similar to the one for the acquisition of locks. The two functions synchronize all statements in the busy-wait loops. This is done in order to prevent interfering changes of the index variables of the queue. The accesses to the queue thus become serialized (for this reason, in this example, the separate protection of each queue slot is actually superfluous). Therefore, the repeated acquisition and release of the lock for the queue, which causes unnecessary synchronization management overhead, could be optimized by instead nesting the loops inside the synchronization statements. This optimization technique, called lock coarsening, however must be used with care in order to not impair the responsiveness due to lock contention (see also section \ref{java}).
+
+Of the remaining functions of the queue, the function \CODE{queueSetItemAt()} is given. The other helper functions have the same structure.
+\begin{ccode}
+void queueSetItemAt(shared<Queue>* queue, int32 index, long double newItem) { 
+  sync(queue as myQueue) { 
+    sync(&myQueue->get.data[index] as wrappedItem) { wrappedItem->set(newItem); } 
+  } 
+}
+\end{ccode}
+\CODE{queueSetItemAt()} first has to synchronize the access to the shared queue. It then does the same for the slot of the queue whose value is to be overwritten. At this point, two optimization are possible. First, the queue need not be locked, since for the only call of this function the queue is already synchronized. Recursive-lock optimization can be performed. Furthermore, since every synchronization of the queue slots happen in a context where also the whole queue is synchronized, the latter synchronization dominates the former one. Therefore, the slots actually need not be synchronized. This technique is similar to the removal of enclosed monitor locks in Java (see \ref{java}). If the necessary properties for these optimizations only hold for some calls of \CODE{queueSetItemAt()} function inlining or duplication could be performed (see \ref{single-task-locks}). A look at the generated code for the current example reveals that of the presented optimizations the removal of the recursive lock is performed:
+\begin{ccode}
+void queueSetItemAt(SharedOf_Queue_0_t* queue, int32 index, long double newItem) { 
+  { 
+    SharedOf_Queue_0_t* myQueue = queue; 
+    { 
+      { 
+        SharedOf_long_double_0_t* wrappedItem = &[| node: myQueue -> value |].data[index]; 
+        startSyncFor1Mutex(&(wrappedItem)->mutex); 
+        { wrappedItem->value = newItem; } 
+        stopSyncFor1Mutex(&(wrappedItem)->mutex); 
+      } 
+    } 
+  } 
+} queueSetItemAt (function)
+\end{ccode}
+The synchronization for \CODE{myQueue} is removed, whereas the one for \CODE{wrappedItem} remains, which is the expected result of the implemented optimizer. On the other hand, the synchronizations of the queue in the aforementioned functions \CODE{queueSafeGet()}, \CODE{queueSafeAdd()} and \CODE{queueInit()} remain, as expected.
+
+
+\subsubsection{Extended Map-Reduce Approach}
+While in the last version of the $\pi$ algorithm the mappers shared a single queue, the extended variant assigns one queue to each mapper. The reducer gets access to each of these queues. Furthermore another container is introduced for the queues:
+\begin{ccode}
+struct FlaggedQueue { 
+  shared<int32> itemCount; 
+  shared<Queue> queue; 
+  shared<boolean> isFull; 
+  shared<boolean> isFinished; 
+};
+\end{ccode}
+This container is used in the following way. Whereas in the former approach partial sums were communicated, in the extended variant, a mapper adds every single item to the queue (this is, of course an approach which, for performance reasons, would not be pursued in real life). The mapper repeatedly fills the queue with as many items as possible, which depends on the number of free slots left in the queue and on the items left to be calculated for the current block of numbers. After each such round in signals the reducer via \CODE{isFull} that it is done for the moment and via \CODE{itemCount} how many items were actually added to the queue (since the queue itself does offer an according functionality). When the mapper is finished, it signals the reducer this informs the reducer via \CODE{isFinished}, so that reducer finally knows when it is finished itself. The result queues are declared in the main function:
+\begin{ccode}
+exported int32 main(int32 argc, string[] argv) { 
+  // ...
+  shared<shared<FlaggedQueue>[MAPPERCOUNT]> resultQueues; 
+  shared<shared<FlaggedQueue>[MAPPERCOUNT]>* resultQueuesPointer = &resultQueues; 
+  Future<void>[MAPPERCOUNT] mappers; 
+  for (i ++ in [0..MAPPERCOUNT[) { 
+    sync(resultQueues, &resultQueues.get[i] as resultQueue) { 
+      sync(&resultQueue->get.itemCount as itemCount) { itemCount->set(0); } 
+      sync(&resultQueue->get.isFull as isFull) { isFull->set(false); } 
+      sync(&resultQueue->get.isFinished as isFinished) { isFinished->set(false); } 
+      queueInit(&resultQueue->get.queue); 
+      mappers[i] = |map(THRESHOLD, counterPointer, resultQueue)|.run; 
+    } 
+  }
+   
+  shared<long double> result; 
+  shared<long double>* resultPointer = &result; 
+  |reduce(resultPointer, resultQueuesPointer)|.run.join; 
+}
+\end{ccode}
+The result queues are wrapped inside a shared resource in order to be safely shareable with the reducer. in line 18. The code reveals a circuitousness which results from the copy-semantics of tasks: In order to actually share \CODE{resultQueues} and \CODE{result} with the reducer, according pointers have to be defined in advance. If the programmer would instead reference these data via address like in
+\begin{ccode}
+|reduce(&result, &resultQueues)|.run.join; 
+\end{ccode}
+then actually not addresses of the original shared resources would be copied. Instead, the shared resources would be copied themselves and pointers to these copies would in turn be copied into the reducer task. Ultimately, this would lead to erroneous code. This is a result from the fact that the value of every referenced variable inside a task expression is copied into the arguments structure, which the thread for this task is fed at runtime. In the future the semantics should probably be distinguished in this regard, such that every address-referenced variable of a shared resource is actually copied by its address not by its value. The aforementioned mapper and \CODE{calcPiBlock} are changed to the following code:
+\begin{ccode}
+void map(uint32 threshold, shared<uint32>* counter, shared<FlaggedQueue>* partialResultQueue) { 
+  while (true) { 
+    uint32 start, end; 
+    // ...     
+    calcPiBlock(start, end, partialResultQueue); 
+  } 
+  sync(partialResultQueue as myQueue, &myQueue->get.isFinished as isFinished) { isFinished->set(true); } 
+}
+
+void calcPiBlock(uint32 start, uint32 end, shared<FlaggedQueue>* resultQueue) { 
+  int32 mapCounter = 0; 
+  for (uint32 i = start; i < end; ++i) {
+    sync(resultQueue as queue) { queueSafeAdd(&queue->get.queue, calcPiItem(i)); } 
+    ++mapCounter; 
+     
+    if (mapCounter == QUEUESIZE - 1 || i == end - 1) { 
+      sync(resultQueue as queue, &queue->get.itemCount as itemCount) { itemCount->set(mapCounter); } 
+      sync(resultQueue as queue, &queue->get.isFull as isFull) { isFull->set(true); } 
+      mapCounter = 0; 
+      while (true) { 
+        sync(resultQueue as queue, &queue->get.isFull as isFull) { if (!isFull->get) { break; } } 
+        timespec sleepingTime = (struct timespec){ .tv_nsec = }; 
+        nanosleep(&sleepingTime, null); 
+      }
+    }
+  }
+}
+\end{ccode}
+As already explained, inside \CODE{calcPiBlock()} the mapper adds many items to the queue as possible. It then changes the flags \CODE{itemCount} and \CODE{isFull} so that the reducer will empty the queue. The mapper thus subsequently waits in a busy-wait manner for the \CODE{isFull} flag to become invalid.
+
+\begin{ccode}
+void reduce(shared<long double>* result, shared<shared<FlaggedQueue>[MAPPERCOUNT]>* resultQueues) { 
+  sync(result as myResult) { myResult->set(0); } 
+   
+  boolean[MAPPERCOUNT] areFinished; 
+  for (i ++ in [0..MAPPERCOUNT[) { areFinished[i] = false; }
+  int32 isFinishedCount = 0; 
+   
+  while (true) { 
+    // try to read from one queue if any one is available  
+    for (i ++ in [0..MAPPERCOUNT[) { 
+      if (areFinished[i]) { continue; }
+      sync(resultQueues as myQueues, &myQueues->get[i] as resultQueue) {
+        sync(&resultQueue->get.isFull as isFull, &resultQueue->get.isFinished as isFinished) { 
+          if (isFull->get) { 
+            addPartialResults(result, &resultQueue->get.itemCount, &resultQueue->get.queue, 
+                              &resultQueue->get.isFull); 
+          } else if (isFinished->get && setFinished(i, areFinished, &isFinishedCount)) { 
+            return; 
+          } 
+        } 
+      } 
+    }
+    timespec sleepingTime = (struct timespec){ .tv_nsec = DELAY }; 
+    nanosleep(&sleepingTime, null); 
+  }
+}
+\end{ccode}
+The synchronizer busy-waits for one of tasks to be either finished (line 17) or for the queue of the respective task to become full. In the latter case \CODE{addPartialResults} adds the items of the filled slots to the overall result, and invalidates the \CODE{isFull} flag:
+\begin{ccode}
+void addPartialResults(shared<long double>* result, shared<int32>* itemCount, shared<Queue>* queue, shared<boolean>* isFullFlag) {
+  sync(queue as myQueue, itemCount as myItemCount) { 
+    for (i ++ in [0..myItemCount->get[) {
+      sync(result as myResult) { 
+        long double tempResult; 
+        queueSafeGet(myQueue, &tempResult); 
+        myResult->set(myResult->get + tempResult); 
+      } 
+    }
+  } 
+  sync(isFullFlag as flag) { flag->set(false); } 
+}
+\end{ccode}
+The previous code listings show some optimization potential. First, \CODE{resultQueues} need not be synchronized in line 12, since array elements are not allowed to be overwritten. The same holds for the container \CODE{resultQueue} in line 12 (TODO: of listing reduce). On the other hand, since \CODE{resultQueue} and its counterparts in line lines 7, 13, 17, 18 and 21 (TODO: of listing map), always dominates the its fields synchronization-wise, an optimization might find that the synchronization of the whole queue and a removal of the synchronizations of its fields may lead to better performing code. Such optimization assessments would require some sort of heuristics and should be considered for future extensions of ParallelMbeddr. Nevertheless, the synchronization in line 2 (TODO: of addPR) of \CODE{myQueue} causes the queue to be always synchronized in \CODE{queueSafeGet()} since line 6 contains the only call for this function. Thus, the synchronization inside this function, which was shown in the previous parallelization approach, can be removed; along with all recursive locks in the helper functions for the queue. Another subtle optimization could be applied for every synchronization of the queue: Since the use of \CODE{isFull} forbids the mappers to add new items to the queue as long as this flag evaluates to \CODE{false} and vice versa for the reducer, there can actually never be any conflicting accesses to the queues fields. The utilization of the queue thus induces two states that are determined by the value of \CODE{isFull}. It is left to future research, how such state-dependent synchronization can be exploited for the elision of locks. The actual performed optimizations concern the synchronizations of the overall \CODE{resultQueues} container and those of the individual actual queues. The optimizer detects the read-only usage of \CODE{resultQueues} and infers that locks thereof can be removed. It should be noted, that the optimizer is not able to detect this usage pattern for each queue container in the array of \CODE{resultQueues} since the according optimization for nested shared resources is not supported, yet. However, due to the use of pseudo-aliases, in an unsafe mode optimization mode, the optimizer detects the recursive locks of the individual queues in \CODE{queueSafeGet()} and the other helper functions and deletes them. For the lack of relevance, the optimized code is omitted in this discussion.
+
+\subsubsection{Measurements}
 
 \section{Optimization}
 Standard deviation
@@ -17,7 +600,7 @@ While there are multiple approaches to parallel programming in C, to the knowled
 \textit{OpenMP}\footnote{http://openmp.org/wp/, accessed: 2014-08-23} is an API to parallel programming for C/C++ and Fortran\cite[p.~1]{OpenMP}. It supports both task parallelism and data parallelism. OpenMP is used by extending valid C code with the \CODE{\#pragma} directive,\footnote{See https://gcc.gnu.org/onlinedocs/cpp/Pragmas.html for details.} which instructs the compiler how to parallelize a program. It can therefore be seen as a declarative way of enriching single-threaded programs with parallelism. However, OpenMP does not check the code for correctness regarding thread-safety. This means that it is the programmer's responsibility to ensure that data dependencies do not entail data races. Nevertheless, it offers extensive support for parallelization. For instance, OpenMP offers multiple strategies to distribute the processing of arrays onto multiple threads. This, of course, is much easier to realize with the absence of strong thread-safety guarantees. The following language, on the other hand, fills this gap by combining both features. In this regard it might serve as one possible Paragon for the future development of ParallelMbeddr.
 
 \subsection{ParaSail}
-The programming language \textit{ParaSail} offers implicit parallelism. It does so by guaranteeing at compile time that, theoretically, every valid expression can be evaluated in parallel. In contrast to `pure' languages like Haskell, it does not sacrifice side-effects for this purpose \cite{APointerFreePath}. However, in order to automatically prove the safeness of parallel executions, it avoids concepts that are crucial to languages like C, like pointers and global variables \cite{ParaSailLessIsMore}. In these regards, it differs from the focus of this work. Nevertheless, its approach to data collections may also provide ideas for future research: ParaSail makes heavy use of indexable containers like lists or trees. When equipped with proper pre- and postconditions, containers can be sliced in a thread-safe manner \cite{ParaSailReferenceManual}. This means that they must be designed in a way which lets the compiler prove that slices over their elements do not overlap. In such a case, segmented views of the original container can be manipulated in a thread-safe manner in parallel. While this feature seems to be promising for future enhancements of ParallelMbeddr, it should be noted that the presence of pointers in C could impede an according realization of containers.
+The programming language \textit{ParaSail} offers implicit parallelism. It does so by guaranteeing at compile time that, theoretically, every valid expression can be evaluated in parallel. In contrast to `pure' languages like Haskell, it does not sacrifice side-effects for this purpose \cite{APointerFreePath}. However, in order to automatically prove the safeness of parallel executions, it avoids concepts that are crucial to languages like C, like pointers and global variables \cite{ParaSailLessIsMore}. In these regards, it differs from the focus of this work. Nevertheless, its approach to data collections may also provide ideas for future research: ParaSail makes heavy use of indexable containers like lists or trees. When equipped with proper pre- and postconditions, containers can be sliced in a thread-safe manner \cite{ParaSailReferenceManual}. This means that they must be designed in a way which lets the compiler prove that slices (i.e. sub-intervals) of their elements do not overlap. In such a case, segmented views of the original container can be manipulated in a thread-safe manner in parallel. While this feature seems to be promising for future enhancements of ParallelMbeddr, it should be noted that the presence of pointers in C could impede an according realization of containers.
 
 \subsection{\AE minium}
 Like ParaSail, the programming language \textit{\AE minium} realizes implicit parallelism. As opposed to ParaSail, it uses explicit annotations on methods by the user to guarantee thread-safety. These annotations declare \textit{access permissions} (\cite{ModularTypestateChecking}) on the parameters of function arguments and return values. The compiler uses these access permissions (\textit{shared}, \textit{immutable}, \textit{unique}) to prove the correctness of programs in terms of thread-safety. If possible, executions are parallelized automatically. This may for instance happen if only immutable data is involved. The presence of mutable shared data, however, requires the programmer to wrap according statements inside atomic blocks. While atomic blocks could be inferred by the compiler, the language pursues this path ``for granularity reasons'' \cite{ConcurrencyByDefault}. This approach equals ParallelMbeddr's requirement to annotate synchronization blocks explicitly. Both languages thus enable the user to ``have fine-grain control over the size of critical sections'' \cite{ConcurrencyByDefault}. Thus, the user controls the trade-off between the responsiveness (the synchronization contention, i.e. the time that threads are blocked by others) of the system and the synchronization management overhead. Furthermore, it can directly influence the presence of higher-level data dependencies, that
@@ -27,6 +610,7 @@ Like ParaSail, the programming language \textit{\AE minium} realizes implicit pa
 A similar feature to data groups in \AE minium is offered by the multi-paradigm language \textit{D}.\footnote{http://dlang.org/, accessed: 2014-08-23} D provides a thread-safety-first approach to parallelization. The programmer has to manually protect data that is shared between threads. One way of achieving this goal is by synchronizing classes. If a class is synchronized, its data must be private, and every call of one of its methods is locked for unique access. If fields themselves have non-primitive types, i.e. class-types, their classes must also be synchronized. In order to tie the protection of such a field and an object more closely, D allows objects to be owned by others in terms of their mutexes. An owned object uses the mutex of its owner. D thus enables semantics similar to data groups in \AE minium. While this feature is still lacking in ParallelMbeddr, the language offers D's support for explicit synchronization for multiple objects in one synchronization statement for coarse-grained, deadlock-free synchronization. While ParallelMbeddr uses a busy-waiting approach to achieve this goal, D uses mutex ordering, which acquires mutexes in the same order in all threads, regardless of the syntactic order in the programmer's code \cite{ConcurrencyInTheDProgrammingLanguage}.\footnote{For general information on this technique, see https://www.securecoding.cert.org/confluence/display/seccode/POS51-C.+Avoid+deadlock+with+POSIX+threads+by+locking+in+predefined+order, accessed: 2014-08-23.}
 
 \subsection{Java}
+\label{java}
 The programming language Java has a form of synchronization similar to D's. However, its guarantees concerning thread-safety are considerably weaker. In Java, the focus of synchronizations is rather computation-oriented than data-oriented. The programmer is himself responsible for identifying the blocks of statements and methods that need to be synchronized, and needs to annotate them. Unlike in D, a class can thus have synchronized and not synchronized methods. Furthermore, although the access through a method $m$ of such a \textit{monitor} (i.e. an object which applies the explained form of synchronization) is synchronized, simultaneous access via unsynchronized other methods to the same data, which $m$ accesses, is still possible. In spite of these limitations, the research on lock-related optimizations in Java was used as a starting point for similar optimizations in ParallelMbeddr. The optimizations accomplished in Java include lock-elision for re-entrant monitors, i.e. monitors whose synchronized methods are called recursively. Furthermore, enclosed and thread-local monitors are optimized. The latter relates to single-task lock elision in ParallelMbeddr. The former can be seen as an optimization technique that was not applied in ParallelMbeddr. If the field $f$ of a monitor $m$ is always accessed by a synchronized method of $m$, and $f$ is itself a monitor, then the synchronizations for $f$'s methods can be omitted. Similar, in ParallelMbeddr the synchronizations for a shared resource $n$, which is nested inside another one $s$, could be omitted, if $n$ is always synchronized inside a synchronization context of $s$ \cite{StaticAnalysesForJava}. Another optimization applied in Java is lock-coarsening, which tries to reduce the synchronization management overhead by broadening synchronization contexts \cite{JavaTheoryAndPractice}. Such optimization can increase the amount of lock contention. For this reason, good heuristics are mandatory. Another optimization is adaptive locking, which switches between spinning (for short time intervals) and suspension (for longer ones) when a thread waits for the release of a lock. Another technique, which was proposed for Java, is lock reservation \cite{LockReservation}. Lock reservation assumes that locks are repeatedly requested by one thread at a time. It exploits this property by storing at runtime for each lock an owner-thread which might change anytime. While accesses via a lock $l$ of the $o$ owner thread need not be locked, other threads have to lock $l$. Hence, if for a certain amount of time $o$ is the only thread to enter the synchronized methods of a monitor protected by $l$, then meanwhile no locking for $l$ has to be applied. It remains to be investigated whether such optimization is suitable for the resource-constraint embedded domain.
 
 \subsection{Rust}
