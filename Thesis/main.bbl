@@ -78,6 +78,12 @@ Kevin Bierhoff and Jonathan Aldrich.
 \newblock {\em Modular typestate checking of aliased objects}, volume~42.
 \newblock ACM, 2007.
 
+\bibitem{HowToMiscompilePrograms}
+Hans-J Boehm.
+\newblock How to miscompile programs with ``benign'' data races.
+\newblock In {\em Proceedings of the 3rd USENIX conference on Hot topic in
+  parallelism}, pages 3--3. USENIX Association, 2011.
+
 \bibitem{DoJava6Threading}
 Jeroen Borgers.
 \newblock {\em Do Java 6 threading optimizations actually work?}
@@ -98,6 +104,12 @@ G.C. Buttazzo, G.~Lipari, L.~Abeni, and M.~Caccamo.
 \newblock {\em Soft Real-Time Systems: Predictability vs. Efficiency:
   Predictability vs. Efficiency}.
 \newblock Series in Computer Science. Springer, 2006.
+
+\bibitem{ResearchToy}
+Calin Cascaval, Colin Blundell, Maged Michael, Harold~W Cain, Peng Wu, Stefanie
+  Chiras, and Siddhartha Chatterjee.
+\newblock Software transactional memory: Why is it only a research toy?
+\newblock {\em Queue}, 6(5):40, 2008.
 
 \bibitem{ParCompArchitecture_HW/SW_Approach}
 D.E. Culler, J.P. Singh, and A.~Gupta.
@@ -126,6 +138,12 @@ I.A. Dhotre.
 \newblock {\em Operating Systems}.
 \newblock Technical Publications, 2007.
 
+\bibitem{ParallelScientificComputing}
+J.~Dongarra and J.~Wasniewski.
+\newblock {\em Parallel Scientific Computing: First International Workshop,
+  PARA '94, Lyngby, Denmark, June 20 - 23, 1994. Proceedings}.
+\newblock Number Bd. 1 in Lecture Notes in Computer Science. Springer, 1994.
+
 \bibitem{MulticoreChallenges}
 Tomas Evensen.
 \newblock Multicore challenges and choices: Deciding which solution is right
@@ -133,6 +151,13 @@ Tomas Evensen.
 \newblock
   \url{http://leadwise.mediadroit.com/files/8537WP\_Deciding\_which\_multicore\_solution\_is\_right\_June2009.pdf}.
 \newblock Published: 2009.
+
+\bibitem{DynamicPerformanceTuning}
+Pascal Felber, Christof Fetzer, and Torvald Riegel.
+\newblock Dynamic performance tuning of word-based software transactional
+  memory.
+\newblock In {\em Proceedings of the 13th ACM SIGPLAN Symposium on Principles
+  and practice of parallel programming}, pages 237--246. ACM, 2008.
 
 \bibitem{LanguageWorkbenches}
 Martin Fowler.
@@ -160,6 +185,11 @@ Brian Goetz.
 \newblock {\em Java theory and practice: Synchronization optimizations in
   Mustang}.
 \newblock Published: 2005-10-18.
+
+\bibitem{NonBlockingSynchronization}
+Michael~Barry Greenwald.
+\newblock {\em Non-blocking synchronization and system design}.
+\newblock PhD thesis, Stanford University, 1999.
 
 \bibitem{PrinciplesOfTransactionalMemory}
 R.~Guerraoui, M.~Kapa{\l}ka, and N.~Lynch.
@@ -233,6 +263,12 @@ B.~Lewis and D.J. Berg.
 \newblock {\em Multithreaded Programming with Java Technology}.
 \newblock Sun Microsystems Press Java series. Prentice Hall, 2000.
 
+\bibitem{NonConcurrencyAnalysis}
+Yuan Lin.
+\newblock System and method for compile-time non-concurrency analysis, March~2
+  2010.
+\newblock US Patent 7,673,295.
+
 \bibitem{AdvancedLinuxProgramming}
 C.S. LLC, M.L. Mitchell, A.~Samuel, and J.~Oldham.
 \newblock {\em Advanced Linux Programming}.
@@ -249,6 +285,13 @@ R.~Love.
 \newblock {\em Linux System Programming: Talking Directly to the Kernel and C
   Library}.
 \newblock O'Reilly Media, 2013.
+
+\bibitem{LoweringTheOverhead}
+Virendra~J Marathe, Michael~F Spear, Christopher Heriot, Athul Acharya, David
+  Eisenstat, William~N Scherer~III, and Michael~L Scott.
+\newblock Lowering the overhead of nonblocking software transactional memory.
+\newblock In {\em Workshop on Languages, Compilers, and Hardware Support for
+  Transactional Computing (TRANSACT)}, 2006.
 
 \bibitem{XorshiftRngs}
 George Marsaglia.
@@ -280,6 +323,12 @@ P.~Pacheco.
 Bhatt P.C.P.
 \newblock {\em Introduction To Operating Systems: Concepts And Practice An 2Nd
   Ed.}
+
+\bibitem{OpenMPSupport}
+Paul Petersen and Sanjiv Shah.
+\newblock Openmp support in the intel{\textregistered} thread checker.
+\newblock In {\em OpenMP Shared Memory Parallel Programming}, pages 1--12.
+  Springer, 2003.
 
 \bibitem{TypesAndProgrammingLanguages}
 B.C. Pierce.

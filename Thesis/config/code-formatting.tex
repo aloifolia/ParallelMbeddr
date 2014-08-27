@@ -32,14 +32,24 @@ showstringspaces=false
 }[keywords,comments,strings,directives]%
 
 \lstdefinestyle{pseudoc}{
-language=pseudoC,
-basicstyle=\small\ttfamily,
-numbers=left,
-numberstyle=\tiny,
-frame=L,
-columns=fullflexible,
-showstringspaces=false,
+  language=pseudoC,
+  basicstyle=\small\ttfamily,
+  numbers=left,
+  numberstyle=\tiny,
+%  frame=L,
+  columns=fullflexible,
+  showstringspaces=false,
+  frame=single,
+  captionpos=b
 }
 
-\lstnewenvironment{ccode}{
-\mathligsoff\lstset{style=pseudoC}\lstset{literate={'}{{'}}1}\lstset{literate={\ }{{ }}1}}{}
+\lstnewenvironment{ccode}[1]{
+  \mathligsoff
+  \lstset{style=pseudoC}
+  \lstset{literate={'}{{'}}1}
+  \lstset{literate={\ }{{ }}1}
+  \lstset{#1}
+}{}
+
+\DeclareCaptionFormat{listing}{#1#2#3}
+\captionsetup[lstlisting]{format=listing,singlelinecheck=false, margin=0pt, font={sf}}

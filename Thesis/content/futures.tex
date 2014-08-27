@@ -4,31 +4,30 @@ Whenever a task \CODE{t} is run, a \textit{future} is generated. Futures in Para
 \subsection{Design}
 The syntax \texttt{e} of expressions in mbeddr is extended by:\footnote{If the expression e has a pointer type the dots (\CODE{.}) are replaced by arrows (\CODE{->}).}
 
-$ e ::= ...|\;e.\mathit{run}\;|\;e.\mathit{result}\;|\;e.\mathit{join} $
+\begin{equation}
+\begin{split}
+e & ::= ...|\;e.\mathit{run}\;|\;e.\mathit{result}\;|\;e.\mathit{join}\\
+t & ::= ...|\;\mathit{Future{<}t{>}}
+\end{split}
+\end{equation}
 
-Like with tasks, the type of a future is parameterized by its return type:
+Like with tasks, the type of a future is parameterized by its return type. \CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a running task that is represented by a future handle \CODE{e}, i.e. halts the execution of the calling task until \CODE{e}'s execution is finished, and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. These properties are reflected in the typing rules:
 
-$ t ::= ...|\;\mathit{Future{<}t{>}}$
-
-\CODE{e.run} denotes the launch of task \CODE{e} whereas \CODE{e.result} joins a running task that is represented by a future handle \CODE{e}, i.e. halts the execution of the calling task until \CODE{e}'s execution is finished, and returns its result. The last expression \CODE{e.join} can be used to join tasks that return nothing. These properties are reflected in the typing rules:
-
-\begin{center}
-\begin{align*}
+\begin{equation}
 \inference*[Future]{e |- \mathit{Task{<}t{>}}}{e.\mathit{run} |- \mathit{Future{<}t{>}}}
 \qquad\qquad
 \inference*[FutureResult]{e |- \mathit{Task{<}t\text{*}{>}}}{e.\mathit{result} |- t\text{*}}
 \qquad\qquad
 \inference*[FutureJoin]{e |- \mathit{Task{<}void{>}}}{e.\mathit{join} |- \mathit{void}}
-\end{align*}
-\end{center}
+\end{equation}
 
 As was already depicted in the previous section,  
 \CODE{result} returns a pointer to a heap-managed value. Hence the programmer has to free the value eventually.
 
 \subsection{Translation}
 \label{futuresTranslation}
-A future type \CODE{Future<t*>} is translated to a generic \CODE{struct} that contains a handle of the thread, a storage for the result value -- which is dropped for futures of type \CODE{Future<void>} -- and a flag that indicates whether the thread is already finished:
-\begin{ccode}
+A future of type \CODE{Future<t*>} is translated to an instance of a generic \CODE{struct} that contains a handle of the thread, a storage for the result value -- which is dropped for futures of type \CODE{Future<void>} -- and a flag that indicates whether the thread is already finished:
+\begin{ccode}{caption=Struct generated for all futures of type \CODE{Future<t*>}}
 exported struct Future { 
   pthread_t pth; 
   boolean finished; 
@@ -37,7 +36,7 @@ exported struct Future {
 \end{ccode}
 
 For every task and future expression shown above, a generic function reflects the semantics in the translation. The \CODE{run} of a task involves taking a task, creating a pthread with the task's function pointer, and arguments and generating a future\footnote{In the following a future will always denote either the according concept or an instance thereof. A \CODE{Future}, on the other hand, will either denote the struct that is used for futures, an instance thereof or the according struct type -- the respective meaning will be explicitly clarified if necessary.} with the initialized thread handle:\footnote{Obviously the thread handle is copied into the \CODE{Future}. This is safe as can be seen when looking at the POSIX function \CODE{pthread\_t pthread\_self(void)}, which also returns a copy of a thread handle. This useful property is worth mentioning since it does not hold for all POSIX related data structures as is explained in footnote \ref{mutexCopies}.}
-\begin{ccode}
+\begin{ccode}{caption=Generic function generated for the reduction of \CODE{run}}
 Future runTaskAndGetFuture(Task task) { 
   pthread_t pth;
   if ( task.argsSize == 0 ) {
@@ -55,7 +54,7 @@ The code shows that the arguments to be provided for the thread are copied onto 
 
 The signature of \CODE{pthread\_create} indicates how the result of a threaded function can be received. As was already suggested \CODE{pthread\_create} expects a function pointer of type \CODE{void* -> void*}, which is the reason why the function generated for a task is equally typed. The result is thus a generic \CODE{void} pointer. This implies that the threaded function could generally return the address of a stack-managed value, i.e. a local variable. Since the existence of the value after thread termination cannot be guaranteed in such a case, a dangling pointer \cite{UnderstandingAndUsingCPointers} could emerge, which resembles the aforementioned problem for thread arguments. The only safe alternative that fits the task-future structure well is to allocate memory from the heap and return the address of this memory (see section \ref{tasksTranslation}). The translation of the result retrieval is a call of the following function:
 
-\begin{ccode}
+\begin{ccode}{caption=Generic function generated for the reduction of \CODE{result}}
 void* getFutureResult(Future* future) { 
   if (!future->finished) { 
     pthread_join (future->pth, &(future->result)); 
@@ -65,7 +64,7 @@ void* getFutureResult(Future* future) {
 } 
 \end{ccode}
 First the future is used to join the according thread which blocks the execution until the thread is finished. Additionally, the result is copied into the designated slot of the future struct instance. Finally, the result is returned. In POSIX, a thread can only be joined once; every subsequent call causes a runtime error. In order to allow the user to request the result multiple times nevertheless the \CODE{finished} flag is used to determine whether a join should happen. The same basic structure can be found in the translation of the \CODE{join} function for a future of type \CODE{Future<void>}. The main difference is the missing result-related code:
-\begin{ccode}
+\begin{ccode}{caption=Generic function generated for the reduction of \CODE{join}}
 void joinVoidFuture(VoidFuture* future) { 
   if (!future->finished) { 
     pthread_join (future->pth, null); 
@@ -75,19 +74,19 @@ void joinVoidFuture(VoidFuture* future) {
 \end{ccode}
 Both aforementioned generated functions take their future parameters by address. This is necessary to make the setting of the future data work. If struct instances of futures would be passed to these functions as is, then due to C's pass-by-value semantics only copies of the provided future arguments would be filled with data. Thus, the result of a task would never arrive in the original future struct instance. Furthermore, subsequent calls to these functions would always work with false \CODE{finished} flags and ultimately trigger runtime errors. The necessity for future pointers in turn does not assort well with chained future expressions like:
 
-\begin{ccode}
+\begin{ccode}{caption=Chained future expression \CODE{task.run.result}}
 Task<int32*> task = |(int32)23|;
 int32* result23 = task.run.result;
 \end{ccode}
 
 In this sample code, the result of the future is requested without being stored previously and accessed via address. Hence, the code conflicts with the definition of the translation of \CODE{result} given beforehand. A first approach to solve this problem would be to change the line to:
 
-\begin{ccode}
+\begin{ccode}{caption=Na\"{\i}ve solution for chained future expression}
 int32* result23 = (&(task.run))->result;
 \end{ccode}
 
 This, however, is not allowed because \CODE{task.run} is no lvalue \cite[pp.~147-148]{CPrimerPlus} which prohibits the utilization of the address operator on this expression. Instead, in order to allow for chainings like \CODE{task.run.result}, two wrapper functions, one for each \CODE{join} and \CODE{result}, are provided. These functions each take a future by argument, thus binding it to an addressable location, and call the generated functions that correspond to \CODE{join}, respectively \CODE{result}, in turn:
-\begin{ccode}
+\begin{ccode}{caption=Helper functions for chained future expressions}
 void* saveFutureAndGetResult(Future future) { 
   return getFutureResult(&future); 
 }
@@ -99,31 +98,16 @@ void saveAndJoinVoidFuture(VoidFuture future) {
 
 By making use of the presented functions, the reductions of \CODE{e.run}, \CODE{e.join} and \CODE{e.result} (where \CODE{e'} is the reduced value of \CODE{e}) directly become function calls thereof:
 
-\begin{minipage}{0.5\textwidth}
-\begin{ccode}
-runTaskAndGetFuture(e')
+\begin{ccode}{caption={Reductions of \CODE{run}, \CODE{result} and \CODE{join}}}
+runTaskAndGetFuture(e')        // e.run
+runTaskAndGetVoidFuture(e')    // e.run, if e is of type void
+((t)getFutureResult(&e'))      // e.result
+joinFuture(&e')                // e.join
 \end{ccode}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{ccode}
-runTaskAndGetVoidFuture(e')
-\end{ccode}
-\end{minipage}
-
-\begin{minipage}{0.5\textwidth}
-\begin{ccode}
-((t)getFutureResult(&e'))
-\end{ccode}
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
-\begin{ccode}
-joinFuture(&e')
-\end{ccode}
-\end{minipage}
 
 The type cast of the result returned by \CODE{getFutureResult(\&e')} is necessary since it returns a generic pointer of type \CODE{void*} which may not be compatible with the receiver of the value. In consequence, the result is cast to the result type of the future for which \CODE{e.result} was type checked. 
 For expressions of the kind \CODE{|e|.run}, the reduction to a call of \CODE{runTaskAndGetFuture()} is not applied. Instead, a call to a specific function \CODE{futureInit\_X} that combines both the logic of the task initialization and the future initialization is created. If \CODE{e} contains references to local variables or arguments, then similar to the \CODE{taskInit\_X()} expression block from section \ref{tasksTranslation}, the future initialization function first allocates memory from the heap for the values of the referred variables. To this end, it uses an instance of the \CODE{Args\_X} struct that was created for the task to store the values. Afterwards, instead of wrapping the arguments struct inside a \CODE{Task} struct instance, the function directly declares a pthread and initializes it with the arguments and a pointer to the function \CODE{parFun\_X} that was created for the task:
-\begin{ccode}
+\begin{ccode}{caption=Generated function for \CODE{|e|.run}}
 Future futureInit_X(t_1 v_1, ..., t_n v_n) { 
   Args_X* args_X = malloc(sizeof(Args_X)); 
   args_X->v_1 = v_1; 
@@ -135,7 +119,7 @@ Future futureInit_X(t_1 v_1, ..., t_n v_n) {
 }
 \end{ccode}
 If \CODE{e} does not contain any references to local variables or function arguments the arguments-related code is omitted and \CODE{null} is given as argument parameter to \CODE{pthread\_create()}:
-\begin{ccode}
+\begin{ccode}{caption=Generated function for \CODE{|e|.run} if \CODE{e} contains no references to bind}
 Future futureInit_X() {
   pthread_t pth; 
   pthread_create(&pth, null, :parFun_X, null); 
@@ -143,7 +127,7 @@ Future futureInit_X() {
 }
 \end{ccode}
 If the type of \CODE{e} is \CODE{void}, the struct type \CODE{Future} is replaced by \CODE{VoidFuture} in either declaration of \CODE{futureInit\_X}. The code shows why no clearance of the arguments for a task in the case of a direct run of the task is required, as was mentioned in section \ref{tasksDesign}: Since the struct instance \CODE{args\_X} is only used for exactly one running task, no further copies of the arguments are needed. Hence, the freeing of the heap-allocated memory can be left to the function \CODE{parFun\_X}. \CODE{futureInit\_X} is called in the reduction of \CODE{|e|.run}:
-\begin{ccode}
+\begin{ccode}{caption=Reduction of \CODE{|e|.run}}
 futureInit_X(v_1, ..., v_n)
 \end{ccode}
 Whereas the following section will show the generation of expressions \CODE{e.run} to calls of \CODE{runTaskAndGetFuture} the reduction to a call of \CODE{futureInit\_X} is depicted in section \ref{sharedMemoryExample}.
@@ -151,12 +135,11 @@ Whereas the following section will show the generation of expressions \CODE{e.ru
 \subsection{Example Code}
 \label{futuresExample}
 The running example concerning the $\pi$ approximation from section \ref{taskExample} can now be extended with the result-related code. The tasks that were previously declared -- and can be seen as templates for according running instances of task -- are used to initiate a running task instance of each:
-\begin{ccode}
+\begin{ccode}{caption=Result-related code of the main function of parallel $\pi$ calculatoin}
 int32 main(int32 argc, string[] argv) {
   Task<long double*>[RANGECOUNT] calculators; 
   Future<long double*>[RANGECOUNT] partialResults;
-  
-  ... // task declarations
+  // ... task declarations
   
   for (i ++ in [0..RANGECOUNT[) { 
     partialResults[i] = calculators[i].run; 
@@ -171,12 +154,11 @@ int32 main(int32 argc, string[] argv) {
 \end{ccode}
 For every task that is run, a future of the same type is created. After the initialization, the tasks (i.e. the task templates, not the running instances thereof) are cleared in order to avoid memory leaks. The programmer is free to choose whether he is willing to do so. If only a very limited amount of memory is used by the tasks, the clearance might not be deemed necessary. In the second loop, the futures of all running tasks are used to retrieve and accumulate all partial $\pi$ results. In the end their memory is freed since they are located in the heap. Like with tasks, the freeing of future results is up to the programmer and, at the end of the program, might not be even useful.
 The translation of the new code becomes:
-\begin{ccode}
+\begin{ccode}{caption=Reduction of result-related code of the main function}
 int32 main(int32 argc, string[] argv) {
   Task[RANGECOUNT] calculators; 
   Future[RANGECOUNT] partialResults;
-  
-  ... // task declarations
+  // ... task declarations
   
   for (int8 __i = 0; __i < RANGECOUNT; __i++) { 
     partialResults[__i] = runTaskAndGetFuture(calculators[__i]); 

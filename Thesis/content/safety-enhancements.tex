@@ -5,8 +5,8 @@ So far the basic blocks that constitute parallel code execution and shared data 
 \subsection{Avoidance of Implicitly Shared Unprotected Data}
 Global variables can be accessed by any function for which they are visible. Therefore, they must have a type \CODE{shared<t>} in order to restrict any modifications of their values to synchronized contexts. This restriction can be too strong if a global variable is only accessed by exactly one thread. Nevertheless, in this paper, the conservative approach was chosen in order to establish a safe foundation. Future static code analysis should be leveraged to reliably detect the cases where restrictions can be loosened.
 Another class of data that is inherently vulnerable for unsafe data sharing arises from static variables. In C, local variables that are declared static have a ``global lifetime'' \cite[p.~439]{ProgrammingInC}, which means that as with global variables, the addresses of their allocated memory does not change. Thus, they keep their values from one function call to the next. The main difference between static local variables and global variables is the respective visibility. Consequently, static variables must have a type \CODE{shared<t>} as well.
-Finally, a base type \CODE{t} of a shared type may never be a pointer type with a base type other than a shared type. Otherwise the value of a shared resource would point to data that is not synchronized and would enable unprotected inter-task communication. For instance, in the following example the functions \CODE{foo()} and \CODE{bar()} do not block one another since they synchronize over different shared resources. Nevertheless they both write to the same location in memory, which causes a data race.
-\begin{ccode}
+Finally, a base type \CODE{t} of a shared type may never be a pointer type with a base type other than a shared type. Otherwise the value of a shared resource would point to data that is not synchronized and would enable unprotected inter-task communication. For instance, in the following example the functions \CODE{foo()} and \CODE{bar()} do not block one another since they synchronize different shared resources. Nevertheless they both write to the same location in memory, which causes a data race.
+\begin{ccode}{caption=Synchronization violation for shared resources of unsynchronized pointers}
 // global variables:
 shared<int32*> v1;
 shared<int32*> v2;
@@ -33,8 +33,8 @@ bar() {
 The pass-by-value semantics of C generally already ensure that any local data which is refereed from within a task expression is safely copied into the task. On execution, the task will not access the original data, but a copy thereof. On the other hand, this approach becomes unsafe as soon as local variables are copied whose values are plain pointers (pointers to something else than shared resources). When such a copied pointer is used inside a task to access a pointed-to memory location in an unsynchronized manner, it accesses data that might simultaneously be accessed by another task, e.g. the task by which this task was created, which knows the address of the data. To avoid this behavior, every pointer that might be copied into a task by accessing a local variable or a function argument from within a task expression must point to a shared resource, i.e. must be of type \CODE{shared<t>*}. It has to be noted that this does not only hold for the variables themselves, but also for nested fields of struct instances and array elements. Furthermore, arrays must not be copied into tasks unless they are wrapped in a struct field. Due to the internal treatment of pointers in C (see section \ref{cBasics}), the access to an array holding local variable would cause a copy of the address of the array into the task as a pointer. In consequence, references of local variables and arguments with type \CODE{t[]...[]} inside task expressions are not allowed. On the other hand, it is safe to have a struct with a an array field be copied into a task. In contrast to the former case the array would then be entirely copied along its surrounding struct instance.
 
 \subsection{Unsynchronized Access to Synchronizable Data}
-As was already mentioned in section \ref*{sharedMemory} the value of a shared resource can only be accessed (retrieved or rewritten) from within a proper synchronization context. This approach ensures that no write to shared data invalidates any other write or read of the data. The according rule is that an expression \CODE{e.get} or \CODE{e.set} is only allowed if \CODE{e} is either a reference to a named resource in scope, i.e. a shared resource which is synchronized in a surrounding synchronization statement and bound to a new name; or if \CODE{e} is a reference to a variable with a shared resource as value which is also refereed to by a synchronization reference of a surrounding synchronization statement. By this restriction the following code would trigger an error message in ParallelMbeddr:
-\begin{ccode}
+As was already mentioned in section \ref*{sharedMemory} the value of a shared resource can only be accessed (retrieved or rewritten) from within a proper synchronization context. This approach ensures that no write to shared data invalidates any other write or read of the data. The according rule is that an expression \CODE{e.get} or \CODE{e.set} is only allowed if \CODE{e} is either a reference to a named resource in scope, i.e. a shared resource which is synchronized in a surrounding synchronization statement and bound to a new name; or if \CODE{e} is a reference to a variable with a shared resource as value which is also referred to by a synchronization reference of a surrounding synchronization statement. By this restriction the following code would trigger an error message in ParallelMbeddr:
+\begin{ccode}{caption=Consequence of the lexical scoping of synchronization resources}
 shared<shared<int32>> v;
 sync(v) {
   sync(v.get) {
@@ -44,7 +44,7 @@ sync(v) {
 }
 \end{ccode}
 Although the previous code would not produce any synchronization gap, ParallelMbeddr does not recognize this since the expression \CODE{e.get} of \CODE{.set} does not refer to a named resource or a variable with a synchronized shared resource. Instead, for exactly this purpose, named resources were implemented which allow to rewrite the code in the following valid manner:
-\begin{ccode}
+\begin{ccode}{caption=Access to synchronized shared resource according to lexical scoping}
 shared<shared<int32>> v;
 sync(v) {
   sync(&(v.get) as w) {
@@ -52,8 +52,8 @@ sync(v) {
   }
 }
 \end{ccode}
-The reasoning behind this was to simplify the implementation of the safety checking analysis. Again, the chosen approach can in certain cases be overly conservative. If write conflicts can never happen for a shared resource and, in consequence, data races thereof are impossible, it would be safe to access the variable outside any synchronization context despite the error message that is generated by the IDE. Moreover, by the applied lexical scoping ParallelMbeddr is not able to detect whether a shared resource is recursively synchronized across multiple function calls:
-\begin{ccode}
+The reasoning behind this was to simplify the implementation of the safety checking analysis. Again, the chosen approach can in certain cases be overly conservative. If write conflicts can never happen for a shared resource and, in consequence, data races thereof are impossible, it would be safe to access the variable outside any synchronization context despite the error message that is generated by the IDE. Moreover, by the applied lexical scoping ParallelMbeddr is not able to detect whether a shared resource is recursively synchronized across function calls:
+\begin{ccode}{caption=Synchronization across function multiples}
   shared<int32> v;
   sync(v) { foo(&v); }
   ...
@@ -62,12 +62,10 @@ void foo(shared<int32>* v) {
   sync(v) { v->set(0); }
 }
 \end{ccode}
-Both problems should be addressed by static analysis in order to (partially) detect such cases. The second problem could further be addressed by the introduction of a \textit{synced} type for shared resources that are already synchronized in the current scope.
-\Bastian{Maybe move to future work chapter.}
 
 \subsection{Address Leakage of Shared Resource Values}
 In order to restrict any writes or reads of the values of shared resources to synchronization contexts, it is crucial to not leak the memory addresses of these values outside the protected synchronization context from where they could be accessed via the address operator (\CODE{\&}). The measures to keep the addresses encapsulated constrain the use of the address operator and the use of arrays: The first rule forbids any expressions \CODE{\&e} where \CODE{e} contains a sub path \CODE{eSub.get} and \CODE{e} does not evaluate to a shared resource. The latter condition allows the programmer to get the address of an encapsulated shared resource, which is unproblematic since shared resources may not be overwritten as is explained in the next section \ref{overwritingSharedResources}. The second rule states that an expression \CODE{e} of some array type is forbidden, if \CODE{e} contains a sub path \CODE{eSub.get} and the parent of \CODE{e} does not access a specific element of \CODE{e}. Thus, any access to an (multidimensional) array that is encapsulated in a shared resource must actually be extended to an access of the innermost element of the array. Otherwise it would be possible to assign the array itself or, in the case of a multidimensional array, take an element of the array which itself is an array and assign it to an unprotected pointer variable. Hence, the address of the array or of an element of this array would be leaked. For instance in the following example, ParallelMbeddr would complain about an address leakage of the first element of the array wrapped inside \CODE{v}:
-\begin{ccode}
+\begin{ccode}{caption=Leakage of an array address}
 shared<int32[5][10]> v;
 int32* pointer;
 // address leakage!
@@ -82,8 +80,8 @@ The safety enforcing rules are as follows: A variable that refers to a shared re
 
 \subsection{Overwriting Pointers to Shared Resources}
 \label{overwriting_shared_pointers}
-Not only references to variables of shared resources can be used for the definition of synchronization references, but also expressions that evaluate to pointers of shared resources. While providing more flexibility this approach facilitates the introduction of data races via the following two techniques. For the first problem the following example is given:
-\begin{ccode}
+Not only references to variables of shared resources can be used for the definition of synchronization references, but also expressions that evaluate to pointers of shared resources. While providing more flexibility, this approach facilitates the introduction of data races via the following two techniques. For the first problem the following example is given:
+\begin{ccode}{caption=Named resource threatened by overwriting}
 struct Container {
   shared<int32> value;
   shared<int32>* pointer;
@@ -96,7 +94,7 @@ sync(c, &c.get.value as valueP, c.get.pointer as pointerP) {
 }
 \end{ccode}
 Generally, the semantics of the synchronization statement would be that \CODE{c}, \CODE{valueP} and \CODE{pointerP} would be synchronized altogether by repeatedly trying to lock their mutexes. The translation of the named resources would introduce local variables which bind the values of the expressions \CODE{\&c.get.value} and \CODE{c.get.pointer}:
-\begin{ccode}
+\begin{ccode}{caption=Invalidation of a synchronization resource}
 shared<int32>* valueP = &c.get.value;
 shared<int32>* pointerP = c.get.pointer;
 sync(c, valueP, pointerP) {...}
@@ -104,7 +102,7 @@ sync(c, valueP, pointerP) {...}
 The intermediary translated code reveals the problem: The initialization values of the pointers to the shared resources are, due to eager evaluation, evaluated as soon as they are declared. In the case of \CODE{valueP} this does not matter, since the \CODE{value} field may never be overwritten. \CODE{pointerP} on the other hand is a copy of the field \CODE{pointer} which may be overwritten by any task that has access to \CODE{c}. This means that between the declaration of \CODE{pointer} and its use in the synchronization statement its value may become out of date. Hence, the atomicity semantics of the synchronization of \CODE{sync} would be violated. The translation could be fixed to safely support such cases. Yet, due to the possibility to make use of control-flow-breaking statements inside synchronization statements, the translated code would become considerably more complicated. For this reason the opposite path was chosen: Cases like the depicted one are forbidden by the following rule. If inside the synchronization list \CODE{l} of a synchronization statement the expression of a well-typed named resource \CODE{n} -- which must have the type \CODE{shared<t>*} -- is no address reference expression \CODE{\&e} but contains either a reference to a previous named resource in \CODE{l} or a reference to a variable that is synchronized by a previous synchronization resource in \CODE{l}, then \CODE{n} is invalid.
 
 The second problem is illustrated by the following example:
-\begin{ccode}
+\begin{ccode}{}
 shared<int32> value1;
 shared<int32> value2;
 shared<int32>* p = &value1;

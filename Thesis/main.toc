@@ -4,73 +4,73 @@
 \contentsline {section}{\numberline {2.1}Parallel Programming}{3}{section.2.1}
 \contentsline {subsubsection}{Processes and Threads}{3}{subsubsection*.7}
 \contentsline {subsubsection}{Parallelism and Concurrency}{3}{subsubsection*.8}
-\contentsline {subsubsection}{Data Races}{4}{subsubsection*.9}
-\contentsline {subsubsection}{Communication Model: Shared Memory}{4}{subsubsection*.10}
-\contentsline {subsubsection}{Communication Model: Message Passing}{5}{subsubsection*.11}
-\contentsline {subsubsection}{Communication Model: Transactional Memory}{5}{subsubsection*.12}
-\contentsline {subsubsection}{Coarse- and Fine-grained Synchronization}{5}{subsubsection*.13}
-\contentsline {section}{\numberline {2.2}Embedded Programming with Mbeddr}{5}{section.2.2}
-\contentsline {subsubsection}{Embedded Programming}{6}{subsubsection*.14}
-\contentsline {subsubsection}{MPS and Mbeddr}{6}{subsubsection*.15}
-\contentsline {subsubsection}{C}{7}{subsubsection*.16}
+\contentsline {subsubsection}{Implicit vs. Explicit Parallelism}{4}{subsubsection*.9}
+\contentsline {subsubsection}{Data Races}{4}{subsubsection*.10}
+\contentsline {subsubsection}{Communication Model: Shared Memory}{4}{subsubsection*.11}
+\contentsline {subsubsection}{Communication Model: Message Passing}{5}{subsubsection*.12}
+\contentsline {subsubsection}{Communication Model: Transactional Memory}{5}{subsubsection*.13}
+\contentsline {subsubsection}{Coarse- and Fine-grained Synchronization}{5}{subsubsection*.14}
+\contentsline {section}{\numberline {2.2}Embedded Programming with Mbeddr}{6}{section.2.2}
+\contentsline {subsubsection}{Embedded Programming}{6}{subsubsection*.15}
+\contentsline {subsubsection}{MPS and Mbeddr}{6}{subsubsection*.16}
+\contentsline {subsubsection}{C}{7}{subsubsection*.17}
 \contentsline {chapter}{\numberline {3}Design and Translation}{8}{chapter.3}
-\contentsline {subsubsection}{Notation}{8}{subsubsection*.17}
+\contentsline {subsubsection}{Notation}{8}{subsubsection*.18}
 \contentsline {section}{\numberline {3.1}Tasks}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Design}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Translation}{9}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Example Code}{12}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Futures}{14}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Design}{14}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.1.2}Translation}{10}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Example Code}{13}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Futures}{15}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Design}{15}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Translation}{15}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Example Code}{18}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}Shared Memory}{19}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Design}{20}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Translation of Shared Types}{23}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Translation of Synchronization Statements}{30}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Example Code}{33}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Safety Measures}{38}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Avoidance of Implicitly Shared Unprotected Data}{39}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Copying Pointers to Unshared Data into Tasks}{40}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Unsynchronized Access to Synchronizable Data}{40}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Address Leakage of Shared Resource Values}{41}{subsection.3.4.4}
-\contentsline {subsection}{\numberline {3.4.5}Overwriting Shared Resources}{42}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{42}{subsection.3.4.6}
-\contentsline {chapter}{\numberline {4}Optimization}{45}{chapter.4}
-\contentsline {section}{\numberline {4.1}Space Optimization}{45}{section.4.1}
-\contentsline {section}{\numberline {4.2}Time Optimization}{45}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Pointer Analysis}{46}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Optimization Opportunities}{47}{subsection.4.2.2}
-\contentsline {subsubsection}{Single-Task Locks}{47}{subsubsection*.18}
-\contentsline {subsubsection}{Read-only Locks}{48}{subsubsection*.19}
-\contentsline {subsubsection}{Recursive Locks}{49}{subsubsection*.20}
-\contentsline {subsubsection}{Lock Contention}{49}{subsubsection*.21}
-\contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{50}{subsection.4.2.3}
-\contentsline {subsubsection}{Removal of Single-Task Locks}{52}{subsubsection*.22}
-\contentsline {subsubsection}{Removal of Read-only Locks}{54}{subsubsection*.23}
-\contentsline {subsubsection}{Removal of Recursive Locks}{56}{subsubsection*.24}
-\contentsline {subsubsection}{Narrowing Synchronization Statements}{61}{subsubsection*.25}
-\contentsline {chapter}{\numberline {5}Evaluation}{63}{chapter.5}
-\contentsline {section}{\numberline {5.1}Code and Measurements}{63}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Quicksort}{63}{subsection.5.1.1}
-\contentsline {subsubsection}{Serial variant}{63}{subsubsection*.26}
-\contentsline {subsubsection}{Unsafe parallelism}{65}{subsubsection*.27}
-\contentsline {subsubsection}{Coarse-Grained Protection}{65}{subsubsection*.28}
-\contentsline {subsubsection}{Fine-Grained Protection}{68}{subsubsection*.29}
-\contentsline {subsubsection}{Measurements}{69}{subsubsection*.30}
-\contentsline {subsection}{\numberline {5.1.2}$\pi $}{71}{subsection.5.1.2}
-\contentsline {subsubsection}{Serial Variant}{71}{subsubsection*.31}
-\contentsline {subsubsection}{Parallel Variant without Synchronization}{72}{subsubsection*.32}
-\contentsline {subsubsection}{Simple Map-Reduce Approach}{73}{subsubsection*.33}
-\contentsline {subsubsection}{Extended Map-Reduce Approach}{77}{subsubsection*.34}
-\contentsline {subsubsection}{Measurements}{80}{subsubsection*.35}
-\contentsline {section}{\numberline {5.2}Optimization}{80}{section.5.2}
-\contentsline {section}{\numberline {5.3}Comparison}{80}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}OpenMP}{81}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}ParaSail}{81}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}\AE minium}{81}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}D}{82}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Java}{82}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Rust}{83}{subsection.5.3.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{84}{chapter.6}
-\contentsline {chapter}{Bibliography}{87}{section*.38}
+\contentsline {subsection}{\numberline {3.2.3}Example Code}{19}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Shared Memory}{21}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Design}{21}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Translation of Shared Types}{25}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Translation of Synchronization Statements}{32}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Example Code}{35}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Safety Measures}{41}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Avoidance of Implicitly Shared Unprotected Data}{42}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Copying Pointers to Unshared Data into Tasks}{43}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Unsynchronized Access to Synchronizable Data}{43}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Address Leakage of Shared Resource Values}{44}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.5}Overwriting Shared Resources}{45}{subsection.3.4.5}
+\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{45}{subsection.3.4.6}
+\contentsline {chapter}{\numberline {4}Optimization}{48}{chapter.4}
+\contentsline {section}{\numberline {4.1}Space Optimization}{48}{section.4.1}
+\contentsline {section}{\numberline {4.2}Time Optimization}{48}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Pointer Analysis}{49}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Optimization Opportunities}{50}{subsection.4.2.2}
+\contentsline {subsubsection}{Single-Task Locks}{50}{subsubsection*.19}
+\contentsline {subsubsection}{Read-only Locks}{51}{subsubsection*.20}
+\contentsline {subsubsection}{Recursive Locks}{52}{subsubsection*.21}
+\contentsline {subsubsection}{Lock Contention}{52}{subsubsection*.22}
+\contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{53}{subsection.4.2.3}
+\contentsline {subsubsection}{Removal of Single-Task Locks}{55}{subsubsection*.23}
+\contentsline {subsubsection}{Removal of Read-only Locks}{58}{subsubsection*.24}
+\contentsline {subsubsection}{Removal of Recursive Locks}{60}{subsubsection*.25}
+\contentsline {subsubsection}{Narrowing Synchronization Statements}{65}{subsubsection*.26}
+\contentsline {chapter}{\numberline {5}Evaluation}{68}{chapter.5}
+\contentsline {section}{\numberline {5.1}Code and Measurements}{68}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Quicksort}{68}{subsection.5.1.1}
+\contentsline {subsubsection}{Serial variant}{68}{subsubsection*.27}
+\contentsline {subsubsection}{Unsafe parallelism}{70}{subsubsection*.28}
+\contentsline {subsubsection}{Coarse-Grained Protection}{70}{subsubsection*.29}
+\contentsline {subsubsection}{Fine-Grained Protection}{73}{subsubsection*.30}
+\contentsline {subsubsection}{Measurements}{75}{subsubsection*.31}
+\contentsline {subsection}{\numberline {5.1.2}$\pi $}{77}{subsection.5.1.2}
+\contentsline {subsubsection}{Serial Variant}{77}{subsubsection*.36}
+\contentsline {subsubsection}{Parallel Variant without Synchronization}{77}{subsubsection*.37}
+\contentsline {subsubsection}{Simple Map-Reduce Approach}{78}{subsubsection*.38}
+\contentsline {subsubsection}{Extended Map-Reduce Approach}{82}{subsubsection*.39}
+\contentsline {subsubsection}{Measurements}{86}{subsubsection*.40}
+\contentsline {section}{\numberline {5.2}Comparison with other Parallelization Approaches}{86}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}C}{86}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}ParaSail}{87}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}\AE minium}{87}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}D}{88}{subsection.5.2.4}
+\contentsline {subsection}{\numberline {5.2.5}Java}{88}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.6}Rust}{89}{subsection.5.2.6}
+\contentsline {chapter}{\numberline {6}Conclusion}{90}{chapter.6}
+\contentsline {chapter}{Bibliography}{93}{section*.43}
 \contentsfinish 
