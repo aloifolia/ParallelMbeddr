@@ -173,7 +173,50 @@ Also, it is assumed that everything which has a type \CODE{shared<t>} or \CODE{s
 \subsubsection*{Pointer analysis}
 As was mentioned before, the analysis that was implemented in the course of this thesis makes several simplifications in order to fit the scope of this work. The analysis is intra-procedural but flow-sensitive for the regarded language concepts. It can either compute \textit{must point-to} or \textit{may point-to} alias sets.
 As a starting point, a simplified directed data-flow graph is constructed. The nodes of this graph consist of local variable declarations, arguments\footnote{Although generally, arguments are the values that are passed to function parameters, in the course of this work, no such distinction is made. Instead, the formal function parameters are called arguments and the values, which are passed to functions, are called argument values. This terminology is closer to the one established in mbeddr.} and references to either kind. For each reference $r$ to a local variable or an argument $x$ an arc $(x, r)$ is added to the graph. Furthermore, for each local variable $v$ of type \CODE{shared<u>} or \CODE{shared<u>*}, whose initialization expression is a reference $r'$ to a local variable or argument of the same type, an arc $(r', v)$ is added. The same is done for local variables of type \CODE{shared<u>*} whose initialization expressions reference local variables or arguments of type \CODE{shared<u>} by address. Equivalently to local variables and initialization expressions, arcs $(r, a)$ are added to the graph for according pairs of argument values $r$ and arguments $a$.
-\TODO{Visualize}
+
+Figure \ref{fig:dataFlowGraph} illustrates the principle: For each reference to the local variable \CODE{container} an edge going from \CODE{container} to this reference is inserted. The same happens for the function arguments \CODE{c} and \CODE{cV}, as well as for the local variables \CODE{myC} and \CODE{myCV}. Furthermore an edge connects the \CODE{container} reference with the argument \CODE{c}. On the other hand, \CODE{cV} has no incoming edge, since due to the simplifications of the algorithm only such expressions may be nodes that are direct or address (\CODE{\&}) references to variables or arguments:
+
+\begin{minipage}{1\textwidth}
+\begin{center}
+\begin{minipage}{0.4\textwidth}
+\begin{ccode}{}
+int32 main(int32 argc string[] argv) {
+  shared<shared<int32>> container;
+  sync(container) { 
+    foo(&container, container->get); 
+  }
+}
+
+void foo(shared<shared<int32>>* c, 
+         shared<int32>* cV) {
+  sync(c as myC, cV as myCV) {
+    cV = myC->get;
+    myCV->set(0);
+  }
+}
+\end{ccode}
+\centering $\Downarrow$ resolve named resources $\Downarrow$ 
+\begin{ccode}{}
+...
+void foo(shared<shared<int32>>* c, 
+         shared<int32>* cV) {
+  shared<shared<int32>>* myC = c;
+  shared<int32>* myCV = cV;
+  sync(myC, myCV) {
+    cV = myC->get;
+    myCV->set(0);
+  }
+}
+\end{ccode}
+\end{minipage}
+\begin{minipage}{0.58\textwidth}
+\includegraphics[scale=0.98]{pics/DataFlowDiagram}
+\end{minipage}
+\end{center}
+\captionof{figure}{Simplified Data-flow graph of shared resources}
+\label{fig:dataFlowGraph}
+\end{minipage}
+
 The data-flow graph is used to perform a pointer analysis. The output of the analysis is a directed alias graph whose nodes comprise the nodes of the data-flow graph. Each arc $(u, v)$ of the alias graph connects a variable, argument or reference $u$ with a variable or argument $v$. In doing so, either $v$ is an alias for $u$ or $u$ refers to a variable $v2$ for which $v$ is an alias.\footnote{Thus, due to the inclusion of references, the alias graph is not one in the classical sense.} Trivially, loops $(u, u)$ for a variable or argument $u$ are contained, since every node is an alias for itself. With this initial setting the algorithm works as follows:
 
 \fbox{\parbox{.98\linewidth}{
