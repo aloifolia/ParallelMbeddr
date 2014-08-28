@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<debugInfo>
-  <unitInfo fileName="BehaviorAspectDescriptor.java" startLine="9" startPosition="0" endLine="26" endPosition="0" unitName="Basics.behavior.BehaviorAspectDescriptor" />
-  <unitInfo fileName="InvisibleBlockExpression_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="Basics.behavior.InvisibleBlockExpression_BehaviorDescriptor" />
-  <unitInfo fileName="ResultStatement_BehaviorDescriptor.java" startLine="7" startPosition="0" endLine="16" endPosition="0" unitName="Basics.behavior.ResultStatement_BehaviorDescriptor" />
-</debugInfo>
-

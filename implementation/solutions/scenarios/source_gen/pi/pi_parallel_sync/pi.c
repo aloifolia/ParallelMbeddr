@@ -37,7 +37,7 @@ static void* pi_parFun_a0a02a5(void* voidArgs);
 
 static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(GenericSharedDeclarations_SharedOf_uint32_0_t* counterPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer);
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0u0f(queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer);
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0u0f(GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -76,7 +76,7 @@ int32_t main(int32_t argc, char* argv[])
   pthread_mutex_init(&result.mutex,&GenericSharedDeclarations_mutexAttribute_0);
   GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer = &result;
   
-  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0u0f(queuePointer, resultPointer));
+  GenericTaskDeclarations_saveAndJoinVoidFuture(pi_futureInit_a0u0f(resultPointer, queuePointer));
   
   struct timeval end;
   gettimeofday(&end, 0);
@@ -180,7 +180,7 @@ static inline GenericTaskDeclarations_Task_t pi_taskInit_a21a5(GenericSharedDecl
   return (GenericTaskDeclarations_Task_t){args_a21a5,&pi_parFun_a21a5,sizeof(pi_Args_a21a5_t)};
 }
 
-static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0u0f(queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer, GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer) 
+static GenericTaskDeclarations_VoidFuture_t pi_futureInit_a0u0f(GenericSharedDeclarations_SharedOf_long_double_0_t* resultPointer, queue_SharedTypes_0_SharedOf_Queue_0_t* queuePointer) 
 {
   pi_Args_a0a02a5_t* args_a0u0f = malloc(sizeof(pi_Args_a0a02a5_t));
   args_a0u0f->resultPointer = resultPointer;

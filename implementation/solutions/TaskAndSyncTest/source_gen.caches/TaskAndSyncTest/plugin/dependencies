@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<dependenciesRoot>
-  <dependency className="TaskAndSyncTest.plugin.null_Test" file="null_Test.java">
-    <classNode dependClassName="jetbrains.mps.MPSLaunch" />
-    <classNode extendsClassName="jetbrains.mps.lang.test.runtime.BaseTestBody" />
-    <classNode extendsClassName="jetbrains.mps.lang.test.runtime.BaseTransformationTest4" />
-  </dependency>
-</dependenciesRoot>
-

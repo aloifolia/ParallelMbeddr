@@ -10,15 +10,15 @@
 #include "quicksort_SharedTypes_0.h"
 #include <stdlib.h>
 
-typedef struct quicksort_Args_a0a0c0a0g quicksort_Args_a0a0c0a0g_t;
-struct quicksort_Args_a0a0c0a0g {
+typedef struct quicksort_Args_a0a0c0a0h quicksort_Args_a0a0c0a0h_t;
+struct quicksort_Args_a0a0c0a0h {
   quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items;
   int32_t left;
   int32_t middle;
 };
 
-typedef struct quicksort_Args_a0b0c0a0g quicksort_Args_a0b0c0a0g_t;
-struct quicksort_Args_a0b0c0a0g {
+typedef struct quicksort_Args_a0b0c0a0h quicksort_Args_a0b0c0a0h_t;
+struct quicksort_Args_a0b0c0a0h {
   quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items;
   int32_t middle;
   int32_t right;
@@ -38,13 +38,13 @@ static void quicksort_swap(quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* it
 
 static void quicksort_doHeavyWork(void);
 
-static void* quicksort_parFun_a0a0c0a0g(void* voidArgs);
+static void* quicksort_parFun_a0a0c0a0h(void* voidArgs);
 
-static void* quicksort_parFun_a0b0c0a0g(void* voidArgs);
+static void* quicksort_parFun_a0b0c0a0h(void* voidArgs);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t left);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a7(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t left);
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t right);
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a7(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t right);
 
 int32_t main(int32_t argc, char* argv[]) 
 {
@@ -52,10 +52,6 @@ int32_t main(int32_t argc, char* argv[])
   pthread_mutexattr_settype(&GenericSharedDeclarations_mutexAttribute_0,PTHREAD_MUTEX_RECURSIVE);
   struct timeval begin;
   gettimeofday(&begin, 0);
-  /* 
-   * Scenario change: The work is split if after the division of the sub ranges of items to sort are long enough. After a recursive split the task that initiated it waits for its sub task to finish.
-   */
-
   
   quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t items;
   pthread_mutex_init(&items.mutex,&GenericSharedDeclarations_mutexAttribute_0);
@@ -111,8 +107,8 @@ static void quicksort_quickSort(quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_
     
     if ( middle - left > QUICKSORT_threshold && right - middle > QUICKSORT_threshold ) 
     {
-      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a0a2a0a6(middle, items, left);
-      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a6(middle, items, right);
+      GenericTaskDeclarations_VoidFuture_t sorter1 = quicksort_futureInit_a0a2a0a7(middle, items, left);
+      GenericTaskDeclarations_VoidFuture_t sorter2 = quicksort_futureInit_a1a2a0a7(middle, items, right);
       GenericTaskDeclarations_joinVoidFuture(&sorter1);
       GenericTaskDeclarations_joinVoidFuture(&sorter2);
     }    else 
@@ -200,50 +196,50 @@ static void quicksort_swap(quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* it
 
 static void quicksort_doHeavyWork(void) 
 {
-  for ( int16_t __i = 0; __i < 1000; __i++ )
+  for ( int16_t __i = 0; __i < QUICKSORT_heavyWorkSize; __i++ )
   {
-    for ( int16_t __j = 0; __j < 1000; __j++ )
+    for ( int16_t __j = 0; __j < QUICKSORT_heavyWorkSize; __j++ )
     {
       __j * __j * __j;
     }
   }
 }
 
-static void* quicksort_parFun_a0a0c0a0g(void* voidArgs) 
+static void* quicksort_parFun_a0a0c0a0h(void* voidArgs) 
 {
-  quicksort_Args_a0a0c0a0g_t* args = ((quicksort_Args_a0a0c0a0g_t*)(voidArgs));
+  quicksort_Args_a0a0c0a0h_t* args = ((quicksort_Args_a0a0c0a0h_t*)(voidArgs));
   quicksort_quickSort((args)->items, (args)->left, (args)->middle - 1);
   free(voidArgs);
   return 0;
 }
 
-static void* quicksort_parFun_a0b0c0a0g(void* voidArgs) 
+static void* quicksort_parFun_a0b0c0a0h(void* voidArgs) 
 {
-  quicksort_Args_a0b0c0a0g_t* args = ((quicksort_Args_a0b0c0a0g_t*)(voidArgs));
+  quicksort_Args_a0b0c0a0h_t* args = ((quicksort_Args_a0b0c0a0h_t*)(voidArgs));
   quicksort_quickSort((args)->items, (args)->middle + 1, (args)->right);
   free(voidArgs);
   return 0;
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t left) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a0a2a0a7(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t left) 
 {
-  quicksort_Args_a0a0c0a0g_t* args_a0a2a0a6 = malloc(sizeof(quicksort_Args_a0a0c0a0g_t));
-  args_a0a2a0a6->middle = middle;
-  args_a0a2a0a6->items = items;
-  args_a0a2a0a6->left = left;
+  quicksort_Args_a0a0c0a0h_t* args_a0a2a0a7 = malloc(sizeof(quicksort_Args_a0a0c0a0h_t));
+  args_a0a2a0a7->middle = middle;
+  args_a0a2a0a7->items = items;
+  args_a0a2a0a7->left = left;
   pthread_t pth;
-  pthread_create(&pth,0,&quicksort_parFun_a0a0c0a0g,args_a0a2a0a6);
+  pthread_create(&pth,0,&quicksort_parFun_a0a0c0a0h,args_a0a2a0a7);
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 
-static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a6(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t right) 
+static GenericTaskDeclarations_VoidFuture_t quicksort_futureInit_a1a2a0a7(int32_t middle, quicksort_SharedTypes_0_SharedOf_ArrayOf_Item_0_t* items, int32_t right) 
 {
-  quicksort_Args_a0b0c0a0g_t* args_a1a2a0a6 = malloc(sizeof(quicksort_Args_a0b0c0a0g_t));
-  args_a1a2a0a6->middle = middle;
-  args_a1a2a0a6->items = items;
-  args_a1a2a0a6->right = right;
+  quicksort_Args_a0b0c0a0h_t* args_a1a2a0a7 = malloc(sizeof(quicksort_Args_a0b0c0a0h_t));
+  args_a1a2a0a7->middle = middle;
+  args_a1a2a0a7->items = items;
+  args_a1a2a0a7->right = right;
   pthread_t pth;
-  pthread_create(&pth,0,&quicksort_parFun_a0b0c0a0g,args_a1a2a0a6);
+  pthread_create(&pth,0,&quicksort_parFun_a0b0c0a0h,args_a1a2a0a7);
   return (GenericTaskDeclarations_VoidFuture_t){ .pth =pth};
 }
 

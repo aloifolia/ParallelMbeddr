@@ -21,6 +21,7 @@ extern "C" {
 #endif
 
 #define QUICKSORT_numberOfItems (200)
+#define QUICKSORT_heavyWorkSize (100)
 int32_t quicksort_main(int32_t argc, char* argv[]);
 
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dependencies version="2" modelHash="4260x10ejta4prmv1y9zrbwotdwbmyt">
-  <dep model="550e6e6d-ad33-4962-b17a-d7dd2df6f532/r:0c3504d8-8664-4320-abef-a67d82b3134f(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+<dependencies version="2" modelHash="c98eq9n45gpj5adh1glpc2e5nnfl20l">
+  <dep model="99b8b528-e466-46ca-a323-9f76be1f92bf/r:b70dc9c2-d0a9-4b25-b7c3-edaa9e832831(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
   <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" hash="5sdbpqxziyuazpb9j1p4zdk6bnvbn49" />
   <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" hash="-631pujgfe3kqskvegv975bitk8fmxkg" />
   <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" hash="-6cnu5paw0i8onvbyr31sbmt0clwd4yx" />
@@ -8,7 +8,7 @@
   <dep model="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" hash="2tjo7spoq0b9ubdn36bitwt5i0a2wds" />
   <dep model="r:ca70a67e-3c3d-4d98-a1c5-1f9eea1d3174(TasksAndSyncs.generator.template.main@generator)" hash="-6kn35up2ryuw13nqgoorn9t5z5hi0t1" />
   <common hash="4y5o0f7vfcpt5jpvbs494knsq6kiy5s">
-    <dep model="550e6e6d-ad33-4962-b17a-d7dd2df6f532/r:0c3504d8-8664-4320-abef-a67d82b3134f(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
+    <dep model="99b8b528-e466-46ca-a323-9f76be1f92bf/r:b70dc9c2-d0a9-4b25-b7c3-edaa9e832831(com.mbeddr.mpsutil.modelcache.CacheState_fakeModule/com.mbeddr.mpsutil.modelcache.CacheState_fakeModel)" />
     <dep model="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <dep model="r:5f62df63-885f-42f0-80d6-e13ad6c51489(com.mbeddr.core.modules.gen.generator.template.main@generator)" />
     <dep model="r:61d840b4-12c1-49ea-b142-b2a1550a9b15(com.mbeddr.core.udt.structure)" />
@@ -30,7 +30,7 @@
   </common>
   <source id="5474646598321667226" name="BuildConfiguration (q.quicksort_parallel_nosync_unsafe)" hash="dgtxsrjr3v95ihfgj6hsxq0cokuwezj" />
   <source id="5474646598321667125" name="TypeSizeConfiguration (q.quicksort_parallel_nosync_unsafe)" hash="-8uw6utu2mxcgjy3x4hnu18yrsj2kslf" />
-  <source id="5474646598321666991" name="quicksort" hash="-4poip9tfs46jkbqsyhr133byo5yf5zu" />
+  <source id="5474646598321666991" name="quicksort" hash="763764q5jdqu0xuszchbr52wj0oluda" />
   <source id="8306718430232922058" name="stdio" hash="4owfmcovfysjvtj76klpo0wnmga5cja" />
   <source id="8306718430232924459" name="stdlib" hash="-6obaqa99f7xypr732czk946eh7x1j0m" />
 </dependencies>

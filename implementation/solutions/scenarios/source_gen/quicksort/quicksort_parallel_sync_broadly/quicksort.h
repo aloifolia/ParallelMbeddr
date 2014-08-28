@@ -32,6 +32,7 @@ extern "C" {
 
 #define QUICKSORT_numberOfItems (200)
 #define QUICKSORT_threshold (20)
+#define QUICKSORT_heavyWorkSize (1000)
 int32_t quicksort_main(int32_t argc, char* argv[]);
 
 
