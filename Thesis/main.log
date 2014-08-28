@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  28 AUG 2014 02:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  28 AUG 2014 12:22
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -983,7 +983,7 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen162
 \c@nlinenum=\count149
 \TeXr@lab=\toks44
-)) (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+) (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
@@ -1001,7 +1001,7 @@ Package caption Info: KOMA-Script document class.
 \c@ContinuedFloat=\count150
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
-)
+))
 (C:\Users\Bastian\Desktop\github-master\Thesis\config/macros.tex)
 (C:\Users\Bastian\Desktop\github-master\Thesis\config/code-formatting.tex
 (C:\Users\Bastian\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
@@ -1244,7 +1244,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 (Font)              scaled to size 6.48601pt on input line 7.
 \@TUD@titlelines=\count159
- <tud_logo.pdf, id=179, 157.58875pt x 63.23625pt>
+ <tud_logo.pdf, id=187, 157.58875pt x 63.23625pt>
 File: tud_logo.pdf Graphic file (type pdf)
  <use tud_logo.pdf>
 Package pdftex.def Info: tud_logo.pdf used on input line 7.
@@ -1277,6 +1277,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
 ])
 \tf@toc=\write4
  [3]
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.lof)
+\tf@lof=\write5
+ [4
+
+]
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.lot)
+\tf@lot=\write6
+ [5
+
+]
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/introduction_motivation.
 tex
 Chapter 1.
@@ -1351,7 +1361,7 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 Chapter 2.
 [3
 
-] [4] [5] [6] <pics/MPS.pdf, id=402, 639.13782pt x 312.41719pt>
+] [4] [5] [6] <pics/MPS.pdf, id=458, 639.13782pt x 312.41719pt>
 File: pics/MPS.pdf Graphic file (type pdf)
 
 <use pics/MPS.pdf>
@@ -1422,7 +1432,7 @@ ex-pres-sions \T1/txtt/bx/n/11 e.run \T1/5ch/m/n/11 to calls of \T1/txtt/bx/n/1
 
 [20]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
 [21] [22] [23]
-<pics/ParallelExecutionAttempt.pdf, id=862, 224.33812pt x 168.63pt>
+<pics/ParallelExecutionAttempt.pdf, id=913, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1434,7 +1444,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 66--67
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=863, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=914, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1455,7 +1465,7 @@ Overfull \hbox (13.8084pt too wide) in paragraph at lines 68--81
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-<pics/ParallelExecution.pdf, id=882, 224.33812pt x 168.63pt>
+<pics/ParallelExecution.pdf, id=934, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1482,7 +1492,7 @@ ded in a single page
 pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
 s/pics/ParallelExecution.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
->] [26] <pics/AstForBaseTypes.pdf, id=984, 114.30634pt x 315.33504pt>
+>] [26] <pics/AstForBaseTypes.pdf, id=1033, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
@@ -1580,7 +1590,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 157.
 See the caption package documentation for explanation.
 
-[54] <pics/DataFlowDiagram.pdf, id=1683, 299.61937pt x 397.485pt>
+[54] <pics/DataFlowDiagram.pdf, id=1732, 299.61937pt x 397.485pt>
 File: pics/DataFlowDiagram.pdf Graphic file (type pdf)
 
 <use pics/DataFlowDiagram.pdf>
@@ -1816,45 +1826,43 @@ Underfull \vbox (badness 4181) has occurred while \output is active []
 
  [81]
 [82] [83] [84] [85]
-Overfull \hbox (0.8253pt too wide) in paragraph at lines 515--516
+Overfull \hbox (0.8253pt too wide) in paragraph at lines 516--517
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (48.07516pt too wide) in paragraph at lines 521--522
+Overfull \hbox (48.07516pt too wide) in paragraph at lines 522--523
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (27.07523pt too wide) in paragraph at lines 531--532
+Overfull \hbox (27.07523pt too wide) in paragraph at lines 532--533
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
  []
 
 
-Overfull \hbox (11.32527pt too wide) in paragraph at lines 535--536
+Overfull \hbox (11.32527pt too wide) in paragraph at lines 536--537
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (21.82524pt too wide) in paragraph at lines 546--547
+Overfull \hbox (21.82524pt too wide) in paragraph at lines 547--548
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[86] [87] [88]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[86] [87]
 
- [89]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
- [90])
+[88] [89] [90] [91] [92] [93])
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex
-[91] [92]
+[94]
 Chapter 6.
-[93
+[95
 
-] [94]) (C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [95]
+] [96]) (C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [97]
 Underfull \hbox (badness 5878) in paragraph at lines 4--7
 []\T1/5ch/m/n/11 Cbmc: Bounded model check-ing for c/c++ and java.  []$\T1/txtt
 /m/n/11 http : / / www . cprover . org /$
@@ -1866,7 +1874,7 @@ Underfull \hbox (badness 7631) in paragraph at lines 22--27
 stroy and ini-tial-ize
  []
 
-[96
+[98
 
 ]
 Underfull \hbox (badness 2809) in paragraph at lines 148--154
@@ -1880,7 +1888,7 @@ Underfull \hbox (badness 7486) in paragraph at lines 148--154
 com / files / 8537WP _ Deciding _ which _ multicore _$
  []
 
-[97]
+[99]
 Underfull \hbox (badness 10000) in paragraph at lines 242--248
 []\T1/5ch/m/n/11 Joel Hruska.  The death of cpu scal-ing: From one core to many
 
@@ -1898,7 +1906,7 @@ $\T1/txtt/m/n/11 116561-[]the-[]death-[]of-[]cpu-[]scaling-[]from-[]one-[]core-
 []to-[]many-[]and-[]why-[]were-[]still-[]stuck$[]\T1/5ch/m/n/11 .
  []
 
-[98] [99]
+[100] [101]
 Underfull \hbox (badness 10000) in paragraph at lines 415--420
 $\T1/txtt/m/n/11 programming-[]languages-[]and-[]tools / 4375616 / 1 / ParaSail
 -[]-[]Less-[]is-[]more-[]with-[]multicore$[]\T1/5ch/m/n/11 .
@@ -1916,22 +1924,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--427
 nguage . blogspot . de / 2012 / 08 /$
  []
 
-[100])
+[102])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
- [101]
+ [103]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: EB257F4A1FCE7BA3E9121A2AE78A7397;2991.
+(rerunfilecheck)             Checksum: 64CEFC10894C715C86028EE1CDE1B2DB;3097.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 19453 strings out of 493921
- 301896 string characters out of 3144870
- 422952 words of memory out of 3000000
- 20626 multiletter control sequences out of 15000+200000
+ 19496 strings out of 493921
+ 302773 string characters out of 3144870
+ 423586 words of memory out of 3000000
+ 20649 multiletter control sequences out of 15000+200000
  196580 words of font info for 177 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,17n,100p,3445b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1952,9 +1960,9 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (106 pages, 1805683 bytes).
+Output written on main.pdf (110 pages, 1825898 bytes).
 PDF statistics:
- 3043 PDF objects out of 3580 (max. 8388607)
- 1659 named destinations out of 1728 (max. 500000)
- 400 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3105 PDF objects out of 3580 (max. 8388607)
+ 1673 named destinations out of 1728 (max. 500000)
+ 416 words of extra memory for PDF output out of 10000 (max. 10000000)
 

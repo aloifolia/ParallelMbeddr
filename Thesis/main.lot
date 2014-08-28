@@ -1,0 +1,18 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1}{\ignorespaces Run-times for serial Quicksort\relax }}{77}{table.caption.39}
+\contentsline {table}{\numberline {2}{\ignorespaces Run-times for coarse-grained Quicksort\relax }}{77}{table.caption.40}
+\contentsline {table}{\numberline {3}{\ignorespaces Run-times for fine-grained Quicksort with $h = 1000$\relax }}{78}{table.caption.41}
+\contentsline {table}{\numberline {4}{\ignorespaces Run-times for fine-grained Quicksort with $n = 20000$\relax }}{78}{table.caption.42}
+\contentsline {table}{\numberline {5}{\ignorespaces Execution times for serial $\pi $\relax }}{88}{table.caption.48}
+\contentsline {table}{\numberline {6}{\ignorespaces Execution times for non-synchronization $\pi $\relax }}{89}{table.caption.49}
+\contentsline {table}{\numberline {7}{\ignorespaces Execution times for the simple non-optimized map-reduce approach for $\pi $\relax }}{89}{table.caption.50}
+\contentsline {table}{\numberline {8}{\ignorespaces Execution times for the simple optimized map-reduce approach for $\pi $\relax }}{89}{table.caption.51}
+\contentsline {table}{\numberline {9}{\ignorespaces Execution times for extended map-reduce $\pi $ with $s = 100$ and $c = 2000$\relax }}{90}{table.caption.52}
+\contentsline {table}{\numberline {10}{\ignorespaces Execution times for extended map-reduce $\pi $ with $s = 1000$ and $b = 200$\relax }}{90}{table.caption.53}
+\addvspace {10\p@ }
+\contentsfinish 

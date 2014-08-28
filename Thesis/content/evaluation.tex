@@ -249,7 +249,7 @@ Every timing-test was executed 10 times in order to account for measuring errors
   \textbf{average mean} & 0.718 & 1.707 & 3.944 & 0.723 & 1.117 & 2.135	\\ \cline{2-7}
   \textbf{standard deviation} & 0.001 & 0.006 & 0.009 & 0.004 & 0.005 & 0.011\\ \cline{2-7}
 \end{tabular}
-\caption{Results for coarse-grained Quicksort}
+\caption{Run-times for coarse-grained Quicksort}
 \label{table:coarse_quicksort}
 \end{center}
 \end{table}
@@ -264,7 +264,7 @@ The timings in tables \ref{table:serial_quicksort} and \ref{table:coarse_quickso
   \textbf{average mean} & 0.756 & 1.832 & 4.364 & 0.743 & 1.365 & 2.488	\\ \cline{2-7}
   \textbf{standard deviation} & 0.007 & 0.014 & 0.012 & 0.005 & 0.007 & 0.012\\ \cline{2-7}
 \end{tabular}
-\caption{Results for fine-grained Quicksort with $h = 1000$}
+\caption{Run-times for fine-grained Quicksort with $h = 1000$}
 \label{table:fine_quicksort}
 \end{center}
 \end{table}
@@ -281,7 +281,7 @@ These numbers show that the removal of read-only locks can at times lead to a si
   \textbf{average mean} & 6.587 & 8.609 & 13.354 & 0.132 & 0.809 & 3.129	\\ \cline{2-7}
   \textbf{standard deviation} & 0.116 & 0.085 & \multicolumn{1}{r||}{0.101} & 0.001 & 0.006 & 0.025\\ \cline{2-7}
 \end{tabular}
-\caption{Results for fine-grained Quicksort with $n = 20000$}
+\caption{Run-times for fine-grained Quicksort with $n = 20000$}
 \label{table:fine_quicksort2}
 \end{center}
 \end{table}
@@ -319,6 +319,7 @@ long double calcPiItem(uint32 index) {
 \end{ccode}
 
 \subsubsection{Parallel Variant without Synchronization}
+\label{nonSyncPi}
 The first parallel variant that is evaluated is the future-based algorithm whose translation was shown in \ref{taskExample}:
 \begin{ccode}{caption=Parallel calculation of $\pi$ without synchronization}
 exported int32 main(int32 argc, string[] argv) { 
@@ -589,6 +590,124 @@ void addPartialResults(shared<long double>* result, shared<int32>* itemCount,
 The previous code listings show some optimization potential. First, \CODE{resultQueues} does not need to be synchronized in line 12, since array elements are not allowed to be overwritten. The same holds for the container \CODE{resultQueue} in line 12 of listing \ref{lst:extendedReducer}. On the other hand, since the container \CODE{resultQueue} and its counterparts in lines 7, 13, 17, 18 and 21 of listing \ref{lst:extendedMapper} always dominate the struct fields \CODE{itemCount}, \CODE{isFull} and \CODE{isFinished} synchronization-wise, an optimization algorithm might find that the synchronization of the whole queue and a removal of the synchronizations of its fields may lead to better performing code. Such optimization assessments would require some sort of heuristics and should be considered for future extensions of ParallelMbeddr. Nevertheless, in line 2 of listing \ref{lst:extendedAddPartialResults}, the synchronization of \CODE{myQueue} causes the queue to be always synchronized in \CODE{queueSafeGet()}, since line 6 contains the only call for this function. Thus, the synchronization inside this function, which was shown in the previous parallelization approach, can be removed; along with all recursive locks in the helper functions for the queue. Another subtle optimization could be applied for every synchronization of the queue: Since the use of \CODE{isFull} forbids the mappers to add new items to the queue as long as this flag evaluates to \CODE{false} and vice versa for the reducer, there can actually never be any conflicting accesses to the queues fields. The utilization of the queue thus induces two states that are determined by the value of \CODE{isFull}. It is left to future research how such state-dependent synchronization can be exploited for the elision of locks. The actual performed optimizations concern the synchronizations of the overall \CODE{resultQueues} container and those of the individual actual queues. The optimizer detects the read-only usage of \CODE{resultQueues} and infers that locks thereof can be removed. It should be noted that the optimizer is not able to detect this usage pattern for each queue container in the array of \CODE{resultQueues} since the according optimization for nested shared resources is not supported, yet. However, due to the use of pseudo-aliases, in an unsafe optimization mode, the optimizer detects the recursive locks of the individual queues in \CODE{queueSafeGet()} as well as the other helper functions and deletes them. Since it is not of relevance, the optimized code is omitted in this discussion.
 
 \subsubsection{Measurements}
+All variants of the $\pi$ approximation algorithm were timed with different configurations. Every configuration was executed 10 times. The configurations adjust different values for the constants \CODE{BLOCKSIZE}, \CODE{BLOCKCOUNT} and \CODE{MAPPERCOUNT} ($s$, $c$ and $m$). The tests aimed at performing an equal number item calculations for $\pi$ (\CODE{THRESHOLD}  = 120,000,000), which was not possible to achieve for the complex queue-based solution of the previous section. By calculating the same items for every configuration of a solution, the impact of the parameters becomes evident. Thus, general scalability was not an issue to check for the $\pi$ scenario.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ c| r|r|r|}
+\cline{2-4}  & $s = 15k, c = 8k$ & $s = 30k, c = 4k$ & $s = 60k, c = 2k$\\ 
+\cline{2-4} \textbf{average mean} & 4.826 & 4.801 & 4.814 \\ 
+\cline{2-4} \textbf{standard deviation} & 0.031 & 0.038 & 0.022 \\ 
+\cline{2-4}
+\end{tabular} 
+\caption{Execution times for serial $\pi$}
+\label{table:serial_pi}
+\end{center}
+\end{table}
+
+As expected, varying block-sizes do not have a significant impact on the performance of the serial variant. For the non-synchronized variant, presented in \ref{nonSyncPi}, a small performance degradation towards increasing block sizes is measurable. This results from the fact that the block size, and with it the block count, determines the number of simultaneously executed tasks: For each block, one task is run.
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ c| r|r|}
+\cline{2-3}  & $s = 944882, c = 127$ & $s = 60000k, c = 2$\\ 
+\cline{2-3} \textbf{average mean} & 2.816 & 3.003\\ 
+\cline{2-3} \textbf{standard deviation} & 0.014 & 0.047 \\ 
+\cline{2-3}
+\end{tabular} 
+\caption{Execution times for non-synchronization $\pi$}
+\label{table:nonsync_pi}
+\end{center}
+\end{table}
+
+The indicated performance improvement of the parallel approach toward the serial one does not reach factor 2 which would be the ideal case on a dual-core machine. Furthermore, the performance peak is not bound to the configuration with two blocks. Additionally, the solution could not be performed with more than 127 blocks (hence, 127 calculator tasks and threads). While the last surprising result strongly indicates a limitation of the underlying POSIX library, it remains to detect if the other issues  are caused by the implementation of the library, the outline of the machine or some different reason. The limitation to such a small number of efficiently simultaneously executed tasks, however, shows that the mapping of tasks to pthreads will not fit highly concurrent scenarios.
+
+The next solution, simple map-reduce, was performed with a varying mapper count $m$ (1, 2, 10, 11, 12) for each of the settings that was also used for the serial variant. In every setting, the queue had a size of 10 slots.
+
+...
+
+
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{cc|r|r|r|r|r|}
+\cline{3-7} 
+\multicolumn{1}{ c  }{} & $m$ & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} & \multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{11} & \multicolumn{1}{c|}{12} \\ \cline{2-7} 
+
+%first sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 15k, c = 8k$} } & \textbf{average mean} & 152.758 & 218.937 & 115.428 & 114.453 & 143.307\\ \cline{3-7}
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 3.173 & 4.716 & 3.601 & 2.273 & 3.213\\ \hline\hline
+
+%second sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 30k, c = 4k$} } & \textbf{average mean} & 76.174 & 110.354 & 56.707 & 54.488 & 74.698\\ \cline{3-7}
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 3.102  & 1.795 &  4.862 & 1.650 & 6.079\\ \hline\hline
+
+%third sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 60k, c = 2k$} } &\textbf{average mean} & 24.998 & 48.178 & 28.050 & 28.365 & 38.051\\ \cline{3-7}
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 1.392 & 1.974 & 1.628 & 2.911 & 3.327\\ \cline{2-7}
+\end{tabular} 
+\caption{Execution times for the simple non-optimized map-reduce approach for $\pi$}
+\label{table:simple_nonopt_pi}
+\end{center}
+\end{table}
+
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{cc|r|r|r|r|r|}
+\cline{3-7} 
+\multicolumn{1}{ c  }{} & $m$ & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{2} &
+\multicolumn{1}{c|}{10} & \multicolumn{1}{c|}{11} & \multicolumn{1}{c|}{12} \\ \cline{2-7} 
+
+%first sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 15k, c = 8k$} } & \textbf{average mean} & 50.527 & 59.390 & 17.112 & 15.501 & 48.650\\ \cline{3-7}
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 0.726 & 1.014 & 0.592 & 0.953 & 1.710\\ \hline\hline
+
+%second sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 30k, c = 4k$} } & \textbf{average mean} & 25.345 & 33.020 & 8.699 & 8.018 & 23.821\\ \cline{3-7} 
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 0.570 & 0.784 & 0.524 & 0.274 & 0.700\\ \hline\hline
+
+%third sub table
+\multicolumn{1}{ c| }{\multirow{2}{*}{$s = 60k, c = 2k$} } &\textbf{average mean} & 10.427 & 16.683 & 5.085 & 4.697 & 11.610\\ \cline{3-7}
+\multicolumn{1}{ c|  }{} & \textbf{standard deviation} & 0.288 &  0.509 & 0.181 & 0.260  & 0.563\\ \cline{2-7}
+\end{tabular} 
+\caption{Execution times for the simple optimized map-reduce approach for $\pi$}
+\label{table:simple_opt_pi}
+\end{center}
+\end{table}
+
+When compared to the non-optimized variant of the simple map-reduce approach (table \ref{table:simple_nonopt_pi}), the optimized version (table \ref{table:simple_opt_pi}) reveals a performance enhancement which ranges from almost factor 2.5 ($s = 60$, $c = 2k$, $m = 1$) to almost factor 10 ($s = 15k$, $c = 8k$, $m = 10$). For this implementation, the optimization of recursive locks, thus, significantly improves the execution times significantly. The second observation is that in most cases the execution time is almost proportional to the number of processed blocks: half as many blocks entail a halved execution time. This outcome is probably a consequence of the proportionality of number of blocks and synchronization overhead for the counter and for the queue that are shared among the mappers. The next, and most obvious, observation is that none of the configurations except $s = 60k$, $c = 2k$ and $m = 11$ for the optimized variant entail a better performance than the serial $\pi$ implementation. In consequence, the synchronization overhead generally seems to over-compensate the lessened work that every mapper task has to do. This assumption is confirmed by the varying execution times of the particular mapper counts. An increase of one mapper to two mappers increases the execution times (see tables \ref{table:simple_nonopt_pi} and \ref{table:simple_opt_pi}), which is probably caused by the additional synchronization overhead between the two mappers. Up until 11 mappers, however the execution times considerably improve and are also lower the the single-mapper configurations. This property indicates that either the work division can compensate at least part of reduced performance due to the synchronization overhead or, more probable, that the better exhaustion of the queue causes the reducer task to spend less time with costly busy-waiting for new reducible values. A utilization of more workers than queue slots (10), however, eventually (for $m = 12$) causes an overall performance degradation which probably results from a congestion of the queue.
+
+For the more complex map-reduce implementation the total number of calculated items was decreased to 2,000,000 in order to achieve acceptable execution times. For all settings, the individual queues for all mappers were set to a size of 1000 slots. This size was chosen rather arbitrarily since it did not seem to have a significant impact on the execution times, which indicates that the employment of task-specific queues can diminish the congestions thereof.
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c |c|c|c||c|c|c|}
+  \multicolumn{1}{c}{} & \multicolumn{3}{c}{non-optimized} & \multicolumn{3}{c}{optimized}\\ \cline{2-7}
+  $m$ & 4 & 10 & 20 & 4 & 10 & 20\\ \cline{2-7}
+  \textbf{average mean} & 12.889 & 3.822 & 1.775 & 13.915 & 3.777 & 1.718	\\ \cline{2-7}
+  \textbf{standard deviation} & 0.401 & 0.122 & 0.101 & 0.297 & 0.210 & 0.046\\ \cline{2-7}
+\end{tabular}
+\caption{Execution times for extended map-reduce $\pi$ with $s = 100$ and $c = 2000$}
+\label{table:extended_pi_100}
+\end{center}
+\end{table}
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{c |c|c|c||c|c|c|}
+  \multicolumn{1}{c}{} & \multicolumn{3}{c}{non-optimized} & \multicolumn{3}{c}{optimized}\\ \cline{2-7}
+  $m$ & 4 & 10 & 20 & 4 & 10 & 20\\ \cline{2-7}
+  \textbf{average mean} & 2.567 & 1.125 & 0.688 & 2.718 & 1.014 & 0.498	\\ \cline{2-7}
+  \textbf{standard deviation} & 0.070 & 0.068 & 0.088 & 0.110 & 0.095 & 0.048\\ \cline{2-7}
+\end{tabular}
+\caption{Execution times for extended map-reduce $\pi$ with $s = 1000$ and $b = 200$}
+\label{table:extended_pi_1000}
+\end{center}
+\end{table}
+
+The general performance reduction of this approach, when compared to the former ones, does not surprise, since the code contains many performance-wise bad design choices. For this reason it is also not astonishing that the performed optimizations (removal of read-only locks and recursive locks) do not entail significant improvements. However, both tables \ref{table:extended_pi_100} and \ref{table:extended_pi_1000} show that the utilization of 4 mappers even causes a slight increase of execution times: 13.915 sec vs. 12.889 sec, respectively 2.718 sec vs. 2.567 sec. While the reason for this peculiarity could not be found by the author, the result shows that lock elision does not necessarily entail better performance but in some cases may even cause the opposite effect. The different adjustments for the mapper $m$ count show that an increasement of mappers generally causes an improvement of the execution times. Thus, as in the previous solution, the busy-waiting of the reducer probably has a considerable negative impact on the overall performance. Additionally, larger blocks ($s = 1000$) generate decreased timings, since less synchronization for the \CODE{counter} variable has to be performed by the tasks.
+
+The map-reduce approaches show that it is generally difficult to implement a performant message-passing-like communication layer with ParallelMbeddr. For this reason, future research should include a native, performance-tuned implementation thereof in ParallelMbeddr to prevent the programmer from some of the pitfalls that were encountered in this chapter.
 
 \section{Comparison with other Parallelization Approaches}
 A variety of approaches to thread-safety of code parallelization on the one hand, and performance optimization on the other hand have been conceived. The following paragraphs will present a selection of languages that either already influenced the design and optimization of ParallelMbeddr or might do so in the future. The comparison starts with a discussion of the achievements of parallel programming approaches for C in terms of thread-safety and performance optimization. 
