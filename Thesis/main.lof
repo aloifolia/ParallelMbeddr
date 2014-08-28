@@ -1,11 +1,11 @@
 \select@language {english}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Concepts and language aspects in MPS\relax }}{7}{figure.caption.23}
+\contentsline {figure}{\numberline {1}{\ignorespaces Concepts and language aspects in MPS\relax }}{7}{figure.caption.26}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2}{\ignorespaces Serialized execution of conflicting synchronization statements\relax }}{25}{figure.3.2}
 \contentsline {figure}{\numberline {3}{\ignorespaces Parallel execution of non-conflicting synchronization statements\relax }}{25}{figure.3.3}
-\contentsline {figure}{\numberline {4}{\ignorespaces Abstract syntax tree of a nested shared resource type\relax }}{27}{figure.3.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Abstract syntax tree of a nested shared resource type\relax }}{28}{figure.3.4}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5}{\ignorespaces Simplified data-flow graph of shared resources\relax }}{56}{figure.4.5}
 \addvspace {10\p@ }

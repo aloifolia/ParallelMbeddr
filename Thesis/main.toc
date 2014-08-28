@@ -1,23 +1,23 @@
 \select@language {english}
-\contentsline {chapter}{\nonumberline List of Figures}{iv}{section*.9}
-\contentsline {chapter}{\nonumberline List of Tables}{v}{section*.12}
+\contentsline {chapter}{\nonumberline List of Figures}{v}{section*.12}
+\contentsline {chapter}{\nonumberline List of Tables}{vi}{section*.15}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Parallel Programming}{3}{section.2.1}
-\contentsline {subsubsection}{Processes and Threads}{3}{subsubsection*.13}
-\contentsline {subsubsection}{Parallelism and Concurrency}{3}{subsubsection*.14}
-\contentsline {subsubsection}{Implicit vs. Explicit Parallelism}{4}{subsubsection*.15}
-\contentsline {subsubsection}{Data Races}{4}{subsubsection*.16}
-\contentsline {subsubsection}{Communication Model: Shared Memory}{4}{subsubsection*.17}
-\contentsline {subsubsection}{Communication Model: Message Passing}{5}{subsubsection*.18}
-\contentsline {subsubsection}{Communication Model: Transactional Memory}{5}{subsubsection*.19}
-\contentsline {subsubsection}{Coarse- and Fine-grained Synchronization}{5}{subsubsection*.20}
+\contentsline {subsubsection}{Processes and Threads}{3}{subsubsection*.16}
+\contentsline {subsubsection}{Parallelism and Concurrency}{3}{subsubsection*.17}
+\contentsline {subsubsection}{Implicit vs. Explicit Parallelism}{4}{subsubsection*.18}
+\contentsline {subsubsection}{Data Races}{4}{subsubsection*.19}
+\contentsline {subsubsection}{Communication Model: Shared Memory}{4}{subsubsection*.20}
+\contentsline {subsubsection}{Communication Model: Message Passing}{5}{subsubsection*.21}
+\contentsline {subsubsection}{Communication Model: Transactional Memory}{5}{subsubsection*.22}
+\contentsline {subsubsection}{Coarse- and Fine-grained Synchronization}{6}{subsubsection*.23}
 \contentsline {section}{\numberline {2.2}Embedded Programming with Mbeddr}{6}{section.2.2}
-\contentsline {subsubsection}{Embedded Programming}{6}{subsubsection*.21}
-\contentsline {subsubsection}{MPS and Mbeddr}{6}{subsubsection*.22}
-\contentsline {subsubsection}{C}{7}{subsubsection*.24}
+\contentsline {subsubsection}{Embedded Programming}{6}{subsubsection*.24}
+\contentsline {subsubsection}{MPS and Mbeddr}{6}{subsubsection*.25}
+\contentsline {subsubsection}{C}{7}{subsubsection*.27}
 \contentsline {chapter}{\numberline {3}Design and Translation}{9}{chapter.3}
-\contentsline {subsubsection}{Notation}{9}{subsubsection*.25}
+\contentsline {subsubsection}{Notation}{9}{subsubsection*.28}
 \contentsline {section}{\numberline {3.1}Tasks}{10}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Design}{10}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Translation}{11}{subsection.3.1.2}
@@ -31,48 +31,48 @@
 \contentsline {subsection}{\numberline {3.3.2}Translation of Shared Types}{26}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Translation of Synchronization Statements}{33}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Example Code}{36}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Safety Measures}{42}{section.3.4}
+\contentsline {section}{\numberline {3.4}Safety Measures}{43}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Avoidance of Implicitly Shared Unprotected Data}{43}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Copying Pointers to Unshared Data into Tasks}{44}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Unsynchronized Access to Synchronizable Data}{44}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Address Leakage of Shared Resource Values}{45}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.3}Unsynchronized Access to Synchronizable Data}{45}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Address Leakage of Shared Resource Values}{46}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Overwriting Shared Resources}{46}{subsection.3.4.5}
-\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{46}{subsection.3.4.6}
+\contentsline {subsection}{\numberline {3.4.6}Overwriting Pointers to Shared Resources}{47}{subsection.3.4.6}
 \contentsline {chapter}{\numberline {4}Optimization}{49}{chapter.4}
 \contentsline {section}{\numberline {4.1}Space Optimization}{49}{section.4.1}
 \contentsline {section}{\numberline {4.2}Time Optimization}{49}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Pointer Analysis}{50}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Optimization Opportunities}{51}{subsection.4.2.2}
-\contentsline {subsubsection}{Single-Task Locks}{51}{subsubsection*.26}
-\contentsline {subsubsection}{Read-only Locks}{52}{subsubsection*.27}
-\contentsline {subsubsection}{Recursive Locks}{53}{subsubsection*.28}
-\contentsline {subsubsection}{Lock Contention}{53}{subsubsection*.29}
+\contentsline {subsubsection}{Single-Task Locks}{51}{subsubsection*.29}
+\contentsline {subsubsection}{Read-only Locks}{52}{subsubsection*.30}
+\contentsline {subsubsection}{Recursive Locks}{53}{subsubsection*.31}
+\contentsline {subsubsection}{Lock Contention}{53}{subsubsection*.32}
 \contentsline {subsection}{\numberline {4.2.3}Performed Optimizations}{54}{subsection.4.2.3}
-\contentsline {subsubsection}{Removal of Single-Task Locks}{57}{subsubsection*.30}
-\contentsline {subsubsection}{Removal of Read-only Locks}{60}{subsubsection*.31}
-\contentsline {subsubsection}{Removal of Recursive Locks}{62}{subsubsection*.32}
-\contentsline {subsubsection}{Narrowing Synchronization Statements}{67}{subsubsection*.33}
+\contentsline {subsubsection}{Removal of Single-Task Locks}{57}{subsubsection*.33}
+\contentsline {subsubsection}{Removal of Read-only Locks}{60}{subsubsection*.34}
+\contentsline {subsubsection}{Removal of Recursive Locks}{62}{subsubsection*.35}
+\contentsline {subsubsection}{Narrowing Synchronization Statements}{67}{subsubsection*.36}
 \contentsline {chapter}{\numberline {5}Evaluation}{70}{chapter.5}
 \contentsline {section}{\numberline {5.1}Code and Measurements}{70}{section.5.1}
 \contentsline {subsection}{\numberline {5.1.1}Quicksort}{70}{subsection.5.1.1}
-\contentsline {subsubsection}{Serial variant}{70}{subsubsection*.34}
-\contentsline {subsubsection}{Unsafe parallelism}{72}{subsubsection*.35}
-\contentsline {subsubsection}{Coarse-Grained Protection}{72}{subsubsection*.36}
-\contentsline {subsubsection}{Fine-Grained Protection}{75}{subsubsection*.37}
-\contentsline {subsubsection}{Measurements}{77}{subsubsection*.38}
+\contentsline {subsubsection}{Serial variant}{70}{subsubsection*.37}
+\contentsline {subsubsection}{Unsafe parallelism}{72}{subsubsection*.38}
+\contentsline {subsubsection}{Coarse-Grained Protection}{72}{subsubsection*.39}
+\contentsline {subsubsection}{Fine-Grained Protection}{75}{subsubsection*.40}
+\contentsline {subsubsection}{Measurements}{77}{subsubsection*.41}
 \contentsline {subsection}{\numberline {5.1.2}$\pi $}{79}{subsection.5.1.2}
-\contentsline {subsubsection}{Serial Variant}{79}{subsubsection*.43}
-\contentsline {subsubsection}{Parallel Variant without Synchronization}{79}{subsubsection*.44}
-\contentsline {subsubsection}{Simple Map-Reduce Approach}{80}{subsubsection*.45}
-\contentsline {subsubsection}{Extended Map-Reduce Approach}{84}{subsubsection*.46}
-\contentsline {subsubsection}{Measurements}{88}{subsubsection*.47}
+\contentsline {subsubsection}{Serial Variant}{79}{subsubsection*.46}
+\contentsline {subsubsection}{Parallel Variant without Synchronization}{80}{subsubsection*.47}
+\contentsline {subsubsection}{Simple Map-Reduce Approach}{80}{subsubsection*.48}
+\contentsline {subsubsection}{Extended Map-Reduce Approach}{85}{subsubsection*.49}
+\contentsline {subsubsection}{Measurements}{88}{subsubsection*.50}
 \contentsline {section}{\numberline {5.2}Comparison with other Parallelization Approaches}{91}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}C}{91}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}ParaSail}{92}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}\AE minium}{92}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}\AE minium}{93}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}D}{93}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Java}{93}{subsection.5.2.5}
+\contentsline {subsection}{\numberline {5.2.5}Java}{94}{subsection.5.2.5}
 \contentsline {subsection}{\numberline {5.2.6}Rust}{94}{subsection.5.2.6}
-\contentsline {chapter}{\numberline {6}Conclusion}{95}{chapter.6}
-\contentsline {chapter}{Bibliography}{98}{section*.56}
+\contentsline {chapter}{\numberline {6}Conclusion}{96}{chapter.6}
+\contentsline {chapter}{Bibliography}{99}{section*.59}
 \contentsfinish 

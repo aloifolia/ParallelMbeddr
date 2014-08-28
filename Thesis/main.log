@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  28 AUG 2014 12:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  29 AUG 2014 00:18
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -1268,23 +1268,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--7
 
 [0
 
-]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/oath.tex)
-(C:\Users\Bastian\Desktop\github-master\Thesis\content/abstract.tex) [1
+]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/oath.tex [1
 
-]
-(C:\Users\Bastian\Desktop\github-master\Thesis\main.toc [2
+
+])
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/abstract.tex) [2]
+(C:\Users\Bastian\Desktop\github-master\Thesis\main.toc [3
 
 ])
 \tf@toc=\write4
- [3]
+ [4]
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.lof)
 \tf@lof=\write5
- [4
+ [5
 
 ]
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.lot)
 \tf@lot=\write6
- [5
+ [6
 
 ]
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/introduction_motivation.
@@ -1361,10 +1362,13 @@ LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
 Chapter 2.
 [3
 
-] [4] [5] [6] <pics/MPS.pdf, id=458, 639.13782pt x 312.41719pt>
-File: pics/MPS.pdf Graphic file (type pdf)
+] [4]
+Underfull \vbox (badness 6741) has occurred while \output is active []
 
-<use pics/MPS.pdf>
+ [5]
+[6] <pics/MPS.pdf, id=465, 639.13782pt x 312.41719pt>
+File: pics/MPS.pdf Graphic file (type pdf)
+ <use pics/MPS.pdf>
 Package pdftex.def Info: pics/MPS.pdf used on input line 45.
 (pdftex.def)             Requested size: 498.5255pt x 243.68442pt.
 
@@ -1413,26 +1417,20 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 133.
 See the caption package documentation for explanation.
 
-[12]
+[12] [13]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 158.
+(amsmath)                 on input line 155.
 
-[13] [14]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
+[14]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/futures.tex
 [15] [16] [17] [18]
 LaTeX Font Info:    Font shape `T1/txtt/m/it' in size <10> not available
 (Font)              Font shape `T1/txtt/m/sl' tried instead on input line 102.
- [19]
-Overfull \hbox (22.91502pt too wide) in paragraph at lines 133--134
-\T1/5ch/m/n/11 Whereas the fol-low-ing sec-tion will show the gen-er-a-tion of 
-ex-pres-sions \T1/txtt/bx/n/11 e.run \T1/5ch/m/n/11 to calls of \T1/txtt/bx/n/1
-1 runTaskAndGetFuture
- []
-
-[20]) (C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
+ [19] [20])
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/shared-memory.tex
 [21] [22] [23]
-<pics/ParallelExecutionAttempt.pdf, id=913, 224.33812pt x 168.63pt>
+<pics/ParallelExecutionAttempt.pdf, id=930, 224.33812pt x 168.63pt>
 File: pics/ParallelExecutionAttempt.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecutionAttempt.pdf>
@@ -1444,7 +1442,7 @@ Overfull \hbox (2.73618pt too wide) in paragraph at lines 66--67
 [][] 
  []
 
-<pics/SerialExecution.pdf, id=914, 191.21437pt x 220.57407pt>
+<pics/SerialExecution.pdf, id=931, 191.21437pt x 220.57407pt>
 File: pics/SerialExecution.pdf Graphic file (type pdf)
 
 <use pics/SerialExecution.pdf>
@@ -1461,11 +1459,7 @@ Overfull \hbox (13.8084pt too wide) in paragraph at lines 68--81
 [][] $[]$ [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [24]
-<pics/ParallelExecution.pdf, id=934, 224.33812pt x 168.63pt>
+[24] <pics/ParallelExecution.pdf, id=950, 224.33812pt x 168.63pt>
 File: pics/ParallelExecution.pdf Graphic file (type pdf)
 
 <use pics/ParallelExecution.pdf>
@@ -1492,118 +1486,109 @@ ded in a single page
 pdfTeX warning: pdflatex.exe (file C:/Users/Bastian/Desktop/github-master/Thesi
 s/pics/ParallelExecution.pdf): PDF inclusion: multiple pdfs with page group inc
 luded in a single page
->] [26] <pics/AstForBaseTypes.pdf, id=1033, 114.30634pt x 315.33504pt>
+>] [26] <pics/AstForBaseTypes.pdf, id=1049, 114.30634pt x 315.33504pt>
 File: pics/AstForBaseTypes.pdf Graphic file (type pdf)
 
 <use pics/AstForBaseTypes.pdf>
-Package pdftex.def Info: pics/AstForBaseTypes.pdf used on input line 150.
+Package pdftex.def Info: pics/AstForBaseTypes.pdf used on input line 152.
 (pdftex.def)             Requested size: 80.01387pt x 220.73302pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 152.
+(caption)                particular \caption on input line 154.
 See the caption package documentation for explanation.
 
 
-Underfull \vbox (badness 1552) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [27 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/AstForBaseTypes.pdf>]
+ [27]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 178.
+(caption)                particular \caption on input line 180.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 200.
+(caption)                particular \caption on input line 202.
 See the caption package documentation for explanation.
 
-LaTeX Font Info:    Try loading font information for TS1+5ch on input line 207.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/AstForBaseTypes.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+5ch on input line 209.
+
 
 (C:\devel\latex\tuddesign\tex\latex\tex-tudfonts\softmake\charter\ts15ch.fd
 File: ts15ch.fd 2008/06/23 Fontinst v1.927 font definitions for TS1/5ch.
 )
-[28] [29] [30] [31]
+[29]
+Overfull \hbox (0.8253pt too wide) in paragraph at lines 260--261
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+[30] [31]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 311.
+(caption)                particular \caption on input line 313.
 See the caption package documentation for explanation.
 
 [32]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 357.
+(caption)                particular \caption on input line 359.
 See the caption package documentation for explanation.
-
-
-Overfull \hbox (13.53761pt too wide) in paragraph at lines 374--375
-[][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (8.28763pt too wide) in paragraph at lines 376--377
-[][][][][][][][][][][][][][][][][][] 
- []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 380.
+(caption)                particular \caption on input line 382.
 See the caption package documentation for explanation.
 
-[33]
-Overfull \hbox (79.57507pt too wide) in paragraph at lines 408--409
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[34] [35]
+[33] [34] [35]
 Overfull \hbox (6.00818pt too wide) in paragraph at lines 444--445
 \T1/5ch/m/n/11 It has to be noted that \T1/txtt/bx/n/11 backoffExponentially() 
 \T1/5ch/m/n/11 keeps its main state in-side the \T1/txtt/bx/n/11 startSyncForNM
 utexes()
  []
 
-[36] [37]
-Overfull \hbox (48.07516pt too wide) in paragraph at lines 523--524
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[38] [39] [40]
-Overfull \hbox (6.07529pt too wide) in paragraph at lines 607--608
+[36] [37] [38] [39] [40]
+Overfull \hbox (6.07529pt too wide) in paragraph at lines 609--610
 [][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[41])
+[41] [42])
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/safety-enhancements.tex
-[42] [43] [44] [45] [46] [47]))
+[43] [44] [45] [46] [47]))
 (C:\Users\Bastian\Desktop\github-master\Thesis\content/optimization.tex
 [48]
 Chapter 4.
 [49
 
 ] [50] [51] [52] [53]
-Overfull \hbox (0.87254pt too wide) in paragraph at lines 149--151
+Overfull \hbox (0.87254pt too wide) in paragraph at lines 143--145
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 157.
+(caption)                particular \caption on input line 151.
 See the caption package documentation for explanation.
 
-[54] <pics/DataFlowDiagram.pdf, id=1732, 299.61937pt x 397.485pt>
+[54] <pics/DataFlowDiagram.pdf, id=1743, 299.61937pt x 397.485pt>
 File: pics/DataFlowDiagram.pdf Graphic file (type pdf)
 
 <use pics/DataFlowDiagram.pdf>
-Package pdftex.def Info: pics/DataFlowDiagram.pdf used on input line 213.
+Package pdftex.def Info: pics/DataFlowDiagram.pdf used on input line 209.
 (pdftex.def)             Requested size: 293.62497pt x 389.53264pt.
 
-Overfull \hbox (4.82858pt too wide) in paragraph at lines 213--214
+Overfull \hbox (4.82858pt too wide) in paragraph at lines 209--210
 [][] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 216.
+(caption)                particular \caption on input line 212.
 See the caption package documentation for explanation.
 
 
@@ -1612,11 +1597,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [55]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 247.
+(caption)                particular \caption on input line 243.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 247--249
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 243--245
 [][]  
  []
 
@@ -1626,11 +1611,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [56 <C:/Users/Bastian/Desktop/github-master/Thesis/pics/DataFlowDiagram.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 267.
+(caption)                particular \caption on input line 263.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 267--269
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 263--265
 [][]  
  []
 
@@ -1640,36 +1625,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [57]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 289.
+(caption)                particular \caption on input line 285.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 289--291
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 285--287
 [][]  
  []
 
 [58]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 344.
+(caption)                particular \caption on input line 340.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 344--346
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 340--342
 [][]  
  []
 
 
-Underfull \vbox (badness 4872) has occurred while \output is active []
+Underfull \vbox (badness 4819) has occurred while \output is active []
 
  [59]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 366.
+(caption)                particular \caption on input line 362.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 366--368
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 362--364
 [][]  
  []
 
@@ -1677,38 +1662,39 @@ Overfull \hbox (2.15678pt too wide) in paragraph at lines 366--368
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [60]
-Underfull \vbox (badness 8056) has occurred while \output is active []
-
- [61]
-[62]
+[61] [62]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 461.
+(caption)                particular \caption on input line 456.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 461--463
-[][]  
- []
-
-[63] [64] [65]
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 555.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 555--557
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 456--458
 [][]  
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5189) has occurred while \output is active []
+
+ [63]
+[64] [65]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 550.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 550--552
+[][]  
+ []
+
+
+Underfull \vbox (badness 4543) has occurred while \output is active []
 
  [66]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 593.
+(caption)                particular \caption on input line 588.
 See the caption package documentation for explanation.
 
 
@@ -1717,11 +1703,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [67]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 616.
+(caption)                particular \caption on input line 611.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 616--618
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 611--613
 [][]  
  []
 
@@ -1731,11 +1717,11 @@ Underfull \vbox (badness 6300) has occurred while \output is active []
  [68]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 634.
+(caption)                particular \caption on input line 629.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (2.15678pt too wide) in paragraph at lines 634--636
+Overfull \hbox (2.15678pt too wide) in paragraph at lines 629--631
 [][]  
  []
 
@@ -1746,123 +1732,134 @@ Chapter 5.
 
 ] [71]
 
-Package Listings Warning: Text dropped after begin of listing on input line 86.
+Package Listings Warning: Text dropped after begin of listing on input line 85.
 
 
-[72] [73] [74] [75] [76] [77]
+[72] [73] [74] [75] [76]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[77]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `OT1/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/it' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `OMS/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `OMX/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `T1/mdbch/m/it' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `MDA/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 11.61607pt on input line 289.
+(Font)              scaled to size 11.61607pt on input line 287.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 8.16005pt on input line 289.
+(Font)              scaled to size 8.16005pt on input line 287.
 LaTeX Font Info:    Font shape `MDB/mdbch/m/n' will be
-(Font)              scaled to size 7.00804pt on input line 289.
+(Font)              scaled to size 7.00804pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 11.37402pt on input line 289.
+(Font)              scaled to size 11.37402pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 7.99002pt on input line 289.
+(Font)              scaled to size 7.99002pt on input line 287.
 LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.86201pt on input line 289.
+(Font)              scaled to size 6.86201pt on input line 287.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 287.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 289.
+(hyperref)                removing `\pi' on input line 287.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\pi' on input line 289.
+(hyperref)                removing `math shift' on input line 287.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 289.
-
-
-Underfull \vbox (badness 6063) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
-[79] [80]
-Underfull \vbox (badness 4181) has occurred while \output is active []
+[79] [80] [81] [82]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
-[82] [83] [84] [85]
-Overfull \hbox (0.8253pt too wide) in paragraph at lines 516--517
+ [83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84]
+[85]
+Overfull \hbox (0.8253pt too wide) in paragraph at lines 512--513
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (48.07516pt too wide) in paragraph at lines 522--523
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (27.07523pt too wide) in paragraph at lines 532--533
+Overfull \hbox (0.8253pt too wide) in paragraph at lines 534--535
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][] 
- []
-
-
-Overfull \hbox (11.32527pt too wide) in paragraph at lines 536--537
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][] 
- []
-
-
-Overfull \hbox (21.82524pt too wide) in paragraph at lines 547--548
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+][][][][][][][][] 
  []
 
 [86] [87]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[88] [89] [90] [91] [92] [93])
-(C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex
-[94]
-Chapter 6.
-[95
+[88]
 
-] [96]) (C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [97]
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[89]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 6575) has occurred while \output is active []
+
+ [90]
+Underfull \vbox (badness 1436) has occurred while \output is active []
+
+ [91]
+[92] [93])
+(C:\Users\Bastian\Desktop\github-master\Thesis\content/summary_prospect.tex
+[94] [95]
+Chapter 6.
+[96
+
+] [97]) (C:\Users\Bastian\Desktop\github-master\Thesis\main.bbl [98]
 Underfull \hbox (badness 5878) in paragraph at lines 4--7
 []\T1/5ch/m/n/11 Cbmc: Bounded model check-ing for c/c++ and java.  []$\T1/txtt
 /m/n/11 http : / / www . cprover . org /$
@@ -1874,7 +1871,7 @@ Underfull \hbox (badness 7631) in paragraph at lines 22--27
 stroy and ini-tial-ize
  []
 
-[98
+[99
 
 ]
 Underfull \hbox (badness 2809) in paragraph at lines 148--154
@@ -1888,7 +1885,7 @@ Underfull \hbox (badness 7486) in paragraph at lines 148--154
 com / files / 8537WP _ Deciding _ which _ multicore _$
  []
 
-[99]
+[100]
 Underfull \hbox (badness 10000) in paragraph at lines 242--248
 []\T1/5ch/m/n/11 Joel Hruska.  The death of cpu scal-ing: From one core to many
 
@@ -1906,7 +1903,7 @@ $\T1/txtt/m/n/11 116561-[]the-[]death-[]of-[]cpu-[]scaling-[]from-[]one-[]core-
 []to-[]many-[]and-[]why-[]were-[]still-[]stuck$[]\T1/5ch/m/n/11 .
  []
 
-[100] [101]
+[101] [102]
 Underfull \hbox (badness 10000) in paragraph at lines 415--420
 $\T1/txtt/m/n/11 programming-[]languages-[]and-[]tools / 4375616 / 1 / ParaSail
 -[]-[]Less-[]is-[]more-[]with-[]multicore$[]\T1/5ch/m/n/11 .
@@ -1924,25 +1921,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 422--427
 nguage . blogspot . de / 2012 / 08 /$
  []
 
-[102])
+[103])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
- [103]
+ [104]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
  (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 64CEFC10894C715C86028EE1CDE1B2DB;3097.
+(rerunfilecheck)             Checksum: 5D4329983A1C7EDF8AED2CBB9F975BEF;3098.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 19496 strings out of 493921
- 302773 string characters out of 3144870
- 423586 words of memory out of 3000000
- 20649 multiletter control sequences out of 15000+200000
- 196580 words of font info for 177 fonts, out of 3000000 for 9000
+ 19498 strings out of 493921
+ 302787 string characters out of 3144870
+ 425195 words of memory out of 3000000
+ 20654 multiletter control sequences out of 15000+200000
+ 197379 words of font info for 179 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 65i,17n,100p,3445b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 65i,17n,100p,3443b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/texnansi.enc}<C:/devel/latex/
 tuddesign/fonts/type1/softmake/charter/5chb8a.pfb><C:/devel/latex/tuddesign/fon
@@ -1960,9 +1957,9 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (110 pages, 1825898 bytes).
+Output written on main.pdf (112 pages, 1834790 bytes).
 PDF statistics:
- 3105 PDF objects out of 3580 (max. 8388607)
- 1673 named destinations out of 1728 (max. 500000)
+ 3119 PDF objects out of 3580 (max. 8388607)
+ 1669 named destinations out of 1728 (max. 500000)
  416 words of extra memory for PDF output out of 10000 (max. 10000000)
 
