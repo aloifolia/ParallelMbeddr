@@ -1,0 +1,18 @@
+xxx pi
+1.
+#constant BLOCKSIZE = 30000000;
+#constant BLOCKCOUNT = 4;
+#constant MAPPERCOUNT = 2;
+
+2. (relevant: pi_parallel_sync)
+#constant BLOCKSIZE = 30000;
+#constant BLOCKCOUNT = 4000;
+#constant MAPPERCOUNT = 2;
+
+xxx pi extended
+
+#constant BLOCKSIZE = 3000000; 
+#constant BLOCKCOUNT = 4;
+#constant MAPPERCOUNT = 2;
+
+xxx
