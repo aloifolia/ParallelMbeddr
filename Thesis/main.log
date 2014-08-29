@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  29 AUG 2014 08:49
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.4.20)  29 AUG 2014 09:41
 entering extended mode
 **main.tex
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.tex
@@ -28,8 +28,6 @@ File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\keyval.tex")))
 Class tudthesis Info: Unknown option '11pt`. Pass to tudreport class. on input 
 line 37.
-Class tudthesis Info: Unknown option 'accentcolor=tud1b`. Pass to tudreport cla
-ss. on input line 37.
 Class tudthesis Info: Unknown option 'bibtotoc`. Pass to tudreport class. on in
 put line 37.
 Class tudthesis Info: Unknown option 'colorbacktitle`. Pass to tudreport class.
@@ -1009,8 +1007,7 @@ File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
 ))
 
 LaTeX Warning: Unused global option(s):
-    [11pt,accentcolor=tud1b,colorbacktitle,linedtoc,bigchapter,noresetcounter].
-
+    [11pt,colorbacktitle,linedtoc,bigchapter,noresetcounter].
 
 (C:\Users\Bastian\Desktop\github-master\Thesis\main.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -1933,10 +1930,10 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
  ) 
 Here is how much of TeX's memory you used:
- 19498 strings out of 493921
- 302787 string characters out of 3144870
- 424195 words of memory out of 3000000
- 20654 multiletter control sequences out of 15000+200000
+ 19496 strings out of 493921
+ 302740 string characters out of 3144870
+ 424108 words of memory out of 3000000
+ 20652 multiletter control sequences out of 15000+200000
  197379 words of font info for 179 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  65i,17n,100p,3443b,1986s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1957,7 +1954,7 @@ X/2.9/fonts/type1/mathdesign/mdbch/md-chri7m.pfb><C:/Program Files (x86)/MiKTeX
 TeX/2.9/fonts/type1/public/txfonts/t1xbtt.pfb><C:/Users/Bastian/AppData/Roaming
 /MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Users/Bastian/AppData/Roam
 ing/MiKTeX/2.9/fonts/type1/public/txfonts/t1xtt.pfb>
-Output written on main.pdf (112 pages, 1834811 bytes).
+Output written on main.pdf (112 pages, 1833850 bytes).
 PDF statistics:
  3119 PDF objects out of 3580 (max. 8388607)
  1669 named destinations out of 1728 (max. 500000)
